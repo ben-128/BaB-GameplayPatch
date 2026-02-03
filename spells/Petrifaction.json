@@ -1,0 +1,66 @@
+{
+  "name": "Petrifaction",
+  "type": "unknown",
+  "offset": "0x009091F8",
+  "stats": {
+    "mp_cost": 99,
+    "power_damage": 40,
+    "hit_chance": 99,
+    "effect_type": null,
+    "level_requirement": 108,
+    "casting_time": null,
+    "range": null,
+    "area_of_effect": null
+  },
+  "raw_data": {
+    "hex_offset": "0x009091F8",
+    "structure_size": 48,
+    "raw_values": [
+      26948,
+      28787,
+      27749,
+      108,
+      24909,
+      26983,
+      99,
+      0,
+      18,
+      11521,
+      40,
+      0,
+      0,
+      0,
+      15872,
+      2050,
+      8320,
+      16400,
+      8320,
+      8208,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "detailed_stats": {
+    "spell_id": 18,
+    "mp_cost": 18,
+    "power_damage": null,
+    "magic_level": 45,
+    "element": 0,
+    "effect_type_byte": 8,
+    "target_flags": 8320,
+    "range_flags": 16400,
+    "special_flags": {
+      "flag1": 0,
+      "flag2": 62,
+      "flag3": 2,
+      "flag4": 8
+    }
+  },
+  "interpretations": {
+    "element": "Neutral",
+    "effect_type": "Unknown (0x08)",
+    "target": "Single Ally"
+  }
+}

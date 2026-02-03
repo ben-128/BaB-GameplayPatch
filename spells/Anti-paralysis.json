@@ -1,0 +1,66 @@
+{
+  "name": "Anti-paralysis",
+  "type": "unknown",
+  "offset": "0x00909558",
+  "stats": {
+    "mp_cost": 37,
+    "power_damage": 16,
+    "hit_chance": null,
+    "effect_type": null,
+    "level_requirement": 110,
+    "casting_time": null,
+    "range": null,
+    "area_of_effect": null
+  },
+  "raw_data": {
+    "hex_offset": "0x00909558",
+    "structure_size": 48,
+    "raw_values": [
+      28225,
+      26996,
+      28717,
+      26991,
+      28531,
+      110,
+      0,
+      0,
+      37,
+      4096,
+      16,
+      8,
+      0,
+      0,
+      9472,
+      1539,
+      8208,
+      16416,
+      8256,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "detailed_stats": {
+    "spell_id": 37,
+    "mp_cost": 37,
+    "power_damage": null,
+    "magic_level": 16,
+    "element": 8,
+    "effect_type_byte": 6,
+    "target_flags": 8208,
+    "range_flags": 16416,
+    "special_flags": {
+      "flag1": 0,
+      "flag2": 37,
+      "flag3": 3,
+      "flag4": 6
+    }
+  },
+  "interpretations": {
+    "element": "Holy/Healing",
+    "effect_type": "Area Damage",
+    "target": "Unknown (0x2010)"
+  }
+}

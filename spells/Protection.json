@@ -1,0 +1,66 @@
+{
+  "name": "Protection",
+  "type": "buff",
+  "offset": "0x00909438",
+  "stats": {
+    "mp_cost": 31,
+    "power_damage": 12,
+    "hit_chance": null,
+    "effect_type": null,
+    "level_requirement": 103,
+    "casting_time": null,
+    "range": null,
+    "area_of_effect": null
+  },
+  "raw_data": {
+    "hex_offset": "0x00909438",
+    "structure_size": 48,
+    "raw_values": [
+      25928,
+      27745,
+      28265,
+      103,
+      0,
+      0,
+      0,
+      0,
+      31,
+      3072,
+      12,
+      8,
+      26,
+      0,
+      5888,
+      771,
+      8208,
+      32,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "detailed_stats": {
+    "spell_id": 31,
+    "mp_cost": 31,
+    "power_damage": 26,
+    "magic_level": 12,
+    "element": 8,
+    "effect_type_byte": 3,
+    "target_flags": 8208,
+    "range_flags": 32,
+    "special_flags": {
+      "flag1": 0,
+      "flag2": 23,
+      "flag3": 3,
+      "flag4": 3
+    }
+  },
+  "interpretations": {
+    "element": "Holy/Healing",
+    "effect_type": "Status/Buff",
+    "target": "Unknown (0x2010)"
+  }
+}

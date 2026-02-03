@@ -1,0 +1,66 @@
+{
+  "name": "Chaos",
+  "type": "unknown",
+  "offset": "0x00909348",
+  "stats": {
+    "mp_cost": 25,
+    "power_damage": 80,
+    "hit_chance": 80,
+    "effect_type": null,
+    "level_requirement": null,
+    "casting_time": null,
+    "range": null,
+    "area_of_effect": null
+  },
+  "raw_data": {
+    "hex_offset": "0x00909348",
+    "structure_size": 48,
+    "raw_values": [
+      25940,
+      25964,
+      28528,
+      29810,
+      0,
+      0,
+      0,
+      0,
+      25,
+      30721,
+      80,
+      0,
+      0,
+      0,
+      19456,
+      1793,
+      16400,
+      32800,
+      12480,
+      240,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "detailed_stats": {
+    "spell_id": 25,
+    "mp_cost": 25,
+    "power_damage": null,
+    "magic_level": 120,
+    "element": 0,
+    "effect_type_byte": 7,
+    "target_flags": 16400,
+    "range_flags": 32800,
+    "special_flags": {
+      "flag1": 0,
+      "flag2": 76,
+      "flag3": 1,
+      "flag4": 7
+    }
+  },
+  "interpretations": {
+    "element": "Neutral",
+    "effect_type": "Unknown (0x07)",
+    "target": "Unknown (0x4010)"
+  }
+}

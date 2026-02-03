@@ -1,0 +1,66 @@
+{
+  "name": "Regeneration",
+  "type": "healing",
+  "offset": "0x00909768",
+  "stats": {
+    "mp_cost": 48,
+    "power_damage": 40,
+    "hit_chance": 64,
+    "effect_type": null,
+    "level_requirement": null,
+    "casting_time": null,
+    "range": null,
+    "area_of_effect": null
+  },
+  "raw_data": {
+    "hex_offset": "0x00909768",
+    "structure_size": 48,
+    "raw_values": [
+      25938,
+      28525,
+      25974,
+      21248,
+      27753,
+      28261,
+      25955,
+      0,
+      48,
+      9216,
+      40,
+      8,
+      0,
+      0,
+      16128,
+      2818,
+      8208,
+      8224,
+      32832,
+      32960,
+      4128,
+      64,
+      0,
+      0
+    ]
+  },
+  "detailed_stats": {
+    "spell_id": 48,
+    "mp_cost": 48,
+    "power_damage": null,
+    "magic_level": 36,
+    "element": 8,
+    "effect_type_byte": 11,
+    "target_flags": 8208,
+    "range_flags": 8224,
+    "special_flags": {
+      "flag1": 0,
+      "flag2": 63,
+      "flag3": 2,
+      "flag4": 11
+    }
+  },
+  "interpretations": {
+    "element": "Holy/Healing",
+    "effect_type": "Unknown (0x0B)",
+    "target": "Unknown (0x2010)"
+  }
+}

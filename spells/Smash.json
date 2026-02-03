@@ -1,0 +1,66 @@
+{
+  "name": "Smash",
+  "type": "unknown",
+  "offset": "0x0090937F",
+  "stats": {
+    "mp_cost": null,
+    "power_damage": null,
+    "hit_chance": null,
+    "effect_type": null,
+    "level_requirement": null,
+    "casting_time": null,
+    "range": null,
+    "area_of_effect": null
+  },
+  "raw_data": {
+    "hex_offset": "0x0090937F",
+    "structure_size": 48,
+    "raw_values": [
+      24940,
+      25970,
+      0,
+      0,
+      6656,
+      0,
+      24708,
+      512,
+      2823,
+      3072,
+      256,
+      768,
+      49164,
+      16512,
+      4128,
+      8320,
+      32784,
+      16416,
+      32,
+      0,
+      19712,
+      29797,
+      28517,
+      114
+    ]
+  },
+  "detailed_stats": {
+    "spell_id": 7,
+    "mp_cost": 7,
+    "power_damage": 12,
+    "magic_level": 12,
+    "element": 0,
+    "effect_type_byte": 32,
+    "target_flags": 32784,
+    "range_flags": 16416,
+    "special_flags": {
+      "flag1": 32,
+      "flag2": 16,
+      "flag3": 128,
+      "flag4": 32
+    }
+  },
+  "interpretations": {
+    "element": "Neutral",
+    "effect_type": "Unknown (0x20)",
+    "target": "Unknown (0x8010)"
+  }
+}

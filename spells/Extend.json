@@ -1,0 +1,66 @@
+{
+  "name": "Extend",
+  "type": "unknown",
+  "offset": "0x00909108",
+  "stats": {
+    "mp_cost": 13,
+    "power_damage": 20,
+    "hit_chance": null,
+    "effect_type": null,
+    "level_requirement": null,
+    "casting_time": null,
+    "range": null,
+    "area_of_effect": null
+  },
+  "raw_data": {
+    "hex_offset": "0x00909108",
+    "structure_size": 48,
+    "raw_values": [
+      28496,
+      29545,
+      28271,
+      17152,
+      28524,
+      25717,
+      0,
+      0,
+      13,
+      10243,
+      20,
+      4,
+      4,
+      0,
+      13313,
+      1540,
+      4224,
+      16512,
+      8208,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "detailed_stats": {
+    "spell_id": 13,
+    "mp_cost": 13,
+    "power_damage": 4,
+    "magic_level": 40,
+    "element": 4,
+    "effect_type_byte": 6,
+    "target_flags": 4224,
+    "range_flags": 16512,
+    "special_flags": {
+      "flag1": 1,
+      "flag2": 52,
+      "flag3": 4,
+      "flag4": 6
+    }
+  },
+  "interpretations": {
+    "element": "Unknown (4)",
+    "effect_type": "Area Damage",
+    "target": "Unknown (0x1080)"
+  }
+}

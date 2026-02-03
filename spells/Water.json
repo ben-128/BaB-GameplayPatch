@@ -1,0 +1,66 @@
+{
+  "name": "Water",
+  "type": "unknown",
+  "offset": "0x00909B5F",
+  "stats": {
+    "mp_cost": null,
+    "power_damage": null,
+    "hit_chance": null,
+    "effect_type": null,
+    "level_requirement": null,
+    "casting_time": null,
+    "range": null,
+    "area_of_effect": null
+  },
+  "raw_data": {
+    "hex_offset": "0x00909B5F",
+    "structure_size": 48,
+    "raw_values": [
+      25458,
+      25964,
+      0,
+      0,
+      44800,
+      1024,
+      20500,
+      0,
+      0,
+      0,
+      0,
+      319,
+      32778,
+      8208,
+      32832,
+      8208,
+      32832,
+      32,
+      0,
+      0,
+      21248,
+      28021,
+      28525,
+      110
+    ]
+  },
+  "detailed_stats": {
+    "spell_id": 0,
+    "mp_cost": null,
+    "power_damage": 10,
+    "magic_level": 0,
+    "element": 63,
+    "effect_type_byte": 32,
+    "target_flags": 32832,
+    "range_flags": 32,
+    "special_flags": {
+      "flag1": 64,
+      "flag2": 128,
+      "flag3": 16,
+      "flag4": 32
+    }
+  },
+  "interpretations": {
+    "element": "Unknown (63)",
+    "effect_type": "Unknown (0x20)",
+    "target": "Unknown (0x8040)"
+  }
+}

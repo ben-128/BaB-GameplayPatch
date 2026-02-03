@@ -1,0 +1,66 @@
+{
+  "name": "Silence",
+  "type": "status",
+  "offset": "0x009099D8",
+  "stats": {
+    "mp_cost": 167,
+    "power_damage": 8,
+    "hit_chance": null,
+    "effect_type": null,
+    "level_requirement": 109,
+    "casting_time": null,
+    "range": null,
+    "area_of_effect": null
+  },
+  "raw_data": {
+    "hex_offset": "0x009099D8",
+    "structure_size": 48,
+    "raw_values": [
+      26691,
+      29281,
+      109,
+      0,
+      0,
+      0,
+      0,
+      0,
+      167,
+      4106,
+      8,
+      0,
+      0,
+      0,
+      10753,
+      1537,
+      32896,
+      8208,
+      32832,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "detailed_stats": {
+    "spell_id": 167,
+    "mp_cost": 167,
+    "power_damage": null,
+    "magic_level": 16,
+    "element": 0,
+    "effect_type_byte": 6,
+    "target_flags": 32896,
+    "range_flags": 8208,
+    "special_flags": {
+      "flag1": 1,
+      "flag2": 42,
+      "flag3": 1,
+      "flag4": 6
+    }
+  },
+  "interpretations": {
+    "element": "Neutral",
+    "effect_type": "Area Damage",
+    "target": "Unknown (0x8080)"
+  }
+}

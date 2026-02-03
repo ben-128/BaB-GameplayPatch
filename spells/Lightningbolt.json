@@ -1,0 +1,66 @@
+{
+  "name": "Lightningbolt",
+  "type": "lightning",
+  "offset": "0x00909078",
+  "stats": {
+    "mp_cost": 10,
+    "power_damage": 16,
+    "hit_chance": null,
+    "effect_type": null,
+    "level_requirement": 101,
+    "casting_time": null,
+    "range": null,
+    "area_of_effect": null
+  },
+  "raw_data": {
+    "hex_offset": "0x00909078",
+    "structure_size": 48,
+    "raw_values": [
+      27714,
+      31329,
+      101,
+      0,
+      0,
+      0,
+      0,
+      0,
+      10,
+      5128,
+      16,
+      2,
+      30,
+      0,
+      11265,
+      1538,
+      4128,
+      32800,
+      8320,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "detailed_stats": {
+    "spell_id": 10,
+    "mp_cost": 10,
+    "power_damage": 30,
+    "magic_level": 20,
+    "element": 2,
+    "effect_type_byte": 6,
+    "target_flags": 4128,
+    "range_flags": 32800,
+    "special_flags": {
+      "flag1": 1,
+      "flag2": 44,
+      "flag3": 2,
+      "flag4": 6
+    }
+  },
+  "interpretations": {
+    "element": "Lightning",
+    "effect_type": "Area Damage",
+    "target": "Enemy Group"
+  }
+}

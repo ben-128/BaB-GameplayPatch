@@ -1,0 +1,66 @@
+{
+  "name": "Reincarnation",
+  "type": "unknown",
+  "offset": "0x009097F8",
+  "stats": {
+    "mp_cost": 51,
+    "power_damage": 39,
+    "hit_chance": 51,
+    "effect_type": null,
+    "level_requirement": 114,
+    "casting_time": null,
+    "range": null,
+    "area_of_effect": null
+  },
+  "raw_data": {
+    "hex_offset": "0x009097F8",
+    "structure_size": 48,
+    "raw_values": [
+      25938,
+      28515,
+      25974,
+      114,
+      28229,
+      29285,
+      31079,
+      0,
+      51,
+      15360,
+      39,
+      8,
+      0,
+      0,
+      16896,
+      3073,
+      16512,
+      8208,
+      16512,
+      8208,
+      16512,
+      8208,
+      0,
+      0
+    ]
+  },
+  "detailed_stats": {
+    "spell_id": 51,
+    "mp_cost": 51,
+    "power_damage": null,
+    "magic_level": 60,
+    "element": 8,
+    "effect_type_byte": 12,
+    "target_flags": 16512,
+    "range_flags": 8208,
+    "special_flags": {
+      "flag1": 0,
+      "flag2": 66,
+      "flag3": 1,
+      "flag4": 12
+    }
+  },
+  "interpretations": {
+    "element": "Holy/Healing",
+    "effect_type": "Unknown (0x0C)",
+    "target": "Unknown (0x4080)"
+  }
+}

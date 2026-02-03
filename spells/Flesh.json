@@ -1,0 +1,66 @@
+{
+  "name": "Flesh",
+  "type": "unknown",
+  "offset": "0x0090967E",
+  "stats": {
+    "mp_cost": 22,
+    "power_damage": null,
+    "hit_chance": null,
+    "effect_type": null,
+    "level_requirement": 43,
+    "casting_time": null,
+    "range": null,
+    "area_of_effect": null
+  },
+  "raw_data": {
+    "hex_offset": "0x0090967E",
+    "structure_size": 48,
+    "raw_values": [
+      17920,
+      25961,
+      25708,
+      0,
+      0,
+      43,
+      5120,
+      22,
+      8,
+      0,
+      0,
+      14080,
+      2306,
+      16416,
+      4224,
+      16416,
+      4224,
+      32,
+      0,
+      0,
+      0,
+      29779,
+      28271,
+      101
+    ]
+  },
+  "detailed_stats": {
+    "spell_id": 8,
+    "mp_cost": 8,
+    "power_damage": 2,
+    "magic_level": 0,
+    "element": 0,
+    "effect_type_byte": 64,
+    "target_flags": 4224,
+    "range_flags": 32,
+    "special_flags": {
+      "flag1": 128,
+      "flag2": 16,
+      "flag3": 32,
+      "flag4": 64
+    }
+  },
+  "interpretations": {
+    "element": "Neutral",
+    "effect_type": "Unknown (0x40)",
+    "target": "Unknown (0x1080)"
+  }
+}

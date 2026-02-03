@@ -1,0 +1,66 @@
+{
+  "name": "Align",
+  "type": "unknown",
+  "offset": "0x0090949F",
+  "stats": {
+    "mp_cost": null,
+    "power_damage": null,
+    "hit_chance": null,
+    "effect_type": null,
+    "level_requirement": null,
+    "casting_time": null,
+    "range": null,
+    "area_of_effect": null
+  },
+  "raw_data": {
+    "hex_offset": "0x0090949F",
+    "structure_size": 48,
+    "raw_values": [
+      0,
+      0,
+      0,
+      0,
+      8448,
+      0,
+      2056,
+      2048,
+      0,
+      0,
+      0,
+      798,
+      16387,
+      16416,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      17408,
+      29797,
+      25445,
+      116
+    ]
+  },
+  "detailed_stats": {
+    "spell_id": 0,
+    "mp_cost": null,
+    "power_damage": 3,
+    "magic_level": 0,
+    "element": 30,
+    "effect_type_byte": 0,
+    "target_flags": 0,
+    "range_flags": 0,
+    "special_flags": {
+      "flag1": 0,
+      "flag2": 0,
+      "flag3": 0,
+      "flag4": 0
+    }
+  },
+  "interpretations": {
+    "element": "Unknown (30)",
+    "effect_type": "Unknown (0x00)",
+    "target": "Unknown (0x0000)"
+  }
+}

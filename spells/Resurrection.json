@@ -1,0 +1,66 @@
+{
+  "name": "Resurrection",
+  "type": "unknown",
+  "offset": "0x00909798",
+  "stats": {
+    "mp_cost": 49,
+    "power_damage": 86,
+    "hit_chance": 86,
+    "effect_type": null,
+    "level_requirement": null,
+    "casting_time": null,
+    "range": null,
+    "area_of_effect": null
+  },
+  "raw_data": {
+    "hex_offset": "0x00909798",
+    "structure_size": 48,
+    "raw_values": [
+      25938,
+      25959,
+      25966,
+      24946,
+      26996,
+      28271,
+      0,
+      0,
+      49,
+      15360,
+      86,
+      8,
+      4,
+      0,
+      18432,
+      2561,
+      8208,
+      8224,
+      4128,
+      8208,
+      8208,
+      0,
+      0,
+      0
+    ]
+  },
+  "detailed_stats": {
+    "spell_id": 49,
+    "mp_cost": 49,
+    "power_damage": 4,
+    "magic_level": 60,
+    "element": 8,
+    "effect_type_byte": 10,
+    "target_flags": 8208,
+    "range_flags": 8224,
+    "special_flags": {
+      "flag1": 0,
+      "flag2": 72,
+      "flag3": 1,
+      "flag4": 10
+    }
+  },
+  "interpretations": {
+    "element": "Holy/Healing",
+    "effect_type": "Unknown (0x0A)",
+    "target": "Unknown (0x2010)"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "name": "Turn",
+  "type": "unknown",
+  "offset": "0x009093D8",
+  "stats": {
+    "mp_cost": 28,
+    "power_damage": 100,
+    "hit_chance": 100,
+    "effect_type": null,
+    "level_requirement": null,
+    "casting_time": null,
+    "range": null,
+    "area_of_effect": null
+  },
+  "raw_data": {
+    "hex_offset": "0x009093D8",
+    "structure_size": 48,
+    "raw_values": [
+      30022,
+      26995,
+      28271,
+      0,
+      0,
+      0,
+      0,
+      0,
+      28,
+      30720,
+      100,
+      6,
+      10,
+      0,
+      1,
+      3075,
+      4144,
+      4128,
+      4224,
+      4160,
+      4160,
+      12304,
+      0,
+      0
+    ]
+  },
+  "detailed_stats": {
+    "spell_id": 28,
+    "mp_cost": 28,
+    "power_damage": 10,
+    "magic_level": 120,
+    "element": 6,
+    "effect_type_byte": 12,
+    "target_flags": 4144,
+    "range_flags": 4128,
+    "special_flags": {
+      "flag1": 1,
+      "flag2": 0,
+      "flag3": 3,
+      "flag4": 12
+    }
+  },
+  "interpretations": {
+    "element": "Unknown (6)",
+    "effect_type": "Unknown (0x0C)",
+    "target": "Unknown (0x1030)"
+  }
+}

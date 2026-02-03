@@ -1,0 +1,66 @@
+{
+  "name": "Magic",
+  "type": "unknown",
+  "offset": "0x00909A08",
+  "stats": {
+    "mp_cost": 168,
+    "power_damage": 8,
+    "hit_chance": null,
+    "effect_type": null,
+    "level_requirement": 101,
+    "casting_time": null,
+    "range": null,
+    "area_of_effect": null
+  },
+  "raw_data": {
+    "hex_offset": "0x00909A08",
+    "structure_size": 48,
+    "raw_values": [
+      26963,
+      25964,
+      25454,
+      101,
+      0,
+      0,
+      0,
+      0,
+      168,
+      4105,
+      8,
+      0,
+      0,
+      0,
+      12289,
+      1537,
+      16448,
+      4224,
+      16416,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "detailed_stats": {
+    "spell_id": 168,
+    "mp_cost": 168,
+    "power_damage": null,
+    "magic_level": 16,
+    "element": 0,
+    "effect_type_byte": 6,
+    "target_flags": 16448,
+    "range_flags": 4224,
+    "special_flags": {
+      "flag1": 1,
+      "flag2": 48,
+      "flag3": 1,
+      "flag4": 6
+    }
+  },
+  "interpretations": {
+    "element": "Neutral",
+    "effect_type": "Area Damage",
+    "target": "Unknown (0x4040)"
+  }
+}

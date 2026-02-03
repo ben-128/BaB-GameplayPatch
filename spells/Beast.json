@@ -1,0 +1,66 @@
+{
+  "name": "Beast",
+  "type": "unknown",
+  "offset": "0x0090928F",
+  "stats": {
+    "mp_cost": null,
+    "power_damage": null,
+    "hit_chance": null,
+    "effect_type": null,
+    "level_requirement": null,
+    "casting_time": null,
+    "range": null,
+    "area_of_effect": null
+  },
+  "raw_data": {
+    "hex_offset": "0x0090928F",
+    "structure_size": 48,
+    "raw_values": [
+      28514,
+      29804,
+      0,
+      0,
+      5376,
+      1537,
+      11580,
+      1280,
+      17920,
+      0,
+      256,
+      326,
+      4104,
+      8320,
+      32784,
+      8208,
+      48,
+      0,
+      0,
+      0,
+      17920,
+      25970,
+      31333,
+      101
+    ]
+  },
+  "detailed_stats": {
+    "spell_id": 0,
+    "mp_cost": null,
+    "power_damage": 8,
+    "magic_level": 0,
+    "element": 70,
+    "effect_type_byte": 32,
+    "target_flags": 48,
+    "range_flags": 0,
+    "special_flags": {
+      "flag1": 16,
+      "flag2": 128,
+      "flag3": 16,
+      "flag4": 32
+    }
+  },
+  "interpretations": {
+    "element": "Unknown (70)",
+    "effect_type": "Unknown (0x20)",
+    "target": "Unknown (0x0030)"
+  }
+}

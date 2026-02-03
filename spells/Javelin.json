@@ -1,0 +1,66 @@
+{
+  "name": "Javelin",
+  "type": "unknown",
+  "offset": "0x009092BE",
+  "stats": {
+    "mp_cost": 30,
+    "power_damage": null,
+    "hit_chance": null,
+    "effect_type": null,
+    "level_requirement": 22,
+    "casting_time": null,
+    "range": null,
+    "area_of_effect": null
+  },
+  "raw_data": {
+    "hex_offset": "0x009092BE",
+    "structure_size": 48,
+    "raw_values": [
+      16896,
+      24933,
+      29811,
+      0,
+      0,
+      22,
+      15361,
+      30,
+      3,
+      8,
+      0,
+      19201,
+      2307,
+      4160,
+      32832,
+      16512,
+      49280,
+      32,
+      0,
+      0,
+      0,
+      24901,
+      29810,
+      104
+    ]
+  },
+  "detailed_stats": {
+    "spell_id": 3,
+    "mp_cost": 3,
+    "power_damage": 3,
+    "magic_level": 0,
+    "element": 1,
+    "effect_type_byte": 64,
+    "target_flags": 49280,
+    "range_flags": 32,
+    "special_flags": {
+      "flag1": 64,
+      "flag2": 128,
+      "flag3": 128,
+      "flag4": 64
+    }
+  },
+  "interpretations": {
+    "element": "Unknown (1)",
+    "effect_type": "Unknown (0x40)",
+    "target": "Unknown (0xC080)"
+  }
+}

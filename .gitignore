@@ -1,0 +1,13 @@
+# Fichiers binaires du jeu (trop gros pour GitHub)
+BLAZE.ALL
+*.bin
+*.cue
+
+# Fichiers temporaires
+*.tmp
+*.bak
+*~
+
+# Fichiers système
+.DS_Store
+Thumbs.db
