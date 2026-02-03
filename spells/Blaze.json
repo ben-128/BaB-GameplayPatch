@@ -62,5 +62,25 @@
     "element": "Neutral",
     "effect_type": "Direct Damage",
     "target": "All Enemies"
+  },
+  "mp_cost_info": {
+    "ingame_cost": 16,
+    "structure_cost": 9,
+    "match": false,
+    "occurrences_found": 50,
+    "sample_locations": [
+      "0x00203BC6",
+      "0x00223260",
+      "0x0022BD8E",
+      "0x0022D770",
+      "0x00233EEE"
+    ]
+  },
+  "modification_guide": {
+    "description": "To modify MP cost, replace all occurrences of the pattern [spell_id, old_mp_cost]",
+    "current_pattern_hex": "09 00 10 00",
+    "example_new_pattern_hex": "09 00 [NEW_MP_LO] [NEW_MP_HI]",
+    "occurrences_to_replace": 50,
+    "warning": "Replace ALL occurrences for consistency"
   }
 }

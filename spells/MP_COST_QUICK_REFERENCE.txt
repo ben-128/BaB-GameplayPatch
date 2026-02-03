@@ -1,0 +1,122 @@
+================================================================================
+RÉFÉRENCE RAPIDE - COÛTS MP DES SORTS
+================================================================================
+
+Date: 2026-02-03
+Fichier: BLAZE.ALL
+
+================================================================================
+LOCALISATION DES DONNÉES
+================================================================================
+
+1. STRUCTURE DES SORTS (0x00909000)
+   - Chaque sort = 48 bytes avant le nom
+   - Byte[20] (raw[10]) = Coût MP de base
+   - ⚠️ Ne correspond pas toujours au coût in-game !
+
+2. TABLES DISPERSÉES (pattern [spell_id, mp_cost] en int16 LE)
+   - Contient les VRAIS coûts MP utilisés in-game
+   - Voir MP_COST_LOCATIONS.json pour tous les offsets
+
+================================================================================
+COÛTS MP IN-GAME CONFIRMÉS
+================================================================================
+
+Sort                    | Spell_ID | MP Cost | Occurrences
+------------------------|----------|---------|-------------
+Enchant Water           | 165      | 16      | 8
+Enchant Fire            | 7        | 16      | N/A (structure spéciale)
+Enchant Wind            | 164      | 16      | 12
+Enchant Earth           | 163      | 16      | 25
+Charm                   | 166      | 8       | 20
+Silence                 | 167      | 8       | 46
+Shield                  | 170      | 12      | 8
+Anti-Circle             | 174      | 80      | 4
+Lightningbolt           | 10       | 16      | 50+
+Blaze                   | 9        | 16      | 50+
+Petrifaction            | 18       | 38      | 50+
+Magic (Magic Missile)   | 168      | 12      | 50+
+
+================================================================================
+COMPARAISON : raw[10] vs In-Game
+================================================================================
+
+✓ CORRESPONDANCE EXACTE (raw[10] = MP Cost)
+--------------------------------------------
+Enchant Earth/Wind/Water : 16 = 16
+Silence                  : 8  = 8
+Lightningbolt            : 16 = 16
+
+✗ DIFFÉRENCE (raw[10] ≠ MP Cost)
+---------------------------------
+Charm         : 16 → 8   (÷ 2)
+Shield        : 30 → 12  (÷ 2.5)
+Magic         : 8  → 12  (× 1.5)
+Petrifaction  : 40 → 38  (- 2)
+Blaze         : 15 → 16  (+ 1)
+Anti-Circle   : 60 → 80  (× 4/3)
+
+================================================================================
+PATTERN TROUVÉ
+================================================================================
+
+Format: [spell_id (2 bytes LE), mp_cost (2 bytes LE)]
+
+Exemple - Magic (id=168, mp=12):
+  Hex:  A8 00 0C 00
+  Dec:  168   12
+
+Exemple - Anti-Circle (id=174, mp=80):
+  Hex:  AE 00 50 00
+  Dec:  174   80
+
+================================================================================
+ZONES PRINCIPALES
+================================================================================
+
+Zone 1: 0x002F6854 - Structure répétitive (18/52 bytes écart)
+   Contient: Silence, Blaze, Lightningbolt
+
+Zone 2: 0x00914961 - Code/Données mixtes
+   Contient: Magic (168, 12) - 50+ occurrences
+
+Zone 3: 0x002CA424 - Données de classe
+   Contient: Shield (170, 12)
+
+================================================================================
+MODIFICATION RAPIDE
+================================================================================
+
+Pour changer le coût MP d'un sort:
+
+1. Chercher le pattern: [spell_id (2 bytes LE), old_mp (2 bytes LE)]
+2. Remplacer PAR:       [spell_id (2 bytes LE), new_mp (2 bytes LE)]
+3. Remplacer TOUTES les occurrences !
+4. Tester in-game
+
+⚠️ ATTENTION: Anti-Circle n'a que 4 occurrences !
+⚠️ ATTENTION: Shield n'a que 8 occurrences !
+
+================================================================================
+EXEMPLE HEXADÉCIMAL
+================================================================================
+
+Changer Magic de 12 MP à 15 MP:
+
+AVANT: A8 00 0C 00  (168, 12)
+APRÈS: A8 00 0F 00  (168, 15)
+
+Commande (hex editor):
+  Rechercher: A8 00 0C 00
+  Remplacer:  A8 00 0F 00
+  Occurences: 50+
+
+================================================================================
+FICHIERS GÉNÉRÉS
+================================================================================
+
+MP_COST_LOCATIONS.json      - Base de données complète des offsets
+MP_COST_DOCUMENTATION.md    - Documentation détaillée
+MP_COST_QUICK_REFERENCE.txt - Ce fichier
+
+================================================================================

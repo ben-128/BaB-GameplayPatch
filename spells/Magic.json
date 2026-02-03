@@ -62,5 +62,25 @@
     "element": "Neutral",
     "effect_type": "Area Damage",
     "target": "Unknown (0x4040)"
+  },
+  "mp_cost_info": {
+    "ingame_cost": 12,
+    "structure_cost": 168,
+    "match": false,
+    "occurrences_found": 50,
+    "sample_locations": [
+      "0x00914961",
+      "0x0091497D",
+      "0x00916449",
+      "0x0091A99D",
+      "0x00922075"
+    ]
+  },
+  "modification_guide": {
+    "description": "To modify MP cost, replace all occurrences of the pattern [spell_id, old_mp_cost]",
+    "current_pattern_hex": "A8 00 0C 00",
+    "example_new_pattern_hex": "A8 00 [NEW_MP_LO] [NEW_MP_HI]",
+    "occurrences_to_replace": 50,
+    "warning": "Replace ALL occurrences for consistency"
   }
 }

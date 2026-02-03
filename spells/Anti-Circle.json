@@ -62,5 +62,24 @@
     "element": "Neutral",
     "effect_type": "Unknown (0x0A)",
     "target": "Single Enemy"
+  },
+  "mp_cost_info": {
+    "ingame_cost": 80,
+    "structure_cost": 60,
+    "match": false,
+    "occurrences_found": 4,
+    "sample_locations": [
+      "0x009B827E",
+      "0x01B81244",
+      "0x01B83244",
+      "0x0262D852"
+    ]
+  },
+  "modification_guide": {
+    "description": "To modify MP cost, replace all occurrences of the pattern [spell_id, old_mp_cost]",
+    "current_pattern_hex": "AE 00 50 00",
+    "example_new_pattern_hex": "AE 00 [NEW_MP_LO] [NEW_MP_HI]",
+    "occurrences_to_replace": 4,
+    "warning": "Replace ALL occurrences for consistency"
   }
 }

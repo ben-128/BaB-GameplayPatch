@@ -62,5 +62,25 @@
     "element": "Lightning",
     "effect_type": "Area Damage",
     "target": "Enemy Group"
+  },
+  "mp_cost_info": {
+    "ingame_cost": 16,
+    "structure_cost": 10,
+    "match": false,
+    "occurrences_found": 50,
+    "sample_locations": [
+      "0x00211A12",
+      "0x00220B3C",
+      "0x00220B9A",
+      "0x00220BF8",
+      "0x00220C56"
+    ]
+  },
+  "modification_guide": {
+    "description": "To modify MP cost, replace all occurrences of the pattern [spell_id, old_mp_cost]",
+    "current_pattern_hex": "0A 00 10 00",
+    "example_new_pattern_hex": "0A 00 [NEW_MP_LO] [NEW_MP_HI]",
+    "occurrences_to_replace": 50,
+    "warning": "Replace ALL occurrences for consistency"
   }
 }

@@ -62,5 +62,25 @@
     "element": "Neutral",
     "effect_type": "Unknown (0x08)",
     "target": "Single Ally"
+  },
+  "mp_cost_info": {
+    "ingame_cost": 38,
+    "structure_cost": 99,
+    "match": false,
+    "occurrences_found": 50,
+    "sample_locations": [
+      "0x0023AC44",
+      "0x0023CFE0",
+      "0x0023D032",
+      "0x0023D084",
+      "0x0023D0D6"
+    ]
+  },
+  "modification_guide": {
+    "description": "To modify MP cost, replace all occurrences of the pattern [spell_id, old_mp_cost]",
+    "current_pattern_hex": "12 00 26 00",
+    "example_new_pattern_hex": "12 00 [NEW_MP_LO] [NEW_MP_HI]",
+    "occurrences_to_replace": 50,
+    "warning": "Replace ALL occurrences for consistency"
   }
 }
