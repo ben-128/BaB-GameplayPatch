@@ -1,0 +1,188 @@
+{
+  "description": "Fate Coin Shop - The retired knight NPC",
+  "note": "Prices are the same for all 8 classes. Only items differ at indices 10, 16, 20, 22. Modifying a price here affects ALL classes.",
+  "classes": ["Warrior", "Priest/ess", "Rogue", "Sorcerer/ess", "Hunter", "Elf", "Dwarf", "Fairy"],
+  "offsets_in_blaze_all": [
+    "0x00B1443C",
+    "0x00B14C3C",
+    "0x00B1EC24",
+    "0x00B1F424",
+    "0x00B29344",
+    "0x00B34C38",
+    "0x00B35438",
+    "0x00B402E8",
+    "0x00B4C41C",
+    "0x00B4CC1C"
+  ],
+  "items": [
+    {
+      "index": 0,
+      "price": 0,
+      "default_price": 1,
+      "item": "Rope of Return"
+    },
+    {
+      "index": 1,
+      "price": 1,
+      "default_price": 2,
+      "item": "Material Magic"
+    },
+    {
+      "index": 2,
+      "price": 1,
+      "default_price": 2,
+      "item": "Material Flame"
+    },
+    {
+      "index": 3,
+      "price": 1,
+      "default_price": 2,
+      "item": "Material Water"
+    },
+    {
+      "index": 4,
+      "price": 1,
+      "default_price": 2,
+      "item": "Material Earth"
+    },
+    {
+      "index": 5,
+      "price": 1,
+      "default_price": 2,
+      "item": "Material Wind"
+    },
+    {
+      "index": 6,
+      "price": 1,
+      "default_price": 2,
+      "item": "Material Light"
+    },
+    {
+      "index": 7,
+      "price": 1,
+      "default_price": 2,
+      "item": "Material Dark"
+    },
+    {
+      "index": 8,
+      "price": 1,
+      "default_price": 2,
+      "item": "Material Holiness"
+    },
+    {
+      "index": 9,
+      "price": 1,
+      "default_price": 2,
+      "item": "Material Evil"
+    },
+    {
+      "index": 10,
+      "price": 1,
+      "default_price": 3,
+      "item_by_class": {
+        "Warrior": "Knight's Gauntlet",
+        "Dwarf": "Knight's Gauntlet",
+        "default": "Strong Gloves"
+      }
+    },
+    {
+      "index": 11,
+      "price": 1,
+      "default_price": 5,
+      "item": "Elixir"
+    },
+    {
+      "index": 12,
+      "price": 1,
+      "default_price": 7,
+      "item": "Ambrosia"
+    },
+    {
+      "index": 13,
+      "price": 2,
+      "default_price": 12,
+      "item": "Cross"
+    },
+    {
+      "index": 14,
+      "price": 4,
+      "default_price": 20,
+      "item": "Healing Amulet"
+    },
+    {
+      "index": 15,
+      "price": 6,
+      "default_price": 28,
+      "item": "Dominion Feather"
+    },
+    {
+      "index": 16,
+      "price": 8,
+      "default_price": 38,
+      "item_by_class": {
+        "Warrior": "Fata Morgana Armor",
+        "Priest/ess": "Robe of the Elder",
+        "Sorcerer/ess": "Robe of the Elder",
+        "Dwarf": "Robe of the Elder",
+        "Fairy": "Robe of the Elder",
+        "Rogue": "Dark Shield",
+        "Hunter": "Dark Shield",
+        "Elf": "Dark Shield"
+      }
+    },
+    {
+      "index": 17,
+      "price": 10,
+      "default_price": 52,
+      "item": "Mirror of Truth"
+    },
+    {
+      "index": 18,
+      "price": 10,
+      "default_price": 52,
+      "item": "Water Mirror"
+    },
+    {
+      "index": 19,
+      "price": 13,
+      "default_price": 65,
+      "item": "Elemental Ring"
+    },
+    {
+      "index": 20,
+      "price": 16,
+      "default_price": 78,
+      "item_by_class": {
+        "Warrior": "Guardian Armor",
+        "Dwarf": "Guardian Armor",
+        "Priest/ess": "Guardian Robe",
+        "Sorcerer/ess": "Guardian Robe",
+        "Fairy": "Guardian Robe",
+        "Rogue": "Elemental Shield",
+        "Hunter": "Elemental Shield",
+        "Elf": "Elemental Shield"
+      }
+    },
+    {
+      "index": 21,
+      "price": 19,
+      "default_price": 95,
+      "item": "Sol Crown"
+    },
+    {
+      "index": 22,
+      "price": 20,
+      "default_price": 99,
+      "item_by_class": {
+        "Warrior": "Fenris",
+        "Priest/ess": "Wish Hammer",
+        "Rogue": "Ringnail",
+        "Sorcerer/ess": "Crystal Wand",
+        "Hunter": "Falconbolt",
+        "Elf": "Chaos Rapier",
+        "Dwarf": "Frost Axe",
+        "Fairy": "Rhinoceros Rod"
+      }
+    }
+  ]
+}

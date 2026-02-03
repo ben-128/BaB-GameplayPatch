@@ -12,7 +12,8 @@ BIN_IN      = Path(r"work\Blaze & Blade - Patched.bin")
 BIN_OUT     = Path(r"work\Blaze & Blade - Patched.bin")  # Overwrite in place
 BLAZE_ALL   = Path(r"work\BLAZE.ALL")
 
-LBA_START   = 163167      # LBA where BLAZE.ALL starts in the BIN
+# Two copies of BLAZE.ALL in the BIN
+LBA_LOCATIONS = [163167, 185765]  # LBAs where BLAZE.ALL starts
 SECTOR_RAW  = 2352        # RAW sector size
 USER_OFF    = 24          # MODE2/Form1 user data offset
 USER_SIZE   = 2048        # User data per sector
@@ -54,25 +55,26 @@ def main():
 
     print(f"  Format: {'RAW (2352)' if is_raw else 'ISO (2048)'}")
 
-    # Inject BLAZE.ALL sectors
-    print(f"\nPatching {ORIG_SECTORS} sectors starting at LBA {LBA_START}...")
+    # Inject BLAZE.ALL at both locations
+    for loc_idx, lba_start in enumerate(LBA_LOCATIONS):
+        print(f"\nPatching copy {loc_idx + 1}/{len(LBA_LOCATIONS)} at LBA {lba_start}...")
 
-    for i in range(ORIG_SECTORS):
-        src = i * USER_SIZE
-        chunk = data[src:src+USER_SIZE] if src < len(data) else b'\x00' * USER_SIZE
+        for i in range(ORIG_SECTORS):
+            src = i * USER_SIZE
+            chunk = data[src:src+USER_SIZE] if src < len(data) else b'\x00' * USER_SIZE
 
-        if len(chunk) < USER_SIZE:
-            chunk = chunk + b'\x00' * (USER_SIZE - len(chunk))
+            if len(chunk) < USER_SIZE:
+                chunk = chunk + b'\x00' * (USER_SIZE - len(chunk))
 
-        if is_raw:
-            dst = (LBA_START + i) * SECTOR_RAW + USER_OFF
-        else:
-            dst = (LBA_START + i) * USER_SIZE
+            if is_raw:
+                dst = (lba_start + i) * SECTOR_RAW + USER_OFF
+            else:
+                dst = (lba_start + i) * USER_SIZE
 
-        if dst + USER_SIZE > bin_size:
-            raise SystemExit(f"ERROR: Write would exceed file bounds at sector {i}")
+            if dst + USER_SIZE > bin_size:
+                raise SystemExit(f"ERROR: Write would exceed file bounds at sector {i}")
 
-        bin_bytes[dst:dst+USER_SIZE] = chunk
+            bin_bytes[dst:dst+USER_SIZE] = chunk
 
     # Write output
     print(f"\nWriting {BIN_OUT}...")

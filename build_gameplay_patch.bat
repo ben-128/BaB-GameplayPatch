@@ -8,8 +8,22 @@ echo  Bab Gameplay Patch Builder
 echo ============================================
 echo.
 
-REM Patch monster stats directly into BIN (patches both data copies)
-echo [1/1] Patching monster stats into BIN...
+REM Step 1: Patch Fate Coin Shop prices into BLAZE.ALL
+echo [1/3] Patching Fate Coin Shop prices...
+py -3 patch_fate_coin_shop.py
+if errorlevel 1 goto :error
+
+echo.
+
+REM Step 2: Inject BLAZE.ALL into BIN
+echo [2/3] Injecting BLAZE.ALL into BIN...
+py -3 patch_blaze_all.py
+if errorlevel 1 goto :error
+
+echo.
+
+REM Step 3: Patch monster stats directly into BIN
+echo [3/3] Patching monster stats into BIN...
 py -3 patch_monster_stats_bin.py
 if errorlevel 1 goto :error
 
