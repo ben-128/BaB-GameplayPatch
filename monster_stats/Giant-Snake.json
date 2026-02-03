@@ -4,11 +4,11 @@
   "offset_hex": "0x1494198",
   "offset_decimal": 21578136,
   "stats": {
-    "exp_reward": 10,
+    "exp_reward": 12,
     "_exp_reward_comment": "[Défaut: 8] Points d'expérience donnés quand le monstre est vaincu",
     "stat2": 5,
     "_stat2_comment": "[Défaut: 5] Inconnu (mais corrélé avec le niveau du monstre)",
-    "hp": 39,
+    "hp": 44,
     "_hp_comment": "[Défaut: 30] Points de vie du monstre",
     "stat4_magic": 3,
     "_stat4_magic_comment": "[Défaut: 3] Puissance magique / Mana - élevé pour les mages et boss",

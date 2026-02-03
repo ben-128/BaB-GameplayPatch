@@ -8,7 +8,7 @@
     "_exp_reward_comment": "[Défaut: 2] Points d'expérience donnés quand le monstre est vaincu",
     "stat2": 20,
     "_stat2_comment": "[Défaut: 20] Inconnu (mais corrélé avec le niveau du monstre)",
-    "hp": 156,
+    "hp": 21,
     "_hp_comment": "[Défaut: 120] Points de vie du monstre",
     "stat4_magic": 1,
     "_stat4_magic_comment": "[Défaut: 1] Puissance magique / Mana - élevé pour les mages et boss",
