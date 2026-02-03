@@ -1,0 +1,31 @@
+{
+  "name": "Killer-Bee",
+  "source_file": "BLAZE.ALL",
+  "offset_hex": "0x14a2228",
+  "offset_decimal": 21635624,
+  "stats": {
+    "exp_reward": 9,
+    "stat2_unknown": 16,
+    "hp": 26,
+    "stat4_magic": 1,
+    "stat5_randomness": 14,
+    "stat6_collider_type": 4,
+    "stat7_death_fx_size": 30,
+    "stat8_unknown": 55,
+    "stat9_collider_size": 70,
+    "stat10_drop_rate": 48,
+    "stat11_creature_type": 64,
+    "stat12_flags": 0,
+    "stat13_flags": 0,
+    "stat14_flags": 0,
+    "stat15_flags": 0,
+    "stat16_atk1": 14,
+    "stat17_def1": 9,
+    "stat18_atk2": 26,
+    "stat19_def2": 25,
+    "stat20_atk3": 6,
+    "stat21_def3": 6,
+    "stat22_atk4": 8,
+    "stat23_def4": 8
+  }
+}

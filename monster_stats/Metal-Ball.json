@@ -1,0 +1,31 @@
+{
+  "name": "Metal-Ball",
+  "source_file": "BLAZE.ALL",
+  "offset_hex": "0x25149E4",
+  "offset_decimal": 38881764,
+  "stats": {
+    "exp_reward": 87,
+    "stat2_unknown": 41,
+    "hp": 200,
+    "stat4_magic": 26,
+    "stat5_randomness": 8,
+    "stat6_collider_type": 10,
+    "stat7_death_fx_size": 60,
+    "stat8_unknown": 60,
+    "stat9_collider_size": 60,
+    "stat10_drop_rate": 40,
+    "stat11_creature_type": 8,
+    "stat12_flags": 0,
+    "stat13_flags": 0,
+    "stat14_flags": 0,
+    "stat15_flags": 0,
+    "stat16_atk1": 96,
+    "stat17_def1": 200,
+    "stat18_atk2": 82,
+    "stat19_def2": 200,
+    "stat20_atk3": 40,
+    "stat21_def3": 200,
+    "stat22_atk4": 86,
+    "stat23_def4": 200
+  }
+}

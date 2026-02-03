@@ -1,0 +1,31 @@
+{
+  "name": "Yellow-Slime",
+  "source_file": "BLAZE.ALL",
+  "offset_hex": "0x1DF5364",
+  "offset_decimal": 31413092,
+  "stats": {
+    "exp_reward": 91,
+    "stat2_unknown": 7,
+    "hp": 125,
+    "stat4_magic": 130,
+    "stat5_randomness": 80,
+    "stat6_collider_type": 0,
+    "stat7_death_fx_size": 120,
+    "stat8_unknown": 64,
+    "stat9_collider_size": 120,
+    "stat10_drop_rate": 40,
+    "stat11_creature_type": 2048,
+    "stat12_flags": 0,
+    "stat13_flags": 0,
+    "stat14_flags": 0,
+    "stat15_flags": 0,
+    "stat16_atk1": 36,
+    "stat17_def1": 260,
+    "stat18_atk2": 61,
+    "stat19_def2": 122,
+    "stat20_atk3": 31,
+    "stat21_def3": 120,
+    "stat22_atk4": 60,
+    "stat23_def4": 108
+  }
+}

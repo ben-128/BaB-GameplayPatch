@@ -1,0 +1,31 @@
+{
+  "name": "Vampire-Bat",
+  "source_file": "BLAZE.ALL",
+  "offset_hex": "0x241AAC8",
+  "offset_decimal": 37857992,
+  "stats": {
+    "exp_reward": 76,
+    "stat2_unknown": 4,
+    "hp": 106,
+    "stat4_magic": 22,
+    "stat5_randomness": 66,
+    "stat6_collider_type": 8,
+    "stat7_death_fx_size": 30,
+    "stat8_unknown": 35,
+    "stat9_collider_size": 40,
+    "stat10_drop_rate": 40,
+    "stat11_creature_type": 16,
+    "stat12_flags": 0,
+    "stat13_flags": 2048,
+    "stat14_flags": 0,
+    "stat15_flags": 3584,
+    "stat16_atk1": 53,
+    "stat17_def1": 61,
+    "stat18_atk2": 66,
+    "stat19_def2": 57,
+    "stat20_atk3": 51,
+    "stat21_def3": 51,
+    "stat22_atk4": 51,
+    "stat23_def4": 51
+  }
+}

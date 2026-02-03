@@ -11,3 +11,8 @@ BLAZE.ALL
 # Fichiers système
 .DS_Store
 Thumbs.db
+
+# Dossiers locaux
+Blaze  Blade - Eternal Quest (Europe)/
+extract/
+work/

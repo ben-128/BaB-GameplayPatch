@@ -1,0 +1,31 @@
+{
+  "name": "Blood-Mummy",
+  "source_file": "BLAZE.ALL",
+  "offset_hex": "0x1DEB218",
+  "offset_decimal": 31371800,
+  "stats": {
+    "exp_reward": 95,
+    "stat2_unknown": 29,
+    "hp": 190,
+    "stat4_magic": 63,
+    "stat5_randomness": 72,
+    "stat6_collider_type": 4,
+    "stat7_death_fx_size": 50,
+    "stat8_unknown": 155,
+    "stat9_collider_size": 30,
+    "stat10_drop_rate": 60,
+    "stat11_creature_type": 256,
+    "stat12_flags": 16,
+    "stat13_flags": 0,
+    "stat14_flags": 0,
+    "stat15_flags": 5120,
+    "stat16_atk1": 94,
+    "stat17_def1": 80,
+    "stat18_atk2": 70,
+    "stat19_def2": 77,
+    "stat20_atk3": 31,
+    "stat21_def3": 90,
+    "stat22_atk4": 55,
+    "stat23_def4": 53
+  }
+}

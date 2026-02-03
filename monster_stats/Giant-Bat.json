@@ -1,0 +1,31 @@
+{
+  "name": "Giant-Bat",
+  "source_file": "BLAZE.ALL",
+  "offset_hex": "0xf861f8",
+  "offset_decimal": 16278008,
+  "stats": {
+    "exp_reward": 15,
+    "stat2_unknown": 4,
+    "hp": 36,
+    "stat4_magic": 2,
+    "stat5_randomness": 15,
+    "stat6_collider_type": 2,
+    "stat7_death_fx_size": 30,
+    "stat8_unknown": 35,
+    "stat9_collider_size": 40,
+    "stat10_drop_rate": 66,
+    "stat11_creature_type": 16,
+    "stat12_flags": 0,
+    "stat13_flags": 0,
+    "stat14_flags": 1024,
+    "stat15_flags": 0,
+    "stat16_atk1": 18,
+    "stat17_def1": 18,
+    "stat18_atk2": 14,
+    "stat19_def2": 14,
+    "stat20_atk3": 10,
+    "stat21_def3": 14,
+    "stat22_atk4": 10,
+    "stat23_def4": 10
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Big-Viper",
+  "source_file": "BLAZE.ALL",
+  "offset_hex": "0xf86258",
+  "offset_decimal": 16278104,
+  "stats": {
+    "exp_reward": 18,
+    "stat2_unknown": 5,
+    "hp": 80,
+    "stat4_magic": 14,
+    "stat5_randomness": 18,
+    "stat6_collider_type": 2,
+    "stat7_death_fx_size": 15,
+    "stat8_unknown": 15,
+    "stat9_collider_size": 225,
+    "stat10_drop_rate": 64,
+    "stat11_creature_type": 16,
+    "stat12_flags": 0,
+    "stat13_flags": 8,
+    "stat14_flags": 0,
+    "stat15_flags": 0,
+    "stat16_atk1": 26,
+    "stat17_def1": 24,
+    "stat18_atk2": 28,
+    "stat19_def2": 22,
+    "stat20_atk3": 23,
+    "stat21_def3": 20,
+    "stat22_atk4": 15,
+    "stat23_def4": 15
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Ice-Salamander",
+  "source_file": "BLAZE.ALL",
+  "offset_hex": "0x2BFF29C",
+  "offset_decimal": 46133916,
+  "stats": {
+    "exp_reward": 168,
+    "stat2_unknown": 9,
+    "hp": 240,
+    "stat4_magic": 220,
+    "stat5_randomness": 82,
+    "stat6_collider_type": 0,
+    "stat7_death_fx_size": 40,
+    "stat8_unknown": 140,
+    "stat9_collider_size": 200,
+    "stat10_drop_rate": 30,
+    "stat11_creature_type": 0,
+    "stat12_flags": 8192,
+    "stat13_flags": 0,
+    "stat14_flags": 0,
+    "stat15_flags": 0,
+    "stat16_atk1": 158,
+    "stat17_def1": 96,
+    "stat18_atk2": 73,
+    "stat19_def2": 74,
+    "stat20_atk3": 52,
+    "stat21_def3": 92,
+    "stat22_atk4": 90,
+    "stat23_def4": 120
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Vampire",
+  "source_file": "BLAZE.ALL",
+  "offset_hex": "0x242d1dc",
+  "offset_decimal": 37933532,
+  "stats": {
+    "exp_reward": 98,
+    "stat2_unknown": 34,
+    "hp": 156,
+    "stat4_magic": 181,
+    "stat5_randomness": 80,
+    "stat6_collider_type": 0,
+    "stat7_death_fx_size": 40,
+    "stat8_unknown": 130,
+    "stat9_collider_size": 35,
+    "stat10_drop_rate": 60,
+    "stat11_creature_type": 256,
+    "stat12_flags": 0,
+    "stat13_flags": 10,
+    "stat14_flags": 5120,
+    "stat15_flags": 6144,
+    "stat16_atk1": 76,
+    "stat17_def1": 88,
+    "stat18_atk2": 72,
+    "stat19_def2": 76,
+    "stat20_atk3": 24,
+    "stat21_def3": 95,
+    "stat22_atk4": 74,
+    "stat23_def4": 75
+  }
+}

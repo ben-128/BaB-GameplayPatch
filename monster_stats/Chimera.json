@@ -1,0 +1,31 @@
+{
+  "name": "Chimera",
+  "source_file": "BLAZE.ALL",
+  "offset_hex": "0x2517158",
+  "offset_decimal": 38891864,
+  "stats": {
+    "exp_reward": 103,
+    "stat2_unknown": 42,
+    "hp": 210,
+    "stat4_magic": 100,
+    "stat5_randomness": 94,
+    "stat6_collider_type": 0,
+    "stat7_death_fx_size": 90,
+    "stat8_unknown": 160,
+    "stat9_collider_size": 260,
+    "stat10_drop_rate": 45,
+    "stat11_creature_type": 2,
+    "stat12_flags": 5120,
+    "stat13_flags": 5376,
+    "stat14_flags": 5120,
+    "stat15_flags": 0,
+    "stat16_atk1": 103,
+    "stat17_def1": 105,
+    "stat18_atk2": 90,
+    "stat19_def2": 110,
+    "stat20_atk3": 100,
+    "stat21_def3": 76,
+    "stat22_atk4": 120,
+    "stat23_def4": 110
+  }
+}

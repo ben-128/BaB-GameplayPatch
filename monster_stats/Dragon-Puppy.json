@@ -1,0 +1,31 @@
+{
+  "name": "Dragon-Puppy",
+  "source_file": "BLAZE.ALL",
+  "offset_hex": "0xF87AC4",
+  "offset_decimal": 16284356,
+  "stats": {
+    "exp_reward": 40,
+    "stat2_unknown": 65,
+    "hp": 700,
+    "stat4_magic": 50,
+    "stat5_randomness": 40,
+    "stat6_collider_type": 0,
+    "stat7_death_fx_size": 120,
+    "stat8_unknown": 255,
+    "stat9_collider_size": 285,
+    "stat10_drop_rate": 250,
+    "stat11_creature_type": 32896,
+    "stat12_flags": 20,
+    "stat13_flags": 8,
+    "stat14_flags": 0,
+    "stat15_flags": 0,
+    "stat16_atk1": 32,
+    "stat17_def1": 52,
+    "stat18_atk2": 40,
+    "stat19_def2": 22,
+    "stat20_atk3": 33,
+    "stat21_def3": 40,
+    "stat22_atk4": 30,
+    "stat23_def4": 22
+  }
+}

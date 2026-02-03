@@ -1,0 +1,31 @@
+{
+  "name": "Troll",
+  "source_file": "BLAZE.ALL",
+  "offset_hex": "0xF932D0",
+  "offset_decimal": 16331472,
+  "stats": {
+    "exp_reward": 130,
+    "stat2_unknown": 64,
+    "hp": 850,
+    "stat4_magic": 100,
+    "stat5_randomness": 150,
+    "stat6_collider_type": 0,
+    "stat7_death_fx_size": 90,
+    "stat8_unknown": 220,
+    "stat9_collider_size": 60,
+    "stat10_drop_rate": 210,
+    "stat11_creature_type": 36864,
+    "stat12_flags": 6656,
+    "stat13_flags": 38,
+    "stat14_flags": 0,
+    "stat15_flags": 0,
+    "stat16_atk1": 110,
+    "stat17_def1": 95,
+    "stat18_atk2": 92,
+    "stat19_def2": 91,
+    "stat20_atk3": 113,
+    "stat21_def3": 60,
+    "stat22_atk4": 88,
+    "stat23_def4": 81
+  }
+}

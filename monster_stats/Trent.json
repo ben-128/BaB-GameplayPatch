@@ -1,0 +1,31 @@
+{
+  "name": "Trent",
+  "source_file": "BLAZE.ALL",
+  "offset_hex": "0x14af988",
+  "offset_decimal": 21690760,
+  "stats": {
+    "exp_reward": 65,
+    "stat2_unknown": 15,
+    "hp": 121,
+    "stat4_magic": 170,
+    "stat5_randomness": 72,
+    "stat6_collider_type": 0,
+    "stat7_death_fx_size": 80,
+    "stat8_unknown": 170,
+    "stat9_collider_size": 80,
+    "stat10_drop_rate": 58,
+    "stat11_creature_type": 0,
+    "stat12_flags": 0,
+    "stat13_flags": 14,
+    "stat14_flags": 0,
+    "stat15_flags": 0,
+    "stat16_atk1": 53,
+    "stat17_def1": 41,
+    "stat18_atk2": 49,
+    "stat19_def2": 34,
+    "stat20_atk3": 16,
+    "stat21_def3": 58,
+    "stat22_atk4": 46,
+    "stat23_def4": 60
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Wolf",
+  "source_file": "BLAZE.ALL",
+  "offset_hex": "0x2514a44",
+  "offset_decimal": 38881860,
+  "stats": {
+    "exp_reward": 38,
+    "stat2_unknown": 35,
+    "hp": 60,
+    "stat4_magic": 31,
+    "stat5_randomness": 38,
+    "stat6_collider_type": 5,
+    "stat7_death_fx_size": 45,
+    "stat8_unknown": 75,
+    "stat9_collider_size": 160,
+    "stat10_drop_rate": 70,
+    "stat11_creature_type": 16,
+    "stat12_flags": 0,
+    "stat13_flags": 0,
+    "stat14_flags": 0,
+    "stat15_flags": 0,
+    "stat16_atk1": 38,
+    "stat17_def1": 41,
+    "stat18_atk2": 29,
+    "stat19_def2": 27,
+    "stat20_atk3": 28,
+    "stat21_def3": 32,
+    "stat22_atk4": 29,
+    "stat23_def4": 21
+  }
+}

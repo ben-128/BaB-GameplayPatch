@@ -1,0 +1,31 @@
+{
+  "name": "King-Mummy",
+  "source_file": "BLAZE.ALL",
+  "offset_hex": "0x1DF5424",
+  "offset_decimal": 31413284,
+  "stats": {
+    "exp_reward": 126,
+    "stat2_unknown": 29,
+    "hp": 240,
+    "stat4_magic": 200,
+    "stat5_randomness": 77,
+    "stat6_collider_type": 2,
+    "stat7_death_fx_size": 50,
+    "stat8_unknown": 155,
+    "stat9_collider_size": 30,
+    "stat10_drop_rate": 80,
+    "stat11_creature_type": 256,
+    "stat12_flags": 0,
+    "stat13_flags": 16,
+    "stat14_flags": 0,
+    "stat15_flags": 6144,
+    "stat16_atk1": 140,
+    "stat17_def1": 121,
+    "stat18_atk2": 102,
+    "stat19_def2": 90,
+    "stat20_atk3": 105,
+    "stat21_def3": 106,
+    "stat22_atk4": 105,
+    "stat23_def4": 107
+  }
+}

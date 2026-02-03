@@ -1,0 +1,31 @@
+{
+  "name": "Demon-Lord",
+  "source_file": "BLAZE.ALL",
+  "offset_hex": "0x2C0C954",
+  "offset_decimal": 46188884,
+  "stats": {
+    "exp_reward": 235,
+    "stat2_unknown": 98,
+    "hp": 2763,
+    "stat4_magic": 666,
+    "stat5_randomness": 300,
+    "stat6_collider_type": 0,
+    "stat7_death_fx_size": 90,
+    "stat8_unknown": 215,
+    "stat9_collider_size": 50,
+    "stat10_drop_rate": 200,
+    "stat11_creature_type": 32768,
+    "stat12_flags": 33,
+    "stat13_flags": 0,
+    "stat14_flags": 9216,
+    "stat15_flags": 10752,
+    "stat16_atk1": 101,
+    "stat17_def1": 152,
+    "stat18_atk2": 109,
+    "stat19_def2": 132,
+    "stat20_atk3": 111,
+    "stat21_def3": 155,
+    "stat22_atk4": 111,
+    "stat23_def4": 119
+  }
+}

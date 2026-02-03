@@ -1,0 +1,31 @@
+{
+  "name": "Hell-Ogre",
+  "source_file": "BLAZE.ALL",
+  "offset_hex": "0x2c089d4",
+  "offset_decimal": 46172628,
+  "stats": {
+    "exp_reward": 160,
+    "stat2_unknown": 57,
+    "hp": 320,
+    "stat4_magic": 160,
+    "stat5_randomness": 63,
+    "stat6_collider_type": 1,
+    "stat7_death_fx_size": 100,
+    "stat8_unknown": 200,
+    "stat9_collider_size": 70,
+    "stat10_drop_rate": 40,
+    "stat11_creature_type": 4,
+    "stat12_flags": 0,
+    "stat13_flags": 0,
+    "stat14_flags": 5120,
+    "stat15_flags": 7936,
+    "stat16_atk1": 129,
+    "stat17_def1": 86,
+    "stat18_atk2": 120,
+    "stat19_def2": 82,
+    "stat20_atk3": 78,
+    "stat21_def3": 77,
+    "stat22_atk4": 82,
+    "stat23_def4": 102
+  }
+}

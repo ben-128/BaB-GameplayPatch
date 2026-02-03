@@ -1,0 +1,31 @@
+{
+  "name": "Dark-Wizard",
+  "source_file": "BLAZE.ALL",
+  "offset_hex": "0x19951ec",
+  "offset_decimal": 26825196,
+  "stats": {
+    "exp_reward": 140,
+    "stat2_unknown": 73,
+    "hp": 910,
+    "stat4_magic": 840,
+    "stat5_randomness": 100,
+    "stat6_collider_type": 3,
+    "stat7_death_fx_size": 44,
+    "stat8_unknown": 130,
+    "stat9_collider_size": 30,
+    "stat10_drop_rate": 200,
+    "stat11_creature_type": 32768,
+    "stat12_flags": 0,
+    "stat13_flags": 0,
+    "stat14_flags": 0,
+    "stat15_flags": 0,
+    "stat16_atk1": 90,
+    "stat17_def1": 120,
+    "stat18_atk2": 76,
+    "stat19_def2": 72,
+    "stat20_atk3": 130,
+    "stat21_def3": 400,
+    "stat22_atk4": 120,
+    "stat23_def4": 120
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Lv6.Kobold",
+  "source_file": "BLAZE.ALL",
+  "offset_hex": "0x14909b0",
+  "offset_decimal": 21563824,
+  "stats": {
+    "exp_reward": 6,
+    "stat2_unknown": 1,
+    "hp": 23,
+    "stat4_magic": 4,
+    "stat5_randomness": 8,
+    "stat6_collider_type": 3,
+    "stat7_death_fx_size": 55,
+    "stat8_unknown": 112,
+    "stat9_collider_size": 50,
+    "stat10_drop_rate": 155,
+    "stat11_creature_type": 0,
+    "stat12_flags": 0,
+    "stat13_flags": 0,
+    "stat14_flags": 0,
+    "stat15_flags": 0,
+    "stat16_atk1": 11,
+    "stat17_def1": 11,
+    "stat18_atk2": 4,
+    "stat19_def2": 4,
+    "stat20_atk3": 3,
+    "stat21_def3": 4,
+    "stat22_atk4": 3,
+    "stat23_def4": 4
+  }
+}

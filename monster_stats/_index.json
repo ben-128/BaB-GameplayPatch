@@ -1,0 +1,998 @@
+{
+  "game_info": {
+    "executable": "SLES_008.45",
+    "region": "Europe (PAL)",
+    "data_file": "BLAZE.ALL"
+  },
+  "data_structure": {
+    "entry_size_bytes": 36,
+    "name_offset": 0,
+    "name_max_length": 16,
+    "stats_offset": 16,
+    "endianness": "little-endian",
+    "value_type": "uint16"
+  },
+  "stat_fields": {
+    "stat1": "attack",
+    "stat2": "defense",
+    "stat3": "hp",
+    "stat4": "unknown",
+    "stat5": "unknown",
+    "stat6": "type/category",
+    "stat7": "unknown",
+    "stat8": "exp_reward (estimated)",
+    "stat9": "gold_reward (estimated)",
+    "stat10": "unknown"
+  },
+  "monsters": [
+    {
+      "name": "Giant-Ant",
+      "hp": 12,
+      "attack": 2,
+      "defense": 20,
+      "offset": "0x148C244",
+      "file": "Giant-Ant.json"
+    },
+    {
+      "name": "Goblin-Wizard",
+      "hp": 12,
+      "attack": 103,
+      "defense": 2,
+      "offset": "0x2BEF2A8",
+      "file": "Goblin-Wizard.json"
+    },
+    {
+      "name": "Wing-Fish",
+      "hp": 12,
+      "attack": 4,
+      "defense": 50,
+      "offset": "0x1498398",
+      "file": "Wing-Fish.json"
+    },
+    {
+      "name": "Kobold",
+      "hp": 14,
+      "attack": 2,
+      "defense": 1,
+      "offset": "0x1490a10",
+      "file": "Kobold.json"
+    },
+    {
+      "name": "Viper",
+      "hp": 18,
+      "attack": 80,
+      "defense": 14,
+      "offset": "0xF8625C",
+      "file": "Viper.json"
+    },
+    {
+      "name": "Giant-Club",
+      "hp": 21,
+      "attack": 5,
+      "defense": 45,
+      "offset": "0x1490b30",
+      "file": "Giant-Club.json"
+    },
+    {
+      "name": "Lv6.Kobold",
+      "hp": 23,
+      "attack": 6,
+      "defense": 1,
+      "offset": "0x14909b0",
+      "file": "Lv6-Kobold.json"
+    },
+    {
+      "name": "Killer-Bee",
+      "hp": 26,
+      "attack": 9,
+      "defense": 16,
+      "offset": "0x14a2228",
+      "file": "Killer-Bee.json"
+    },
+    {
+      "name": "Giant-Snake",
+      "hp": 30,
+      "attack": 8,
+      "defense": 5,
+      "offset": "0x1494198",
+      "file": "Giant-Snake.json"
+    },
+    {
+      "name": "Giant-Spider",
+      "hp": 32,
+      "attack": 30,
+      "defense": 37,
+      "offset": "0xf87b24",
+      "file": "Giant-Spider.json"
+    },
+    {
+      "name": "Goblin-Shaman",
+      "hp": 33,
+      "attack": 16,
+      "defense": 3,
+      "offset": "0x1498278",
+      "file": "Goblin-Shaman.json"
+    },
+    {
+      "name": "Goblin",
+      "hp": 33,
+      "attack": 16,
+      "defense": 2,
+      "offset": "0x1498218",
+      "file": "Goblin.json"
+    },
+    {
+      "name": "Giant-Bat",
+      "hp": 36,
+      "attack": 15,
+      "defense": 4,
+      "offset": "0xf861f8",
+      "file": "Giant-Bat.json"
+    },
+    {
+      "name": "Killer-Bear",
+      "hp": 36,
+      "attack": 18,
+      "defense": 6,
+      "offset": "0x149ba84",
+      "file": "Killer-Bear.json"
+    },
+    {
+      "name": "Lv20.Goblin",
+      "hp": 38,
+      "attack": 20,
+      "defense": 2,
+      "offset": "0xf7a97c",
+      "file": "Lv20-Goblin.json"
+    },
+    {
+      "name": "Lizard-Man",
+      "hp": 39,
+      "attack": 30,
+      "defense": 19,
+      "offset": "0x197c2e4",
+      "file": "Lizard-Man.json"
+    },
+    {
+      "name": "Barricade",
+      "hp": 40,
+      "attack": 1,
+      "defense": 0,
+      "offset": "0x14981B8",
+      "file": "Barricade.json"
+    },
+    {
+      "name": "Giant-Scorpion",
+      "hp": 44,
+      "attack": 25,
+      "defense": 10,
+      "offset": "0xf87a04",
+      "file": "Giant-Scorpion.json"
+    },
+    {
+      "name": "Goblin-Fly",
+      "hp": 46,
+      "attack": 30,
+      "defense": 60,
+      "offset": "0x197625c",
+      "file": "Goblin-Fly.json"
+    },
+    {
+      "name": "Giant-Centipede",
+      "hp": 51,
+      "attack": 29,
+      "defense": 12,
+      "offset": "0xF87A64",
+      "file": "Giant-Centipede.json"
+    },
+    {
+      "name": "Lv30.Goblin",
+      "hp": 51,
+      "attack": 30,
+      "defense": 2,
+      "offset": "0x196e1a8",
+      "file": "Lv30-Goblin.json"
+    },
+    {
+      "name": "Skeleton",
+      "hp": 52,
+      "attack": 71,
+      "defense": 40,
+      "offset": "0x2414a3a",
+      "file": "Skeleton.json"
+    },
+    {
+      "name": "Green-Slime",
+      "hp": 60,
+      "attack": 32,
+      "defense": 7,
+      "offset": "0x197c284",
+      "file": "Green-Slime.json"
+    },
+    {
+      "name": "Wolf",
+      "hp": 60,
+      "attack": 38,
+      "defense": 35,
+      "offset": "0x2514a44",
+      "file": "Wolf.json"
+    },
+    {
+      "name": "Goblin-Leader",
+      "hp": 62,
+      "attack": 36,
+      "defense": 63,
+      "offset": "0xf81ac0",
+      "file": "Goblin-Leader.json"
+    },
+    {
+      "name": "Spirit-Ball",
+      "hp": 69,
+      "attack": 87,
+      "defense": 41,
+      "offset": "0x2bf1acc",
+      "file": "Spirit-Ball.json"
+    },
+    {
+      "name": "Gargoyle",
+      "hp": 71,
+      "attack": 38,
+      "defense": 21,
+      "offset": "0x2514984",
+      "file": "Gargoyle.json"
+    },
+    {
+      "name": "Big-Viper",
+      "hp": 80,
+      "attack": 18,
+      "defense": 5,
+      "offset": "0xf86258",
+      "file": "Big-Viper.json"
+    },
+    {
+      "name": "Dark-Magi",
+      "hp": 80,
+      "attack": 48,
+      "defense": 22,
+      "offset": "0x197619c",
+      "file": "Dark-Magi.json"
+    },
+    {
+      "name": "Living-Sword",
+      "hp": 80,
+      "attack": 80,
+      "defense": 26,
+      "offset": "0x1985ad4",
+      "file": "Living-Sword.json"
+    },
+    {
+      "name": "Silver-Wolf",
+      "hp": 80,
+      "attack": 38,
+      "defense": 35,
+      "offset": "0x2417ab8",
+      "file": "Silver-Wolf.json"
+    },
+    {
+      "name": "Will-O-The-Wisp",
+      "hp": 80,
+      "attack": 67,
+      "defense": 41,
+      "offset": "0x14afa48",
+      "file": "Will-O-The-Wisp.json"
+    },
+    {
+      "name": "Winter-Wolf",
+      "hp": 80,
+      "attack": 42,
+      "defense": 35,
+      "offset": "0x25D09D4",
+      "file": "Winter-Wolf.json"
+    },
+    {
+      "name": "Cave-Bear",
+      "hp": 81,
+      "attack": 54,
+      "defense": 6,
+      "offset": "0xf911a0",
+      "file": "Cave-Bear.json"
+    },
+    {
+      "name": "Killer-Fish",
+      "hp": 81,
+      "attack": 68,
+      "defense": 50,
+      "offset": "0xF8B200",
+      "file": "Killer-Fish.json"
+    },
+    {
+      "name": "Dark-Goblin",
+      "hp": 82,
+      "attack": 103,
+      "defense": 2,
+      "offset": "0x2bef248",
+      "file": "Dark-Goblin.json"
+    },
+    {
+      "name": "Salamander",
+      "hp": 82,
+      "attack": 240,
+      "defense": 220,
+      "offset": "0x2bff2a0",
+      "file": "Salamander.json"
+    },
+    {
+      "name": "Ghost",
+      "hp": 84,
+      "attack": 58,
+      "defense": 31,
+      "offset": "0x2416190",
+      "file": "Ghost.json"
+    },
+    {
+      "name": "Blue-Slime",
+      "hp": 85,
+      "attack": 61,
+      "defense": 7,
+      "offset": "0xf91200",
+      "file": "Blue-Slime.json"
+    },
+    {
+      "name": "Cave-Scissors",
+      "hp": 88,
+      "attack": 82,
+      "defense": 45,
+      "offset": "0xf8ca7c",
+      "file": "Cave-Scissors.json"
+    },
+    {
+      "name": "Red-Slime",
+      "hp": 90,
+      "attack": 53,
+      "defense": 7,
+      "offset": "0x1deb2d8",
+      "file": "Red-Slime.json"
+    },
+    {
+      "name": "Zombie",
+      "hp": 90,
+      "attack": 35,
+      "defense": 27,
+      "offset": "0x240d9b0",
+      "file": "Zombie.json"
+    },
+    {
+      "name": "Snow-Bear",
+      "hp": 92,
+      "attack": 50,
+      "defense": 6,
+      "offset": "0x25D0974",
+      "file": "Snow-Bear.json"
+    },
+    {
+      "name": "Shadow",
+      "hp": 93,
+      "attack": 85,
+      "defense": 39,
+      "offset": "0x242d23c",
+      "file": "Shadow.json"
+    },
+    {
+      "name": "Crimson-Lizard",
+      "hp": 101,
+      "attack": 34,
+      "defense": 19,
+      "offset": "0x197c3a4",
+      "file": "Crimson-Lizard.json"
+    },
+    {
+      "name": "Harpy",
+      "hp": 103,
+      "attack": 56,
+      "defense": 51,
+      "offset": "0x2417a58",
+      "file": "Harpy.json"
+    },
+    {
+      "name": "Wraith",
+      "hp": 105,
+      "attack": 67,
+      "defense": 30,
+      "offset": "0x1deb278",
+      "file": "Wraith.json"
+    },
+    {
+      "name": "Vampire-Bat",
+      "hp": 106,
+      "attack": 76,
+      "defense": 4,
+      "offset": "0x241AAC8",
+      "file": "Vampire-Bat.json"
+    },
+    {
+      "name": "Ghoul",
+      "hp": 120,
+      "attack": 48,
+      "defense": 28,
+      "offset": "0x1de8210",
+      "file": "Ghoul.json"
+    },
+    {
+      "name": "Revenant",
+      "hp": 120,
+      "attack": 100,
+      "defense": 33,
+      "offset": "0x1df5304",
+      "file": "Revenant.json"
+    },
+    {
+      "name": "Hippogriff",
+      "hp": 121,
+      "attack": 65,
+      "defense": 52,
+      "offset": "0x25d2958",
+      "file": "Hippogriff.json"
+    },
+    {
+      "name": "Marble-Gargoyle",
+      "hp": 121,
+      "attack": 80,
+      "defense": 21,
+      "offset": "0x2421194",
+      "file": "Marble-Gargoyle.json"
+    },
+    {
+      "name": "Trent",
+      "hp": 121,
+      "attack": 65,
+      "defense": 15,
+      "offset": "0x14af988",
+      "file": "Trent.json"
+    },
+    {
+      "name": "Yellow-Slime",
+      "hp": 125,
+      "attack": 91,
+      "defense": 7,
+      "offset": "0x1DF5364",
+      "file": "Yellow-Slime.json"
+    },
+    {
+      "name": "Living-Armor",
+      "hp": 131,
+      "attack": 91,
+      "defense": 40,
+      "offset": "0x1985b34",
+      "file": "Living-Armor.json"
+    },
+    {
+      "name": "Wight",
+      "hp": 132,
+      "attack": 53,
+      "defense": 36,
+      "offset": "0x1de81b0",
+      "file": "Wight.json"
+    },
+    {
+      "name": "Lesser-Vampire",
+      "hp": 136,
+      "attack": 89,
+      "defense": 34,
+      "offset": "0x242d29c",
+      "file": "Lesser-Vampire.json"
+    },
+    {
+      "name": "Evil-Stalker",
+      "hp": 137,
+      "attack": 112,
+      "defense": 24,
+      "offset": "0x2bf4a64",
+      "file": "Evil-Stalker.json"
+    },
+    {
+      "name": "Stalker",
+      "hp": 137,
+      "attack": 86,
+      "defense": 24,
+      "offset": "0x1985a14",
+      "file": "Stalker.json"
+    },
+    {
+      "name": "Blood-Shadow",
+      "hp": 140,
+      "attack": 102,
+      "defense": 39,
+      "offset": "0x2bf4a04",
+      "file": "Blood-Shadow.json"
+    },
+    {
+      "name": "Noble-Mummy",
+      "hp": 140,
+      "attack": 96,
+      "defense": 29,
+      "offset": "0x1DF53C4",
+      "file": "Noble-Mummy.json"
+    },
+    {
+      "name": "Poison-Flower",
+      "hp": 140,
+      "attack": 50,
+      "defense": 17,
+      "offset": "0x14aa260",
+      "file": "Poison-Flower.json"
+    },
+    {
+      "name": "Blood-Skeleton",
+      "hp": 141,
+      "attack": 62,
+      "defense": 32,
+      "offset": "0x2414a34",
+      "file": "Blood-Skeleton.json"
+    },
+    {
+      "name": "Mummy",
+      "hp": 142,
+      "attack": 78,
+      "defense": 29,
+      "offset": "0x1df52a4",
+      "file": "Mummy.json"
+    },
+    {
+      "name": "Desert-Lizard",
+      "hp": 150,
+      "attack": 81,
+      "defense": 58,
+      "offset": "0x14B316C",
+      "file": "Desert-Lizard.json"
+    },
+    {
+      "name": "Black-Knight",
+      "hp": 151,
+      "attack": 87,
+      "defense": 25,
+      "offset": "0x1985a74",
+      "file": "Black-Knight.json"
+    },
+    {
+      "name": "Gremlin",
+      "hp": 156,
+      "attack": 110,
+      "defense": 60,
+      "offset": "0x2bff17c",
+      "file": "Gremlin.json"
+    },
+    {
+      "name": "Vampire",
+      "hp": 156,
+      "attack": 98,
+      "defense": 34,
+      "offset": "0x242d1dc",
+      "file": "Vampire.json"
+    },
+    {
+      "name": "Black-Lizard",
+      "hp": 159,
+      "attack": 85,
+      "defense": 19,
+      "offset": "0x269e1a4",
+      "file": "Black-Lizard.json"
+    },
+    {
+      "name": "Arch-Magi",
+      "hp": 160,
+      "attack": 98,
+      "defense": 22,
+      "offset": "0x199b228",
+      "file": "Arch-Magi.json"
+    },
+    {
+      "name": "Wyrm",
+      "hp": 162,
+      "attack": 86,
+      "defense": 53,
+      "offset": "0x269e204",
+      "file": "Wyrm.json"
+    },
+    {
+      "name": "Hell-Hound",
+      "hp": 178,
+      "attack": 157,
+      "defense": 61,
+      "offset": "0x2c071e4",
+      "file": "Hell-Hound.json"
+    },
+    {
+      "name": "Hell-Harpy",
+      "hp": 180,
+      "attack": 120,
+      "defense": 51,
+      "offset": "0x2BEF188",
+      "file": "Hell-Harpy.json"
+    },
+    {
+      "name": "Blood-Mummy",
+      "hp": 190,
+      "attack": 95,
+      "defense": 29,
+      "offset": "0x1DEB218",
+      "file": "Blood-Mummy.json"
+    },
+    {
+      "name": "Red-Knight",
+      "hp": 190,
+      "attack": 86,
+      "defense": 38,
+      "offset": "0x242d17c",
+      "file": "Red-Knight.json"
+    },
+    {
+      "name": "Succubus",
+      "hp": 190,
+      "attack": 165,
+      "defense": 62,
+      "offset": "0x2c08a34",
+      "file": "Succubus.json"
+    },
+    {
+      "name": "Metal-Ball",
+      "hp": 200,
+      "attack": 87,
+      "defense": 41,
+      "offset": "0x25149E4",
+      "file": "Metal-Ball.json"
+    },
+    {
+      "name": "Gray-Arm",
+      "hp": 202,
+      "attack": 116,
+      "defense": 53,
+      "offset": "0x2c08974",
+      "file": "Gray-Arm.json"
+    },
+    {
+      "name": "Basirisk",
+      "hp": 207,
+      "attack": 151,
+      "defense": 58,
+      "offset": "0x2BFC1F0",
+      "file": "Basirisk.json"
+    },
+    {
+      "name": "Chimera",
+      "hp": 210,
+      "attack": 103,
+      "defense": 42,
+      "offset": "0x2517158",
+      "file": "Chimera.json"
+    },
+    {
+      "name": "Undead-Knight",
+      "hp": 215,
+      "attack": 88,
+      "defense": 38,
+      "offset": "0x1df51e4",
+      "file": "Undead-Knight.json"
+    },
+    {
+      "name": "Metal-Slime",
+      "hp": 225,
+      "attack": 140,
+      "defense": 7,
+      "offset": "0x25171B8",
+      "file": "Metal-Slime.json"
+    },
+    {
+      "name": "Guard-Golem",
+      "hp": 231,
+      "attack": 26,
+      "defense": 40,
+      "offset": "0x196E2C8",
+      "file": "Guard-Golem.json"
+    },
+    {
+      "name": "Death-Knight",
+      "hp": 240,
+      "attack": 121,
+      "defense": 38,
+      "offset": "0x2bf1a0c",
+      "file": "Death-Knight.json"
+    },
+    {
+      "name": "Ice-Salamander",
+      "hp": 240,
+      "attack": 168,
+      "defense": 9,
+      "offset": "0x2BFF29C",
+      "file": "Ice-Salamander.json"
+    },
+    {
+      "name": "King-Mummy",
+      "hp": 240,
+      "attack": 126,
+      "defense": 29,
+      "offset": "0x1DF5424",
+      "file": "King-Mummy.json"
+    },
+    {
+      "name": "Kraken-Foot",
+      "hp": 300,
+      "attack": 90,
+      "defense": 83,
+      "offset": "0x269e2c4",
+      "file": "Kraken-Foot.json"
+    },
+    {
+      "name": "OwlBear",
+      "hp": 300,
+      "attack": 38,
+      "defense": 68,
+      "offset": "0x14A21C8",
+      "file": "OwlBear.json"
+    },
+    {
+      "name": "Ogre",
+      "hp": 315,
+      "attack": 96,
+      "defense": 57,
+      "offset": "0xf93270",
+      "file": "Ogre.json"
+    },
+    {
+      "name": "Giant",
+      "hp": 320,
+      "attack": 95,
+      "defense": 14,
+      "offset": "0x14B322C",
+      "file": "Giant.json"
+    },
+    {
+      "name": "Hell-Ogre",
+      "hp": 320,
+      "attack": 160,
+      "defense": 57,
+      "offset": "0x2c089d4",
+      "file": "Hell-Ogre.json"
+    },
+    {
+      "name": "Born-Golem",
+      "hp": 326,
+      "attack": 99,
+      "defense": 23,
+      "offset": "0x19819F0",
+      "file": "Born-Golem.json"
+    },
+    {
+      "name": "Gorgon",
+      "hp": 326,
+      "attack": 165,
+      "defense": 59,
+      "offset": "0x2C07244",
+      "file": "Gorgon.json"
+    },
+    {
+      "name": "Hard-Born",
+      "hp": 326,
+      "attack": 110,
+      "defense": 23,
+      "offset": "0x199b288",
+      "file": "Hard-Born.json"
+    },
+    {
+      "name": "Black-Durahan",
+      "hp": 358,
+      "attack": 110,
+      "defense": 74,
+      "offset": "0x1DF99A0",
+      "file": "Black-Durahan.json"
+    },
+    {
+      "name": "Shadow-Demon",
+      "hp": 360,
+      "attack": 100,
+      "defense": 93,
+      "offset": "0x199524C",
+      "file": "Shadow-Demon.json"
+    },
+    {
+      "name": "Green-Giant",
+      "hp": 400,
+      "attack": 100,
+      "defense": 14,
+      "offset": "0xF931B0",
+      "file": "Green-Giant.json"
+    },
+    {
+      "name": "Kraken-Hand",
+      "hp": 400,
+      "attack": 90,
+      "defense": 82,
+      "offset": "0x269e264",
+      "file": "Kraken-Hand.json"
+    },
+    {
+      "name": "Platinum-Knight",
+      "hp": 400,
+      "attack": 120,
+      "defense": 25,
+      "offset": "0x199518C",
+      "file": "Platinum-Knight.json"
+    },
+    {
+      "name": "Werewolf",
+      "hp": 468,
+      "attack": 85,
+      "defense": 77,
+      "offset": "0x2417998",
+      "file": "Werewolf.json"
+    },
+    {
+      "name": "Weretiger",
+      "hp": 500,
+      "attack": 85,
+      "defense": 78,
+      "offset": "0x24179F8",
+      "file": "Weretiger.json"
+    },
+    {
+      "name": "Evil-Ball",
+      "hp": 519,
+      "attack": 157,
+      "defense": 41,
+      "offset": "0x2BF7220",
+      "file": "Evil-Ball.json"
+    },
+    {
+      "name": "Dark-Elf",
+      "hp": 563,
+      "attack": 100,
+      "defense": 71,
+      "offset": "0x198a9fc",
+      "file": "Dark-Elf.json"
+    },
+    {
+      "name": "Dragon-Puppy",
+      "hp": 700,
+      "attack": 40,
+      "defense": 65,
+      "offset": "0xF87AC4",
+      "file": "Dragon-Puppy.json"
+    },
+    {
+      "name": "Wyvern",
+      "hp": 700,
+      "attack": 96,
+      "defense": 72,
+      "offset": "0x198AA5C",
+      "file": "Wyvern.json"
+    },
+    {
+      "name": "Durahan",
+      "hp": 808,
+      "attack": 80,
+      "defense": 74,
+      "offset": "0x1DE8270",
+      "file": "Durahan.json"
+    },
+    {
+      "name": "Vampire-Lord",
+      "hp": 840,
+      "attack": 150,
+      "defense": 79,
+      "offset": "0x24339dc",
+      "file": "Vampire-Lord.json"
+    },
+    {
+      "name": "Troll",
+      "hp": 850,
+      "attack": 130,
+      "defense": 64,
+      "offset": "0xF932D0",
+      "file": "Troll.json"
+    },
+    {
+      "name": "Evil-Crystal",
+      "hp": 900,
+      "attack": 255,
+      "defense": 0,
+      "offset": "0x1991ba8",
+      "file": "Evil-Crystal.json"
+    },
+    {
+      "name": "Dark-Wizard",
+      "hp": 910,
+      "attack": 140,
+      "defense": 73,
+      "offset": "0x19951ec",
+      "file": "Dark-Wizard.json"
+    },
+    {
+      "name": "Griffin",
+      "hp": 1030,
+      "attack": 180,
+      "defense": 85,
+      "offset": "0x25D29B8",
+      "file": "Griffin.json"
+    },
+    {
+      "name": "Undead-Master",
+      "hp": 1350,
+      "attack": 150,
+      "defense": 75,
+      "offset": "0x1DF9A00",
+      "file": "Undead-Master.json"
+    },
+    {
+      "name": "Carberos",
+      "hp": 2100,
+      "attack": 200,
+      "defense": 89,
+      "offset": "0x2C07184",
+      "file": "Carberos.json"
+    },
+    {
+      "name": "Behemoth",
+      "hp": 2160,
+      "attack": 150,
+      "defense": 70,
+      "offset": "0x14B794C",
+      "file": "Behemoth.json"
+    },
+    {
+      "name": "Greater-Demon",
+      "hp": 2300,
+      "attack": 218,
+      "defense": 93,
+      "offset": "0x2C0B954",
+      "file": "Greater-Demon.json"
+    },
+    {
+      "name": "Dark-Angel",
+      "hp": 2391,
+      "attack": 238,
+      "defense": 99,
+      "offset": "0x2c0d954",
+      "file": "Dark-Angel.json"
+    },
+    {
+      "name": "Efreet",
+      "hp": 2400,
+      "attack": 212,
+      "defense": 66,
+      "offset": "0x2C0A954",
+      "file": "Efreet.json"
+    },
+    {
+      "name": "Demon-Lord",
+      "hp": 2763,
+      "attack": 235,
+      "defense": 98,
+      "offset": "0x2C0C954",
+      "file": "Demon-Lord.json"
+    },
+    {
+      "name": "Budgietom",
+      "hp": 3000,
+      "attack": 320,
+      "defense": 100,
+      "offset": "0x2C0E944",
+      "file": "Budgietom.json"
+    },
+    {
+      "name": "Zombie-Dragon",
+      "hp": 4400,
+      "attack": 180,
+      "defense": 88,
+      "offset": "0x2BF71C0",
+      "file": "Zombie-Dragon.json"
+    },
+    {
+      "name": "Red-Dragon",
+      "hp": 8000,
+      "attack": 306,
+      "defense": 67,
+      "offset": "0x102E1F8",
+      "file": "Red-Dragon.json"
+    }
+  ],
+  "total_monsters_found": 121
+}

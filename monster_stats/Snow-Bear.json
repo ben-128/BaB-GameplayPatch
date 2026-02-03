@@ -1,0 +1,31 @@
+{
+  "name": "Snow-Bear",
+  "source_file": "BLAZE.ALL",
+  "offset_hex": "0x25D0974",
+  "offset_decimal": 39651700,
+  "stats": {
+    "exp_reward": 50,
+    "stat2_unknown": 6,
+    "hp": 92,
+    "stat4_magic": 19,
+    "stat5_randomness": 54,
+    "stat6_collider_type": 3,
+    "stat7_death_fx_size": 100,
+    "stat8_unknown": 140,
+    "stat9_collider_size": 220,
+    "stat10_drop_rate": 62,
+    "stat11_creature_type": 16,
+    "stat12_flags": 0,
+    "stat13_flags": 0,
+    "stat14_flags": 0,
+    "stat15_flags": 0,
+    "stat16_atk1": 72,
+    "stat17_def1": 67,
+    "stat18_atk2": 50,
+    "stat19_def2": 46,
+    "stat20_atk3": 20,
+    "stat21_def3": 30,
+    "stat22_atk4": 32,
+    "stat23_def4": 31
+  }
+}

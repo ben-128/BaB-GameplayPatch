@@ -1,0 +1,31 @@
+{
+  "name": "Greater-Demon",
+  "source_file": "BLAZE.ALL",
+  "offset_hex": "0x2C0B954",
+  "offset_decimal": 46184788,
+  "stats": {
+    "exp_reward": 218,
+    "stat2_unknown": 93,
+    "hp": 2300,
+    "stat4_magic": 1320,
+    "stat5_randomness": 80,
+    "stat6_collider_type": 0,
+    "stat7_death_fx_size": 120,
+    "stat8_unknown": 215,
+    "stat9_collider_size": 90,
+    "stat10_drop_rate": 100,
+    "stat11_creature_type": 32768,
+    "stat12_flags": 24,
+    "stat13_flags": 6144,
+    "stat14_flags": 4096,
+    "stat15_flags": 8192,
+    "stat16_atk1": 152,
+    "stat17_def1": 115,
+    "stat18_atk2": 121,
+    "stat19_def2": 121,
+    "stat20_atk3": 122,
+    "stat21_def3": 166,
+    "stat22_atk4": 115,
+    "stat23_def4": 114
+  }
+}

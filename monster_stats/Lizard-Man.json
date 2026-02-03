@@ -1,0 +1,31 @@
+{
+  "name": "Lizard-Man",
+  "source_file": "BLAZE.ALL",
+  "offset_hex": "0x197c2e4",
+  "offset_decimal": 26723044,
+  "stats": {
+    "exp_reward": 30,
+    "stat2_unknown": 19,
+    "hp": 39,
+    "stat4_magic": 21,
+    "stat5_randomness": 37,
+    "stat6_collider_type": 0,
+    "stat7_death_fx_size": 80,
+    "stat8_unknown": 140,
+    "stat9_collider_size": 50,
+    "stat10_drop_rate": 66,
+    "stat11_creature_type": 0,
+    "stat12_flags": 1024,
+    "stat13_flags": 3,
+    "stat14_flags": 0,
+    "stat15_flags": 0,
+    "stat16_atk1": 16,
+    "stat17_def1": 18,
+    "stat18_atk2": 17,
+    "stat19_def2": 17,
+    "stat20_atk3": 9,
+    "stat21_def3": 9,
+    "stat22_atk4": 8,
+    "stat23_def4": 7
+  }
+}

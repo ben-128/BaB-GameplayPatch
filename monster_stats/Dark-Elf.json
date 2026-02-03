@@ -1,0 +1,31 @@
+{
+  "name": "Dark-Elf",
+  "source_file": "BLAZE.ALL",
+  "offset_hex": "0x198a9fc",
+  "offset_decimal": 26782204,
+  "stats": {
+    "exp_reward": 100,
+    "stat2_unknown": 71,
+    "hp": 563,
+    "stat4_magic": 218,
+    "stat5_randomness": 70,
+    "stat6_collider_type": 1,
+    "stat7_death_fx_size": 50,
+    "stat8_unknown": 130,
+    "stat9_collider_size": 40,
+    "stat10_drop_rate": 180,
+    "stat11_creature_type": 32768,
+    "stat12_flags": 0,
+    "stat13_flags": 0,
+    "stat14_flags": 7168,
+    "stat15_flags": 0,
+    "stat16_atk1": 84,
+    "stat17_def1": 93,
+    "stat18_atk2": 68,
+    "stat19_def2": 68,
+    "stat20_atk3": 40,
+    "stat21_def3": 90,
+    "stat22_atk4": 60,
+    "stat23_def4": 56
+  }
+}

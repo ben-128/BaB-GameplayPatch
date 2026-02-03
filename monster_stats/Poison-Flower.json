@@ -1,0 +1,31 @@
+{
+  "name": "Poison-Flower",
+  "source_file": "BLAZE.ALL",
+  "offset_hex": "0x14aa260",
+  "offset_decimal": 21668448,
+  "stats": {
+    "exp_reward": 50,
+    "stat2_unknown": 17,
+    "hp": 140,
+    "stat4_magic": 68,
+    "stat5_randomness": 55,
+    "stat6_collider_type": 3,
+    "stat7_death_fx_size": 100,
+    "stat8_unknown": 100,
+    "stat9_collider_size": 100,
+    "stat10_drop_rate": 65,
+    "stat11_creature_type": 32,
+    "stat12_flags": 0,
+    "stat13_flags": 12,
+    "stat14_flags": 0,
+    "stat15_flags": 0,
+    "stat16_atk1": 52,
+    "stat17_def1": 40,
+    "stat18_atk2": 31,
+    "stat19_def2": 36,
+    "stat20_atk3": 32,
+    "stat21_def3": 36,
+    "stat22_atk4": 20,
+    "stat23_def4": 22
+  }
+}

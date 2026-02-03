@@ -1,0 +1,31 @@
+{
+  "name": "Mummy",
+  "source_file": "BLAZE.ALL",
+  "offset_hex": "0x1df52a4",
+  "offset_decimal": 31412900,
+  "stats": {
+    "exp_reward": 78,
+    "stat2_unknown": 29,
+    "hp": 142,
+    "stat4_magic": 33,
+    "stat5_randomness": 82,
+    "stat6_collider_type": 0,
+    "stat7_death_fx_size": 50,
+    "stat8_unknown": 155,
+    "stat9_collider_size": 30,
+    "stat10_drop_rate": 50,
+    "stat11_creature_type": 256,
+    "stat12_flags": 0,
+    "stat13_flags": 0,
+    "stat14_flags": 0,
+    "stat15_flags": 5376,
+    "stat16_atk1": 83,
+    "stat17_def1": 70,
+    "stat18_atk2": 58,
+    "stat19_def2": 54,
+    "stat20_atk3": 31,
+    "stat21_def3": 77,
+    "stat22_atk4": 40,
+    "stat23_def4": 35
+  }
+}
