@@ -117,10 +117,6 @@ stat16-23 - COMBAT STATS (4 pairs of ATK/DEF)
   - Defensive monsters (Metal-Slime, Metal-Ball): high odd stats
   - Metal-Slime: 298 atk total, 1310 def total (very defensive)
   - Behemoth: 462 atk total, 376 def total (offensive)
-  - Values range 0-500
-  - Most common range: 60-66 for weak monsters
-  - Budgietom: 0 (final boss, no drops?)
-  - Red-Dragon: 500 (rare drops or high resistance?)
 
 ================================================================================
 HOW TO MODIFY VALUES
