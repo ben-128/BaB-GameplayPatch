@@ -105,19 +105,19 @@
     },
     {
       "index": 14,
-      "price": 4,
+      "price": 2,
       "default_price": 20,
       "item": "Healing Amulet"
     },
     {
       "index": 15,
-      "price": 6,
+      "price": 2,
       "default_price": 28,
       "item": "Dominion Feather"
     },
     {
       "index": 16,
-      "price": 8,
+      "price": 5,
       "default_price": 38,
       "item_by_class": {
         "Warrior": "Fata Morgana Armor",
@@ -132,25 +132,25 @@
     },
     {
       "index": 17,
-      "price": 10,
+      "price": 5,
       "default_price": 52,
       "item": "Mirror of Truth"
     },
     {
       "index": 18,
-      "price": 10,
+      "price": 5,
       "default_price": 52,
       "item": "Water Mirror"
     },
     {
       "index": 19,
-      "price": 13,
+      "price": 10,
       "default_price": 65,
       "item": "Elemental Ring"
     },
     {
       "index": 20,
-      "price": 16,
+      "price": 10,
       "default_price": 78,
       "item_by_class": {
         "Warrior": "Guardian Armor",
@@ -165,13 +165,13 @@
     },
     {
       "index": 21,
-      "price": 19,
+      "price": 10,
       "default_price": 95,
       "item": "Sol Crown"
     },
     {
       "index": 22,
-      "price": 20,
+      "price": 15,
       "default_price": 99,
       "item_by_class": {
         "Warrior": "Fenris",
