@@ -5,7 +5,7 @@
     "total_items": 316,
     "faq_items_total": 376,
     "extraction_date": "2026-02-04",
-    "note": "Extraction avec fuzzy matching pour trouver plus d'items"
+    "note": "Extraction avec fuzzy matching. new_description: description ou special_effects | attributes"
   },
   "items": [
     {
@@ -14,7 +14,6 @@
       "offset_decimal": 7104512,
       "category": "Swords (warrior)",
       "description": "A good sword for beginners to use.",
-      "faq_description": "A good sword for beginners to use.",
       "stats": {
         "0x12": 257,
         "0x30": 7
@@ -38,7 +37,8 @@
       "all_offsets": [
         "0x006C6800"
       ],
-      "id": 0
+      "id": 0,
+      "new_description": "A good sword for beginners to use."
     },
     {
       "name": "Leather Armor",
@@ -46,7 +46,6 @@
       "offset_decimal": 7105152,
       "category": "Light Armors (hunter, elf & rogue)",
       "description": "Armor made of thick leather.",
-      "faq_description": "Armor made of thick leather.",
       "stats": {
         "0x12": 629,
         "0x32": 5,
@@ -75,7 +74,8 @@
         "0x006D0A80",
         "0x006D2A80"
       ],
-      "id": 1
+      "id": 1,
+      "new_description": "Armor made of thick leather."
     },
     {
       "name": "Leather Shield",
@@ -83,7 +83,6 @@
       "offset_decimal": 7105792,
       "category": "Shields (warrior & dwarf)",
       "description": "A light, easily used leather shield.",
-      "faq_description": "A light, easily used leather shield.",
       "stats": {
         "0x12": 1089,
         "0x32": 1,
@@ -97,7 +96,8 @@
         "0x006C6D00",
         "0x006D2D00"
       ],
-      "id": 2
+      "id": 2,
+      "new_description": "A light, easily used leather shield."
     },
     {
       "name": "Healing Potion",
@@ -105,7 +105,6 @@
       "offset_decimal": 7106432,
       "category": "Items",
       "description": "Common potion.(Restores HP to single unit)",
-      "faq_description": "Common Potion. (Restores HP to single unit)",
       "stats": {
         "0x10": 5,
         "0x12": 37119
@@ -128,7 +127,8 @@
         "0x009EB814",
         "0x00B64768"
       ],
-      "id": 3
+      "id": 3,
+      "new_description": "Common potion.(Restores HP to single unit)"
     },
     {
       "name": "Club",
@@ -136,7 +136,6 @@
       "offset_decimal": 7112704,
       "category": "Priest’s Wand/Hammer",
       "description": "A wooden club.",
-      "faq_description": "A wooden club.",
       "stats": {
         "0x12": 258,
         "0x30": 5
@@ -163,7 +162,8 @@
         "0x014942BE",
         "0x0149833E"
       ],
-      "id": 4
+      "id": 4,
+      "new_description": "A wooden club."
     },
     {
       "name": "Robe",
@@ -171,7 +171,6 @@
       "offset_decimal": 7113344,
       "category": "Robes (priest,sorcerer,& fairy)",
       "description": "Robe made of heavy cloth.",
-      "faq_description": "Robe made of heavy cloth.",
       "stats": {
         "0x12": 650,
         "0x32": 5,
@@ -205,7 +204,8 @@
         "0x00D2CC70",
         "0x00E69558"
       ],
-      "id": 5
+      "id": 5,
+      "new_description": "MDEF+2"
     },
     {
       "name": "Dagger",
@@ -213,7 +213,6 @@
       "offset_decimal": 7120896,
       "category": "Knives (rogue)",
       "description": "A normal, easily-to-use dagger.",
-      "faq_description": "A normal, easily-to-use dagger.",
       "stats": {
         "0x12": 260,
         "0x30": 5
@@ -246,7 +245,8 @@
         "0x02074FD6",
         "0x020772D7"
       ],
-      "id": 6
+      "id": 6,
+      "new_description": "A normal, easily-to-use dagger."
     },
     {
       "name": "Wooden Wand",
@@ -254,7 +254,6 @@
       "offset_decimal": 7129088,
       "category": "Sorcerer’s Wand",
       "description": "A solid wooden wand.",
-      "faq_description": "A solid wooden wand",
       "stats": {
         "0x12": 264,
         "0x30": 5
@@ -278,7 +277,8 @@
       "all_offsets": [
         "0x006CC800"
       ],
-      "id": 7
+      "id": 7,
+      "new_description": "MAT+2"
     },
     {
       "name": "Shortbow",
@@ -286,7 +286,6 @@
       "offset_decimal": 7137280,
       "category": "Bows (hunter)",
       "description": "A simply made bow.",
-      "faq_description": "A simply made bow.",
       "stats": {
         "0x12": 272,
         "0x30": 5
@@ -310,7 +309,8 @@
       "all_offsets": [
         "0x006CE800"
       ],
-      "id": 8
+      "id": 8,
+      "new_description": "A simply made bow."
     },
     {
       "name": "Shortsword",
@@ -318,7 +318,6 @@
       "offset_decimal": 7145472,
       "category": "Rapiers (elf)",
       "description": "A normal, easy-to-wiel shortsword.",
-      "faq_description": "A normal, easily-to-wiel shortsword.",
       "stats": {
         "0x12": 288,
         "0x30": 6
@@ -342,7 +341,8 @@
       "all_offsets": [
         "0x006D0800"
       ],
-      "id": 9
+      "id": 9,
+      "new_description": "A normal, easy-to-wiel shortsword."
     },
     {
       "name": "Tomahawk",
@@ -350,7 +350,6 @@
       "offset_decimal": 7153664,
       "category": "Axes (dwarf)",
       "description": "A small, easy-to-wield axe.",
-      "faq_description": "A small, easy-to-wield axe.",
       "stats": {
         "0x12": 320,
         "0x30": 8
@@ -374,7 +373,8 @@
       "all_offsets": [
         "0x006D2800"
       ],
-      "id": 10
+      "id": 10,
+      "new_description": "A small, easy-to-wield axe."
     },
     {
       "name": "Rod",
@@ -382,7 +382,6 @@
       "offset_decimal": 7161856,
       "category": "Rods (fairy)",
       "description": "A small rod, favored by fairies.",
-      "faq_description": "A rod favored by fairies.",
       "stats": {
         "0x12": 384,
         "0x30": 5
@@ -415,7 +414,8 @@
         "0x00E0877E",
         "0x00F96979"
       ],
-      "id": 11
+      "id": 11,
+      "new_description": "A small rod, favored by fairies."
     },
     {
       "name": "Fire Jewel",
@@ -423,7 +423,6 @@
       "offset_decimal": 8313932,
       "category": "Jewels",
       "description": "",
-      "faq_description": "Gem of fire. (Activates Blaze; 25% Destruction)",
       "stats": {
         "0x10": 25445,
         "0x12": 29556,
@@ -447,7 +446,8 @@
         "0x024385DC",
         "0x0297285C"
       ],
-      "id": 12
+      "id": 12,
+      "new_description": ""
     },
     {
       "name": "Lightbolt",
@@ -455,7 +455,6 @@
       "offset_decimal": 9473880,
       "category": "Bows (hunter)",
       "description": "",
-      "faq_description": "A magical bow which shoots arrows of pure light.",
       "stats": {
         "0x10": 5,
         "0x12": 2055,
@@ -488,7 +487,8 @@
         "0x00F961F4",
         "0x0172B860"
       ],
-      "id": 13
+      "id": 13,
+      "new_description": "Shoots Magic Missile / 10 MP"
     },
     {
       "name": "Thunderbolt",
@@ -496,7 +496,6 @@
       "offset_decimal": 9474648,
       "category": "Rapiers (elf)",
       "description": "",
-      "faq_description": "Wind spirits imbued it with the power of thunder.",
       "stats": {
         "0x10": 277,
         "0x12": 15366,
@@ -527,7 +526,8 @@
         "0x0172BFE0",
         "0x02232048"
       ],
-      "id": 14
+      "id": 14,
+      "new_description": "MAT+12"
     },
     {
       "name": "Lavender",
@@ -535,7 +535,6 @@
       "offset_decimal": 9477144,
       "category": "Herbs",
       "description": "",
-      "faq_description": "Restores some life energy.",
       "stats": {
         "0x10": 79,
         "0x12": 6,
@@ -561,7 +560,8 @@
         "0x010A2BBC",
         "0x01108958"
       ],
-      "id": 15
+      "id": 15,
+      "new_description": ""
     },
     {
       "name": "Sage",
@@ -569,7 +569,6 @@
       "offset_decimal": 9477192,
       "category": "Herbs",
       "description": "",
-      "faq_description": "Restores some magical energy.",
       "stats": {
         "0x10": 79,
         "0x12": 5,
@@ -608,7 +607,8 @@
         "0x014B9C48",
         "0x0152E48C"
       ],
-      "id": 16
+      "id": 16,
+      "new_description": "STR+24, INT+32, WIL+32, AGL+24, CON+24, POW+32, LUK+32, MDEF+97"
     },
     {
       "name": "Hyssop",
@@ -616,7 +616,6 @@
       "offset_decimal": 9477384,
       "category": "Herbs",
       "description": "",
-      "faq_description": "Cures magic losing condition.",
       "stats": {
         "0x10": 79,
         "0x12": 1,
@@ -638,7 +637,8 @@
         "0x01353AD4",
         "0x013542D4"
       ],
-      "id": 17
+      "id": 17,
+      "new_description": ""
     },
     {
       "name": "Fennel",
@@ -646,7 +646,6 @@
       "offset_decimal": 9484432,
       "category": "Herbs",
       "description": "",
-      "faq_description": "Cures petrification.",
       "stats": {
         "0x10": 25922,
         "0x12": 27756,
@@ -671,7 +670,8 @@
         "0x012DF778",
         "0x01353854"
       ],
-      "id": 18
+      "id": 18,
+      "new_description": ""
     },
     {
       "name": "Belladonna",
@@ -679,7 +679,6 @@
       "offset_decimal": 9484448,
       "category": "Herbs",
       "description": "",
-      "faq_description": "Removes curses.",
       "stats": {
         "0x30": 25971,
         "0x32": 24864,
@@ -701,7 +700,8 @@
         "0x028034E8",
         "0x028A8478"
       ],
-      "id": 19
+      "id": 19,
+      "new_description": ""
     },
     {
       "name": "Healing Pin",
@@ -709,7 +709,6 @@
       "offset_decimal": 10402452,
       "category": "Items",
       "description": "Acupuncture needle.(Restores HP 25% dest.)",
-      "faq_description": "Acupuncture needle. (Restores HP 25% dest.)",
       "stats": {
         "0x12": 37119
       },
@@ -728,7 +727,8 @@
         "0x01258D58",
         "0x01259558"
       ],
-      "id": 20
+      "id": 20,
+      "new_description": "Acupuncture needle.(Restores HP 25% dest.)"
     },
     {
       "name": "Material Earth",
@@ -736,7 +736,6 @@
       "offset_decimal": 10713796,
       "category": "Items",
       "description": "Magic crystal earth.(Earth attr. to weapon)",
-      "faq_description": "Magic crystal earth. (Earth attr. to weapon)",
       "stats": {
         "0x12": 4351
       },
@@ -758,7 +757,8 @@
         "0x017FD2F0",
         "0x01C97B18"
       ],
-      "id": 21
+      "id": 21,
+      "new_description": "Magic crystal earth.(Earth attr. to weapon)"
     },
     {
       "name": "Material Flame",
@@ -766,7 +766,6 @@
       "offset_decimal": 10714436,
       "category": "Items",
       "description": "Magic crystal fire.(Fire attr. to weapon)",
-      "faq_description": "Magic crystal fire. (Fire attr. to weapon)",
       "stats": {
         "0x12": 4351
       },
@@ -788,7 +787,8 @@
         "0x02972D5C",
         "0x02A8EED4"
       ],
-      "id": 22
+      "id": 22,
+      "new_description": "Magic crystal fire.(Fire attr. to weapon)"
     },
     {
       "name": "Material Wind",
@@ -796,7 +796,6 @@
       "offset_decimal": 10715076,
       "category": "Items",
       "description": "Magic crystalize wind.(Wind attr. to weapon)",
-      "faq_description": "Magic crystalize wind. (Wind attr. to weapon)",
       "stats": {
         "0x12": 4351
       },
@@ -818,7 +817,8 @@
         "0x022322C8",
         "0x029F0D68"
       ],
-      "id": 23
+      "id": 23,
+      "new_description": "Magic crystalize wind.(Wind attr. to weapon)"
     },
     {
       "name": "Material Light",
@@ -826,7 +826,6 @@
       "offset_decimal": 10716356,
       "category": "Items",
       "description": "Magic crystal light.(Light attr. to weapon)",
-      "faq_description": "Magic crystal light. (Light attr. to weapon)",
       "stats": {
         "0x12": 4351
       },
@@ -848,7 +847,8 @@
         "0x01D28E80",
         "0x01D29680"
       ],
-      "id": 24
+      "id": 24,
+      "new_description": "Magic crystal light.(Light attr. to weapon)"
     },
     {
       "name": "Material Holy",
@@ -856,7 +856,6 @@
       "offset_decimal": 10716996,
       "category": "Items",
       "description": "Crystal Divinity.(Holy attr. to weapon)",
-      "faq_description": "",
       "stats": {
         "0x12": 4351
       },
@@ -873,7 +872,8 @@
         "0x01C98798",
         "0x025D4CCC"
       ],
-      "id": 25
+      "id": 25,
+      "new_description": "Crystal Divinity.(Holy attr. to weapon)"
     },
     {
       "name": "Material Evil",
@@ -881,7 +881,6 @@
       "offset_decimal": 10717636,
       "category": "Items",
       "description": "Crystalized evil.(Evil attribute to weapon)",
-      "faq_description": "Crystalized evil. (Evil attribute to weapon)",
       "stats": {
         "0x12": 4351
       },
@@ -903,7 +902,8 @@
         "0x01C98A18",
         "0x01D938C8"
       ],
-      "id": 26
+      "id": 26,
+      "new_description": "Crystalized evil.(Evil attribute to weapon)"
     },
     {
       "name": "Material Magic",
@@ -911,7 +911,6 @@
       "offset_decimal": 10718276,
       "category": "Items",
       "description": "Crystal of solid magic.(Strengthens weapon)",
-      "faq_description": "Crystal of solid magic. (Strengthens weapon)",
       "stats": {
         "0x12": 4351
       },
@@ -933,7 +932,8 @@
         "0x017A111C",
         "0x017FD070"
       ],
-      "id": 27
+      "id": 27,
+      "new_description": "Crystal of solid magic.(Strengthens weapon)"
     },
     {
       "name": "Guardian Robe",
@@ -941,7 +941,6 @@
       "offset_decimal": 11004592,
       "category": "Robes (priest,sorcerer,& fairy)",
       "description": "Powerfully protective. Made by hell's guardians.",
-      "faq_description": "Powerfully protective. Made by hell’s guardians.",
       "stats": {
         "0x12": 650,
         "0x14": 1024,
@@ -973,7 +972,8 @@
         "0x028532E4",
         "0x028A4AF8"
       ],
-      "id": 28
+      "id": 28,
+      "new_description": "MDEF+2"
     },
     {
       "name": "Sun Shield",
@@ -981,7 +981,6 @@
       "offset_decimal": 11005232,
       "category": "Light Armors (hunter, elf & rogue)",
       "description": "An old shield which regenerates life energies.",
-      "faq_description": "An old shield which regenerates life energies.",
       "stats": {
         "0x12": 564,
         "0x14": 1024,
@@ -1009,7 +1008,8 @@
         "0x00A7ED30",
         "0x02436A5C"
       ],
-      "id": 29
+      "id": 29,
+      "new_description": "Regenerate HP by 2"
     },
     {
       "name": "Gabriel",
@@ -1017,7 +1017,6 @@
       "offset_decimal": 11006512,
       "category": "Priest’s Wand/Hammer",
       "description": "",
-      "faq_description": "A powerfull spirit is bound, named after the",
       "stats": {
         "0x12": 258,
         "0x14": 37888,
@@ -1045,7 +1044,8 @@
       "all_offsets": [
         "0x00A7F230"
       ],
-      "id": 30
+      "id": 30,
+      "new_description": "Holy atk magic + 50%"
     },
     {
       "name": "Golden Harp",
@@ -1053,7 +1053,6 @@
       "offset_decimal": 11007152,
       "category": "Knives (rogue)",
       "description": "Strange golden dagger, favored by ancient heroes.",
-      "faq_description": "Strange golden dagger, favored by ancient heroes.",
       "stats": {
         "0x12": 260,
         "0x14": 37888,
@@ -1081,7 +1080,8 @@
         "0x013BAABC",
         "0x028A6DF8"
       ],
-      "id": 31
+      "id": 31,
+      "new_description": "Strange golden dagger, favored by ancient heroes."
     },
     {
       "name": "Winged Boots",
@@ -1089,7 +1089,6 @@
       "offset_decimal": 11008432,
       "category": "Clothings",
       "description": "Enchanted boots adorned with feathers.",
-      "faq_description": "Enchanted boots adorned with feathers.",
       "stats": {
         "0x12": 2165,
         "0x32": 20
@@ -1118,7 +1117,8 @@
         "0x025928C4",
         "0x025930C4"
       ],
-      "id": 32
+      "id": 32,
+      "new_description": "Immune to Slow | AGL+12"
     },
     {
       "name": "Gauntlets",
@@ -1126,7 +1126,6 @@
       "offset_decimal": 11009716,
       "category": "Clothings",
       "description": "",
-      "faq_description": "Iron gloves to protect the hand.",
       "stats": {},
       "effects": [],
       "special_effects": [],
@@ -1156,7 +1155,8 @@
         "0x00BE3E7C",
         "0x00C3F260"
       ],
-      "id": 33
+      "id": 33,
+      "new_description": ""
     },
     {
       "name": "Material Water",
@@ -1164,7 +1164,6 @@
       "offset_decimal": 11186192,
       "category": "Items",
       "description": "Magic crystal water.(Water attr. to weapon)",
-      "faq_description": "Magic crystal water. (Water attr. to weapon)",
       "stats": {
         "0x12": 4351
       },
@@ -1185,7 +1184,8 @@
         "0x02663034",
         "0x02908FE4"
       ],
-      "id": 34
+      "id": 34,
+      "new_description": "Magic crystal water.(Water attr. to weapon)"
     },
     {
       "name": "Elixir",
@@ -1193,7 +1193,6 @@
       "offset_decimal": 11191312,
       "category": "Items",
       "description": "Legendary medicine.(Completely restores MP and HP)",
-      "faq_description": "Legendary medicine. (Completely restores MP and HP)",
       "stats": {
         "0x12": 4351
       },
@@ -1215,7 +1214,8 @@
         "0x024FFD14",
         "0x02500514"
       ],
-      "id": 35
+      "id": 35,
+      "new_description": "Legendary medicine.(Completely restores MP and HP)"
     },
     {
       "name": "Ambrosia",
@@ -1223,7 +1223,6 @@
       "offset_decimal": 11191952,
       "category": "Items",
       "description": "Nectar of the \"Changing Flower\".(Resurrection)",
-      "faq_description": "Nectar of the “Changing Flower”. (Resurrection)",
       "stats": {
         "0x12": 4351
       },
@@ -1245,7 +1244,8 @@
         "0x0163D40C",
         "0x016C0278"
       ],
-      "id": 36
+      "id": 36,
+      "new_description": "Nectar of the \"Changing Flower\".(Resurrection)"
     },
     {
       "name": "Cross",
@@ -1253,7 +1253,6 @@
       "offset_decimal": 11192592,
       "category": "Clothings",
       "description": "A holy cross which protects against all spells.",
-      "faq_description": "A holy cross which protects agains all spells.",
       "stats": {
         "0x12": 2303
       },
@@ -1280,7 +1279,8 @@
         "0x01A8BAD8",
         "0x01AE8548"
       ],
-      "id": 37
+      "id": 37,
+      "new_description": "Immune to Curse"
     },
     {
       "name": "Healing Amulet",
@@ -1288,7 +1288,6 @@
       "offset_decimal": 11193232,
       "category": "Clothings",
       "description": "An ancient amulet that heals the body.",
-      "faq_description": "An ancient amulet that heals the body.",
       "stats": {
         "0x12": 2303
       },
@@ -1307,7 +1306,8 @@
         "0x0186F27C",
         "0x0199E84C"
       ],
-      "id": 38
+      "id": 38,
+      "new_description": "Regenerate HP by 1"
     },
     {
       "name": "Water Mirror",
@@ -1315,7 +1315,6 @@
       "offset_decimal": 11195792,
       "category": "Clothings",
       "description": "Mirror that can reveal defense of opponents.",
-      "faq_description": "Mirror that can reveal defense of opponents.",
       "stats": {
         "0x12": 2303
       },
@@ -1341,7 +1340,8 @@
         "0x00AAD590",
         "0x012DCA78"
       ],
-      "id": 39
+      "id": 39,
+      "new_description": "Reveal enemies’ alignment/element"
     },
     {
       "name": "Elemental Ring",
@@ -1349,7 +1349,6 @@
       "offset_decimal": 11196432,
       "category": "Clothings",
       "description": "Supernatural ring made by the spirit kings.",
-      "faq_description": "Supernatural ring made by the spirit kings.",
       "stats": {
         "0x12": 2272
       },
@@ -1366,7 +1365,8 @@
         "0x01434518",
         "0x0243745C"
       ],
-      "id": 40
+      "id": 40,
+      "new_description": "Elemental Attack (fire,water,wind,earth) + 50%"
     },
     {
       "name": "Guardian Armor",
@@ -1374,7 +1374,6 @@
       "offset_decimal": 11197072,
       "category": "Armors (warrior & dwarf)",
       "description": "Armor forged by the warlords of hell.",
-      "faq_description": "Armor forged by the warlords of hell.",
       "stats": {
         "0x12": 577,
         "0x14": 1024,
@@ -1394,7 +1393,8 @@
         "0x02436CDC",
         "0x02853564"
       ],
-      "id": 41
+      "id": 41,
+      "new_description": "Armor forged by the warlords of hell."
     },
     {
       "name": "Sol Crown",
@@ -1402,7 +1402,6 @@
       "offset_decimal": 11197712,
       "category": "Clothings",
       "description": "The sun crown of a powerful ancient king.",
-      "faq_description": "The sun crown of a powerfull ancient king.",
       "stats": {
         "0x12": 2303
       },
@@ -1416,7 +1415,8 @@
         "0x00AADD10",
         "0x01D25000"
       ],
-      "id": 42
+      "id": 42,
+      "new_description": "MP consumption - 50%"
     },
     {
       "name": "Fenris",
@@ -1424,7 +1424,6 @@
       "offset_decimal": 11198352,
       "category": "Swords (warrior)",
       "description": "",
-      "faq_description": "The frost demons’ sword will bring the end of the",
       "stats": {
         "0x12": 257,
         "0x14": 37888,
@@ -1451,7 +1450,8 @@
         "0x00AADF90",
         "0x02A8E4D4"
       ],
-      "id": 43
+      "id": 43,
+      "new_description": ""
     },
     {
       "name": "Strong Gloves",
@@ -1459,7 +1459,6 @@
       "offset_decimal": 11198992,
       "category": "Clothings",
       "description": "Gloves that increase the wearer's strength.",
-      "faq_description": "",
       "stats": {
         "0x12": 2303,
         "0x30": 8,
@@ -1493,7 +1492,8 @@
         "0x01D28700",
         "0x01D933C8"
       ],
-      "id": 44
+      "id": 44,
+      "new_description": "STR+8"
     },
     {
       "name": "Wish Hammer",
@@ -1501,7 +1501,6 @@
       "offset_decimal": 11200912,
       "category": "Priest’s Wand/Hammer",
       "description": "",
-      "faq_description": "May reveal its power when the user is in a dilemma.",
       "stats": {
         "0x12": 258,
         "0x14": 37888,
@@ -1530,7 +1529,8 @@
         "0x00AAE990",
         "0x028A4878"
       ],
-      "id": 45
+      "id": 45,
+      "new_description": "At + 40 when HP 1/4"
     },
     {
       "name": "Dark Shield",
@@ -1538,7 +1538,6 @@
       "offset_decimal": 11201552,
       "category": "Light Armors (hunter, elf & rogue)",
       "description": "Helps against magic-absorbing barriers.",
-      "faq_description": "Helps against magic-absorbing barriers.",
       "stats": {
         "0x12": 564,
         "0x14": 1024,
@@ -1568,7 +1567,8 @@
         "0x02A90554",
         "0x02A90D54"
       ],
-      "id": 46
+      "id": 46,
+      "new_description": "Helps against magic-absorbing barriers."
     },
     {
       "name": "Ringnail",
@@ -1576,7 +1576,6 @@
       "offset_decimal": 11202832,
       "category": "Knives (rogue)",
       "description": "A special small dagger which is hidden within a ring.",
-      "faq_description": "A special small dagger which is hidden within a ring.",
       "stats": {
         "0x12": 260,
         "0x30": 81
@@ -1601,7 +1600,8 @@
         "0x00AAF110",
         "0x02850AE4"
       ],
-      "id": 47
+      "id": 47,
+      "new_description": "A special small dagger which is hidden within a ring."
     },
     {
       "name": "Crystal Wand",
@@ -1609,7 +1609,6 @@
       "offset_decimal": 11203472,
       "category": "Sorcerer’s Wand",
       "description": "A quartz wand imbued with magical power.",
-      "faq_description": "A quartz wand imbued with magical power.",
       "stats": {
         "0x12": 264,
         "0x30": 80
@@ -1635,7 +1634,8 @@
       "all_offsets": [
         "0x00AAF390"
       ],
-      "id": 48
+      "id": 48,
+      "new_description": "Critical attack ratio + 4% | POW+70, MAT+12"
     },
     {
       "name": "Falconbolt",
@@ -1643,7 +1643,6 @@
       "offset_decimal": 11204112,
       "category": "Bows (hunter)",
       "description": "A special bow which can shoot two arrows at once.",
-      "faq_description": "A special bow which can shot two arrows at once.",
       "stats": {
         "0x12": 272,
         "0x30": 50
@@ -1671,7 +1670,8 @@
         "0x0186E87C",
         "0x021AEE88"
       ],
-      "id": 49
+      "id": 49,
+      "new_description": "Shoots 2 arrows in one attack"
     },
     {
       "name": "Chaos Rapier",
@@ -1679,7 +1679,6 @@
       "offset_decimal": 11204752,
       "category": "Rapiers (elf)",
       "description": "It was forged to face the Bane Wyrm.",
-      "faq_description": "It was forged to face the Bane Wyrm.",
       "stats": {
         "0x12": 288,
         "0x14": 37888,
@@ -1711,7 +1710,8 @@
         "0x02794608",
         "0x028011E8"
       ],
-      "id": 50
+      "id": 50,
+      "new_description": "Sometimes confuse the enemy (12.5 % probability)"
     },
     {
       "name": "Rapier",
@@ -1719,7 +1719,6 @@
       "offset_decimal": 11204758,
       "category": "Rapiers (elf)",
       "description": "",
-      "faq_description": "",
       "stats": {
         "0x10": 1545,
         "0x16": 5120
@@ -1752,7 +1751,8 @@
         "0x011E8EFC",
         "0x011E96FC"
       ],
-      "id": 51
+      "id": 51,
+      "new_description": ""
     },
     {
       "name": "Frost Axe",
@@ -1760,7 +1760,6 @@
       "offset_decimal": 11205392,
       "category": "Axes (dwarf)",
       "description": "A demon forged axe with blades of ice.",
-      "faq_description": "A demon forged axe with blades of ice.",
       "stats": {
         "0x12": 320,
         "0x14": 37888,
@@ -1791,7 +1790,8 @@
         "0x021AF108",
         "0x02908D64"
       ],
-      "id": 52
+      "id": 52,
+      "new_description": "A demon forged axe with blades of ice."
     },
     {
       "name": "Silver Rod",
@@ -1799,7 +1799,6 @@
       "offset_decimal": 11941992,
       "category": "Rods (fairy)",
       "description": "A silver rod with holy script engraved upon it.",
-      "faq_description": "A silver rod with holy script engraved upon it.",
       "stats": {
         "0x12": 384,
         "0x14": 1024,
@@ -1825,7 +1824,8 @@
       "all_offsets": [
         "0x00B63868"
       ],
-      "id": 53
+      "id": 53,
+      "new_description": "A silver rod with holy script engraved upon it."
     },
     {
       "name": "Fey Rod",
@@ -1833,7 +1833,6 @@
       "offset_decimal": 11942632,
       "category": "Rods (fairy)",
       "description": "A rod from the elven empire which has hidden powers.",
-      "faq_description": "A rod from the elven empire which has hidden powers.",
       "stats": {
         "0x12": 384,
         "0x14": 37888,
@@ -1869,7 +1868,8 @@
         "0x028A9178",
         "0x029067E4"
       ],
-      "id": 54
+      "id": 54,
+      "new_description": "At + (Enemy level / 3)"
     },
     {
       "name": "Luck Talisman",
@@ -1877,7 +1877,6 @@
       "offset_decimal": 11943272,
       "category": "Clothings",
       "description": "Amulet that brings the wearer good luck.",
-      "faq_description": "Amulet that brings the wearer good luck.",
       "stats": {
         "0x12": 2303
       },
@@ -1901,7 +1900,8 @@
         "0x00B63D68",
         "0x00D88CD0"
       ],
-      "id": 55
+      "id": 55,
+      "new_description": "LUK+32"
     },
     {
       "name": "Talisman",
@@ -1909,7 +1909,6 @@
       "offset_decimal": 11943277,
       "category": "Clothings",
       "description": "",
-      "faq_description": "Accelerates the recovery of magical energy.",
       "stats": {},
       "effects": [],
       "special_effects": [
@@ -1941,7 +1940,8 @@
         "0x01A8CC58",
         "0x01DFF660"
       ],
-      "id": 56
+      "id": 56,
+      "new_description": "MP regeneration + 2"
     },
     {
       "name": "Fairy Perfume",
@@ -1949,7 +1949,6 @@
       "offset_decimal": 11943912,
       "category": "Items",
       "description": "Created by fairies.(Activates Invincible)",
-      "faq_description": "Created by fairies. (Activates Invincible)",
       "stats": {
         "0x12": 4351
       },
@@ -1971,7 +1970,8 @@
         "0x028A8E78",
         "0x028A9678"
       ],
-      "id": 57
+      "id": 57,
+      "new_description": "Created by fairies.(Activates Invincible)"
     },
     {
       "name": "Fairy Wings",
@@ -1979,7 +1979,6 @@
       "offset_decimal": 11944552,
       "category": "Items",
       "description": "A copy of fairy wings.(Levitate 25%dest.)",
-      "faq_description": "A copy of fairy wings. (Levitate 25%dest.)",
       "stats": {
         "0x12": 4351
       },
@@ -2001,7 +2000,8 @@
         "0x028A81F8",
         "0x02906064"
       ],
-      "id": 58
+      "id": 58,
+      "new_description": "A copy of fairy wings.(Levitate 25%dest.)"
     },
     {
       "name": "Fairy Powder",
@@ -2009,7 +2009,6 @@
       "offset_decimal": 11945192,
       "category": "Items",
       "description": "Made from fairy wings.(Activates Anti-Circle)",
-      "faq_description": "Made from fairy wings. (Activates Anti-Circle)",
       "stats": {
         "0x12": 4351
       },
@@ -2031,7 +2030,8 @@
         "0x02803F68",
         "0x028A86F8"
       ],
-      "id": 59
+      "id": 59,
+      "new_description": "Made from fairy wings.(Activates Anti-Circle)"
     },
     {
       "name": "Mind Potion",
@@ -2039,7 +2039,6 @@
       "offset_decimal": 11946472,
       "category": "Items",
       "description": "Enchanted medicine.(Restores MP)",
-      "faq_description": "Enchanted medicine. (Restores MP)",
       "stats": {
         "0x12": 4351
       },
@@ -2061,7 +2060,8 @@
         "0x01F210F4",
         "0x01FB91CC"
       ],
-      "id": 60
+      "id": 60,
+      "new_description": "Enchanted medicine.(Restores MP)"
     },
     {
       "name": "Herbal Candy",
@@ -2069,7 +2069,6 @@
       "offset_decimal": 11947112,
       "category": "Items",
       "description": "Strange tasting herbal candy.(? ? ?)",
-      "faq_description": "A strange tasting candy. (? ? ?)",
       "stats": {
         "0x12": 4351
       },
@@ -2082,7 +2081,8 @@
       "all_offsets": [
         "0x00B64C68"
       ],
-      "id": 61
+      "id": 61,
+      "new_description": "Strange tasting herbal candy.(? ? ?)"
     },
     {
       "name": "Fine Axe",
@@ -2090,7 +2090,6 @@
       "offset_decimal": 11948392,
       "category": "Axes (dwarf)",
       "description": "A very fine axe forged by great smiths.",
-      "faq_description": "A very fine axe forged by great smiths.",
       "stats": {
         "0x12": 320,
         "0x30": 29
@@ -2115,7 +2114,8 @@
         "0x00B65168",
         "0x0152CE0C"
       ],
-      "id": 62
+      "id": 62,
+      "new_description": "A very fine axe forged by great smiths."
     },
     {
       "name": "Holy Lamp",
@@ -2123,7 +2123,6 @@
       "offset_decimal": 11949032,
       "category": "Jewels",
       "description": "Ornamental lamp.(Casts Holy Word 20% Dest.)",
-      "faq_description": "Ornamental Lamp. (Casts Holy Word 20% Dest.)",
       "stats": {
         "0x12": 4351
       },
@@ -2138,7 +2137,8 @@
         "0x00E69CD0",
         "0x0163DB8C"
       ],
-      "id": 63
+      "id": 63,
+      "new_description": "Ornamental lamp.(Casts Holy Word 20% Dest.)"
     },
     {
       "name": "Fate Coin",
@@ -2146,7 +2146,6 @@
       "offset_decimal": 11950952,
       "category": "Items",
       "description": "It shows the Goddess of luck.(Changes Luck)",
-      "faq_description": "It shows the goddess of luck. (Changes Luck)",
       "stats": {
         "0x12": 4351
       },
@@ -2168,7 +2167,8 @@
         "0x013517D4",
         "0x013BC13C"
       ],
-      "id": 64
+      "id": 64,
+      "new_description": "It shows the Goddess of luck.(Changes Luck)"
     },
     {
       "name": "Skull Wand",
@@ -2176,7 +2176,6 @@
       "offset_decimal": 11952872,
       "category": "Sorcerer’s Wand",
       "description": "",
-      "faq_description": "A wand topped with the skull of a ceremonial victim.",
       "stats": {
         "0x12": 264,
         "0x30": 14
@@ -2191,7 +2190,8 @@
         "0x00C3D1E0",
         "0x011E5574"
       ],
-      "id": 65
+      "id": 65,
+      "new_description": ""
     },
     {
       "name": "Jewel Rod",
@@ -2199,7 +2199,6 @@
       "offset_decimal": 11953512,
       "category": "Rods (fairy)",
       "description": "A rod with a jewel-encrusted top.",
-      "faq_description": "A rod with a jewel-encrusted top.",
       "stats": {
         "0x12": 384,
         "0x30": 10
@@ -2228,7 +2227,8 @@
         "0x014BA8C8",
         "0x0164038C"
       ],
-      "id": 66
+      "id": 66,
+      "new_description": "A rod with a jewel-encrusted top."
     },
     {
       "name": "Crystal Orb",
@@ -2236,7 +2236,6 @@
       "offset_decimal": 11956712,
       "category": "Jewels",
       "description": "Holds life energy.(Full restoration of HP)",
-      "faq_description": "Holds life energy. (Full restoration of HP)",
       "stats": {
         "0x12": 4351
       },
@@ -2258,7 +2257,8 @@
         "0x01BB21F4",
         "0x01C9A318"
       ],
-      "id": 67
+      "id": 67,
+      "new_description": "Holds life energy.(Full restoration of HP)"
     },
     {
       "name": "Blood Oil",
@@ -2266,7 +2266,6 @@
       "offset_decimal": 11957352,
       "category": "Items",
       "description": "Made from blood.(Temp. increase dark attack)",
-      "faq_description": "Made from blood. (Temp. increase dark attack)",
       "stats": {
         "0x12": 4351
       },
@@ -2284,7 +2283,8 @@
         "0x01BB35F4",
         "0x020FD8FC"
       ],
-      "id": 68
+      "id": 68,
+      "new_description": "Made from blood.(Temp. increase dark attack)"
     },
     {
       "name": "Fire Orb",
@@ -2292,7 +2292,6 @@
       "offset_decimal": 12448504,
       "category": "Jewels",
       "description": "Orb of fire magic.(Activates Explosion)",
-      "faq_description": "Orb of fire magic. (Activates Explosion)",
       "stats": {
         "0x12": 4351
       },
@@ -2308,7 +2307,8 @@
         "0x00F96E74",
         "0x02972ADC"
       ],
-      "id": 69
+      "id": 69,
+      "new_description": "Orb of fire magic.(Activates Explosion)"
     },
     {
       "name": "Earth Orb",
@@ -2316,7 +2316,6 @@
       "offset_decimal": 12449144,
       "category": "Jewels",
       "description": "Orb with earth magic.(Activates Earth Javelin)",
-      "faq_description": "Orb of earth magic. (Activates Earth Javelin)",
       "stats": {
         "0x12": 4351
       },
@@ -2330,7 +2329,8 @@
         "0x00BDF578",
         "0x01258858"
       ],
-      "id": 70
+      "id": 70,
+      "new_description": "Orb with earth magic.(Activates Earth Javelin)"
     },
     {
       "name": "Earth Necklace",
@@ -2338,7 +2338,6 @@
       "offset_decimal": 12450424,
       "category": "Clothings",
       "description": "Wearer is protected by the powers of earth.",
-      "faq_description": "Wearer is protected by the powers of earth.",
       "stats": {
         "0x12": 2303
       },
@@ -2350,7 +2349,8 @@
         "0x00BDFA78",
         "0x01BB1574"
       ],
-      "id": 71
+      "id": 71,
+      "new_description": "Wearer is protected by the powers of earth."
     },
     {
       "name": "Leather Helmet",
@@ -2358,7 +2358,6 @@
       "offset_decimal": 12451704,
       "category": "Clothings",
       "description": "A helmet made of leather.",
-      "faq_description": "",
       "stats": {
         "0x12": 2165,
         "0x32": 2
@@ -2371,7 +2370,8 @@
         "0x00BDFF78",
         "0x01107CD8"
       ],
-      "id": 72
+      "id": 72,
+      "new_description": "A helmet made of leather."
     },
     {
       "name": "Light Amulet",
@@ -2379,7 +2379,6 @@
       "offset_decimal": 12452344,
       "category": "Clothings",
       "description": "Brings forth the power of light.",
-      "faq_description": "Brings forth the power of light.",
       "stats": {
         "0x12": 2303
       },
@@ -2404,7 +2403,8 @@
       "all_offsets": [
         "0x00BE01F8"
       ],
-      "id": 73
+      "id": 73,
+      "new_description": "Darkness elemental damage decreases"
     },
     {
       "name": "Bronze Medal",
@@ -2412,7 +2412,6 @@
       "offset_decimal": 12452984,
       "category": "Clothings",
       "description": "Increases the wearer's defense during attacks.",
-      "faq_description": "Increases the wearer’s defense during attacks.",
       "stats": {
         "0x12": 2303,
         "0x36": 6
@@ -2436,7 +2435,8 @@
       "all_offsets": [
         "0x00BE0478"
       ],
-      "id": 74
+      "id": 74,
+      "new_description": "Increases the wearer's defense during attacks."
     },
     {
       "name": "Silver Medal",
@@ -2444,7 +2444,6 @@
       "offset_decimal": 12453624,
       "category": "Clothings",
       "description": "Increases the wearer's defense during attacks.",
-      "faq_description": "Increases the wearer’s defense during attacks.",
       "stats": {
         "0x12": 2303,
         "0x36": 12
@@ -2468,7 +2467,8 @@
       "all_offsets": [
         "0x00BE06F8"
       ],
-      "id": 75
+      "id": 75,
+      "new_description": "Increases the wearer's defense during attacks."
     },
     {
       "name": "Gold Medal",
@@ -2476,7 +2476,6 @@
       "offset_decimal": 12454264,
       "category": "Clothings",
       "description": "Increases the wearer's defense during attacks.",
-      "faq_description": "Increases the wearer’s defense during attacks.",
       "stats": {
         "0x12": 2303,
         "0x36": 24
@@ -2490,7 +2489,8 @@
         "0x01F20E74",
         "0x022327C8"
       ],
-      "id": 76
+      "id": 76,
+      "new_description": "Increases the wearer's defense during attacks."
     },
     {
       "name": "Fine Robe",
@@ -2498,7 +2498,6 @@
       "offset_decimal": 12454904,
       "category": "Robes (priest,sorcerer,& fairy)",
       "description": "Excellent robe made of the best materials.",
-      "faq_description": "",
       "stats": {
         "0x12": 650,
         "0x32": 8,
@@ -2525,7 +2524,8 @@
         "0x011E7AF4",
         "0x012576D8"
       ],
-      "id": 77
+      "id": 77,
+      "new_description": "MDEF+4"
     },
     {
       "name": "Long Sword",
@@ -2533,7 +2533,6 @@
       "offset_decimal": 12463224,
       "category": "Swords (warrior)",
       "description": "Longer than a normal sword.",
-      "faq_description": "",
       "stats": {
         "0x12": 257,
         "0x30": 18
@@ -2561,7 +2560,8 @@
         "0x015ACD20",
         "0x016C36F8"
       ],
-      "id": 78
+      "id": 78,
+      "new_description": "Longer than a normal sword."
     },
     {
       "name": "Round Shield",
@@ -2569,7 +2569,6 @@
       "offset_decimal": 12464504,
       "category": "Shields (warrior & dwarf)",
       "description": "A simple round shield.",
-      "faq_description": "A simple round shield.",
       "stats": {
         "0x12": 1089,
         "0x32": 3,
@@ -2602,7 +2601,8 @@
         "0x01A39FC0",
         "0x01A8DB58"
       ],
-      "id": 79
+      "id": 79,
+      "new_description": "A simple round shield."
     },
     {
       "name": "Leather Boots",
@@ -2610,7 +2610,6 @@
       "offset_decimal": 12828768,
       "category": "Clothings",
       "description": "Boots made of comfortable leather.",
-      "faq_description": "Boots made of comfortable leather.",
       "stats": {
         "0x12": 2165,
         "0x32": 2
@@ -2634,7 +2633,8 @@
       "all_offsets": [
         "0x00C3C060"
       ],
-      "id": 80
+      "id": 80,
+      "new_description": "Boots made of comfortable leather."
     },
     {
       "name": "Cloak",
@@ -2642,7 +2642,6 @@
       "offset_decimal": 12829408,
       "category": "Clothings",
       "description": "A cloak made of thick cloth.",
-      "faq_description": "",
       "stats": {
         "0x12": 2303,
         "0x32": 4,
@@ -2676,7 +2675,8 @@
         "0x0152A894",
         "0x0163FC12"
       ],
-      "id": 81
+      "id": 81,
+      "new_description": "MDEF+2"
     },
     {
       "name": "Earth Jewel",
@@ -2684,7 +2684,6 @@
       "offset_decimal": 12830048,
       "category": "Jewels",
       "description": "Earth Gem.(Activates Poison Cloud; 25% Dest.)",
-      "faq_description": "Earth Gem. (Activates Poison Cloud; 25% Dest.)",
       "stats": {
         "0x12": 4351
       },
@@ -2701,7 +2700,8 @@
         "0x01351554",
         "0x02438ADC"
       ],
-      "id": 82
+      "id": 82,
+      "new_description": "Earth Gem.(Activates Poison Cloud; 25% Dest.)"
     },
     {
       "name": "Full Plate",
@@ -2709,7 +2709,6 @@
       "offset_decimal": 12830688,
       "category": "Armors (warrior & dwarf)",
       "description": "Full suit of heavy armor. Protects the whole body.",
-      "faq_description": "Full suit of heavy armor. Protects the whole body.",
       "stats": {
         "0x12": 577,
         "0x32": 33,
@@ -2725,7 +2724,8 @@
         "0x00C3C7E0",
         "0x00D2C4E8"
       ],
-      "id": 83
+      "id": 83,
+      "new_description": "Critical attack ratio - 2%"
     },
     {
       "name": "Cure Potion",
@@ -2733,7 +2733,6 @@
       "offset_decimal": 12839008,
       "category": "Items",
       "description": "Restores the body.(Slowly restores status)",
-      "faq_description": "",
       "stats": {
         "0x12": 4351
       },
@@ -2755,7 +2754,8 @@
         "0x01A3B640",
         "0x01A3BE40"
       ],
-      "id": 84
+      "id": 84,
+      "new_description": "Restores the body.(Slowly restores status)"
     },
     {
       "name": "Life Potion",
@@ -2763,7 +2763,6 @@
       "offset_decimal": 12839648,
       "category": "Items",
       "description": "Potion of essence of life.(Restores HP)",
-      "faq_description": "Potion of essence of life. (Restores HP)",
       "stats": {
         "0x12": 4351
       },
@@ -2785,7 +2784,8 @@
         "0x010A1C3C",
         "0x014B9248"
       ],
-      "id": 85
+      "id": 85,
+      "new_description": "Potion of essence of life.(Restores HP)"
     },
     {
       "name": "Blood Extract",
@@ -2793,7 +2793,6 @@
       "offset_decimal": 12840288,
       "category": "Items",
       "description": "Extract of blood.(Restores HP to maximum)",
-      "faq_description": "Extract of blood. (Restores HP to maximum)",
       "stats": {
         "0x12": 4351
       },
@@ -2815,7 +2814,8 @@
         "0x010326AC",
         "0x010A263C"
       ],
-      "id": 86
+      "id": 86,
+      "new_description": "Extract of blood.(Restores HP to maximum)"
     },
     {
       "name": "Dragon Scales",
@@ -2823,7 +2823,6 @@
       "offset_decimal": 13341368,
       "category": "Clothings",
       "description": "Supposedly wards off bad luck and misfortune.",
-      "faq_description": "",
       "stats": {
         "0x12": 2303,
         "0x32": 12,
@@ -2856,7 +2855,8 @@
         "0x02802D68",
         "0x029F1EE8"
       ],
-      "id": 87
+      "id": 87,
+      "new_description": "LUK+16, MDEF+12"
     },
     {
       "name": "Water Necklace",
@@ -2864,7 +2864,6 @@
       "offset_decimal": 13342008,
       "category": "Clothings",
       "description": "Wearer is protected by the powers of water.",
-      "faq_description": "Wearer is protected by the powers of water.",
       "stats": {
         "0x12": 2303
       },
@@ -2878,7 +2877,8 @@
         "0x02664934",
         "0x02909264"
       ],
-      "id": 88
+      "id": 88,
+      "new_description": "Wearer is protected by the powers of water."
     },
     {
       "name": "Wind Jewel",
@@ -2886,7 +2886,6 @@
       "offset_decimal": 13342648,
       "category": "Jewels",
       "description": "Wind Gem.(Activates Lightning Bolt; 25% Dest.)",
-      "faq_description": "Wind Gem. (Activates Lightning Bolt; 25% Dest.)",
       "stats": {
         "0x12": 4351
       },
@@ -2907,7 +2906,8 @@
         "0x02802868",
         "0x029F19E8"
       ],
-      "id": 89
+      "id": 89,
+      "new_description": "Wind Gem.(Activates Lightning Bolt; 25% Dest.)"
     },
     {
       "name": "Ice Jewel",
@@ -2915,7 +2915,6 @@
       "offset_decimal": 13343288,
       "category": "Jewels",
       "description": "Gem of ice.(Activates Blizzard; 25% Destruction)",
-      "faq_description": "Gem of ice. (Activates Blizzard; 25% Destruction)",
       "stats": {
         "0x12": 4351
       },
@@ -2934,7 +2933,8 @@
         "0x02663534",
         "0x029080E4"
       ],
-      "id": 90
+      "id": 90,
+      "new_description": "Gem of ice.(Activates Blizzard; 25% Destruction)"
     },
     {
       "name": "Tasty-drops",
@@ -2942,7 +2942,6 @@
       "offset_decimal": 13343928,
       "category": "Items",
       "description": "Very tasty candy.(Restores MP and HP)",
-      "faq_description": "Very tasty candy. (Restores MP and HP)",
       "stats": {
         "0x12": 4351
       },
@@ -2955,7 +2954,8 @@
       "all_offsets": [
         "0x00CB9CB8"
       ],
-      "id": 91
+      "id": 91,
+      "new_description": "Very tasty candy.(Restores MP and HP)"
     },
     {
       "name": "Defender",
@@ -2963,7 +2963,6 @@
       "offset_decimal": 13347768,
       "category": "Knives (rogue)",
       "description": "Defense dagger for use with the left hand.",
-      "faq_description": "",
       "stats": {
         "0x12": 260,
         "0x30": 18,
@@ -2998,7 +2997,8 @@
         "0x01E9D348",
         "0x01F22EF4"
       ],
-      "id": 92
+      "id": 92,
+      "new_description": "Defense dagger for use with the left hand."
     },
     {
       "name": "Spirit Extract",
@@ -3006,7 +3006,6 @@
       "offset_decimal": 13348408,
       "category": "Items",
       "description": "Concentrate of spirits.(Restore MP to max.)",
-      "faq_description": "Consentrate of spirits. (Restore MP to maximum.)",
       "stats": {
         "0x12": 4351
       },
@@ -3028,7 +3027,8 @@
         "0x01FB8CCC",
         "0x0200E4DC"
       ],
-      "id": 93
+      "id": 93,
+      "new_description": "Concentrate of spirits.(Restore MP to max.)"
     },
     {
       "name": "Protect Ring",
@@ -3036,7 +3036,6 @@
       "offset_decimal": 13809768,
       "category": "Clothings",
       "description": "Protects with strange mysterious powers.",
-      "faq_description": "Protects with strange mysterious powers.",
       "stats": {
         "0x12": 2303,
         "0x32": 16,
@@ -3066,7 +3065,8 @@
         "0x0163B88C",
         "0x01F20974"
       ],
-      "id": 94
+      "id": 94,
+      "new_description": "Df + (POW * 25%)"
     },
     {
       "name": "Resist Ring",
@@ -3074,7 +3074,6 @@
       "offset_decimal": 13810408,
       "category": "Clothings",
       "description": "Protects the wearer with mysterious powers.",
-      "faq_description": "",
       "stats": {
         "0x12": 2303
       },
@@ -3101,7 +3100,8 @@
         "0x0163F48C",
         "0x0179EE1C"
       ],
-      "id": 95
+      "id": 95,
+      "new_description": "Mdf + (POW * 25%) | MDEF+16"
     },
     {
       "name": "Aqua Shawl",
@@ -3109,7 +3109,6 @@
       "offset_decimal": 13811048,
       "category": "Clothings",
       "description": "Magical shawl worn by the spirit of water.",
-      "faq_description": "Magical shawl worn by the spirit of water.",
       "stats": {
         "0x12": 2303
       },
@@ -3137,7 +3136,8 @@
         "0x025D634C",
         "0x026637B4"
       ],
-      "id": 96
+      "id": 96,
+      "new_description": "Fire elemental damage decreases | INT+8"
     },
     {
       "name": "Power Band",
@@ -3145,7 +3145,6 @@
       "offset_decimal": 13811688,
       "category": "Clothings",
       "description": "Magically increases its wearer's strength.",
-      "faq_description": "Magically increases its weare's strength.",
       "stats": {
         "0x12": 2303
       },
@@ -3171,7 +3170,8 @@
         "0x00ECD854",
         "0x00F2156C"
       ],
-      "id": 97
+      "id": 97,
+      "new_description": "STR+32"
     },
     {
       "name": "Fine Boots",
@@ -3179,7 +3179,6 @@
       "offset_decimal": 13812328,
       "category": "Clothings",
       "description": "Beautifully crafted boots made of fine material.",
-      "faq_description": "",
       "stats": {
         "0x12": 2165,
         "0x32": 5
@@ -3204,7 +3203,8 @@
         "0x00D2C268",
         "0x011E66F4"
       ],
-      "id": 98
+      "id": 98,
+      "new_description": "Beautifully crafted boots made of fine material."
     },
     {
       "name": "Leather Cloak",
@@ -3212,7 +3212,6 @@
       "offset_decimal": 13815528,
       "category": "Clothings",
       "description": "A cloak made of strong leather.",
-      "faq_description": "",
       "stats": {
         "0x12": 2303,
         "0x32": 8,
@@ -3239,7 +3238,8 @@
         "0x013BAFBC",
         "0x025D4F4C"
       ],
-      "id": 99
+      "id": 99,
+      "new_description": "MDEF+4"
     },
     {
       "name": "Elven Cloak",
@@ -3247,7 +3247,6 @@
       "offset_decimal": 13816168,
       "category": "Clothings",
       "description": "Light cloak for easy movement worn by elves.",
-      "faq_description": "Light cloak for easy movement worn by elves.",
       "stats": {
         "0x12": 2080,
         "0x32": 16,
@@ -3274,7 +3273,8 @@
         "0x0163FC0C",
         "0x01800270"
       ],
-      "id": 100
+      "id": 100,
+      "new_description": "INT+4, WIL+4, POW+4, MDEF+8"
     },
     {
       "name": "Red Spice",
@@ -3282,7 +3282,6 @@
       "offset_decimal": 13818088,
       "category": "Items",
       "description": "Very hot spice.(Increases AT temporarily)",
-      "faq_description": "Very hot spice. (Increases AT temporarily)",
       "stats": {
         "0x12": 4351
       },
@@ -3296,7 +3295,8 @@
         "0x00D2D8E8",
         "0x02075750"
       ],
-      "id": 101
+      "id": 101,
+      "new_description": "Very hot spice.(Increases AT temporarily)"
     },
     {
       "name": "Dragon Amulet",
@@ -3304,7 +3304,6 @@
       "offset_decimal": 13819368,
       "category": "Clothings",
       "description": "Engraved with the sacred dragon.",
-      "faq_description": "Engraved with the sacred dragon.",
       "stats": {
         "0x12": 2303,
         "0x30": 16,
@@ -3325,7 +3324,8 @@
         "0x02802FE8",
         "0x029F2168"
       ],
-      "id": 102
+      "id": 102,
+      "new_description": "Engraved with the sacred dragon."
     },
     {
       "name": "Dragon Horn",
@@ -3333,7 +3333,6 @@
       "offset_decimal": 13820008,
       "category": "Clothings",
       "description": "Said to increase the bearer's abilities.",
-      "faq_description": "Said to increase the bearer's abilities.",
       "stats": {
         "0x12": 2303
       },
@@ -3362,7 +3361,8 @@
         "0x018009F0",
         "0x018730FC"
       ],
-      "id": 103
+      "id": 103,
+      "new_description": "Critical attack ratio + 4% | STR+30, CON+30"
     },
     {
       "name": "Dragon Tail",
@@ -3370,7 +3370,6 @@
       "offset_decimal": 13821288,
       "category": "Clothings",
       "description": "Tail of a powerful dragon, said to bring luck.",
-      "faq_description": "",
       "stats": {
         "0x12": 2303
       },
@@ -3400,7 +3399,8 @@
         "0x02802AE8",
         "0x029F1C68"
       ],
-      "id": 104
+      "id": 104,
+      "new_description": "LUK+20"
     },
     {
       "name": "Dragonscale",
@@ -3408,7 +3408,6 @@
       "offset_decimal": 13822568,
       "category": "Armors (warrior & dwarf)",
       "description": "Armor forged of the heavy scales of a dragon.",
-      "faq_description": "Armor forged of the heavy scales of a dragon.",
       "stats": {
         "0x12": 577,
         "0x32": 65,
@@ -3437,7 +3436,8 @@
         "0x020FB0FC",
         "0x021B0008"
       ],
-      "id": 105
+      "id": 105,
+      "new_description": "Armor forged of the heavy scales of a dragon."
     },
     {
       "name": "Healing Stone",
@@ -3445,7 +3445,6 @@
       "offset_decimal": 14188624,
       "category": "Items",
       "description": "Stone of healing.(HP to max. 20% Dest.)",
-      "faq_description": "Stone of healing. (HP to max. 20% Dest.)",
       "stats": {
         "0x12": 4351
       },
@@ -3462,7 +3461,8 @@
         "0x02851EE4",
         "0x02A90054"
       ],
-      "id": 106
+      "id": 106,
+      "new_description": "Stone of healing.(HP to max. 20% Dest.)"
     },
     {
       "name": "Magical Stone",
@@ -3470,7 +3470,6 @@
       "offset_decimal": 14189264,
       "category": "Items",
       "description": "Soothes the spirit.(MP to max. 25% Dest.)",
-      "faq_description": "Soothes the spirit. (MP to max. 25% Dest.)",
       "stats": {
         "0x12": 4351
       },
@@ -3488,7 +3487,8 @@
         "0x02A902D4",
         "0x02A90AD4"
       ],
-      "id": 107
+      "id": 107,
+      "new_description": "Soothes the spirit.(MP to max. 25% Dest.)"
     },
     {
       "name": "Hovering Shoes",
@@ -3496,7 +3496,6 @@
       "offset_decimal": 14189904,
       "category": "Clothings",
       "description": "Shoes which allow the wearer to float on air.",
-      "faq_description": "Shoes which allow the wearer to float on air.",
       "stats": {
         "0x12": 2186,
         "0x32": 3
@@ -3510,7 +3509,8 @@
       "all_offsets": [
         "0x00D88550"
       ],
-      "id": 108
+      "id": 108,
+      "new_description": "Give the effect of 'Levitate' to character"
     },
     {
       "name": "Iron Helmet",
@@ -3518,7 +3518,6 @@
       "offset_decimal": 14192464,
       "category": "Clothings",
       "description": "A soldier's iron helmet.",
-      "faq_description": "",
       "stats": {
         "0x12": 2113,
         "0x32": 4
@@ -3546,7 +3545,8 @@
         "0x022ADFDC",
         "0x023092C4"
       ],
-      "id": 109
+      "id": 109,
+      "new_description": "A soldier's iron helmet."
     },
     {
       "name": "Iron Boots",
@@ -3554,7 +3554,6 @@
       "offset_decimal": 14193744,
       "category": "Clothings",
       "description": "Heavy but highly protective boots made of iron.",
-      "faq_description": "",
       "stats": {
         "0x12": 2165,
         "0x32": 4
@@ -3578,7 +3577,8 @@
       "all_offsets": [
         "0x00D89450"
       ],
-      "id": 110
+      "id": 110,
+      "new_description": "Heavy but highly protective boots made of iron."
     },
     {
       "name": "Great Axe",
@@ -3586,7 +3586,6 @@
       "offset_decimal": 14194384,
       "category": "Axes (dwarf)",
       "description": "A heavy axe reknowned for its hacking ability.",
-      "faq_description": "A heavy axe reknowned for its hacking ability.",
       "stats": {
         "0x12": 320,
         "0x30": 28
@@ -3614,7 +3613,8 @@
         "0x00E0A078",
         "0x01256F58"
       ],
-      "id": 111
+      "id": 111,
+      "new_description": "Critical attack ratio + 6%"
     },
     {
       "name": "Dark Orb",
@@ -3622,7 +3622,6 @@
       "offset_decimal": 14199504,
       "category": "Jewels",
       "description": "Enchanted with dark magic.(Activates Dark Breath)",
-      "faq_description": "Enchanted with dark magic. (Activates Dark Breath)",
       "stats": {
         "0x12": 4351
       },
@@ -3644,7 +3643,8 @@
         "0x01D27580",
         "0x020FCC7C"
       ],
-      "id": 112
+      "id": 112,
+      "new_description": "Enchanted with dark magic.(Activates Dark Breath)"
     },
     {
       "name": "Blessed Ring",
@@ -3652,7 +3652,6 @@
       "offset_decimal": 14711544,
       "category": "Clothings",
       "description": "Blessed and engraved with holy symbols.",
-      "faq_description": "Blessed and engraved with holy symbols.",
       "stats": {
         "0x12": 2303,
         "0x30": 8,
@@ -3683,7 +3682,8 @@
         "0x01D26B80",
         "0x02075250"
       ],
-      "id": 113
+      "id": 113,
+      "new_description": "MAT+8, MDEF+8"
     },
     {
       "name": "Ice Shield",
@@ -3691,7 +3691,6 @@
       "offset_decimal": 14712184,
       "category": "Shields (warrior & dwarf)",
       "description": "Shield made of ice inhabited by water spirits.",
-      "faq_description": "Shield made of ice inhabited by water spirits.",
       "stats": {
         "0x12": 1089,
         "0x32": 18,
@@ -3723,7 +3722,8 @@
         "0x029094E4",
         "0x02909CE4"
       ],
-      "id": 114
+      "id": 114,
+      "new_description": "Reduce water elemental attack | MDEF+12"
     },
     {
       "name": "Misty Pendant",
@@ -3731,7 +3731,6 @@
       "offset_decimal": 14712824,
       "category": "Clothings",
       "description": "Mysterious locket with misty swirling surface.",
-      "faq_description": "Misterious Locket with misty swirling surface.",
       "stats": {
         "0x12": 2303,
         "0x36": 8
@@ -3764,7 +3763,8 @@
         "0x020FD17C",
         "0x0230AE44"
       ],
-      "id": 115
+      "id": 115,
+      "new_description": "Immune to Silence"
     },
     {
       "name": "Compound Bow",
@@ -3772,7 +3772,6 @@
       "offset_decimal": 14713464,
       "category": "Bows (hunter)",
       "description": "",
-      "faq_description": "A bow of strong wood. It is reknowed for its power.",
       "stats": {
         "0x12": 272,
         "0x30": 82
@@ -3796,7 +3795,8 @@
       "all_offsets": [
         "0x00E08278"
       ],
-      "id": 116
+      "id": 116,
+      "new_description": ""
     },
     {
       "name": "Bow",
@@ -3804,7 +3804,6 @@
       "offset_decimal": 14713473,
       "category": "Bows (hunter)",
       "description": "",
-      "faq_description": "A normal bow, easy to use.",
       "stats": {
         "0x36": 3072
       },
@@ -3834,7 +3833,8 @@
         "0x02592DCC",
         "0x025935CC"
       ],
-      "id": 117
+      "id": 117,
+      "new_description": ""
     },
     {
       "name": "Mithril Wand",
@@ -3842,7 +3842,6 @@
       "offset_decimal": 14714104,
       "category": "Sorcerer’s Wand",
       "description": "A magical wand made of mithril silver.",
-      "faq_description": "A magical wand made of mithril silver.",
       "stats": {
         "0x12": 264,
         "0x14": 1024,
@@ -3868,7 +3867,8 @@
       "all_offsets": [
         "0x00E084F8"
       ],
-      "id": 118
+      "id": 118,
+      "new_description": "MAT+18"
     },
     {
       "name": "Earth Rod",
@@ -3876,7 +3876,6 @@
       "offset_decimal": 14714744,
       "category": "Rods (fairy)",
       "description": "1 of the 4 given to the elven king by a dead king.",
-      "faq_description": "1 of the 4 given to the elven king by a dead king.",
       "stats": {
         "0x12": 384,
         "0x14": 37888,
@@ -3902,7 +3901,8 @@
       "all_offsets": [
         "0x00E08778"
       ],
-      "id": 119
+      "id": 119,
+      "new_description": "1 of the 4 given to the elven king by a dead king."
     },
     {
       "name": "Poison Axe",
@@ -3910,7 +3910,6 @@
       "offset_decimal": 14715384,
       "category": "Axes (dwarf)",
       "description": "An axe forged of poisonous metal.",
-      "faq_description": "An axe forged of poisonous metal.",
       "stats": {
         "0x12": 320,
         "0x30": 52
@@ -3936,7 +3935,8 @@
         "0x00F966F4",
         "0x01FB804C"
       ],
-      "id": 120
+      "id": 120,
+      "new_description": "An axe forged of poisonous metal."
     },
     {
       "name": "Sunblade",
@@ -3944,7 +3944,6 @@
       "offset_decimal": 14716024,
       "category": "Swords (warrior)",
       "description": "",
-      "faq_description": "",
       "stats": {
         "0x12": 257,
         "0x14": 37888,
@@ -3970,7 +3969,8 @@
       "all_offsets": [
         "0x00E08C78"
       ],
-      "id": 121
+      "id": 121,
+      "new_description": ""
     },
     {
       "name": "Blackjack",
@@ -3978,7 +3978,6 @@
       "offset_decimal": 14717304,
       "category": "Knives (rogue)",
       "description": "A small, easily carried weapon.",
-      "faq_description": "A small, easily carried weapon.",
       "stats": {
         "0x12": 260,
         "0x30": 30
@@ -4004,7 +4003,8 @@
       "all_offsets": [
         "0x00E09178"
       ],
-      "id": 122
+      "id": 122,
+      "new_description": "Sometimes stun the enemy (8% probability)"
     },
     {
       "name": "Stone Foil",
@@ -4012,7 +4012,6 @@
       "offset_decimal": 14717944,
       "category": "Rapiers (elf)",
       "description": "",
-      "faq_description": "Made by elven mastersmiths. Imbued with earth power.",
       "stats": {
         "0x12": 288,
         "0x14": 37888,
@@ -4026,7 +4025,8 @@
       "all_offsets": [
         "0x00E093F8"
       ],
-      "id": 123
+      "id": 123,
+      "new_description": ""
     },
     {
       "name": "Frost Orb",
@@ -4034,7 +4034,6 @@
       "offset_decimal": 14726264,
       "category": "Jewels",
       "description": "Orb of ice magic.(Activates Freeze Beast)",
-      "faq_description": "Orb of Ice magic. (Activates Freeze Beast)",
       "stats": {
         "0x12": 4351
       },
@@ -4051,7 +4050,8 @@
         "0x026632B4",
         "0x02908364"
       ],
-      "id": 124
+      "id": 124,
+      "new_description": "Orb of ice magic.(Activates Freeze Beast)"
     },
     {
       "name": "Blue Ear-stud",
@@ -4059,7 +4059,6 @@
       "offset_decimal": 14726904,
       "category": "Clothings",
       "description": "Ear-stud adorned with a blue jewel.",
-      "faq_description": "Ear-stud adorned with a blue jewel.",
       "stats": {
         "0x12": 2303
       },
@@ -4087,7 +4086,8 @@
         "0x02664BB4",
         "0x029085E4"
       ],
-      "id": 125
+      "id": 125,
+      "new_description": "10% magic recovery from water & wind damage"
     },
     {
       "name": "Frostfurnace",
@@ -4095,7 +4095,6 @@
       "offset_decimal": 14727544,
       "category": "Rapiers (elf)",
       "description": "",
-      "faq_description": "Was given to a king as a gift from the ice fairies.",
       "stats": {
         "0x12": 288,
         "0x14": 37888,
@@ -4125,7 +4124,8 @@
         "0x026641B4",
         "0x02908864"
       ],
-      "id": 126
+      "id": 126,
+      "new_description": "MAT+18"
     },
     {
       "name": "Mist Dagger",
@@ -4133,7 +4133,6 @@
       "offset_decimal": 14728184,
       "category": "Knives (rogue)",
       "description": "",
-      "faq_description": "Magical dagger formed out of the spirits of the dead.",
       "stats": {
         "0x12": 260,
         "0x14": 37888,
@@ -4162,7 +4161,8 @@
         "0x01D25500",
         "0x02908AE4"
       ],
-      "id": 127
+      "id": 127,
+      "new_description": "WIL+5, POW+15, MDEF+22"
     },
     {
       "name": "Life Shield",
@@ -4170,7 +4170,6 @@
       "offset_decimal": 15110864,
       "category": "Light Armors (hunter, elf & rogue)",
       "description": "An excellent shield offering great protection.",
-      "faq_description": "An excellent shield offering great protection.",
       "stats": {
         "0x12": 564,
         "0x14": 1024,
@@ -4197,7 +4196,8 @@
         "0x00E692D0",
         "0x00F95574"
       ],
-      "id": 128
+      "id": 128,
+      "new_description": "An excellent shield offering great protection."
     },
     {
       "name": "Silver Circlet",
@@ -4205,7 +4205,6 @@
       "offset_decimal": 15112144,
       "category": "Clothings",
       "description": "Raises one's spirits and repels demons.",
-      "faq_description": "Raises one's spirits and repels demons.",
       "stats": {
         "0x12": 2303
       },
@@ -4217,7 +4216,8 @@
         "0x00E697D0",
         "0x01AE87C8"
       ],
-      "id": 129
+      "id": 129,
+      "new_description": "Raises one's spirits and repels demons."
     },
     {
       "name": "Phantasm Orb",
@@ -4225,7 +4225,6 @@
       "offset_decimal": 15112784,
       "category": "Jewels",
       "description": "Magic orb.(Activates Charm destroyed at 25%)",
-      "faq_description": "Magic orb. (Activates Charm destroyed at 25%)",
       "stats": {
         "0x12": 4351
       },
@@ -4240,7 +4239,8 @@
         "0x02592144",
         "0x02852DE4"
       ],
-      "id": 130
+      "id": 130,
+      "new_description": "Magic orb.(Activates Charm destroyed at 25%)"
     },
     {
       "name": "Resist Cloak",
@@ -4248,7 +4248,6 @@
       "offset_decimal": 15114064,
       "category": "Clothings",
       "description": "Cloak that protects against magical attacks.",
-      "faq_description": "Cloak that protects against magical attacks.",
       "stats": {
         "0x12": 2303,
         "0x32": 12,
@@ -4273,7 +4272,8 @@
       "all_offsets": [
         "0x00E69F50"
       ],
-      "id": 131
+      "id": 131,
+      "new_description": "MDEF+24"
     },
     {
       "name": "Amber Wand",
@@ -4281,7 +4281,6 @@
       "offset_decimal": 15120464,
       "category": "Priest’s Wand/Hammer",
       "description": "A powerful wand made of amber.",
-      "faq_description": "",
       "stats": {
         "0x12": 258,
         "0x30": 62
@@ -4309,7 +4308,8 @@
         "0x00F217EC",
         "0x021AEC08"
       ],
-      "id": 132
+      "id": 132,
+      "new_description": "A powerful wand made of amber."
     },
     {
       "name": "Ouga Axe",
@@ -4317,7 +4317,6 @@
       "offset_decimal": 15121104,
       "category": "Axes (dwarf)",
       "description": "Holds the night demon Ouga and great power.",
-      "faq_description": "Holds the night demon Ouga and great power.",
       "stats": {
         "0x12": 320,
         "0x30": 84
@@ -4335,7 +4334,8 @@
         "0x029743DC",
         "0x029F23E8"
       ],
-      "id": 133
+      "id": 133,
+      "new_description": "Holds the night demon Ouga and great power."
     },
     {
       "name": "Red Ash",
@@ -4343,7 +4343,6 @@
       "offset_decimal": 15121744,
       "category": "Ashes",
       "description": "Supposedly from a saint's hand.(Increases STR)",
-      "faq_description": "Supposedly from a saint’s hand. (Increase STR)",
       "stats": {
         "0x12": 4351
       },
@@ -4365,7 +4364,8 @@
         "0x01AEADC8",
         "0x01B4E060"
       ],
-      "id": 134
+      "id": 134,
+      "new_description": "Supposedly from a saint's hand.(Increases STR)"
     },
     {
       "name": "Feather Pen",
@@ -4373,7 +4373,6 @@
       "offset_decimal": 15511636,
       "category": "Items",
       "description": "Big feather pen.(Increase magic recovery rate)",
-      "faq_description": "Big feather pen. (Increase magic recovery rate)",
       "stats": {
         "0x12": 4351
       },
@@ -4395,7 +4394,8 @@
         "0x0251B1AC",
         "0x025914C4"
       ],
-      "id": 135
+      "id": 135,
+      "new_description": "Big feather pen.(Increase magic recovery rate)"
     },
     {
       "name": "Black Ash",
@@ -4403,7 +4403,6 @@
       "offset_decimal": 15512276,
       "category": "Ashes",
       "description": "Supposedly from a saint's hand.(Increase POW)",
-      "faq_description": "Supposedly from a saint’s hand. (Increase POW)",
       "stats": {
         "0x12": 4351
       },
@@ -4421,7 +4420,8 @@
         "0x02793208",
         "0x02A8FDD4"
       ],
-      "id": 136
+      "id": 136,
+      "new_description": "Supposedly from a saint's hand.(Increase POW)"
     },
     {
       "name": "Minotaur Horn",
@@ -4429,7 +4429,6 @@
       "offset_decimal": 15512916,
       "category": "Clothings",
       "description": "Said to give the bearer great strength.",
-      "faq_description": "Said to give the bearer great strength.",
       "stats": {
         "0x12": 2303
       },
@@ -4446,7 +4445,8 @@
         "0x0187297C",
         "0x02A8F654"
       ],
-      "id": 137
+      "id": 137,
+      "new_description": "Sometimes knock back enemies (even bosses)"
     },
     {
       "name": "Silent Box",
@@ -4454,7 +4454,6 @@
       "offset_decimal": 15515476,
       "category": "Items",
       "description": "Odd music box.(Casts Silence 10% dest.)",
-      "faq_description": "Odd music box. (Casts Silence 10% dest.)",
       "stats": {
         "0x12": 4351
       },
@@ -4468,7 +4467,8 @@
         "0x00ECBF54",
         "0x01C98F18"
       ],
-      "id": 138
+      "id": 138,
+      "new_description": "Odd music box.(Casts Silence 10% dest.)"
     },
     {
       "name": "Elemental Orb",
@@ -4476,7 +4476,6 @@
       "offset_decimal": 15853676,
       "category": "Jewels",
       "description": "Orb of the spirits.(Summons Elemental)",
-      "faq_description": "Orb of the spirits. (Summmons Elemental)",
       "stats": {
         "0x12": 4351
       },
@@ -4497,7 +4496,8 @@
         "0x02975FDC",
         "0x02B3F2A0"
       ],
-      "id": 139
+      "id": 139,
+      "new_description": "Orb of the spirits.(Summons Elemental)"
     },
     {
       "name": "Earth Tiara",
@@ -4505,7 +4505,6 @@
       "offset_decimal": 15854956,
       "category": "Clothings",
       "description": "One of a pair of tiaras created long ago.",
-      "faq_description": "One of a pair of tiaras created long ago.",
       "stats": {
         "0x12": 2303
       },
@@ -4535,7 +4534,8 @@
         "0x029076E4",
         "0x029F3CE8"
       ],
-      "id": 140
+      "id": 140,
+      "new_description": "Decrease fire, wind, light, & holy damage"
     },
     {
       "name": "Element Cloak",
@@ -4543,7 +4543,6 @@
       "offset_decimal": 15858156,
       "category": "Clothings",
       "description": "Cloak enchanted with the strength of spirits.",
-      "faq_description": "Cloak enchanted with the strength of spirits.",
       "stats": {
         "0x12": 2272,
         "0x32": 17
@@ -4573,7 +4572,8 @@
         "0x025D684C",
         "0x02663CB4"
       ],
-      "id": 141
+      "id": 141,
+      "new_description": "Decrease fire, water, wind, & earth damage"
     },
     {
       "name": "Durandal",
@@ -4581,7 +4581,6 @@
       "offset_decimal": 15858796,
       "category": "Swords (warrior)",
       "description": "The favored sword of a bold knight, it can cut stone.",
-      "faq_description": "The favored sword of a bold knight, it can cut stone.",
       "stats": {
         "0x12": 257,
         "0x30": 80
@@ -4608,7 +4607,8 @@
         "0x00F1FC6C",
         "0x01C99E18"
       ],
-      "id": 142
+      "id": 142,
+      "new_description": "Sometimes knock back enemies (even bosses)"
     },
     {
       "name": "Executioner",
@@ -4616,7 +4616,6 @@
       "offset_decimal": 15860076,
       "category": "Axes (dwarf)",
       "description": "A long staff with an axehead on one end.",
-      "faq_description": "A long staff with an axehead on one end.",
       "stats": {
         "0x12": 320,
         "0x30": 58
@@ -4642,7 +4641,8 @@
       "all_offsets": [
         "0x00F2016C"
       ],
-      "id": 143
+      "id": 143,
+      "new_description": "Critical attack ratio + 4%"
     },
     {
       "name": "Great Helmet",
@@ -4650,7 +4650,6 @@
       "offset_decimal": 15861356,
       "category": "Clothings",
       "description": "A great, finely crafted helmet.",
-      "faq_description": "A great, finely crafted helmet.",
       "stats": {
         "0x12": 2113,
         "0x32": 8
@@ -4676,7 +4675,8 @@
         "0x013BC3BC",
         "0x013BCBBC"
       ],
-      "id": 144
+      "id": 144,
+      "new_description": "A great, finely crafted helmet."
     },
     {
       "name": "Master Plate",
@@ -4684,7 +4684,6 @@
       "offset_decimal": 15861996,
       "category": "Armors (warrior & dwarf)",
       "description": "A masterwork which provides 1st class protection.",
-      "faq_description": "A masterwork which provides 1st class protection.",
       "stats": {
         "0x12": 577,
         "0x30": 12,
@@ -4714,7 +4713,8 @@
         "0x013BC63C",
         "0x013BCE3C"
       ],
-      "id": 145
+      "id": 145,
+      "new_description": "Critical attack ratio + 5% | MDEF+24"
     },
     {
       "name": "Life Eater",
@@ -4722,7 +4722,6 @@
       "offset_decimal": 15862636,
       "category": "Axes (dwarf)",
       "description": "This axe can devour the souls of those it strikes.",
-      "faq_description": "This axe can devour the souls of those it strikes.",
       "stats": {
         "0x12": 320,
         "0x14": 37888,
@@ -4752,7 +4751,8 @@
         "0x013BC8BC",
         "0x01C3F504"
       ],
-      "id": 146
+      "id": 146,
+      "new_description": "Drains HP from living enemies (decrease HP if undead)"
     },
     {
       "name": "Gulwick",
@@ -4760,7 +4760,6 @@
       "offset_decimal": 15863276,
       "category": "Axes (dwarf)",
       "description": "",
-      "faq_description": "A golden axe, carries the power of the earth within",
       "stats": {
         "0x12": 320,
         "0x14": 37888,
@@ -4788,7 +4787,8 @@
       "all_offsets": [
         "0x00F20DEC"
       ],
-      "id": 147
+      "id": 147,
+      "new_description": "Sometimes Petrify / 8 MP (20% probability)"
     },
     {
       "name": "Dropneal",
@@ -4796,7 +4796,6 @@
       "offset_decimal": 15869036,
       "category": "Clothings",
       "description": "Treasure said to bring the bearer great wealth.",
-      "faq_description": "",
       "stats": {
         "0x12": 2303
       },
@@ -4829,7 +4828,8 @@
         "0x024BFCA0",
         "0x02A8E254"
       ],
-      "id": 148
+      "id": 148,
+      "new_description": "Increase the chance of getting Fate Coin & Doubles"
     },
     {
       "name": "Darkblade",
@@ -4837,7 +4837,6 @@
       "offset_decimal": 16340980,
       "category": "Swords (warrior)",
       "description": "",
-      "faq_description": "Sent to the world from the heavens, has a black blade.",
       "stats": {
         "0x12": 257,
         "0x14": 37888,
@@ -4865,7 +4864,8 @@
         "0x02794D88",
         "0x02801968"
       ],
-      "id": 149
+      "id": 149,
+      "new_description": ""
     },
     {
       "name": "Ritual Hammer",
@@ -4873,7 +4873,6 @@
       "offset_decimal": 16341620,
       "category": "Priest’s Wand/Hammer",
       "description": "",
-      "faq_description": "A wonderfully decorated hammer for use in rituals.",
       "stats": {
         "0x12": 258,
         "0x30": 40
@@ -4900,7 +4899,8 @@
         "0x00F95A74",
         "0x01D25280"
       ],
-      "id": 150
+      "id": 150,
+      "new_description": "Critical attack ratio + 3% | INT+10"
     },
     {
       "name": "Skystone Wand",
@@ -4908,7 +4908,6 @@
       "offset_decimal": 16342900,
       "category": "Sorcerer’s Wand",
       "description": "A magical wand created from a meteor.",
-      "faq_description": "A magical wand created from a meteor.",
       "stats": {
         "0x12": 264,
         "0x14": 37888,
@@ -4935,7 +4934,8 @@
         "0x00F95F74",
         "0x01D92748"
       ],
-      "id": 151
+      "id": 151,
+      "new_description": "MAT+8"
     },
     {
       "name": "Holy Rod",
@@ -4943,7 +4943,6 @@
       "offset_decimal": 16345460,
       "category": "Rods (fairy)",
       "description": "A rod imbued with holy power to heal wounds.",
-      "faq_description": "A rod imbued with holy power to heal wounds.",
       "stats": {
         "0x12": 384,
         "0x14": 37888,
@@ -4971,7 +4970,8 @@
       "all_offsets": [
         "0x00F96974"
       ],
-      "id": 152
+      "id": 152,
+      "new_description": "Starts to regenerate HP by 1 if HP lower than half"
     },
     {
       "name": "Inferno",
@@ -4979,7 +4979,6 @@
       "offset_decimal": 16348020,
       "category": "Rapiers (elf)",
       "description": "The blade glows with a strange light from hell.",
-      "faq_description": "",
       "stats": {
         "0x12": 288,
         "0x14": 37888,
@@ -4998,7 +4997,8 @@
         "0x016C4178",
         "0x02972FDC"
       ],
-      "id": 153
+      "id": 153,
+      "new_description": "The blade glows with a strange light from hell."
     },
     {
       "name": "Flamespitter",
@@ -5006,7 +5006,6 @@
       "offset_decimal": 16348660,
       "category": "Axes (dwarf)",
       "description": "",
-      "faq_description": "Sparkling axe forged in the fiery breath of a dragon.",
       "stats": {
         "0x12": 320,
         "0x14": 37888,
@@ -5035,7 +5034,8 @@
         "0x0297325C",
         "0x02A8D854"
       ],
-      "id": 154
+      "id": 154,
+      "new_description": ""
     },
     {
       "name": "Red Ear-stud",
@@ -5043,7 +5043,6 @@
       "offset_decimal": 16349300,
       "category": "Clothings",
       "description": "Ear-stud adorned with a red jewel.",
-      "faq_description": "Ear-stud adorned with a red jewel.",
       "stats": {
         "0x12": 2303
       },
@@ -5070,7 +5069,8 @@
         "0x0163BB0C",
         "0x029734DC"
       ],
-      "id": 155
+      "id": 155,
+      "new_description": "10% magic recovery from fire & earth damage"
     },
     {
       "name": "Light Orb",
@@ -5078,7 +5078,6 @@
       "offset_decimal": 16349940,
       "category": "Jewels",
       "description": "Orb of light magic.(Activates Shining)",
-      "faq_description": "Orb of light magic. (Activates Shining)",
       "stats": {
         "0x12": 4351
       },
@@ -5096,7 +5095,8 @@
         "0x02591C44",
         "0x0297555C"
       ],
-      "id": 156
+      "id": 156,
+      "new_description": "Orb of light magic.(Activates Shining)"
     },
     {
       "name": "Ice Sword",
@@ -5104,7 +5104,6 @@
       "offset_decimal": 16351860,
       "category": "Swords (warrior)",
       "description": "",
-      "faq_description": "",
       "stats": {
         "0x12": 257,
         "0x14": 37888,
@@ -5133,7 +5132,8 @@
         "0x02664434",
         "0x02975CDC"
       ],
-      "id": 157
+      "id": 157,
+      "new_description": ""
     },
     {
       "name": "Mistortain",
@@ -5141,7 +5141,6 @@
       "offset_decimal": 16354420,
       "category": "Swords (warrior)",
       "description": "A demonic sword which killed the god of light.",
-      "faq_description": "A demonic sword which killed the god of light.",
       "stats": {
         "0x12": 257,
         "0x14": 37888,
@@ -5169,7 +5168,8 @@
       "all_offsets": [
         "0x00F98C74"
       ],
-      "id": 158
+      "id": 158,
+      "new_description": "Critical attack ratio + 5%"
     },
     {
       "name": "Baphomet",
@@ -5177,7 +5177,6 @@
       "offset_decimal": 16355060,
       "category": "Sorcerer’s Wand",
       "description": "This sword increases the user's strength.",
-      "faq_description": "This sword increases its user’s strength.",
       "stats": {
         "0x12": 264,
         "0x14": 37888,
@@ -5208,7 +5207,8 @@
         "0x00F98EF4",
         "0x00F996F4"
       ],
-      "id": 159
+      "id": 159,
+      "new_description": "Wave attack | STR+20, INT+40, WIL+30, AGL+15, CON+25, POW+35, LUK+1, MAT+20, MDEF+20"
     },
     {
       "name": "Fabnihl",
@@ -5216,7 +5216,6 @@
       "offset_decimal": 16355700,
       "category": "Knives (rogue)",
       "description": "",
-      "faq_description": "Made of the tooth of Fabnihl, it can turn foes to",
       "stats": {
         "0x12": 260,
         "0x14": 37888,
@@ -5244,7 +5243,8 @@
       "all_offsets": [
         "0x00F99174"
       ],
-      "id": 160
+      "id": 160,
+      "new_description": "Sometimes petrify / 16 MP (8% probabilty)"
     },
     {
       "name": "Gladius",
@@ -5252,7 +5252,6 @@
       "offset_decimal": 16977196,
       "category": "Knives (rogue)",
       "description": "A dagger like those used by the ancients.",
-      "faq_description": "A dagger like those used by the ancients.",
       "stats": {
         "0x12": 260,
         "0x30": 9
@@ -5277,7 +5276,8 @@
         "0x01030D2C",
         "0x010A0D3C"
       ],
-      "id": 161
+      "id": 161,
+      "new_description": "A dagger like those used by the ancients."
     },
     {
       "name": "Fine Leather",
@@ -5285,7 +5285,6 @@
       "offset_decimal": 16978476,
       "category": "Light Armors (hunter, elf & rogue)",
       "description": "First class leather clothing.",
-      "faq_description": "First class leather clothing.",
       "stats": {
         "0x12": 629,
         "0x32": 14,
@@ -5313,7 +5312,8 @@
         "0x011072D8",
         "0x01176550"
       ],
-      "id": 162
+      "id": 162,
+      "new_description": "First class leather clothing."
     },
     {
       "name": "Daak",
@@ -5321,7 +5321,6 @@
       "offset_decimal": 16981036,
       "category": "Knives (rogue)",
       "description": "Favored dagger of the barbarian Normans.",
-      "faq_description": "Favored dagger of the barbarian Normans.",
       "stats": {
         "0x12": 260,
         "0x30": 14
@@ -5348,7 +5347,8 @@
         "0x011090D8",
         "0x0152D08C"
       ],
-      "id": 163
+      "id": 163,
+      "new_description": "Favored dagger of the barbarian Normans."
     },
     {
       "name": "Broad Sword",
@@ -5356,7 +5356,6 @@
       "offset_decimal": 17439164,
       "category": "Swords (warrior)",
       "description": "A heavy sword with a wide blade.",
-      "faq_description": "A heavy sword with a wide blade.",
       "stats": {
         "0x12": 257,
         "0x30": 12
@@ -5387,7 +5386,8 @@
         "0x01A3A240",
         "0x01A8DDD8"
       ],
-      "id": 164
+      "id": 164,
+      "new_description": "A heavy sword with a wide blade."
     },
     {
       "name": "Knight Shield",
@@ -5395,7 +5395,6 @@
       "offset_decimal": 17441084,
       "category": "Shields (warrior & dwarf)",
       "description": "A finely adorned shield for knights.",
-      "faq_description": "A finely adorned shield for knights.",
       "stats": {
         "0x12": 1089,
         "0x32": 10,
@@ -5426,7 +5425,8 @@
         "0x01A3A4C0",
         "0x01A8E058"
       ],
-      "id": 165
+      "id": 165,
+      "new_description": "A finely adorned shield for knights."
     },
     {
       "name": "Hand Axe",
@@ -5434,7 +5434,6 @@
       "offset_decimal": 17856472,
       "category": "Axes (dwarf)",
       "description": "A normal axe.",
-      "faq_description": "A normal axe.",
       "stats": {
         "0x12": 320,
         "0x30": 13
@@ -5459,7 +5458,8 @@
         "0x011077D8",
         "0x0152C90C"
       ],
-      "id": 166
+      "id": 166,
+      "new_description": "A normal axe."
     },
     {
       "name": "Leather Gloves",
@@ -5467,7 +5467,6 @@
       "offset_decimal": 17857112,
       "category": "Clothings",
       "description": "Gloves made of leather.",
-      "faq_description": "Gloves made of leather.",
       "stats": {
         "0x12": 2303,
         "0x32": 2
@@ -5484,7 +5483,8 @@
         "0x02802368",
         "0x029F14E8"
       ],
-      "id": 167
+      "id": 167,
+      "new_description": "Gloves made of leather."
     },
     {
       "name": "Fine Shield",
@@ -5492,7 +5492,6 @@
       "offset_decimal": 17859032,
       "category": "Light Armors (hunter, elf & rogue)",
       "description": "Excellent shield made of the finest materials.",
-      "faq_description": "Excellent shield made of the finest materials.",
       "stats": {
         "0x12": 564,
         "0x32": 18
@@ -5520,7 +5519,8 @@
         "0x016C18F8",
         "0x02722568"
       ],
-      "id": 168
+      "id": 168,
+      "new_description": "Excellent shield made of the finest materials."
     },
     {
       "name": "Fine Oil",
@@ -5528,7 +5528,6 @@
       "offset_decimal": 17860312,
       "category": "Items",
       "description": "High quality oil.(Temp. increase of fire attack)",
-      "faq_description": "High quality oil. (Temp. increase of fire attack)",
       "stats": {
         "0x12": 4351
       },
@@ -5547,7 +5546,8 @@
         "0x0297375C",
         "0x02A8E754"
       ],
-      "id": 169
+      "id": 169,
+      "new_description": "High quality oil.(Temp. increase of fire attack)"
     },
     {
       "name": "Trueheart",
@@ -5555,7 +5555,6 @@
       "offset_decimal": 18311120,
       "category": "Bows (hunter)",
       "description": "A first class bow of great workmanship.",
-      "faq_description": "A first class bow of great workmanship.",
       "stats": {
         "0x12": 272,
         "0x30": 15
@@ -5585,7 +5584,8 @@
         "0x016C0EF8",
         "0x02721DE8"
       ],
-      "id": 170
+      "id": 170,
+      "new_description": "Critical attack ratio + 3%"
     },
     {
       "name": "Warhammer",
@@ -5593,7 +5593,6 @@
       "offset_decimal": 18311760,
       "category": "Priest’s Wand/Hammer",
       "description": "Steel hammer, easy to lift and strikes heavy blows.",
-      "faq_description": "Steel hammer, easy to lift and strikes heavy blows.",
       "stats": {
         "0x12": 258,
         "0x30": 19
@@ -5618,7 +5617,8 @@
         "0x01176A50",
         "0x012562D8"
       ],
-      "id": 171
+      "id": 171,
+      "new_description": "Steel hammer, easy to lift and strikes heavy blows."
     },
     {
       "name": "Iron Wand",
@@ -5626,7 +5626,6 @@
       "offset_decimal": 18312400,
       "category": "Sorcerer’s Wand",
       "description": "",
-      "faq_description": "",
       "stats": {
         "0x12": 264,
         "0x30": 12
@@ -5650,7 +5649,8 @@
       "all_offsets": [
         "0x01176CD0"
       ],
-      "id": 172
+      "id": 172,
+      "new_description": "MAT+1"
     },
     {
       "name": "Mithril Rapier",
@@ -5658,7 +5658,6 @@
       "offset_decimal": 18319440,
       "category": "Rapiers (elf)",
       "description": "A magical rapier formed of mithril silver.",
-      "faq_description": "A magical rapier formed of mithril silver.",
       "stats": {
         "0x12": 288,
         "0x14": 1024,
@@ -5689,7 +5688,8 @@
         "0x016C3478",
         "0x01F20474"
       ],
-      "id": 173
+      "id": 173,
+      "new_description": "A magical rapier formed of mithril silver."
     },
     {
       "name": "Long Rapier",
@@ -5697,7 +5697,6 @@
       "offset_decimal": 18764532,
       "category": "Rapiers (elf)",
       "description": "",
-      "faq_description": "Long rapier for stabbing foes from greater distance.",
       "stats": {
         "0x12": 288,
         "0x30": 24
@@ -5722,7 +5721,8 @@
         "0x011E52F4",
         "0x0152BC8C"
       ],
-      "id": 174
+      "id": 174,
+      "new_description": ""
     },
     {
       "name": "Silver Anklet",
@@ -5730,7 +5730,6 @@
       "offset_decimal": 18765812,
       "category": "Clothings",
       "description": "A beautifully decorated silver anklet.",
-      "faq_description": "",
       "stats": {
         "0x12": 2303,
         "0x32": 4
@@ -5760,7 +5759,8 @@
         "0x0297415C",
         "0x02A8F3D4"
       ],
-      "id": 175
+      "id": 175,
+      "new_description": "INT+8, WIL+8, MDEF+4"
     },
     {
       "name": "Hunting Cap",
@@ -5768,7 +5768,6 @@
       "offset_decimal": 18766452,
       "category": "Clothings",
       "description": "Favored hat of the fashion-conscious woodsman.",
-      "faq_description": "Favored hat of the fashion-conscious woodsman.",
       "stats": {
         "0x12": 2064
       },
@@ -5793,7 +5792,8 @@
       "all_offsets": [
         "0x011E5A74"
       ],
-      "id": 176
+      "id": 176,
+      "new_description": "Immune to Confusion & critical attack ratio + 1% | WIL+8, AGL+8"
     },
     {
       "name": "Crossbow",
@@ -5801,7 +5801,6 @@
       "offset_decimal": 18768372,
       "category": "Bows (hunter)",
       "description": "A dangerous mechanized bow which is easy to use.",
-      "faq_description": "",
       "stats": {
         "0x12": 272,
         "0x30": 22
@@ -5826,7 +5825,8 @@
         "0x011E61F4",
         "0x01256A58"
       ],
-      "id": 177
+      "id": 177,
+      "new_description": "A dangerous mechanized bow which is easy to use."
     },
     {
       "name": "Quick Boots",
@@ -5834,7 +5834,6 @@
       "offset_decimal": 18770292,
       "category": "Clothings",
       "description": "Allows the wearer quick and agile movements.",
-      "faq_description": "Allows the wearer quick and agile movements.",
       "stats": {
         "0x12": 2165,
         "0x32": 8
@@ -5866,7 +5865,8 @@
         "0x01D28980",
         "0x01D93648"
       ],
-      "id": 178
+      "id": 178,
+      "new_description": "Wind elemental damage decreases | AGL+32"
     },
     {
       "name": "Spring Cape",
@@ -5874,7 +5874,6 @@
       "offset_decimal": 18770932,
       "category": "Clothings",
       "description": "One of the four capes created by a great master.",
-      "faq_description": "One of the four capes created by a great master.",
       "stats": {
         "0x12": 2303,
         "0x32": 6
@@ -5902,7 +5901,8 @@
         "0x0179D51C",
         "0x020FA47C"
       ],
-      "id": 179
+      "id": 179,
+      "new_description": "Immune to Poison"
     },
     {
       "name": "Jewel Box",
@@ -5910,7 +5910,6 @@
       "offset_decimal": 18771572,
       "category": "Items",
       "description": "Holder gains fame.(? ? ?)",
-      "faq_description": "Holder gains fame. (? ? ?)",
       "stats": {
         "0x12": 4351
       },
@@ -5928,7 +5927,8 @@
         "0x021AD808",
         "0x02590AC4"
       ],
-      "id": 180
+      "id": 180,
+      "new_description": "Holder gains fame.(? ? ?)"
     },
     {
       "name": "Miracle Powder",
@@ -5936,7 +5936,6 @@
       "offset_decimal": 18773492,
       "category": "Items",
       "description": "Resurrects the dead.(Resurrect 33% dest.)",
-      "faq_description": "Ressurects the dead. (Ressurect 33% dest.)",
       "stats": {
         "0x12": 4351
       },
@@ -5958,7 +5957,8 @@
         "0x01D92C48",
         "0x02234348"
       ],
-      "id": 181
+      "id": 181,
+      "new_description": "Resurrects the dead.(Resurrect 33% dest.)"
     },
     {
       "name": "Bastard Sword",
@@ -5966,7 +5966,6 @@
       "offset_decimal": 19226712,
       "category": "Swords (warrior)",
       "description": "A Long sword with a wide blade.",
-      "faq_description": "A Long sword with a wide blade.",
       "stats": {
         "0x12": 257,
         "0x30": 25
@@ -5997,7 +5996,8 @@
         "0x01A8ED58",
         "0x01B4D3E0"
       ],
-      "id": 182
+      "id": 182,
+      "new_description": "A Long sword with a wide blade."
     },
     {
       "name": "Pure Wand",
@@ -6005,7 +6005,6 @@
       "offset_decimal": 19228632,
       "category": "Sorcerer’s Wand",
       "description": "Created of the best materials by the best smiths.",
-      "faq_description": "Created of the best materials by the best smiths.",
       "stats": {
         "0x12": 264,
         "0x30": 16
@@ -6033,7 +6032,8 @@
         "0x016C1B78",
         "0x027227E8"
       ],
-      "id": 183
+      "id": 183,
+      "new_description": "MAT+3"
     },
     {
       "name": "Crystal Rod",
@@ -6041,7 +6041,6 @@
       "offset_decimal": 19231192,
       "category": "Rods (fairy)",
       "description": "Quartz rod which protects the soul of its wielder.",
-      "faq_description": "Quartz rod which protects the soul of its wielder.",
       "stats": {
         "0x12": 384,
         "0x30": 20
@@ -6065,7 +6064,8 @@
       "all_offsets": [
         "0x012571D8"
       ],
-      "id": 184
+      "id": 184,
+      "new_description": "MDEF+5"
     },
     {
       "name": "Fine Shoes",
@@ -6073,7 +6073,6 @@
       "offset_decimal": 19233112,
       "category": "Clothings",
       "description": "Comfortable shoes made of the finest materials.",
-      "faq_description": "",
       "stats": {
         "0x12": 2186,
         "0x32": 2
@@ -6097,7 +6096,8 @@
       "all_offsets": [
         "0x01257958"
       ],
-      "id": 185
+      "id": 185,
+      "new_description": "Comfortable shoes made of the finest materials."
     },
     {
       "name": "Silver Dagger",
@@ -6105,7 +6105,6 @@
       "offset_decimal": 19775608,
       "category": "Knives (rogue)",
       "description": "A charmed silver dagger.",
-      "faq_description": "A charmed silver dagger.",
       "stats": {
         "0x12": 260,
         "0x14": 1024,
@@ -6134,7 +6133,8 @@
         "0x02010CDC",
         "0x020772D0"
       ],
-      "id": 186
+      "id": 186,
+      "new_description": "A charmed silver dagger."
     },
     {
       "name": "Viking Axe",
@@ -6142,7 +6142,6 @@
       "offset_decimal": 19776248,
       "category": "Axes (dwarf)",
       "description": "An axe favored by northern seafarers.",
-      "faq_description": "An axe favored favored by northern seafearers.",
       "stats": {
         "0x12": 320,
         "0x30": 48
@@ -6166,7 +6165,8 @@
       "all_offsets": [
         "0x012DC2F8"
       ],
-      "id": 187
+      "id": 187,
+      "new_description": "STR+14"
     },
     {
       "name": "Rune Robe",
@@ -6174,7 +6174,6 @@
       "offset_decimal": 19776888,
       "category": "Robes (priest,sorcerer,& fairy)",
       "description": "Robe covered with sigils which amplify magic.",
-      "faq_description": "",
       "stats": {
         "0x12": 650,
         "0x14": 1024,
@@ -6204,7 +6203,8 @@
         "0x0187247C",
         "0x02792088"
       ],
-      "id": 188
+      "id": 188,
+      "new_description": "POW+20, MAT+28, MDEF+12"
     },
     {
       "name": "Silver Shield",
@@ -6212,7 +6212,6 @@
       "offset_decimal": 19777528,
       "category": "Light Armors (hunter, elf & rogue)",
       "description": "",
-      "faq_description": "",
       "stats": {
         "0x12": 564,
         "0x32": 48,
@@ -6240,7 +6239,8 @@
         "0x0200DADC",
         "0x024380DC"
       ],
-      "id": 189
+      "id": 189,
+      "new_description": "MDEF+21"
     },
     {
       "name": "Dark Necklace",
@@ -6248,7 +6248,6 @@
       "offset_decimal": 19782648,
       "category": "Clothings",
       "description": "Wearer is protected by the powers of the dark.",
-      "faq_description": "Wearer is protected by the powers of dark.",
       "stats": {
         "0x12": 2303
       },
@@ -6278,7 +6277,8 @@
         "0x02309CC4",
         "0x025D404C"
       ],
-      "id": 190
+      "id": 190,
+      "new_description": "POW+14"
     },
     {
       "name": "Earth Shield",
@@ -6286,7 +6286,6 @@
       "offset_decimal": 19783288,
       "category": "Shields (warrior & dwarf)",
       "description": "Magical shield enchanted by earth spirits.",
-      "faq_description": "Magical shield enchanted by earth spirits.",
       "stats": {
         "0x12": 1089,
         "0x32": 18,
@@ -6316,7 +6315,8 @@
         "0x025D47CC",
         "0x028A68F8"
       ],
-      "id": 191
+      "id": 191,
+      "new_description": "Reduce earth elemental attack | MDEF+12"
     },
     {
       "name": "Silver Rapier",
@@ -6324,7 +6324,6 @@
       "offset_decimal": 19783928,
       "category": "Rapiers (elf)",
       "description": "",
-      "faq_description": "Leaves a anti-demon rune in the flesh it strikes.",
       "stats": {
         "0x12": 288,
         "0x14": 1024,
@@ -6354,7 +6353,8 @@
         "0x0152C40C",
         "0x025D4A4C"
       ],
-      "id": 192
+      "id": 192,
+      "new_description": ""
     },
     {
       "name": "Light Necklace",
@@ -6362,7 +6362,6 @@
       "offset_decimal": 19793528,
       "category": "Clothings",
       "description": "Wearer is protected by the powers of light.",
-      "faq_description": "Wearer is protected by the powers of light.",
       "stats": {
         "0x12": 2303
       },
@@ -6375,7 +6374,8 @@
         "0x012E0E78",
         "0x013530D4"
       ],
-      "id": 193
+      "id": 193,
+      "new_description": "Wearer is protected by the powers of light."
     },
     {
       "name": "Blood Axe",
@@ -6383,7 +6383,6 @@
       "offset_decimal": 20692028,
       "category": "Axes (dwarf)",
       "description": "An extremely sharp axe.",
-      "faq_description": "An extremely sharp axe.",
       "stats": {
         "0x12": 320,
         "0x30": 67
@@ -6395,7 +6394,8 @@
       "all_offsets": [
         "0x013BBC3C"
       ],
-      "id": 194
+      "id": 194,
+      "new_description": "An extremely sharp axe."
     },
     {
       "name": "Gaia Wand",
@@ -6403,7 +6403,6 @@
       "offset_decimal": 21183128,
       "category": "Sorcerer’s Wand",
       "description": "Holds the magical powers of earth and the stars.",
-      "faq_description": "Holds the magical powers of earth and the stars.",
       "stats": {
         "0x12": 264,
         "0x14": 37888,
@@ -6432,7 +6431,8 @@
         "0x01433A98",
         "0x021AE988"
       ],
-      "id": 195
+      "id": 195,
+      "new_description": "Sometimes shoot Stone Bullet if hit by normal attack | MAT+9"
     },
     {
       "name": "Battle Axe",
@@ -6440,7 +6440,6 @@
       "offset_decimal": 21727304,
       "category": "Axes (dwarf)",
       "description": "",
-      "faq_description": "A heavy battle axe, the favored weapon of barbarians.",
       "stats": {
         "0x12": 320,
         "0x30": 20
@@ -6457,7 +6456,8 @@
         "0x01B4D160",
         "0x027218E8"
       ],
-      "id": 196
+      "id": 196,
+      "new_description": ""
     },
     {
       "name": "Bronze Armor",
@@ -6465,7 +6465,6 @@
       "offset_decimal": 22213516,
       "category": "Armors (warrior & dwarf)",
       "description": "Normal armor made of bronze.",
-      "faq_description": "Normal armor made of bronze.",
       "stats": {
         "0x12": 577,
         "0x32": 10,
@@ -6490,7 +6489,8 @@
       "all_offsets": [
         "0x0152F38C"
       ],
-      "id": 197
+      "id": 197,
+      "new_description": "Normal armor made of bronze."
     },
     {
       "name": "Power Symbol",
@@ -6498,7 +6498,6 @@
       "offset_decimal": 23315724,
       "category": "Clothings",
       "description": "Talisman that draws out one's hidden strengths.",
-      "faq_description": "Talisman that draws out one's hidden strengths.",
       "stats": {
         "0x12": 2303
       },
@@ -6523,7 +6522,8 @@
         "0x0172CEE0",
         "0x017A049C"
       ],
-      "id": 198
+      "id": 198,
+      "new_description": "STR+32, CON+15"
     },
     {
       "name": "Wand of Runes",
@@ -6531,7 +6531,6 @@
       "offset_decimal": 23322764,
       "category": "Sorcerer’s Wand",
       "description": "Has magical powers through the runes upon it.",
-      "faq_description": "Has magical powers through the runes upon.",
       "stats": {
         "0x12": 264,
         "0x14": 37888,
@@ -6557,7 +6556,8 @@
       "all_offsets": [
         "0x0163E08C"
       ],
-      "id": 199
+      "id": 199,
+      "new_description": "POW+30, MAT+15"
     },
     {
       "name": "Rune Amulet",
@@ -6565,7 +6565,6 @@
       "offset_decimal": 23324044,
       "category": "Clothings",
       "description": "Engraved with runes that enhance magic.",
-      "faq_description": "Engraved with runes that enhance magic.",
       "stats": {
         "0x12": 2303
       },
@@ -6590,7 +6589,8 @@
       "all_offsets": [
         "0x0163E58C"
       ],
-      "id": 200
+      "id": 200,
+      "new_description": "Wizard mag atk + 50% | POW+6, MAT+12"
     },
     {
       "name": "Rune Gloves",
@@ -6598,7 +6598,6 @@
       "offset_decimal": 23324684,
       "category": "Clothings",
       "description": "Amplifies the power of equipped weapons.",
-      "faq_description": "",
       "stats": {
         "0x12": 2303,
         "0x30": 12,
@@ -6626,7 +6625,8 @@
         "0x0163E80C",
         "0x01C3F004"
       ],
-      "id": 201
+      "id": 201,
+      "new_description": "Give the effect of 'Enchant Weapon' to equipped weapon"
     },
     {
       "name": "Rune Cape",
@@ -6634,7 +6634,6 @@
       "offset_decimal": 23325324,
       "category": "Clothings",
       "description": "A cape with runes that increase magical power.",
-      "faq_description": "A cape with runes that increase magical power.",
       "stats": {
         "0x12": 2303,
         "0x32": 3
@@ -6659,7 +6658,8 @@
         "0x0163EA8C",
         "0x0179D29C"
       ],
-      "id": 202
+      "id": 202,
+      "new_description": "A cape with runes that increase magical power."
     },
     {
       "name": "Reflector Ring",
@@ -6667,7 +6667,6 @@
       "offset_decimal": 23327244,
       "category": "Clothings",
       "description": "A ring that protects the wearer from magic.",
-      "faq_description": "A ring that protects the wearer from magic.",
       "stats": {
         "0x12": 2303
       },
@@ -6694,7 +6693,8 @@
         "0x0179EB9C",
         "0x0243605C"
       ],
-      "id": 203
+      "id": 203,
+      "new_description": "Sometimes block magic(healing,support & attack magic)"
     },
     {
       "name": "Elven Boots",
@@ -6702,7 +6702,6 @@
       "offset_decimal": 23328524,
       "category": "Clothings",
       "description": "The wearer of these boots becomes tireless.",
-      "faq_description": "The wearer of these boots becomes tireless.",
       "stats": {
         "0x12": 2080,
         "0x32": 12
@@ -6729,7 +6728,8 @@
         "0x0163F70C",
         "0x017FFD70"
       ],
-      "id": 204
+      "id": 204,
+      "new_description": "Regenerate HP by 1"
     },
     {
       "name": "Elven Hat",
@@ -6737,7 +6737,6 @@
       "offset_decimal": 23329164,
       "category": "Clothings",
       "description": "Elves like to wear these enchanting hats.",
-      "faq_description": "Elves like to wear these enchanting hats.",
       "stats": {
         "0x12": 2080
       },
@@ -6763,7 +6762,8 @@
         "0x0163F98C",
         "0x017FFFF0"
       ],
-      "id": 205
+      "id": 205,
+      "new_description": "Immune to Poison & Paralysis | POW+8, LUK+8"
     },
     {
       "name": "Elven Shield",
@@ -6771,7 +6771,6 @@
       "offset_decimal": 23330444,
       "category": "Light Armors (hunter, elf & rogue)",
       "description": "A shield enchanted by the elves.",
-      "faq_description": "A shield enchanted by the elves.",
       "stats": {
         "0x12": 564,
         "0x14": 1024,
@@ -6798,7 +6797,8 @@
         "0x0163FE8C",
         "0x018004F0"
       ],
-      "id": 206
+      "id": 206,
+      "new_description": "MDEF+41"
     },
     {
       "name": "Elven Bow",
@@ -6806,7 +6806,6 @@
       "offset_decimal": 23331084,
       "category": "Bows (hunter)",
       "description": "A magical bow made for the king of the elves.",
-      "faq_description": "A magical bow made for the king of the elves.",
       "stats": {
         "0x12": 272,
         "0x14": 37888,
@@ -6835,7 +6834,8 @@
         "0x0164010C",
         "0x01800770"
       ],
-      "id": 207
+      "id": 207,
+      "new_description": "Critical attack ratio + 6%"
     },
     {
       "name": "Flame Shield",
@@ -6843,7 +6843,6 @@
       "offset_decimal": 24296800,
       "category": "Shields (warrior & dwarf)",
       "description": "Magical shield inhabited by fire spirits.",
-      "faq_description": "Magical shield inhabited by fire spirits.",
       "stats": {
         "0x12": 1089,
         "0x32": 18,
@@ -6871,7 +6870,8 @@
         "0x0172BD60",
         "0x02A8DFD4"
       ],
-      "id": 208
+      "id": 208,
+      "new_description": "Reduce fire elemental attack | MDEF+12"
     },
     {
       "name": "Wand of Evil",
@@ -6879,7 +6879,6 @@
       "offset_decimal": 24298720,
       "category": "Sorcerer’s Wand",
       "description": "A wand with the power to curse.",
-      "faq_description": "A wand with the power to curse.",
       "stats": {
         "0x12": 264,
         "0x30": 43
@@ -6903,7 +6902,8 @@
       "all_offsets": [
         "0x0172C4E0"
       ],
-      "id": 209
+      "id": 209,
+      "new_description": "POW+12, MAT+21"
     },
     {
       "name": "Flame Sword",
@@ -6911,7 +6911,6 @@
       "offset_decimal": 24299360,
       "category": "Swords (warrior)",
       "description": "",
-      "faq_description": "Sword from ancient times. Flames dance up the blade.",
       "stats": {
         "0x12": 257,
         "0x14": 37888,
@@ -6939,7 +6938,8 @@
         "0x0179FD1C",
         "0x01DFDFE0"
       ],
-      "id": 210
+      "id": 210,
+      "new_description": ""
     },
     {
       "name": "Black Armor",
@@ -6947,7 +6947,6 @@
       "offset_decimal": 24301920,
       "category": "Armors (warrior & dwarf)",
       "description": "The armor of the accursed black knight.",
-      "faq_description": "The armor of the accursed black knight.",
       "stats": {
         "0x12": 577,
         "0x14": 1024,
@@ -6967,7 +6966,8 @@
         "0x02794888",
         "0x02801468"
       ],
-      "id": 211
+      "id": 211,
+      "new_description": "Df + 60 / 10 MP"
     },
     {
       "name": "Answerer",
@@ -6975,7 +6975,6 @@
       "offset_decimal": 24302560,
       "category": "Swords (warrior)",
       "description": "A black sword, forged by the god of darkness.",
-      "faq_description": "A black sword, forged by the god of darkness.",
       "stats": {
         "0x12": 257,
         "0x14": 37888,
@@ -7004,7 +7003,8 @@
         "0x0172D3E0",
         "0x017A099C"
       ],
-      "id": 212
+      "id": 212,
+      "new_description": "At + 50 / 15 MP"
     },
     {
       "name": "White Ash",
@@ -7012,7 +7012,6 @@
       "offset_decimal": 24305760,
       "category": "Ashes",
       "description": "Supposedly from a saint's hand.(Increase MIN)",
-      "faq_description": "Supposedly from a saint’s hand. (Increase WIL)",
       "stats": {
         "0x12": 4351
       },
@@ -7031,7 +7030,8 @@
         "0x01A8BD58",
         "0x02792A88"
       ],
-      "id": 213
+      "id": 213,
+      "new_description": "Supposedly from a saint's hand.(Increase MIN)"
     },
     {
       "name": "Wind Rod",
@@ -7039,7 +7039,6 @@
       "offset_decimal": 24307680,
       "category": "Rods (fairy)",
       "description": "1 of the 4 given to the elven king by a dead king.",
-      "faq_description": "1 of the 4 given to the elven king by a dead king.",
       "stats": {
         "0x12": 384,
         "0x14": 37888,
@@ -7066,7 +7065,8 @@
         "0x0172E7E0",
         "0x0179F31C"
       ],
-      "id": 214
+      "id": 214,
+      "new_description": "1 of the 4 given to the elven king by a dead king."
     },
     {
       "name": "Windbolt",
@@ -7074,7 +7074,6 @@
       "offset_decimal": 24308320,
       "category": "Bows (hunter)",
       "description": "Magical bow inhabited by a wind fairy.",
-      "faq_description": "Magical bow inhabited by a wind fairy.",
       "stats": {
         "0x12": 272,
         "0x14": 37888,
@@ -7102,7 +7101,8 @@
         "0x0172F260",
         "0x0179F59C"
       ],
-      "id": 215
+      "id": 215,
+      "new_description": "Magical bow inhabited by a wind fairy."
     },
     {
       "name": "Thunder Orb",
@@ -7110,7 +7110,6 @@
       "offset_decimal": 24309600,
       "category": "Jewels",
       "description": "Orb of wind magic.(Activates Thunderbolt)",
-      "faq_description": "Orb of wind magic. (Activates Thunderbolt)",
       "stats": {
         "0x12": 4351
       },
@@ -7132,7 +7131,8 @@
         "0x02720768",
         "0x029F0868"
       ],
-      "id": 216
+      "id": 216,
+      "new_description": "Orb of wind magic.(Activates Thunderbolt)"
     },
     {
       "name": "Solitaire",
@@ -7140,7 +7140,6 @@
       "offset_decimal": 24758428,
       "category": "Rapiers (elf)",
       "description": "",
-      "faq_description": "It is said it devours the souls of those it strikes.",
       "stats": {
         "0x12": 288,
         "0x14": 37888,
@@ -7169,7 +7168,8 @@
         "0x0179C89C",
         "0x01C3F284"
       ],
-      "id": 217
+      "id": 217,
+      "new_description": "Drains MP from living enemies (decrease MP if undead)"
     },
     {
       "name": "Vampire Rod",
@@ -7177,7 +7177,6 @@
       "offset_decimal": 24759068,
       "category": "Rods (fairy)",
       "description": "A cursed rod which devours souls.",
-      "faq_description": "A cursed rod which devours souls.",
       "stats": {
         "0x12": 384,
         "0x14": 37888,
@@ -7205,7 +7204,8 @@
       "all_offsets": [
         "0x0179CB1C"
       ],
-      "id": 218
+      "id": 218,
+      "new_description": "Drains MP from living enemies (decrease MP if undead)"
     },
     {
       "name": "Mystical Veil",
@@ -7213,7 +7213,6 @@
       "offset_decimal": 24759708,
       "category": "Clothings",
       "description": "A veil which gives off a mysterious light.",
-      "faq_description": "",
       "stats": {
         "0x12": 2186
       },
@@ -7230,7 +7229,8 @@
         "0x029071E4",
         "0x029F37E8"
       ],
-      "id": 219
+      "id": 219,
+      "new_description": "Fairy mag atk + 50%"
     },
     {
       "name": "Moon Crown",
@@ -7238,7 +7238,6 @@
       "offset_decimal": 24760348,
       "category": "Clothings",
       "description": "Crown of an acient king who wielded great power.",
-      "faq_description": "Crown of an acient king who wielded great power.",
       "stats": {
         "0x12": 2303
       },
@@ -7268,7 +7267,8 @@
         "0x02907BE4",
         "0x029F41E8"
       ],
-      "id": 220
+      "id": 220,
+      "new_description": "MP consumption - 25%"
     },
     {
       "name": "Summer Cape",
@@ -7276,7 +7276,6 @@
       "offset_decimal": 24762268,
       "category": "Clothings",
       "description": "One of the four capes created by a great master.",
-      "faq_description": "One of the four capes created by a great master.",
       "stats": {
         "0x12": 2303,
         "0x32": 6
@@ -7303,7 +7302,8 @@
         "0x0179D79C",
         "0x020FA6FC"
       ],
-      "id": 221
+      "id": 221,
+      "new_description": "Immune to Paralysis"
     },
     {
       "name": "Autumn Cape",
@@ -7311,7 +7311,6 @@
       "offset_decimal": 24762908,
       "category": "Clothings",
       "description": "One of the four capes created by a great master.",
-      "faq_description": "One of the four capes created by a great master.",
       "stats": {
         "0x12": 2303,
         "0x32": 6
@@ -7338,7 +7337,8 @@
         "0x0179DA1C",
         "0x020FA97C"
       ],
-      "id": 222
+      "id": 222,
+      "new_description": "Immune to Magic-Loss"
     },
     {
       "name": "Winter Cape",
@@ -7346,7 +7346,6 @@
       "offset_decimal": 24763548,
       "category": "Clothings",
       "description": "One of the four capes created by a great master.",
-      "faq_description": "One of the four capes created by a great master.",
       "stats": {
         "0x12": 2303,
         "0x32": 6
@@ -7374,7 +7373,8 @@
         "0x020FABFC",
         "0x02519AAC"
       ],
-      "id": 223
+      "id": 223,
+      "new_description": "Immune to Confusion"
     },
     {
       "name": "Claymore",
@@ -7382,7 +7382,6 @@
       "offset_decimal": 24776348,
       "category": "Swords (warrior)",
       "description": "The barbarian Normans forge these very sharp swords.",
-      "faq_description": "The barbarian Normans forge these very sharp swords.",
       "stats": {
         "0x12": 257,
         "0x30": 30
@@ -7414,7 +7413,8 @@
         "0x01FBA34C",
         "0x0200FDDC"
       ],
-      "id": 224
+      "id": 224,
+      "new_description": "The barbarian Normans forge these very sharp swords."
     },
     {
       "name": "Sword of Bane",
@@ -7422,7 +7422,6 @@
       "offset_decimal": 24777628,
       "category": "Swords (warrior)",
       "description": "Its last owner died a terrible death.",
-      "faq_description": "Its last owner died a terrible death.",
       "stats": {
         "0x12": 257,
         "0x14": 37888,
@@ -7456,7 +7455,8 @@
         "0x01D26400",
         "0x01D91848"
       ],
-      "id": 225
+      "id": 225,
+      "new_description": "At + 60 / 6 HP, if HP below 7, it curses"
     },
     {
       "name": "Damascus Blade",
@@ -7464,7 +7464,6 @@
       "offset_decimal": 24778268,
       "category": "Swords (warrior)",
       "description": "A great sword. Really sharp.",
-      "faq_description": "",
       "stats": {
         "0x12": 257,
         "0x30": 70
@@ -7490,7 +7489,8 @@
         "0x018717FC",
         "0x018D1C44"
       ],
-      "id": 226
+      "id": 226,
+      "new_description": "A great sword. Really sharp."
     },
     {
       "name": "Guardian Sword",
@@ -7498,7 +7498,6 @@
       "offset_decimal": 24778908,
       "category": "Swords (warrior)",
       "description": "",
-      "faq_description": "Sword of the arcanes, strengthens magical power.",
       "stats": {
         "0x12": 257,
         "0x14": 37888,
@@ -7528,7 +7527,8 @@
         "0x01871A7C",
         "0x0243795C"
       ],
-      "id": 227
+      "id": 227,
+      "new_description": "POW+20, MDEF+20"
     },
     {
       "name": "Silver Armor",
@@ -7536,7 +7536,6 @@
       "offset_decimal": 24780188,
       "category": "Armors (warrior & dwarf)",
       "description": "Beautiful armor made of silver.",
-      "faq_description": "Beautiful armor made of silver.",
       "stats": {
         "0x12": 577,
         "0x32": 42,
@@ -7564,7 +7563,8 @@
         "0x01871F7C",
         "0x02074850"
       ],
-      "id": 228
+      "id": 228,
+      "new_description": "MDEF+12"
     },
     {
       "name": "Terror Card",
@@ -7572,7 +7572,6 @@
       "offset_decimal": 25158768,
       "category": "Items",
       "description": "Frightening cards of cursing.(Confuses Foes)",
-      "faq_description": "Frightening cards of cursing. (Confuses Foes)",
       "stats": {
         "0x12": 4351
       },
@@ -7587,7 +7586,8 @@
         "0x02853F64",
         "0x02854764"
       ],
-      "id": 229
+      "id": 229,
+      "new_description": "Frightening cards of cursing.(Confuses Foes)"
     },
     {
       "name": "Tarot Card",
@@ -7595,7 +7595,6 @@
       "offset_decimal": 25159408,
       "category": "Items",
       "description": "Magical Tarot cards.(? ? ?)",
-      "faq_description": "Magical Tarot cards. (? ? ?)",
       "stats": {
         "0x12": 4351
       },
@@ -7609,7 +7608,8 @@
         "0x017FE6F0",
         "0x021AD308"
       ],
-      "id": 230
+      "id": 230,
+      "new_description": "Magical Tarot cards.(? ? ?)"
     },
     {
       "name": "Blood Dagger",
@@ -7617,7 +7617,6 @@
       "offset_decimal": 25160688,
       "category": "Knives (rogue)",
       "description": "A dagger stained red by the blood of its victims.",
-      "faq_description": "A dagger stained red by the blood of its victims.",
       "stats": {
         "0x12": 260,
         "0x14": 37888,
@@ -7647,7 +7646,8 @@
         "0x02074FD0",
         "0x021AE488"
       ],
-      "id": 231
+      "id": 231,
+      "new_description": "Drains HP from living enemies (decrease HP if undead)"
     },
     {
       "name": "Green Ash",
@@ -7655,7 +7655,6 @@
       "offset_decimal": 25169648,
       "category": "Ashes",
       "description": "Supposedly from a saint's hand.(Increase CON)",
-      "faq_description": "Supposedly from a saint’s hand. (Increase CON)",
       "stats": {
         "0x12": 4351
       },
@@ -7676,7 +7675,8 @@
         "0x02974DDC",
         "0x029F2DE8"
       ],
-      "id": 232
+      "id": 232,
+      "new_description": "Supposedly from a saint's hand.(Increase CON)"
     },
     {
       "name": "Silver Helmet",
@@ -7684,7 +7684,6 @@
       "offset_decimal": 25619196,
       "category": "Clothings",
       "description": "A beautifully designed silver helmet.",
-      "faq_description": "A beautifully designed silver helmet.",
       "stats": {
         "0x12": 2113,
         "0x32": 15
@@ -7710,7 +7709,8 @@
       "all_offsets": [
         "0x0186EAFC"
       ],
-      "id": 233
+      "id": 233,
+      "new_description": "Immune to Paralysis"
     },
     {
       "name": "Renugeton",
@@ -7718,7 +7718,6 @@
       "offset_decimal": 25619836,
       "category": "Clothings",
       "description": "Magical book containing knowledge about demons.",
-      "faq_description": "Magical book containing knowledge about demons.",
       "stats": {
         "0x12": 2056
       },
@@ -7741,7 +7740,8 @@
       "all_offsets": [
         "0x0186ED7C"
       ],
-      "id": 234
+      "id": 234,
+      "new_description": "INT+20, MAT+16"
     },
     {
       "name": "Rod of Ishtar",
@@ -7749,7 +7749,6 @@
       "offset_decimal": 25623036,
       "category": "Rods (fairy)",
       "description": "A rod created by the goddess Ishtar.",
-      "faq_description": "A rod created by the goddess Ishtar.",
       "stats": {
         "0x12": 384,
         "0x14": 37888,
@@ -7779,7 +7778,8 @@
       "all_offsets": [
         "0x0186F9FC"
       ],
-      "id": 235
+      "id": 235,
+      "new_description": "Undead enemies, At + 40 | MAT+15, MDEF+13"
     },
     {
       "name": "Evil Necklace",
@@ -7787,7 +7787,6 @@
       "offset_decimal": 25624316,
       "category": "Clothings",
       "description": "Engraved devil's prayer gives unholy power.",
-      "faq_description": "Engraved devil’s prayer gives unholy power.",
       "stats": {
         "0x12": 2303
       },
@@ -7819,7 +7818,8 @@
         "0x026A1CD8",
         "0x02795008"
       ],
-      "id": 236
+      "id": 236,
+      "new_description": "LUK+14"
     },
     {
       "name": "Blue Ash",
@@ -7827,7 +7827,6 @@
       "offset_decimal": 25625596,
       "category": "Ashes",
       "description": "Supposedly from a saint's hand.(Increase INT)",
-      "faq_description": "Supposedly from a saint’s hand. (Increase INT)",
       "stats": {
         "0x12": 4351
       },
@@ -7846,7 +7845,8 @@
         "0x01D26E00",
         "0x02792D08"
       ],
-      "id": 237
+      "id": 237,
+      "new_description": "Supposedly from a saint's hand.(Increase INT)"
     },
     {
       "name": "Moon Wand",
@@ -7854,7 +7854,6 @@
       "offset_decimal": 25626876,
       "category": "Sorcerer’s Wand",
       "description": "Wand imbued with the power of the moon.",
-      "faq_description": "Wand imbued with the power of the moon.",
       "stats": {
         "0x12": 264,
         "0x14": 37888,
@@ -7880,7 +7879,8 @@
       "all_offsets": [
         "0x018708FC"
       ],
-      "id": 238
+      "id": 238,
+      "new_description": "MAT+8"
     },
     {
       "name": "Bolt of Larie",
@@ -7888,7 +7888,6 @@
       "offset_decimal": 26020548,
       "category": "Bows (hunter)",
       "description": "A cursed arrow made by the demon Larie.",
-      "faq_description": "A cursed arrow made by the demon Larie.",
       "stats": {
         "0x12": 272,
         "0x14": 37888,
@@ -7916,7 +7915,8 @@
       "all_offsets": [
         "0x018D0AC4"
       ],
-      "id": 239
+      "id": 239,
+      "new_description": "Sometimes petrify / 12 MP (15% probability)"
     },
     {
       "name": "Wand of Apollo",
@@ -7924,7 +7924,6 @@
       "offset_decimal": 26021188,
       "category": "Sorcerer’s Wand",
       "description": "A wand that can destroy 100,000 things at once.",
-      "faq_description": "A wand that can destroy 100,000 things at once.",
       "stats": {
         "0x12": 264,
         "0x14": 37888,
@@ -7940,7 +7939,8 @@
       "all_offsets": [
         "0x018D0D44"
       ],
-      "id": 240
+      "id": 240,
+      "new_description": "A wand that can destroy 100,000 things at once."
     },
     {
       "name": "Angel Rod",
@@ -7948,7 +7948,6 @@
       "offset_decimal": 26021828,
       "category": "Rods (fairy)",
       "description": "A rod which can purify the possessed.",
-      "faq_description": "A rod which can purify the possessed.",
       "stats": {
         "0x12": 384,
         "0x14": 37888,
@@ -7976,7 +7975,8 @@
       "all_offsets": [
         "0x018D0FC4"
       ],
-      "id": 241
+      "id": 241,
+      "new_description": "Demon enemies, At + 40"
     },
     {
       "name": "Philos Ring",
@@ -7984,7 +7984,6 @@
       "offset_decimal": 26022468,
       "category": "Clothings",
       "description": "Said to have been created by the 12 Wisemen.",
-      "faq_description": "Said to have been created by the 12 Wisemen.",
       "stats": {
         "0x12": 2303
       },
@@ -8011,7 +8010,8 @@
         "0x020FA1FC",
         "0x028537E4"
       ],
-      "id": 242
+      "id": 242,
+      "new_description": "Gain MP when you take damage | INT+40, POW+40"
     },
     {
       "name": "Bahil",
@@ -8019,7 +8019,6 @@
       "offset_decimal": 26023108,
       "category": "Clothings",
       "description": "A spellbook on purification techniques.",
-      "faq_description": "A spellbook on purification techniques.",
       "stats": {
         "0x12": 2303
       },
@@ -8042,7 +8041,8 @@
       "all_offsets": [
         "0x018D14C4"
       ],
-      "id": 243
+      "id": 243,
+      "new_description": "INT+80, POW+40, MAT+30"
     },
     {
       "name": "Holy Armor",
@@ -8050,7 +8050,6 @@
       "offset_decimal": 26025668,
       "category": "Armors (warrior & dwarf)",
       "description": "It has a holy aura. Protects against the possessed.",
-      "faq_description": "It has a holy aura. Protects against the possessed.",
       "stats": {
         "0x12": 577,
         "0x14": 1024,
@@ -8079,7 +8078,8 @@
         "0x018D1EC4",
         "0x01C9AF98"
       ],
-      "id": 244
+      "id": 244,
+      "new_description": "Evil elemental damage decreases | MDEF+88"
     },
     {
       "name": "Revatin",
@@ -8087,7 +8087,6 @@
       "offset_decimal": 26026308,
       "category": "Swords (warrior)",
       "description": "",
-      "faq_description": "Surrounded by a blue light. It can even wound the",
       "stats": {
         "0x12": 257,
         "0x14": 37888,
@@ -8114,7 +8113,8 @@
         "0x018D2144",
         "0x02B3F7A0"
       ],
-      "id": 245
+      "id": 245,
+      "new_description": ""
     },
     {
       "name": "Holy Gloves",
@@ -8122,7 +8122,6 @@
       "offset_decimal": 26864332,
       "category": "Clothings",
       "description": "Gloves which bestow the wearer with holy might.",
-      "faq_description": "Gloves which bestow the wearer with holy might.",
       "stats": {
         "0x12": 2303,
         "0x30": 20,
@@ -8148,7 +8147,8 @@
       "all_offsets": [
         "0x0199EACC"
       ],
-      "id": 246
+      "id": 246,
+      "new_description": "Gloves which bestow the wearer with holy might."
     },
     {
       "name": "Charmed Wand",
@@ -8156,7 +8156,6 @@
       "offset_decimal": 26865612,
       "category": "Sorcerer’s Wand",
       "description": "This wand enhances its user's magical power.",
-      "faq_description": "This wand enhances its user’s magical power.",
       "stats": {
         "0x12": 264,
         "0x14": 37888,
@@ -8184,7 +8183,8 @@
       "all_offsets": [
         "0x0199EFCC"
       ],
-      "id": 247
+      "id": 247,
+      "new_description": "Mat + 30 / 3 MP | POW+64, MAT+30, MDEF+18"
     },
     {
       "name": "Fine Scarf",
@@ -8192,7 +8192,6 @@
       "offset_decimal": 26870732,
       "category": "Clothings",
       "description": "Beautiful scarf made from the finest materials.",
-      "faq_description": "",
       "stats": {
         "0x12": 2303,
         "0x32": 6
@@ -8221,7 +8220,8 @@
         "0x01E9B4C8",
         "0x01F21874"
       ],
-      "id": 248
+      "id": 248,
+      "new_description": "MDEF+3"
     },
     {
       "name": "Gray Ash",
@@ -8229,7 +8229,6 @@
       "offset_decimal": 26872652,
       "category": "Ashes",
       "description": "Supposedly from a saint's hand.(Increase AGL)",
-      "faq_description": "Supposedly from a saint’s hand. (Increase AGI)",
       "stats": {
         "0x12": 4351
       },
@@ -8250,7 +8249,8 @@
         "0x02792808",
         "0x02A8DD54"
       ],
-      "id": 249
+      "id": 249,
+      "new_description": "Supposedly from a saint's hand.(Increase AGL)"
     },
     {
       "name": "Blood Pen",
@@ -8258,7 +8258,6 @@
       "offset_decimal": 27837016,
       "category": "Items",
       "description": "Uses blood ink.(Increase magic recovery rate)",
-      "faq_description": "Uses blood ink. (Increase magic recovery rate)",
       "stats": {
         "0x12": 4351
       },
@@ -8276,7 +8275,8 @@
         "0x022AC15C",
         "0x0230A6C4"
       ],
-      "id": 250
+      "id": 250,
+      "new_description": "Uses blood ink.(Increase magic recovery rate)"
     },
     {
       "name": "Long Hammer",
@@ -8284,7 +8284,6 @@
       "offset_decimal": 27846616,
       "category": "Priest’s Wand/Hammer",
       "description": "A heavy, long hammer with excellent range.",
-      "faq_description": "A heavy, long hammer with excellent range.",
       "stats": {
         "0x12": 258,
         "0x30": 28
@@ -8310,7 +8309,8 @@
         "0x01A8EFD8",
         "0x01B4D660"
       ],
-      "id": 251
+      "id": 251,
+      "new_description": "A heavy, long hammer with excellent range."
     },
     {
       "name": "Poison Rapier",
@@ -8318,7 +8318,6 @@
       "offset_decimal": 28213320,
       "category": "Rapiers (elf)",
       "description": "A rapier which poisons anyone it wounds.",
-      "faq_description": "a rapier which poisons anyone it wounds.",
       "stats": {
         "0x12": 288,
         "0x30": 26
@@ -8344,7 +8343,8 @@
       "all_offsets": [
         "0x01AE8048"
       ],
-      "id": 252
+      "id": 252,
+      "new_description": "Sometimes poison the enemy (10% probability)"
     },
     {
       "name": "Holy Water",
@@ -8352,7 +8352,6 @@
       "offset_decimal": 28213960,
       "category": "Jewels",
       "description": "Purifies the unclean.(Activates Turn Undead)",
-      "faq_description": "Purifies the unclean. (Activates Turn Undead)",
       "stats": {
         "0x12": 4351
       },
@@ -8366,7 +8365,8 @@
         "0x01AE82C8",
         "0x021AFB08"
       ],
-      "id": 253
+      "id": 253,
+      "new_description": "Purifies the unclean.(Activates Turn Undead)"
     },
     {
       "name": "Holy Orb",
@@ -8374,7 +8374,6 @@
       "offset_decimal": 28215880,
       "category": "Jewels",
       "description": "Orb of holy power.(Activates Barrier)",
-      "faq_description": "Orb of holy power. (Activates Barrier)",
       "stats": {
         "0x12": 4351
       },
@@ -8389,7 +8388,8 @@
         "0x01D24D80",
         "0x01DFDAE0"
       ],
-      "id": 254
+      "id": 254,
+      "new_description": "Orb of holy power.(Activates Barrier)"
     },
     {
       "name": "Holy Necklace",
@@ -8397,7 +8397,6 @@
       "offset_decimal": 28216520,
       "category": "Clothings",
       "description": "Wearer is blessed with holy power.",
-      "faq_description": "Wearer is blessed with holy power.",
       "stats": {
         "0x12": 2303
       },
@@ -8421,7 +8420,8 @@
         "0x01AE8CC8",
         "0x01C3ED84"
       ],
-      "id": 255
+      "id": 255,
+      "new_description": "STR+4, INT+4, WIL+4, AGL+4, CON+4, POW+4, LUK+4"
     },
     {
       "name": "Energy Flask",
@@ -8429,7 +8429,6 @@
       "offset_decimal": 28219080,
       "category": "Items",
       "description": "Essence of vigor.(Cures drain 33% dest.)",
-      "faq_description": "Essence of vigor. (Cures drain 33% Dest.)",
       "stats": {
         "0x12": 4351
       },
@@ -8447,7 +8446,8 @@
         "0x01FB8A4C",
         "0x0200E25C"
       ],
-      "id": 256
+      "id": 256,
+      "new_description": "Essence of vigor.(Cures drain 33% dest.)"
     },
     {
       "name": "Earth Robe",
@@ -8455,7 +8455,6 @@
       "offset_decimal": 28219720,
       "category": "Robes (priest,sorcerer,& fairy)",
       "description": "",
-      "faq_description": "Contains earth elementals. Protects against sorcery.",
       "stats": {
         "0x12": 650,
         "0x14": 1024,
@@ -8483,7 +8482,8 @@
         "0x01BB3D74",
         "0x0200DD5C"
       ],
-      "id": 257
+      "id": 257,
+      "new_description": "CON+3, MDEF+40"
     },
     {
       "name": "Bloodsword",
@@ -8491,7 +8491,6 @@
       "offset_decimal": 28223560,
       "category": "Swords (warrior)",
       "description": "Red from the blood of those it has killed.",
-      "faq_description": "Red from blood of those it has killed.",
       "stats": {
         "0x12": 257,
         "0x14": 37888,
@@ -8527,7 +8526,8 @@
         "0x022ADCDC",
         "0x023097C4"
       ],
-      "id": 258
+      "id": 258,
+      "new_description": "Drains HP from living enemies (decrease HP if undead)"
     },
     {
       "name": "Silver Sword",
@@ -8535,7 +8535,6 @@
       "offset_decimal": 28620896,
       "category": "Swords (warrior)",
       "description": "Made of silver. It can also damage lycanthropes.",
-      "faq_description": "Made of silver. It can also damage lycanthropes",
       "stats": {
         "0x12": 257,
         "0x14": 1024,
@@ -8566,7 +8565,8 @@
         "0x01D25C80",
         "0x01F1FF74"
       ],
-      "id": 259
+      "id": 259,
+      "new_description": "Made of silver. It can also damage lycanthropes."
     },
     {
       "name": "Silver Axe",
@@ -8574,7 +8574,6 @@
       "offset_decimal": 28621536,
       "category": "Axes (dwarf)",
       "description": "An axe made of silver and blessed with holy runes.",
-      "faq_description": "An axe made of silver and blessed with holy runes.",
       "stats": {
         "0x12": 320,
         "0x14": 1024,
@@ -8601,7 +8600,8 @@
       "all_offsets": [
         "0x01B4BAE0"
       ],
-      "id": 260
+      "id": 260,
+      "new_description": "An axe made of silver and blessed with holy runes."
     },
     {
       "name": "Blessed Hammer",
@@ -8609,7 +8609,6 @@
       "offset_decimal": 28622176,
       "category": "Priest’s Wand/Hammer",
       "description": "Carries a protective charm against demons.",
-      "faq_description": "Carries protective charm against demons.",
       "stats": {
         "0x12": 258,
         "0x30": 24
@@ -8633,7 +8632,8 @@
       "all_offsets": [
         "0x01B4BD60"
       ],
-      "id": 261
+      "id": 261,
+      "new_description": "WIL+15, MDEF+12"
     },
     {
       "name": "Flame Rod",
@@ -8641,7 +8641,6 @@
       "offset_decimal": 28622816,
       "category": "Rods (fairy)",
       "description": "1 of the 4 given to the elven king by a dead king.",
-      "faq_description": "1 of the 4 given to the elven king by a dead king.",
       "stats": {
         "0x12": 384,
         "0x14": 37888,
@@ -8667,7 +8666,8 @@
       "all_offsets": [
         "0x01B4BFE0"
       ],
-      "id": 262
+      "id": 262,
+      "new_description": "1 of the 4 given to the elven king by a dead king."
     },
     {
       "name": "Dancing Doll",
@@ -8675,7 +8675,6 @@
       "offset_decimal": 28624096,
       "category": "Clothings",
       "description": "Magical puppet with an enchanted soul.",
-      "faq_description": "Magical puppet with an enchanted soul.",
       "stats": {
         "0x12": 2303
       },
@@ -8701,7 +8700,8 @@
         "0x01B4C4E0",
         "0x02232CC8"
       ],
-      "id": 263
+      "id": 263,
+      "new_description": "Refill 4% of the MP when it goes to 0(50% Destruction) | AGL+20"
     },
     {
       "name": "Minister",
@@ -8709,7 +8709,6 @@
       "offset_decimal": 28626656,
       "category": "Rapiers (elf)",
       "description": "",
-      "faq_description": "For the punishment of the sinful, emits a divine",
       "stats": {
         "0x12": 288,
         "0x30": 95
@@ -8735,7 +8734,8 @@
       "all_offsets": [
         "0x01B4CEE0"
       ],
-      "id": 264
+      "id": 264,
+      "new_description": "Sometimes paralyze the enemy (10% probability)"
     },
     {
       "name": "Demonscale",
@@ -8743,7 +8743,6 @@
       "offset_decimal": 28633056,
       "category": "Armors (warrior & dwarf)",
       "description": "It was created through a pact with the demons.",
-      "faq_description": "It was created through a pact with the demons.",
       "stats": {
         "0x12": 577,
         "0x14": 1024,
@@ -8770,7 +8769,8 @@
         "0x01B4E7E0",
         "0x01D91D48"
       ],
-      "id": 265
+      "id": 265,
+      "new_description": "POW+25, MDEF+40"
     },
     {
       "name": "Fire Necklace",
@@ -8778,7 +8778,6 @@
       "offset_decimal": 29037300,
       "category": "Clothings",
       "description": "Wearer is protected by the powers of fire.",
-      "faq_description": "Wearer is protected by the powers of fire.",
       "stats": {
         "0x12": 2303
       },
@@ -8792,7 +8791,8 @@
         "0x02973EDC",
         "0x02A8F154"
       ],
-      "id": 266
+      "id": 266,
+      "new_description": "Wearer is protected by the powers of fire."
     },
     {
       "name": "Wind Necklace",
@@ -8800,7 +8800,6 @@
       "offset_decimal": 29038580,
       "category": "Clothings",
       "description": "Wearer is protected by the powers of wind.",
-      "faq_description": "Wearer is protected by the powers of wind.",
       "stats": {
         "0x12": 2303
       },
@@ -8826,7 +8825,8 @@
         "0x02591244",
         "0x029F0FE8"
       ],
-      "id": 267
+      "id": 267,
+      "new_description": "AGL+14"
     },
     {
       "name": "Energy Crystal",
@@ -8834,7 +8834,6 @@
       "offset_decimal": 29041780,
       "category": "Items",
       "description": "Life.(Activates Recover Energy 25% dest.)",
-      "faq_description": "Life. (Activates Recover Energy 25% Dest.)",
       "stats": {
         "0x12": 4351
       },
@@ -8850,7 +8849,8 @@
         "0x02591EC4",
         "0x02851C64"
       ],
-      "id": 268
+      "id": 268,
+      "new_description": "Life.(Activates Recover Energy 25% dest.)"
     },
     {
       "name": "Jewel Ring",
@@ -8858,7 +8858,6 @@
       "offset_decimal": 29043060,
       "category": "Clothings",
       "description": "Ring set with a beautiful gem said to bring luck.",
-      "faq_description": "Ring set with a beautiful gem said to bring luck.",
       "stats": {
         "0x12": 2303
       },
@@ -8884,7 +8883,8 @@
         "0x01D26900",
         "0x01F1F2F4"
       ],
-      "id": 269
+      "id": 269,
+      "new_description": "LUK+20"
     },
     {
       "name": "Crusader Cloak",
@@ -8892,7 +8892,6 @@
       "offset_decimal": 29052660,
       "category": "Clothings",
       "description": "A finely embroidered cloak worn by knights.",
-      "faq_description": "A finely embroidered cloak worn by knights.",
       "stats": {
         "0x12": 2049,
         "0x30": 5,
@@ -8923,7 +8922,8 @@
         "0x020FAE7C",
         "0x021AFD88"
       ],
-      "id": 270
+      "id": 270,
+      "new_description": "MDEF+2"
     },
     {
       "name": "Holy Robe",
@@ -8931,7 +8931,6 @@
       "offset_decimal": 29616260,
       "category": "Robes (priest,sorcerer,& fairy)",
       "description": "A robe which emits a divine aura.",
-      "faq_description": "A robe which emits a divine aura.",
       "stats": {
         "0x12": 650,
         "0x32": 60,
@@ -8956,7 +8955,8 @@
       "all_offsets": [
         "0x01C3E884"
       ],
-      "id": 271
+      "id": 271,
+      "new_description": "LUK+8, MAT+20, MDEF+36"
     },
     {
       "name": "Holy Wand",
@@ -8964,7 +8964,6 @@
       "offset_decimal": 29616900,
       "category": "Priest’s Wand/Hammer",
       "description": "Gives its wielder holy might to destroy demons.",
-      "faq_description": "Gives its wielder holy might to destroy demons.",
       "stats": {
         "0x12": 258,
         "0x14": 37888,
@@ -8990,7 +8989,8 @@
       "all_offsets": [
         "0x01C3EB04"
       ],
-      "id": 272
+      "id": 272,
+      "new_description": "Gives its wielder holy might to destroy demons."
     },
     {
       "name": "Shadow Robe",
@@ -8998,7 +8998,6 @@
       "offset_decimal": 29629060,
       "category": "Robes (priest,sorcerer,& fairy)",
       "description": "A black robe inhabited by spirits of darkness.",
-      "faq_description": "A black robe inhabited by spirits of darkness.",
       "stats": {
         "0x12": 650,
         "0x14": 1024,
@@ -9035,7 +9034,8 @@
         "0x0200E75C",
         "0x020FD3FC"
       ],
-      "id": 273
+      "id": 273,
+      "new_description": "Sometimes block magic(healing,support & attack magic) | WIL+12, POW+42, LUK+24, MDEF+42"
     },
     {
       "name": "Shadow Veil",
@@ -9043,7 +9043,6 @@
       "offset_decimal": 29629700,
       "category": "Clothings",
       "description": "Veil of heretics, imbued with dark powers.",
-      "faq_description": "Veil of heretics, imbued with dark powers.",
       "stats": {
         "0x12": 2303
       },
@@ -9077,7 +9076,8 @@
         "0x026A21D8",
         "0x02795508"
       ],
-      "id": 274
+      "id": 274,
+      "new_description": "10% magic recovery from darkness & evil damage | POW+8"
     },
     {
       "name": "Holy Shield",
@@ -9085,7 +9085,6 @@
       "offset_decimal": 29994264,
       "category": "Light Armors (hunter, elf & rogue)",
       "description": "",
-      "faq_description": "This shield emits holiness.",
       "stats": {
         "0x12": 564,
         "0x14": 1024,
@@ -9099,7 +9098,8 @@
         "0x01C9AD18",
         "0x02BB449C"
       ],
-      "id": 275
+      "id": 275,
+      "new_description": ""
     },
     {
       "name": "Moon Shield",
@@ -9107,7 +9107,6 @@
       "offset_decimal": 31007304,
       "category": "Light Armors (hunter, elf & rogue)",
       "description": "",
-      "faq_description": "An old shield which regenerates sorcerous energies.",
       "stats": {
         "0x12": 564,
         "0x14": 1024,
@@ -9136,7 +9135,8 @@
         "0x020FB37C",
         "0x021B0288"
       ],
-      "id": 276
+      "id": 276,
+      "new_description": "MP regeneration + 5"
     },
     {
       "name": "Wand of Devils",
@@ -9144,7 +9144,6 @@
       "offset_decimal": 31007944,
       "category": "Priest’s Wand/Hammer",
       "description": "A wand forged for demons by rebellious gods.",
-      "faq_description": "A wand forged for demons by rebellious gods.",
       "stats": {
         "0x12": 258,
         "0x14": 37888,
@@ -9170,7 +9169,8 @@
       "all_offsets": [
         "0x01D924C8"
       ],
-      "id": 277
+      "id": 277,
+      "new_description": "A wand forged for demons by rebellious gods."
     },
     {
       "name": "Seraphim Rod",
@@ -9178,7 +9178,6 @@
       "offset_decimal": 31009224,
       "category": "Priest’s Wand/Hammer",
       "description": "An angelic rod which can exorcise demons.",
-      "faq_description": "An angelic rod which can exorcise demons.",
       "stats": {
         "0x12": 258,
         "0x14": 37888,
@@ -9206,7 +9205,8 @@
       "all_offsets": [
         "0x01D929C8"
       ],
-      "id": 278
+      "id": 278,
+      "new_description": "Demon enemies, At + 40"
     },
     {
       "name": "Earth Saber",
@@ -9214,7 +9214,6 @@
       "offset_decimal": 31450976,
       "category": "Swords (warrior)",
       "description": "This blade was created by earth elementals.",
-      "faq_description": "",
       "stats": {
         "0x12": 257,
         "0x14": 37888,
@@ -9240,7 +9239,8 @@
       "all_offsets": [
         "0x01DFE760"
       ],
-      "id": 279
+      "id": 279,
+      "new_description": "This blade was created by earth elementals."
     },
     {
       "name": "Healing Robe",
@@ -9248,7 +9248,6 @@
       "offset_decimal": 31451616,
       "category": "Robes (priest,sorcerer,& fairy)",
       "description": "A life-saving robe which heals its wearer.",
-      "faq_description": "A life-saving robe which heals its wearer.",
       "stats": {
         "0x12": 650,
         "0x14": 1024,
@@ -9277,7 +9276,8 @@
         "0x01DFE9E0",
         "0x02792308"
       ],
-      "id": 280
+      "id": 280,
+      "new_description": "Regenerate HP by 1 | STR+10, CON+15, MDEF+34"
     },
     {
       "name": "Reflector",
@@ -9285,7 +9285,6 @@
       "offset_decimal": 31452256,
       "category": "Light Armors (hunter, elf & rogue)",
       "description": "Silver shield with a polished mirror-like surface.",
-      "faq_description": "",
       "stats": {
         "0x12": 564,
         "0x32": 66
@@ -9311,7 +9310,8 @@
       "all_offsets": [
         "0x01DFEC60"
       ],
-      "id": 281
+      "id": 281,
+      "new_description": "Sometimes block magic(healing,support & attack magic)"
     },
     {
       "name": "Feather Gloves",
@@ -9319,7 +9319,6 @@
       "offset_decimal": 31458016,
       "category": "Clothings",
       "description": "Gloves made from feathers.",
-      "faq_description": "Gloves made from feathers.",
       "stats": {
         "0x12": 2303,
         "0x32": 4
@@ -9338,7 +9337,8 @@
         "0x02591744",
         "0x0271FFE8"
       ],
-      "id": 282
+      "id": 282,
+      "new_description": "Gloves made from feathers."
     },
     {
       "name": "Feather Shoes",
@@ -9346,7 +9346,6 @@
       "offset_decimal": 31459296,
       "category": "Clothings",
       "description": "Enchanted shoes, light as a feather.",
-      "faq_description": "Enchanted shoes, light as a feather.",
       "stats": {
         "0x12": 2186,
         "0x32": 6
@@ -9376,7 +9375,8 @@
         "0x020768D0",
         "0x027204E8"
       ],
-      "id": 283
+      "id": 283,
+      "new_description": "Immune to Slow"
     },
     {
       "name": "Rainbow Orb",
@@ -9384,7 +9384,6 @@
       "offset_decimal": 32092744,
       "category": "Jewels",
       "description": "Magic-absorbing orb.(Activates Dispel Magic)",
-      "faq_description": "Magic-absorbing orb. (Activates Dispel Magic)",
       "stats": {
         "0x12": 4351
       },
@@ -9409,7 +9408,8 @@
       "all_offsets": [
         "0x01E9B248"
       ],
-      "id": 284
+      "id": 284,
+      "new_description": "Magic-absorbing orb.(Activates Dispel Magic)"
     },
     {
       "name": "Jewel Brooch",
@@ -9417,7 +9417,6 @@
       "offset_decimal": 32632948,
       "category": "Clothings",
       "description": "A rather ugly brooch adorned with large jewels.",
-      "faq_description": "A rather ugly brooch with large jewels.",
       "stats": {
         "0x12": 2303
       },
@@ -9445,7 +9444,8 @@
         "0x0230B5C4",
         "0x0230BDC4"
       ],
-      "id": 285
+      "id": 285,
+      "new_description": "LUK+8"
     },
     {
       "name": "Star Tiara",
@@ -9453,7 +9453,6 @@
       "offset_decimal": 32634228,
       "category": "Clothings",
       "description": "One of a pair of tiaras created long ago.",
-      "faq_description": "One of a pair of tiaras created long ago.",
       "stats": {
         "0x12": 2303
       },
@@ -9484,7 +9483,8 @@
         "0x029F3F68",
         "0x029F4768"
       ],
-      "id": 286
+      "id": 286,
+      "new_description": "Decrease water, earth, darkness,& evil damage"
     },
     {
       "name": "Morning Star",
@@ -9492,7 +9492,6 @@
       "offset_decimal": 32638708,
       "category": "Priest’s Wand/Hammer",
       "description": "A rod with a massive iron ball on a chain.",
-      "faq_description": "A rod with a massive ironball on a chain.",
       "stats": {
         "0x12": 258,
         "0x30": 34
@@ -9516,7 +9515,8 @@
       "all_offsets": [
         "0x01F206F4"
       ],
-      "id": 287
+      "id": 287,
+      "new_description": "A rod with a massive iron ball on a chain."
     },
     {
       "name": "Magic Wand",
@@ -9524,7 +9524,6 @@
       "offset_decimal": 33260236,
       "category": "Sorcerer’s Wand",
       "description": "Favored wand of the master sorcerer.",
-      "faq_description": "",
       "stats": {
         "0x12": 264,
         "0x30": 24
@@ -9548,7 +9547,8 @@
       "all_offsets": [
         "0x01FB82CC"
       ],
-      "id": 288
+      "id": 288,
+      "new_description": "STR+2, INT+5, WIL+3, AGL+4, CON+1, POW+12, MAT+8"
     },
     {
       "name": "Water Rod",
@@ -9556,7 +9556,6 @@
       "offset_decimal": 33261516,
       "category": "Rods (fairy)",
       "description": "1 of the 4 given to the elven king by a dead king.",
-      "faq_description": "1 of the 4 given to the elven king by a dead king.",
       "stats": {
         "0x12": 384,
         "0x14": 37888,
@@ -9582,7 +9581,8 @@
       "all_offsets": [
         "0x01FB87CC"
       ],
-      "id": 289
+      "id": 289,
+      "new_description": "1 of the 4 given to the elven king by a dead king."
     },
     {
       "name": "Mirror Armor",
@@ -9590,7 +9590,6 @@
       "offset_decimal": 33609820,
       "category": "Armors (warrior & dwarf)",
       "description": "Silver armor with a fine reflective exterior.",
-      "faq_description": "Silver armor with a fine reflective exterior.",
       "stats": {
         "0x12": 577,
         "0x32": 52,
@@ -9618,7 +9617,8 @@
         "0x0200D85C",
         "0x02437E5C"
       ],
-      "id": 290
+      "id": 290,
+      "new_description": "Sometimes block magic(healing,support & attack magic) | MDEF+31"
     },
     {
       "name": "Slaughterer",
@@ -9626,7 +9626,6 @@
       "offset_decimal": 34034896,
       "category": "Axes (dwarf)",
       "description": "This battle-axe has already taken many victims.",
-      "faq_description": "",
       "stats": {
         "0x12": 320,
         "0x14": 37888,
@@ -9657,7 +9656,8 @@
         "0x029752DC",
         "0x029F32E8"
       ],
-      "id": 291
+      "id": 291,
+      "new_description": "Sometimes Instant Death (8% probability)"
     },
     {
       "name": "Fortune Clock",
@@ -9665,7 +9665,6 @@
       "offset_decimal": 34578300,
       "category": "Items",
       "description": "Forever sand.(Activates Quick 33% dest.)",
-      "faq_description": "Forever sand. (Activates Quick 33% dest.)",
       "stats": {
         "0x12": 4351
       },
@@ -9680,7 +9679,8 @@
         "0x021ADA88",
         "0x02853064"
       ],
-      "id": 292
+      "id": 292,
+      "new_description": "Forever sand.(Activates Quick 33% dest.)"
     },
     {
       "name": "Silver Brooch",
@@ -9688,7 +9688,6 @@
       "offset_decimal": 35311752,
       "category": "Clothings",
       "description": "A silver brooch which also wards off evil.",
-      "faq_description": "",
       "stats": {
         "0x12": 2303
       },
@@ -9711,7 +9710,8 @@
       "all_offsets": [
         "0x021AD088"
       ],
-      "id": 293
+      "id": 293,
+      "new_description": "A silver brooch which also wards off evil."
     },
     {
       "name": "Dragonbane",
@@ -9719,7 +9719,6 @@
       "offset_decimal": 35316232,
       "category": "Swords (warrior)",
       "description": "A dragon-slaying sword forged for a ancient hero.",
-      "faq_description": "A dragon-slaying sword forged for a ancient hero.",
       "stats": {
         "0x12": 257,
         "0x14": 37888,
@@ -9747,7 +9746,8 @@
       "all_offsets": [
         "0x021AE208"
       ],
-      "id": 294
+      "id": 294,
+      "new_description": "Dragon enemies, AT + 40"
     },
     {
       "name": "Rainbow Rod",
@@ -9755,7 +9755,6 @@
       "offset_decimal": 35320712,
       "category": "Rods (fairy)",
       "description": "A rod said to possess mysterious powers.",
-      "faq_description": "A rod said to possess mysterious powers.",
       "stats": {
         "0x12": 384,
         "0x14": 37888,
@@ -9784,7 +9783,8 @@
       "all_offsets": [
         "0x021AF388"
       ],
-      "id": 295
+      "id": 295,
+      "new_description": "Critical attack ratio + 7% | LUK+30"
     },
     {
       "name": "Beauty Veil",
@@ -9792,7 +9792,6 @@
       "offset_decimal": 36357084,
       "category": "Clothings",
       "description": "Beautiful ornamental veil, worn by priests.",
-      "faq_description": "Beautiful ornamental veil, worn by priests.",
       "stats": {
         "0x12": 2186
       },
@@ -9820,7 +9819,8 @@
         "0x02906F64",
         "0x029F3568"
       ],
-      "id": 296
+      "id": 296,
+      "new_description": "Priest mag atk + 50% & Increases the potential of"
     },
     {
       "name": "Artemis",
@@ -9828,7 +9828,6 @@
       "offset_decimal": 36360924,
       "category": "Bows (hunter)",
       "description": "Bow which was given to a hero by the goddess Artemis.",
-      "faq_description": "Bow which was given to a hero by the goddess Artemis.",
       "stats": {
         "0x12": 272,
         "0x14": 37888,
@@ -9860,7 +9859,8 @@
         "0x02907E64",
         "0x029F4468"
       ],
-      "id": 297
+      "id": 297,
+      "new_description": "At + 30 / 8 MP"
     },
     {
       "name": "Infernal Robe",
@@ -9868,7 +9868,6 @@
       "offset_decimal": 37319360,
       "category": "Robes (priest,sorcerer,& fairy)",
       "description": "A cursed robe of the devil and his helpers.",
-      "faq_description": "A cursed robe of the devil and his helpers.",
       "stats": {
         "0x12": 650,
         "0x14": 1024,
@@ -9895,7 +9894,8 @@
         "0x023972C0",
         "0x02BB3A9C"
       ],
-      "id": 298
+      "id": 298,
+      "new_description": "POW+30, LUK+14, MDEF+51"
     },
     {
       "name": "Bandit Dagger",
@@ -9903,7 +9903,6 @@
       "offset_decimal": 39389252,
       "category": "Knives (rogue)",
       "description": "An easily used dagger favored by robbers.",
-      "faq_description": "",
       "stats": {
         "0x12": 260,
         "0x30": 26
@@ -9927,7 +9926,8 @@
       "all_offsets": [
         "0x02590844"
       ],
-      "id": 299
+      "id": 299,
+      "new_description": "AGL+10"
     },
     {
       "name": "Feather Anklet",
@@ -9935,7 +9935,6 @@
       "offset_decimal": 39396292,
       "category": "Clothings",
       "description": "Anklet with beautiful decorative feathers.",
-      "faq_description": "",
       "stats": {
         "0x12": 2303,
         "0x32": 4
@@ -9947,7 +9946,8 @@
       "all_offsets": [
         "0x025923C4"
       ],
-      "id": 300
+      "id": 300,
+      "new_description": "Anklet with beautiful decorative feathers."
     },
     {
       "name": "Winged Helmet",
@@ -9955,7 +9955,6 @@
       "offset_decimal": 39396932,
       "category": "Clothings",
       "description": "A magical feathered helmet.",
-      "faq_description": "A magical feathered helmet.",
       "stats": {
         "0x12": 2113,
         "0x32": 18
@@ -9979,7 +9978,8 @@
       "all_offsets": [
         "0x02592644"
       ],
-      "id": 301
+      "id": 301,
+      "new_description": "AGL+4"
     },
     {
       "name": "Perseus Bow",
@@ -9987,7 +9987,6 @@
       "offset_decimal": 39398852,
       "category": "Bows (hunter)",
       "description": "",
-      "faq_description": "Named after a hero, effective against the possessed.",
       "stats": {
         "0x12": 272,
         "0x14": 37888,
@@ -10016,7 +10015,8 @@
         "0x02592DC4",
         "0x025935C4"
       ],
-      "id": 302
+      "id": 302,
+      "new_description": "Demon & dragon enemies, At + 60 & critical attack"
     },
     {
       "name": "Shadowbolt",
@@ -10024,7 +10024,6 @@
       "offset_decimal": 40506712,
       "category": "Bows (hunter)",
       "description": "A bow which was enchanted by night fairies.",
-      "faq_description": "A bow which was enchanted by night fairies.",
       "stats": {
         "0x12": 272,
         "0x14": 37888,
@@ -10052,7 +10051,8 @@
         "0x02793988",
         "0x02800568"
       ],
-      "id": 303
+      "id": 303,
+      "new_description": "POW+12"
     },
     {
       "name": "Excalibur",
@@ -10060,7 +10060,6 @@
       "offset_decimal": 42272868,
       "category": "Swords (warrior)",
       "description": "",
-      "faq_description": "A magical sword which is of great use against demons.",
       "stats": {
         "0x12": 257,
         "0x14": 37888,
@@ -10088,7 +10087,8 @@
       "all_offsets": [
         "0x02850864"
       ],
-      "id": 304
+      "id": 304,
+      "new_description": "Demon enemies & magical living thing, At + 40"
     },
     {
       "name": "Valkyrie",
@@ -10096,7 +10096,6 @@
       "offset_decimal": 42274148,
       "category": "Rapiers (elf)",
       "description": "",
-      "faq_description": "",
       "stats": {
         "0x12": 288,
         "0x14": 37888,
@@ -10125,7 +10124,8 @@
       "all_offsets": [
         "0x02850D64"
       ],
-      "id": 305
+      "id": 305,
+      "new_description": "Critical attack ratio + 5% | STR+12, INT+8, WIL+8, AGL+12, CON+12, POW+8, LUK+16, MAT+30"
     },
     {
       "name": "Godswand",
@@ -10133,7 +10133,6 @@
       "offset_decimal": 42274788,
       "category": "Sorcerer’s Wand",
       "description": "",
-      "faq_description": "Wand of such power, only a master sorcerer may wield",
       "stats": {
         "0x12": 264,
         "0x14": 37888,
@@ -10161,7 +10160,8 @@
       "all_offsets": [
         "0x02850FE4"
       ],
-      "id": 306
+      "id": 306,
+      "new_description": "Sometimes shoot Fire Bullet / 1 MP (10% probability) | WIL+8"
     },
     {
       "name": "Berserker",
@@ -10169,7 +10169,6 @@
       "offset_decimal": 42276708,
       "category": "Axes (dwarf)",
       "description": "It gives its wielder the strength of madness.",
-      "faq_description": "It gives its wielder the strength of madness.",
       "stats": {
         "0x12": 320,
         "0x30": 110
@@ -10195,7 +10194,8 @@
       "all_offsets": [
         "0x02851764"
       ],
-      "id": 307
+      "id": 307,
+      "new_description": "Sometimes knock back enemies (even bosses)"
     },
     {
       "name": "Star Rod",
@@ -10203,7 +10203,6 @@
       "offset_decimal": 42277348,
       "category": "Rods (fairy)",
       "description": "A rod of starstone which burns with eternal light.",
-      "faq_description": "A rod of starstone which burns with eternal light.",
       "stats": {
         "0x12": 384,
         "0x30": 52
@@ -10227,7 +10226,8 @@
       "all_offsets": [
         "0x028519E4"
       ],
-      "id": 308
+      "id": 308,
+      "new_description": "MAT+20"
     },
     {
       "name": "Air Shield",
@@ -10235,7 +10235,6 @@
       "offset_decimal": 43977448,
       "category": "Shields (warrior & dwarf)",
       "description": "A shield protected by wind spirits.",
-      "faq_description": "A shield protected by wind spirits.",
       "stats": {
         "0x12": 1089,
         "0x32": 18,
@@ -10262,7 +10261,8 @@
       "all_offsets": [
         "0x029F0AE8"
       ],
-      "id": 309
+      "id": 309,
+      "new_description": "Reduce wind elemental attack | MDEF+12"
     },
     {
       "name": "Lucifer",
@@ -10270,7 +10270,6 @@
       "offset_decimal": 45349408,
       "category": "Axes (dwarf)",
       "description": "Inhabited by a demon. Lets the wounded begin to decay.",
-      "faq_description": "Inhabited by a demon. Lets the wounded begin to",
       "stats": {
         "0x12": 320,
         "0x14": 37888,
@@ -10299,7 +10298,8 @@
         "0x02B3FA20",
         "0x02B40220"
       ],
-      "id": 310
+      "id": 310,
+      "new_description": "At + 20 / 6 HP, Can paralyze user if he hits with HP"
     },
     {
       "name": "Hammer of Thor",
@@ -10307,7 +10307,6 @@
       "offset_decimal": 45350048,
       "category": "Priest’s Wand/Hammer",
       "description": "",
-      "faq_description": "It is said, that it has been forged by Thor for",
       "stats": {
         "0x12": 322,
         "0x14": 37888,
@@ -10336,7 +10335,8 @@
         "0x02B3FCA0",
         "0x02B404A0"
       ],
-      "id": 311
+      "id": 311,
+      "new_description": "At + 20 / 8 MP & Giant enemies & magical living thing,"
     },
     {
       "name": "Pavas Armor",
@@ -10344,7 +10344,6 @@
       "offset_decimal": 45350688,
       "category": "Armors (warrior & dwarf)",
       "description": "Legendary armor. Given to a hero by the gods.",
-      "faq_description": "Legendary armor. Given to a hero by the gods.",
       "stats": {
         "0x12": 577,
         "0x14": 1024,
@@ -10371,7 +10370,8 @@
         "0x02B3FF20",
         "0x02B40720"
       ],
-      "id": 312
+      "id": 312,
+      "new_description": "STR+32, CON+48, LUK+16, MDEF+80"
     },
     {
       "name": "Death Mask",
@@ -10379,7 +10379,6 @@
       "offset_decimal": 45826588,
       "category": "Clothings",
       "description": "Wearer becomes invincible at the cost of life.",
-      "faq_description": "Wearer becomes invincible at the cost of life.",
       "stats": {
         "0x12": 2303,
         "0x30": 100,
@@ -10407,7 +10406,8 @@
       "all_offsets": [
         "0x02BB421C"
       ],
-      "id": 313
+      "id": 313,
+      "new_description": "Regenerate HP by -5% & critical attack ratio + 5% | STR+32, INT+32, WIL+32, AGL+32, CON+32, POW+32, LUK+32, MAT+100, MDEF+100"
     },
     {
       "name": "Death Sickle",
@@ -10415,7 +10415,6 @@
       "offset_decimal": 45953700,
       "category": "Knives (rogue)",
       "description": "A sickle cursed by the dead.",
-      "faq_description": "",
       "stats": {
         "0x12": 260,
         "0x14": 37888,
@@ -10443,7 +10442,8 @@
       "all_offsets": [
         "0x02BD32A4"
       ],
-      "id": 314
+      "id": 314,
+      "new_description": "At + 30 / 6 HP & Sometimes Instant Death (8% prob.)"
     },
     {
       "name": "Phantom Robe",
@@ -10451,7 +10451,6 @@
       "offset_decimal": 45954340,
       "category": "Robes (priest,sorcerer,& fairy)",
       "description": "A robe of the dead. It devours the wearer's soul.",
-      "faq_description": "A robe of the dead. It devours the wearer's soul.",
       "stats": {
         "0x12": 650,
         "0x14": 1024,
@@ -10477,7 +10476,8 @@
       "all_offsets": [
         "0x02BD3524"
       ],
-      "id": 315
+      "id": 315,
+      "new_description": "MDEF+2"
     }
   ]
 }
