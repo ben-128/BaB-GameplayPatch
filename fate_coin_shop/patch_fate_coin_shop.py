@@ -99,9 +99,10 @@ def patch_blaze_all(blaze_path, shop_data, dry_run=False):
 
 def main():
     script_dir = os.path.dirname(os.path.abspath(__file__))
+    parent_dir = os.path.dirname(script_dir)
 
     json_path = os.path.join(script_dir, 'fate_coin_shop.json')
-    blaze_path = os.path.join(script_dir, 'work', 'BLAZE.ALL')
+    blaze_path = os.path.join(parent_dir, 'work', 'BLAZE.ALL')
 
     dry_run = '--dry-run' in sys.argv or '-n' in sys.argv
 

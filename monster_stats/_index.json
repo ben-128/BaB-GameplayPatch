@@ -13,6 +13,10 @@
     "endianness": "little-endian",
     "value_type": "int16/uint16"
   },
+  "directory_structure": {
+    "normal_enemies": "Regular monsters",
+    "boss": "Boss monsters"
+  },
   "stat_fields": {
     "stat1_exp_reward": "Points d'experience",
     "stat2": "Inconnu (niveau?)",
@@ -36,913 +40,145 @@
   },
   "monsters": [
     {
-      "name": "Giant-Beetle",
-      "hp": 10,
-      "exp": 4,
-      "dmg": 10,
-      "armor": 5,
-      "file": "Giant-Beetle.json"
-    },
-    {
-      "name": "Goblin-Wizard",
-      "hp": 15,
-      "exp": 133,
-      "dmg": 98,
-      "armor": 85,
-      "file": "Goblin-Wizard.json"
-    },
-    {
-      "name": "Wing-Fish",
-      "hp": 15,
-      "exp": 5,
-      "dmg": 13,
-      "armor": 10,
-      "file": "Wing-Fish.json"
-    },
-    {
-      "name": "Kobold",
-      "hp": 18,
-      "exp": 2,
-      "dmg": 10,
-      "armor": 3,
-      "file": "Kobold.json"
-    },
-    {
-      "name": "Giant-Club",
-      "hp": 27,
-      "exp": 6,
-      "dmg": 14,
-      "armor": 13,
-      "file": "Giant-Club.json"
-    },
-    {
-      "name": "Lv6.Kobold",
-      "hp": 29,
-      "exp": 7,
-      "dmg": 14,
-      "armor": 14,
-      "file": "Lv6-Kobold.json"
-    },
-    {
-      "name": "Lv6.Goblin",
-      "hp": 29,
-      "exp": 7,
-      "dmg": 14,
-      "armor": 14,
-      "file": "Lv6.Goblin.json"
-    },
-    {
-      "name": "Killer-Bee",
-      "hp": 33,
-      "exp": 11,
-      "dmg": 18,
-      "armor": 11,
-      "file": "Killer-Bee.json"
-    },
-    {
-      "name": "Giant-Snake",
-      "hp": 39,
-      "exp": 10,
-      "dmg": 18,
-      "armor": 10,
-      "file": "Giant-Snake.json"
-    },
-    {
-      "name": "Giant-Spider",
-      "hp": 41,
-      "exp": 39,
-      "dmg": 41,
-      "armor": 36,
-      "file": "Giant-Spider.json"
-    },
-    {
-      "name": "Goblin-Shaman",
-      "hp": 42,
-      "exp": 20,
-      "dmg": 14,
-      "armor": 13,
-      "file": "Goblin-Shaman.json"
-    },
-    {
-      "name": "Goblin",
-      "hp": 42,
-      "exp": 20,
-      "dmg": 18,
-      "armor": 16,
-      "file": "Goblin.json"
-    },
-    {
-      "name": "Giant-Bat",
-      "hp": 46,
-      "exp": 19,
-      "dmg": 23,
-      "armor": 23,
-      "file": "Giant-Bat.json"
-    },
-    {
-      "name": "Killer-Bear",
-      "hp": 46,
-      "exp": 23,
-      "dmg": 23,
-      "armor": 20,
-      "file": "Killer-Bear.json"
-    },
-    {
-      "name": "Lv20.Goblin",
-      "hp": 49,
-      "exp": 26,
-      "dmg": 23,
-      "armor": 20,
-      "file": "Lv20-Goblin.json"
-    },
-    {
-      "name": "Lv20.Kobold",
-      "hp": 49,
-      "exp": 26,
-      "dmg": 23,
-      "armor": 20,
-      "file": "Lv20.Kobold.json"
-    },
-    {
-      "name": "Lizard-Man",
-      "hp": 50,
-      "exp": 39,
-      "dmg": 20,
-      "armor": 23,
-      "file": "Lizard-Man.json"
-    },
-    {
-      "name": "Barricade",
-      "hp": 52,
-      "exp": 1,
-      "dmg": 13,
-      "armor": 32,
-      "file": "Barricade.json"
-    },
-    {
-      "name": "Giant-Scorpion",
-      "hp": 57,
-      "exp": 32,
-      "dmg": 36,
-      "armor": 58,
-      "file": "Giant-Scorpion.json"
-    },
-    {
-      "name": "Goblin-Fly",
-      "hp": 59,
-      "exp": 39,
-      "dmg": 26,
-      "armor": 26,
-      "file": "Goblin-Fly.json"
-    },
-    {
-      "name": "Lv30.Kobold",
-      "hp": 59,
-      "exp": 39,
-      "dmg": 26,
-      "armor": 23,
-      "file": "Lv30.Kobold.json"
-    },
-    {
-      "name": "Giant-Centipede",
-      "hp": 66,
-      "exp": 37,
-      "dmg": 42,
-      "armor": 54,
-      "file": "Giant-Centipede.json"
-    },
-    {
-      "name": "Lv30.Goblin",
-      "hp": 66,
-      "exp": 39,
-      "dmg": 26,
-      "armor": 23,
-      "file": "Lv30-Goblin.json"
-    },
-    {
-      "name": "Skeleton",
-      "hp": 67,
-      "exp": 92,
-      "dmg": 41,
-      "armor": 50,
-      "file": "Skeleton.json"
-    },
-    {
-      "name": "Green-Slime",
-      "hp": 78,
-      "exp": 41,
-      "dmg": 26,
-      "armor": 117,
-      "file": "Green-Slime.json"
-    },
-    {
-      "name": "Wolf",
-      "hp": 78,
-      "exp": 49,
-      "dmg": 49,
-      "armor": 53,
-      "file": "Wolf.json"
-    },
-    {
-      "name": "Goblin-Leader",
-      "hp": 80,
-      "exp": 46,
-      "dmg": 45,
-      "armor": 36,
-      "file": "Goblin-Leader.json"
-    },
-    {
-      "name": "Spirit-Ball",
-      "hp": 89,
-      "exp": 113,
-      "dmg": 80,
-      "armor": 78,
-      "file": "Spirit-Ball.json"
-    },
-    {
-      "name": "Gargoyle",
-      "hp": 92,
-      "exp": 49,
-      "dmg": 57,
-      "armor": 48,
-      "file": "Gargoyle.json"
-    },
-    {
-      "name": "Big-Viper",
-      "hp": 104,
-      "exp": 23,
-      "dmg": 33,
-      "armor": 31,
-      "file": "Big-Viper.json"
-    },
-    {
-      "name": "Dark-Magi",
-      "hp": 104,
-      "exp": 62,
-      "dmg": 52,
-      "armor": 49,
-      "file": "Dark-Magi.json"
-    },
-    {
-      "name": "Living-Sword",
-      "hp": 104,
-      "exp": 104,
-      "dmg": 91,
-      "armor": 62,
-      "file": "Living-Sword.json"
-    },
-    {
-      "name": "Silver-Wolf",
-      "hp": 104,
-      "exp": 49,
-      "dmg": 80,
-      "armor": 53,
-      "file": "Silver-Wolf.json"
-    },
-    {
-      "name": "Will-O-The-Wisp",
-      "hp": 104,
-      "exp": 87,
-      "dmg": 23,
-      "armor": 312,
-      "file": "Will-O-The-Wisp.json"
-    },
-    {
-      "name": "Winter-Wolf",
-      "hp": 104,
-      "exp": 54,
-      "dmg": 87,
-      "armor": 59,
-      "file": "Winter-Wolf.json"
-    },
-    {
-      "name": "Cave-Bear",
-      "hp": 105,
-      "exp": 70,
-      "dmg": 94,
-      "armor": 87,
-      "file": "Cave-Bear.json"
-    },
-    {
-      "name": "Killer-Fish",
-      "hp": 105,
-      "exp": 88,
-      "dmg": 93,
-      "armor": 31,
-      "file": "Killer-Fish.json"
-    },
-    {
-      "name": "Dark-Goblin",
-      "hp": 106,
-      "exp": 133,
-      "dmg": 98,
-      "armor": 85,
-      "file": "Dark-Goblin.json"
-    },
-    {
-      "name": "Salamander",
-      "hp": 106,
-      "exp": 312,
-      "dmg": 94,
-      "armor": 96,
-      "file": "Salamander.json"
-    },
-    {
-      "name": "Ghost",
-      "hp": 109,
-      "exp": 75,
-      "dmg": 81,
-      "armor": 117,
-      "file": "Ghost.json"
-    },
-    {
-      "name": "Blue-Slime",
-      "hp": 110,
-      "exp": 79,
-      "dmg": 72,
-      "armor": 247,
-      "file": "Blue-Slime.json"
-    },
-    {
-      "name": "Cave-Scissors",
-      "hp": 114,
-      "exp": 106,
-      "dmg": 88,
-      "armor": 117,
-      "file": "Cave-Scissors.json"
-    },
-    {
-      "name": "Red-Slime",
-      "hp": 117,
-      "exp": 68,
-      "dmg": 44,
-      "armor": 156,
-      "file": "Red-Slime.json"
-    },
-    {
-      "name": "Snow-Bear",
-      "hp": 119,
-      "exp": 65,
-      "dmg": 93,
-      "armor": 87,
-      "file": "Snow-Bear.json"
-    },
-    {
-      "name": "Shadow",
-      "hp": 120,
-      "exp": 110,
-      "dmg": 96,
-      "armor": 247,
-      "file": "Shadow.json"
-    },
-    {
-      "name": "Crimson-Lizard",
-      "hp": 131,
-      "exp": 44,
-      "dmg": 59,
-      "armor": 41,
-      "file": "Crimson-Lizard.json"
-    },
-    {
-      "name": "Harpy",
-      "hp": 133,
-      "exp": 72,
-      "dmg": 58,
-      "armor": 39,
-      "file": "Harpy.json"
-    },
-    {
-      "name": "Wraith",
-      "hp": 136,
-      "exp": 87,
-      "dmg": 65,
-      "armor": 89,
-      "file": "Wraith.json"
-    },
-    {
-      "name": "Vampire-Bat",
-      "hp": 137,
-      "exp": 98,
-      "dmg": 68,
-      "armor": 79,
-      "file": "Vampire-Bat.json"
-    },
-    {
-      "name": "Ghoul",
-      "hp": 156,
-      "exp": 62,
-      "dmg": 59,
-      "armor": 48,
-      "file": "Ghoul.json"
-    },
-    {
-      "name": "Giant-Ant",
-      "hp": 156,
-      "exp": 3,
-      "dmg": 10,
-      "armor": 3,
-      "file": "Giant-Ant.json"
-    },
-    {
-      "name": "Revenant",
-      "hp": 156,
-      "exp": 130,
-      "dmg": 124,
-      "armor": 78,
-      "file": "Revenant.json"
-    },
-    {
-      "name": "Hippogriff",
-      "hp": 157,
-      "exp": 84,
-      "dmg": 97,
-      "armor": 93,
-      "file": "Hippogriff.json"
-    },
-    {
-      "name": "Marble-Gargoyle",
-      "hp": 157,
-      "exp": 104,
-      "dmg": 96,
-      "armor": 93,
-      "file": "Marble-Gargoyle.json"
-    },
-    {
-      "name": "Trent",
-      "hp": 157,
-      "exp": 84,
-      "dmg": 68,
-      "armor": 53,
-      "file": "Trent.json"
-    },
-    {
-      "name": "Yellow-Slime",
-      "hp": 162,
-      "exp": 118,
-      "dmg": 46,
-      "armor": 338,
-      "file": "Yellow-Slime.json"
-    },
-    {
-      "name": "Living-Armor",
-      "hp": 170,
-      "exp": 118,
-      "dmg": 104,
-      "armor": 130,
-      "file": "Living-Armor.json"
-    },
-    {
-      "name": "Wight",
-      "hp": 171,
-      "exp": 68,
-      "dmg": 63,
-      "armor": 58,
-      "file": "Wight.json"
-    },
-    {
-      "name": "Lesser-Vampire",
-      "hp": 176,
-      "exp": 115,
-      "dmg": 98,
-      "armor": 101,
-      "file": "Lesser-Vampire.json"
-    },
-    {
-      "name": "Evil-Stalker",
-      "hp": 178,
-      "exp": 145,
-      "dmg": 126,
-      "armor": 117,
-      "file": "Evil-Stalker.json"
-    },
-    {
-      "name": "Stalker",
-      "hp": 178,
-      "exp": 111,
-      "dmg": 87,
-      "armor": 78,
-      "file": "Stalker.json"
-    },
-    {
-      "name": "Blood-Shadow",
-      "hp": 182,
-      "exp": 132,
-      "dmg": 96,
-      "armor": 247,
-      "file": "Blood-Shadow.json"
-    },
-    {
-      "name": "Noble-Mummy",
-      "hp": 182,
-      "exp": 124,
-      "dmg": 166,
-      "armor": 118,
-      "file": "Noble-Mummy.json"
-    },
-    {
-      "name": "Poison-Flower",
-      "hp": 182,
-      "exp": 65,
-      "dmg": 67,
-      "armor": 52,
-      "file": "Poison-Flower.json"
-    },
-    {
-      "name": "Blood-Skeleton",
-      "hp": 183,
-      "exp": 80,
-      "dmg": 75,
-      "armor": 57,
-      "file": "Blood-Skeleton.json"
-    },
-    {
-      "name": "Mummy",
-      "hp": 184,
-      "exp": 101,
-      "dmg": 107,
-      "armor": 91,
-      "file": "Mummy.json"
-    },
-    {
-      "name": "Desert-Lizard",
-      "hp": 195,
-      "exp": 105,
-      "dmg": 111,
-      "armor": 91,
-      "file": "Desert-Lizard.json"
-    },
-    {
-      "name": "Black-Knight",
-      "hp": 196,
-      "exp": 113,
-      "dmg": 97,
-      "armor": 100,
-      "file": "Black-Knight.json"
-    },
-    {
-      "name": "Zombie",
-      "hp": 200,
-      "exp": 58,
-      "dmg": 65,
-      "armor": 58,
-      "file": "Zombie.json"
-    },
-    {
-      "name": "Gremlin",
-      "hp": 202,
-      "exp": 143,
-      "dmg": 91,
-      "armor": 65,
-      "file": "Gremlin.json"
-    },
-    {
-      "name": "Vampire",
-      "hp": 202,
-      "exp": 127,
-      "dmg": 98,
-      "armor": 114,
-      "file": "Vampire.json"
-    },
-    {
-      "name": "Black-Lizard",
-      "hp": 206,
-      "exp": 110,
-      "dmg": 93,
-      "armor": 92,
-      "file": "Black-Lizard.json"
-    },
-    {
-      "name": "Arch-Magi",
-      "hp": 208,
-      "exp": 127,
-      "dmg": 80,
-      "armor": 75,
-      "file": "Arch-Magi.json"
-    },
-    {
-      "name": "Wyrm",
-      "hp": 210,
-      "exp": 111,
-      "dmg": 101,
-      "armor": 78,
-      "file": "Wyrm.json"
-    },
-    {
-      "name": "Hell-Hound",
-      "hp": 231,
-      "exp": 204,
-      "dmg": 159,
-      "armor": 118,
-      "file": "Hell-Hound.json"
-    },
-    {
-      "name": "Hell-Harpy",
-      "hp": 234,
-      "exp": 156,
-      "dmg": 126,
-      "armor": 92,
-      "file": "Hell-Harpy.json"
-    },
-    {
-      "name": "Blood-Mummy",
-      "hp": 247,
-      "exp": 123,
-      "dmg": 122,
-      "armor": 104,
-      "file": "Blood-Mummy.json"
-    },
-    {
-      "name": "Red-Knight",
-      "hp": 247,
-      "exp": 111,
-      "dmg": 111,
-      "armor": 117,
-      "file": "Red-Knight.json"
-    },
-    {
-      "name": "Succubus",
-      "hp": 247,
-      "exp": 214,
-      "dmg": 132,
-      "armor": 187,
-      "file": "Succubus.json"
-    },
-    {
-      "name": "Metal-Ball",
-      "hp": 260,
-      "exp": 113,
-      "dmg": 124,
-      "armor": 260,
-      "file": "Metal-Ball.json"
-    },
-    {
-      "name": "Gray-Arm",
-      "hp": 262,
-      "exp": 150,
-      "dmg": 117,
-      "armor": 117,
-      "file": "Gray-Arm.json"
-    },
-    {
-      "name": "Basirisk",
-      "hp": 269,
-      "exp": 196,
-      "dmg": 150,
-      "armor": 132,
-      "file": "Basirisk.json"
-    },
-    {
-      "name": "Chimera",
-      "hp": 273,
-      "exp": 133,
-      "dmg": 133,
-      "armor": 136,
-      "file": "Chimera.json"
-    },
-    {
-      "name": "Undead-Knight",
-      "hp": 279,
-      "exp": 114,
-      "dmg": 110,
-      "armor": 96,
-      "file": "Undead-Knight.json"
-    },
-    {
-      "name": "Metal-Slime",
-      "hp": 292,
-      "exp": 182,
-      "dmg": 111,
-      "armor": 468,
-      "file": "Metal-Slime.json"
-    },
-    {
-      "name": "Guard-Golem",
-      "hp": 300,
-      "exp": 33,
-      "dmg": 29,
-      "armor": 156,
-      "file": "Guard-Golem.json"
-    },
-    {
-      "name": "Death-Knight",
-      "hp": 312,
-      "exp": 157,
-      "dmg": 124,
-      "armor": 119,
-      "file": "Death-Knight.json"
-    },
-    {
-      "name": "Ice-Salamander",
-      "hp": 312,
-      "exp": 218,
-      "dmg": 205,
+      "name": "Behemoth",
+      "hp": 2808,
+      "exp": 234,
+      "dmg": 156,
       "armor": 124,
-      "file": "Ice-Salamander.json"
-    },
-    {
-      "name": "King-Mummy",
-      "hp": 312,
-      "exp": 163,
-      "dmg": 182,
-      "armor": 157,
-      "file": "King-Mummy.json"
-    },
-    {
-      "name": "Kraken-Foot",
-      "hp": 390,
-      "exp": 117,
-      "dmg": 117,
-      "armor": 117,
-      "file": "boss/Kraken-Foot.json"
-    },
-    {
-      "name": "OwlBear",
-      "hp": 390,
-      "exp": 49,
-      "dmg": 36,
-      "armor": 24,
-      "file": "boss/OwlBear.json"
-    },
-    {
-      "name": "Ogre",
-      "hp": 409,
-      "exp": 124,
-      "dmg": 110,
-      "armor": 66,
-      "file": "Ogre.json"
-    },
-    {
-      "name": "Giant",
-      "hp": 416,
-      "exp": 123,
-      "dmg": 130,
-      "armor": 87,
-      "file": "Giant.json"
-    },
-    {
-      "name": "Hell-Ogre",
-      "hp": 416,
-      "exp": 208,
-      "dmg": 167,
-      "armor": 111,
-      "file": "Hell-Ogre.json"
-    },
-    {
-      "name": "Born-Golem",
-      "hp": 423,
-      "exp": 128,
-      "dmg": 124,
-      "armor": 144,
-      "file": "Born-Golem.json"
-    },
-    {
-      "name": "Gorgon",
-      "hp": 423,
-      "exp": 214,
-      "dmg": 187,
-      "armor": 184,
-      "file": "Gorgon.json"
-    },
-    {
-      "name": "Hard-Born",
-      "hp": 423,
-      "exp": 143,
-      "dmg": 132,
-      "armor": 185,
-      "file": "Hard-Born.json"
+      "file": "boss/Behemoth.json"
     },
     {
       "name": "Black-Durahan",
       "hp": 465,
-      "exp": 143,
+      "exp": 171,
       "dmg": 146,
       "armor": 93,
       "file": "boss/Black-Durahan.json"
     },
     {
-      "name": "Shadow-Demon",
-      "hp": 468,
-      "exp": 130,
-      "dmg": 109,
-      "armor": 78,
-      "file": "Shadow-Demon.json"
+      "name": "Budgietom",
+      "hp": 9999,
+      "exp": 384,
+      "dmg": 196,
+      "armor": 158,
+      "file": "boss/Budgietom.json"
     },
     {
-      "name": "Kraken-Hand",
-      "hp": 520,
-      "exp": 117,
-      "dmg": 119,
-      "armor": 117,
-      "file": "boss/Kraken-Hand.json"
+      "name": "Carberos",
+      "hp": 2730,
+      "exp": 312,
+      "dmg": 195,
+      "armor": 127,
+      "file": "boss/Carberos.json"
     },
     {
-      "name": "Green-Giant",
-      "hp": 520,
-      "exp": 130,
-      "dmg": 117,
-      "armor": 93,
-      "file": "Green-Giant.json"
-    },
-    {
-      "name": "Platinum-Knight",
-      "hp": 520,
-      "exp": 156,
-      "dmg": 141,
-      "armor": 152,
-      "file": "Platinum-Knight.json"
-    },
-    {
-      "name": "Werewolf",
-      "hp": 608,
-      "exp": 110,
-      "dmg": 119,
-      "armor": 122,
-      "file": "boss/Werewolf.json"
-    },
-    {
-      "name": "Weretiger",
-      "hp": 650,
-      "exp": 110,
-      "dmg": 115,
-      "armor": 117,
-      "file": "boss/Weretiger.json"
-    },
-    {
-      "name": "Evil-Ball",
-      "hp": 674,
-      "exp": 204,
-      "dmg": 114,
-      "armor": 312,
-      "file": "Evil-Ball.json"
+      "name": "Dark-Angel",
+      "hp": 3108,
+      "exp": 370,
+      "dmg": 221,
+      "armor": 226,
+      "file": "boss/Dark-Angel.json"
     },
     {
       "name": "Dark-Elf",
       "hp": 731,
-      "exp": 130,
+      "exp": 156,
       "dmg": 109,
       "armor": 120,
       "file": "boss/Dark-Elf.json"
     },
     {
-      "name": "Dragon-Puppy",
-      "hp": 910,
-      "exp": 52,
-      "dmg": 41,
-      "armor": 67,
-      "file": "boss/Dragon-Puppy.json"
-    },
-    {
-      "name": "Wyvern",
-      "hp": 910,
-      "exp": 124,
-      "dmg": 137,
-      "armor": 141,
-      "file": "Wyvern.json"
-    },
-    {
-      "name": "Durahan",
-      "hp": 1050,
-      "exp": 104,
-      "dmg": 81,
-      "armor": 91,
-      "file": "boss/Durahan.json"
-    },
-    {
-      "name": "Vampire-Lord",
-      "hp": 1092,
-      "exp": 195,
-      "dmg": 156,
-      "armor": 273,
-      "file": "boss/Vampire-Lord.json"
-    },
-    {
-      "name": "Evil-Crystal",
-      "hp": 1170,
-      "exp": 331,
-      "dmg": 0,
-      "armor": 0,
-      "file": "Evil-Crystal.json"
-    },
-    {
       "name": "Dark-Wizard",
       "hp": 1183,
-      "exp": 182,
+      "exp": 218,
       "dmg": 117,
       "armor": 156,
       "file": "boss/Dark-Wizard.json"
     },
     {
+      "name": "Demon-Lord",
+      "hp": 3591,
+      "exp": 366,
+      "dmg": 131,
+      "armor": 197,
+      "file": "boss/Demon-Lord.json"
+    },
+    {
+      "name": "Dragon-Puppy",
+      "hp": 910,
+      "exp": 62,
+      "dmg": 41,
+      "armor": 67,
+      "file": "boss/Dragon-Puppy.json"
+    },
+    {
+      "name": "Durahan",
+      "hp": 1050,
+      "exp": 124,
+      "dmg": 81,
+      "armor": 91,
+      "file": "boss/Durahan.json"
+    },
+    {
+      "name": "Efreet",
+      "hp": 3120,
+      "exp": 330,
+      "dmg": 208,
+      "armor": 197,
+      "file": "boss/Efreet.json"
+    },
+    {
+      "name": "Greater-Demon",
+      "hp": 2990,
+      "exp": 339,
+      "dmg": 197,
+      "armor": 149,
+      "file": "boss/Greater-Demon.json"
+    },
+    {
       "name": "Griffin",
       "hp": 1339,
-      "exp": 234,
+      "exp": 280,
       "dmg": 156,
       "armor": 143,
       "file": "boss/Griffin.json"
     },
     {
+      "name": "Kraken-Foot",
+      "hp": 390,
+      "exp": 140,
+      "dmg": 117,
+      "armor": 117,
+      "file": "boss/Kraken-Foot.json"
+    },
+    {
+      "name": "Kraken-Hand",
+      "hp": 520,
+      "exp": 140,
+      "dmg": 119,
+      "armor": 117,
+      "file": "boss/Kraken-Hand.json"
+    },
+    {
+      "name": "OwlBear",
+      "hp": 390,
+      "exp": 58,
+      "dmg": 36,
+      "armor": 24,
+      "file": "boss/OwlBear.json"
+    },
+    {
+      "name": "Red-Dragon",
+      "hp": 9000,
+      "exp": 476,
+      "dmg": 235,
+      "armor": 182,
+      "file": "boss/Red-Dragon.json"
+    },
+    {
       "name": "Troll",
       "hp": 1690,
-      "exp": 169,
+      "exp": 202,
       "dmg": 195,
       "armor": 123,
       "file": "boss/Troll.json"
@@ -950,83 +186,850 @@
     {
       "name": "Undead-Master",
       "hp": 1755,
-      "exp": 195,
+      "exp": 234,
       "dmg": 130,
       "armor": 260,
       "file": "boss/Undead-Master.json"
     },
     {
-      "name": "Carberos",
-      "hp": 2730,
-      "exp": 260,
-      "dmg": 195,
-      "armor": 127,
-      "file": "boss/Carberos.json"
-    },
-    {
-      "name": "Behemoth",
-      "hp": 2808,
-      "exp": 195,
+      "name": "Vampire-Lord",
+      "hp": 1092,
+      "exp": 234,
       "dmg": 156,
-      "armor": 124,
-      "file": "boss/Behemoth.json"
+      "armor": 273,
+      "file": "boss/Vampire-Lord.json"
     },
     {
-      "name": "Greater-Demon",
-      "hp": 2990,
-      "exp": 283,
-      "dmg": 197,
-      "armor": 149,
-      "file": "boss/Greater-Demon.json"
+      "name": "Weretiger",
+      "hp": 650,
+      "exp": 132,
+      "dmg": 115,
+      "armor": 117,
+      "file": "boss/Weretiger.json"
     },
     {
-      "name": "Dark-Angel",
-      "hp": 3108,
-      "exp": 309,
-      "dmg": 221,
-      "armor": 226,
-      "file": "boss/Dark-Angel.json"
-    },
-    {
-      "name": "Efreet",
-      "hp": 3120,
-      "exp": 275,
-      "dmg": 208,
-      "armor": 197,
-      "file": "boss/Efreet.json"
-    },
-    {
-      "name": "Demon-Lord",
-      "hp": 3591,
-      "exp": 305,
-      "dmg": 131,
-      "armor": 197,
-      "file": "boss/Demon-Lord.json"
+      "name": "Werewolf",
+      "hp": 608,
+      "exp": 132,
+      "dmg": 119,
+      "armor": 122,
+      "file": "boss/Werewolf.json"
     },
     {
       "name": "Zombie-Dragon",
       "hp": 5720,
-      "exp": 234,
+      "exp": 280,
       "dmg": 169,
       "armor": 78,
       "file": "boss/Zombie-Dragon.json"
     },
     {
-      "name": "Red-Dragon",
-      "hp": 9000,
-      "exp": 397,
-      "dmg": 235,
-      "armor": 182,
-      "file": "boss/Red-Dragon.json"
+      "name": "Arch-Magi",
+      "hp": 239,
+      "exp": 152,
+      "dmg": 80,
+      "armor": 75,
+      "file": "normal_enemies/Arch-Magi.json"
     },
     {
-      "name": "Budgietom",
-      "hp": 9999,
-      "exp": 320,
-      "dmg": 196,
-      "armor": 158,
-      "file": "boss/Budgietom.json"
+      "name": "Barricade",
+      "hp": 59,
+      "exp": 1,
+      "dmg": 13,
+      "armor": 32,
+      "file": "normal_enemies/Barricade.json"
+    },
+    {
+      "name": "Basirisk",
+      "hp": 309,
+      "exp": 235,
+      "dmg": 150,
+      "armor": 132,
+      "file": "normal_enemies/Basirisk.json"
+    },
+    {
+      "name": "Big-Viper",
+      "hp": 119,
+      "exp": 27,
+      "dmg": 33,
+      "armor": 31,
+      "file": "normal_enemies/Big-Viper.json"
+    },
+    {
+      "name": "Black-Knight",
+      "hp": 225,
+      "exp": 135,
+      "dmg": 97,
+      "armor": 100,
+      "file": "normal_enemies/Black-Knight.json"
+    },
+    {
+      "name": "Black-Lizard",
+      "hp": 236,
+      "exp": 132,
+      "dmg": 93,
+      "armor": 92,
+      "file": "normal_enemies/Black-Lizard.json"
+    },
+    {
+      "name": "Blood-Mummy",
+      "hp": 284,
+      "exp": 147,
+      "dmg": 122,
+      "armor": 104,
+      "file": "normal_enemies/Blood-Mummy.json"
+    },
+    {
+      "name": "Blood-Shadow",
+      "hp": 209,
+      "exp": 158,
+      "dmg": 96,
+      "armor": 247,
+      "file": "normal_enemies/Blood-Shadow.json"
+    },
+    {
+      "name": "Blood-Skeleton",
+      "hp": 210,
+      "exp": 96,
+      "dmg": 75,
+      "armor": 57,
+      "file": "normal_enemies/Blood-Skeleton.json"
+    },
+    {
+      "name": "Blue-Slime",
+      "hp": 126,
+      "exp": 94,
+      "dmg": 72,
+      "armor": 247,
+      "file": "normal_enemies/Blue-Slime.json"
+    },
+    {
+      "name": "Born-Golem",
+      "hp": 486,
+      "exp": 153,
+      "dmg": 124,
+      "armor": 144,
+      "file": "normal_enemies/Born-Golem.json"
+    },
+    {
+      "name": "Cave-Bear",
+      "hp": 120,
+      "exp": 84,
+      "dmg": 94,
+      "armor": 87,
+      "file": "normal_enemies/Cave-Bear.json"
+    },
+    {
+      "name": "Cave-Scissors",
+      "hp": 131,
+      "exp": 127,
+      "dmg": 88,
+      "armor": 117,
+      "file": "normal_enemies/Cave-Scissors.json"
+    },
+    {
+      "name": "Chimera",
+      "hp": 313,
+      "exp": 159,
+      "dmg": 133,
+      "armor": 136,
+      "file": "normal_enemies/Chimera.json"
+    },
+    {
+      "name": "Crimson-Lizard",
+      "hp": 150,
+      "exp": 52,
+      "dmg": 59,
+      "armor": 41,
+      "file": "normal_enemies/Crimson-Lizard.json"
+    },
+    {
+      "name": "Dark-Goblin",
+      "hp": 121,
+      "exp": 159,
+      "dmg": 98,
+      "armor": 85,
+      "file": "normal_enemies/Dark-Goblin.json"
+    },
+    {
+      "name": "Dark-Magi",
+      "hp": 119,
+      "exp": 74,
+      "dmg": 52,
+      "armor": 49,
+      "file": "normal_enemies/Dark-Magi.json"
+    },
+    {
+      "name": "Death-Knight",
+      "hp": 358,
+      "exp": 188,
+      "dmg": 124,
+      "armor": 119,
+      "file": "normal_enemies/Death-Knight.json"
+    },
+    {
+      "name": "Desert-Lizard",
+      "hp": 224,
+      "exp": 126,
+      "dmg": 111,
+      "armor": 91,
+      "file": "normal_enemies/Desert-Lizard.json"
+    },
+    {
+      "name": "Evil-Ball",
+      "hp": 775,
+      "exp": 244,
+      "dmg": 114,
+      "armor": 312,
+      "file": "normal_enemies/Evil-Ball.json"
+    },
+    {
+      "name": "Evil-Crystal",
+      "hp": 1345,
+      "exp": 397,
+      "dmg": 0,
+      "armor": 0,
+      "file": "normal_enemies/Evil-Crystal.json"
+    },
+    {
+      "name": "Evil-Stalker",
+      "hp": 204,
+      "exp": 174,
+      "dmg": 126,
+      "armor": 117,
+      "file": "normal_enemies/Evil-Stalker.json"
+    },
+    {
+      "name": "Gargoyle",
+      "hp": 105,
+      "exp": 58,
+      "dmg": 57,
+      "armor": 48,
+      "file": "normal_enemies/Gargoyle.json"
+    },
+    {
+      "name": "Ghost",
+      "hp": 125,
+      "exp": 90,
+      "dmg": 81,
+      "armor": 117,
+      "file": "normal_enemies/Ghost.json"
+    },
+    {
+      "name": "Ghoul",
+      "hp": 179,
+      "exp": 74,
+      "dmg": 59,
+      "armor": 48,
+      "file": "normal_enemies/Ghoul.json"
+    },
+    {
+      "name": "Giant-Ant",
+      "hp": 21,
+      "exp": 3,
+      "dmg": 10,
+      "armor": 3,
+      "file": "normal_enemies/Giant-Ant.json"
+    },
+    {
+      "name": "Giant-Bat",
+      "hp": 52,
+      "exp": 22,
+      "dmg": 23,
+      "armor": 23,
+      "file": "normal_enemies/Giant-Bat.json"
+    },
+    {
+      "name": "Giant-Beetle",
+      "hp": 11,
+      "exp": 4,
+      "dmg": 10,
+      "armor": 5,
+      "file": "normal_enemies/Giant-Beetle.json"
+    },
+    {
+      "name": "Giant-Centipede",
+      "hp": 75,
+      "exp": 44,
+      "dmg": 42,
+      "armor": 54,
+      "file": "normal_enemies/Giant-Centipede.json"
+    },
+    {
+      "name": "Giant-Club",
+      "hp": 31,
+      "exp": 7,
+      "dmg": 14,
+      "armor": 13,
+      "file": "normal_enemies/Giant-Club.json"
+    },
+    {
+      "name": "Giant-Scorpion",
+      "hp": 65,
+      "exp": 38,
+      "dmg": 36,
+      "armor": 58,
+      "file": "normal_enemies/Giant-Scorpion.json"
+    },
+    {
+      "name": "Giant-Snake",
+      "hp": 44,
+      "exp": 12,
+      "dmg": 18,
+      "armor": 10,
+      "file": "normal_enemies/Giant-Snake.json"
+    },
+    {
+      "name": "Giant-Spider",
+      "hp": 47,
+      "exp": 46,
+      "dmg": 41,
+      "armor": 36,
+      "file": "normal_enemies/Giant-Spider.json"
+    },
+    {
+      "name": "Giant",
+      "hp": 478,
+      "exp": 147,
+      "dmg": 130,
+      "armor": 87,
+      "file": "normal_enemies/Giant.json"
+    },
+    {
+      "name": "Goblin-Fly",
+      "hp": 67,
+      "exp": 46,
+      "dmg": 26,
+      "armor": 26,
+      "file": "normal_enemies/Goblin-Fly.json"
+    },
+    {
+      "name": "Goblin-Leader",
+      "hp": 92,
+      "exp": 55,
+      "dmg": 45,
+      "armor": 36,
+      "file": "normal_enemies/Goblin-Leader.json"
+    },
+    {
+      "name": "Goblin-Shaman",
+      "hp": 48,
+      "exp": 24,
+      "dmg": 14,
+      "armor": 13,
+      "file": "normal_enemies/Goblin-Shaman.json"
+    },
+    {
+      "name": "Goblin-Wizard",
+      "hp": 17,
+      "exp": 159,
+      "dmg": 98,
+      "armor": 85,
+      "file": "normal_enemies/Goblin-Wizard.json"
+    },
+    {
+      "name": "Goblin",
+      "hp": 48,
+      "exp": 24,
+      "dmg": 18,
+      "armor": 16,
+      "file": "normal_enemies/Goblin.json"
+    },
+    {
+      "name": "Gorgon",
+      "hp": 486,
+      "exp": 256,
+      "dmg": 187,
+      "armor": 184,
+      "file": "normal_enemies/Gorgon.json"
+    },
+    {
+      "name": "Gray-Arm",
+      "hp": 301,
+      "exp": 180,
+      "dmg": 117,
+      "armor": 117,
+      "file": "normal_enemies/Gray-Arm.json"
+    },
+    {
+      "name": "Green-Giant",
+      "hp": 598,
+      "exp": 156,
+      "dmg": 117,
+      "armor": 93,
+      "file": "normal_enemies/Green-Giant.json"
+    },
+    {
+      "name": "Green-Slime",
+      "hp": 89,
+      "exp": 49,
+      "dmg": 26,
+      "armor": 117,
+      "file": "normal_enemies/Green-Slime.json"
+    },
+    {
+      "name": "Gremlin",
+      "hp": 232,
+      "exp": 171,
+      "dmg": 91,
+      "armor": 65,
+      "file": "normal_enemies/Gremlin.json"
+    },
+    {
+      "name": "Guard-Golem",
+      "hp": 345,
+      "exp": 39,
+      "dmg": 29,
+      "armor": 156,
+      "file": "normal_enemies/Guard-Golem.json"
+    },
+    {
+      "name": "Hard-Born",
+      "hp": 486,
+      "exp": 171,
+      "dmg": 132,
+      "armor": 185,
+      "file": "normal_enemies/Hard-Born.json"
+    },
+    {
+      "name": "Harpy",
+      "hp": 152,
+      "exp": 86,
+      "dmg": 58,
+      "armor": 39,
+      "file": "normal_enemies/Harpy.json"
+    },
+    {
+      "name": "Hell-Harpy",
+      "hp": 269,
+      "exp": 187,
+      "dmg": 126,
+      "armor": 92,
+      "file": "normal_enemies/Hell-Harpy.json"
+    },
+    {
+      "name": "Hell-Hound",
+      "hp": 265,
+      "exp": 244,
+      "dmg": 159,
+      "armor": 118,
+      "file": "normal_enemies/Hell-Hound.json"
+    },
+    {
+      "name": "Hell-Ogre",
+      "hp": 478,
+      "exp": 249,
+      "dmg": 167,
+      "armor": 111,
+      "file": "normal_enemies/Hell-Ogre.json"
+    },
+    {
+      "name": "Hippogriff",
+      "hp": 180,
+      "exp": 100,
+      "dmg": 97,
+      "armor": 93,
+      "file": "normal_enemies/Hippogriff.json"
+    },
+    {
+      "name": "Ice-Salamander",
+      "hp": 358,
+      "exp": 261,
+      "dmg": 205,
+      "armor": 124,
+      "file": "normal_enemies/Ice-Salamander.json"
+    },
+    {
+      "name": "Killer-Bear",
+      "hp": 52,
+      "exp": 27,
+      "dmg": 23,
+      "armor": 20,
+      "file": "normal_enemies/Killer-Bear.json"
+    },
+    {
+      "name": "Killer-Bee",
+      "hp": 37,
+      "exp": 13,
+      "dmg": 18,
+      "armor": 11,
+      "file": "normal_enemies/Killer-Bee.json"
+    },
+    {
+      "name": "Killer-Fish",
+      "hp": 120,
+      "exp": 105,
+      "dmg": 93,
+      "armor": 31,
+      "file": "normal_enemies/Killer-Fish.json"
+    },
+    {
+      "name": "King-Mummy",
+      "hp": 358,
+      "exp": 195,
+      "dmg": 182,
+      "armor": 157,
+      "file": "normal_enemies/King-Mummy.json"
+    },
+    {
+      "name": "Kobold",
+      "hp": 20,
+      "exp": 2,
+      "dmg": 10,
+      "armor": 3,
+      "file": "normal_enemies/Kobold.json"
+    },
+    {
+      "name": "Lesser-Vampire",
+      "hp": 202,
+      "exp": 138,
+      "dmg": 98,
+      "armor": 101,
+      "file": "normal_enemies/Lesser-Vampire.json"
+    },
+    {
+      "name": "Living-Armor",
+      "hp": 195,
+      "exp": 141,
+      "dmg": 104,
+      "armor": 130,
+      "file": "normal_enemies/Living-Armor.json"
+    },
+    {
+      "name": "Living-Sword",
+      "hp": 119,
+      "exp": 124,
+      "dmg": 91,
+      "armor": 62,
+      "file": "normal_enemies/Living-Sword.json"
+    },
+    {
+      "name": "Lizard-Man",
+      "hp": 57,
+      "exp": 46,
+      "dmg": 20,
+      "armor": 23,
+      "file": "normal_enemies/Lizard-Man.json"
+    },
+    {
+      "name": "Lv20.Goblin",
+      "hp": 56,
+      "exp": 31,
+      "dmg": 23,
+      "armor": 20,
+      "file": "normal_enemies/Lv20-Goblin.json"
+    },
+    {
+      "name": "Lv20.Kobold",
+      "hp": 56,
+      "exp": 31,
+      "dmg": 23,
+      "armor": 20,
+      "file": "normal_enemies/Lv20.Kobold.json"
+    },
+    {
+      "name": "Lv30.Goblin",
+      "hp": 75,
+      "exp": 46,
+      "dmg": 26,
+      "armor": 23,
+      "file": "normal_enemies/Lv30-Goblin.json"
+    },
+    {
+      "name": "Lv30.Kobold",
+      "hp": 67,
+      "exp": 46,
+      "dmg": 26,
+      "armor": 23,
+      "file": "normal_enemies/Lv30.Kobold.json"
+    },
+    {
+      "name": "Lv6.Kobold",
+      "hp": 33,
+      "exp": 8,
+      "dmg": 14,
+      "armor": 14,
+      "file": "normal_enemies/Lv6-Kobold.json"
+    },
+    {
+      "name": "Lv6.Goblin",
+      "hp": 33,
+      "exp": 8,
+      "dmg": 14,
+      "armor": 14,
+      "file": "normal_enemies/Lv6.Goblin.json"
+    },
+    {
+      "name": "Marble-Gargoyle",
+      "hp": 180,
+      "exp": 124,
+      "dmg": 96,
+      "armor": 93,
+      "file": "normal_enemies/Marble-Gargoyle.json"
+    },
+    {
+      "name": "Metal-Ball",
+      "hp": 299,
+      "exp": 135,
+      "dmg": 124,
+      "armor": 260,
+      "file": "normal_enemies/Metal-Ball.json"
+    },
+    {
+      "name": "Metal-Slime",
+      "hp": 335,
+      "exp": 218,
+      "dmg": 111,
+      "armor": 468,
+      "file": "normal_enemies/Metal-Slime.json"
+    },
+    {
+      "name": "Mummy",
+      "hp": 211,
+      "exp": 121,
+      "dmg": 107,
+      "armor": 91,
+      "file": "normal_enemies/Mummy.json"
+    },
+    {
+      "name": "Noble-Mummy",
+      "hp": 209,
+      "exp": 148,
+      "dmg": 166,
+      "armor": 118,
+      "file": "normal_enemies/Noble-Mummy.json"
+    },
+    {
+      "name": "Ogre",
+      "hp": 470,
+      "exp": 148,
+      "dmg": 110,
+      "armor": 66,
+      "file": "normal_enemies/Ogre.json"
+    },
+    {
+      "name": "Platinum-Knight",
+      "hp": 598,
+      "exp": 187,
+      "dmg": 141,
+      "armor": 152,
+      "file": "normal_enemies/Platinum-Knight.json"
+    },
+    {
+      "name": "Poison-Flower",
+      "hp": 209,
+      "exp": 78,
+      "dmg": 67,
+      "armor": 52,
+      "file": "normal_enemies/Poison-Flower.json"
+    },
+    {
+      "name": "Red-Knight",
+      "hp": 284,
+      "exp": 133,
+      "dmg": 111,
+      "armor": 117,
+      "file": "normal_enemies/Red-Knight.json"
+    },
+    {
+      "name": "Red-Slime",
+      "hp": 134,
+      "exp": 81,
+      "dmg": 44,
+      "armor": 156,
+      "file": "normal_enemies/Red-Slime.json"
+    },
+    {
+      "name": "Revenant",
+      "hp": 179,
+      "exp": 156,
+      "dmg": 124,
+      "armor": 78,
+      "file": "normal_enemies/Revenant.json"
+    },
+    {
+      "name": "Salamander",
+      "hp": 121,
+      "exp": 374,
+      "dmg": 94,
+      "armor": 96,
+      "file": "normal_enemies/Salamander.json"
+    },
+    {
+      "name": "Shadow-Demon",
+      "hp": 538,
+      "exp": 156,
+      "dmg": 109,
+      "armor": 78,
+      "file": "normal_enemies/Shadow-Demon.json"
+    },
+    {
+      "name": "Shadow",
+      "hp": 138,
+      "exp": 132,
+      "dmg": 96,
+      "armor": 247,
+      "file": "normal_enemies/Shadow.json"
+    },
+    {
+      "name": "Silver-Wolf",
+      "hp": 119,
+      "exp": 58,
+      "dmg": 80,
+      "armor": 53,
+      "file": "normal_enemies/Silver-Wolf.json"
+    },
+    {
+      "name": "Skeleton",
+      "hp": 77,
+      "exp": 110,
+      "dmg": 41,
+      "armor": 50,
+      "file": "normal_enemies/Skeleton.json"
+    },
+    {
+      "name": "Snow-Bear",
+      "hp": 136,
+      "exp": 78,
+      "dmg": 93,
+      "armor": 87,
+      "file": "normal_enemies/Snow-Bear.json"
+    },
+    {
+      "name": "Spirit-Ball",
+      "hp": 102,
+      "exp": 135,
+      "dmg": 80,
+      "armor": 78,
+      "file": "normal_enemies/Spirit-Ball.json"
+    },
+    {
+      "name": "Stalker",
+      "hp": 204,
+      "exp": 133,
+      "dmg": 87,
+      "armor": 78,
+      "file": "normal_enemies/Stalker.json"
+    },
+    {
+      "name": "Succubus",
+      "hp": 284,
+      "exp": 256,
+      "dmg": 132,
+      "armor": 187,
+      "file": "normal_enemies/Succubus.json"
+    },
+    {
+      "name": "Trent",
+      "hp": 180,
+      "exp": 100,
+      "dmg": 68,
+      "armor": 53,
+      "file": "normal_enemies/Trent.json"
+    },
+    {
+      "name": "Undead-Knight",
+      "hp": 320,
+      "exp": 136,
+      "dmg": 110,
+      "armor": 96,
+      "file": "normal_enemies/Undead-Knight.json"
+    },
+    {
+      "name": "Vampire-Bat",
+      "hp": 157,
+      "exp": 117,
+      "dmg": 68,
+      "armor": 79,
+      "file": "normal_enemies/Vampire-Bat.json"
+    },
+    {
+      "name": "Vampire",
+      "hp": 232,
+      "exp": 152,
+      "dmg": 98,
+      "armor": 114,
+      "file": "normal_enemies/Vampire.json"
+    },
+    {
+      "name": "Wight",
+      "hp": 196,
+      "exp": 81,
+      "dmg": 63,
+      "armor": 58,
+      "file": "normal_enemies/Wight.json"
+    },
+    {
+      "name": "Will-O-The-Wisp",
+      "hp": 119,
+      "exp": 104,
+      "dmg": 23,
+      "armor": 312,
+      "file": "normal_enemies/Will-O-The-Wisp.json"
+    },
+    {
+      "name": "Wing-Fish",
+      "hp": 17,
+      "exp": 6,
+      "dmg": 13,
+      "armor": 10,
+      "file": "normal_enemies/Wing-Fish.json"
+    },
+    {
+      "name": "Winter-Wolf",
+      "hp": 119,
+      "exp": 64,
+      "dmg": 87,
+      "armor": 59,
+      "file": "normal_enemies/Winter-Wolf.json"
+    },
+    {
+      "name": "Wolf",
+      "hp": 89,
+      "exp": 58,
+      "dmg": 49,
+      "armor": 53,
+      "file": "normal_enemies/Wolf.json"
+    },
+    {
+      "name": "Wraith",
+      "hp": 156,
+      "exp": 104,
+      "dmg": 65,
+      "armor": 89,
+      "file": "normal_enemies/Wraith.json"
+    },
+    {
+      "name": "Wyrm",
+      "hp": 241,
+      "exp": 133,
+      "dmg": 101,
+      "armor": 78,
+      "file": "normal_enemies/Wyrm.json"
+    },
+    {
+      "name": "Wyvern",
+      "hp": 1046,
+      "exp": 148,
+      "dmg": 137,
+      "armor": 141,
+      "file": "normal_enemies/Wyvern.json"
+    },
+    {
+      "name": "Yellow-Slime",
+      "hp": 186,
+      "exp": 141,
+      "dmg": 46,
+      "armor": 338,
+      "file": "normal_enemies/Yellow-Slime.json"
+    },
+    {
+      "name": "Zombie",
+      "hp": 229,
+      "exp": 69,
+      "dmg": 65,
+      "armor": 58,
+      "file": "normal_enemies/Zombie.json"
     }
-  ],
-  "total_monsters": 124
+  ]
 }

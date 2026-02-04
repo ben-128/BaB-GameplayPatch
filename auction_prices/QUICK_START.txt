@@ -1,0 +1,77 @@
+================================================================================
+  QUICK START - AUCTION PRICE MODIFICATION
+================================================================================
+
+DIRECTORY STRUCTURE:
+--------------------
+
+GameplayPatch/
+  ├── test_auction_prices.bat    <-- DOUBLE-CLICK THIS!
+  ├── restore_original.bat
+  ├── test_modify_16bit_prices.py
+  ├── patch_blaze_all.py
+  └── work/
+      ├── BLAZE.ALL              <-- Will be modified
+      ├── BLAZE.ALL.backup_*     <-- Auto-created backups
+      └── Blaze & Blade - Patched.bin  <-- Will be patched
+
+
+STEP 1: TEST AUCTION PRICES
+----------------------------
+
+Double-click: test_auction_prices.bat
+
+This will:
+  ✓ Backup work\BLAZE.ALL automatically
+  ✓ Change 3 auction prices (Healing Potion, Shortsword, Leather Armor)
+  ✓ Patch into work\Blaze & Blade - Patched.bin
+
+
+STEP 2: TEST IN EMULATOR
+-------------------------
+
+1. Load: work\Blaze & Blade - Patched.bin in your PS1 emulator
+2. Go to the auction
+3. Check if prices changed:
+   - Healing Potion: 10 → 99
+   - Shortsword:     22 → 88
+   - Leather Armor:  36 → 77
+
+
+STEP 3: RESTORE IF NEEDED
+--------------------------
+
+If something goes wrong, double-click: restore_original.bat
+
+This will restore work\BLAZE.ALL from the most recent backup.
+
+
+WHAT'S MODIFIED:
+----------------
+
+Location: 0x002EA500 in work\BLAZE.ALL
+Format:   16-bit little-endian words
+
+Word[0]  → Healing Potion (10 → 99)
+Word[2]  → Shortsword     (22 → 88)
+Word[13] → Leather Armor  (36 → 77)
+
+
+FILES USED:
+-----------
+
+INPUT:
+  work\BLAZE.ALL                    - Game data file
+  work\Blaze & Blade - Patched.bin  - Game disc image
+
+OUTPUT:
+  work\BLAZE.ALL.backup_*           - Automatic backups
+  work\Blaze & Blade - Patched.bin  - Patched disc (overwritten)
+
+
+THAT'S IT!
+----------
+
+Just double-click test_auction_prices.bat and test it!
+
+================================================================================

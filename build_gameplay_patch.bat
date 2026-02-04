@@ -10,7 +10,7 @@ echo.
 
 REM Step 1: Patch Fate Coin Shop prices into BLAZE.ALL
 echo [1/3] Patching Fate Coin Shop prices...
-py -3 patch_fate_coin_shop.py
+py -3 fate_coin_shop\patch_fate_coin_shop.py
 if errorlevel 1 goto :error
 
 echo.
@@ -24,7 +24,7 @@ echo.
 
 REM Step 3: Patch monster stats directly into BIN
 echo [3/3] Patching monster stats into BIN...
-py -3 patch_monster_stats_bin.py
+py -3 monster_stats\patch_monster_stats_bin.py
 if errorlevel 1 goto :error
 
 echo.

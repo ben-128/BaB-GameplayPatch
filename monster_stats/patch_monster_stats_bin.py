@@ -11,8 +11,9 @@ import struct
 from pathlib import Path
 
 # Configuration
-BIN_FILE = Path(r"work\Blaze & Blade - Patched.bin")
-JSON_DIR = Path(r"monster_stats")
+SCRIPT_DIR = Path(__file__).parent
+BIN_FILE = SCRIPT_DIR.parent / "work" / "Blaze & Blade - Patched.bin"
+JSON_DIR = SCRIPT_DIR  # Monster stats JSONs are in the same directory as this script
 
 # Disc format
 SECTOR_RAW = 2352

@@ -2,18 +2,7 @@
 
 ## 📖 Description
 
-Ce repository contient une analyse complète des données de gameplay extraites du jeu **Blaze & Blade: Eternal Quest** (PlayStation, 1998).
-
-## 📊 Contenu
-
-### 📁 Dossier `spells/`
-
-Base de données complète de **90 sorts** extraits et analysés du fichier BLAZE.ALL :
-
-- **90 fichiers JSON** - Un fichier par sort avec toutes ses statistiques
-- **INDEX.json** - Vue d'ensemble de tous les sorts
-- **README.md** - Documentation utilisateur
-- **STRUCTURE_ANALYSIS.md** - Analyse technique détaillée de la structure binaire
+Ce repository contient une analyse complète et des outils de modification pour le jeu **Blaze & Blade: Eternal Quest** (PlayStation, 1998).
 
 ## 🎮 À propos du jeu
 
@@ -22,139 +11,232 @@ Base de données complète de **90 sorts** extraits et analysés du fichier BLAZ
 - **Année** : 1998
 - **Développeur** : T&E Soft
 - **Genre** : Action-RPG
+- **Région** : Europe (PAL) - SLES_008.45
 
-## 📋 Caractéristiques de l'analyse
+---
 
-### Stats identifiées pour chaque sort
+## 📊 Structure du projet
 
-- ⚡ **Coût en MP** (Mana Points)
-- 💥 **Puissance/Dégâts**
-- 🔮 **Élément** (Neutre, Feu, Glace, Foudre, Sacré)
-- 🎯 **Type d'effet** (Damage, AOE, Multi-target, Buff)
-- 👥 **Cible** (Single, Group, All enemies, Ally)
-- 🏷️ **ID du sort**
-- 🎚️ **Niveau magique**
-- 🚩 **Flags spéciaux**
+```
+GameplayPatch/
+├── build_gameplay_patch.bat    ⭐ Script principal de build
+├── patch_blaze_all.py          Injection de BLAZE.ALL dans le BIN
+├── work/                       Fichiers de travail
+│   ├── BLAZE.ALL               Données du jeu (46 MB)
+│   └── Blaze & Blade - Patched.bin  Image disque patchée
+│
+├── monster_stats/              🐉 Statistiques des monstres (124 monstres)
+│   ├── normal_enemies/         101 monstres normaux
+│   ├── boss/                   23 boss
+│   ├── _index.json             Index complet
+│   ├── patch_monster_stats_bin.py  Patcher de stats
+│   └── update_index.py         Mise à jour de l'index
+│
+├── fate_coin_shop/             💰 Boutique Fate Coin
+│   ├── fate_coin_shop.json     Données de la boutique (23 items)
+│   └── patch_fate_coin_shop.py Script de modification
+│
+├── auction_prices/             🏛️ Prix d'enchères (EN COURS)
+│   ├── test_auction_prices.bat Test des modifications
+│   ├── test_modify_16bit_prices.py  Modification des prix
+│   ├── restore_original.bat    Restauration
+│   └── AUCTION_PRICE_SOLUTION.md  Documentation technique
+│
+└── spells/                     ✨ Base de données des sorts (90 sorts)
+    ├── *.json                  Fichiers individuels par sort
+    ├── INDEX.json              Vue d'ensemble
+    └── README.md               Documentation
 
-### Exemples de sorts
+```
 
-| Sort | MP | Power | Élément | Type | Cible |
-|------|----|----|---------|------|-------|
-| Blaze | 9 | 15 | Neutre | Direct Damage | All Enemies |
-| Thunderbolt | 20 | 70 | Foudre | Multi-Target | Enemy Group |
-| Blizzard | 11 | 30 | Glace | Area Damage | Area |
-| Healing | 30 | 5 | Sacré | Status/Buff | Single Target |
+---
 
-## 🔬 Méthodologie
+## 🚀 Quick Start
 
-### Extraction des données
+### Option 1: Build complet (recommandé)
 
-Les données ont été extraites par **reverse engineering** du fichier binaire `BLAZE.ALL` (46 MB) :
+Double-cliquez sur `build_gameplay_patch.bat`
 
-1. **Analyse de la structure binaire** (48 bytes par sort)
-2. **Identification des patterns** répétitifs
-3. **Validation** avec les valeurs connues du jeu
-4. **Interprétation** des champs et flags
-5. **Documentation** complète de la structure
+Ce script va :
+1. Patcher les prix de la boutique Fate Coin
+2. Injecter BLAZE.ALL dans le BIN
+3. Patcher les statistiques des monstres
 
-### Structure identifiée
+### Option 2: Modification spécifique
 
-Chaque sort est précédé d'une structure de 48 bytes contenant :
-- Position -32 : ID/Coût MP
-- Position -26 : Élément (0=Neutre, 2=Foudre, 5=Glace, 8=Sacré)
-- Position -24 : Puissance/Dégâts
-- Position -17 : Type d'effet
-- Position -16 : Flags de cible
-- Voir `spells/STRUCTURE_ANALYSIS.md` pour les détails complets
+- **Monster stats** : `py -3 monster_stats\patch_monster_stats_bin.py`
+- **Fate Coin Shop** : `py -3 fate_coin_shop\patch_fate_coin_shop.py`
+- **Auction prices** : `cd auction_prices && test_auction_prices.bat`
 
-## 📈 Statistiques
+---
 
-- **Total sorts** : 90
-- **Éléments** : 5 types identifiés
-- **Types d'effets** : 4+ types identifiés
-- **Types de cibles** : 5+ types identifiés
+## 📁 Modules détaillés
 
-## 🛠️ Utilisation
+### 🐉 Monster Stats (124 monstres)
 
-### Charger les données d'un sort
+**Organisation :**
+- `normal_enemies/` : 101 monstres réguliers
+- `boss/` : 23 boss
 
+**Structure des données :**
+- 40 statistiques par monstre (int16/uint16)
+- HP, EXP, Dégâts, Armure, Éléments, etc.
+
+**Fichiers :**
+- `_index.json` : Index complet avec tous les monstres
+- `patch_monster_stats_bin.py` : Patch directement le BIN
+- `update_index.py` : Régénère l'index
+
+**Utilisation :**
 ```python
 import json
 
-# Charger un sort spécifique
-with open('spells/Blaze.json', 'r', encoding='utf-8') as f:
-    blaze = json.load(f)
+# Charger un monstre
+with open('monster_stats/boss/Red-Dragon.json', 'r') as f:
+    dragon = json.load(f)
 
-print(f"Nom: {blaze['name']}")
-print(f"MP Cost: {blaze['detailed_stats']['mp_cost']}")
-print(f"Power: {blaze['detailed_stats']['power_damage']}")
-print(f"Element: {blaze['interpretations']['element']}")
-print(f"Target: {blaze['interpretations']['target']}")
+# Modifier HP
+dragon['stats']['hp'] = 9999
+with open('monster_stats/boss/Red-Dragon.json', 'w') as f:
+    json.dump(dragon, f, indent=2)
+
+# Appliquer au jeu
+# py -3 monster_stats\patch_monster_stats_bin.py
 ```
 
-### Charger l'index complet
+---
 
-```python
-import json
+### 💰 Fate Coin Shop (23 items)
 
-with open('spells/INDEX.json', 'r', encoding='utf-8') as f:
-    index = json.load(f)
+**Location dans BLAZE.ALL :** 10 copies aux offsets :
+- 0x00B1443C, 0x00B14C3C, 0x00B1EC24, etc.
 
-print(f"Total spells: {index['total_spells']}")
-print("By type:")
-for spell_type, count in index['by_type'].items():
-    print(f"  {spell_type}: {count}")
-```
+**Fichiers :**
+- `fate_coin_shop.json` : Prix et items de la boutique
+- `patch_fate_coin_shop.py` : Script de modification
 
-## 📝 Structure des fichiers JSON
-
-Chaque sort contient :
-
+**Modification des prix :**
 ```json
 {
-  "name": "Nom du sort",
-  "type": "Type général",
-  "offset": "Position dans BLAZE.ALL",
-  "stats": { /* Stats de base */ },
-  "detailed_stats": {
-    "spell_id": 9,
-    "mp_cost": 9,
-    "power_damage": 15,
-    "magic_level": 24,
-    "element": 0,
-    "effect_type_byte": 4,
-    "target_flags": 32800,
-    "range_flags": 4160,
-    "special_flags": { /* Flags */ }
-  },
-  "interpretations": {
-    "element": "Neutral",
-    "effect_type": "Direct Damage",
-    "target": "All Enemies"
-  },
-  "raw_data": { /* Données brutes */ }
+  "items": [
+    {
+      "index": 0,
+      "price": 0,           ← Modifier ici (0-255)
+      "default_price": 1,
+      "item": "Rope of Return"
+    }
+  ]
 }
 ```
 
-## 🎯 Applications possibles
+Puis : `py -3 fate_coin_shop\patch_fate_coin_shop.py`
 
-- **Modding** : Modification des stats de sorts
-- **Balance patches** : Rééquilibrage du gameplay
-- **Documentation** : Guide complet des sorts
+---
+
+### 🏛️ Auction Prices (EN RECHERCHE)
+
+**Statut :** Solution trouvée mais nécessite test in-game
+
+**Location découverte :** `0x002EA500` dans BLAZE.ALL
+**Format :** Mots 16-bit little-endian
+
+**Prix confirmés :**
+- Word[0] = 10 (Healing Potion)
+- Word[2] = 22 (Shortsword)
+- Word[13] = 36 (Leather Armor)
+
+**Test :**
+```bash
+cd auction_prices
+test_auction_prices.bat
+```
+
+Voir `auction_prices/AUCTION_PRICE_SOLUTION.md` pour détails complets.
+
+---
+
+### ✨ Spells (90 sorts)
+
+**Base de données complète** de tous les sorts du jeu :
+- Coût en MP
+- Puissance/Dégâts
+- Élément (Neutre, Feu, Glace, Foudre, Sacré)
+- Type d'effet (Damage, AOE, Buff)
+- Cible (Single, Group, All)
+
+Voir `spells/README.md` pour documentation complète.
+
+---
+
+## 🔬 Méthodologie
+
+Toutes les données ont été extraites par **reverse engineering** du fichier `BLAZE.ALL` (46 MB) :
+
+1. Analyse de la structure binaire
+2. Identification des patterns répétitifs
+3. Validation avec les valeurs connues du jeu
+4. Création d'outils de modification
+5. Tests in-game
+
+---
+
+## 🛠️ Build Process
+
+Le script `build_gameplay_patch.bat` exécute dans l'ordre :
+
+1. **Fate Coin Shop** → `fate_coin_shop\patch_fate_coin_shop.py`
+   - Lit `fate_coin_shop.json`
+   - Patch `work\BLAZE.ALL`
+
+2. **BLAZE.ALL injection** → `patch_blaze_all.py`
+   - Inject `work\BLAZE.ALL` dans `work\Blaze & Blade - Patched.bin`
+   - Patch les 2 copies (LBA 163167 et 185765)
+
+3. **Monster Stats** → `monster_stats\patch_monster_stats_bin.py`
+   - Lit tous les JSON dans `monster_stats/`
+   - Patch directement le BIN
+   - Trouve automatiquement toutes les occurrences de chaque monstre
+
+---
+
+## 📈 Statistiques
+
+- **Monstres** : 124 (101 normaux + 23 boss)
+- **Sorts** : 90
+- **Items Fate Coin** : 23
+- **Auction Prices** : 8 confirmés (recherche en cours)
+
+---
+
+## 🎯 Applications
+
+- **Modding** : Modification complète du gameplay
+- **Balance patches** : Rééquilibrage des difficultés
+- **Documentation** : Guides complets du jeu
 - **Traduction** : Base pour localisation
 - **Analyse** : Étude du game design
 
-## ⚠️ Notes
+---
 
-- Le fichier `BLAZE.ALL` n'est pas inclus (46 MB, propriété de T&E Soft)
-- Cette analyse est fournie à des fins éducatives et de préservation
-- Certains champs restent à identifier (voir STRUCTURE_ANALYSIS.md)
+## ⚠️ Prérequis
+
+- Python 3.x
+- `work\BLAZE.ALL` (46 MB)
+- `work\Blaze & Blade - Patched.bin` (703 MB)
+- Émulateur PS1 pour tester
+
+---
 
 ## 📅 Historique
 
-- **2026-02-03** : Analyse initiale et extraction complète des sorts
-- **2026-02-03** : Identification de la structure binaire
-- **2026-02-03** : Documentation complète
+- **2026-02-04** : Organisation en sous-dossiers modulaires
+- **2026-02-04** : Découverte table prix enchères (0x002EA500)
+- **2026-02-04** : Monster stats : 124 monstres organisés
+- **2026-02-03** : Fate Coin Shop : modification fonctionnelle
+- **2026-02-03** : Extraction complète des 90 sorts
+- **2026-02-03** : Identification structure binaire BLAZE.ALL
+
+---
 
 ## 📧 Contact
 
