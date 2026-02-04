@@ -6,7 +6,22 @@ Complete level design extraction and door modification system for **Blaze & Blad
 
 ## Quick Start
 
-### 1. Modify Doors (Most Common Use)
+### 1. Modify Levels (Chests & Spawns by Game Level) ⭐ NEW
+
+```batch
+# 1. Edit level files
+notepad levels_chests\castle_of_vamp.json
+notepad levels_spawns\castle_of_vamp.json
+
+# 2. Apply changes
+apply_level_mods.bat
+
+# Done! Test in emulator
+```
+
+See `LEVEL_MODS_GUIDE.md` for detailed examples.
+
+### 2. Modify Doors
 
 ```batch
 # Unlock all doors
@@ -19,7 +34,7 @@ remove_keys.bat
 lock_all_doors_test.bat
 ```
 
-### 2. Visualize in Unity
+### 3. Visualize in Unity
 
 1. Create new Unity project (3D)
 2. Copy CSV files to `Assets/Data/`
@@ -29,6 +44,14 @@ lock_all_doors_test.bat
 ---
 
 ## Features
+
+### Level Modification by Game Level ⭐ NEW
+- Edit spawns and chests organized by actual game levels
+- JSON files per level (Castle, Cavern, Ruins, etc.)
+- Modify monster types, spawn rates, quantities
+- Change chest contents and item quantities
+- Binary patching with automatic backup
+- Simple workflow: Edit JSON → Run .bat → Test
 
 ### Door Modification System
 - Unlock/lock doors
@@ -75,8 +98,11 @@ level_design/
 │
 ├── Scripts - Modding
 │   ├── patch_doors.py                 # Door patching system
+│   ├── patch_levels.py                # Level patching system ⭐ NEW
 │   ├── generate_door_presets.py       # Generate preset configs
-│   ├── apply_door_mods.bat            # Main automation script
+│   ├── organize_by_game_levels.py     # Organize data by level ⭐ NEW
+│   ├── apply_door_mods.bat            # Door automation
+│   ├── apply_level_mods.bat           # Level automation ⭐ NEW
 │   ├── unlock_all_doors.bat           # Unlock preset
 │   ├── remove_keys.bat                # Remove keys preset
 │   ├── lock_all_doors_test.bat        # Lock preset (test)
@@ -106,6 +132,17 @@ level_design/
 │   ├── coordinates_zone_3mb.csv       # Zone 3 vertex data
 │   ├── coordinates_zone_5mb.csv       # Floor/ceiling geometry
 │   └── coordinates_zone_9mb.csv       # Cameras/spawns
+│
+├── Data - Levels (Organized by Game Level) ⭐ NEW
+│   ├── levels_index.json              # Master index
+│   ├── levels_chests/                 # Chest data by level
+│   │   ├── castle_of_vamp.json        # 91 chests
+│   │   └── ...
+│   └── levels_spawns/                 # Spawn data by level
+│       ├── castle_of_vamp.json        # 16 spawns
+│       ├── ruins.json                 # 50 spawns
+│       ├── unknown.json               # 10 spawns
+│       └── ...
 │
 └── Unity
     ├── CompleteVisualizationV2.cs     # Main visualization script
@@ -233,6 +270,7 @@ See `unity/COMPLETE_VISUALIZATION_GUIDE.md` for details.
 
 ## Guides
 
+- **LEVEL_MODS_GUIDE.md** - ⭐ Modify chests & spawns by game level (NEW)
 - **DOOR_MODDING_QUICKSTART.md** - 5-minute door modding guide
 - **DOOR_PATCHING_GUIDE.md** - Complete door modification reference
 - **SPAWNS_BY_LEVEL.md** - Spawn data organized by zone

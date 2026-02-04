@@ -1,0 +1,54 @@
+{
+  "_readme": "Master index of all level data files",
+  "_usage": "Edit individual level files in levels_spawns/ and levels_chests/ folders",
+  "levels": {
+    "castle_of_vamp": {
+      "name": "Castle of Vamp",
+      "description": "Main castle area with multiple floors",
+      "spawns_file": "levels_spawns/castle_of_vamp.json",
+      "chests_file": "levels_chests/castle_of_vamp.json"
+    },
+    "cavern_of_death": {
+      "name": "Cavern of Death",
+      "description": "Dark cave system",
+      "spawns_file": null,
+      "chests_file": null
+    },
+    "sealed_cave": {
+      "name": "The Sealed Cave",
+      "description": "Sealed underground area",
+      "spawns_file": null,
+      "chests_file": null
+    },
+    "ruins": {
+      "name": "Ancient Ruins",
+      "description": "Ruined structures and chambers",
+      "spawns_file": "levels_spawns/ruins.json",
+      "chests_file": null
+    },
+    "forest": {
+      "name": "The Forest",
+      "description": "Forest and outdoor areas",
+      "spawns_file": null,
+      "chests_file": null
+    },
+    "fire_mountain": {
+      "name": "Mountain of Fire Dragon",
+      "description": "Volcanic mountain area",
+      "spawns_file": null,
+      "chests_file": null
+    },
+    "valley": {
+      "name": "Valley of White Wind",
+      "description": "Valley region",
+      "spawns_file": null,
+      "chests_file": null
+    },
+    "unknown": {
+      "name": "Unknown/Mixed Areas",
+      "description": "Unidentified or mixed level data",
+      "spawns_file": "levels_spawns/unknown.json",
+      "chests_file": null
+    }
+  }
+}

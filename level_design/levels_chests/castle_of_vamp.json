@@ -1,0 +1,1108 @@
+{
+  "_readme": "Modify chests for Castle of Vamp",
+  "_instructions": [
+    "Edit the chests array to change values",
+    "monster_id/item_id: Change to spawn different monsters/items",
+    "spawn_chance: 0-100 percentage (for spawns)",
+    "spawn_count: Number of monsters per spawn (for spawns)",
+    "quantity: Number of items in chest (for chests)",
+    "position: x,y,z coordinates (careful with these)",
+    "Save and run patch script to apply changes"
+  ],
+  "level_name": "Castle of Vamp",
+  "description": "Main castle area with multiple floors",
+  "chests": [
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 16,
+      "position": {
+        "x": 255,
+        "y": 0,
+        "z": 0
+      },
+      "offset": "0x1017f8",
+      "comment": "Contains: 16x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 9,
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 16
+      },
+      "offset": "0x1017fc",
+      "comment": "Contains: 9x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 9,
+      "position": {
+        "x": 4883,
+        "y": 4883,
+        "z": 16
+      },
+      "offset": "0x104ffc",
+      "comment": "Contains: 9x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 64,
+      "position": {
+        "x": 6156,
+        "y": 0,
+        "z": 640
+      },
+      "offset": "0x105214",
+      "comment": "Contains: 64x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 16,
+      "position": {
+        "x": 255,
+        "y": 0,
+        "z": 0
+      },
+      "offset": "0x10b7f8",
+      "comment": "Contains: 16x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 9,
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 16
+      },
+      "offset": "0x10b7fc",
+      "comment": "Contains: 9x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 36,
+      "position": {
+        "x": 3468,
+        "y": 0,
+        "z": 640
+      },
+      "offset": "0x10ba14",
+      "comment": "Contains: 36x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 19,
+      "position": {
+        "x": 19,
+        "y": 4864,
+        "z": 19
+      },
+      "offset": "0x10c2c0",
+      "comment": "Contains: 19x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 19,
+      "position": {
+        "x": 19,
+        "y": 4864,
+        "z": 19
+      },
+      "offset": "0x10c2c8",
+      "comment": "Contains: 19x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 19,
+      "position": {
+        "x": 19,
+        "y": 4864,
+        "z": 19
+      },
+      "offset": "0x10c308",
+      "comment": "Contains: 19x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 19,
+      "position": {
+        "x": 19,
+        "y": 4864,
+        "z": 19
+      },
+      "offset": "0x10c310",
+      "comment": "Contains: 19x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 19,
+      "position": {
+        "x": 19,
+        "y": 4864,
+        "z": 19
+      },
+      "offset": "0x10c350",
+      "comment": "Contains: 19x Normal Sword"
+    },
+    {
+      "item_name": "Belladonna",
+      "item_id": 19,
+      "quantity": 19,
+      "position": {
+        "x": 4627,
+        "y": 4114,
+        "z": 19
+      },
+      "offset": "0x10c394",
+      "comment": "Contains: 19x Belladonna"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 19,
+      "position": {
+        "x": 19,
+        "y": 19,
+        "z": 19
+      },
+      "offset": "0x10c398",
+      "comment": "Contains: 19x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 19,
+      "position": {
+        "x": 4112,
+        "y": 4112,
+        "z": 19
+      },
+      "offset": "0x10c5d4",
+      "comment": "Contains: 19x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 16,
+      "position": {
+        "x": 255,
+        "y": 0,
+        "z": 0
+      },
+      "offset": "0x110ff8",
+      "comment": "Contains: 16x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 9,
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 16
+      },
+      "offset": "0x110ffc",
+      "comment": "Contains: 9x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 48,
+      "position": {
+        "x": 4620,
+        "y": 0,
+        "z": 640
+      },
+      "offset": "0x111214",
+      "comment": "Contains: 48x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 9,
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 16
+      },
+      "offset": "0x1127fc",
+      "comment": "Contains: 9x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 40,
+      "position": {
+        "x": 4112,
+        "y": 4112,
+        "z": 4112
+      },
+      "offset": "0x115b90",
+      "comment": "Contains: 40x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 40,
+      "position": {
+        "x": 4112,
+        "y": 4112,
+        "z": 0
+      },
+      "offset": "0x115c90",
+      "comment": "Contains: 40x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 40,
+      "position": {
+        "x": 4112,
+        "y": 0,
+        "z": 0
+      },
+      "offset": "0x115d90",
+      "comment": "Contains: 40x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 40,
+      "position": {
+        "x": 255,
+        "y": 0,
+        "z": 0
+      },
+      "offset": "0x115e90",
+      "comment": "Contains: 40x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 40,
+      "position": {
+        "x": 255,
+        "y": 0,
+        "z": 0
+      },
+      "offset": "0x115f90",
+      "comment": "Contains: 40x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 40,
+      "position": {
+        "x": 255,
+        "y": 0,
+        "z": 0
+      },
+      "offset": "0x116090",
+      "comment": "Contains: 40x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 40,
+      "position": {
+        "x": 255,
+        "y": 0,
+        "z": 0
+      },
+      "offset": "0x116290",
+      "comment": "Contains: 40x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 40,
+      "position": {
+        "x": 255,
+        "y": 0,
+        "z": 0
+      },
+      "offset": "0x116390",
+      "comment": "Contains: 40x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 40,
+      "position": {
+        "x": 255,
+        "y": 0,
+        "z": 0
+      },
+      "offset": "0x116490",
+      "comment": "Contains: 40x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 40,
+      "position": {
+        "x": 4112,
+        "y": 4112,
+        "z": 4112
+      },
+      "offset": "0x116580",
+      "comment": "Contains: 40x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 40,
+      "position": {
+        "x": 255,
+        "y": 0,
+        "z": 0
+      },
+      "offset": "0x116590",
+      "comment": "Contains: 40x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 40,
+      "position": {
+        "x": 4112,
+        "y": 4112,
+        "z": 16
+      },
+      "offset": "0x116680",
+      "comment": "Contains: 40x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 40,
+      "position": {
+        "x": 255,
+        "y": 0,
+        "z": 0
+      },
+      "offset": "0x116690",
+      "comment": "Contains: 40x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 40,
+      "position": {
+        "x": 4112,
+        "y": 4112,
+        "z": 0
+      },
+      "offset": "0x116780",
+      "comment": "Contains: 40x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 40,
+      "position": {
+        "x": 255,
+        "y": 0,
+        "z": 0
+      },
+      "offset": "0x116790",
+      "comment": "Contains: 40x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 40,
+      "position": {
+        "x": 4112,
+        "y": 0,
+        "z": 0
+      },
+      "offset": "0x116880",
+      "comment": "Contains: 40x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 40,
+      "position": {
+        "x": 255,
+        "y": 0,
+        "z": 0
+      },
+      "offset": "0x116890",
+      "comment": "Contains: 40x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 40,
+      "position": {
+        "x": 255,
+        "y": 0,
+        "z": 0
+      },
+      "offset": "0x116a90",
+      "comment": "Contains: 40x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 40,
+      "position": {
+        "x": 255,
+        "y": 0,
+        "z": 0
+      },
+      "offset": "0x116b90",
+      "comment": "Contains: 40x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 40,
+      "position": {
+        "x": 255,
+        "y": 0,
+        "z": 0
+      },
+      "offset": "0x116c90",
+      "comment": "Contains: 40x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 40,
+      "position": {
+        "x": 4112,
+        "y": 4112,
+        "z": 4112
+      },
+      "offset": "0x116d80",
+      "comment": "Contains: 40x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 40,
+      "position": {
+        "x": 255,
+        "y": 0,
+        "z": 0
+      },
+      "offset": "0x116d90",
+      "comment": "Contains: 40x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 40,
+      "position": {
+        "x": 4112,
+        "y": 4112,
+        "z": 16
+      },
+      "offset": "0x116e80",
+      "comment": "Contains: 40x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 40,
+      "position": {
+        "x": 255,
+        "y": 0,
+        "z": 0
+      },
+      "offset": "0x116e90",
+      "comment": "Contains: 40x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 40,
+      "position": {
+        "x": 4112,
+        "y": 4112,
+        "z": 0
+      },
+      "offset": "0x116f80",
+      "comment": "Contains: 40x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 40,
+      "position": {
+        "x": 255,
+        "y": 0,
+        "z": 0
+      },
+      "offset": "0x116f90",
+      "comment": "Contains: 40x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 16,
+      "position": {
+        "x": 255,
+        "y": 0,
+        "z": 0
+      },
+      "offset": "0x116ff8",
+      "comment": "Contains: 16x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 9,
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 16
+      },
+      "offset": "0x116ffc",
+      "comment": "Contains: 9x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 16,
+      "position": {
+        "x": 255,
+        "y": 0,
+        "z": 0
+      },
+      "offset": "0x11b7f8",
+      "comment": "Contains: 16x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 9,
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 16
+      },
+      "offset": "0x11b7fc",
+      "comment": "Contains: 9x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 16,
+      "position": {
+        "x": 255,
+        "y": 0,
+        "z": 0
+      },
+      "offset": "0x122ff8",
+      "comment": "Contains: 16x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 9,
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 16
+      },
+      "offset": "0x122ffc",
+      "comment": "Contains: 9x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 16,
+      "position": {
+        "x": 255,
+        "y": 0,
+        "z": 0
+      },
+      "offset": "0x12bff8",
+      "comment": "Contains: 16x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 9,
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 16
+      },
+      "offset": "0x12bffc",
+      "comment": "Contains: 9x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 16,
+      "position": {
+        "x": 255,
+        "y": 0,
+        "z": 0
+      },
+      "offset": "0x1307f8",
+      "comment": "Contains: 16x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 9,
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 16
+      },
+      "offset": "0x1307fc",
+      "comment": "Contains: 9x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 64,
+      "position": {
+        "x": 6156,
+        "y": 0,
+        "z": 640
+      },
+      "offset": "0x130a14",
+      "comment": "Contains: 64x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 9,
+      "position": {
+        "x": 5911,
+        "y": 5911,
+        "z": 16
+      },
+      "offset": "0x1327fc",
+      "comment": "Contains: 9x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 16,
+      "position": {
+        "x": 255,
+        "y": 0,
+        "z": 0
+      },
+      "offset": "0x136ff8",
+      "comment": "Contains: 16x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 9,
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 16
+      },
+      "offset": "0x136ffc",
+      "comment": "Contains: 9x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 16,
+      "position": {
+        "x": 255,
+        "y": 0,
+        "z": 0
+      },
+      "offset": "0x13b7f8",
+      "comment": "Contains: 16x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 9,
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 16
+      },
+      "offset": "0x13b7fc",
+      "comment": "Contains: 9x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 9,
+      "position": {
+        "x": 6681,
+        "y": 6426,
+        "z": 16
+      },
+      "offset": "0x13fffc",
+      "comment": "Contains: 9x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 9,
+      "position": {
+        "x": 6939,
+        "y": 6939,
+        "z": 16
+      },
+      "offset": "0x1447fc",
+      "comment": "Contains: 9x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 9,
+      "position": {
+        "x": 6939,
+        "y": 6169,
+        "z": 16
+      },
+      "offset": "0x146ffc",
+      "comment": "Contains: 9x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 16,
+      "position": {
+        "x": 255,
+        "y": 0,
+        "z": 0
+      },
+      "offset": "0x153ff8",
+      "comment": "Contains: 16x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 9,
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 16
+      },
+      "offset": "0x153ffc",
+      "comment": "Contains: 9x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 60,
+      "position": {
+        "x": 5772,
+        "y": 0,
+        "z": 640
+      },
+      "offset": "0x154214",
+      "comment": "Contains: 60x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 9,
+      "position": {
+        "x": 5397,
+        "y": 5396,
+        "z": 16
+      },
+      "offset": "0x155ffc",
+      "comment": "Contains: 9x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 16,
+      "position": {
+        "x": 255,
+        "y": 0,
+        "z": 0
+      },
+      "offset": "0x15cff8",
+      "comment": "Contains: 16x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 9,
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 16
+      },
+      "offset": "0x15cffc",
+      "comment": "Contains: 9x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 16,
+      "position": {
+        "x": 255,
+        "y": 0,
+        "z": 0
+      },
+      "offset": "0x1617f8",
+      "comment": "Contains: 16x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 9,
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 16
+      },
+      "offset": "0x1617fc",
+      "comment": "Contains: 9x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 9,
+      "position": {
+        "x": 0,
+        "y": 3840,
+        "z": 16
+      },
+      "offset": "0x165ffc",
+      "comment": "Contains: 9x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 9,
+      "position": {
+        "x": 4628,
+        "y": 6683,
+        "z": 16
+      },
+      "offset": "0x1697fc",
+      "comment": "Contains: 9x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 16,
+      "position": {
+        "x": 255,
+        "y": 0,
+        "z": 0
+      },
+      "offset": "0x16dff8",
+      "comment": "Contains: 16x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 9,
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 16
+      },
+      "offset": "0x16dffc",
+      "comment": "Contains: 9x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 60,
+      "position": {
+        "x": 5772,
+        "y": 0,
+        "z": 640
+      },
+      "offset": "0x16e214",
+      "comment": "Contains: 60x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 9,
+      "position": {
+        "x": 6172,
+        "y": 6429,
+        "z": 16
+      },
+      "offset": "0x16fffc",
+      "comment": "Contains: 9x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 9,
+      "position": {
+        "x": 4371,
+        "y": 4882,
+        "z": 16
+      },
+      "offset": "0x1747fc",
+      "comment": "Contains: 9x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 48,
+      "position": {
+        "x": 6156,
+        "y": 0,
+        "z": 640
+      },
+      "offset": "0x178a14",
+      "comment": "Contains: 48x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 9,
+      "position": {
+        "x": 4369,
+        "y": 4369,
+        "z": 16
+      },
+      "offset": "0x17a7fc",
+      "comment": "Contains: 9x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 24,
+      "position": {
+        "x": 3084,
+        "y": 0,
+        "z": 640
+      },
+      "offset": "0x17aa14",
+      "comment": "Contains: 24x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 9,
+      "position": {
+        "x": 6427,
+        "y": 7703,
+        "z": 16
+      },
+      "offset": "0x17b7fc",
+      "comment": "Contains: 9x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 9,
+      "position": {
+        "x": 4627,
+        "y": 4626,
+        "z": 16
+      },
+      "offset": "0x17fffc",
+      "comment": "Contains: 9x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 9,
+      "position": {
+        "x": 4115,
+        "y": 4112,
+        "z": 16
+      },
+      "offset": "0x1897fc",
+      "comment": "Contains: 9x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 9,
+      "position": {
+        "x": 0,
+        "y": 3840,
+        "z": 16
+      },
+      "offset": "0x18dffc",
+      "comment": "Contains: 9x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 16,
+      "position": {
+        "x": 255,
+        "y": 0,
+        "z": 0
+      },
+      "offset": "0x1927f8",
+      "comment": "Contains: 16x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 9,
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 16
+      },
+      "offset": "0x1927fc",
+      "comment": "Contains: 9x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 9,
+      "position": {
+        "x": 4113,
+        "y": 4112,
+        "z": 16
+      },
+      "offset": "0x199ffc",
+      "comment": "Contains: 9x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 80,
+      "position": {
+        "x": 7692,
+        "y": 0,
+        "z": 640
+      },
+      "offset": "0x19a214",
+      "comment": "Contains: 80x Normal Sword"
+    },
+    {
+      "item_name": "Normal Sword",
+      "item_id": 0,
+      "quantity": 9,
+      "position": {
+        "x": 6682,
+        "y": 6681,
+        "z": 16
+      },
+      "offset": "0x19c7fc",
+      "comment": "Contains: 9x Normal Sword"
+    }
+  ]
+}

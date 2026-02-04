@@ -1,0 +1,716 @@
+{
+  "_readme": "Modify spawns for Ancient Ruins",
+  "_instructions": [
+    "Edit the spawns array to change values",
+    "monster_id/item_id: Change to spawn different monsters/items",
+    "spawn_chance: 0-100 percentage (for spawns)",
+    "spawn_count: Number of monsters per spawn (for spawns)",
+    "quantity: Number of items in chest (for chests)",
+    "position: x,y,z coordinates (careful with these)",
+    "Save and run patch script to apply changes"
+  ],
+  "level_name": "Ancient Ruins",
+  "description": "Ruined structures and chambers",
+  "spawns": [
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 3072,
+        "y": 3744,
+        "z": 0
+      },
+      "spawn_chance": 0,
+      "spawn_count": 0,
+      "zone_id": 0,
+      "offset": "0x500000",
+      "comment": "Spawn chance: 0%, Count: 0"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 3084,
+        "y": 3710,
+        "z": 0
+      },
+      "spawn_chance": 0,
+      "spawn_count": 0,
+      "zone_id": 0,
+      "offset": "0x500010",
+      "comment": "Spawn chance: 0%, Count: 0"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 3072,
+        "y": 3687,
+        "z": 0
+      },
+      "spawn_chance": 0,
+      "spawn_count": 0,
+      "zone_id": 0,
+      "offset": "0x500020",
+      "comment": "Spawn chance: 0%, Count: 0"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 3084,
+        "y": 3653,
+        "z": 0
+      },
+      "spawn_chance": 0,
+      "spawn_count": 0,
+      "zone_id": 0,
+      "offset": "0x500030",
+      "comment": "Spawn chance: 0%, Count: 0"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 3072,
+        "y": 694,
+        "z": 0
+      },
+      "spawn_chance": 3,
+      "spawn_count": 13,
+      "zone_id": 0,
+      "offset": "0x500040",
+      "comment": "Spawn chance: 3%, Count: 13"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 3072,
+        "y": 625,
+        "z": 0
+      },
+      "spawn_chance": 3,
+      "spawn_count": 13,
+      "zone_id": 0,
+      "offset": "0x500050",
+      "comment": "Spawn chance: 3%, Count: 13"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 3072,
+        "y": 568,
+        "z": 0
+      },
+      "spawn_chance": 3,
+      "spawn_count": 13,
+      "zone_id": 0,
+      "offset": "0x500060",
+      "comment": "Spawn chance: 3%, Count: 13"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 3072,
+        "y": 500,
+        "z": 0
+      },
+      "spawn_chance": 3,
+      "spawn_count": 13,
+      "zone_id": 0,
+      "offset": "0x500070",
+      "comment": "Spawn chance: 3%, Count: 13"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 3084,
+        "y": 432,
+        "z": 0
+      },
+      "spawn_chance": 3,
+      "spawn_count": 13,
+      "zone_id": 0,
+      "offset": "0x500080",
+      "comment": "Spawn chance: 3%, Count: 13"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 3084,
+        "y": 375,
+        "z": 0
+      },
+      "spawn_chance": 3,
+      "spawn_count": 13,
+      "zone_id": 0,
+      "offset": "0x500090",
+      "comment": "Spawn chance: 3%, Count: 13"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 3084,
+        "y": 307,
+        "z": 0
+      },
+      "spawn_chance": 3,
+      "spawn_count": 13,
+      "zone_id": 0,
+      "offset": "0x5000a0",
+      "comment": "Spawn chance: 3%, Count: 13"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 4096,
+        "y": 0,
+        "z": 3084
+      },
+      "spawn_chance": 250,
+      "spawn_count": 0,
+      "zone_id": 0,
+      "offset": "0x5000ac",
+      "comment": "Spawn chance: 250%, Count: 0"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 3084,
+        "y": 250,
+        "z": 0
+      },
+      "spawn_chance": 3,
+      "spawn_count": 13,
+      "zone_id": 0,
+      "offset": "0x5000b0",
+      "comment": "Spawn chance: 3%, Count: 13"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 4096,
+        "y": 0,
+        "z": 3084
+      },
+      "spawn_chance": 182,
+      "spawn_count": 0,
+      "zone_id": 0,
+      "offset": "0x5000bc",
+      "comment": "Spawn chance: 182%, Count: 0"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 3084,
+        "y": 182,
+        "z": 0
+      },
+      "spawn_chance": 3,
+      "spawn_count": 13,
+      "zone_id": 0,
+      "offset": "0x5000c0",
+      "comment": "Spawn chance: 3%, Count: 13"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 4096,
+        "y": 0,
+        "z": 3084
+      },
+      "spawn_chance": 113,
+      "spawn_count": 0,
+      "zone_id": 0,
+      "offset": "0x5000cc",
+      "comment": "Spawn chance: 113%, Count: 0"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 3084,
+        "y": 113,
+        "z": 0
+      },
+      "spawn_chance": 3,
+      "spawn_count": 13,
+      "zone_id": 0,
+      "offset": "0x5000d0",
+      "comment": "Spawn chance: 3%, Count: 13"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 3402,
+        "y": 0,
+        "z": 0
+      },
+      "spawn_chance": 11,
+      "spawn_count": 0,
+      "zone_id": 0,
+      "offset": "0x5000e2",
+      "comment": "Spawn chance: 11%, Count: 0"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 3596,
+        "y": 0,
+        "z": 0
+      },
+      "spawn_chance": 11,
+      "spawn_count": 0,
+      "zone_id": 0,
+      "offset": "0x5000f2",
+      "comment": "Spawn chance: 11%, Count: 0"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 3789,
+        "y": 0,
+        "z": 0
+      },
+      "spawn_chance": 11,
+      "spawn_count": 0,
+      "zone_id": 0,
+      "offset": "0x500102",
+      "comment": "Spawn chance: 11%, Count: 0"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 3983,
+        "y": 0,
+        "z": 0
+      },
+      "spawn_chance": 11,
+      "spawn_count": 0,
+      "zone_id": 0,
+      "offset": "0x500112",
+      "comment": "Spawn chance: 11%, Count: 0"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 4096,
+        "y": 3060,
+        "z": 0
+      },
+      "spawn_chance": 68,
+      "spawn_count": 0,
+      "zone_id": 0,
+      "offset": "0x50011c",
+      "comment": "Spawn chance: 68%, Count: 0"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 68,
+        "y": 0,
+        "z": 0
+      },
+      "spawn_chance": 11,
+      "spawn_count": 0,
+      "zone_id": 0,
+      "offset": "0x500122",
+      "comment": "Spawn chance: 11%, Count: 0"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 4096,
+        "y": 3060,
+        "z": 0
+      },
+      "spawn_chance": 250,
+      "spawn_count": 0,
+      "zone_id": 0,
+      "offset": "0x50012c",
+      "comment": "Spawn chance: 250%, Count: 0"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 250,
+        "y": 0,
+        "z": 0
+      },
+      "spawn_chance": 11,
+      "spawn_count": 0,
+      "zone_id": 0,
+      "offset": "0x500132",
+      "comment": "Spawn chance: 11%, Count: 0"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 443,
+        "y": 0,
+        "z": 0
+      },
+      "spawn_chance": 11,
+      "spawn_count": 0,
+      "zone_id": 0,
+      "offset": "0x500142",
+      "comment": "Spawn chance: 11%, Count: 0"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 637,
+        "y": 0,
+        "z": 0
+      },
+      "spawn_chance": 11,
+      "spawn_count": 0,
+      "zone_id": 0,
+      "offset": "0x500152",
+      "comment": "Spawn chance: 11%, Count: 0"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 830,
+        "y": 0,
+        "z": 0
+      },
+      "spawn_chance": 11,
+      "spawn_count": 0,
+      "zone_id": 0,
+      "offset": "0x500162",
+      "comment": "Spawn chance: 11%, Count: 0"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 1024,
+        "y": 0,
+        "z": 0
+      },
+      "spawn_chance": 11,
+      "spawn_count": 0,
+      "zone_id": 0,
+      "offset": "0x500172",
+      "comment": "Spawn chance: 11%, Count: 0"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 3983,
+        "y": 0,
+        "z": 0
+      },
+      "spawn_chance": 0,
+      "spawn_count": 0,
+      "zone_id": 0,
+      "offset": "0x500182",
+      "comment": "Spawn chance: 0%, Count: 0"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 3937,
+        "y": 0,
+        "z": 0
+      },
+      "spawn_chance": 0,
+      "spawn_count": 0,
+      "zone_id": 0,
+      "offset": "0x500192",
+      "comment": "Spawn chance: 0%, Count: 0"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 3903,
+        "y": 0,
+        "z": 0
+      },
+      "spawn_chance": 0,
+      "spawn_count": 0,
+      "zone_id": 0,
+      "offset": "0x5001a2",
+      "comment": "Spawn chance: 0%, Count: 0"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 3869,
+        "y": 0,
+        "z": 0
+      },
+      "spawn_chance": 0,
+      "spawn_count": 0,
+      "zone_id": 0,
+      "offset": "0x5001b2",
+      "comment": "Spawn chance: 0%, Count: 0"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 3835,
+        "y": 0,
+        "z": 0
+      },
+      "spawn_chance": 0,
+      "spawn_count": 0,
+      "zone_id": 0,
+      "offset": "0x5001c2",
+      "comment": "Spawn chance: 0%, Count: 0"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 3801,
+        "y": 0,
+        "z": 0
+      },
+      "spawn_chance": 0,
+      "spawn_count": 0,
+      "zone_id": 0,
+      "offset": "0x5001d2",
+      "comment": "Spawn chance: 0%, Count: 0"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 3755,
+        "y": 0,
+        "z": 0
+      },
+      "spawn_chance": 0,
+      "spawn_count": 0,
+      "zone_id": 0,
+      "offset": "0x5001e2",
+      "comment": "Spawn chance: 0%, Count: 0"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 3721,
+        "y": 0,
+        "z": 0
+      },
+      "spawn_chance": 0,
+      "spawn_count": 0,
+      "zone_id": 0,
+      "offset": "0x5001f2",
+      "comment": "Spawn chance: 0%, Count: 0"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 3687,
+        "y": 0,
+        "z": 0
+      },
+      "spawn_chance": 0,
+      "spawn_count": 0,
+      "zone_id": 0,
+      "offset": "0x500202",
+      "comment": "Spawn chance: 0%, Count: 0"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 3653,
+        "y": 0,
+        "z": 0
+      },
+      "spawn_chance": 0,
+      "spawn_count": 0,
+      "zone_id": 0,
+      "offset": "0x500212",
+      "comment": "Spawn chance: 0%, Count: 0"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 0,
+        "y": 4096,
+        "z": 3072
+      },
+      "spawn_chance": 0,
+      "spawn_count": 0,
+      "zone_id": 0,
+      "offset": "0x50021a",
+      "comment": "Spawn chance: 0%, Count: 0"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 4096,
+        "y": 3072,
+        "z": 0
+      },
+      "spawn_chance": 0,
+      "spawn_count": 0,
+      "zone_id": 0,
+      "offset": "0x50021c",
+      "comment": "Spawn chance: 0%, Count: 0"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 4096,
+        "y": 1024,
+        "z": 0
+      },
+      "spawn_chance": 113,
+      "spawn_count": 0,
+      "zone_id": 0,
+      "offset": "0x50022c",
+      "comment": "Spawn chance: 113%, Count: 0"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 113,
+        "y": 0,
+        "z": 0
+      },
+      "spawn_chance": 0,
+      "spawn_count": 0,
+      "zone_id": 0,
+      "offset": "0x500232",
+      "comment": "Spawn chance: 0%, Count: 0"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 4096,
+        "y": 1024,
+        "z": 0
+      },
+      "spawn_chance": 102,
+      "spawn_count": 0,
+      "zone_id": 0,
+      "offset": "0x50023c",
+      "comment": "Spawn chance: 102%, Count: 0"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 102,
+        "y": 0,
+        "z": 0
+      },
+      "spawn_chance": 0,
+      "spawn_count": 0,
+      "zone_id": 0,
+      "offset": "0x500242",
+      "comment": "Spawn chance: 0%, Count: 0"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 4096,
+        "y": 1024,
+        "z": 0
+      },
+      "spawn_chance": 91,
+      "spawn_count": 0,
+      "zone_id": 0,
+      "offset": "0x50024c",
+      "comment": "Spawn chance: 91%, Count: 0"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 91,
+        "y": 0,
+        "z": 0
+      },
+      "spawn_chance": 0,
+      "spawn_count": 0,
+      "zone_id": 0,
+      "offset": "0x500252",
+      "comment": "Spawn chance: 0%, Count: 0"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 4096,
+        "y": 1024,
+        "z": 0
+      },
+      "spawn_chance": 79,
+      "spawn_count": 0,
+      "zone_id": 0,
+      "offset": "0x50025c",
+      "comment": "Spawn chance: 79%, Count: 0"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 79,
+        "y": 0,
+        "z": 0
+      },
+      "spawn_chance": 0,
+      "spawn_count": 0,
+      "zone_id": 0,
+      "offset": "0x500262",
+      "comment": "Spawn chance: 0%, Count: 0"
+    },
+    {
+      "monster_name": "Behemoth",
+      "monster_id": 0,
+      "position": {
+        "x": 4096,
+        "y": 3060,
+        "z": 0
+      },
+      "spawn_chance": 159,
+      "spawn_count": 0,
+      "zone_id": 0,
+      "offset": "0x50026c",
+      "comment": "Spawn chance: 159%, Count: 0"
+    }
+  ]
+}
