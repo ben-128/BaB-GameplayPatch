@@ -232,7 +232,7 @@ if "%MSG%"=="" (
     echo.
     echo. >> "%LOGFILE%"
 ) else (
-    echo %MSG%
-    echo %MSG% >> "%LOGFILE%"
+    echo.%MSG%
+    echo.%MSG% >> "%LOGFILE%"
 )
 goto :eof
