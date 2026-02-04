@@ -12,8 +12,8 @@ if not exist "logs" mkdir logs
 
 REM Generate log filename with simple counter
 for /f %%i in ('powershell -command "Get-Date -Format yyyyMMdd_HHmm"') do set TIMESTAMP=%%i
-set LOGFILE=logs\build_%TIMESTAMP%.log
-set LASTLOG=logs\last_build.log
+set LOGFILE=%~dp0logs\build_%TIMESTAMP%.log
+set LASTLOG=%~dp0logs\last_build.log
 
 echo Initializing build system...
 echo Log file: %LOGFILE%
@@ -68,7 +68,7 @@ call :log "[2/6] Patching Items descriptions (BLAZE.ALL + patched.bin)..."
 call :log ""
 
 cd items
-py -3 patch_items_in_bin.py >> "..\%LOGFILE%" 2>&1
+py -3 patch_items_in_bin.py >> "%LOGFILE%" 2>&1
 set ITEMS_ERRORLEVEL=%errorlevel%
 cd ..
 
