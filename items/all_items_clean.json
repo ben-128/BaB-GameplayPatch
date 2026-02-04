@@ -5526,9 +5526,9 @@
         "0x00F996F4"
       ],
       "id": 159,
-      "new_description": "Wave | S+20,I+40,W+30,A+15,C+25,P+35,M+20,D+20",
+      "new_description": "Wave | S+20,I+40,W+30,A+15,C+25,P+35,M+20,MD+20",
       "max_chars": 63,
-      "current_chars": 46
+      "current_chars": 47
     },
     {
       "name": "Fabnihl",
@@ -9581,9 +9581,9 @@
         "0x020FD3FC"
       ],
       "id": 273,
-      "new_description": "Block magic(heal/atk) | W+12,P+42,L+24,D+42",
+      "new_description": "Block magic(heal/atk) | W+12,P+42,L+24,MD+42",
       "max_chars": 63,
-      "current_chars": 43
+      "current_chars": 44
     },
     {
       "name": "Shadow Veil",
@@ -11033,9 +11033,9 @@
         "0x02BB421C"
       ],
       "id": 313,
-      "new_description": "HP-5%,Crit+5% | All+32,M+100,D+100",
+      "new_description": "HP-5%,Crit+5% | All+32,M+100,MD+100",
       "max_chars": 63,
-      "current_chars": 34
+      "current_chars": 35
     },
     {
       "name": "Death Sickle",
