@@ -3,6 +3,20 @@
 ## Objective
 Find and modify auction prices in Blaze & Blade (PS1)
 
+## Quick Start
+
+**WARNING:** Despite successful patching, modifications have NO effect in-game. Read full report below.
+
+### To Test Yourself:
+1. Run `test_auction_prices.bat` (will create backup automatically)
+2. Load the patched BIN in your PS1 emulator
+3. Start a new game or load existing character
+4. Check auction prices - they will still be original values
+
+### To Restore:
+1. Run `restore_original.bat`
+2. Or manually copy backup file to BLAZE.ALL
+
 ## Known Auction Prices
 - Healing Potion: 10 gold
 - Shortsword: 22 gold
@@ -149,32 +163,25 @@ The search has been exhaustive. Without:
 
 ...further progress is not possible with file patching alone.
 
-## Files Created
+## Files Included
 
-### Tools
-- `test_modify_16bit_prices.py` - Modify prices in BLAZE.ALL
-- `test_modify_correct_location.py` - Patch correct offset
-- `patch_all_prices.py` - Set all prices to 999
-- `verify_bin_patch.py` - Verify BIN contains patches
-- `find_all_price_tables.py` - Find all table copies in BLAZE.ALL
-- `search_original_bin.py` - Search entire BIN for patterns
+### Main Scripts
+- **`test_modify_correct_location.py`** - Patch auction prices at correct location (0x002EA49A)
+- **`patch_all_prices.py`** - Set all 32 words to 999 for testing
+- **`test_auction_prices.bat`** - Automated test workflow (fixes for paths with ampersands)
+- **`restore_original.bat`** - Restore BLAZE.ALL from backup
 
-### Analysis
-- `analyze_save_file.py` - Check if prices in save
-- `search_executable.py` - Search SLES for prices
-- `extract_and_check_levels.py` - Extract LEVELS.DAT
-- `list_all_files.py` - List all disc files
-- `deep_search_sles.py` - Deep search in executable
+### Analysis Tools
+- **`search_original_bin.py`** - Search entire BIN for all price table copies (proves only 2 exist)
+- **`deep_search_sles.py`** - Deep search in SLES_008.45 executable
+- **`extract_and_check_levels.py`** - Extract and verify LEVELS.DAT
+- **`list_all_files.py`** - List all files on PS1 disc
 
 ### Verification
-- `check_current_blaze.py` - Compare two offsets
-- `verify_correct_location.py` - Verify correct location
-- `verify_999.py` - Verify 999 pattern
-- `final_check_bin.py` - Final BIN verification
+- **`verify_999.py`** - Verify 999 pattern in BIN file
 
-### Batch Scripts
-- `test_auction_prices.bat` - Full test workflow (with fixes for paths with ampersands)
-- `restore_original.bat` - Restore from backup
+### Documentation
+- **`README.md`** - Complete research documentation (this file)
 
 ## Next Steps (If Continuing)
 
