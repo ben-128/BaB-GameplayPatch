@@ -5,7 +5,11 @@
     "total_items": 316,
     "faq_items_total": 376,
     "extraction_date": "2026-02-04",
-    "note": "Extraction avec fuzzy matching. new_description: description ou special_effects | attributes. max_chars: limite dans le binaire"
+    "note": "Extraction avec fuzzy matching. new_description: description ou special_effects | attributes. max_chars: limite dans le binaire",
+    "auction_prices_added": true,
+    "auction_prices_count": 9,
+    "auction_prices_source": "BLAZE.ALL offset 0x002EA49A",
+    "auction_prices_note": "Prix connus mappés selon auction_prices/README.md"
   },
   "items": [
     {
@@ -40,7 +44,9 @@
       "id": 0,
       "new_description": "A good sword for beginners to use.",
       "max_chars": 63,
-      "current_chars": 34
+      "current_chars": 34,
+      "auction_price": 24,
+      "auction_price_index": 7
     },
     {
       "name": "Leather Armor",
@@ -79,7 +85,9 @@
       "id": 1,
       "new_description": "Armor made of thick leather.",
       "max_chars": 63,
-      "current_chars": 28
+      "current_chars": 28,
+      "auction_price": 36,
+      "auction_price_index": 13
     },
     {
       "name": "Leather Shield",
@@ -103,7 +111,9 @@
       "id": 2,
       "new_description": "A light, easily used leather shield.",
       "max_chars": 63,
-      "current_chars": 36
+      "current_chars": 36,
+      "auction_price": 46,
+      "auction_price_index": 15
     },
     {
       "name": "Healing Potion",
@@ -136,7 +146,9 @@
       "id": 3,
       "new_description": "Common potion.(Restores HP to single unit)",
       "max_chars": 63,
-      "current_chars": 42
+      "current_chars": 42,
+      "auction_price": 10,
+      "auction_price_index": 0
     },
     {
       "name": "Club",
@@ -217,7 +229,9 @@
       "id": 5,
       "new_description": "MDEF+2",
       "max_chars": 63,
-      "current_chars": 6
+      "current_chars": 6,
+      "auction_price": 72,
+      "auction_price_index": 18
     },
     {
       "name": "Dagger",
@@ -260,7 +274,9 @@
       "id": 6,
       "new_description": "A normal, easily-to-use dagger.",
       "max_chars": 63,
-      "current_chars": 31
+      "current_chars": 31,
+      "auction_price": 28,
+      "auction_price_index": 11
     },
     {
       "name": "Wooden Wand",
@@ -294,7 +310,9 @@
       "id": 7,
       "new_description": "MAT+2",
       "max_chars": 63,
-      "current_chars": 5
+      "current_chars": 5,
+      "auction_price": 24,
+      "auction_price_index": 7
     },
     {
       "name": "Shortbow",
@@ -362,7 +380,9 @@
       "id": 9,
       "new_description": "A normal, easy-to-wiel shortsword.",
       "max_chars": 63,
-      "current_chars": 34
+      "current_chars": 34,
+      "auction_price": 22,
+      "auction_price_index": 2
     },
     {
       "name": "Tomahawk",
@@ -396,7 +416,9 @@
       "id": 10,
       "new_description": "A small, easy-to-wield axe.",
       "max_chars": 63,
-      "current_chars": 27
+      "current_chars": 27,
+      "auction_price": 26,
+      "auction_price_index": 9
     },
     {
       "name": "Rod",
