@@ -1,278 +1,329 @@
-# Level Design Data Analysis & Modding
+# Level Design Analysis & Door Modding
 
-## 📁 Contenu du Dossier
-
-Ce dossier contient l'analyse complète ET les outils de modification pour le level design de Blaze & Blade.
-
-### ⭐ NOUVEAU: Modification des Portes
-- ✅ Débloquer les portes
-- ✅ Enlever les clés requises
-- ✅ Changer les destinations
-- ✅ Réinjecter dans le jeu
+Complete level design extraction and door modification system for **Blaze & Blade: Eternal Quest** (PSX).
 
 ---
 
-## 📊 Fichiers de Données
+## Quick Start
 
-### Données JSON
+### 1. Modify Doors (Most Common Use)
 
-| Fichier | Taille | Description |
-|---------|--------|-------------|
-| **coordinates_export.json** | 111 KB | Master file - Toutes les coordonnées 3D extraites des 5 zones |
-| **level_data_analysis.json** | 61 KB | Structures détaillées autour des noms de niveaux |
-| **spawn_data_analysis.json** | 47 KB | Candidats de spawns monstres et références de coffres |
+```batch
+# Unlock all doors
+unlock_all_doors.bat
 
-### Données CSV (Coordonnées 3D)
+# Or remove key requirements
+remove_keys.bat
 
-| Fichier | Points | Range X | Range Y | Range Z | Description |
-|---------|--------|---------|---------|---------|-------------|
-| **coordinates_zone_1mb.csv** | 500 | 0-7966 | 0-7708 | 0-7956 | Zone géométrie niveau 1 |
-| **coordinates_zone_2mb.csv** | 500 | 0-5911 | 0-5911 | 0-5911 | Zone géométrie niveau 2 |
-| **coordinates_zone_3mb.csv** | 500 | -61-246 | 0-4227 | 0-3084 | Données vertex/polygones |
-| **coordinates_zone_5mb.csv** | 500 | 0-4085 | -61-3084 | 0-4085 | **Géométrie floor/ceiling** ⭐ |
-| **coordinates_zone_9mb.csv** | 500 | ±8192 | ±8192 | 0-1792 | Caméras/spawns |
+# Or test locking doors
+lock_all_doors_test.bat
+```
+
+### 2. Visualize in Unity
+
+1. Create new Unity project (3D)
+2. Copy CSV files to `Assets/Data/`
+3. Add `unity/CompleteVisualizationV2.cs` to a GameObject
+4. See: `unity/COMPLETE_VISUALIZATION_GUIDE.md`
 
 ---
 
-## 🔬 Scripts d'Analyse
+## Features
 
-### 1. explore_level_design.py
-**Premier niveau d'analyse**
-- Extraction de 272,056 strings ASCII
-- Recherche de keywords (level, dungeon, cave, castle, etc.)
-- Détection de patterns de coordonnées basiques
-- Analyse de la structure du fichier
+### Door Modification System
+- Unlock/lock doors
+- Change key requirements
+- Modify destinations
+- Binary patching with automatic backup
+- Preset configurations for common mods
 
-**Usage:**
-```bash
-py -3 explore_level_design.py
+### Data Extraction
+- **100 chests** with items and quantities
+- **150 enemy spawns** with randomness data
+- **50 door structures** with types, keys, destinations
+- **2,500+ 3D coordinates** from 5 zones
+
+### Unity Visualization
+- 3D level geometry display
+- Chests (yellow cubes) with item labels
+- Enemy spawns (red/magenta spheres) with stats
+- Doors (blue cylinders) with unlock conditions
+- Toggle layers independently
+
+---
+
+## File Structure
+
+```
+level_design/
+├── README.md                          # This file
+├── DOOR_MODDING_QUICKSTART.md         # Door mod quick guide
+├── DOOR_PATCHING_GUIDE.md             # Detailed door guide
+├── SPAWNS_BY_LEVEL.md                 # Spawn organization
+│
+├── Scripts - Analysis
+│   ├── add_ids_to_databases.py        # Add IDs to items/monsters
+│   ├── analyze_chests.py              # Extract chest data
+│   ├── analyze_doors.py               # Extract door data
+│   ├── analyze_enemy_spawns.py        # Extract spawn data
+│   ├── analyze_level_data.py          # Extract level names
+│   ├── deep_structure_analysis.py     # Binary structure analysis
+│   ├── explore_level_design.py        # Initial exploration
+│   ├── export_coordinates.py          # Export 3D coordinates
+│   ├── extract_spawn_data.py          # Extract spawn structures
+│   └── organize_spawns_by_level.py    # Organize spawn data
+│
+├── Scripts - Modding
+│   ├── patch_doors.py                 # Door patching system
+│   ├── generate_door_presets.py       # Generate preset configs
+│   ├── apply_door_mods.bat            # Main automation script
+│   ├── unlock_all_doors.bat           # Unlock preset
+│   ├── remove_keys.bat                # Remove keys preset
+│   ├── lock_all_doors_test.bat        # Lock preset (test)
+│   └── run_all_analyses.bat           # Re-run all analyses
+│
+├── Data - Chests
+│   ├── chest_analysis.json            # Detailed chest data
+│   └── chest_positions.csv            # Unity-compatible format
+│
+├── Data - Spawns
+│   ├── spawn_analysis.json            # Detailed spawn data
+│   ├── spawn_positions.csv            # Unity-compatible format
+│   └── spawns_by_level.json           # Organized by zone
+│
+├── Data - Doors
+│   ├── door_analysis.json             # Detailed door data
+│   ├── door_positions.csv             # Unity-compatible format
+│   ├── door_modifications.json        # Your custom mods
+│   └── door_presets/                  # Preset configurations
+│       ├── unlock_all_doors.json
+│       ├── remove_key_requirements.json
+│       └── lock_all_doors_test.json
+│
+├── Data - Coordinates
+│   ├── coordinates_zone_1mb.csv       # Zone 1 geometry
+│   ├── coordinates_zone_2mb.csv       # Zone 2 geometry
+│   ├── coordinates_zone_3mb.csv       # Zone 3 vertex data
+│   ├── coordinates_zone_5mb.csv       # Floor/ceiling geometry
+│   └── coordinates_zone_9mb.csv       # Cameras/spawns
+│
+└── Unity
+    ├── CompleteVisualizationV2.cs     # Main visualization script
+    ├── CoordinateLoader.cs            # Single zone loader
+    ├── MultiZoneLoader.cs             # Multi-zone loader
+    ├── COMPLETE_VISUALIZATION_GUIDE.md # Detailed guide
+    └── UNITY_SETUP.md                 # Setup instructions
 ```
 
-### 2. analyze_level_data.py
-**Analyse détaillée des noms de niveaux**
-- Localisation de 11 noms de niveaux/maps uniques
-- Analyse des structures binaires avant/après les noms
-- Détection de patterns de map data
-- Analyse des références floor/underlevel (115+ occurrences)
+---
 
-**Output:** `level_data_analysis.json`
+## Door Modification Workflow
 
-**Usage:**
-```bash
-py -3 analyze_level_data.py
+### Option 1: Use Presets (5 minutes)
+
+```batch
+cd level_design
+
+# Choose a preset
+unlock_all_doors.bat
+# OR remove_keys.bat
+# OR lock_all_doors_test.bat
+
+# Done! Test in emulator
 ```
 
-### 3. extract_spawn_data.py
-**Détection de spawns et objets**
-- Recherche de références monstres (nécessite monster_stats/_index.json)
-- Extraction de 84 références chest/treasure
-- Identification de 35 zones de structures répétées
-- Analyse de zones 1MB-10MB
+### Option 2: Custom Modifications
 
-**Output:** `spawn_data_analysis.json`
+```batch
+cd level_design
 
-**Usage:**
-```bash
-py -3 extract_spawn_data.py
+# 1. Find door offsets (Unity or door_positions.csv)
+# 2. Edit configuration
+notepad door_modifications.json
+
+# 3. Apply changes
+apply_door_mods.bat
+
+# 4. Test in emulator
 ```
 
-### 4. deep_structure_analysis.py
-**Analyse binaire approfondie**
-- Extraction de 20,000+ candidats de coordonnées 3D
-- Détection de tables structurées (8-64 bytes)
-- Analyse multi-format (int16, uint16, int32, float)
-- Recherche de structures type "monster" (40 valeurs)
-
-**Usage:**
-```bash
-py -3 deep_structure_analysis.py
+**Example door_modifications.json:**
+```json
+{
+  "modifications": [
+    {
+      "name": "Unlock Castle Door",
+      "offset": "0x100000",
+      "new_type": 0,
+      "new_key_id": 0,
+      "enabled": true
+    }
+  ]
+}
 ```
 
-### 5. export_coordinates.py
-**Export des coordonnées pour visualisation**
-- Extraction des coordonnées 3D validées
-- Export en CSV (Excel/Python compatible)
-- Export en JSON (master file)
-- Calcul des bounding boxes
+**Door Types:**
+- 0 = UNLOCKED (always open)
+- 1 = KEY_LOCKED (requires key)
+- 2 = MAGIC_LOCKED (magic spell)
+- 3 = DEMON_ENGRAVED (demon item)
+- 4 = GHOST_ENGRAVED (ghost item)
+- 5 = EVENT_LOCKED (boss defeated)
+- 6 = BOSS_DOOR (boss room)
+- 7 = ONE_WAY (one direction only)
 
-**Output:** Tous les fichiers CSV + `coordinates_export.json`
+---
 
-**Usage:**
-```bash
+## Data Statistics
+
+| Category | Count | Format |
+|----------|-------|--------|
+| Chests | 100 | JSON + CSV |
+| Enemy Spawns | 150 | JSON + CSV |
+| Doors | 50 | JSON + CSV |
+| 3D Coordinates | 2,500+ | CSV (5 zones) |
+| Door Presets | 3 | JSON |
+
+---
+
+## Re-generate Data
+
+If you modify `BLAZE.ALL`:
+
+```batch
+cd level_design
+
+# Re-run all analyses
+run_all_analyses.bat
+
+# Or individually
+py -3 analyze_chests.py
+py -3 analyze_enemy_spawns.py
+py -3 analyze_doors.py
 py -3 export_coordinates.py
 ```
 
 ---
 
-## 📖 Rapports de Documentation
+## Unity Visualization
 
-### LEVEL_DESIGN_REPORT.md
-**Rapport initial complet**
-- 11 noms de niveaux identifiés
-- 672 références de rooms
-- 266 références de portals
-- 2,627 images TIM PSX
-- Structure hiérarchique des niveaux (Floors, Underlevels)
-- Objets interactifs (doors, gates, chests)
-- Recommandations de recherche
+### Setup (5 minutes)
 
-### LEVEL_DESIGN_FINDINGS.md
-**Analyse approfondie des découvertes**
-- Données de coordonnées détaillées par zone
-- Patterns structurels identifiés
-- Hypothèses sur la géométrie de niveau
-- Données de caméra/viewport
-- Spécifications techniques PSX
-- 6 zones de données identifiées (Graphics, Level Data, Game Logic, Text)
+1. Create new Unity project (3D)
+2. Create folder: `Assets/Data/`
+3. Copy all CSV files to `Assets/Data/`
+4. Create empty GameObject in scene
+5. Add `CompleteVisualizationV2.cs` script
+6. Play!
 
-### COORDINATE_VISUALIZATION.md
-**Guide de visualisation 3D**
-- Instructions Python (matplotlib)
-- Instructions Blender
-- Instructions Unity
-- Méthodes de visualisation en ligne
-- Recommandations d'analyse
+### Features
+
+- **Toggle Layers**: Show/hide geometry, chests, spawns, doors
+- **Color Coded**:
+  - Yellow cubes = Chests
+  - Red spheres = Normal enemies
+  - Magenta spheres = Boss enemies
+  - Blue cylinders = Doors
+- **Interactive Labels**: Click objects to see details
+- **Context Menu**: Right-click script to reload data
+
+See `unity/COMPLETE_VISUALIZATION_GUIDE.md` for details.
 
 ---
 
-## 🎯 Découvertes Clés
+## Guides
 
-### Niveaux Identifiés
-
-1. **Castle Of Vamp** (4 variations: 02, 03, 05 BOSS, 06)
-2. **CAVERN OF DEATH** (6 occurrences)
-3. **The Sealed Cave** (13 occurrences)
-4. **The Wood of Ruins**
-5. **The Ancient Ruins** (4 occurrences)
-6. **The Ruins in the Lake**
-7. **The Forest**
-8. **The Mountain of the Fire Dragon**
-9. **VALLEY OF WHITE WIND** (3 occurrences)
-10. **Map03** / **MAP10** (références multiples)
-
-### Structure Hiérarchique
-
-```
-Dungeons Multi-Niveaux
-├── Floor 1, 2, 3 (18/10/7 références)
-├── Underlevel 1, 2, 3 (115 références)
-├── Rooms (672 références)
-│   ├── Storage Room
-│   ├── Control Room
-│   ├── Guest Room
-│   └── Treasure Chamber
-├── Portals (266 références)
-├── Doors (337 références)
-└── Gates (150 références)
-```
-
-### Coordonnées 3D
-
-**Zone 5MB (0x500000) - LA PLUS PROMETTEUSE** ⭐
-- Patterns très réguliers
-- Ressemble à de la géométrie floor/ceiling
-- Coordonnées: 0-4085 (X/Z), -61-3084 (Y)
-- 500+ points exploitables
-
-**Zone 9MB (0x900000) - Caméras/Spawns**
-- Range complet PSX: ±8192
-- Probablement des positions de caméra fixe
-- Données de spawn possibles
+- **DOOR_MODDING_QUICKSTART.md** - 5-minute door modding guide
+- **DOOR_PATCHING_GUIDE.md** - Complete door modification reference
+- **SPAWNS_BY_LEVEL.md** - Spawn data organized by zone
+- **unity/COMPLETE_VISUALIZATION_GUIDE.md** - Unity setup and usage
+- **unity/UNITY_SETUP.md** - Unity installation guide
 
 ---
 
-## 🚀 Quick Start
+## Backup & Safety
 
-### Visualiser les Coordonnées (Recommandé)
-
-**Option 1: Python matplotlib**
-```python
-import pandas as pd
-import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
-
-# Charger la zone la plus prometteuse
-df = pd.read_csv('coordinates_zone_5mb.csv')
-
-# Créer plot 3D
-fig = plt.figure(figsize=(12, 8))
-ax = fig.add_subplot(111, projection='3d')
-ax.scatter(df['x'], df['y'], df['z'], c='blue', marker='o', s=1)
-ax.set_xlabel('X')
-ax.set_ylabel('Y')
-ax.set_zlabel('Z')
-plt.title('Blaze & Blade - Floor/Ceiling Geometry')
-plt.show()
+### Automatic Backup
+All scripts create automatic backups:
+```
+work/BLAZE.ALL.backup
 ```
 
-**Option 2: Excel/LibreOffice**
-1. Ouvrir `coordinates_zone_5mb.csv`
-2. Créer un graphique 3D scatter
-3. Observer les patterns
-
-### Re-générer les Données
-
-Si vous modifiez `BLAZE.ALL`:
-```bash
-# 1. Analyser les noms de niveaux
-py -3 analyze_level_data.py
-
-# 2. Extraire les spawns
-py -3 extract_spawn_data.py
-
-# 3. Exporter les coordonnées
-py -3 export_coordinates.py
+### Restore if Problem
+```batch
+cd work
+copy BLAZE.ALL.backup BLAZE.ALL
 ```
 
 ---
 
-## 📈 Statistiques
+## Technical Details
 
-| Catégorie | Quantité |
-|-----------|----------|
-| Noms de niveaux uniques | 11 |
-| Références de rooms | 672 |
-| Références de portals | 266 |
-| Références de doors | 337 |
-| Références de gates | 150 |
-| Références de chests | 84 |
-| Images TIM PSX | 2,627 |
-| Coordonnées 3D extraites | 2,500+ |
-| Zones de données identifiées | 6 |
+### Extracted Structures
+
+**Chest Structure (14 bytes):**
+```
+Offset+0:  int16 x, y, z (6 bytes)
+Offset+6:  uint16 item_id (2 bytes)
+Offset+8:  uint16 quantity (2 bytes)
+Offset+10: uint16 flags (2 bytes)
+Offset+12: uint16 padding (2 bytes)
+```
+
+**Spawn Structure (16 bytes):**
+```
+Offset+0:  int16 x, y, z (6 bytes)
+Offset+6:  uint16 monster_id (2 bytes)
+Offset+8:  uint8 spawn_chance (1 byte)
+Offset+9:  uint8 spawn_count (1 byte)
+Offset+10: uint16 zone_id (2 bytes)
+Offset+12: uint32 flags (4 bytes)
+```
+
+**Door Structure (14 bytes):**
+```
+Offset+0:  int16 x, y, z (6 bytes)
+Offset+6:  uint16 type (2 bytes)
+Offset+8:  uint16 key_id (2 bytes)
+Offset+10: uint16 dest_id (2 bytes)
+Offset+12: uint16 flags (2 bytes)
+```
+
+### Coordinate Zones
+
+| Zone | Offset | Range | Description |
+|------|--------|-------|-------------|
+| 1MB | 0x100000 | 0-7966 | Level geometry |
+| 2MB | 0x200000 | 0-5911 | Level geometry |
+| 3MB | 0x300000 | -61-246 | Vertex data |
+| 5MB | 0x500000 | ±4085 | **Floor/ceiling** |
+| 9MB | 0x900000 | ±8192 | Cameras/spawns |
 
 ---
 
-## 🔍 Prochaines Étapes
+## Known Issues
 
-### Validation Immédiate
-
-1. **Visualiser Zone 5MB** - Voir si ça ressemble à des niveaux
-2. **Comparer avec gameplay** - Screenshots vs coordonnées
-3. **Identifier patterns** - Rooms, corridors, chambers
-
-### Recherche Avancée
-
-4. **Cross-référencer spawns** - Utiliser monster_stats/_index.json
-5. **Identifier format TMD** - Extraire modèles 3D PSX
-6. **Memory watching** - Émulateur PS1 + memory viewer
-7. **Décompression** - Tester LZSS/RLE sur zones identifiées
+- Many detected doors at (0,0,0) are padding data
+- No locked doors found in current analysis (all type=0)
+- Use Unity visualization to identify real door positions
+- In-game testing required for validation
 
 ---
 
-## 📧 Support
+## Contributing
 
-Pour questions ou contributions:
-- Voir `../README.md` (projet principal)
+For questions or improvements:
+- Main project: `../README.md`
 - Repository: GameplayPatch/level_design/
 
 ---
 
-## 📜 Licence
+## License
 
-Données extraites à des fins de recherche et préservation du patrimoine vidéoludique.
+Extracted data for research and video game preservation.
 
 *Blaze & Blade: Eternal Quest © 1998 T&E Soft*
 
 ---
 
-**Dernière mise à jour:** 2026-02-04
+**Last Updated:** 2026-02-04

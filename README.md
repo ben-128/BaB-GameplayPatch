@@ -60,14 +60,20 @@ GameplayPatch/
 │   ├── DISCOVERY_REPORT.md     Découvertes détaillées
 │   └── RESEARCH_GUIDE.md       Guide de recherche
 │
-└── level_design/               🗺️ Level Design & Coordonnées 3D (NOUVEAU)
-    ├── *.py                    5 scripts d'analyse
-    ├── *.json                  Données extraites (level names, spawns, coords)
-    ├── coordinates_*.csv       Coordonnées 3D (5 zones, 2500+ points)
-    ├── LEVEL_DESIGN_REPORT.md  Rapport initial
-    ├── LEVEL_DESIGN_FINDINGS.md Analyse approfondie
-    ├── COORDINATE_VISUALIZATION.md Guide visualisation 3D
-    └── README.md               Documentation complète
+└── level_design/               🗺️ Level Design Analysis & Door Modding
+    ├── Data Extraction
+    │   ├── 100 chests with items/quantities (JSON + CSV)
+    │   ├── 150 enemy spawns with randomness (JSON + CSV)
+    │   ├── 50 doors with types/keys/destinations (JSON + CSV)
+    │   └── 2,500+ 3D coordinates from 5 zones (CSV)
+    ├── Door Modification System
+    │   ├── patch_doors.py - Binary patching system
+    │   ├── *.bat - Automation scripts (unlock, remove keys, etc.)
+    │   └── door_presets/ - Preset configurations
+    ├── Unity Visualization
+    │   ├── CompleteVisualizationV2.cs - Main script
+    │   └── 3D display of geometry, chests, spawns, doors
+    └── README.md - Complete documentation
 
 ```
 
@@ -89,6 +95,7 @@ Ce script va :
 - **Monster stats** : `py -3 monster_stats\patch_monster_stats_bin.py`
 - **Fate Coin Shop** : `py -3 fate_coin_shop\patch_fate_coin_shop.py`
 - **Auction prices** : `cd auction_prices && test_auction_prices.bat`
+- **Door modding** : `cd level_design && unlock_all_doors.bat` (ou autres presets)
 
 ---
 
@@ -262,53 +269,69 @@ Voir `character_classes/RESEARCH_GUIDE.md` pour participer à la recherche.
 
 ---
 
-### 🗺️ Level Design & Coordonnées 3D (NOUVEAU)
+### 🗺️ Level Design Analysis & Door Modding
 
-**Statut :** Coordonnées 3D extraites, visualisation recommandée
+**Système complet d'extraction et modification des niveaux**
 
-**Découvertes majeures :**
-- **11 noms de niveaux** identifiés avec offsets exacts
-- **2,500+ coordonnées 3D** extraites de 5 zones différentes
-- **6 zones de données** mappées (Graphics, Level Data, Game Logic, Text)
-- **672 références de rooms** cataloguées
-- **266 portals** + 337 doors + 150 gates
+**Données extraites :**
+- **100 chests** avec items et quantités (JSON + CSV)
+- **150 enemy spawns** avec randomness et zones (JSON + CSV)
+- **50 doors** avec types, clés, destinations (JSON + CSV)
+- **2,500+ coordonnées 3D** de géométrie de niveaux (5 zones CSV)
 
-**Zones de coordonnées identifiées :**
-- `Zone 5MB (0x500000)` : Géométrie floor/ceiling ⭐ PLUS PROMETTEUSE
-- `Zone 9MB (0x900000)` : Caméras/Spawns (±8192 range)
-- `Zone 1-3MB` : Géométrie et vertex data
+**🚪 Door Modification System (NOUVEAU)**
 
-**Fichiers exploitables :**
-- `coordinates_zone_*.csv` : 5 fichiers CSV (Excel/Python/Unity compatible)
-- `coordinates_export.json` : Master file avec toutes les coordonnées
-- `level_data_analysis.json` : Structures autour des noms de niveaux
+Système de modification binaire avec backup automatique :
+```batch
+cd level_design
 
-**Niveaux découverts :**
-- Castle Of Vamp (02, 03, 05 BOSS, 06)
-- CAVERN OF DEATH
-- The Sealed Cave
-- The Mountain of the Fire Dragon
-- VALLEY OF WHITE WIND
-- Et 6 autres zones...
+# Débloquer toutes les portes
+unlock_all_doors.bat
+
+# Enlever les clés requises
+remove_keys.bat
+
+# Verrouiller les portes (test)
+lock_all_doors_test.bat
+```
+
+**Types de portes modifiables :**
+- 0 = UNLOCKED (toujours ouverte)
+- 1 = KEY_LOCKED (nécessite clé)
+- 2 = MAGIC_LOCKED (sort magique)
+- 3-7 = Autres types (demon, ghost, event, boss, one-way)
+
+**🎮 Unity Visualization**
+
+Script complet pour visualiser les niveaux en 3D :
+- Géométrie des niveaux (coordonnées 3D)
+- Chests (cubes jaunes) avec labels d'items
+- Enemy spawns (sphères rouges/magenta) avec stats
+- Doors (cylindres bleus) avec conditions d'ouverture
+
+Usage :
+1. Créer projet Unity 3D
+2. Copier les CSV dans `Assets/Data/`
+3. Ajouter `CompleteVisualizationV2.cs` à un GameObject
+4. Play!
 
 **Scripts d'analyse :**
-- `explore_level_design.py` : Extraction strings & keywords
-- `analyze_level_data.py` : Analyse structures de niveaux
-- `extract_spawn_data.py` : Détection spawns & objets
-- `deep_structure_analysis.py` : Analyse binaire approfondie
+- `analyze_chests.py` : Extraction des coffres
+- `analyze_enemy_spawns.py` : Extraction des spawns
+- `analyze_doors.py` : Extraction des portes
+- `patch_doors.py` : Modification des portes (binary patching)
 - `export_coordinates.py` : Export coordonnées 3D
+- `generate_door_presets.py` : Génération de presets
 
-**Visualisation :**
-Voir `level_design/COORDINATE_VISUALIZATION.md` pour:
-- Instructions Python (matplotlib 3D)
-- Import Blender
-- Import Unity
-- Méthodes en ligne
+**Fichiers de configuration :**
+- `door_modifications.json` : Vos modifications personnalisées
+- `door_presets/*.json` : Presets prêts à l'emploi
 
-**Documentation complète :**
-- `level_design/README.md` : Vue d'ensemble
-- `LEVEL_DESIGN_REPORT.md` : Rapport initial
-- `LEVEL_DESIGN_FINDINGS.md` : Analyse approfondie
+**Documentation :**
+- `level_design/README.md` : Documentation principale
+- `DOOR_MODDING_QUICKSTART.md` : Guide rapide (5 min)
+- `DOOR_PATCHING_GUIDE.md` : Guide complet
+- `unity/COMPLETE_VISUALIZATION_GUIDE.md` : Guide Unity
 
 ---
 
@@ -351,10 +374,11 @@ Le script `build_gameplay_patch.bat` exécute dans l'ordre :
 - **Items Fate Coin** : 23
 - **Classes de personnages** : 8 (+ versions M/F)
 - **Auction Prices** : 8 confirmés (recherche en cours)
-- **Niveaux identifiés** : 11 zones uniques
-- **Coordonnées 3D extraites** : 2,500+ points
-- **Rooms** : 672 références
-- **Portals/Doors/Gates** : 653 références combinées
+- **Chests extraits** : 100 (avec items et quantités)
+- **Enemy Spawns** : 150 (avec randomness et zones)
+- **Doors modifiables** : 50 (types, clés, destinations)
+- **Coordonnées 3D extraites** : 2,500+ points (5 zones)
+- **Door Presets** : 3 configurations prêtes à l'emploi
 
 ---
 
