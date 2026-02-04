@@ -1,0 +1,7534 @@
+{
+  "metadata": {
+    "source": "Blaze objets.txt (GameFAQs)",
+    "author": "Sandy Saputra / holypriest",
+    "version": "2.4",
+    "total_items": 376,
+    "extraction_date": "2026-02-04",
+    "note": "Référence complète avec descriptions, effets et stats"
+  },
+  "items": [
+    {
+      "name": "Normal Sword",
+      "category": "Swords (warrior)",
+      "location": "Initial",
+      "description": "A good sword for beginners to use.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 7,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Broad Sword",
+      "category": "Swords (warrior)",
+      "location": "Lv6 Kobold, Wood of Ruins / Skeleton, Lab. of the Dead",
+      "description": "A heavy sword with a wide blade.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 12,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Long Sword",
+      "category": "Swords (warrior)",
+      "location": "Secret Track near Woodcutter's Cabin, Woods of Ruins",
+      "description": "",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 18,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Bastard Sword",
+      "category": "Swords (warrior)",
+      "location": "Blood Skeleton, Labyrinth of the Dead 1st Part",
+      "description": "A Long sword with a wide blade.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 25,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Claymore",
+      "category": "Swords (warrior)",
+      "location": "Blood Skeleton, Palace of Immrotals,Clock Tower.",
+      "description": "The barbarian Normans forge these very sharp swords.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 30,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Sword of Bane",
+      "category": "Swords (warrior)",
+      "location": "Living-Sword, Old Palace 2nd Part",
+      "description": "Its last owner died a terrible death.",
+      "effects": [],
+      "special_effects": [
+        "At + 60 / 6 HP, if HP below 7, it curses"
+      ],
+      "stats": {
+        "attack_bonus": 60
+      },
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 10,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Silver Sword",
+      "category": "Swords (warrior)",
+      "location": "Undead Knight, Labyrinth of the Dead 2nd Part",
+      "description": "Made of silver. It can also damage lycanthropes",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 28,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Bloodsword",
+      "category": "Swords (warrior)",
+      "location": "Durahan, Labyrinth of the Dead",
+      "description": "Red from blood of those it has killed.",
+      "effects": [],
+      "special_effects": [
+        "Drains HP from living enemies (decrease HP if undead)"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 20,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Ice Sword",
+      "category": "Swords (warrior)",
+      "location": "Southwest chest, Ruins in the Lake",
+      "description": "",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 34,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Flame Sword",
+      "category": "Swords (warrior)",
+      "location": "Black-Knight, Old Palace 2nd Part 5th Floor",
+      "description": "Sword from ancient times. Flames dance up the blade.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 36,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Lightning Blade",
+      "category": "Swords (warrior)",
+      "location": "Bat Medallion room, Palace of Immortals, Gold key room",
+      "description": "",
+      "effects": [],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Earth Saber",
+      "category": "Swords (warrior)",
+      "location": "Bat Medallion room, Palace of Immortals, Gold key room",
+      "description": "",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 32,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Damascus Blade",
+      "category": "Swords (warrior)",
+      "location": "Living-Sword, Old Palace 2nd Part 5th Floor",
+      "description": "",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 70,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Sunblade",
+      "category": "Swords (warrior)",
+      "location": "7th Underlevel Abandoned Mine / Flare-Salamander, Cave",
+      "description": "",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 44,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Darkblade",
+      "category": "Swords (warrior)",
+      "location": "Cave of Red Dragon",
+      "description": "Sent to the world from the heavens, has a black blade.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 52,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Guardian Sword",
+      "category": "Swords (warrior)",
+      "location": "Living-Sword, Old Palace 2nd Part",
+      "description": "Sword of the arcanes, strengthens magical power.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 20,
+        "luk": 0,
+        "at": 75,
+        "mat": 0,
+        "def": 20,
+        "mdef": 20
+      }
+    },
+    {
+      "name": "Durandal",
+      "category": "Swords (warrior)",
+      "location": "10 th under level Abandoned Mine",
+      "description": "The favored sword of a bold knight, it can cut stone.",
+      "effects": [],
+      "special_effects": [
+        "Sometimes knock back enemies (even bosses)"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 80,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Excalibur",
+      "category": "Swords (warrior)",
+      "location": "Room after defeating Zombie Dragon",
+      "description": "A magical sword which is of great use against demons.",
+      "effects": [],
+      "special_effects": [
+        "Demon enemies & magical living thing, At + 40"
+      ],
+      "stats": {
+        "attack_bonus": 40
+      },
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 72,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Dragonbane",
+      "category": "Swords (warrior)",
+      "location": "Left room of Treasure Chamber, Palace of Immortals 2nd",
+      "description": "A dragon-slaying sword forged for a ancient hero.",
+      "effects": [],
+      "special_effects": [
+        "Dragon enemies, AT + 40"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 68,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Revatin",
+      "category": "Swords (warrior)",
+      "location": "Efreet, The Hall of Demons, 2nd Floor (Sealed Cave)",
+      "description": "Surrounded by a blue light. It can even wound the",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 87,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Answerer",
+      "category": "Swords (warrior)",
+      "location": "Black-Knight, Old Palace 2nd Part",
+      "description": "A black sword, forged by the god of darkness.",
+      "effects": [],
+      "special_effects": [
+        "At + 50 / 15 MP"
+      ],
+      "stats": {
+        "attack_bonus": 50
+      },
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 60,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Mistortain",
+      "category": "Swords (warrior)",
+      "location": "After defeating the Red Dragon",
+      "description": "A demonic sword which killed the god of light.",
+      "effects": [],
+      "special_effects": [
+        "Critical attack ratio + 5%"
+      ],
+      "stats": {
+        "critical_rate": 5
+      },
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 110,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Fenris",
+      "category": "Swords (warrior)",
+      "location": "Cerberus, The Hall of Demons ,1st Floor (Sealed Cave)",
+      "description": "The frost demons’ sword will bring the end of the",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 121,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Club",
+      "category": "Priest’s Wand/Hammer",
+      "location": "Initial",
+      "description": "A wooden club.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 5,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Mace",
+      "category": "Priest’s Wand/Hammer",
+      "location": "Shaman-Goblin,Wood of Ruins, Green Goblin Work Area",
+      "description": "",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 9,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Flail",
+      "category": "Priest’s Wand/Hammer",
+      "location": "Shaman Goblin, Abandoned Mine 1st Part",
+      "description": "",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 13,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Warhammer",
+      "category": "Priest’s Wand/Hammer",
+      "location": "Northeast chest, The Clearing, Wood of Ruins",
+      "description": "Steel hammer, easy to lift and strikes heavy blows.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 19,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Long Hammer",
+      "category": "Priest’s Wand/Hammer",
+      "location": "Southeast chest, The Clearing, Wood of Ruins",
+      "description": "A heavy, long hammer with excellent range.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 28,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Morning Star",
+      "category": "Priest’s Wand/Hammer",
+      "location": "Ritual Elexier area, Palace of Immortals",
+      "description": "A rod with a massive ironball on a chain.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 34,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Blessed Hammer",
+      "category": "Priest’s Wand/Hammer",
+      "location": "Before Durahan, Labyrinth of the Dead",
+      "description": "Carries protective charm against demons.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 15,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 24,
+        "mat": 0,
+        "def": 0,
+        "mdef": 12
+      }
+    },
+    {
+      "name": "Wand of the Ancients",
+      "category": "Priest’s Wand/Hammer",
+      "location": "7th under level, Abandoned Mine",
+      "description": "A powerful wand enchanted by the arcanes.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Wand of Devils",
+      "category": "Priest’s Wand/Hammer",
+      "location": "Undead-Master, Lab. of the Dead 2nd Part",
+      "description": "A wand forged for demons by rebellious gods.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 55,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Ritual Hammer",
+      "category": "Priest’s Wand/Hammer",
+      "location": "Cave of Red Dragon",
+      "description": "A wonderfully decorated hammer for use in rituals.",
+      "effects": [],
+      "special_effects": [
+        "Critical attack ratio + 3%"
+      ],
+      "stats": {
+        "critical_rate": 3
+      },
+      "attributes": {
+        "str": 0,
+        "int": 10,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 40,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Amber Wand",
+      "category": "Priest’s Wand/Hammer",
+      "location": "Ogre, Abandoned Mine 2nd Part",
+      "description": "",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 62,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Holy Wand",
+      "category": "Priest’s Wand/Hammer",
+      "location": "Labyrinth of the Dead 2nd Part",
+      "description": "Gives its wielder holy might to destroy demons.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 46,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Wish Hammer",
+      "category": "Priest’s Wand/Hammer",
+      "location": "Locked (rogue) room in the top after beating the",
+      "description": "May reveal its power when the user is in a dilemma.",
+      "effects": [],
+      "special_effects": [
+        "At + 40 when HP 1/4"
+      ],
+      "stats": {
+        "attack_bonus": 40
+      },
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 65,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Gabriel",
+      "category": "Priest’s Wand/Hammer",
+      "location": "The Roadside Inn, locked room",
+      "description": "A powerfull spirit is bound, named after the",
+      "effects": [],
+      "special_effects": [
+        "Holy atk magic + 50%"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 62,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Wand of Justice",
+      "category": "Priest’s Wand/Hammer",
+      "location": "Room after defeating Zombie Dragon",
+      "description": "Judges good and evil in the hearts of men.",
+      "effects": [],
+      "special_effects": [
+        "Demon enemies, At + 30"
+      ],
+      "stats": {
+        "attack_bonus": 30
+      }
+    },
+    {
+      "name": "Hammer of Thor",
+      "category": "Priest’s Wand/Hammer",
+      "location": "Efreet, The Hall of Demons ,2nd Floor (Sealed Cave)",
+      "description": "It is said, that it has been forged by Thor for",
+      "effects": [],
+      "special_effects": [
+        "At + 20 / 8 MP & Giant enemies & magical living thing,"
+      ],
+      "stats": {
+        "attack_bonus": 20
+      },
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 95,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Seraphim Rod",
+      "category": "Priest’s Wand/Hammer",
+      "location": "Undead-Master, Lab. of the Dead 2nd Part",
+      "description": "An angelic rod which can exorcise demons.",
+      "effects": [],
+      "special_effects": [
+        "Demon enemies, At + 40"
+      ],
+      "stats": {
+        "attack_bonus": 40
+      },
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 104,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Dagger",
+      "category": "Knives (rogue)",
+      "location": "Initial",
+      "description": "A normal, easily-to-use dagger.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 5,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Gladius",
+      "category": "Knives (rogue)",
+      "location": "Giant Ant, Wood of Ruins",
+      "description": "A dagger like those used by the ancients.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 9,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Daak",
+      "category": "Knives (rogue)",
+      "location": "Sealed (elf) room in 2nd level, Old Palace 1st Part",
+      "description": "Favored dagger of the barbarian Normans.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 14,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Defender",
+      "category": "Knives (rogue)",
+      "location": "Giant-Scorpion, 4th under level Abandoned Mine",
+      "description": "",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 18,
+        "mat": 0,
+        "def": 10,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Silver Dagger",
+      "category": "Knives (rogue)",
+      "location": "Silver Wolf, Palace of Immortals",
+      "description": "A charmed silver dagger.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 19,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Bandit Dagger",
+      "category": "Knives (rogue)",
+      "location": "Chest in Valley of White Silver",
+      "description": "",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 10,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 26,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Blood Dagger",
+      "category": "Knives (rogue)",
+      "location": "Weretiger, Palace of Immortals, on the roof",
+      "description": "A dagger stained red by the blood of its victims.",
+      "effects": [],
+      "special_effects": [
+        "Drains HP from living enemies (decrease HP if undead)"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 42,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Orichalca Dagger",
+      "category": "Knives (rogue)",
+      "location": "Cave of Red Dragon",
+      "description": "Golden dagger made of a fabled metal.",
+      "effects": [],
+      "special_effects": [
+        "At + (WIL * 25%)"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 10,
+        "luk": 0,
+        "at": 30,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Blackjack",
+      "category": "Knives (rogue)",
+      "location": "7th under level Abandoned Mine 2nd Part",
+      "description": "A small, easily carried weapon.",
+      "effects": [],
+      "special_effects": [
+        "Sometimes stun the enemy (8% probability)"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 30,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Golden Harp",
+      "category": "Knives (rogue)",
+      "location": "The Roadside Inn, locked room",
+      "description": "Strange golden dagger, favored by ancient heroes.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 36,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Mist Dagger",
+      "category": "Knives (rogue)",
+      "location": "King Mummy room, right chest, 9th under level Labyrinth",
+      "description": "Magical dagger formed out of the spirits of the dead.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 5,
+        "agl": 0,
+        "con": 0,
+        "pow": 15,
+        "luk": 0,
+        "at": 72,
+        "mat": 0,
+        "def": 0,
+        "mdef": 22
+      }
+    },
+    {
+      "name": "Ringnail",
+      "category": "Knives (rogue)",
+      "location": "Room after defeating Zombie Dragon",
+      "description": "A special small dagger which is hidden within a ring.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 81,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Fabnihl",
+      "category": "Knives (rogue)",
+      "location": "After defeating the Red Dragon",
+      "description": "Made of the tooth of Fabnihl, it can turn foes to",
+      "effects": [],
+      "special_effects": [
+        "Sometimes petrify / 16 MP (8% probabilty)"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 92,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Death Sickle",
+      "category": "Knives (rogue)",
+      "location": "Dark-Angel, The Hall of Demons ,5th Floor (Sealed Cave)",
+      "description": "",
+      "effects": [],
+      "special_effects": [
+        "At + 30 / 6 HP & Sometimes Instant Death (8% prob.)"
+      ],
+      "stats": {
+        "attack_bonus": 30
+      },
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 20,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Dominion Dagger",
+      "category": "Knives (rogue)",
+      "location": "Troll, 10th Underlevel Boss, Abandoned Mine",
+      "description": "",
+      "effects": [],
+      "special_effects": [
+        "Demon & Undead enemies, At + 40"
+      ],
+      "stats": {
+        "attack_bonus": 40
+      },
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 101,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Wooden Wand",
+      "category": "Sorcerer’s Wand",
+      "location": "Initial",
+      "description": "A solid wooden wand",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 5,
+        "mat": 2,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Iron Wand",
+      "category": "Sorcerer’s Wand",
+      "location": "Wood of Ruins, Green Goblin Work Area",
+      "description": "",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 12,
+        "mat": 1,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Skull Wand",
+      "category": "Sorcerer’s Wand",
+      "location": "Shaman Goblin, Abandoned Mine",
+      "description": "A wand topped with the skull of a ceremonial victim.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Pure Wand",
+      "category": "Sorcerer’s Wand",
+      "location": "Shaman Goblin, Old Palace 1st Part",
+      "description": "Created of the best materials by the best smiths.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 16,
+        "mat": 3,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Magic Wand",
+      "category": "Sorcerer’s Wand",
+      "location": "Palace of Immortals, Clocktower",
+      "description": "",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 2,
+        "int": 5,
+        "wil": 3,
+        "agl": 4,
+        "con": 1,
+        "pow": 12,
+        "luk": 0,
+        "at": 24,
+        "mat": 8,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Wand of Runes",
+      "category": "Sorcerer’s Wand",
+      "location": "Locked door that opens when Dark Elf is defeated, Old",
+      "description": "Has magical powers through the runes upon.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 30,
+        "luk": 0,
+        "at": 29,
+        "mat": 15,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Mithril Wand",
+      "category": "Sorcerer’s Wand",
+      "location": "Near upper portal in 7th",
+      "description": "A magical wand made of mithril silver.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 36,
+        "mat": 18,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Skystone Wand",
+      "category": "Sorcerer’s Wand",
+      "location": "Cave of Red Dragon",
+      "description": "A magical wand created from a meteor.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 40,
+        "mat": 8,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Wand of Evil",
+      "category": "Sorcerer’s Wand",
+      "location": "Old Palace, 4th Floor, west chest.",
+      "description": "A wand with the power to curse.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 12,
+        "luk": 0,
+        "at": 43,
+        "mat": 21,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Gaia Wand",
+      "category": "Sorcerer’s Wand",
+      "location": "Left room of Treasure Chamber, Palace of Immortals 2nd",
+      "description": "Holds the magical powers of earth and the stars.",
+      "effects": [],
+      "special_effects": [
+        "Sometimes shoot Stone Bullet if hit by normal attack"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 66,
+        "mat": 9,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Moon Wand",
+      "category": "Sorcerer’s Wand",
+      "location": "Arch-Magi, Tower Annex, Old Palace 2nd Part",
+      "description": "Wand imbued with the power of the moon.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 58,
+        "mat": 8,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Godswand",
+      "category": "Sorcerer’s Wand",
+      "location": "Room after defeating Zombie Dragon",
+      "description": "Wand of such power, only a master sorcerer may wield",
+      "effects": [],
+      "special_effects": [
+        "Sometimes shoot Fire Bullet / 1 MP (10% probability)"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 8,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 72,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Crystal Wand",
+      "category": "Sorcerer’s Wand",
+      "location": "Retired Knight",
+      "description": "A quartz wand imbued with magical power.",
+      "effects": [],
+      "special_effects": [
+        "Critical attack ratio + 4%"
+      ],
+      "stats": {
+        "critical_rate": 4
+      },
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 70,
+        "luk": 0,
+        "at": 80,
+        "mat": 12,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Charmed Wand",
+      "category": "Sorcerer’s Wand",
+      "location": "Bone Sigil room, Labyrinth of the Dead",
+      "description": "This wand enhances its user’s magical power.",
+      "effects": [],
+      "special_effects": [
+        "Mat + 30 / 3 MP"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 64,
+        "luk": 0,
+        "at": 82,
+        "mat": 30,
+        "def": 0,
+        "mdef": 18
+      }
+    },
+    {
+      "name": "Baphomet",
+      "category": "Sorcerer’s Wand",
+      "location": "After defeating Red Dragon",
+      "description": "This sword increases its user’s strength.",
+      "effects": [],
+      "special_effects": [
+        "Wave attack"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 20,
+        "int": 40,
+        "wil": 30,
+        "agl": 15,
+        "con": 25,
+        "pow": 35,
+        "luk": 1,
+        "at": 92,
+        "mat": 20,
+        "def": 10,
+        "mdef": 20
+      }
+    },
+    {
+      "name": "Wand of Apollo",
+      "category": "Sorcerer’s Wand",
+      "location": "Room of the 2 Hidden Spells, Old Palace 2nd Part",
+      "description": "A wand that can destroy 100,000 things at once.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Shortbow",
+      "category": "Bows (hunter)",
+      "location": "Initial",
+      "description": "A simply made bow.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 5,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Bow",
+      "category": "Bows (hunter)",
+      "location": "2nd floor sealed (elf) room, Old Palace 1st Part",
+      "description": "A normal bow, easy to use.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 7,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Long Bow",
+      "category": "Bows (hunter)",
+      "location": "In house (via secret track), The Great Waterfall of",
+      "description": "",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 19,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Trueheart",
+      "category": "Bows (hunter)",
+      "location": "Goblin,Wood of Ruins, green goblin work area",
+      "description": "A first class bow of great workmanship.",
+      "effects": [],
+      "special_effects": [
+        "Critical attack ratio + 3%"
+      ],
+      "stats": {
+        "critical_rate": 3
+      },
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 15,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Crossbow",
+      "category": "Bows (hunter)",
+      "location": "Southeast chest, The Clearing, Wood of Ruins",
+      "description": "",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 7,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Windbolt",
+      "category": "Bows (hunter)",
+      "location": "Stalker, Old Palace 5th floor",
+      "description": "Magical bow inhabited by a wind fairy.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 50,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Lightbolt",
+      "category": "Bows (hunter)",
+      "location": "Cave of Red Dragon",
+      "description": "A magical bow which shoots arrows of pure light.",
+      "effects": [],
+      "special_effects": [
+        "Shoots Magic Missile / 10 MP"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 58,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Artemis",
+      "category": "Bows (hunter)",
+      "location": "Room after defeating Zombie Dragon",
+      "description": "Bow which was given to a hero by the goddess Artemis.",
+      "effects": [],
+      "special_effects": [
+        "At + 30 / 8 MP"
+      ],
+      "stats": {
+        "attack_bonus": 30
+      },
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 86,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Falconbolt",
+      "category": "Bows (hunter)",
+      "location": "Left chest in Crystal Maze in the Old Palace 2nd Part",
+      "description": "A special bow which can shot two arrows at once.",
+      "effects": [],
+      "special_effects": [
+        "Shoots 2 arrows in one attack"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 50,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Elven Bow",
+      "category": "Bows (hunter)",
+      "location": "Dark-Elf, Old Palace 1st / 2nd Part",
+      "description": "A magical bow made for the king of the elves.",
+      "effects": [],
+      "special_effects": [
+        "Critical attack ratio + 6%"
+      ],
+      "stats": {
+        "critical_rate": 6
+      },
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 65,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Shadowbolt",
+      "category": "Bows (hunter)",
+      "location": "Evil-Stalker, Sealed Cave",
+      "description": "A bow which was enchanted by night fairies.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 12,
+        "luk": 0,
+        "at": 72,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Compound Bow",
+      "category": "Bows (hunter)",
+      "location": "7th under level Abandoned Mine",
+      "description": "A bow of strong wood. It is reknowed for its power.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 82,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Bolt of Larie",
+      "category": "Bows (hunter)",
+      "location": "Room of the 2 Hidden Spells, Old Palace 2nd Part",
+      "description": "A cursed arrow made by the demon Larie.",
+      "effects": [],
+      "special_effects": [
+        "Sometimes petrify / 12 MP (15% probability)"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 92,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Perseus Bow",
+      "category": "Bows (hunter)",
+      "location": "Griffon, The Valey of White Silver",
+      "description": "Named after a hero, effective against the possessed.",
+      "effects": [],
+      "special_effects": [
+        "Demon & dragon enemies, At + 60 & critical attack"
+      ],
+      "stats": {
+        "attack_bonus": 60
+      },
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 7,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Shortsword",
+      "category": "Rapiers (elf)",
+      "location": "Initial",
+      "description": "A normal, easily-to-wiel shortsword.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 6,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Rapier",
+      "category": "Rapiers (elf)",
+      "location": "Lizard-Man, Wood of Ruins / Kobold, Wood of Ruins",
+      "description": "",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 9,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Wyvernstooth Rapier",
+      "category": "Rapiers (elf)",
+      "location": "Black-Lizard, Ruins in the Lake",
+      "description": "First class rapier of the finest material.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 9,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Long Rapier",
+      "category": "Rapiers (elf)",
+      "location": "2nd floor sealed (elf) room, Old Palace 1st Part",
+      "description": "Long rapier for stabbing foes from greater distance.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 24,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Poison Rapier",
+      "category": "Rapiers (elf)",
+      "location": "Holy Water Consecration Room, Lab. of the Undead",
+      "description": "a rapier which poisons anyone it wounds.",
+      "effects": [],
+      "special_effects": [
+        "Sometimes poison the enemy (10% probability)"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 26,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Silver Rapier",
+      "category": "Rapiers (elf)",
+      "location": "2nd floor sealed (elf) room, Old Palace 1st Part",
+      "description": "Leaves a anti-demon rune in the flesh it strikes.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 32,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Mithril Rapier",
+      "category": "Rapiers (elf)",
+      "location": "Lizard-Man, Wood of Ruins / Crimson-Lizard, Old Palace",
+      "description": "A magical rapier formed of mithril silver.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 9,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Thunderbolt",
+      "category": "Rapiers (elf)",
+      "location": "The room with barrels,3rd floor west wing, Palace of",
+      "description": "Wind spirits imbued it with the power of thunder.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 56,
+        "mat": 12,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Frostfurnace",
+      "category": "Rapiers (elf)",
+      "location": "Cave of Red Dragon",
+      "description": "Was given to a king as a gift from the ice fairies.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 65,
+        "mat": 18,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Inferno",
+      "category": "Rapiers (elf)",
+      "location": "Salamander, Cave of Red Dragon",
+      "description": "",
+      "effects": [],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Stone Foil",
+      "category": "Rapiers (elf)",
+      "location": "7th under level, Abandoned Mine 2nd Part",
+      "description": "Made by elven mastersmiths. Imbued with earth power.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Solitaire",
+      "category": "Rapiers (elf)",
+      "location": "Before Fighting the 2nd Dark Elf, Old Palace 2nd Part",
+      "description": "It is said it devours the souls of those it strikes.",
+      "effects": [],
+      "special_effects": [
+        "Drains MP from living enemies (decrease MP if undead)"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 60,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Chaos Rapier",
+      "category": "Rapiers (elf)",
+      "location": "Left room of Treasure Chamber, Palace of Immortals 2nd",
+      "description": "It was forged to face the Bane Wyrm.",
+      "effects": [],
+      "special_effects": [
+        "Sometimes confuse the enemy (12.5 % probability)"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 76,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Valkyrie",
+      "category": "Rapiers (elf)",
+      "location": "Room after defeating Zombie Dragon",
+      "description": "",
+      "effects": [],
+      "special_effects": [
+        "Critical attack ratio + 5%"
+      ],
+      "stats": {
+        "critical_rate": 5
+      },
+      "attributes": {
+        "str": 12,
+        "int": 8,
+        "wil": 8,
+        "agl": 12,
+        "con": 12,
+        "pow": 8,
+        "luk": 16,
+        "at": 80,
+        "mat": 30,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Minister",
+      "category": "Rapiers (elf)",
+      "location": "Locked Jail after Durahan, Labyrinth of the Dead 1st",
+      "description": "For the punishment of the sinful, emits a divine",
+      "effects": [],
+      "special_effects": [
+        "Sometimes paralyze the enemy (10% probability)"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 95,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Sword of Zeus",
+      "category": "Rapiers (elf)",
+      "location": "Vampire-Lord, Palace of Immortals 2nd Part",
+      "description": "",
+      "effects": [],
+      "special_effects": [
+        "Demon enemies, At + 50"
+      ],
+      "stats": {
+        "attack_bonus": 50
+      },
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 102,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Tomahawk",
+      "category": "Axes (dwarf)",
+      "location": "Initial",
+      "description": "A small, easy-to-wield axe.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 8,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Battle Axe",
+      "category": "Axes (dwarf)",
+      "location": "2nd floor sealed (elf) room, Old Palace 1st Part /",
+      "description": "A heavy battle axe, the favored weapon of barbarians.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Hand Axe",
+      "category": "Axes (dwarf)",
+      "location": "2nd floor sealed (elf) room, Old Palace 1st Part",
+      "description": "A normal axe.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 13,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Fine Axe",
+      "category": "Axes (dwarf)",
+      "location": "2nd floor sealed (elf) room, Old Palace 1st Part",
+      "description": "A very fine axe forged by great smiths.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 29,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Great Axe",
+      "category": "Axes (dwarf)",
+      "location": "Cave-Scissors, Abandoned Mine 2nd Part",
+      "description": "A heavy axe reknowned for its hacking ability.",
+      "effects": [],
+      "special_effects": [
+        "Critical attack ratio + 6%"
+      ],
+      "stats": {
+        "critical_rate": 6
+      },
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 28,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Silver Axe",
+      "category": "Axes (dwarf)",
+      "location": "Before Durahan, Labyrinth of the Dead",
+      "description": "An axe made of silver and blessed with holy runes.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 48,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Viking Axe",
+      "category": "Axes (dwarf)",
+      "location": "Isle of Ruins, The Woods of Ruins",
+      "description": "An axe favored favored by northern seafearers.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 14,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 48,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Poison Axe",
+      "category": "Axes (dwarf)",
+      "location": "Cave of Red Dragon",
+      "description": "An axe forged of poisonous metal.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 52,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Blood Axe",
+      "category": "Axes (dwarf)",
+      "location": "Giant, The Dessert Valley",
+      "description": "An extremely sharp axe.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Executioner",
+      "category": "Axes (dwarf)",
+      "location": "Green-Giant, 10th under level Abandoned Mine",
+      "description": "A long staff with an axehead on one end.",
+      "effects": [],
+      "special_effects": [
+        "Critical attack ratio + 4%"
+      ],
+      "stats": {
+        "critical_rate": 4
+      },
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 58,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Flamespitter",
+      "category": "Axes (dwarf)",
+      "location": "Bat Medallion room, Palace of Immortals 1st Part",
+      "description": "Sparkling axe forged in the fiery breath of a dragon.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 60,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Ouga Axe",
+      "category": "Axes (dwarf)",
+      "location": "Hell-Ogre, part of Sealed Cave after defeating Zombie",
+      "description": "Holds the night demon Ouga and great power.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Life Eater",
+      "category": "Axes (dwarf)",
+      "location": "Green-Giant, 10th under level Abandoned Mine / Giant,",
+      "description": "This axe can devour the souls of those it strikes.",
+      "effects": [],
+      "special_effects": [
+        "Drains HP from living enemies (decrease HP if undead)"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 40,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Slaughterer",
+      "category": "Axes (dwarf)",
+      "location": "Weretiger/Werewolf,The Palace of Immortal / Hell-Ogre,",
+      "description": "",
+      "effects": [],
+      "special_effects": [
+        "Sometimes Instant Death (8% probability)"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 80,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Berserker",
+      "category": "Axes (dwarf)",
+      "location": "Room after defeating Zombie Dragon",
+      "description": "It gives its wielder the strength of madness.",
+      "effects": [],
+      "special_effects": [
+        "Sometimes knock back enemies (even bosses)"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 110,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Frost Axe",
+      "category": "Axes (dwarf)",
+      "location": "Left room of Treasure Chamber, Palace of Immortals 2nd",
+      "description": "A demon forged axe with blades of ice.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 116,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Half-moon Axe",
+      "category": "Axes (dwarf)",
+      "location": "Bone Sigil room, Labyrinth of the Dead",
+      "description": "Increases the power of the wielder's magic.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 20,
+        "luk": 0,
+        "at": 81,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Lucifer",
+      "category": "Axes (dwarf)",
+      "location": "Efreet, The Hall of Demons ,2nd Floor (Sealed Cave)",
+      "description": "Inhabited by a demon. Lets the wounded begin to",
+      "effects": [],
+      "special_effects": [
+        "At + 20 / 6 HP, Can paralyze user if he hits with HP"
+      ],
+      "stats": {
+        "attack_bonus": 20
+      },
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 90,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Gulwick",
+      "category": "Axes (dwarf)",
+      "location": "Green-Giant, 10th under level Abandoned Mine",
+      "description": "A golden axe, carries the power of the earth within",
+      "effects": [],
+      "special_effects": [
+        "Sometimes Petrify / 8 MP (20% probability)"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 146,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Pavas Axe",
+      "category": "Axes (dwarf)",
+      "location": "Behemoth, The Underground Cave, Woods of Ruins",
+      "description": "",
+      "effects": [],
+      "special_effects": [
+        "Demon enemies, At + 55"
+      ],
+      "stats": {
+        "attack_bonus": 55
+      },
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 140,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Rod",
+      "category": "Rods (fairy)",
+      "location": "Initial",
+      "description": "A rod favored by fairies.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 5,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Jewel Rod",
+      "category": "Rods (fairy)",
+      "location": "Wood of Ruins, green goblin work area",
+      "description": "A rod with a jewel-encrusted top.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 10,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Crystal Rod",
+      "category": "Rods (fairy)",
+      "location": "Southeast chest in the secret track in The Clearing,",
+      "description": "Quartz rod which protects the soul of its wielder.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 20,
+        "mat": 0,
+        "def": 0,
+        "mdef": 5
+      }
+    },
+    {
+      "name": "Silver Rod",
+      "category": "Rods (fairy)",
+      "location": "Fairy chest, Abandoned Mine",
+      "description": "A silver rod with holy script engraved upon it.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 28,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Flame Rod",
+      "category": "Rods (fairy)",
+      "location": "Before Durahan, Labyrinth of the Dead",
+      "description": "1 of the 4 given to the elven king by a dead king.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 34,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Wind Rod",
+      "category": "Rods (fairy)",
+      "location": "Stalker, Old Palace 2nd Part",
+      "description": "1 of the 4 given to the elven king by a dead king.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 56,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Water Rod",
+      "category": "Rods (fairy)",
+      "location": "Palace of Immortals, Clocktower",
+      "description": "1 of the 4 given to the elven king by a dead king.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 42,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Earth Rod",
+      "category": "Rods (fairy)",
+      "location": "7th Underlevel, Abandoned Mine 2nd Part",
+      "description": "1 of the 4 given to the elven king by a dead king.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 48,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Fey Rod",
+      "category": "Rods (fairy)",
+      "location": "Gremlin, Sealed Cave / Fairy chest, Abandoned Mine",
+      "description": "A rod from the elven empire which has hidden powers.",
+      "effects": [],
+      "special_effects": [
+        "At + (Enemy level / 3)"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 14,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Vampire Rod",
+      "category": "Rods (fairy)",
+      "location": "West chest in 4th Floor, Old Palace 2nd Part",
+      "description": "A cursed rod which devours souls.",
+      "effects": [],
+      "special_effects": [
+        "Drains MP from living enemies (decrease MP if undead)"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 40,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Rainbow Rod",
+      "category": "Rods (fairy)",
+      "location": "Left room of Treasure Chamber, Palace of Immortals 2nd",
+      "description": "A rod said to possess mysterious powers.",
+      "effects": [],
+      "special_effects": [
+        "Critical attack ratio + 7%"
+      ],
+      "stats": {
+        "critical_rate": 7
+      },
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 30,
+        "at": 46,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Holy Rod",
+      "category": "Rods (fairy)",
+      "location": "Cave of Red Dragon",
+      "description": "A rod imbued with holy power to heal wounds.",
+      "effects": [],
+      "special_effects": [
+        "Starts to regenerate HP by 1 if HP lower than half"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 42,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Star Rod",
+      "category": "Rods (fairy)",
+      "location": "Room after defeating Zombie Dragon",
+      "description": "A rod of starstone which burns with eternal light.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 52,
+        "mat": 20,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Rod of Ishtar",
+      "category": "Rods (fairy)",
+      "location": "The Crystal Maze, Old Palace 2nd Part",
+      "description": "A rod created by the goddess Ishtar.",
+      "effects": [],
+      "special_effects": [
+        "Undead enemies, At + 40"
+      ],
+      "stats": {
+        "attack_bonus": 40
+      },
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 62,
+        "mat": 15,
+        "def": 14,
+        "mdef": 13
+      }
+    },
+    {
+      "name": "Rhynoceros Rod",
+      "category": "Rods (fairy)",
+      "location": "Frost-Salamander(2), Ice Grotto, Sealed Cave",
+      "description": "",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 5,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Angel Rod",
+      "category": "Rods (fairy)",
+      "location": "Room of the 2 hidden spells, Old Palace 2nd Part",
+      "description": "A rod which can purify the possessed.",
+      "effects": [],
+      "special_effects": [
+        "Demon enemies, At + 40"
+      ],
+      "stats": {
+        "attack_bonus": 40
+      },
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 99,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Bronze Armor",
+      "category": "Armors (warrior & dwarf)",
+      "location": "Guard-Golem, 2nd floor, The Old Palace",
+      "description": "Normal armor made of bronze.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 10,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Chainmail Shirt",
+      "category": "Armors (warrior & dwarf)",
+      "location": "Secret track in the Great Waterfall of Maldo, Wood of",
+      "description": "A shirt made of steel chainmail.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Breast Plate",
+      "category": "Armors (warrior & dwarf)",
+      "location": "Woodcutter’s Cabin-Cellar, Wood of Ruins",
+      "description": "",
+      "effects": [],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Full Plate",
+      "category": "Armors (warrior & dwarf)",
+      "location": "Area before boss, Abandoned Mine 1st Part",
+      "description": "Full suit of heavy armor. Protects the whole body.",
+      "effects": [],
+      "special_effects": [
+        "Critical attack ratio - 2%"
+      ],
+      "stats": {
+        "critical_rate": 2
+      }
+    },
+    {
+      "name": "Silver Armor",
+      "category": "Armors (warrior & dwarf)",
+      "location": "Room of 2 treasure chests with Queen’s Robe, Palace of",
+      "description": "Beautiful armor made of silver.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 42,
+        "mdef": 12
+      }
+    },
+    {
+      "name": "Mirror Armor",
+      "category": "Armors (warrior & dwarf)",
+      "location": "Wolf Medallion room, the Clock Tower, Palace of",
+      "description": "Silver armor with a fine reflective exterior.",
+      "effects": [],
+      "special_effects": [
+        "Sometimes block magic(healing,support & attack magic)"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 52,
+        "mdef": 31
+      }
+    },
+    {
+      "name": "Black Armor",
+      "category": "Armors (warrior & dwarf)",
+      "location": "Black-Knight,Old Palace 2nd Part/Death-Knight, Sealed",
+      "description": "The armor of the accursed black knight.",
+      "effects": [],
+      "special_effects": [
+        "Df + 60 / 10 MP"
+      ],
+      "stats": {}
+    },
+    {
+      "name": "Master Plate",
+      "category": "Armors (warrior & dwarf)",
+      "location": "Green-Giant, Abandoned Mine 2nd Part 10th under level",
+      "description": "A masterwork which provides 1st class protection.",
+      "effects": [],
+      "special_effects": [
+        "Critical attack ratio + 5%"
+      ],
+      "stats": {
+        "critical_rate": 5
+      },
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 12,
+        "mat": 0,
+        "def": 88,
+        "mdef": 24
+      }
+    },
+    {
+      "name": "Fata Morgana Armor",
+      "category": "Armors (warrior & dwarf)",
+      "location": "Locked door that opens when dark elf is beaten,Old",
+      "description": "Imbued with illusionary magic.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Anti-magic Armor",
+      "category": "Armors (warrior & dwarf)",
+      "location": "The Roadside Inn, locked room",
+      "description": "Created by the 12 sages. Against sorcery.",
+      "effects": [],
+      "special_effects": [
+        "Df + (POW * 10%)"
+      ],
+      "stats": {}
+    },
+    {
+      "name": "Guardian Armor",
+      "category": "Armors (warrior & dwarf)",
+      "location": "Living-Armor, Old Palace 2nd part",
+      "description": "Armor forged by the warlords of hell.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Dragonscale",
+      "category": "Armors (warrior & dwarf)",
+      "location": "Dragon-Puppy, Abandoned Mine 1st Part / Ground Floor,",
+      "description": "Armor forged of the heavy scales of a dragon.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 65,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Demonscale",
+      "category": "Armors (warrior & dwarf)",
+      "location": "Durahan, Labyrinth of the Dead",
+      "description": "It was created through a pact with the demons.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 25,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 40,
+        "mdef": 40
+      }
+    },
+    {
+      "name": "Holy Armor",
+      "category": "Armors (warrior & dwarf)",
+      "location": "Platinum-Knight, Path leading to the 2 hidden spell",
+      "description": "It has a holy aura. Protects against the possessed.",
+      "effects": [],
+      "special_effects": [
+        "Evil elemental damage decreases"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 104,
+        "mdef": 88
+      }
+    },
+    {
+      "name": "Pavas Armor",
+      "category": "Armors (warrior & dwarf)",
+      "location": "Efreet, The Hall of Demons ,3rd Floor (Sealed Cave)",
+      "description": "Legendary armor. Given to a hero by the gods.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 32,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 48,
+        "pow": 0,
+        "luk": 16,
+        "at": 0,
+        "mat": 0,
+        "def": 110,
+        "mdef": 80
+      }
+    },
+    {
+      "name": "Leather Armor",
+      "category": "Light Armors (hunter, elf & rogue)",
+      "location": "Initial",
+      "description": "Armor made of thick leather.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 5,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Leather Buckler",
+      "category": "Light Armors (hunter, elf & rogue)",
+      "location": "Woodcutter’s Cabin Cellar, Wood of Ruins / L20 Goblins,",
+      "description": "Small shield which protects against demons.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Fine Leather",
+      "category": "Light Armors (hunter, elf & rogue)",
+      "location": "Goblin (which shoots arrows), green goblin work area,",
+      "description": "First class leather clothing.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 14,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Fine Shield",
+      "category": "Light Armors (hunter, elf & rogue)",
+      "location": "L30 Goblins, Old Palace 1st Part",
+      "description": "Excellent shield made of the finest materials.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 18,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Silver Shield",
+      "category": "Light Armors (hunter, elf & rogue)",
+      "location": "Locked Jail after Durahan, Labyrinth of the Dead 1st",
+      "description": "",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 48,
+        "mdef": 21
+      }
+    },
+    {
+      "name": "Reflector",
+      "category": "Light Armors (hunter, elf & rogue)",
+      "location": "Bat Medallion room, Palace of Immortals, Gold key room.",
+      "description": "",
+      "effects": [],
+      "special_effects": [
+        "Sometimes block magic(healing,support & attack magic)"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 66,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Runic Shield",
+      "category": "Light Armors (hunter, elf & rogue)",
+      "location": "Living-Armor, Old Palace 2nd Part",
+      "description": "It is engraved with runes to enhance magical power.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Dark Shield",
+      "category": "Light Armors (hunter, elf & rogue)",
+      "location": "Old Palace 2nd Part, Tower Annex",
+      "description": "Helps against magic-absorbing barriers.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 78,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Life Shield",
+      "category": "Light Armors (hunter, elf & rogue)",
+      "location": "Cave of Red Dragon",
+      "description": "An excellent shield offering great protection.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 76,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Elven Shield",
+      "category": "Light Armors (hunter, elf & rogue)",
+      "location": "Dark Elf, Old Palace 2nd Part",
+      "description": "A shield enchanted by the elves.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 55,
+        "mdef": 41
+      }
+    },
+    {
+      "name": "Holy Shield",
+      "category": "Light Armors (hunter, elf & rogue)",
+      "location": "Secret room, The Lab. of the Undead",
+      "description": "This shield emits holiness.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Sun Shield",
+      "category": "Light Armors (hunter, elf & rogue)",
+      "location": "The Roadside Inn, locked room",
+      "description": "An old shield which regenerates life energies.",
+      "effects": [],
+      "special_effects": [
+        "Regenerate HP by 2"
+      ],
+      "stats": {
+        "hp_regen": 2
+      },
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 85,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Moon Shield",
+      "category": "Light Armors (hunter, elf & rogue)",
+      "location": "Undead-Master, Labyrinth of the Dead 10th Underground",
+      "description": "An old shield which regenerates sorcerous energies.",
+      "effects": [],
+      "special_effects": [
+        "MP regeneration + 5"
+      ],
+      "stats": {
+        "mp_regen_bonus": 5
+      },
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 86,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Elemental Shield",
+      "category": "Light Armors (hunter, elf & rogue)",
+      "location": "Southeast chest, Ruins in the Lake/Efreet,Sealed Cave",
+      "description": "Magically made by the greatest sorcerers.",
+      "effects": [],
+      "special_effects": [
+        "Fire, Water, Wind, & Earth elemental damage decreases"
+      ],
+      "stats": {}
+    },
+    {
+      "name": "Robe",
+      "category": "Robes (priest,sorcerer,& fairy)",
+      "location": "Initial",
+      "description": "Robe made of heavy cloth.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 5,
+        "mdef": 2
+      }
+    },
+    {
+      "name": "Fine Robe",
+      "category": "Robes (priest,sorcerer,& fairy)",
+      "location": "Woodcutter’s Cabin Cellar, Woods of Ruins",
+      "description": "",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 8,
+        "mdef": 4
+      }
+    },
+    {
+      "name": "Robe of Sorcery",
+      "category": "Robes (priest,sorcerer,& fairy)",
+      "location": "Room of the lever in the 1st floor, Labyrinth of the",
+      "description": "Robe woven of magical energies and silk.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 5,
+        "mdef": 2
+      }
+    },
+    {
+      "name": "Healing Robe",
+      "category": "Robes (priest,sorcerer,& fairy)",
+      "location": "Bat Medallion room, Palace of Immortals, Gold key room",
+      "description": "A life-saving robe which heals its wearer.",
+      "effects": [],
+      "special_effects": [
+        "Regenerate HP by 1"
+      ],
+      "stats": {
+        "hp_regen": 1
+      },
+      "attributes": {
+        "str": 10,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 15,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 36,
+        "mdef": 34
+      }
+    },
+    {
+      "name": "Rune Robe",
+      "category": "Robes (priest,sorcerer,& fairy)",
+      "location": "Living-Armor, Old Palace 2nd Part",
+      "description": "",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 20,
+        "luk": 0,
+        "at": 0,
+        "mat": 28,
+        "def": 42,
+        "mdef": 12
+      }
+    },
+    {
+      "name": "Earth Robe",
+      "category": "Robes (priest,sorcerer,& fairy)",
+      "location": "Wraith, Labyrinth of the Dead 1st &2nd Part",
+      "description": "Contains earth elementals. Protects against sorcery.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 3,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 32,
+        "mdef": 40
+      }
+    },
+    {
+      "name": "Shadow Robe",
+      "category": "Robes (priest,sorcerer,& fairy)",
+      "location": "Ghost, Palace of Immortals",
+      "description": "A black robe inhabited by spirits of darkness.",
+      "effects": [],
+      "special_effects": [
+        "Sometimes block magic(healing,support & attack magic)"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 12,
+        "agl": 0,
+        "con": 0,
+        "pow": 42,
+        "luk": 24,
+        "at": 0,
+        "mat": 0,
+        "def": 62,
+        "mdef": 42
+      }
+    },
+    {
+      "name": "Holy Robe",
+      "category": "Robes (priest,sorcerer,& fairy)",
+      "location": "Labyrinth of the Dead 2nd Part",
+      "description": "A robe which emits a divine aura.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 8,
+        "at": 0,
+        "mat": 20,
+        "def": 60,
+        "mdef": 36
+      }
+    },
+    {
+      "name": "Robe of Spirits",
+      "category": "Robes (priest,sorcerer,& fairy)",
+      "location": "Cave of Red Dragon",
+      "description": "Amplifies its wearer’s magical power.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 5,
+        "mdef": 2
+      }
+    },
+    {
+      "name": "Robe of the Elders",
+      "category": "Robes (priest,sorcerer,& fairy)",
+      "location": "After defeating Red Dragon / Evil-Stalker, Sealed Cave",
+      "description": "Made by the elders. Gives great protection.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 5,
+        "mdef": 2
+      }
+    },
+    {
+      "name": "Guardian Robe",
+      "category": "Robes (priest,sorcerer,& fairy)",
+      "location": "Part of Sealed Cave after defeating Zombie Dragon(Rogue",
+      "description": "Powerfully protective. Made by hell’s guardians.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 5,
+        "mdef": 2
+      }
+    },
+    {
+      "name": "Infernal Robe",
+      "category": "Robes (priest,sorcerer,& fairy)",
+      "location": "Vampire-Lord, Palace of Immortals 2nd Part",
+      "description": "A cursed robe of the devil and his helpers.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 30,
+        "luk": 14,
+        "at": 0,
+        "mat": 0,
+        "def": 28,
+        "mdef": 51
+      }
+    },
+    {
+      "name": "Phantom Robe",
+      "category": "Robes (priest,sorcerer,& fairy)",
+      "location": "Dark-Angel, The Hall of Demons ,5th Floor (Sealed Cave)",
+      "description": "A robe of the dead. It devours the wearer's soul.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 5,
+        "mdef": 2
+      }
+    },
+    {
+      "name": "Robe of the Sages",
+      "category": "Robes (priest,sorcerer,& fairy)",
+      "location": "Dark-Angel, The Hall of Demons ,5th Floor (Sealed Cave)",
+      "description": "It was supposedly created by the 12 Sages.",
+      "effects": [],
+      "special_effects": [
+        "Fire, Water, Wind, Earth, & Evil elemental damage"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 5,
+        "mdef": 2
+      }
+    },
+    {
+      "name": "Leather Shield",
+      "category": "Shields (warrior & dwarf)",
+      "location": "Initial",
+      "description": "A light, easily used leather shield.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Round Shield",
+      "category": "Shields (warrior & dwarf)",
+      "location": "Abandoned Mine or Skeleton, Labyrinth of the Dead",
+      "description": "A simple round shield.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 3,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Knight Shield",
+      "category": "Shields (warrior & dwarf)",
+      "location": "Skeleton, Labyrinth of the Dead",
+      "description": "A finely adorned shield for knights.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 10,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Reflective Shield",
+      "category": "Shields (warrior & dwarf)",
+      "location": "Locked door that opens when Dark Elf is defeated, Old",
+      "description": "Polished surface, protects against magic.",
+      "effects": [],
+      "special_effects": [
+        "Sometimes block magic(healing,support & attack magic)"
+      ],
+      "stats": {}
+    },
+    {
+      "name": "Flame Shield",
+      "category": "Shields (warrior & dwarf)",
+      "location": "West chest in 4th Floor, Old Palace 2nd Part",
+      "description": "Magical shield inhabited by fire spirits.",
+      "effects": [],
+      "special_effects": [
+        "Reduce fire elemental attack"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 18,
+        "mdef": 12
+      }
+    },
+    {
+      "name": "Ice Shield",
+      "category": "Shields (warrior & dwarf)",
+      "location": "Cave of Red Dragon",
+      "description": "Shield made of ice inhabited by water spirits.",
+      "effects": [],
+      "special_effects": [
+        "Reduce water elemental attack"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 18,
+        "mdef": 12
+      }
+    },
+    {
+      "name": "Earth Shield",
+      "category": "Shields (warrior & dwarf)",
+      "location": "Black Lizard, Ruins in the Lake",
+      "description": "Magical shield enchanted by earth spirits.",
+      "effects": [],
+      "special_effects": [
+        "Reduce earth elemental attack"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 18,
+        "mdef": 12
+      }
+    },
+    {
+      "name": "Air Shield",
+      "category": "Shields (warrior & dwarf)",
+      "location": "Wind Fortress, Sealed Cave",
+      "description": "A shield protected by wind spirits.",
+      "effects": [],
+      "special_effects": [
+        "Reduce wind elemental attack"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 18,
+        "mdef": 12
+      }
+    },
+    {
+      "name": "Guardian Shield",
+      "category": "Shields (warrior & dwarf)",
+      "location": "Room after defeating Zombie Dragon / West chest,",
+      "description": "Mabe by warriors, increases magical power.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Lucifer Shield",
+      "category": "Shields (warrior & dwarf)",
+      "location": "Greater-Demon, The Hall of Demons, 3rd Floor (Sealed",
+      "description": "",
+      "effects": [],
+      "special_effects": [
+        "Sometimes cast 'Dark Wave' when attacked while"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 90,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Seraphim Shield",
+      "category": "Shields (warrior & dwarf)",
+      "location": "Dark-Angel, The Hall of Demons, 5th Floor (Sealed Cave)",
+      "description": "",
+      "effects": [],
+      "special_effects": [
+        "Regenerate HP & MP by 1"
+      ],
+      "stats": {}
+    },
+    {
+      "name": "Power Band",
+      "category": "Clothings",
+      "location": "Ogre, 10th under level Abandoned Mine",
+      "description": "Magically increases its weare's strength.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 32,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Power Symbol",
+      "category": "Clothings",
+      "location": "Black-Knight, Old Palace 2nd Part",
+      "description": "Talisman that draws out one's hidden strengths.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 32,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 15,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Symbol of Darkness",
+      "category": "Clothings",
+      "location": "Arch-Magi, Tower Annex, Old Palace 2nd Part",
+      "description": "Talisman that amplifies the dark powers.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Silver Brooch",
+      "category": "Clothings",
+      "location": "Right room in the treasure chamber, Palace of Immortals",
+      "description": "",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Jewel Brooch",
+      "category": "Clothings",
+      "location": "Lesser-Vampire, Palace of Immortals 2nd Part",
+      "description": "A rather ugly brooch with large jewels.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 8,
+        "at": 0,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Jewel Ring",
+      "category": "Clothings",
+      "location": "Mummy & King Mummy, Labyrinth of the Dead 2nd Part",
+      "description": "Ring set with a beautiful gem said to bring luck.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 20,
+        "at": 0,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Resist Ring",
+      "category": "Clothings",
+      "location": "A blue-floating mage, Old Palace 2nd Part",
+      "description": "",
+      "effects": [],
+      "special_effects": [
+        "Mdf + (POW * 25%)"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 0,
+        "mdef": 16
+      }
+    },
+    {
+      "name": "Protect Ring",
+      "category": "Clothings",
+      "location": "Before boss, Abandoned Mine 1st Part",
+      "description": "Protects with strange mysterious powers.",
+      "effects": [],
+      "special_effects": [
+        "Df + (POW * 25%)"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 16,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Blessed Ring",
+      "category": "Clothings",
+      "location": "Woodcutter’s Cabin-Cellar, Wood of Ruins",
+      "description": "Blessed and engraved with holy symbols.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 8,
+        "mat": 8,
+        "def": 8,
+        "mdef": 8
+      }
+    },
+    {
+      "name": "Elemental Ring",
+      "category": "Clothings",
+      "location": "Behemoth, Underground Cave, Wood of Ruins 2nd Part /",
+      "description": "Supernatural ring made by the spirit kings.",
+      "effects": [],
+      "special_effects": [
+        "Elemental Attack (fire,water,wind,earth) + 50%"
+      ],
+      "stats": {}
+    },
+    {
+      "name": "Reflector Ring",
+      "category": "Clothings",
+      "location": "Blue-Floating Mage, Old Palace 2nd Part",
+      "description": "A ring that protects the wearer from magic.",
+      "effects": [],
+      "special_effects": [
+        "Sometimes block magic(healing,support & attack magic)"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 66,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Satan's Ring",
+      "category": "Clothings",
+      "location": "Dark-Wizard, The Old Palace 2nd Part",
+      "description": "Cursed ring created through a pact with Satan.",
+      "effects": [],
+      "special_effects": [
+        "Regenerate MP by 3 & Curse the character"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 80,
+        "def": 0,
+        "mdef": 80
+      }
+    },
+    {
+      "name": "Philos Ring",
+      "category": "Clothings",
+      "location": "Secret room behind the save point in the 2nd Part of",
+      "description": "Said to have been created by the 12 Wisemen.",
+      "effects": [],
+      "special_effects": [
+        "Gain MP when you take damage"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 40,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 40,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Solomon's Ring",
+      "category": "Clothings",
+      "location": "Gigantes, The Hall of Demons ,4th Floor (Sealed Cave)",
+      "description": "Ring of an ancient king, subdues demons.",
+      "effects": [],
+      "special_effects": [
+        "100% block magic(healing,support & attack magic)"
+      ],
+      "stats": {}
+    },
+    {
+      "name": "Dropneal",
+      "category": "Clothings",
+      "location": "After beating Red Dragon",
+      "description": "",
+      "effects": [],
+      "special_effects": [
+        "Increase the chance of getting Fate Coin & Doubles"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Leather Helmet",
+      "category": "Clothings",
+      "location": "Abandoned Mine, Area that needs to be Lighted",
+      "description": "",
+      "effects": [],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Iron Helmet",
+      "category": "Clothings",
+      "location": "Red Knight, Palace of Immortals 2nd Part",
+      "description": "",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 4,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Silver Helmet",
+      "category": "Clothings",
+      "location": "Left chest in Crystal Maze in the Old Palace 2nd Part",
+      "description": "A beautifully designed silver helmet.",
+      "effects": [],
+      "special_effects": [
+        "Immune to Paralysis"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 15,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Great Helmet",
+      "category": "Clothings",
+      "location": "Green-Giant, Abandoned Mine 2nd Part 10th under level",
+      "description": "A great, finely crafted helmet.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 8,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Winged Helmet",
+      "category": "Clothings",
+      "location": "Griffon, The Valey of White Silver",
+      "description": "A magical feathered helmet.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 4,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 18,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Elven Hat",
+      "category": "Clothings",
+      "location": "2nd Dark-Elf, Old Palace 1st / 2nd Part",
+      "description": "Elves like to wear these enchanting hats.",
+      "effects": [],
+      "special_effects": [
+        "Immune to Poison & Paralysis"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 8,
+        "luk": 8,
+        "at": 0,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Hunting Cap",
+      "category": "Clothings",
+      "location": "Secret track near Woodcutter’s Cabin, Wood of Ruins",
+      "description": "Favored hat of the fashion-conscious woodsman.",
+      "effects": [],
+      "special_effects": [
+        "Immune to Confusion & critical attack ratio + 1%"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 8,
+        "agl": 8,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Silver Circlet",
+      "category": "Clothings",
+      "location": "Holy Water Consecration room, Labyrinth of the Dead",
+      "description": "Raises one's spirits and repels demons.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Star Tiara",
+      "category": "Clothings",
+      "location": "Succubus, Palace of Immortals 2nd Part",
+      "description": "One of a pair of tiaras created long ago.",
+      "effects": [],
+      "special_effects": [
+        "Decrease water, earth, darkness,& evil damage"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Earth Tiara",
+      "category": "Clothings",
+      "location": "Before Boss,10th under level Abandoned Mine / Succubus,",
+      "description": "One of a pair of tiaras created long ago.",
+      "effects": [],
+      "special_effects": [
+        "Decrease fire, wind, light, & holy damage"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Death Mask",
+      "category": "Clothings",
+      "location": "Gigantes, The Hall of Demons ,4th Floor (Sealed Cave)",
+      "description": "Wearer becomes invincible at the cost of life.",
+      "effects": [],
+      "special_effects": [
+        "Regenerate HP by -5% & critical attack ratio + 5%"
+      ],
+      "stats": {
+        "hp_regen": -5
+      },
+      "attributes": {
+        "str": 32,
+        "int": 32,
+        "wil": 32,
+        "agl": 32,
+        "con": 32,
+        "pow": 32,
+        "luk": 32,
+        "at": 100,
+        "mat": 100,
+        "def": 100,
+        "mdef": 100
+      }
+    },
+    {
+      "name": "Rune Cape",
+      "category": "Clothings",
+      "location": "Locked door that opens when Dark Elf is defeated, Old",
+      "description": "A cape with runes that increase magical power.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 3,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Summer Cape",
+      "category": "Clothings",
+      "location": "Black Lizard, Old Palace 2nd Part 5th floor Old Palace",
+      "description": "One of the four capes created by a great master.",
+      "effects": [],
+      "special_effects": [
+        "Immune to Paralysis"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 6,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Winter Cape",
+      "category": "Clothings",
+      "location": "Snow Bear, Valley of the White Silver",
+      "description": "One of the four capes created by a great master.",
+      "effects": [],
+      "special_effects": [
+        "Immune to Confusion"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 6,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Spring Cape",
+      "category": "Clothings",
+      "location": "Black Test Founder’s Key chest, Woodcutter’s Cabin",
+      "description": "One of the four capes created by a great master.",
+      "effects": [],
+      "special_effects": [
+        "Immune to Poison"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 6,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Autumn Cape",
+      "category": "Clothings",
+      "location": "Before the 2nd Dark Elf part, Old Palace 2nd Part 5th",
+      "description": "One of the four capes created by a great master.",
+      "effects": [],
+      "special_effects": [
+        "Immune to Magic-Loss"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 6,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Cloak",
+      "category": "Clothings",
+      "location": "The treasure chest before the black chest river part,",
+      "description": "",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 4,
+        "mdef": 2
+      }
+    },
+    {
+      "name": "Leather Cloak",
+      "category": "Clothings",
+      "location": "Wyvern, Ruins in the Lake",
+      "description": "",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 8,
+        "mdef": 4
+      }
+    },
+    {
+      "name": "Resist Cloak",
+      "category": "Clothings",
+      "location": "8th under level Abandoned Mine",
+      "description": "Cloak that protects against magical attacks.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 12,
+        "mdef": 24
+      }
+    },
+    {
+      "name": "Crusader Cloak",
+      "category": "Clothings",
+      "location": "Undead Knight, Labyrinth of the Dead 2nd Part",
+      "description": "A finely embroidered cloak worn by knights.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 4,
+        "mdef": 2
+      }
+    },
+    {
+      "name": "Elven Cloak",
+      "category": "Clothings",
+      "location": "Dark Elf, Old Palace 1st  / 2nd Part",
+      "description": "Light cloak for easy movement worn by elves.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 4,
+        "wil": 4,
+        "agl": 0,
+        "con": 0,
+        "pow": 4,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 16,
+        "mdef": 8
+      }
+    },
+    {
+      "name": "Element Cloak",
+      "category": "Clothings",
+      "location": "Before Boss, 10th under level Abandoned Mine",
+      "description": "Cloak enchanted with the strength of spirits.",
+      "effects": [],
+      "special_effects": [
+        "Decrease fire, water, wind, & earth damage"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 17,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Aqua Shawl",
+      "category": "Clothings",
+      "location": "Ruins in the Lake",
+      "description": "Magical shawl worn by the spirit of water.",
+      "effects": [],
+      "special_effects": [
+        "Fire elemental damage decreases"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 8,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Feather Mantle",
+      "category": "Clothings",
+      "location": "Harpy, Palace of Immortal / Hippogriff, The Valley of",
+      "description": "A magnificent cloak adorned with feathers.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Gauntlets",
+      "category": "Clothings",
+      "location": "Goblin-Leader, Abandoned Mine 1st Part",
+      "description": "Iron gloves to protect the hand.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 2,
+        "mat": 0,
+        "def": 2,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Gauntlets of Strength",
+      "category": "Clothings",
+      "location": "West chest in 4th Floor, Old Palace 2nd Part",
+      "description": "Enchanted to increase strength.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 2,
+        "mat": 0,
+        "def": 2,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Silver Gauntlets",
+      "category": "Clothings",
+      "location": "Goblin-Leader, Abandoned Mine 1st Part",
+      "description": "",
+      "effects": [],
+      "special_effects": [
+        "Give the effect of 'Enchant Weapon' to equipped weapon"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 2,
+        "mat": 0,
+        "def": 2,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Wing Gauntlets",
+      "category": "Clothings",
+      "location": "The Roadside Inn, locked room",
+      "description": "Magical feathered gauntlets.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 2,
+        "mat": 0,
+        "def": 2,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Leather Gloves",
+      "category": "Clothings",
+      "location": "Secret track in the Great Waterfall of Maldo, Wood of",
+      "description": "Gloves made of leather.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Rune Gloves",
+      "category": "Clothings",
+      "location": "Labyrinth of the Dead 2nd Part",
+      "description": "",
+      "effects": [],
+      "special_effects": [
+        "Give the effect of 'Enchant Weapon' to equipped weapon"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 12,
+        "mat": 0,
+        "def": 6,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Strong Gloves",
+      "category": "Clothings",
+      "location": "Area that needs to be lighted, Abandoned Mine 1st Part",
+      "description": "",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 8,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 8,
+        "mat": 0,
+        "def": 8,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Feather Gloves",
+      "category": "Clothings",
+      "location": "Harpy, Palace of Immortals 1st Part",
+      "description": "Gloves made from feathers.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Holy Gloves",
+      "category": "Clothings",
+      "location": "Bone Sigil room, Labyrinth of the Dead",
+      "description": "Gloves which bestow the wearer with holy might.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 20,
+        "mat": 0,
+        "def": 12,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Magic Pentagram",
+      "category": "Clothings",
+      "location": "The Roadside Inn, locked room",
+      "description": "Gloves that quicken incantations of magic.",
+      "effects": [],
+      "special_effects": [
+        "Cut magic incantation by 50%"
+      ],
+      "stats": {}
+    },
+    {
+      "name": "Minotaur Horn",
+      "category": "Clothings",
+      "location": "8th under level Abandoned Mine",
+      "description": "Said to give the bearer great strength.",
+      "effects": [],
+      "special_effects": [
+        "Sometimes knock back enemies (even bosses)"
+      ],
+      "stats": {}
+    },
+    {
+      "name": "Dragon Horn",
+      "category": "Clothings",
+      "location": "After defeating Red Dragon",
+      "description": "Said to increase the bearer's abilities.",
+      "effects": [],
+      "special_effects": [
+        "Critical attack ratio + 4%"
+      ],
+      "stats": {
+        "critical_rate": 4
+      },
+      "attributes": {
+        "str": 30,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 30,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Dragon Tail",
+      "category": "Clothings",
+      "location": "Wyvern, Ruins in the Lake",
+      "description": "",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 20,
+        "at": 0,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Dragon Scales",
+      "category": "Clothings",
+      "location": "Abandoned Mine",
+      "description": "",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 16,
+        "at": 0,
+        "mat": 0,
+        "def": 12,
+        "mdef": 12
+      }
+    },
+    {
+      "name": "Basilisk Scales",
+      "category": "Clothings",
+      "location": "Basirisk,Sealed Cave,part after Zombie Dragon /",
+      "description": "Protect against being turned to stone.",
+      "effects": [],
+      "special_effects": [
+        "Immune to Petrify"
+      ],
+      "stats": {}
+    },
+    {
+      "name": "Dragon Amulet",
+      "category": "Clothings",
+      "location": "Wyvern, Ruins in the Lake",
+      "description": "Engraved with the sacred dragon.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Light Amulet",
+      "category": "Clothings",
+      "location": "Abandoned Mine, area that needs to be lighted",
+      "description": "Brings forth the power of light.",
+      "effects": [],
+      "special_effects": [
+        "Darkness elemental damage decreases"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Healing Amulet",
+      "category": "Clothings",
+      "location": "Black Test Founder’s Key chest, Woodcutter’s Cabin",
+      "description": "An ancient amulet that heals the body.",
+      "effects": [],
+      "special_effects": [
+        "Regenerate HP by 1"
+      ],
+      "stats": {
+        "hp_regen": 1
+      }
+    },
+    {
+      "name": "Rune Amulet",
+      "category": "Clothings",
+      "location": "Locked door that opens when Dark Elf is defeated, Old",
+      "description": "Engraved with runes that enhance magic.",
+      "effects": [],
+      "special_effects": [
+        "Wizard mag atk + 50%"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 6,
+        "luk": 0,
+        "at": 0,
+        "mat": 12,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Talisman",
+      "category": "Clothings",
+      "location": "Zombie, Labyrinth of the Dead",
+      "description": "Accelerates the recovery of magical energy.",
+      "effects": [],
+      "special_effects": [
+        "MP regeneration + 2"
+      ],
+      "stats": {
+        "mp_regen_bonus": 2
+      },
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Luck Talisman",
+      "category": "Clothings",
+      "location": "Fairy Chest, Abandoned Mine",
+      "description": "Amulet that brings the wearer good luck.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 32,
+        "at": 0,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Healing Talisman",
+      "category": "Clothings",
+      "location": "Woodcutter's Cabin Cellar, Woods of Ruins",
+      "description": "",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Dominion Feather",
+      "category": "Clothings",
+      "location": "Wind Fortress, Sealed Cave*",
+      "description": "Beautiful feather with hidden holy power.",
+      "effects": [],
+      "special_effects": [
+        "Auto resurrect(Full HP & MP) (50% Destruction)"
+      ],
+      "stats": {}
+    },
+    {
+      "name": "Cross",
+      "category": "Clothings",
+      "location": "Holy Water Consecration room, Lab. of the Dead 1st Part",
+      "description": "A holy cross which protects agains all spells.",
+      "effects": [],
+      "special_effects": [
+        "Immune to Curse"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Misty Pendant",
+      "category": "Clothings",
+      "location": "Shadow, Palace of Immortals 2nd Part / 7th under level",
+      "description": "Misterious Locket with misty swirling surface.",
+      "effects": [],
+      "special_effects": [
+        "Immune to Silence"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Fire Necklace",
+      "category": "Clothings",
+      "location": "The Labyrinth of the Undead.",
+      "description": "Wearer is protected by the powers of fire.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Earth Necklace",
+      "category": "Clothings",
+      "location": "Abandoned Mine, area that needs to be lighted",
+      "description": "Wearer is protected by the powers of earth.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Water Necklace",
+      "category": "Clothings",
+      "location": "Ruins in the Lake",
+      "description": "Wearer is protected by the powers of water.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Wind Necklace",
+      "category": "Clothings",
+      "location": "Griffin, Valley of White Silver",
+      "description": "Wearer is protected by the powers of wind.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 14,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Light Necklace",
+      "category": "Clothings",
+      "location": "Will-O-The-Wisp, Canyon Path/Isle of Ruins, Wood of",
+      "description": "Wearer is protected by the powers of light.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Dark Necklace",
+      "category": "Clothings",
+      "location": "Black Lizard, Ruins in the Lake",
+      "description": "Wearer is protected by the powers of dark.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 14,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Holy Necklace",
+      "category": "Clothings",
+      "location": "Holy Water Consecration room, Labyrinth of the Dead",
+      "description": "Wearer is blessed with holy power.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 4,
+        "int": 4,
+        "wil": 4,
+        "agl": 4,
+        "con": 4,
+        "pow": 4,
+        "luk": 4,
+        "at": 0,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Evil Necklace",
+      "category": "Clothings",
+      "location": "Arch-Magi, Old Palace 2nd Part",
+      "description": "Engraved devil’s prayer gives unholy power.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 14,
+        "at": 0,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Necklace of Wonders",
+      "category": "Clothings",
+      "location": "The Roadside Inn, locked room",
+      "description": "Beautiful necklace made in long ago.",
+      "effects": [],
+      "special_effects": [
+        "Regenerate HP by 2 & MP by 2"
+      ],
+      "stats": {
+        "hp_regen": 2
+      }
+    },
+    {
+      "name": "Bronze Medal",
+      "category": "Clothings",
+      "location": "Glow Moss area, Abandoned Mine 1st Part",
+      "description": "Increases the wearer’s defense during attacks.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Silver Medal",
+      "category": "Clothings",
+      "location": "Glow Moss area, Abandoned Mine 1st Pat",
+      "description": "Increases the wearer’s defense during attacks.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Gold Medal",
+      "category": "Clothings",
+      "location": "Glow Moss area, Abandoned Mine 1st Part",
+      "description": "Increases the wearer’s defense during attacks.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Lucky Earrings",
+      "category": "Clothings",
+      "location": "9th under level Abandoned Mine 2nd Part",
+      "description": "Beautiful earrings which bring luck.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Crystal Earrings",
+      "category": "Clothings",
+      "location": "6th under level Abandoned Mine 2nd Part",
+      "description": "Said to strengthen mind and spirit.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Blue Ear-stud",
+      "category": "Clothings",
+      "location": "Locked door that opens when Dark Elf is defeated, Old",
+      "description": "Ear-stud adorned with a blue jewel.",
+      "effects": [],
+      "special_effects": [
+        "10% magic recovery from water & wind damage"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Red Ear-stud",
+      "category": "Clothings",
+      "location": "Locked door that opens when Dark Elf is defeated, Old",
+      "description": "Ear-stud adorned with a red jewel.",
+      "effects": [],
+      "special_effects": [
+        "10% magic recovery from fire & earth damage"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Fine Scarf",
+      "category": "Clothings",
+      "location": "Skeleton, Labyrinth of the Dead",
+      "description": "",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 6,
+        "mdef": 3
+      }
+    },
+    {
+      "name": "Silver Anklet",
+      "category": "Clothings",
+      "location": "Silver Wolf, Clock Palace, Palace of Immortals 1st Part",
+      "description": "",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 8,
+        "wil": 8,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 4,
+        "mdef": 4
+      }
+    },
+    {
+      "name": "Feather Anklet",
+      "category": "Clothings",
+      "location": "Griffon, The Valey of White Silver",
+      "description": "",
+      "effects": [],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Shaman's Tablet",
+      "category": "Clothings",
+      "location": "East chest, The Ancient Ruins / Vampire-Lord, The",
+      "description": "A stone tablet which warns of coming danger.",
+      "effects": [],
+      "special_effects": [
+        "Immune to spiritual status abnormality (Magic-Loss,"
+      ],
+      "stats": {}
+    },
+    {
+      "name": "Berserker Bones",
+      "category": "Clothings",
+      "location": "Hell-Ogre, Sealed Cave, part after defeating Zombie",
+      "description": "Skullbone of a fallen-mad warrior.",
+      "effects": [],
+      "special_effects": [
+        "Critical attack ratio + 2% & Goes berserk when in"
+      ],
+      "stats": {
+        "critical_rate": 2
+      },
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 110,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Sol Crown",
+      "category": "Clothings",
+      "location": "King Mummy room, left chest, 9th Under level Labyrinth",
+      "description": "The sun crown of a powerfull ancient king.",
+      "effects": [],
+      "special_effects": [
+        "MP consumption - 50%"
+      ],
+      "stats": {
+        "mp_cost_reduction": 50
+      }
+    },
+    {
+      "name": "Moon Crown",
+      "category": "Clothings",
+      "location": "Sealed (elf) room in Ritual Elexier area, Labyrinth of",
+      "description": "Crown of an acient king who wielded great power.",
+      "effects": [],
+      "special_effects": [
+        "MP consumption - 25%"
+      ],
+      "stats": {
+        "mp_cost_reduction": 25
+      },
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Mystical Veil",
+      "category": "Clothings",
+      "location": "Succubus, Wind Fortress-Sealed Cave",
+      "description": "",
+      "effects": [],
+      "special_effects": [
+        "Fairy mag atk + 50%"
+      ],
+      "stats": {}
+    },
+    {
+      "name": "Shadow Veil",
+      "category": "Clothings",
+      "location": "Blood Shadow, Sealed Cave",
+      "description": "Veil of heretics, imbued with dark powers.",
+      "effects": [],
+      "special_effects": [
+        "10% magic recovery from darkness & evil damage"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 8,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Beauty Veil",
+      "category": "Clothings",
+      "location": "Succubus, Sealed Cave, Wind Fortress",
+      "description": "Beautiful ornamental veil, worn by priests.",
+      "effects": [],
+      "special_effects": [
+        "Priest mag atk + 50% & Increases the potential of"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Fine Shoes",
+      "category": "Clothings",
+      "location": "Clearing, Woods of Ruins",
+      "description": "",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 2,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Feather Shoes",
+      "category": "Clothings",
+      "location": "Harpy, Palace of Immortals 1st Part / Hippogriff, The",
+      "description": "Enchanted shoes, light as a feather.",
+      "effects": [],
+      "special_effects": [
+        "Immune to Slow"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 6,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Hovering Shoes",
+      "category": "Clothings",
+      "location": "6th under level Abandoned Mine, chest in the top of the",
+      "description": "Shoes which allow the wearer to float on air.",
+      "effects": [],
+      "special_effects": [
+        "Give the effect of 'Levitate' to character"
+      ],
+      "stats": {}
+    },
+    {
+      "name": "Leather Boots",
+      "category": "Clothings",
+      "location": "Abandoned Mine, area that needs to be Lighted",
+      "description": "Boots made of comfortable leather.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 2,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Fine Boots",
+      "category": "Clothings",
+      "location": "5th under level Abandoned Mine, before boss",
+      "description": "",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 5,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Iron Boots",
+      "category": "Clothings",
+      "location": "6th under level Abandoned Mine",
+      "description": "",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 4,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Quick Boots",
+      "category": "Clothings",
+      "location": "Revenant, Labyrinth of the Dead 2nd Part",
+      "description": "Allows the wearer quick and agile movements.",
+      "effects": [],
+      "special_effects": [
+        "Wind elemental damage decreases"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 32,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 8,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Winged Boots",
+      "category": "Clothings",
+      "location": "The Roadside Inn, locked room",
+      "description": "Enchanted boots adorned with feathers.",
+      "effects": [],
+      "special_effects": [
+        "Immune to Slow"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 12,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 20,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Elven Boots",
+      "category": "Clothings",
+      "location": "Dark Elf, Old Palace 1st / 2nd Part",
+      "description": "The wearer of these boots becomes tireless.",
+      "effects": [],
+      "special_effects": [
+        "Regenerate HP by 1"
+      ],
+      "stats": {
+        "hp_regen": 1
+      },
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 12,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Dancing Doll",
+      "category": "Clothings",
+      "location": "Before Durahan, Labyrinth of the Dead",
+      "description": "Magical puppet with an enchanted soul.",
+      "effects": [],
+      "special_effects": [
+        "Refill 4% of the MP when it goes to 0(50% Destruction)"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 20,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Technique Book",
+      "category": "Clothings",
+      "location": "The Roadside Inn, locked room",
+      "description": "Book containing the secrets of swordmanship.",
+      "effects": [],
+      "special_effects": [
+        "Critical attack ratio + 5%"
+      ],
+      "stats": {
+        "critical_rate": 5
+      }
+    },
+    {
+      "name": "Renugeton",
+      "category": "Clothings",
+      "location": "Left chest in Crystal Maze in the Old Palace 2nd Part",
+      "description": "Magical book containing knowledge about demons.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 20,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 16,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Almander",
+      "category": "Clothings",
+      "location": "The Roadside Inn, locked room",
+      "description": "Magical book containing knowledge about demons.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 40,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 22,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Bahil",
+      "category": "Clothings",
+      "location": "Room of the 2 Hidden Spells, Old Palace 2nd Part",
+      "description": "A spellbook on purification techniques.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 80,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 40,
+        "luk": 0,
+        "at": 0,
+        "mat": 30,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Water Mirror",
+      "category": "Clothings",
+      "location": "Secret track in the isle of ruins, Wood of Ruins",
+      "description": "Mirror that can reveal defense of opponents.",
+      "effects": [],
+      "special_effects": [
+        "Reveal enemies’ alignment/element"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Mirror of Truth",
+      "category": "Clothings",
+      "location": "6th under level Abandoned Mine",
+      "description": "Mirror of truth that can reveal identities.",
+      "effects": [],
+      "special_effects": [
+        "Reveal enemies’ Name & Hit Point (HP)"
+      ],
+      "stats": {}
+    },
+    {
+      "name": "Gray Arc",
+      "category": "Clothings",
+      "location": "Metal-Slime, The Ancient Ruins",
+      "description": "",
+      "effects": [],
+      "special_effects": [
+        "Immune to Drain"
+      ],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Cure Potion",
+      "category": "Items",
+      "location": "Ghoul,Labyrinth of the Dead / Most poisonous enemies",
+      "description": "",
+      "effects": [
+        "Status abnormal recovery to one member"
+      ],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Healing Pin",
+      "category": "Items",
+      "location": "The Roadside Inn, Chest *",
+      "description": "Acupuncture needle. (Restores HP 25% dest.)",
+      "effects": [
+        "Restore HP by  10 -  20 to one party member"
+      ],
+      "special_effects": [],
+      "stats": {
+        "hp_restore_min": 10,
+        "hp_restore_max": 20
+      }
+    },
+    {
+      "name": "Healing Potion",
+      "category": "Items",
+      "location": "Most slimes, bears, & wolves",
+      "description": "Common Potion. (Restores HP to single unit)",
+      "effects": [
+        "Restore HP by  40 -  80 to one party member"
+      ],
+      "special_effects": [],
+      "stats": {
+        "hp_restore_min": 40,
+        "hp_restore_max": 80
+      }
+    },
+    {
+      "name": "Life Potion",
+      "category": "Items",
+      "location": "Most slimes, bears, & wolves",
+      "description": "Potion of essence of life. (Restores HP)",
+      "effects": [
+        "Restore HP by 220 - 300 to one party member"
+      ],
+      "special_effects": [],
+      "stats": {
+        "hp_restore_min": 220,
+        "hp_restore_max": 300
+      }
+    },
+    {
+      "name": "Mind Potion",
+      "category": "Items",
+      "location": "Gargoyle, The Anicent Ruins",
+      "description": "Enchanted medicine. (Restores MP)",
+      "effects": [
+        "Restore MP by  30 -  60 to one party member"
+      ],
+      "special_effects": [],
+      "stats": {
+        "mp_restore_min": 30,
+        "mp_restore_max": 60
+      }
+    },
+    {
+      "name": "Healing Stone",
+      "category": "Items",
+      "location": "Room after defeating Zombie Dragon*",
+      "description": "Stone of healing. (HP to max. 20% Dest.)",
+      "effects": [
+        "Restore HP by  60 -  80 to all party members * 25% dest"
+      ],
+      "special_effects": [],
+      "stats": {
+        "hp_restore_min": 60,
+        "hp_restore_max": 80
+      }
+    },
+    {
+      "name": "Magical Stone",
+      "category": "Items",
+      "location": "Room after defeating Zombie Dragon*",
+      "description": "Soothes the spirit. (MP to max. 25% Dest.)",
+      "effects": [
+        "Restore MP by  10 -  30 to all party members * 25% dest"
+      ],
+      "special_effects": [],
+      "stats": {
+        "mp_restore_min": 10,
+        "mp_restore_max": 30
+      }
+    },
+    {
+      "name": "Ambrosia",
+      "category": "Items",
+      "location": "After defeating Zombie Dragon",
+      "description": "Nectar of the “Changing Flower”. (Resurrection)",
+      "effects": [
+        "Resurrect an ally with full HP"
+      ],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Elixir",
+      "category": "Items",
+      "location": "After defeating Zombie Dragon",
+      "description": "Legendary medicine. (Completely restores MP and HP)",
+      "effects": [
+        "Restore HP & MP to full to a member"
+      ],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Fine Oil",
+      "category": "Items",
+      "location": "Mummy, Labyrinth of the Dead",
+      "description": "High quality oil. (Temp. increase of fire attack)",
+      "effects": [
+        "Fire attribute + 30"
+      ],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Blood Oil",
+      "category": "Items",
+      "location": "Vampire-Bat, Palace of Immortals 2nd Part",
+      "description": "Made from blood. (Temp. increase dark attack)",
+      "effects": [
+        "Darkness attribute + 30"
+      ],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Blood Extract",
+      "category": "Items",
+      "location": "Most Bears",
+      "description": "Extract of blood. (Restores HP to maximum)",
+      "effects": [
+        "Max Hit Point    +  1~6 (Permanent)"
+      ],
+      "special_effects": [],
+      "stats": {
+        "point_min": 1,
+        "point_max": 6
+      }
+    },
+    {
+      "name": "Spirit Extract",
+      "category": "Items",
+      "location": "Lesser-Vampire/Vampire, Palace of Immortals 2nd Part /",
+      "description": "Consentrate of spirits. (Restore MP to maximum.)",
+      "effects": [
+        "Max Magic Point  +  1~6 (Permanent)"
+      ],
+      "special_effects": [],
+      "stats": {
+        "point_min": 1,
+        "point_max": 6
+      }
+    },
+    {
+      "name": "Miracle Powder",
+      "category": "Items",
+      "location": "Woodcutter’s Cabin Cellar, Woods of Ruins*",
+      "description": "Ressurects the dead. (Ressurect 33% dest.)",
+      "effects": [
+        "Resurrect an ally with 1/5 of max HP * 33% dest"
+      ],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Fairy Powder",
+      "category": "Items",
+      "location": "Gremlin, Sealed Cave",
+      "description": "Made from fairy wings. (Activates Anti-Circle)",
+      "effects": [
+        "Cast Lvl 5 fairie spell 'Anti-Circle'"
+      ],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Fairy Wings",
+      "category": "Items",
+      "location": "Gremlin, Sealed Cave*",
+      "description": "A copy of fairy wings. (Levitate 25%dest.)",
+      "effects": [
+        "Cast Lvl 4 fairie spell 'Levitate' * 25% dest"
+      ],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Fairy Perfume",
+      "category": "Items",
+      "location": "Fairy Chest, Abandoned Mine",
+      "description": "Created by fairies. (Activates Invincible)",
+      "effects": [
+        "Cast Lvl 5 fairie spell 'Invincible'"
+      ],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Healing Perfume",
+      "category": "Items",
+      "location": "The Sealed Room in 2nd floor, Palace of Immortals",
+      "description": "Rousing fragrance. (Slowly restores HP)",
+      "effects": [
+        "Regenerate HP by 4 to all party members"
+      ],
+      "special_effects": [],
+      "stats": {
+        "hp_restore_min": 4
+      }
+    },
+    {
+      "name": "Recovery Perfume",
+      "category": "Items",
+      "location": "The Sealed Room in 2nd floor, Palace of Immortals",
+      "description": "Mildly scented perfume. (Slowly restores MP)",
+      "effects": [
+        "Regenerate MP by 4 to all party members"
+      ],
+      "special_effects": [],
+      "stats": {
+        "mp_restore_min": 4
+      }
+    },
+    {
+      "name": "Energy Crystal",
+      "category": "Items",
+      "location": "Room after defeating Zombie Dragon*",
+      "description": "Life. (Activates Recover Energy 25% Dest.)",
+      "effects": [
+        "Cast Lvl 5 priest spell 'Recover Energy' * 25% dest"
+      ],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Energy Flask",
+      "category": "Items",
+      "location": "Wraith, Labyrinth of the Dead*",
+      "description": "Essence of vigor. (Cures drain 33% Dest.)",
+      "effects": [
+        "Cure 'Drain' * 33% dest"
+      ],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Rope of Return",
+      "category": "Items",
+      "location": "Retired Knight or Ghoul, Labyrinth of the Dead",
+      "description": "Enchanted rope. (Activates Teleport)",
+      "effects": [],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Wings of Seraphim",
+      "category": "Items",
+      "location": "Near Boss, Abandoned Mine 2nd Part",
+      "description": "A copy of angels' wings. (Rest. of Life)",
+      "effects": [
+        "Restore HP & MP back to full and recover status ailments"
+      ],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Wings of Lucifer",
+      "category": "Items",
+      "location": "Dark-Angel, The Hall of Demons ,5th Floor (Sealed Cave)",
+      "description": "Modeled after fallen angel. (Weaken Foe)",
+      "effects": [
+        "Cast 'Weak' on all enemies"
+      ],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 90,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Fate Coin",
+      "category": "Items",
+      "location": "Demons/Undead (except:Vampires,Ghosts,Succubus)",
+      "description": "It shows the goddess of luck. (Changes Luck)",
+      "effects": [
+        "Max Luck         + -3~3 (Permanent)"
+      ],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Material Magic",
+      "category": "Items",
+      "location": "Gargoyle, Old Palace, Crystal Maze",
+      "description": "Crystal of solid magic. (Strengthens weapon)",
+      "effects": [
+        "Weapon's At. & Armor's Df. + 1~3 (Permanent)"
+      ],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Material Flame",
+      "category": "Items",
+      "location": "Salamander, Cave of Red Dragon",
+      "description": "Magic crystal fire. (Fire attr. to weapon)",
+      "effects": [
+        "Weapon & Armor's fire attribute + 1~3 (Permanent)"
+      ],
+      "special_effects": [],
+      "stats": {
+        "attribute_min": 1,
+        "attribute_max": 3
+      }
+    },
+    {
+      "name": "Material Earth",
+      "category": "Items",
+      "location": "Cave-Scissors & Killer-Fish, Abandoned Mine 2nd Part",
+      "description": "Magic crystal earth. (Earth attr. to weapon)",
+      "effects": [
+        "Weapon & Armor's earth attribute + 1~3 (Permanent)"
+      ],
+      "special_effects": [],
+      "stats": {
+        "attribute_min": 1,
+        "attribute_max": 3
+      }
+    },
+    {
+      "name": "Material Water",
+      "category": "Items",
+      "location": "Ruins in the Lake",
+      "description": "Magic crystal water. (Water attr. to weapon)",
+      "effects": [
+        "Weapon & Armor's water attribute + 1~3 (Permanent)"
+      ],
+      "special_effects": [],
+      "stats": {
+        "attribute_min": 1,
+        "attribute_max": 3
+      }
+    },
+    {
+      "name": "Material Wind",
+      "category": "Items",
+      "location": "Stalker, Old Palace 2nd Part",
+      "description": "Magic crystalize wind. (Wind attr. to weapon)",
+      "effects": [
+        "Weapon & Armor's wind attribute + 1~3 (Permanent)"
+      ],
+      "special_effects": [],
+      "stats": {
+        "attribute_min": 1,
+        "attribute_max": 3
+      }
+    },
+    {
+      "name": "Material Light",
+      "category": "Items",
+      "location": "Flare Salamander, Cave of Red Dragon",
+      "description": "Magic crystal light. (Light attr. to weapon)",
+      "effects": [
+        "Weapon & Armor's light attribute + 1~3 (Permanent)"
+      ],
+      "special_effects": [],
+      "stats": {
+        "attribute_min": 1,
+        "attribute_max": 3
+      }
+    },
+    {
+      "name": "Material Darkness",
+      "category": "Items",
+      "location": "Chimera,The Ancient Ruins",
+      "description": "",
+      "effects": [],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Material Holy",
+      "category": "Items",
+      "location": "Black Lizard, Ruins in the Lake",
+      "description": "",
+      "effects": [],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Material Evil",
+      "category": "Items",
+      "location": "Spirit Ball, 10th under level Abandoned Mine",
+      "description": "Crystalized evil. (Evil attribute to weapon)",
+      "effects": [
+        "Weapon & Armor's evil attribute + 1~3 (Permanent)"
+      ],
+      "special_effects": [],
+      "stats": {
+        "attribute_min": 1,
+        "attribute_max": 3
+      }
+    },
+    {
+      "name": "Jewel Box",
+      "category": "Items",
+      "location": "Black Test Founder’s Key chest, Woodcutter’s Cabin",
+      "description": "Holder gains fame. (? ? ?)",
+      "effects": [
+        "Fundamental value of Luck increase"
+      ],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Silent Box",
+      "category": "Items",
+      "location": "Labyrinth of the Dead 2nd Part*",
+      "description": "Odd music box. (Casts Silence 10% dest.)",
+      "effects": [
+        "Cast Lvl 3 fairie spell 'Silence' * 10% dest"
+      ],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Terror Card",
+      "category": "Items",
+      "location": "Old Palace 2nd Part, near the place where you get the",
+      "description": "Frightening cards of cursing. (Confuses Foes)",
+      "effects": [
+        "Cast 'Confusion' on all enemies"
+      ],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Tarot Card",
+      "category": "Items",
+      "location": "Old Palace 2nd Part, near the place where you get the",
+      "description": "Magical Tarot cards. (? ? ?)",
+      "effects": [
+        "Cast high level magic"
+      ],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Blood Pen",
+      "category": "Items",
+      "location": "Vampire / Lesser-Vampire, Palace of Immortals 2nd Part",
+      "description": "Uses blood ink. (Increase magic recovery rate)",
+      "effects": [
+        "Magical recovery factor increase"
+      ],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Feather Pen",
+      "category": "Items",
+      "location": "Hippogriff,Valley of White Silver/Vampire or Lesser-",
+      "description": "Big feather pen. (Increase magic recovery rate)",
+      "effects": [
+        "Magical acquisition rate increase"
+      ],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Sheep Flute",
+      "category": "Items",
+      "location": "Harpy, Palace of Immortals*",
+      "description": "",
+      "effects": [
+        "Cast Lvl 1 fairie spell 'Sleep' * 10% dest"
+      ],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Herbal Candy",
+      "category": "Items",
+      "location": "Area near the falling rocks, Abandoned Mine 1st Part",
+      "description": "A strange tasting candy. (? ? ?)",
+      "effects": [
+        "Random effects of herbs"
+      ],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Tasty-drops",
+      "category": "Items",
+      "location": "4th under level Abandoned Mine",
+      "description": "Very tasty candy. (Restores MP and HP)",
+      "effects": [
+        "Restore HP & MP by 10 - 40 to one party member"
+      ],
+      "special_effects": [],
+      "stats": {
+        "mp_restore_min": 10,
+        "mp_restore_max": 40
+      }
+    },
+    {
+      "name": "Berserker Drug",
+      "category": "Items",
+      "location": "Killer-Bee, Wood of Ruins*",
+      "description": "Dispels all fears. (Temporary Berserk)",
+      "effects": [
+        "Cast 'Berserk' on yourself for 120 seconds"
+      ],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 110,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Red Spice",
+      "category": "Items",
+      "location": "Giant-Centipede, Abandoned Mine 1st Part",
+      "description": "Very hot spice. (Increases AT temporarily)",
+      "effects": [
+        "At. + 50% for 60 seconds"
+      ],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Fortune Clock",
+      "category": "Items",
+      "location": "Middle treasure chest in treasure chamber, Palace of",
+      "description": "Forever sand. (Activates Quick 33% dest.)",
+      "effects": [
+        "Cast Lvl 5 fairie spell 'Quick' * 33% dest"
+      ],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Mysterious Clock",
+      "category": "Items",
+      "location": "Before Boss, 10th under level Abandoned Mine*",
+      "description": "Glowing Sandglass. (Heavy slow! 33% dest.)",
+      "effects": [
+        "Cast Lvl 5 fairie spell 'Heavy Slow' * 33% dest"
+      ],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Fire Jewel",
+      "category": "Jewels",
+      "location": "Salamander, Cave of Red Dragon*",
+      "description": "Gem of fire. (Activates Blaze; 25% Destruction)",
+      "effects": [
+        "Cast Lvl 3 wizard spell 'Blaze' * 25% dest"
+      ],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Fire Orb",
+      "category": "Jewels",
+      "location": "Salamander, Cave of Red Dragon",
+      "description": "Orb of fire magic. (Activates Explosion)",
+      "effects": [
+        "Cast Lvl 5 wizard spell 'Explosion'"
+      ],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Ice Jewel",
+      "category": "Jewels",
+      "location": "Frost-Salamander, Abandoned Mine 2nd Part / Ruins in",
+      "description": "Gem of ice. (Activates Blizzard; 25% Destruction)",
+      "effects": [
+        "Cast Lvl 3 wizard spell 'Blizzard' * 25% dest"
+      ],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Frost Orb",
+      "category": "Jewels",
+      "location": "Ruins in the Lake / Snow Bear, Valley of White Silver",
+      "description": "Orb of Ice magic. (Activates Freeze Beast)",
+      "effects": [
+        "Cast Lvl 5 wizard spell 'Freeze Beast'"
+      ],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Wind Jewel",
+      "category": "Jewels",
+      "location": "Wyvern, Ruins in the Lake*",
+      "description": "Wind Gem. (Activates Lightning Bolt; 25% Dest.)",
+      "effects": [
+        "Cast Lvl 3 wizard spell 'Lightningbolt' * 25% dest"
+      ],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Thunder Orb",
+      "category": "Jewels",
+      "location": "Harpy, Palace of Immortal",
+      "description": "Orb of wind magic. (Activates Thunderbolt)",
+      "effects": [
+        "Cast Lvl 5 wizard spell 'Thunderbolt'"
+      ],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Earth Jewel",
+      "category": "Jewels",
+      "location": "Boss, Wood of Ruins 1st Part / the same place as",
+      "description": "Earth Gem. (Activates Poison Cloud; 25% Dest.)",
+      "effects": [
+        "Cast Lvl 3 wizard spell 'Poison Cloud' * 25% dest"
+      ],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Earth Orb",
+      "category": "Jewels",
+      "location": "Owlbear, Wood of Ruins",
+      "description": "Orb of earth magic. (Activates Earth Javelin)",
+      "effects": [
+        "Cast Lvl 5 wizard spell 'Earth Javelin'"
+      ],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Light Orb",
+      "category": "Jewels",
+      "location": "Flare-Salamander, Cave of Red Dragon",
+      "description": "Orb of light magic. (Activates Shining)",
+      "effects": [
+        "Cast Lvl 4 wizard spell 'Shining'"
+      ],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Rainbow Orb",
+      "category": "Jewels",
+      "location": "The Sealed (elf) Room in 2nd floor, Palace of Immortals",
+      "description": "Magic-absorbing orb. (Activates Dispel Magic)",
+      "effects": [
+        "Cast Lvl 4 wizard spell 'Dispell Magic'"
+      ],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 7,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      }
+    },
+    {
+      "name": "Dark Orb",
+      "category": "Jewels",
+      "location": "Spirit Ball,10th under level Abandoned Mine /Shadow,",
+      "description": "Enchanted with dark magic. (Activates Dark Breath)",
+      "effects": [
+        "Cast Lvl 4 wizard spell 'Dark Breath'"
+      ],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Holy Water",
+      "category": "Jewels",
+      "location": "Holy Water Consecration room, Labyrinth of the Dead",
+      "description": "Purifies the unclean. (Activates Turn Undead)",
+      "effects": [
+        "Cast Lvl 1 priest spell 'Turn Undead'"
+      ],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Holy Orb",
+      "category": "Jewels",
+      "location": "Holy Water Consecration room, Labyrinth of the Dead",
+      "description": "Orb of holy power. (Activates Barrier)",
+      "effects": [
+        "Cast Lvl 3 priest spell 'Barrier'"
+      ],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Holy Lamp",
+      "category": "Jewels",
+      "location": "Locked door that opens when Dark Elf is defeated, Old",
+      "description": "Ornamental Lamp. (Casts Holy Word 20% Dest.)",
+      "effects": [
+        "Cast Lvl 4 priest spell 'Holy Word' * 20% dest"
+      ],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Elemental Orb",
+      "category": "Jewels",
+      "location": "Flare-Salamander, Cave of Red Dragon / Ruins in the",
+      "description": "Orb of the spirits. (Summmons Elemental)",
+      "effects": [
+        "Cast either one of Lvl 6 fairie spells"
+      ],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Phantasm Orb",
+      "category": "Jewels",
+      "location": "Zombie Dragon, Sealed Cave",
+      "description": "Magic orb. (Activates Charm destroyed at 25%)",
+      "effects": [
+        "Cast Lvl 3 fairie spell 'Charm' * 25% dest"
+      ],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Crystal Orb",
+      "category": "Jewels",
+      "location": "The room with the lever in the very 1st part, Labyrinth",
+      "description": "Holds life energy. (Full restoration of HP)",
+      "effects": [
+        "Restore HP by 200 - 320 to all party members"
+      ],
+      "special_effects": [],
+      "stats": {
+        "hp_restore_min": 200,
+        "hp_restore_max": 320
+      }
+    },
+    {
+      "name": "Orb of Evil",
+      "category": "Jewels",
+      "location": "The 2 minions of Zombie Dragon, Sealed Cave / Durahan,",
+      "description": "Orb of the evil powers. (Activates Death Spell)",
+      "effects": [],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Red Ash",
+      "category": "Ashes",
+      "location": "Blood Skeleton, Labyrinth of the Dead / Ogre, Abandoned",
+      "description": "Supposedly from a saint’s hand. (Increase STR)",
+      "effects": [
+        "Max Strength     +  1~6 (Permanent)"
+      ],
+      "special_effects": [],
+      "stats": {
+        "strength_min": 1,
+        "strength_max": 6
+      }
+    },
+    {
+      "name": "Gray Ash",
+      "category": "Ashes",
+      "location": "Zombie, Labyrinth of the Dead / The Valley of White",
+      "description": "Supposedly from a saint’s hand. (Increase AGI)",
+      "effects": [
+        "Max Agility      +  1~6 (Permanent)"
+      ],
+      "special_effects": [],
+      "stats": {
+        "agility_min": 1,
+        "agility_max": 6
+      }
+    },
+    {
+      "name": "Blue Ash",
+      "category": "Ashes",
+      "location": "Arch-Magi, Old Palace 2nd Part",
+      "description": "Supposedly from a saint’s hand. (Increase INT)",
+      "effects": [
+        "Max Intelligent  +  1~6 (Permanent)"
+      ],
+      "special_effects": [],
+      "stats": {
+        "intelligent_min": 1,
+        "intelligent_max": 6
+      }
+    },
+    {
+      "name": "White Ash",
+      "category": "Ashes",
+      "location": "Skeleton, Labyrinth of the Dead / Hard-Born, Old Palace",
+      "description": "Supposedly from a saint’s hand. (Increase WIL)",
+      "effects": [
+        "Max Willpower    +  1~6 (Permanent)"
+      ],
+      "special_effects": [],
+      "stats": {
+        "willpower_min": 1,
+        "willpower_max": 6
+      }
+    },
+    {
+      "name": "Green Ash",
+      "category": "Ashes",
+      "location": "8th Underlevel Underground Crypt, Labyrinth of the Dead",
+      "description": "Supposedly from a saint’s hand. (Increase CON)",
+      "effects": [
+        "Max Constitution +  1~6 (Permanent)"
+      ],
+      "special_effects": [],
+      "stats": {
+        "constitution_min": 1,
+        "constitution_max": 6
+      }
+    },
+    {
+      "name": "Black Ash",
+      "category": "Ashes",
+      "location": "Wraith, Labyrinth of the Dead",
+      "description": "Supposedly from a saint’s hand. (Increase POW)",
+      "effects": [
+        "Max Power        +  1~6 (Permanent)"
+      ],
+      "special_effects": [],
+      "stats": {
+        "power_min": 1,
+        "power_max": 6
+      }
+    },
+    {
+      "name": "Lavender",
+      "category": "Herbs",
+      "location": "Herb Girl / L30 Goblins",
+      "description": "Restores some life energy.",
+      "effects": [
+        "Potential = 10~30 + (Agi./ 4)"
+      ],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Sage",
+      "category": "Herbs",
+      "location": "Herb Girl / Shaman-Goblins",
+      "description": "Restores some magical energy.",
+      "effects": [
+        "Porential = 10~30 + (Agi./ 4)"
+      ],
+      "special_effects": [],
+      "stats": {},
+      "attributes": {
+        "str": 24,
+        "int": 32,
+        "wil": 32,
+        "agl": 24,
+        "con": 24,
+        "pow": 32,
+        "luk": 32,
+        "at": 0,
+        "mat": 0,
+        "def": 130,
+        "mdef": 97
+      }
+    },
+    {
+      "name": "Heaven Sage",
+      "category": "Herbs",
+      "location": "Herb Girl / Shaman-Goblins",
+      "description": "",
+      "effects": [],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Iron Sage",
+      "category": "Herbs",
+      "location": "Herb Girl",
+      "description": "",
+      "effects": [],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Fennel",
+      "category": "Herbs",
+      "location": "Herb Girl / Shaman-Goblins",
+      "description": "Cures petrification.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Hyssop",
+      "category": "Herbs",
+      "location": "Herb Girl / Poison-Flower",
+      "description": "Cures magic losing condition.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {}
+    },
+    {
+      "name": "Belladonna",
+      "category": "Herbs",
+      "location": "Herb Girl / Gremlins",
+      "description": "Removes curses.",
+      "effects": [],
+      "special_effects": [],
+      "stats": {}
+    }
+  ],
+  "item_names": [
+    "Air Shield",
+    "Almander",
+    "Amber Wand",
+    "Ambrosia",
+    "Angel Rod",
+    "Answerer",
+    "Anti-magic Armor",
+    "Aqua Shawl",
+    "Artemis",
+    "Autumn Cape",
+    "Bahil",
+    "Bandit Dagger",
+    "Baphomet",
+    "Basilisk Scales",
+    "Bastard Sword",
+    "Battle Axe",
+    "Beauty Veil",
+    "Belladonna",
+    "Berserker",
+    "Berserker Bones",
+    "Berserker Drug",
+    "Black Armor",
+    "Black Ash",
+    "Blackjack",
+    "Blessed Hammer",
+    "Blessed Ring",
+    "Blood Axe",
+    "Blood Dagger",
+    "Blood Extract",
+    "Blood Oil",
+    "Blood Pen",
+    "Bloodsword",
+    "Blue Ash",
+    "Blue Ear-stud",
+    "Bolt of Larie",
+    "Bow",
+    "Breast Plate",
+    "Broad Sword",
+    "Bronze Armor",
+    "Bronze Medal",
+    "Chainmail Shirt",
+    "Chaos Rapier",
+    "Charmed Wand",
+    "Claymore",
+    "Cloak",
+    "Club",
+    "Compound Bow",
+    "Cross",
+    "Crossbow",
+    "Crusader Cloak",
+    "Crystal Earrings",
+    "Crystal Orb",
+    "Crystal Rod",
+    "Crystal Wand",
+    "Cure Potion",
+    "Daak",
+    "Dagger",
+    "Damascus Blade",
+    "Dancing Doll",
+    "Dark Necklace",
+    "Dark Orb",
+    "Dark Shield",
+    "Darkblade",
+    "Death Mask",
+    "Death Sickle",
+    "Defender",
+    "Demonscale",
+    "Dominion Dagger",
+    "Dominion Feather",
+    "Dragon Amulet",
+    "Dragon Horn",
+    "Dragon Scales",
+    "Dragon Tail",
+    "Dragonbane",
+    "Dragonscale",
+    "Dropneal",
+    "Durandal",
+    "Earth Jewel",
+    "Earth Necklace",
+    "Earth Orb",
+    "Earth Robe",
+    "Earth Rod",
+    "Earth Saber",
+    "Earth Shield",
+    "Earth Tiara",
+    "Element Cloak",
+    "Elemental Orb",
+    "Elemental Ring",
+    "Elemental Shield",
+    "Elixir",
+    "Elven Boots",
+    "Elven Bow",
+    "Elven Cloak",
+    "Elven Hat",
+    "Elven Shield",
+    "Energy Crystal",
+    "Energy Flask",
+    "Evil Necklace",
+    "Excalibur",
+    "Executioner",
+    "Fabnihl",
+    "Fairy Perfume",
+    "Fairy Powder",
+    "Fairy Wings",
+    "Falconbolt",
+    "Fata Morgana Armor",
+    "Fate Coin",
+    "Feather Anklet",
+    "Feather Gloves",
+    "Feather Mantle",
+    "Feather Pen",
+    "Feather Shoes",
+    "Fennel",
+    "Fenris",
+    "Fey Rod",
+    "Fine Axe",
+    "Fine Boots",
+    "Fine Leather",
+    "Fine Oil",
+    "Fine Robe",
+    "Fine Scarf",
+    "Fine Shield",
+    "Fine Shoes",
+    "Fire Jewel",
+    "Fire Necklace",
+    "Fire Orb",
+    "Flail",
+    "Flame Rod",
+    "Flame Shield",
+    "Flame Sword",
+    "Flamespitter",
+    "Fortune Clock",
+    "Frost Axe",
+    "Frost Orb",
+    "Frostfurnace",
+    "Full Plate",
+    "Gabriel",
+    "Gaia Wand",
+    "Gauntlets",
+    "Gauntlets of Strength",
+    "Gladius",
+    "Godswand",
+    "Gold Medal",
+    "Golden Harp",
+    "Gray Arc",
+    "Gray Ash",
+    "Great Axe",
+    "Great Helmet",
+    "Green Ash",
+    "Guardian Armor",
+    "Guardian Robe",
+    "Guardian Shield",
+    "Guardian Sword",
+    "Gulwick",
+    "Half-moon Axe",
+    "Hammer of Thor",
+    "Hand Axe",
+    "Healing Amulet",
+    "Healing Perfume",
+    "Healing Pin",
+    "Healing Potion",
+    "Healing Robe",
+    "Healing Stone",
+    "Healing Talisman",
+    "Heaven Sage",
+    "Herbal Candy",
+    "Holy Armor",
+    "Holy Gloves",
+    "Holy Lamp",
+    "Holy Necklace",
+    "Holy Orb",
+    "Holy Robe",
+    "Holy Rod",
+    "Holy Shield",
+    "Holy Wand",
+    "Holy Water",
+    "Hovering Shoes",
+    "Hunting Cap",
+    "Hyssop",
+    "Ice Jewel",
+    "Ice Shield",
+    "Ice Sword",
+    "Infernal Robe",
+    "Inferno",
+    "Iron Boots",
+    "Iron Helmet",
+    "Iron Sage",
+    "Iron Wand",
+    "Jewel Box",
+    "Jewel Brooch",
+    "Jewel Ring",
+    "Jewel Rod",
+    "Knight Shield",
+    "Lavender",
+    "Leather Armor",
+    "Leather Boots",
+    "Leather Buckler",
+    "Leather Cloak",
+    "Leather Gloves",
+    "Leather Helmet",
+    "Leather Shield",
+    "Life Eater",
+    "Life Potion",
+    "Life Shield",
+    "Light Amulet",
+    "Light Necklace",
+    "Light Orb",
+    "Lightbolt",
+    "Lightning Blade",
+    "Long Bow",
+    "Long Hammer",
+    "Long Rapier",
+    "Long Sword",
+    "Lucifer",
+    "Lucifer Shield",
+    "Luck Talisman",
+    "Lucky Earrings",
+    "Mace",
+    "Magic Pentagram",
+    "Magic Wand",
+    "Magical Stone",
+    "Master Plate",
+    "Material Darkness",
+    "Material Earth",
+    "Material Evil",
+    "Material Flame",
+    "Material Holy",
+    "Material Light",
+    "Material Magic",
+    "Material Water",
+    "Material Wind",
+    "Mind Potion",
+    "Minister",
+    "Minotaur Horn",
+    "Miracle Powder",
+    "Mirror Armor",
+    "Mirror of Truth",
+    "Mist Dagger",
+    "Mistortain",
+    "Misty Pendant",
+    "Mithril Rapier",
+    "Mithril Wand",
+    "Moon Crown",
+    "Moon Shield",
+    "Moon Wand",
+    "Morning Star",
+    "Mysterious Clock",
+    "Mystical Veil",
+    "Necklace of Wonders",
+    "Normal Sword",
+    "Orb of Evil",
+    "Orichalca Dagger",
+    "Ouga Axe",
+    "Pavas Armor",
+    "Pavas Axe",
+    "Perseus Bow",
+    "Phantasm Orb",
+    "Phantom Robe",
+    "Philos Ring",
+    "Poison Axe",
+    "Poison Rapier",
+    "Power Band",
+    "Power Symbol",
+    "Protect Ring",
+    "Pure Wand",
+    "Quick Boots",
+    "Rainbow Orb",
+    "Rainbow Rod",
+    "Rapier",
+    "Recovery Perfume",
+    "Red Ash",
+    "Red Ear-stud",
+    "Red Spice",
+    "Reflective Shield",
+    "Reflector",
+    "Reflector Ring",
+    "Renugeton",
+    "Resist Cloak",
+    "Resist Ring",
+    "Revatin",
+    "Rhynoceros Rod",
+    "Ringnail",
+    "Ritual Hammer",
+    "Robe",
+    "Robe of Sorcery",
+    "Robe of Spirits",
+    "Robe of the Elders",
+    "Robe of the Sages",
+    "Rod",
+    "Rod of Ishtar",
+    "Rope of Return",
+    "Round Shield",
+    "Rune Amulet",
+    "Rune Cape",
+    "Rune Gloves",
+    "Rune Robe",
+    "Runic Shield",
+    "Sage",
+    "Satan's Ring",
+    "Seraphim Rod",
+    "Seraphim Shield",
+    "Shadow Robe",
+    "Shadow Veil",
+    "Shadowbolt",
+    "Shaman's Tablet",
+    "Sheep Flute",
+    "Shortbow",
+    "Shortsword",
+    "Silent Box",
+    "Silver Anklet",
+    "Silver Armor",
+    "Silver Axe",
+    "Silver Brooch",
+    "Silver Circlet",
+    "Silver Dagger",
+    "Silver Gauntlets",
+    "Silver Helmet",
+    "Silver Medal",
+    "Silver Rapier",
+    "Silver Rod",
+    "Silver Shield",
+    "Silver Sword",
+    "Skull Wand",
+    "Skystone Wand",
+    "Slaughterer",
+    "Sol Crown",
+    "Solitaire",
+    "Solomon's Ring",
+    "Spirit Extract",
+    "Spring Cape",
+    "Star Rod",
+    "Star Tiara",
+    "Stone Foil",
+    "Strong Gloves",
+    "Summer Cape",
+    "Sun Shield",
+    "Sunblade",
+    "Sword of Bane",
+    "Sword of Zeus",
+    "Symbol of Darkness",
+    "Talisman",
+    "Tarot Card",
+    "Tasty-drops",
+    "Technique Book",
+    "Terror Card",
+    "Thunder Orb",
+    "Thunderbolt",
+    "Tomahawk",
+    "Trueheart",
+    "Valkyrie",
+    "Vampire Rod",
+    "Viking Axe",
+    "Wand of Apollo",
+    "Wand of Devils",
+    "Wand of Evil",
+    "Wand of Justice",
+    "Wand of Runes",
+    "Wand of the Ancients",
+    "Warhammer",
+    "Water Mirror",
+    "Water Necklace",
+    "Water Rod",
+    "White Ash",
+    "Wind Jewel",
+    "Wind Necklace",
+    "Wind Rod",
+    "Windbolt",
+    "Wing Gauntlets",
+    "Winged Boots",
+    "Winged Helmet",
+    "Wings of Lucifer",
+    "Wings of Seraphim",
+    "Winter Cape",
+    "Wish Hammer",
+    "Wooden Wand",
+    "Wyvernstooth Rapier"
+  ]
+}

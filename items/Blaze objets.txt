@@ -1,0 +1,4444 @@
+﻿Sandy Saputra
+Item List ver 2.3
+dora_san@doramail.com
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+=   =   =   =   =   =   =   =   =   =   =   =   =   =   =   =   =   =   =
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+
+ BBBBBB           LLL               AAAAA           ZZZZZZ          EEEEEE
+ BBB BBB          LLL              AAAAAAA             ZZZ          EEE
+ BBB BBB          LLL              AAA AAA            ZZZ           EEE
+ BBBBBB           LLL              AAAAAAA            ZZ            EEEEE
+ BBB BBB          LLL              AAA AAA          ZZ              EEE
+ BBB BBB          LLLLLLL          AAA AAA          ZZZ             EEE
+ BBBBBB           LLLLLLL          AAA AAA          ZZZZZZ          EEEEEE
+
+                                    ###
+                                   ## ##
+                                   ## ##
+                                    ### ##
+                                   ## ##
+                                  ### ###
+                                   ## ##
+                                    ### ##
+
+  BBBBBB          LLL              AAAAA           DDDDDD           EEEEEE
+  BBB BBB         LLL             AAAAAAA          DDD DDD          EEE
+  BBB BBB         LLL             AAA AAA          DDD DDD          EEE
+  BBBBBB          LLL             AAAAAAA          DDD DDD          EEEEE
+  BBB BBB         LLL             AAA AAA          DDD DDD          EEE
+  BBB BBB         LLLLLL          AAA AAA          DDD DDD          EEE
+  BBBBBB          LLLLLL          AAA AAA          DDDDDD           EEEEEE
+____________________________________________________________________________
+EEEE  TTTT  EEEE  RRR    NN   NN  AAAA  LL    QQQ    UU UU  EEEE   SSS  TTTT
+EE     TT   EE    R RRR  NNN  NN  A  A  LL   QQ QQ   UU UU  EE    SS  SS TT
+EEE    TT   EEE   R RRR  NN N NN  AAAA  LL   QQ QQ   UU UU  EEE    s     TT
+EE     TT   EE    RRR    NN  NNN  A  A  LL   QQ QQ   UU UU  EE   SS  SS  TT
+EEEE   TT   EEEE  R  RR  NN   NN  A  A  LLLL  QQQ  Q  UUU   EEEE   SSS   TT
+
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+=   =   =   =   =   =   =   =   =   =   =   =   =   =   =   =   =   =   =
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+Game              : Blaze and Blade: Eternal Quest
+Category          : Item List
+Console           : Playstation
+Gamefaqs Username : holypriest
+
+=+=+=+=+=+=+=+=
+Version History
+=+=+=+=+=+=+=+=
+Ver 2.4 (Apr 16 2003)- Changed the format of the section Chest (III).
+                      And also add the search function for the easiness
+                      in searching the section header. (using ctrl + F)
+                      Add more items to part Item Location (II).
+                      It may not be accurate. It's from a Japanese
+                      FAQ that I translated. I have not try it as the
+                      Bosses/enemies dropped it rarely.
+                      A trick is also been added to part Tricks (XI).
+                      Another added section is the mistranslation part.
+                      Parts that are still not complete will be hopefully
+                      completed by the next update. Boy lots of work to do!
+                      But don't worry, 'cause I enjoy it! It's just the
+                      time that is hard to manage.
+Ver 2.3 (Feb  7 2003)- Made a lil' correction & addition to some
+                      parts. Added new sections :
+                      Item Potential (VII) and Cheat Code (XIII).
+                      The older sections is placed to another
+                      section. Through some adjustments, able to
+                      make them neat and organised.
+ver 2.2 (Nov  3 2002)- Made some corrections in section V. Add a lot
+                      of info in Part IV. And I found many legendary
+                      equipments. And added some info in most part.
+ver 2.1 (Oct 24 2002)- Just as I realize that the second update has a
+                      tremendously terrible format, I change it as quick as
+                      possible. In Addition, I add in a little more
+                      information.
+ver 2.0 (Oct 23 2002)- Added new sections(and change the old section to
+                      another section). Edit some of the format. Additional
+                      info on most part. Made some corrections. Oh and I
+                      made this version history! The sections added are the
+                      Elements, Attribute,and Informations.
+ver 1.0 (Aug 10 2002)- Created the faq. Made the Introduction (I), Locations
+                      of Items(II),Chests(III),Dropped Items(IV), Special
+                      Effects(V),Buyable Items(VI),Tricks(VII),
+                      Credits(VIII),and Last Words(IX)
+
+This document is Copyright 2002 Sandy Saputra
+
+This document is for personal use only. Any kind of reproduction is
+forbidden. If you want to include this faq for your site, simply ask
+for my permission first, and it would likely to be answered.
+
+Oh and any kind of change either partly or even a lil' bit is the same
+as violating my work, strictly not allowed.
+
+========================
+ TABLE OF CONTENTS
+========================
+------------------------------------------------
+Contents                           Searching Key
+------------------------------------------------
+I.   Introduction                      (ITR)
+II.  Item Locations                    (ILC)
+III. Chests                            (CHT)
+IV.  Dropped Items                     (DRI)
+V.   Buyable Items                     (BUI)
+VI.  Item Description                  (ITD)
+VII. Item Potential                    (ITP)
+VIII.Special Effects                   (SPC)
+IX.  Equipment Element                 (ELM)
+X.   Equipment Attribute               (ATR)
+XI.  Tricks                            (TRC)
+XII. Tips/Informations                 (TPI)
+XIII.Cheat Code                        (CHC)
+XIV. Asked Questions                   (ASQ)
+XV.  Credits                           (CRD)
+XVI. Last Words                        (LWD)
+-----------------------------------------------
+
+*+*+*+*+*+*+*+*+*+*+*+*
+I. Introduction   (ITR)
+*+*+*+*+*+*+*+*+*+*+*+*
+
+As you may know, many items can be found in many places.This faq is a guide
+for you to know at least one or two places to get the them. And also what
+items lies inside the chests.It is 98% accurate as I fill this faq when I am
+playing, but not always ^_^; so there are certain items that I forgot where
+I get it. So I hope you all enjoy this faq as much as I enjoy making it.
+Furthermore, this faq is not fully completed yet, but I’ll make the update
+if I have the time.
+
+As for the update, I apologize very much that it is not organized well. But
+the third update should make up for it. Enjoy!
+
+BTW, this FAQ should ONLY be seen in either gamefaqs.com or neoseeker.com
+
+*+*+*+*+*+*+*+*+*+*+*+*
+II.Item Location  (ILC)
+*+*+*+*+*+*+*+*+*+*+*+*
+
+Hmmmm, without doubt there are many other locations for these items to be
+found.But certain items, especially the Legendary Items, can only be found
+in that certain places. Like Calvin’s Blade, it took me 20 tries to get
+this item. And I’m sure this item can only be found in the Red Dragon’s
+lair. Just to make sure you know that a chest can have many items which
+you can only get it once in one trip. But some of them only have one,
+or maybe two or more.
+
+To make it easier, I put an asterisk sign (*) after the name of the
+legendary item, and behind the description of the item if the item is
+breakable. And I also avoid items that is bought from the retired knight
+if possible, because many of them can be found through exploring dungeons
+and ruins or by slaying enemies.
+
+Added(ver 2.4)There are 403 items in all and I have listed all of them
+here. 4 of them are still not proved yet though, they are: Dominion
+Dagger, Pavas Axe, Gray Arc, and Seraphim Shield.
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+  Swords (warrior)
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+Normal Sword       = Initial
+Broad Sword        = Lv6 Kobold, Wood of Ruins / Skeleton, Lab. of the Dead
+Long Sword         = Secret Track near Woodcutter's Cabin, Woods of Ruins
+Bastard Sword      = Blood Skeleton, Labyrinth of the Dead 1st Part
+Claymore           = Blood Skeleton, Palace of Immrotals,Clock Tower.
+Sword of Bane      = Living-Sword, Old Palace 2nd Part
+Silver Sword       = Undead Knight, Labyrinth of the Dead 2nd Part
+Bloodsword         = Durahan, Labyrinth of the Dead
+Ice Sword          = Southwest chest, Ruins in the Lake
+Flame Sword        = Black-Knight, Old Palace 2nd Part 5th Floor
+Lightning Blade    = Bat Medallion room, Palace of Immortals, Gold key room
+Earth Saber        = Bat Medallion room, Palace of Immortals, Gold key room
+Damascus Blade     = Living-Sword, Old Palace 2nd Part 5th Floor
+Sunblade           = 7th Underlevel Abandoned Mine / Flare-Salamander, Cave
+                    of Red Dragon
+Darkblade          = Cave of Red Dragon
+Guardian Sword     = Living-Sword, Old Palace 2nd Part
+Durandal           = 10 th under level Abandoned Mine
+Excalibur          = Room after defeating Zombie Dragon
+Dragonbane         = Left room of Treasure Chamber, Palace of Immortals 2nd
+                    Part
+Revatin            = Efreet, The Hall of Demons, 2nd Floor (Sealed Cave)
+Answerer*          = Black-Knight, Old Palace 2nd Part
+Mistortain*        = After defeating the Red Dragon
+Fenris*            = Cerberus, The Hall of Demons ,1st Floor (Sealed Cave)
+Calvin’s Blade*    = After defeating the Red Dragon
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+  Priest’s Wand/Hammer
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+Club               = Initial
+Mace               = Shaman-Goblin,Wood of Ruins, Green Goblin Work Area
+Flail              = Shaman Goblin, Abandoned Mine 1st Part
+Warhammer          = Northeast chest, The Clearing, Wood of Ruins
+Long Hammer        = Southeast chest, The Clearing, Wood of Ruins
+Morning Star       = Ritual Elexier area, Palace of Immortals
+Blessed Hammer     = Before Durahan, Labyrinth of the Dead
+Wand of the Ancients = 7th under level, Abandoned Mine
+Wand of Devils     = Undead-Master, Lab. of the Dead 2nd Part
+Ritual Hammer      = Cave of Red Dragon
+Amber Wand         = Ogre, Abandoned Mine 2nd Part
+Holy Wand          = Labyrinth of the Dead 2nd Part
+Wish Hammer        = Locked (rogue) room in the top after beating the
+                    Zombie-Dragon
+Gabriel            = The Roadside Inn, locked room
+Wand of Justice    = Room after defeating Zombie Dragon
+Hammer of Thor*    = Efreet, The Hall of Demons ,2nd Floor (Sealed Cave)
+Seraphim Rod*      = Undead-Master, Lab. of the Dead 2nd Part
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+  Knives (rogue)
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+Dagger             = Initial
+Gladius            = Giant Ant, Wood of Ruins
+Daak               = Sealed (elf) room in 2nd level, Old Palace 1st Part
+Defender           = Giant-Scorpion, 4th under level Abandoned Mine
+Silver Dagger      = Silver Wolf, Palace of Immortals
+Bandit Dagger      = Chest in Valley of White Silver
+Cat’s Claw         = Kobold, Cage Area, Woods of Ruins
+Blood Dagger       = Weretiger, Palace of Immortals, on the roof
+Orichalca Dagger   = Cave of Red Dragon
+Blackjack          = 7th under level Abandoned Mine 2nd Part
+Golden Harp        = The Roadside Inn, locked room
+Mist Dagger        = King Mummy room, right chest, 9th under level Labyrinth
+                    of the Dead
+Ringnail           = Room after defeating Zombie Dragon
+Fabnihl*           = After defeating the Red Dragon
+Death Sickle*      = Dark-Angel, The Hall of Demons ,5th Floor (Sealed Cave)
+
+rumored:
+Dominion Dagger*   = Troll, 10th Underlevel Boss, Abandoned Mine
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+  Sorcerer’s Wand
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+Wooden Wand        = Initial
+Iron Wand          = Wood of Ruins, Green Goblin Work Area
+Skull Wand         = Shaman Goblin, Abandoned Mine
+Pure Wand          = Shaman Goblin, Old Palace 1st Part
+Magic Wand         = Palace of Immortals, Clocktower
+Wand of Runes      = Locked door that opens when Dark Elf is defeated, Old
+                    Palace 1st Part
+Mithril Wand       = Near upper portal in 7th
+Skystone Wand      = Cave of Red Dragon
+Wand of Evil       = Old Palace, 4th Floor, west chest.
+Gaia Wand          = Left room of Treasure Chamber, Palace of Immortals 2nd
+                    Part / Behemoth, The Underground Cave, Woods of Ruins
+Moon Wand          = Arch-Magi, Tower Annex, Old Palace 2nd Part
+Godswand           = Room after defeating Zombie Dragon
+Crystal Wand       = Retired Knight
+Charmed Wand*      = Bone Sigil room, Labyrinth of the Dead
+Baphomet*          = After defeating Red Dragon
+Wand of Apollo*    = Room of the 2 Hidden Spells, Old Palace 2nd Part
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+  Bows (hunter)
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+Shortbow           = Initial
+Bow                = 2nd floor sealed (elf) room, Old Palace 1st Part
+Long Bow           = In house (via secret track), The Great Waterfall of
+                    Maldo, Woods of Ruins
+Trueheart          = Goblin,Wood of Ruins, green goblin work area
+Crossbow           = Southeast chest, The Clearing, Wood of Ruins
+Ranger’s Bow       = Palace of Immortals, Clocktower
+Windbolt           = Stalker, Old Palace 5th floor
+Lightbolt          = Cave of Red Dragon
+Artemis            = Room after defeating Zombie Dragon
+Falconbolt         = Left chest in Crystal Maze in the Old Palace 2nd Part
+Elven Bow          = Dark-Elf, Old Palace 1st / 2nd Part
+Shadowbolt         = Evil-Stalker, Sealed Cave
+Compound Bow       = 7th under level Abandoned Mine
+Bolt of Larie*     = Room of the 2 Hidden Spells, Old Palace 2nd Part
+Perseus Bow*       = Griffon, The Valey of White Silver
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+  Rapiers (elf)
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+Shortsword         = Initial
+Rapier             = Lizard-Man, Wood of Ruins / Kobold, Wood of Ruins
+Wyvernstooth Rapier= Black-Lizard, Ruins in the Lake
+Long Rapier        = 2nd floor sealed (elf) room, Old Palace 1st Part
+Poison Rapier      = Holy Water Consecration Room, Lab. of the Undead
+Silver Rapier      = 2nd floor sealed (elf) room, Old Palace 1st Part
+Mithril Rapier     = Lizard-Man, Wood of Ruins / Crimson-Lizard, Old Palace
+Thunderbolt        = The room with barrels,3rd floor west wing, Palace of
+                    immortals 2nd Part
+Frostfurnace       = Cave of Red Dragon
+Inferno            = Salamander, Cave of Red Dragon
+Stone Foil         = 7th under level, Abandoned Mine 2nd Part
+Solitaire          = Before Fighting the 2nd Dark Elf, Old Palace 2nd Part
+Chaos Rapier       = Left room of Treasure Chamber, Palace of Immortals 2nd
+                    Part / Death-Knight, Sealed Cave
+Valkyrie           = Room after defeating Zombie Dragon
+Minister*          = Locked Jail after Durahan, Labyrinth of the Dead 1st
+                    Part
+Sword of Zeus*     = Vampire-Lord, Palace of Immortals 2nd Part
+
+Added(ver 2.4):I forgot to post that Sword of Zeus is(told by James) by his
+information is actually Zeus Rapier. Well, he is a trusted contributor, so
+I am sure that the boss drops this weapon. (I can't confirm which one is the
+right one). Sorry... (I have fought this boss for about 200 times but the
+boss drops treasure chests rarely... I don't know why.
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+  Axes (dwarf)
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+Tomahawk           = Initial
+Battle Axe         = 2nd floor sealed (elf) room, Old Palace 1st Part /
+                    Blood-Skeleton, Labyrinth of the Dead.
+Hand Axe           = 2nd floor sealed (elf) room, Old Palace 1st Part
+Fine Axe           = 2nd floor sealed (elf) room, Old Palace 1st Part
+Great Axe          = Cave-Scissors, Abandoned Mine 2nd Part
+Silver Axe         = Before Durahan, Labyrinth of the Dead
+Viking Axe         = Isle of Ruins, The Woods of Ruins
+Poison Axe         = Cave of Red Dragon
+Blood Axe          = Giant, The Dessert Valley
+Executioner        = Green-Giant, 10th under level Abandoned Mine
+Flamespitter       = Bat Medallion room, Palace of Immortals 1st Part
+Ouga Axe           = Hell-Ogre, part of Sealed Cave after defeating Zombie
+                    Dragon
+Life Eater         = Green-Giant, 10th under level Abandoned Mine / Giant,
+                    The Dessert Valley
+Slaughterer        = Weretiger/Werewolf,The Palace of Immortal / Hell-Ogre,
+                    The Accursed Place, The Sealed Cave
+Berserker          = Room after defeating Zombie Dragon
+Frost Axe          = Left room of Treasure Chamber, Palace of Immortals 2nd
+                    Part
+Half-moon Axe      = Bone Sigil room, Labyrinth of the Dead
+Lucifer*           = Efreet, The Hall of Demons ,2nd Floor (Sealed Cave)
+Gulwick*           = Green-Giant, 10th under level Abandoned Mine
+
+rumored:
+Pavas Axe*         = Behemoth, The Underground Cave, Woods of Ruins
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+  Rods (fairy)
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+Rod                = Initial
+Jewel Rod          = Wood of Ruins, green goblin work area
+Crystal Rod        = Southeast chest in the secret track in The Clearing,
+                    Wood of Ruins
+Silver Rod         = Fairy chest, Abandoned Mine
+Flame Rod          = Before Durahan, Labyrinth of the Dead
+Wind Rod           = Stalker, Old Palace 2nd Part
+Water Rod          = Palace of Immortals, Clocktower
+Earth Rod          = 7th Underlevel, Abandoned Mine 2nd Part
+Fey Rod            = Gremlin, Sealed Cave / Fairy chest, Abandoned Mine
+Vampire Rod        = West chest in 4th Floor, Old Palace 2nd Part
+Rainbow Rod        = Left room of Treasure Chamber, Palace of Immortals 2nd
+                    Part
+Holy Rod           = Cave of Red Dragon
+Star Rod           = Room after defeating Zombie Dragon
+Rod of Ishtar      = The Crystal Maze, Old Palace 2nd Part
+Rhynoceros Rod     = Frost-Salamander(2), Ice Grotto, Sealed Cave
+Alchemist’s Rod*   = Dark-Wizard, Old Palace 2nd Part
+Angel Rod*         = Room of the 2 hidden spells, Old Palace 2nd Part
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+  Armors (warrior & dwarf)
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+Bronze Armor       = Guard-Golem, 2nd floor, The Old Palace
+Chainmail Shirt    = Secret track in the Great Waterfall of Maldo, Wood of
+                    Ruins
+Breast Plate       = Woodcutter’s Cabin-Cellar, Wood of Ruins
+Full Plate         = Area before boss, Abandoned Mine 1st Part
+Silver Armor       = Room of 2 treasure chests with Queen’s Robe, Palace of
+                    Immortals 1st Part
+Knight’s Armor     = Area of device room, Old Palace 2nd Part
+Mirror Armor       = Wolf Medallion room, the Clock Tower, Palace of
+                    Immortals 1st Part
+Black Armor        = Black-Knight,Old Palace 2nd Part/Death-Knight, Sealed
+                    Cave
+Master Plate       = Green-Giant, Abandoned Mine 2nd Part 10th under level
+                    Abandoned Mine
+Fata Morgana Armor = Locked door that opens when dark elf is beaten,Old
+                    Palace 1st Part
+Anti-magic Armor   = The Roadside Inn, locked room
+Guardian Armor     = Living-Armor, Old Palace 2nd part
+Dragonscale        = Dragon-Puppy, Abandoned Mine 1st Part / Ground Floor,
+                    West Wing, Plc. of Immortals 2nd Part
+Demonscale*        = Durahan, Labyrinth of the Dead
+Holy Armor*        = Platinum-Knight, Path leading to the 2 hidden spell
+                    room, Old Palace 2nd Part
+Pavas Armor*       = Efreet, The Hall of Demons ,3rd Floor (Sealed Cave)
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+  Light Armors (hunter, elf & rogue)
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+Leather Armor      = Initial
+Leather Buckler    = Woodcutter’s Cabin Cellar, Wood of Ruins / L20 Goblins,
+                    Abandoned Mine
+Fine Leather       = Goblin (which shoots arrows), green goblin work area,
+                    Wood of Ruins
+Fine Shield        = L30 Goblins, Old Palace 1st Part
+Bandit’s Shield    = 2nd floor under level, Labyrinth of the Dead
+Silver Shield      = Locked Jail after Durahan, Labyrinth of the Dead 1st
+                    Part
+Reflector          = Bat Medallion room, Palace of Immortals, Gold key room.
+Runic Shield       = Living-Armor, Old Palace 2nd Part
+Dark Shield        = Old Palace 2nd Part, Tower Annex
+Life Shield        = Cave of Red Dragon
+Elven Shield       = Dark Elf, Old Palace 2nd Part
+Holy Shield(ver1)  = Secret room, The Lab. of the Undead
+Sun Shield         = The Roadside Inn, locked room
+Moon Shield        = Undead-Master, Labyrinth of the Dead 10th Underground
+                    Crypt
+Elemental Shield*  = Southeast chest, Ruins in the Lake/Efreet,Sealed Cave
+Holy Shield(ver2)* = Gigantes, The Hall of Demons ,5th Floor (Sealed Cave)
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+  Robes (priest,sorcerer,& fairy)
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+Robe               = Initial
+Fine Robe          = Woodcutter’s Cabin Cellar, Woods of Ruins
+Bishop’s Robe      = Locked door that opens when Dark Elf is defeated, Old
+                    Palace 1st Part
+Robe of Sorcery    = Room of the lever in the 1st floor, Labyrinth of the
+                    Dead
+Healing Robe       = Bat Medallion room, Palace of Immortals, Gold key room
+Queen’s Robe       = Area of 2 treasure chest with Silver Armor, Palace of
+                    Immortals 1st Part
+Rune Robe          = Living-Armor, Old Palace 2nd Part
+Earth Robe         = Wraith, Labyrinth of the Dead 1st &2nd Part
+Shadow Robe        = Ghost, Palace of Immortals
+Holy Robe          = Labyrinth of the Dead 2nd Part
+Robe of Spirits    = Cave of Red Dragon
+Robe of the Elders = After defeating Red Dragon / Evil-Stalker, Sealed Cave
+Guardian Robe(ver1)= Part of Sealed Cave after defeating Zombie Dragon(Rogue
+                    Lock Room)
+Guardian Robe(ver2)= The Roadside Inn, locked room
+Infernal Robe*     = Vampire-Lord, Palace of Immortals 2nd Part
+Phantom Robe*      = Dark-Angel, The Hall of Demons ,5th Floor (Sealed Cave)
+Robe of the Sages* = Dark-Angel, The Hall of Demons ,5th Floor (Sealed Cave)
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+  Shields (warrior & dwarf)
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+Leather Shield     = Initial
+Round Shield       = Abandoned Mine or Skeleton, Labyrinth of the Dead
+Knight Shield      = Skeleton, Labyrinth of the Dead
+Reflective Shield  = Locked door that opens when Dark Elf is defeated, Old
+                    Palace
+Flame Shield       = West chest in 4th Floor, Old Palace 2nd Part
+Ice Shield         = Cave of Red Dragon
+Earth Shield       = Black Lizard, Ruins in the Lake
+Air Shield         = Wind Fortress, Sealed Cave
+Guardian Shield    = Room after defeating Zombie Dragon / West chest,
+                    The Ancient Ruins
+Lucifer Shield*    = Greater-Demon, The Hall of Demons, 3rd Floor (Sealed
+                    Cave)
+
+rumored:
+Seraphim Shield*   = Dark-Angel, The Hall of Demons, 5th Floor (Sealed Cave)
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+  Clothings
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+Power Band         = Ogre, 10th under level Abandoned Mine
+Power Symbol       = Black-Knight, Old Palace 2nd Part
+Symbol of Darkness = Arch-Magi, Tower Annex, Old Palace 2nd Part
+Silver Brooch      = Right room in the treasure chamber, Palace of Immortals
+                    2nd Part
+Jewel Brooch       = Lesser-Vampire, Palace of Immortals 2nd Part
+Jewel Ring         = Mummy & King Mummy, Labyrinth of the Dead 2nd Part
+Resist Ring        = A blue-floating mage, Old Palace 2nd Part
+Protect Ring       = Before boss, Abandoned Mine 1st Part
+Merlin’s Ring      = Old Palace, Part before fighting the 2nd Dark Elf
+Blessed Ring       = Woodcutter’s Cabin-Cellar, Wood of Ruins
+Elemental Ring     = Behemoth, Underground Cave, Wood of Ruins 2nd Part /
+                    The Ancient Ruins, western chest
+Reflector Ring     = Blue-Floating Mage, Old Palace 2nd Part
+Hermit’s Ring      = Labyrinth of the Dead 2nd Part
+Satan's Ring       = Dark-Wizard, The Old Palace 2nd Part
+Philos Ring*       = Secret room behind the save point in the 2nd Part of
+                    the Palace of Immortals
+Solomon's Ring*    = Gigantes, The Hall of Demons ,4th Floor (Sealed Cave)
+Dropneal           = After beating Red Dragon
+Leather Helmet     = Abandoned Mine, Area that needs to be Lighted
+Iron Helmet        = Red Knight, Palace of Immortals 2nd Part
+Silver Helmet      = Left chest in Crystal Maze in the Old Palace 2nd Part
+Great Helmet       = Green-Giant, Abandoned Mine 2nd Part 10th under level
+                    Abandoned Mine
+Winged Helmet      = Griffon, The Valey of White Silver
+Witch’s Hat        = 2nd Floor barrier chest, Old Palace 1st Part
+Elven Hat          = 2nd Dark-Elf, Old Palace 1st / 2nd Part
+Hunting Cap        = Secret track near Woodcutter’s Cabin, Wood of Ruins
+Silver Circlet     = Holy Water Consecration room, Labyrinth of the Dead
+Queen’s Circlet    = Before Boss, Abandoned Mine 2nd Part / Succubus, Palace
+                    of Immortals 2nd Part
+Star Tiara         = Succubus, Palace of Immortals 2nd Part
+Earth Tiara        = Before Boss,10th under level Abandoned Mine / Succubus,
+                    Palace of Immortals 2nd Part
+Knight’s Mask      = The room after you fall, Labyrinth of the Dead 2nd Part
+Death Mask*        = Gigantes, The Hall of Demons ,4th Floor (Sealed Cave)
+Rune Cape          = Locked door that opens when Dark Elf is defeated, Old
+                    Palace 1st Part
+Summer Cape        = Black Lizard, Old Palace 2nd Part 5th floor Old Palace
+Winter Cape        = Snow Bear, Valley of the White Silver
+Spring Cape        = Black Test Founder’s Key chest, Woodcutter’s Cabin
+                    Cellar, Wood of Ruins
+Autumn Cape        = Before the 2nd Dark Elf part, Old Palace 2nd Part 5th
+                    floor
+Cloak              = The treasure chest before the black chest river part,
+                    Abandoned Mine 1st Part
+Leather Cloak      = Wyvern, Ruins in the Lake
+Thieves’ Cloak     = 2nd Floor near save point (Rogue Lock Room), Old Palace
+                    1st Part / 5th Underlevel Abandoned Mine 1st Part
+Resist Cloak       = 8th under level Abandoned Mine
+Crusader Cloak     = Undead Knight, Labyrinth of the Dead 2nd Part
+Elven Cloak        = Dark Elf, Old Palace 1st  / 2nd Part
+Element Cloak      = Before Boss, 10th under level Abandoned Mine
+Aqua Shawl         = Ruins in the Lake
+Feather Mantle     = Harpy, Palace of Immortal / Hippogriff, The Valley of
+                    White Silver
+Gauntlets          = Goblin-Leader, Abandoned Mine 1st Part
+Knight’s Gauntlet  = Goblin-Leader, Abandoned Mine 1st Part
+Gauntlets of Strength = West chest in 4th Floor, Old Palace 2nd Part
+Silver Gauntlets   = Goblin-Leader, Abandoned Mine 1st Part
+Wing Gauntlets     = The Roadside Inn, locked room
+Leather Gloves     = Secret track in the Great Waterfall of Maldo, Wood of
+                    Ruins
+Rune Gloves        = Labyrinth of the Dead 2nd Part
+Strong Gloves      = Area that needs to be lighted, Abandoned Mine 1st Part
+Feather Gloves     = Harpy, Palace of Immortals 1st Part
+Holy Gloves        = Bone Sigil room, Labyrinth of the Dead
+Magic Pentagram    = The Roadside Inn, locked room
+Princess’ Pentagram= Vampire-Lord, Palace of Immortals 2nd Part
+Devil’s Horn       = Shadow-Demon, Among the Summoned, Old Palace 2nd Part
+Minotaur Horn      = 8th under level Abandoned Mine
+Dragon Horn        = After defeating Red Dragon
+Dragon Tail        = Wyvern, Ruins in the Lake
+Dragon Scales      = Abandoned Mine
+Basilisk Scales    = Basirisk,Sealed Cave,part after Zombie Dragon /
+                    Basilisk, Desert Valley, Wood of Ruin
+Dragon Amulet      = Wyvern, Ruins in the Lake
+Light Amulet       = Abandoned Mine, area that needs to be lighted
+Healing Amulet     = Black Test Founder’s Key chest, Woodcutter’s Cabin
+                    Cellar, Wood of Ruins
+Rune Amulet        = Locked door that opens when Dark Elf is defeated, Old
+                    Palace 1st Part
+Talisman           = Zombie, Labyrinth of the Dead
+Luck Talisman      = Fairy Chest, Abandoned Mine
+Healing Talisman   = Woodcutter's Cabin Cellar, Woods of Ruins
+Dominion Feather   = Wind Fortress, Sealed Cave*
+Cross              = Holy Water Consecration room, Lab. of the Dead 1st Part
+Misty Pendant      = Shadow, Palace of Immortals 2nd Part / 7th under level
+                    Abandoned Mine
+Fire Necklace      = The Labyrinth of the Undead.
+Earth Necklace     = Abandoned Mine, area that needs to be lighted
+Water Necklace     = Ruins in the Lake
+Wind Necklace      = Griffin, Valley of White Silver
+Light Necklace     = Will-O-The-Wisp, Canyon Path/Isle of Ruins, Wood of
+                    Ruins
+Dark Necklace      = Black Lizard, Ruins in the Lake
+Holy Necklace      = Holy Water Consecration room, Labyrinth of the Dead
+Evil Necklace      = Arch-Magi, Old Palace 2nd Part
+Necklace of Wonders= The Roadside Inn, locked room
+Bronze Medal       = Glow Moss area, Abandoned Mine 1st Part
+Silver Medal       = Glow Moss area, Abandoned Mine 1st Pat
+Gold Medal         = Glow Moss area, Abandoned Mine 1st Part
+Lucky Earrings     = 9th under level Abandoned Mine 2nd Part
+Crystal Earrings   = 6th under level Abandoned Mine 2nd Part
+Blue Ear-stud      = Locked door that opens when Dark Elf is defeated, Old
+                    Palace 1st Part
+Red Ear-stud       = Locked door that opens when Dark Elf is defeated, Old
+                    Palace 1st Part
+Fine Scarf         = Skeleton, Labyrinth of the Dead
+Silver Anklet      = Silver Wolf, Clock Palace, Palace of Immortals 1st Part
+Feather Anklet     = Griffon, The Valey of White Silver
+Knight’s Banner    = Red Knight, Palace of Immortals 2nd Part
+Elder’s Tablet     = Locked door that opens when Dark Elf is defeated, Old
+                    Palace 1st Part
+Shaman's Tablet    = East chest, The Ancient Ruins / Vampire-Lord, The
+                    Palace of Immortal.
+Berserker Bones    = Hell-Ogre, Sealed Cave, part after defeating Zombie
+                    Dragon
+Sol Crown          = King Mummy room, left chest, 9th Under level Labyrinth
+                    of the Dead
+Moon Crown         = Sealed (elf) room in Ritual Elexier area, Labyrinth of
+                    the Dead
+Mystical Veil      = Succubus, Wind Fortress-Sealed Cave
+Shadow Veil        = Blood Shadow, Sealed Cave
+Beauty Veil        = Succubus, Sealed Cave, Wind Fortress
+Fine Shoes         = Clearing, Woods of Ruins
+Feather Shoes      = Harpy, Palace of Immortals 1st Part / Hippogriff, The
+                    Valley of White Silver
+Hovering Shoes     = 6th under level Abandoned Mine, chest in the top of the
+                    poisonous earth
+Leather Boots      = Abandoned Mine, area that needs to be Lighted
+Fine Boots         = 5th under level Abandoned Mine, before boss
+Iron Boots         = 6th under level Abandoned Mine
+Quick Boots        = Revenant, Labyrinth of the Dead 2nd Part
+Winged Boots       = The Roadside Inn, locked room
+Elven Boots        = Dark Elf, Old Palace 1st / 2nd Part
+Fool’s Puppet      = Before Durahan, Labyrinth of the Dead
+Dancing Doll       = Before Durahan, Labyrinth of the Dead
+Thief’s Badge      = 2nd floor locked (rogue) door Old Palace 1st Part
+Technique Book     = The Roadside Inn, locked room
+Renugeton          = Left chest in Crystal Maze in the Old Palace 2nd Part
+Almander           = The Roadside Inn, locked room
+Bahil              = Room of the 2 Hidden Spells, Old Palace 2nd Part
+Water Mirror       = Secret track in the isle of ruins, Wood of Ruins
+Mirror of Truth    = 6th under level Abandoned Mine
+
+rumored:
+Gray Arc           = Metal-Slime, The Ancient Ruins
+
+From this section onwards, the asterisk (*) sign means that the item is
+durable (has the percentage of destruction).But if there is no asterisk
+sign, the item is single-used.
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+  Items
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+Cure Potion        = Ghoul,Labyrinth of the Dead / Most poisonous enemies
+                    eg. Big-Viper & Giant-Centipede
+Healing Pin        = The Roadside Inn, Chest *
+Healing Potion     = Most slimes, bears, & wolves
+Life Potion        = Most slimes, bears, & wolves
+Mind Potion        = Gargoyle, The Anicent Ruins
+Wizard’s Potion    = Vampire-Bat, Palace of Immortals 2nd Part
+Healing Stone      = Room after defeating Zombie Dragon*
+Magical Stone      = Room after defeating Zombie Dragon*
+Ambrosia           = After defeating Zombie Dragon
+Elixir             = After defeating Zombie Dragon
+Fine Oil           = Mummy, Labyrinth of the Dead
+Blood Oil          = Vampire-Bat, Palace of Immortals 2nd Part
+Blood Extract      = Most Bears
+Spirit Extract     = Lesser-Vampire/Vampire, Palace of Immortals 2nd Part /
+                    Giant-Spider, Abandoned Mine
+Miracle Powder     = Woodcutter’s Cabin Cellar, Woods of Ruins*
+Fairy Powder       = Gremlin, Sealed Cave
+Fairy Wings        = Gremlin, Sealed Cave*
+Fairy Perfume      = Fairy Chest, Abandoned Mine
+Healing Perfume    = The Sealed Room in 2nd floor, Palace of Immortals
+Recovery Perfume   = The Sealed Room in 2nd floor, Palace of Immortals
+Empress’ Perfume   = The Sealed Room in 2nd floor, Palace of Immortals
+Energy Crystal     = Room after defeating Zombie Dragon*
+Energy Flask       = Wraith, Labyrinth of the Dead*
+Rope of Return     = Retired Knight or Ghoul, Labyrinth of the Dead
+Wings of Seraphim  = Near Boss, Abandoned Mine 2nd Part
+Wings of Lucifer   = Dark-Angel, The Hall of Demons ,5th Floor (Sealed Cave)
+Fate Coin          = Demons/Undead (except:Vampires,Ghosts,Succubus)
+Material Magic     = Gargoyle, Old Palace, Crystal Maze
+Material Flame     = Salamander, Cave of Red Dragon
+Material Earth     = Cave-Scissors & Killer-Fish, Abandoned Mine 2nd Part
+Material Water     = Ruins in the Lake
+Material Wind      = Stalker, Old Palace 2nd Part
+Material Light     = Flare Salamander, Cave of Red Dragon
+Material Darkness  = Chimera,The Ancient Ruins
+Material Holy      = Black Lizard, Ruins in the Lake
+Material Evil      = Spirit Ball, 10th under level Abandoned Mine
+Jewel Box          = Black Test Founder’s Key chest, Woodcutter’s Cabin
+                    Cellar, Wood of Ruins
+Silent Box         = Labyrinth of the Dead 2nd Part*
+Pandora’s Box      = 9th under level Abandoned Mine 2nd Part
+Terror Card        = Old Palace 2nd Part, near the place where you get the
+                    Dark Elf Sigil
+Tarot Card         = Old Palace 2nd Part, near the place where you get the
+                    Dark Elf Sigil
+Blood Pen          = Vampire / Lesser-Vampire, Palace of Immortals 2nd Part
+Feather Pen        = Hippogriff,Valley of White Silver/Vampire or Lesser-
+                    Vampire, Palace of Immortals 2nd Part
+Sheep Flute        = Harpy, Palace of Immortals*
+Herbal Candy       = Area near the falling rocks, Abandoned Mine 1st Part
+Tasty-drops        = 4th under level Abandoned Mine
+Berserker Drug     = Killer-Bee, Wood of Ruins*
+Red Spice          = Giant-Centipede, Abandoned Mine 1st Part
+Fortune Clock      = Middle treasure chest in treasure chamber, Palace of
+                    Immortals 2nd Part
+Mysterious Clock   = Before Boss, 10th under level Abandoned Mine*
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+  Jewels
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+Fire Jewel         = Salamander, Cave of Red Dragon*
+Fire Orb           = Salamander, Cave of Red Dragon
+Ice Jewel          = Frost-Salamander, Abandoned Mine 2nd Part / Ruins in
+                    the Lake*
+Frost Orb          = Ruins in the Lake / Snow Bear, Valley of White Silver
+Wind Jewel         = Wyvern, Ruins in the Lake*
+Thunder Orb        = Harpy, Palace of Immortal
+Earth Jewel        = Boss, Wood of Ruins 1st Part / the same place as
+                    getting cloak* / Metal-Ball, The Ancient Ruins
+Earth Orb          = Owlbear, Wood of Ruins
+Light Orb          = Flare-Salamander, Cave of Red Dragon
+Rainbow Orb        = The Sealed (elf) Room in 2nd floor, Palace of Immortals
+Dark Orb           = Spirit Ball,10th under level Abandoned Mine /Shadow,
+                    Palace of Immortals 2nd Part
+Holy Water         = Holy Water Consecration room, Labyrinth of the Dead
+Holy Orb           = Holy Water Consecration room, Labyrinth of the Dead
+Holy Lamp          = Locked door that opens when Dark Elf is defeated, Old
+                    Palace 1st Part*
+Judge’s Scale      = Labyrinth of the Dead 2nd Part, Among the Souls*
+Elemental Orb      = Flare-Salamander, Cave of Red Dragon / Ruins in the
+                    Lake
+Phantasm Orb       = Zombie Dragon, Sealed Cave
+Crystal Orb        = The room with the lever in the very 1st part, Labyrinth
+                    of the Dead
+Orb of Evil        = The 2 minions of Zombie Dragon, Sealed Cave / Durahan,
+                    Labyrinth of the Dead
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+  Ashes
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+Red Ash            = Blood Skeleton, Labyrinth of the Dead / Ogre, Abandoned
+                    Mine 2nd Part
+Gray Ash           = Zombie, Labyrinth of the Dead / The Valley of White
+                    Silver
+Blue Ash           = Arch-Magi, Old Palace 2nd Part
+White Ash          = Skeleton, Labyrinth of the Dead / Hard-Born, Old Palace
+                    2nd Part
+Green Ash          = 8th Underlevel Underground Crypt, Labyrinth of the Dead
+                    / Hell-Ogre, The Accursed Place, The Sealed Cave
+Black Ash          = Wraith, Labyrinth of the Dead
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+  Herbs
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+Lavender           = Herb Girl / L30 Goblins
+Sage               = Herb Girl / Shaman-Goblins
+Heaven Sage        = Herb Girl / Shaman-Goblins
+Iron Sage          = Herb Girl
+Fennel             = Herb Girl / Shaman-Goblins
+Hyssop             = Herb Girl / Poison-Flower
+Belladonna         = Herb Girl / Gremlins
+
+
+*+*+*+*+*+*+*+*+*+*+*+*
+III.Chests        (CHT)
+*+*+*+*+*+*+*+*+*+*+*+*
+
+There are 2 kinds of chest apart from the ones dropped by enemies & the
+purple chest in the inn which is for goods' storage. They are the green
+chest which is an ordinary chest, and black chest which is a locked chest.
+The key for the some of the locked chests is usually found nearby the
+locked chests, like the testing dagger chest, while some others are found
+after beating the boss, such as the Red Dragon, the Owl Bear,etc. And
+sometimes both the green and the black chests contain key items of that
+area.
+
+The factors to determine what you get from the chest could be either using
+the character, or just random. Maybe the higher the LUCK, the greater item
+you can get. And sometimes chests only have one item, like the one in the
+Abandoned Mine, you always get a Round Shield(area near save point of the
+3rd under level).
+
+=============================================================================
+                                  The Roadside Inn
+=============================================================================
+
+------------------
+~The Roadside Inn~
+------------------
+Chest       : Healing Pin(2x)
+Locked room : armor chest : war  &  dwf   : Anti-magic Armor
+                           pri, sor,& fai: Guardian Robe(Ver2)
+                           rog, hun,& elf: Sun Shield
+             left chest  : war : Technique Book
+                           pri : Gabriel
+                           rog : Golden Harp
+                           sor : Renugeton
+                           hun : Winged Boots
+                           elf : Necklace of Wonders
+                           dwf : Wing Gauntlets
+                           fai : Magic Pentagram
+
+=============================================================================
+                                 The Wood of Ruins
+=============================================================================
+
+------------------------------
+~The Great Waterfall of Maldo~
+------------------------------
+Secret(hun)Track :
+*chest inside the house:
+-Leather Gloves
+-Bow
+-Chainmail Shirt
+-Long Bow
+
+*chest behind the house:
+-Fine Oil
+-Sage
+-Rope of Return
+-Feather Cloak
+
+-----------------------
+~Boathouse at Lakeside~
+-----------------------
+-Isle of Ruins-
+Chest in the secret track(southeast isolated area):
+-Silver Dagger
+-Aqua Shawl
+-Water Mirror
+-Rune Robe
+-Viking Axe
+
+------------
+~The Forest~
+------------
+Chest in the secret track near woodcutter’s cabin :
+-Hunting Cap
+-Healing Stone
+-Silver Anklet
+-Skull Wand
+-Crossbow
+
+--------------------
+~The Cabin’s Cellar~
+--------------------
+Black chest(need Test Founder’s Key):
+-Jewel Box
+-Fine Boots
+-Quick Boots
+-Healing Amulet
+-Blessed Ring
+-Protect Ring
+-Spring Cape
+
+Chest beside the black chest:
+-Miracle Powder
+
+Green chest in the right: war   &   dwf  – Breastplate
+                         rog, elf,& hun – Leather Buckler
+                         pri, sor,& fai – Fine Robe
+--------------
+~The Clearing~
+--------------
+Secret Track chests
+*southwest :
+-Fine Robe
+-Fine Shoes
+-Round Shield
+
+*southeast :
+-Long Hammer
+-Crossbow
+-Great Axe
+-Crystal Rod
+-Wyvernstooth Rapier
+
+*northwest :
+-Ambrosia
+-Wings of Seraphim
+-Miracle Powder
+
+*northeast :
+-Pure Wand
+-Bastard Sword
+-Warhammer
+
+=============================================================================
+                                The Abandoned Mine
+=============================================================================
+
+--------------------
+~The Abandoned Mine~
+--------------------
+
+++++++
+Part 1
+++++++
+
+-1st under level-
+
+Fairy Chest :
+-Fairy Wings
+-Fairy Perfume
+-Fairy Powder
+-Silver Rod
+-Luck Talisman
+-Fey Rod
+
+Second Chest :
+-Mind Potion
+-Herbal Candy
+-Healing Potion
+-Gauntlets
+
+-2nd under level-
+
+Chest in the Glow Moss area :
+-Bronze Medal
+-Silver Medal
+-Gold Medal
+
+Chest in the area that needs to be lighted :
+*chest near the starting point :
+-Skull Wand
+-Light Amulet
+-Leather Boots
+-Leather Helmet
+
+*chest near the room of goblins :
+-Healing Potion
+-Strong Gloves
+-Earth Orb
+-Earth Necklace
+
+Chest in the room of goblins :
+-Skull Wand
+-Light Amulet
+-Leather Helmet
+
+-3rd under level-
+
+Chest before the part of river black chest :
+-Earth Jewel
+-Cloak
+-Leather Boots
+
+Black Chest :
+-Crystal Orb
+-Wings of Seraphim
+
+Chest in the room near save point:
+-Round Shield
+
+-4th under level-
+
+First Chest :
+-Wind Jewel
+-Ice Jewel
+-Tasty-drops
+-Ambrosia
+
+Last Chest :
+-Life Potion
+-Dragon Scales
+-Water Necklace
+
+-5th under level-
+
+First Chest :
+-Fine Boots
+-Aqua Shawl
+-Protect Ring
+-Resist Ring
+-Power Band
+
+Chest in the room : war & dwf – Full Plate
+                   sor & fai – Robe of Sorcery
+                   pri       - Bishop’s Robe
+                   rog       - Thieves Cloak
+                   elf       - Elven Cloak
+                   hun       - Leather Cloak
+++++++
+Part 2
+++++++
+
+-6th under level-
+
+First chest :
+-Fate Coin
+
+Chest on the top of poisonous earth :
+-Magical Stone
+-Healing Stone
+-Hovering Shoes
+-Crystal Earrings
+
+Another chest :
+-Iron Boots
+-Luck Talisman
+-Mirror of Truth
+-Water Mirror
+
+-7th under level-
+
+First Chest (around 8 Cave-Scissors waiting for you):
+-Blackjack
+-Wand of the Ancients
+-Stone Foil
+-Sunblade
+
+Second Chest (near the upper red portal):
+-Compound Bow
+-Poison Axe
+-Mithril Wand
+-Earth Rod
+
+Chest nearest to the save point :
+-Misty Pendant
+-Blessed Ring
+-Healing Amulet
+-Ice Shield
+
+-8th under level-
+
+Chest in the southeast area :
+-Silver Circlet
+-Robe of Spirits
+-Fata Morgana Armor
+-Life Shield
+
+Chest near the end of the 8th under level :
+-Holy Lamp
+-Phantasm Orb
+-Resist Cloak
+
+Chest in the isolated area (northwest) :
+-Elixir
+-Ambrosia
+
+-9th under level-
+
+Chest in the isolated area in the Southeast :
+-Black Ash
+-Feather Pen
+-Minotaur Horn
+-Lucky Earrings
+
+Chest in the area of iron wire stepping place :
+-Material Magic
+-Pandora’s Box
+-Silent Box
+
+Chest found after falling from iron rack :
+-Material Magic
+-Judge’s Scale
+-Ambrosia
+
+
+-The Ruins Within the Earth-
+
+First Chest :
+-Princess Locket
+-Element Cloak
+-Queen’s Circlet
+-Durandal
+
+Chest near boss :
+-Mysterious Clock
+-Wings of Seraphim
+-Elemental Orb
+-Earth Tiara
+-Robe of the Elder
+
+-------------
+~Sealed Cave~
+-------------
+
+Chest in the 2nd floor. right at the center :
+-White Ash
+-Blue Ash
+-Runic Robe
+
+Chest in the room after defeating Zombie Dragon:
+*southwest :
+-Energy Crystal
+   or
+        war: Excalibur
+        pri: Wand of Justice
+        rog: Ringnail
+        sor: Godswand
+        hun: Artemis
+        elf: Valkyrie
+        dwf: Berserker
+        fai: Star Rod
++ You will get Energy Crystal from the southwest chest if you use the trick
+ of “Lots of Item”(see section VIII). For example, I have my Katran as the
+ Leader,Devonius as the second player, and Velorius as the third player. I
+ opened the chest with Devonius and saved that Devonius. So when I reload
+ using the same Leader (Katran), Devonius, and other character that will
+ open the chest, the chest will still contain item, but will be giving you
+ Energy Crystal instead of the weapon. But if the Devonius is not used,
+ you will get the weapon instead of the energy crystal.Is it clear? Sorry,
+ I can’t find better way to explain...
+
+*northwest :
+-Energy Crystal
+-Elixir
+-Magical Stone
+-Guardian Shield
+
+*southeast :
+-Energy Crystal
+-Ambrosia
+-Healing Stone
+-Merlin’s Ring
+
+*northeast :
+-Energy Crystal
+
+-The Accursed Place-
+
+Chest in the locked (rogue)room :
+-Elixir
+-Guardian Robe(ver1)
+-Crystal Orb
+-Wish Hammer
+
+-Wind Fortress-
+
+Chest in the room near the windy area:
+-Material Wind
+-Air Shield
+-Dominion Feather
+-Thunder Orb
+
+=============================================================================
+                                   The Old Palace
+=============================================================================
+
+-------------------
+~The Ancient Tower~
+-------------------
+
+++++++
+Part 1
+++++++
+
+-2nd under level-
+
+Chests of the door that opens when the 1st Dark Elf is defeated
+*chest after you pass the green moving flats :
+-Red Ear-stud
+-Blue Ear-stud
+-Protect Ring
+-Power Symbol
+-Fata Morgana Armor
+-Elder’s Tablet
+
++To get the chest easily, have a fairy to cast haste / quick  and use the
+fairy to jump over the green flats vertically (straightforward).
+
+*chest in the room in the middle part :
+ ^east :
+  -Life Potion
+ ^west :
+  -Wizard’s Potion
+
+*chest in the furthest room (End) :
+ ^left :
+  -Miracle Powder
+  -Ambrosia
+  -Reflective Shield
+ ^right :
+  -Robe of Sorcery
+  -Bishop’s Robe
+  -Reflective Shield
+  -Holy Lamp
+
+*chest that need to jump over gray stepping pillar:
+-Rune Cape
+-Rune Amulet
+-Wand of Runes
+-Elder’s Tablet
+-Rune Gloves
+-Runic Shield
+
+-1st under level-
+
+Left locked (rogue) room chest :
+-Recovery Perfume
+-Healing Stone
+-Elixir
+
+-2nd floor-
+
+Sealed (elf)room :
+*Right:
+-Fate Coin
+-Battle Axe
+-Hand Axe
+-Fine Axe
+-Daak
+
+*Left :
+-Bow
+-Wyvernstooth
+-Rapier
+-Silver Rapier
+-Long Rapier
+
+Locked (rogue)room :
+-Thieves’ Cloak
+-Silver Dagger
+-Thief’s Badge
+
+Chest that is surrounded by purple barrier :
+-Witch’s Hat
+-Talisman
+-Healing Amulet
+-Misty Pendant
+
+-3rd floor-
+
+Chest in the north room :
+-Knight’s Armor
+
+-4th Floor-
+
+Chest in the west room :
+-Gauntlets of Strength
+-Flame Shield
+-Technique Book
+-Thunderbolt, Lightbolt
+-Wand of Evil
+
+++++++
+Part 2
+++++++
+
+-------------------
+~The Ancient Tower~
+-------------------
+
+-5th floor-
+
+Chest in the sealed (elf) room near the portal to 5th floor:
+-Rune Cape
+-Spring Cape
+-Summer Cape
+-Merlin's Ring
+-Element Cloak
+
+Chest in the sealed (elf) room above the snowy area :
+-Solitaire
+-Vampire Rod
+-Life Eater
+
+-------------
+~Tower Annex~
+-------------
+-Floating Tower-
+-Upper Level-
+
+Chests in the locked (rog) room :
+*Left :
+-Material Wind
+-Material Magic
+-Material Evil
+-Material Dark
+-Material Flame
+-Material Holiness
+-Material Light
+-Material Earth
+
+*Middle:
+-Terror Card
+-Tarot Card
+
+*Right:
+-Dark Shield
+-Blood Dagger
+
+--------------
+~Crystal Maze~
+--------------
+Chests
+*left :
+-Silver Helmet
+-Falconbolt
+-Renugeton
+-Magic Pentagram
+
+*Right:
+-Talisman
+-Wings of Seraphim
+-Quick Boots
+-Healing Amulet
+-Rod of Ishtar
+
+--------------------
+~Among the Summoned~
+--------------------
+
+Chest in the 2 hidden spells room :
+-Dominion Feather
+-Bolt of Larie
+-Angel Rod
+-Philos Ring
+-Bahil
+-Wand of Apollo
+
+*This room doesn't appear on the map. You need to jump over through the wall
+to the north in the location of where you fight the Dark-Wizard. The chest
+contains many legendary items, but hard to get. It often gives you Dominion
+Feather/Bolt of Larie. Here is the history of how many times I got from the
+chest: 13 x Dominion Feather, 8 x Bolt of Larie, 5 x Angel Rod, 2 x Philos
+Ring, 2 x Bahil, and 1 x Wand of Apollo. And to open the chest, I was using
+my male rogue with 182 Luck and in the level of 152.
+
+=============================================================================
+                             The Labyrinth of the Dead
+=============================================================================
+
+-------------------
+~Underground Crypt~
+-------------------
+
++++++++
+Part 1
++++++++
+
+-1st Underlevel-
+
+Chest in the first room which has lever :
+-Crystal Orb
+
+Chest in Bone Sigil room :
+-Healing Amulet
+-Holy Gloves
+-Charmed Wand
+-Half-moon Axe
+
+*Need the bone sigil in the 10th floor right room casket
+
+Chest which room has some mechanism :
+-Robe of Sorcery
+
+-2nd Underlevel-
+
+The only chest:
+-Life Potion
+-Wizard's Potion
+
+-3rd Underlevel-
+
+Chest near the entrance :
+-Bandit Shield
+
+Chest in the east part :
+-Elixir
+-Cross
+-Blood Pen
+-Blue Ash
+-White Ash
+
+-Holy Water Conscration Room-
+
+Chest near the entrance :
+-Holy Water
+-Cross
+-Poison Rapier
+
+Chest in one of the 4 purifying rooms :
+-Holy Orb
+-Silver Circlet
+-Holy Necklace
+
+-5th Underlevel-
+
+First Chest :
+-Dancing Doll
+-Fool's Puppet
+-Blessed Hammer
+-Flame Rod
+-Silver Axe
+-Silver Sword
+
+Chest in the prison(need 2 players and a rogue) :
+-Berserker Bone
+-Silver Armor
+-Judge's Scale
+-Minister
+
+++++++
+Part 2
+++++++
+
+-6th Underlevel-
+
+Chest in the center :
+-Fire Necklace
+-Water Necklace
+-Wind Necklace
+-Earth Necklace
+
+Northeast chest :
+-Life Potion
+-Energy Crystal
+-Crystal Orb
+
+West chest :
+-Life Potion
+-Elixir
+
+South chest :
+-Miracle Powder
+
+-7th Underlevel-
+
+Chest in the northwest(area of 3rd Hal) :
+-Holy Robe
+-Holy Wand
+-Holy Necklace
+
+Chest after you fall(trap) from the area of 3rd Hall :
+-Hermit’s Ring
+-Knight’s Mask
+
+Chest beside those two (In the area of 2nd Hall) :
+-Rune Gloves
+-Dropneal
+-Solitaire
+-Life Eater
+
+-8th Underlevel-
+
+1st chest(secret room)*:
+-Holy Shield(ver1)
+-Holy Armor
+-Robe of the Elders
+-Dominion Feather
+
+Chest in the steep area :
+-Material Flame
+-Material Earth
+-Material Magic
+-Material Dark
+
+Chest near the exit :
+-Silent Box
+-Jewel Box
+-Green Ash
+-Blue Ash
+-Judge's Scale
+-Durandal
+
+Among the Souls**      : Ambrosia, Wings of Seraphim, Judge's Scale
+
+* The secret room is located in the very first screen when you are in
+the 8th underlevel. Just go to the corner and notice the strange wall.
+Go into it and you will enter to the secret room.
+
+**When you reach the room where there is a reading that focus you on a
+platform of Among the Souls, you need to have at least 2 characters
+and 2 Joystick. Have that 2 characters step on it to get to the room
+containing the chest.
+
+-9th Underlevel-
+
+Chest in the locked(rogue) room :
+-Elixir
+
+Chest in the top before the 10th under level :
+-Crystal Orb
+-Holy Orb
+
+King Mummy room chests (after the 4th occultism room)
+*Left :
+-Ritual Hammer
+-Sol Crown
+
+*Right:
+-Elixir
+-Mist Dagger
+
+=============================================================================
+                            The Palace of Immortals
+=============================================================================
+
+++++++
+Part 1
+++++++
+-----------
+~East Wing~
+-----------
+
+-Ground Floor-
+
+Gold key room (red & blue notch) :
+-Crystal Orb
+-Holy Orb
+-Orb of Evil
+
+Bat Medallion room  : war - Ice Sword
+                         - Flame Sword
+                         - Lightning Blade
+                         - Earth Saber
+                     dwf - Flamespitter
+          rog, elf,& hun – Reflector
+
+
+-2nd Floor-
+
+Storage room in the sealed(elf)room(northeast):
+-Empress’ Perfume
+-Healing Perfume
+-Recovery Perfume
+-Fairy Perfume
+-Rainbow
+
+-3rd Floor-
+
+Chest in the sealed (elf) ritual elexier area :
+-Jewel Ring
+-Moon Crown
+-Jewel Box
+-Star Tiara
+-Earth Tiara
+
+Chest in the ritual elexier area
+*right :
+-Silver Anklet
+-Protect Ring
+-Gold Medal
+-Silver Brooch
+
+*Left :
+-Morning Star
+-Cat's Claw
+-Silver Sword
+-Wyvernstooth Rapier
+-Silver Brooch
+
+The Clocktower :
+-Ranger’s Bow
+-Water Rod
+-Magic Wand
+-Poison Axe
+
+------------------
+~Fantastic Palace~
+------------------
+
+-The Clocktower-
+The only chest(Wolf Medallion room):
+-Silver Armor
+-Silver Dagger
+-Mirror Armor
+-Earth Robe
+-Magic Pentagram
+
+-4th Floor-
+
+Chests
+*Right:
+-Queen’s Robe
+
+*Left :
+-Silver Armor
+
+++++++
+Part 2
+++++++
+
+-----------
+~West Wing~
+-----------
+
+-Ground Floor-
+
+The Treasure Chamber
+*Right :
+-Tarot Card
+-Silver Brooch
+
+*Middle :
+-Fortune Clock
+-Jewel Box,
+
+*Left :
+-Dragonbane
+-Amber Wand
+-Blood Dagger
+-Gaia Wand
+-Falconbolt
+-Chaos Rapier
+-Frost Axe
+-Rainbow Rod
+
+*In this room, you can only open one chest of the three chests in a trip.If
+you open the other chests after you open one chest of that room, 2 Marble-
+Gargoyles & 2 Red Knights will come out. You need an elf to open the sealed
+door leading to the treasure chamber and need a rogue to open each doors in
+the treasure chamber.
+
+Chest in the southern part :
+-Summer Cape
+-Winter Cape
+-Autumn Cape
+-Spring Cape
+
+Chest in the secret room behind the save point:
+-Crystal Orb
+-Mysterious Clock
+-Fortune Clock
+-Philos Ring
+
+Room that has up and down moving platform:
+-Recovery Perfume
+-Crusader Cloak
+
+Room to the right of the above room (see map)*:
+-Moon Shield
+-Robe of the Elders
+-Dragonscale
+-Crusader Cloak
+
+* To gain access to this room,you must at first go to the room that has 2
+levers. Turn both lever to south and the door leading to that room is now
+opened.
+
+
+-2nd Floor-
+
+In the water :
+-Life Potion
+-Wizard’s Potion
+-Holy Water
+-Jewel Box
+
+*Not a chest actually, but when you jump in you got an item. Near the chest
+containing Blue Dragon Key, in the water which beside has a tablet saying
+“Take care that you don’t fall in!”
+
+-3rd Floor-
+
+Chest in the eastern room that has many barrels :
+-Material Wind
+-Thunderbolt
+
+=============================================================================
+                               The Valley of White Silver
+=============================================================================
+
+The only chest :
+-Rope of Return
+-Bandit Dagger
+-Gray Ash
+-Jewel Box
+
+=============================================================================
+                                 The Ruins in the Lake
+=============================================================================
+
+Chest
+*Southeast :
+-Material Water
+-Ice Jewel
+-Frost Orb
+-Aqua Shawl
+-Elemental Orb
+-Element Cloak
+-Elemental Shield
+
+*Southwest :
+-Ice Shield
+-Ice Sword
+-Water Necklace
+-Blue Ear-stud
+
+*Northeast :
+-Material Water
+-Ice Jewel
+-Frost Orb
+-Aqua Shawl
+
+*Northwest :
+-Material Water
+-Frostfurnace
+
+============================================================================
+                              The Ancient Ruins
+============================================================================
+
+This section is contributed by James, a huge thanks for this. Without him,
+maybe this section will never here. There are 2 chests here. To get to the
+room, you need to jump to the second layer in the first screen(press R1 &
+R2 for better view). After that, you will notice that there are 6 pillars.
+2 in the east, another 2 in the west and another 2 in the north. The ones
+you will need to concentrate is the west and the east. The 2 pillars
+in the east that you need to notice is the broken one. The wall that you can
+go through is just right beside the broken pillar. Do the same thing to
+the another. Once again, A big thanks to James!
+
+East chest :
+-Reflector Ring
+-Merlin's Ring
+-Dropneal
+-Guardian Armor
+-Guardian Robe(ver1)
+-Shaman's Tablet
+-Sun Shield
+
+West chest :
+-Material Magic
+-Guardian Shield
+-Guardian Sword
+-Elemental Ring
+
+=============================================================================
+                                The Cave of Red Dragon
+=============================================================================
+
+Weapon chest : war - Darkblade
+              pri - Ritual Hammer
+              rog - Orichalca Dagger
+              sor - Skystone Wand
+              hun - Lightbolt
+              elf - Frostfurnace
+              dwf - Poison Axe
+              fai - Holy Rod
+Armor chest : war  &  dwf    - Ice Shield
+             pri, sor,& fai - Robe of Spirits
+             rog, hun,& elf - Life Shield
+Black chest :
+-Fire Material
+-Dropneal
+-Dragon Horn
+-Robe of the Elders
+-Baphomet
+-Mistortain
+-Fabnihl
+-Calvin’s Blade
+_____________________________________________________________________________
+
+*+*+*+*+*+*+*+*+*+*+*+*
+IV. Dropped Items
+*+*+*+*+*+*+*+*+*+*+*+*
+
+Well, after the update, it's no longer far from complete. :) But the items
+dropped is exceptional, I wouldn't know if I have got all the items of those
+enemies or not. But still, I'm trying my best...
+
+in this section, certain enemies can be found in more than one area(i.e.
+Zombies : can be found in the Palace of Immortals & Labyrinth of the Dead).
+The term “comp:” means the enemy that can only be found during the boss
+fight(helping the boss). But I won’t list the normal enemy that appear with
+the boss in “comp:”. Oh yeah, it stands for companion.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                                The Wood of Ruins
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+~The Wood of Ruins~
+A wooded area in the east of Foresia. It is said that ruins exist in these
+woods which no man has ever explored.
+
+First Area                  : Giant-Ant, Giant-Beetle, Kobold
+Boathouse at Lakeside       : Wingfish, Kobold, L6. Kobold
+Isle of Ruins               : Lizard-Man, Black-Lizard, Will-O-The-Wisp,
+                             Poison Flower, Trent
+The Great Waterfall of Maldo: Giant-Snake, Killer_Bee,
+The Swarm                   : Wing-Fish, Giant-Club
+The Forest                  : Killer-Bear, Killer_Bee, Lizard-Man
+The Clearing                : Killer Bear, Killer_Bee, Lizard-Man,
+                             Owlbear (boss)
+The Canyon Path             : Black-Lizard, Trent, Poison-Flower,
+                             Will-O-The-Wisp
+The Desert Valley           : Dessert-Lizard, Giant, Wyrm
+The Underground Cave        : Behemoth (boss)
+
+_____________________________________________________________________________
+
+Name: Giant-Ant
+Desc: A big green & yellow ant
+Drop: Healing Potion, Gladius,
+
+Name: Giant-Snake
+Desc: A green snake
+Drop: Cure Potion,
+
+Name: Giant-Beetle
+Desc: A brown flying beetle
+Drop: Healing Potion,
+
+Name: Kobold
+Desc: A red kobold wearing yellow cloth
+Drop: Healing Potion, Lavender, Fine Leather, Rapier, Round Shield,
+     Cat's Claw
+
+Name: L6. Kobold
+Desc: A red kobold wearing red cloth
+Drop: Broad Sword, Life Potion, Rapier, Leather Buckler, Round Shield,
+     Cat’s Claw
+
+Name: Goblin
+Desc: A green colored goblin throwing arrows
+Drop: Mace, Lavender, Trueheart, Warhammer
+
+Name: Shaman-Goblin
+Desc: A green colored goblin casting magics
+     Magic: Stone Bullet, Magic Missile
+Drop: Iron Wand, Jewel Rod, Sage
+
+Name: Killer_Bee
+Desc: A flying yellow bee
+Drop: Berserker Drug, Healing Pin
+
+Name: Giant-Club
+Desc: A purple giant crab
+Drop: Healing Potion, Material Water
+
+Name: Killer-Bear
+Desc: A big brown bear
+Drop: Blood Extract, Healing Potion
+
+Name: Lizard-Man
+Desc: A blue armored lizard man that carries a sword
+Drop: Rapier, Wyvernstooth Rapier,
+
+Name: Black-Lizard
+Desc: A black armored lizard man
+Drop: Dark Necklace, Silver Rapier, Material Holiness, Earth Shield
+
+Name: Poison-Flower
+Desc: A big walking flower, like Raflesia?
+Drop: Heavensage, Ironsage, Hyssop, Belladonna, Ambrosia
+
+Name: Trent
+Desc: A spell casting tree
+     Magic: Stone Bullet, Poison Cloud
+Drop: Earth Jewel, Earth Material, Talisman, Healing Perfume, Recovery
+     Perfume
+
+Name: Will-O-The-Wisp
+Desc: A round flying thing, kind of light
+Drop: Material Light, Light Necklace, Light Orb
+
+Name: Dessert-Lizzard
+Desc: A dark green basilisk
+     Magic: Petrify
+Drop: Basilisk Scales, Material Earth, Earth Shield
+
+Name: Wyrm
+Desc: A brown small wyvern
+Drop: Dragon Tail, Dragon Amulet, Leather Cloak
+
+Name: Giant
+Desc: A giant human carrying axe
+Drop: Blood Axe, Life Eater, Minotaur Horn, Master Plate,
+     Great Helmet
+
+Boss: Owlbear
+Desc: A big bear with owl head
+Drop: Material Earth, Blood Extract, Earth Jewel, Earth Orb
+
+Boss: Behemoth
+Desc: A legendary monster with various earth attacks
+     Magic: Poison Cloud, Petrify, Earth Javelin
+Drop: Material Earth, Basilisk's Scales, Elemental Ring, Gaia Wand
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                                   The Abandoned Mine
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+~The Abandoned Mine~
+Part 1
+1st Underlevel : Giant-Bat, L20. Goblin, Goblin-Shaman,
+2nd Underlevel : Giant-Bat, L20. Goblin, Goblin-Shaman, Goblin-Leader
+3rd Underlevel : Giant-Bat, L20. Goblin, Goblin-Shaman, Goblin-Leader, Big-
+                Viper
+4th Underlevel : Giant-Bat, Giant-Scorpion, Giant-Spider, Big-Viper
+5th Underlevel : Giant-Centipede, Dragon-Puppy(boss), Cave-Bear (once)
+
+Part 2
+6th Underlevel : Killer-Fish, Cave-Scissors, Spirit-Ball, Blue-Slime
+7th Underlevel : Cave-Scissors, Blue-Slime, Cave-Bear, Frost-Salamander(1)
+8th Underlevel : Cave-Bear, Ogre, Blue-Slime, Spirit-Ball
+9th Underlevel : Cave-Bear, Ogre, Blue-Slime, Spirit-Ball
+The Ruins Within the Earth : Spirit-Ball, Ogre, Green-Giant
+
+~The Sealed Cave~
+1st Level      : Spirit-Ball, Evil-Stalker, Gray-Arm, Gremlin, Blood-Shadow
+                Evil-Harpy
+2nd Floor      : Evil-Stalker, Gremlin, Gray-Arm, Death-Knight
+3rd Floor      : Evil-Stalker, Gremlin, Gray-Arm, Death-Knight, Blood-Shadow
+
+4th Floor
+-The Sages’ Gate-
+The Sages' Gate   : Zombie-Dragon, Evil-Ball
+The Accursed Place: Basirisk, Hell-Ogre, Hell-Hound, Gremlin
+Ice Grotto        : Succubus, Frost-Salamander(2), Gremlin
+The Flaming Pit   : Hell-Ogre, Hell-Hound, Salamander, Flare-Salamander
+Wind Fortress     : Hell-Ogre, Succubus
+
+The Hall of Demons: Gorgon, Hell-Hound, Cerberus(Boss)
+-2nd Floor        : Efreet(Boss)
+-3rd Floor        : Greater-Demon(Boss)
+-4th Floor        : Gigantes(Boss)
+-5th Floor        : Dark-Angel(Boss)
+-The Audience Hall: Harbinger(Boss)
+
+_____________________________________________________________________________
+
+Name: Giant-Bat
+Desc: A gray big flying bat
+Drop: Healing Potion, Blood Oil
+
+Name: Big-Viper
+Desc: A red poisonous snake
+Drop: Cure Potion, Life Potion, Blood Extract
+
+Name: Giant-Spider
+Desc: Yellow topped spider with red head
+Drop: Cure Potion, Spirit Extract,
+
+Name: Giant-Centipede
+Desc: A dark red poisonous centipede
+Drop: Cure Potion, Life Potion, Red Spice
+
+Name: Giant-Scorpion
+Desc: A pink-purple scorpion. It’s poisonous!
+Drop: Cure Potion,
+
+Name: L20. Goblin
+Desc: An orange colored goblin throwing arrows.
+Drop: Lavender, Fate Coin, Leather Buckler, Chainmail Shirt
+
+Name: Shaman-Goblin
+Desc: An orange colored goblin casting magics
+     Magic: Sleep, Healing, Stone Bullet
+Drop: Flail, Fate Coin, Sage, Skull Staff, Heavensage
+
+Name: Goblin-Leader
+Desc: An armored goblin with big head
+Drop: Gauntlets, Knight’s Gauntlets, Silver Gauntlets
+
+Boss: Baby Dragon (Dragon-Puppy when you use the Detect Enemies/Mirror
+     of Truth)
+Desc: A magenta colored dragon that can use fire breath
+Drop: Dragon Tail, Dragon Scales, Dragon Amulet, Dragon Horn, Fire Orb
+     Dragonscale
+
+Name: Killer-Fish
+Desc: A golden wing fish
+Drop: Material Earth, Material Wind
+
+Name: Cave-Scissors
+Desc: A golden giant crab
+Drop: Great Axe, Cure Potion, Material Water, Material Earth, Elixir
+
+Name: Cave-Bear
+Desc: A gray colored bear
+Drop: Healing Potion, Blood Extract, Life Potion
+
+Name: Spirit-Ball
+Desc: An evil elemental version of Will-O-The-Wisp
+Drop: Material Evil, Dark Orb
+
+Name: Frost-Salamander (1)
+Desc: A blue dragon carrying a spear
+     Magic : Magic Missile, Blizzard
+Drop: Ice Jewel, Frost Orb, Blue-Earstud, Mist Dagger
+
+Name: Frost-Salamander (2)
+Desc: Same as the first one
+Drop: Material Water, Water Necklace, Blue-Earstud, Ice Shield,
+     Elemental Shield, Rhinoceros Rod
+
+Name: Blue-Slime
+Desc: A blue colored slime
+Drop: Healing Potion, Life Potion
+
+Name: Ogre
+Desc: Has pink skin, wielding a stone axe.
+Drop: Life Potion, Power Band, Ouga Axe, Red Ash
+
+Name: Green-Giant
+Desc: A green giant that wields an axe
+Drop: Material Evil, Executioner, Fate Coin, Great Helm, Master Armor,
+     Life Eater, Gulwick
+
+Boss: Troll
+Desc: A green bald big headed Troll
+Drop: Fate Coin, Healing Amulet, Strong Gloves
+
+Name: Gray-Arm
+Desc: A gray wyrm
+Drop: Wind Jewel, Dragon Tail, Dragons Scales, Dragon Amulet
+
+Name: Evil-Stalker
+Desc: A black version of Stalker
+     Magic: Heavy Slow, Quick, Lightningbolt, Thunderbolt, Magic Missile,
+Drop: Material Evil, Orb of Evil, Robe of the Elders, Shadowbolt
+
+Name: Gremlin
+Desc: A green version of Goblin-Fly
+     Magic: Poison Cloud, Sleep, Charm
+Drop: Fairy Wings, Fairy Powder, Fey Rod, Fairy Perfume
+
+Name: Blood-Shadow
+Desc: The red version of Shadow
+     Magic: Dark Wave, Silence, Death Spell
+Drop: Shadow Robe, Shadow Veil
+
+Name: Hell-Harpy
+Desc: A black skinned harpy with golden hair
+Drop: Mind Potion, Fate Coin, Feather Mantle, Feather Shoes,Sheep Flute,
+     Feather Gloves
+
+Name: Hell-Ogre
+Desc: A black ogre
+Drop: Ouga Axe, Berserker Bones, Cure Potion, Red Ash, Green Ash,
+     Material Evil
+
+Name: Hell-Hound
+Desc: A black wolf
+Drop: Fine Oil, Lavender, Life Potion, Material Flame, Fire Necklace,
+     Silver Anklet
+
+Name: Death-Knight
+Desc: A black armored knight
+Drop: Gauntlets of Strength, Black Armor, Chaos Rapier, Darkblade,
+     Symbol of Darkness, Fate Coin
+
+Name: Basirisk
+Desc: Just like Dessert-Lizard in gray
+Drop: Earth Shield, Basilisk Scales, Golden Harp, Material Earth
+
+Name: Succubus
+Desc: A charming vampire lady
+     Magic: Resist, Protection, Explosion, Charm, Silence, Dark Breath
+Drop: Earth Tiara, Beauty Veil, Mystical Veil, Star Tiara, Artemis, Moon
+     Crown
+
+Boss: Zombie-Dragon
+Desc: A bone only big dragon (He probably died of starving)
+Drop: Energy Crystal,Orb of Evil, Fortune Clock
+
+Comp: Evil-Ball
+Desc: A red flying ball
+Drop: Orb of Evil, Terror Card, Material Evil, Red Ash
+
+Name: Gorgon
+Desc: A very dangerous big enemy that has petrify breath
+Drop: Devil's Horn, Minotaur Horn, Fennel, Black Ash, Healing Stone,
+     Dark Shield
+
+Boss: Cerberus (Carberos when using the Detect Enemies spell/M.of Truth)
+Desc: A three headed giant dog (known as the gate keeper?)
+Drop: Spirit Robe, Flamespitter, Gray Ash, Flame Shield, Fenris
+
+Boss: Efreet
+Desc: A legless (any such word?)winged boss covered in fire
+     Magic: Blaze, Explosion
+Drop: Material Flame,Elemental Shield,Elemental Orb, Pavas Armor, Lucifer,
+     Hammer of Thor
+
+Boss: Greater-Demon
+Desc: The version of the pink skinned Shadow-Demon having Evil elemental
+Drop: Devil Horn, Orb of Evil, Pandora's Box, Material Evil, Satan Ring,
+
+Boss: Gigantes (Demon-Lord if you use Detect Enemies/Mirror of Truth)
+Desc: A pink skinned stupid demon.You can kill him before he finished
+     chanting the Chaos Rage spell
+     Magic: Striking, Chaos Flare
+Drop: Gauntlets of Strength, Infernal Robe, Hermit's Ring, Death Mask,
+     Holy Shield(ver2)
+
+Boss: Dark-Angel
+Desc: She has 3 pairs of black wings and has a strong holy slash. Kill her
+     quick before she cast the Restore magic
+     Magic: Shining, Death Spell, Fusion, Summon Angel, Restore
+Drop: Phantom Robe, Dominion Feather, Death Sickle, Wings of Lucifer,
+     Lucifer Shield, Robe of the Sages
+
+Boss: Harbinger
+Desc: A boss who is stingy enough to not drop either an exp. crystal,
+     money, or treasure but will give you a lousy ending(I prefer to sell
+     the sagestones to see the ending rather than beating him)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                                    The Old Palace
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+~The Ancient Tower~
+2nd under level    : Dark-Magi, Goblin-Fly
+1st under level    : Lizard-Man, Crimson-Lizard, Gargoyle, L30. Goblin,
+                    Shaman-Goblin, Green-Slime
+1st Floor          : Goblin-Fly, L30.Goblin, Shaman-Goblin
+2nd Floor          : Green-Slime,L30.Goblin, Shaman-Goblin,Guard-Golem(once)
+3rd Floor          : Crimson-Lizard, Gargoyle
+4th Floor          : Gargoyle, Black-Knight, Stalker, Born-Golem
+5th Floor          : Dark-Magi, Black-Knight, Stalker, Living-Sword, Living-
+                    Armor
+6th Floor          : Dark-Elf, Wyvern
+Top Floor          : -
+Among the Summoned : Dark-Wizard(Boss), 2x Shadow-Demon
+-North hidden path : 3 Platinum-Knights(once)
+
+~Tower Annex~
+Entrance           : Living-Armor
+2nd Floor          : Living-Armor, Living-Sword, Arch-Magi, Hard-Born, Evil-
+                    Crystal
+Crystal Maze       : Crystal-Gargoyle
+
+____________________________________________________________________________
+
+Name: Green-Slime
+Desc: A green slime
+Drop: Healing Potion, Life Potion
+
+Name: Dark-Magi
+Desc: Purple clothed flying mage
+     Magic: Magic Missile, Dark Wave, & Blaze
+Drop: Wizard’s Potion, Queen’s Robe, Resist Ring, Protect Ring, Reflector
+     Ring, Fate Coin
+
+Name: Arch-Magi
+Desc: Orange clothed flying mage
+     Magic: Lightningbolt, Death Spell, Shining, Extend Spell & Thunderbolt
+Drop: Evil Necklace, Symbol of Darkness, Fate Coin, Moon Wand, Blue Ash,
+     Robe of the Elder
+
+Name: Goblin-Fly
+Desc: A flying purple goblin
+     Magic: Sleep
+Drop: Jewel Rod, Fairy Wings, Fairy Powder, Fate Coin, Fairy Perfume
+
+Name: L30. Goblin
+Desc: Purple colored goblin that throws arrows
+Drop: Battle Axe, Lavender, Trueheart, Fate Coin, Life Potion,  Leather
+     Buckler, Fine Shield
+
+Name: Shaman-Goblin
+Desc: Purple colored goblin
+     Magic: Sleep, Stone Bullet, Fire Bullet, & Healing
+Drop: Pure Wand, Sage, Heavensage, Fennel, Fate Coin, Crystal Orb
+
+Name: Lizard-Man
+Desc: A blue armored lizard man that carries a sword
+Drop: Rapier, Wyvernstooth Rapier, Broadsword, Mythril Rapier, Fate Coin
+
+Name: Crimson-Lizard
+Desc: A red Lizard-man carrying a sword
+Drop: Fate Coin, Wyvernstooth Rapier
+
+Name: Black-Knight
+Desc: A black armored knight with a red sword
+Drop: Knight's Shield, Power Symbol, Dark Material, Flame Sword, Fate Coin,
+     Black Armor, Answerer
+
+Name: Gargoyle
+Desc: Grey colored demon
+Drop: Material Magic, Mind Potion
+
+Name: Crystal-Gargoyle
+Desc: Blue colored demon
+Drop: Material Magic 100%
+
+Name: Stalker
+Desc: Green & transparent
+     Magic: Haste, Slow, Magic Missile & Lightningbolt
+Drop: Material Wind, Windbolt, Wind Rod
+
+Name: Living-Sword
+Desc: A sword that is flying
+Drop: Claymore, Material Magic, Sword of Bane, Damascus Blade, Guardian
+     Sword
+
+Name: Living-Armor
+Desc: A flying armor carrying a sword
+Drop: Life Potion, Runic Shield, Material Magic, Silver Armor, Rune Robe,
+     Guardian Armor
+
+Name: Evil-Crystal
+Desc: A red crystal that prevent you from damaging enemies
+Drop: None (Not even experience crystal.)
+
+Name: Guard-Golem
+Desc: Brown colored Living-Armor, trying to knock you down to the under
+     level
+Drop: Knight’s Armor, Knight Shield, Bastard Sword, Bronze Armor
+
+Name: Born-Golem
+Desc: A white bone centaur
+Drop: Material Magic, Minotaur Horn, Berserker Bones, White Ash, Dragon Horn
+
+Name: Hard-Born
+Desc: A grey bone centaur
+Drop: Material Magic, Minotaur Horn, White Ash, Dragon Horn,
+
+Name: Platinum-Knight
+Desc: Has a brown part in his back & carries a sword
+Drop: Silver Gauntlet, Fate Coin, Damascus Sword, Holy Armor,
+
+Boss: Dark-Elf
+Desc: What an agile boss! He is incredibly fast!
+     Magic: Sleep, Slow, Haste, Blaze, Lightningbolt, & Blizzard
+Drop: Elven Hat, Elven Boots, Elven Cloak, Elven Shield, Elven Bow
+
+Comp: Wyvern
+Desc: A big black wyvern (I hate his sound attack!)
+Drop: Winged Boots, Green Ash, Dragonscale, Dragon Horn
+
+Boss: Dark-Wizard
+Desc: Can cast Fusion & Meteor Storm! but Fusion seems to be her weakness...
+     Magic: Smash, Shining, Freeze Beast, Fusion, & Meteor Smash
+Drop: Spirit Extract, Alchemist’s Rod, Satan's Ring, Dominion Feather
+
+Comp: Shadow-Demon
+Desc: he can use frost breath with darkness elemental
+Drop: Devil’s Horn 100%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                                 The Labyrinth of the Dead
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+~Labyrinth of the Dead~
+The underground crypt where the dead of Foresia are put to rest.
+The dead which have been touch by unholy sorcery wander freely in the crypt.
+~Underground Crypt~
+Part 1
+1st Underlevel               : Skeleton, Zombie, Ghoul
+2nd Underlevel               : Skeleton, Zombie, Ghoul
+3rd Underlevel               : Skeleton, Zombie, Ghoul, Wight
+Holy Water Consecration Room : Red-Slime, Wraith, Blood-Skeleton
+5th Underlevel               : Wight, Blood-Skeleton, Dulahan(Boss)
+
+Part 2
+6th Underlevel               : Red-Slime, Wraith, Mummy, Blood-Mummy,
+                              Undead-Knight
+7th Underlevel               : Shadow, Undead-Knight, Mummy, Revenant
+8th Underlevel               : Shadow, Undead-Knight, Revenant
+9th Underlevel               : Shadow, Yellow-Slime, Undead-Knight, Mummy,
+                              Noble-Mummy, King-Mummy
+10th Underlevel              : Blood-Shadow, Revenant, Black-Durahan,
+                              Undead-Master(Boss)
+____________________________________________________________________________
+
+Name: Zombie
+Desc: Grey-Brown zombie with a poor cloth
+Drop: Fine Scarf, Talisman, Fate Coin, Gray Ash
+
+Name: Revenant
+Desc: A green agile zombie
+Drop: Miracle Powder, Fate Coin, Quick Boots, Berserker Drug, Strong Gloves
+
+Name: Skeleton
+Desc: A white skeleton with sword & shield
+Drop: Round Shield, Knight’s Shield, Broad Sword, Fate Coin, White Ash
+
+Name: Blood-Skeleton
+Desc: A red skeleton with sword & shield possesses evil attacks
+Drop: Claymore, Defender, Fate Coin, Red Ash, Bloodsword
+
+Name: Ghoul
+Desc: Pink skinned & evil aligned undead
+Drop: Cure Potion, Rope of Return, Red Ash
+
+Name: Wraith
+Desc: A purple colored ghost
+Drop: Energy Flask, Earth Robe, Black Ash, Ambrosia
+
+Name: Wight
+Desc: An evil aligned warrior with overall black skin and red hair.
+Drop: Cure Potion, Battle Axe, Bastard Sword, Long Hammer, Green Ash
+
+Name: Undead-Knight
+Desc: A white full armored knight
+Drop: Cure Potion, Crusader Cloak, Knight's Banner, Silver Sword, Fate Coin,
+     Sword of Bane
+
+Name: Red-Slime
+Desc: A red slime
+Drop: Healing Potion, Life Potion, Material Flame
+
+Name: Yellow-Slime
+Desc: A yellow slime
+Drop: Material Light, Mind Potion
+
+Name: Mummy
+Desc: A white bandaged mummy
+Drop: Fine Oil, Jewel Ring, Blessed Ring, Fate Coin, Blue Ash, Judge's Scale
+
+Name: Blood-Mummy
+Desc: A red bandaged mummy
+Drop: Blood Oil, Jewel Ring, Blessed Ring, Fate Coin, Red Ash
+
+Name: Noble-Mummy
+Desc: A black bandaged mummy
+Drop: Fine Oil, Fate Coin,
+
+Name: King-Mummy
+Desc: A golden bandaged mummy
+Drop: Blood Extract,Jewel Ring,Blessed Ring,Blue Ash,Ambrosia,Judge's Scale
+
+Boss: Dulahan (Durahan when you use Detect Enemies magic or equip Mirror
+     of Truth.)
+Desc: An undead knight which has his head on his hand.
+Drop: Orb of Evil, Bloodsword, Demonscale
+
+Boss: The Lord of the Undead (Undead-Master when you use Detect Enemies
+     magic or equip Mirror of Truth.)
+Desc: A flying zombie that can use Drain. (his Death Spell is very deadly)
+     Magic: Poison Cloud, Earth Javelin, Silence, Death Spell, Chaos Flare,
+            & Heavy Slow
+     Can use his special attack that looks like Chaos Flare(but evil
+     aligned)
+Drop: Energy Crystal, Moon Shield, Wand of Devils, Skystone Wand,
+
+Comp: Black-Durahan
+Desc: The black version of Durahan
+Drop: Sword of Bane, Orb of Evil, Demonscale
+
+Comp: Blood-Shadow
+Desc: A red colored shadow
+     Magic: Silence
+Drop: Shadow Veil, Shadow Robe, Orb of Evil, Material Evil, Evil Necklace
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                                   The Palace of Immortals
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+~ The Palace of the Immortal ~
+This palace was supposedly built more than half a millenium ago.
+It is said that the lord of this palacediscovered the secret of immortality,
+and lives within the castle still today...
+
+~The Palace of the Immortal~
+Part 1
+East Wing
+Ground Floor  : Wolf, Zombie, Harpy
+2nd Floor     : Blood-Skeleton, Ghost, Zombie
+3rd Floor     : Zombie, Gargoyle, Ghost, Marble Gargoyle(once)
+The Clocktower: Harpy, Blood-Skeleton, Ghost, Zombie
+
+-The Fantastic Palace-
+The Clocktower: Silver-Wolf, Harpy, Blood-Skeleton, Ghost
+
+~The Palace of the Immortal~
+On the Roof   : Weretiger(Boss), Werewolf(Boss)
+
+~The Palace of the Immortal~
+Part 2
+West Wing
+Ground Floor  : Lesser-Vampire, Marble-Gargoyle, Red-Knight, Vampire-Bat,
+               Shadow
+2nd Floor     : Lesser-Vampire, Marble-Gargoyle, Red-Knight
+3rd Floor     : Chimera, Lesser-Vampire, Vampire, Red-Knight, Succubus
+
+Main Building : Lesser-Vampire, Vampire, Shadow, Red-Knight
+
+-Top Floor, Audience Hall-
+Inside Room   : Vampire-Lord(Boss)
+Outside Room  : Vampire-Lord(Boss), 2 x Succubus
+______________________________________________________________________________
+
+Name: Zombie
+Desc: Grey-Brown zombie with a poor cloth
+Drop: Fine Scarf, Talisman, Fate Coin, Gray Ash
+
+Name: Ghost
+Desc: A transparent white ghost(I hate his drain attacks!)
+Drop: Energy Flask, Spirit Extract, Shadow Robe
+
+Name: Harpy
+Desc: A pink haired half-human bird
+Drop: Mind Potion, Fate Coin, Sheep Flute, Feather Gloves, Feather Mantle,
+     Feather Shoes, Thunder Orb
+
+Name: Wolf
+Desc: A dark grey wolf
+Drop: Healing Potion, Blood Extract,
+
+Name: Silver-Wolf
+Desc: A white wolf
+Drop: Silver Dagger, Silver Anklet,
+
+Name: Skeleton
+Desc: A white skeleton with sword & shield
+Drop: Round Shield, Knight’s Shield, Broad Sword, Fate Coin, White Ash
+
+Name: Blood-Skeleton
+Desc: A red skeleton with sword & shield possesses evil attacks
+Drop: Bastard Sword, Fate Coin, Long Hammer,
+
+Name: Shadow
+Desc: A black shadow casting Dark Wave & Silence
+Drop: Shadow Veil, Dark Orb, Misty Pendant
+
+Name: Lesser-Vampire
+Desc: Has blond hair
+Drop: Feather Pen, Blood Pen, Dark Necklace, Jewel Brooch, Spirit Extract,
+     Evil Necklace
+
+Name: Vampire
+Desc: Has grey hair
+     Magic: Magic Ray
+Drop: Blood Pen, Feather Pen, Dark Necklace, Evil Necklace, Dark Shield,
+     Evil Necklace
+
+Name: Red-Knight
+Desc: A full armored red knight
+Drop: Iron Helmet, Fate Coin
+
+Name: Chimera
+Desc: A three headed beast
+     Magic:
+Drop: Lavender, Material Dark
+
+Name: Succubus
+Desc: A charming vampire lady
+     Magic: Charm, Explosion, Protection, Resist, Silence, Dark Breath
+Drop: Mystical Veil, Beauty Veil, Earth Tiara, Star Tiara , Artemis,
+     Moon Crown
+
+Boss: Werewolf
+Desc: A grey wolf
+Drop: Berserker Drug, Blessed Ring, Blood Dagger, Slaughterer
+
+Boss: Weretiger
+Desc: A yellow tiger
+Drop: Red Spice, Blood Dagger, Berserker Bones, Slaughterer
+
+Boss: Vampire-Lord
+Desc: He has red eyes
+Drop: Princess Pentagram, Infernal Robe, Shaman's Tablet, Fool's Puppet,
+     Element Cloak, Merlin's Ring, Sword of Zeus (Thanks to Theng Deqianq
+     for this legendary weapon)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                                  The Valley of White Silver
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+~The Valley of White Silver~
+All area          : Snow-Wolf, Snow-Bear, Hippogriff
+The Griffon's Nest: Hippogriff, Griffon
+
+____________________________________________________________________________
+
+Name: Snow Wolf
+Desc: A white wolf
+Drop: Winter Cape, Healing Potion, Blood Extract, Life Potion
+
+Name: Snow-Bear
+Desc: A white bear
+Drop: Blood Extract, Winter Cape, Frost Orb, Ice Jewel
+
+Name: Hippogriff
+Desc: A flying giant bird
+Drop: Feather Pen, Feather Mantle, Feather Gloves, Wind Necklace
+
+Boss: Griffon (Griffin when you use Detect Enemies / Mirror of Truth)
+Desc: Same as hippogriff, but this one is bigger. And can use Wind Slash
+Drop: Thunder Orb, Phantasm Orb, Light Orb, Energy Crystal, Wing Gauntlets,
+     Winged Boots, Winged Helmet, Perseus Bow
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                                   The Ruins in the Lake
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+~The Ruins in the Lake~
+Outside buildings  : Wyrm
+Inside buildings   : Black-Lizard
+Inside big building: Kraken-Tentacles
+_____________________________________________________________________________
+
+Name: Wyrm
+Desc: A brown small wyvern
+Drop: Wind Jewel, Leather Cloak, Dragon Tail, Dragon Amulet
+
+Name: Black-Lizard
+Desc: A black armored lizardman
+Drop: Dark Necklace, Wyvernstooth Rapier, Fate Coin, Silver Rapier, Material
+     Holiness, Earth Shield
+
+Boss: Kraken (Kraken-Foot when you use the Detect Enemies/Mirror of Truth)
+Desc: Its the tentacles that is the target, not the head. Its treasure
+     chests are really hard to get!
+     Magic: Numerous Water Bullets, & Blizzard
+Drop: Material Water, Ice Jewel, Frost Orb, Aqua Shawl, Elemental Orb,
+     Element Cloak, Elemental Shield (Thanks to James for this)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                                  The Ancient Ruins
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+1st screen     : Gargoyle, Wolf
+Secret room    : Metal-Ball
+Under the Earth: Chimera, Metal-Slime
+Laboratory     : Doppleganger
+_____________________________________________________________________________
+
+Name: Gargoyle
+Desc: Grey colored demon
+Drop: Material Magic, Mind Potion
+
+Name: Wolf
+Desc: A brown colored wolf
+Drop: Healing Potion, Blood Extract, Life Potion
+
+Name: Metal-Ball
+Desc: A steel, gray colored floating ball
+Drop: Earth Jewel, Ice Jewel, Wind Jewel, Silver Shield, Fire Jewel,
+     Material Magic, Mirror Armor, Reflective Shield
+
+Name: Metal-Slime
+Desc: A steel, gray colored slime
+Drop: Dropneal, Material Magic
+
+Name: Chimera
+Desc: A three headed beast
+     Magic: Blaze, Lightningbolt, Blizzard, Poison Cloud
+Drop: Miracle Powder, Material Dark, Material Magic, Lavender, Sage
+
+Boss: Doppelganger (1~4)
+Desc: A tough boss. It is the exact replica of yourself(ves). But sadly, 
+they
+     can't cast magics.
+Drop: ???
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                                   The Cave of Red Dragon
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+~The Cave of Red Dragon~
+All Area : Salamander, Flare-Salamander
+Boss Area: Fire Dragon, 4 x Flare-Salamanders
+_____________________________________________________________________________
+
+Name: Salamander
+Desc: A red small dragon carrying a spear
+Drop: Fire Jewel,Material Flame,Fire Orb, Inferno, Flamespitter, Red
+     Ear-stud
+
+Name: Flare-Salamander
+Desc: A yellow-orange dragon carrying a spear
+Drop: Light Orb, Elemental Orb, Material Light, Sunblade, Red Ear-stud,
+
+Boss:
+Desc: A very strong enemies capable of casting strong spells
+     Magic: Explosion, Invincible, Meteor Storm
+Item: none (he will escape, not die)
+
+_____________________________________________________________________________
+
+
+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*
+V. Buyable Items
+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*
+
+If I am not mistaken, the retired knight in the 2nd Floor in the third room
+will sell his items after you completed the stage where you have to defeat
+the Griffon in the Valley of White Silver, which the place will only appear
+after you talk to him after getting several sage stones. The item he sell
+may differ, depending on what character that is buying. However, the only
+difference is only the glove, both armors, and weapon part.
+
+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+Warrior      Fate Coin       Priest/ess   Fate Coin    Rogue        Fate
+Coin
+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+Rope of Return  1            Rope of Return  1         Rope of Return  1
+Material Magic  2            Material Magic  2         Material Magic  2
+Material Flame  2            Material Flame  2         Material Flame  2
+Material Water  2            Material Water  2         Material Water  2
+Material Earth  2            Material Earth  2         Material Earth  2
+Material Wind   2            Material Wind   2         Material Wind   2
+Material Light  2            Material Light  2         Material Light  2
+Material Dark   2            Material Dark   2         Material Dark   2
+Material Holines2            Material Holines2         Material Holines2
+Material Evil   2            Material Evil   2         Material Evil   2
+Knight’s Gauntle3            Strong Gloves   3         Strong Gloves   3
+Elixir          5            Elixir          5         Elixir          5
+Amrosia         7            Amrosia         7         Amrosia         7
+Cross           12           Cross           12        Cross           12
+Healing Amulet  20           Healing Amulet  20        Healing Amulet  20
+Dominion Feather28           Dominion Feather28        Dominion Feather28
+Fata Morgana Arm38           Robe of the Elde38        Dark Shield     38
+Mirror of Truth 52           Mirror of Truth 52        Mirror of Truth 52
+Water Mirror    52           Water Mirror    52        Water Mirror    52
+Elemental Ring  65           Elemental Ring  65        Elemental Ring  65
+Guardian Armor  78           Guardian Robe   78        Elemental Shield78
+Sol Crown       95           Sol Crown       95        Sol Crown       95
+Fenris          99           Wish Hammer     99        Ringnail        99
+
+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+Sorcerer/ess Fate Coin       Hunter       Fate Coin    Elf          Fate
+Coin
+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+Rope of Return  1            Rope of Return  1         Rope of Return  1
+Material Magic  2            Material Magic  2         Material Magic  2
+Material Flame  2            Material Flame  2         Material Flame  2
+Material Water  2            Material Water  2         Material Water  2
+Material Earth  2            Material Earth  2         Material Earth  2
+Material Wind   2            Material Wind   2         Material Wind   2
+Material Light  2            Material Light  2         Material Light  2
+Material Dark   2            Material Dark   2         Material Dark   2
+Material Holines2            Material Holines2         Material Holines2
+Material Evil   2            Material Evil   2         Material Evil   2
+Strong Gloves   3            Strong Gloves   3         Strong Gloves   3
+Elixir          5            Elixir          5         Elixir          5
+Amrosia         7            Amrosia         7         Amrosia         7
+Cross           12           Cross           12        Cross           12
+Healing Amulet  20           Healing Amulet  20        Healing Amulet  20
+Dominion Feather28           Dominion Feather28        Dominion Feather28
+Robe of the Elde38           Dark Shield     38        Dark Shield     38
+Mirror of Truth 52           Mirror of Truth 52        Mirror of Truth 52
+Water Mirror    52           Water Mirror    52        Water Mirror    52
+Elemental Ring  65           Elemental Ring  65        Elemental Ring  65
+Guardian Robe   78           Elemental Shield78        Elemental Shield78
+Sol Crown       95           Sol Crown       95        Sol Crown       95
+Crystal Wand    99           Falconbolt      99        Chaos Rapier    99
+
+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+Dwarf        Fate Coin                                 Fairy        Fate
+Coin
+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+Rope of Return  1                                      Rope of Return  1
+Material Magic  2                                      Material Magic  2
+Material Flame  2                                      Material Flame  2
+Material Water  2                                      Material Water  2
+Material Earth  2                                      Material Earth  2
+Material Wind   2                                      Material Wind   2
+Material Light  2                                      Material Light  2
+Material Dark   2                                      Material Dark   2
+Material Holines2                                      Material Holines2
+Material Evil   2                                      Material Evil   2
+Knight's Gauntle3                                      Strong Gloves   3
+Elixir          5                                      Elixir          5
+Ambrosia        7                                      Amrosia         7
+Cross           12                                     Cross           12
+Healing Amulet  20                                     Healing Amulet  20
+Dominion Feather28                                     Dominion Feather28
+Robe of the Elde38                                     Robe of the Elde38
+Mirror of Truth 52                                     Mirror of Truth 52
+Water Mirror    52                                     Water Mirror    52
+Elemental Ring  65                                     Elemental Ring  65
+Guardian Armor  78                                     Guardian Robe   78
+Sol Crown       95                                     Sol Crown       95
+Frost Axe       99                                     Rhinoceros Rod  99
+
+*+*+*+*+*+*+*+*+*+*+*+*+*
+VI. Item Description (ITD
+*+*+*+*+*+*+*+*+*+*+*+*+*
+
+I guess everyone should know this, these descriptions is very incomplete
+because I had already throw away the ordinary items as the space of items
+that can be kept is very limited. The stock box can only stores up to 12
+items per character. And each character can only hold 10 items. Regardless
+the items that you can stock until 99, they will only take one space. But I
+will try to find them again.
+
+As for the fourth update, this items description is far more complete.
+
+-Weapons
+Normal Sword        : A good sword for beginners to use.
+Broad Sword         : A heavy sword with a wide blade.
+Long Sword          :
+Bastard Sword       : A Long sword with a wide blade.
+Claymore            : The barbarian Normans forge these very sharp swords.
+Bloodsword          : Red from blood of those it has killed.
+Sword of Bane       : Its last owner died a terrible death.
+Silver Sword        : Made of silver. It can also damage lycanthropes
+Ice Sword           :
+Flame Sword         : Sword from ancient times. Flames dance up the blade.
+Darkblade           : Sent to the world from the heavens, has a black blade.
+Sunblade            :
+Dragonbane          : A dragon-slaying sword forged for a ancient hero.
+Damascus Sword      : A great sword. Really sharp.
+Guardian Sword      : Sword of the arcanes, strengthens magical power.
+Excalibur           : A magical sword which is of great use against demons.
+Durandal            : The favored sword of a bold knight, it can cut stone.
+Revatin             : Surrounded by a blue light. It can even wound the
+                     gods.
+Fenris              : The frost demons’ sword will bring the end of the
+                     world.
+Answerer            : A black sword, forged by the god of darkness.
+Mistortain          : A demonic sword which killed the god of light.
+Calvin’s Blade      : A sword of the gods, bathed in blessed light.
+Club                : A wooden club.
+Mace                :
+Flail               :
+Warhammer           : Steel hammer, easy to lift and strikes heavy blows.
+Long Hammer         : A heavy, long hammer with excellent range.
+Blessed Hammer      : Carries protective charm against demons.
+Morning Star        : A rod with a massive ironball on a chain.
+Ritual Hammer       : A wonderfully decorated hammer for use in rituals.
+Wand of the Ancients: A powerful wand enchanted by the arcanes.
+Wand of Devils      : A wand forged for demons by rebellious gods.
+Holy Wand           : Gives its wielder holy might to destroy demons.
+Wish Hammer         : May reveal its power when the user is in a dilemma.
+Gabriel             : A powerfull spirit is bound, named after the
+                     archangel.
+Wand of Justice     : Judges good and evil in the hearts of men.
+Hammer of Thor      : It is said, that it has been forged by Thor for
+                     humans.
+Seraphim Rod        : An angelic rod which can exorcise demons.
+Dagger              : A normal, easily-to-use dagger.
+Gladius             : A dagger like those used by the ancients.
+Defender            :
+Daak                : Favored dagger of the barbarian Normans.
+Cat's Claw          : Magical dagger shaped like a cat’s claw.
+Blackjack           : A small, easily carried weapon.
+Silver Dagger       : A charmed silver dagger.
+Orichalca Dagger    : Golden dagger made of a fabled metal.
+Golden Harp         : Strange golden dagger, favored by ancient heroes.
+Blood Dagger        : A dagger stained red by the blood of its victims.
+Mist Dagger         : Magical dagger formed out of the spirits of the dead.
+Ringnail            : A special small dagger which is hidden within a ring.
+Fabnihl             : Made of the tooth of Fabnihl, it can turn foes to
+                     stone.
+Wooden Wand         : A solid wooden wand
+Iron Wand           :
+Pure Wand           : Created of the best materials by the best smiths.
+Skull Wand          : A wand topped with the skull of a ceremonial victim.
+Mithril Wand        : A magical wand made of mithril silver.
+Wand of Runes       : Has magical powers through the runes upon.
+Skystone Wand       : A magical wand created from a meteor.
+Moon Wand           : Wand imbued with the power of the moon.
+Wand of Evil        : A wand with the power to curse.
+Gaia Wand           : Holds the magical powers of earth and the stars.
+Godswand            : Wand of such power, only a master sorcerer may wield
+                     it.
+Crystal Wand        : A quartz wand imbued with magical power.
+Baphomet            : This sword increases its user’s strength.
+Charmed Wand        : This wand enhances its user’s magical power.
+Wand of Apollo      : A wand that can destroy 100,000 things at once.
+Shortbow            : A simply made bow.
+Bow                 : A normal bow, easy to use.
+Long Bow            :
+Trueheart           : A first class bow of great workmanship.
+Ranger's Bow        :
+Windbolt            : Magical bow inhabited by a wind fairy.
+Lightbolt           : A magical bow which shoots arrows of pure light.
+Falconbolt          : A special bow which can shot two arrows at once.
+Compound Bow        : A bow of strong wood. It is reknowed for its power.
+Elven Bow           : A magical bow made for the king of the elves.
+Shadowbolt          : A bow which was enchanted by night fairies.
+Artemis             : Bow which was given to a hero by the goddess Artemis.
+Bolt of Larie       : A cursed arrow made by the demon Larie.
+Perseus Bow         : Named after a hero, effective against the possessed.
+Shortsword          : A normal, easily-to-wiel shortsword.
+Wyvernstooth Rapier : First class rapier of the finest material.
+Poison Rapier       : a rapier which poisons anyone it wounds.
+Long Rapier         : Long rapier for stabbing foes from greater distance.
+Silver Rapier       : Leaves a anti-demon rune in the flesh it strikes.
+Mithril Rapier      : A magical rapier formed of mithril silver.
+Frostfurnace        : Was given to a king as a gift from the ice fairies.
+Thunderbolt         : Wind spirits imbued it with the power of thunder.
+Stone Foil          : Made by elven mastersmiths. Imbued with earth power.
+Solitaire           : It is said it devours the souls of those it strikes.
+Chaos Rapier        : It was forged to face the Bane Wyrm.
+Minister            : For the punishment of the sinful, emits a divine
+                     poison.
+Sword of Zeus       :
+Tomahawk            : A small, easy-to-wield axe.
+Hand Axe            : A normal axe.
+Battle Axe          : A heavy battle axe, the favored weapon of barbarians.
+Fine Axe            : A very fine axe forged by great smiths.
+Great Axe           : A heavy axe reknowned for its hacking ability.
+Silver Axe          : An axe made of silver and blessed with holy runes.
+Viking Axe          : An axe favored favored by northern seafearers.
+Flamespitter        : Sparkling axe forged in the fiery breath of a dragon.
+Life Eater          : This axe can devour the souls of those it strikes.
+Poison Axe          : An axe forged of poisonous metal.
+Executioner         : A long staff with an axehead on one end.
+Blood Axe           : An extremely sharp axe.
+Ouga Axe            : Holds the night demon Ouga and great power.
+Half-moon Axe       : Increases the power of the wielder's magic.
+Berserker           : It gives its wielder the strength of madness.
+Frost Axe           : A demon forged axe with blades of ice.
+Lucifer             : Inhabited by a demon. Lets the wounded begin to
+                     decay.
+Gulwick             : A golden axe, carries the power of the earth within
+                     it.
+Rod                 : A rod favored by fairies.
+Jewel Rod           : A rod with a jewel-encrusted top.
+Crystal Rod         : Quartz rod which protects the soul of its wielder.
+Silver Rod          : A silver rod with holy script engraved upon it.
+Flame Rod           : 1 of the 4 given to the elven king by a dead king.
+Water Rod           : 1 of the 4 given to the elven king by a dead king.
+Wind Rod            : 1 of the 4 given to the elven king by a dead king.
+Earth Rod           : 1 of the 4 given to the elven king by a dead king.
+Fey Rod             : A rod from the elven empire which has hidden powers.
+Vampire Rod         : A cursed rod which devours souls.
+Rainbow Rod         : A rod said to possess mysterious powers.
+Holy Rod            : A rod imbued with holy power to heal wounds.
+Star Rod            : A rod of starstone which burns with eternal light.
+Rod of Ishtar       : A rod created by the goddess Ishtar.
+Rhinoceros Rod      : A rod carved out of a rhinoceros horn.
+Alchemist's Rod     : A legendary treasure of the alchemists.
+Angel Rod           : A rod which can purify the possessed.
+
+-Defenses
+Bronze Armor        : Normal armor made of bronze.
+Chainmail Shirt     : A shirt made of steel chainmail.
+Full Plate          : Full suit of heavy armor. Protects the whole body.
+Knight's Armor      : Light fine armor favored by unmounted knights.
+Silver Armor        : Beautiful armor made of silver.
+Mirror Armor        : Silver armor with a fine reflective exterior.
+Black Armor         : The armor of the accursed black knight.
+Fata Morgana Armor  : Imbued with illusionary magic.
+Anti-magic Armor    : Created by the 12 sages. Against sorcery.
+Guardian Armor      : Armor forged by the warlords of hell.
+Master Plate        : A masterwork which provides 1st class protection.
+Dragonscale         : Armor forged of the heavy scales of a dragon.
+Demonscale          : It was created through a pact with the demons.
+Holy Armor          : It has a holy aura. Protects against the possessed.
+Pavas Armor         : Legendary armor. Given to a hero by the gods.
+Leather Armor       : Armor made of thick leather.
+Leather Buckler     : Small shield which protects against demons.
+Fine Shield         : Excellent shield made of the finest materials.
+Fine Leather        : First class leather clothing.
+Bandit Shield       : Shield of robbers, it remains silent during motion.
+Runic Shield        : It is engraved with runes to enhance magical power.
+Elven Shield        : A shield enchanted by the elves.
+Dark Shield         : Helps against magic-absorbing barriers.
+Life Shield         : An excellent shield offering great protection.
+Moon Shield         : An old shield which regenerates sorcerous energies.
+Sun Shield          : An old shield which regenerates life energies.
+Elemental Shield    : Magically made by the greatest sorcerers.
+Holy Shield(ver1)   : This offers divine protection from the possessed.
+Holy Shield(ver2)   : This shield emits holiness.
+Robe                : Robe made of heavy cloth.
+Fine Robe           :
+Robe of Sorcery     : Robe woven of magical energies and silk.
+Bishop’s Robe       : Consecrated robe. Protects against bad luck.
+Queen's Robe        : A thick but lightweight robe of a royal family.
+Earth Robe          : Contains earth elementals. Protects against sorcery.
+Healing Robe        : A life-saving robe which heals its wearer.
+Shadow Robe         : A black robe inhabited by spirits of darkness.
+Holy Robe           : A robe which emits a divine aura.
+Robe of Spirits     : Amplifies its wearer’s magical power.
+Robe of the Elders  : Made by the elders. Gives great protection.
+Guardian Robe(Ver1) : Powerfully protective. Made by hell’s guardians.
+Guardian Robe(Ver2) : Powerfully protective. Made by hell’s guardians.
+Infernal Robe       : A cursed robe of the devil and his helpers.
+Phantom Robe        : A robe of the dead. It devours the wearer's soul.
+Robe of the Sages   : It was supposedly created by the 12 Sages.
+
+-Shields
+Leather Shield      : A light, easily used leather shield.
+Round Shield        : A simple round shield.
+Knight Shield       : A finely adorned shield for knights.
+Flame Shield        : Magical shield inhabited by fire spirits.
+Ice Shield          : Shield made of ice inhabited by water spirits.
+Air Shield          : A shield protected by wind spirits.
+Earth Shield        : Magical shield enchanted by earth spirits.
+Reflective Shield   : Polished surface, protects against magic.
+Guardian Shield     : Mabe by warriors, increases magical power.
+
+-Clothings
+Power Band          : Magically increases its weare's strength.
+Hunting Cap         : Favored hat of the fashion-conscious woodsman.
+Silver Helmet       : A beautifully designed silver helmet.
+Great Helmet        : A great, finely crafted helmet.
+Winged Helmet       : A magical feathered helmet.
+Shadow Veil         : Veil of heretics, imbued with dark powers.
+Beauty Veil         : Beautiful ornamental veil, worn by priests.
+Sol Crown           : The sun crown of a powerfull ancient king.
+Moon Crown          : Crown of an acient king who wielded great power.
+Elven Hat           : Elves like to wear these enchanting hats.
+Witch's Hat         : A pointed hat popular with all the witches.
+Earth Tiara         : One of a pair of tiaras created long ago.
+Star Tiara          : One of a pair of tiaras created long ago.
+Silver Circlet      : Raises one's spirits and repels demons.
+Queen's Circlet     : Beautiful circlet from ancient times.
+Red Ear-stud        : Ear-stud adorned with a red jewel.
+Blue Ear-stud       : Ear-stud adorned with a blue jewel.
+Lucky Earrings      : Beautiful earrings which bring luck.
+Crystal Earrings    : Said to strengthen mind and spirit.
+Feather Mantle      : A magnificent cloak adorned with feathers.
+Aqua Shawl          : Magical shawl worn by the spirit of water.
+Summer Cape         : One of the four capes created by a great master.
+Winter Cape         : One of the four capes created by a great master.
+Autumn Cape         : One of the four capes created by a great master.
+Spring Cape         : One of the four capes created by a great master.
+Rune Cape           : A cape with runes that increase magical power.
+Resist Cloak        : Cloak that protects against magical attacks.
+Thieves’ Cloak      : A black cloak. Robbers prefer these.
+Crusader Cloak      : A finely embroidered cloak worn by knights.
+Elven Cloak         : Light cloak for easy movement worn by elves.
+Element Cloak       : Cloak enchanted with the strength of spirits.
+Leather Gloves      : Gloves made of leather.
+Feather Gloves      : Gloves made from feathers.
+Rune Gloves         :
+Holy Gloves         : Gloves which bestow the wearer with holy might.
+Gauntlets           : Iron gloves to protect the hand.
+Knight’s Gauntlet   : Beautiful protective gloves for knights.
+Gauntlets of Strength : Enchanted to increase strength.
+Silver Gauntlets    :
+Wing Gauntlets      : Magical feathered gauntlets.
+Princess Pentagram  : Gloves that quicken magic incantations.
+Magic Pentagram     : Gloves that quicken incantations of magic.
+Fire Necklace       : Wearer is protected by the powers of fire.
+Water Necklace      : Wearer is protected by the powers of water.
+Earth Necklace      : Wearer is protected by the powers of earth.
+Wind Necklace       : Wearer is protected by the powers of wind.
+Light Necklace      : Wearer is protected by the powers of light.
+Dark Necklace       : Wearer is protected by the powers of dark.
+Holy Necklace       : Wearer is blessed with holy power.
+Evil Necklace       : Engraved devil’s prayer gives unholy power.
+Necklace of Wonders : Beautiful necklace made in long ago.
+Princess Locket     : Beautiful locket of an ancient princess.
+Misty Pendant       : Misterious Locket with misty swirling surface.
+Cross               : A holy cross which protects agains all spells.
+Power Symbol        : Talisman that draws out one's hidden strengths.
+Symbol of Darkness  : Talisman that amplifies the dark powers.
+Bronze Medal        : Increases the wearer’s defense during attacks.
+Silver Medal        : Increases the wearer’s defense during attacks.
+Gold Medal          : Increases the wearer’s defense during attacks.
+Talisman            : Accelerates the recovery of magical energy.
+Luck Talisman       : Amulet that brings the wearer good luck.
+Light Amulet        : Brings forth the power of light.
+Rune Amulet         : Engraved with runes that enhance magic.
+Healing Amulet      : An ancient amulet that heals the body.
+Dragon Amulet       : Engraved with the sacred dragon.
+Jewel Ring          : Ring set with a beautiful gem said to bring luck.
+Reflector Ring      : A ring that protects the wearer from magic.
+Protect Ring        : Protects with strange mysterious powers.
+Blessed Ring        : Blessed and engraved with holy symbols.
+Hermit's Ring       : Draws out the wearers hidden magical powers.
+Merlin's Ring       : Favorite ring of the great sorcerer Merlin.
+Satan's Ring        : Cursed ring created through a pact with Satan.
+Elemental Ring      : Supernatural ring made by the spirit kings.
+Philos Ring         : Said to have been created by the 12 Wisemen.
+Solomon's Ring      : Ring of an ancient king, subdues demons.
+Thief's Badge       : Secret badge worn by Thieves' Guild members.
+Silver Brooch       :
+Jewel Brooch        : A rather ugly brooch with large jewels.
+Dominion Feather    : Beautiful feather with hidden holy power.
+Leather Boots       : Boots made of comfortable leather.
+Iron Boots          :
+Elven Boots         : The wearer of these boots becomes tireless.
+Winged Boots        : Enchanted boots adorned with feathers.
+Quick Boots         : Allows the wearer quick and agile movements.
+Feather Shoes       : Enchanted shoes, light as a feather.
+Hovering Shoes      : Shoes which allow the wearer to float on air.
+Mirror of Truth     : Mirror of truth that can reveal identities.
+Water Mirror        : Mirror that can reveal defense of opponents.
+Dancing Doll        : Magical puppet with an enchanted soul.
+Fool's Puppet       : Old worn-out puppet with mysterious powers.
+Elder's Tablet      : A tablet engraved with ancient wisdom.
+Shaman's Tablet     : A stone tablet which warns of coming danger.
+Knight's Banner     : A flag with a knightly coat of arms.
+Knight's Mask       : Mask worn over face by knights in full armor.
+Death Mask          : Wearer becomes invincible at the cost of life.
+Technique Book      : Book containing the secrets of swordmanship.
+Almander            : Magical book containing knowledge about demons.
+Renugeton           : Magical book containing knowledge about demons.
+Bahil               : A spellbook on purification techniques.
+Devil’s Horn        : Said to increase the bearer’s dark powers.
+Minotaur Horn       : Said to give the bearer great strength.
+Dragon Horn         : Said to increase the bearer's abilities.
+Berserker Bones     : Skullbone of a fallen-mad warrior.
+Basilisk Scales     : Protect against being turned to stone.
+
+-Objects
+Healing Pin         : Acupuncture needle. (Restores HP 25% dest.)
+Healing Potion      : Common Potion. (Restores HP to single unit)
+Healing Stone       : Stone of healing. (HP to max. 20% Dest.)
+Blood Extract       : Extract of blood. (Restores HP to maximum)
+Life Potion         : Potion of essence of life. (Restores HP)
+Mind Potion         : Enchanted medicine. (Restores MP)
+Wizard's Potion     : Essential potion of magic. (Restores MP)
+Magical Stone       : Soothes the spirit. (MP to max. 25% Dest.)
+Spirit Extract      : Consentrate of spirits. (Restore MP to maximum.)
+Tasty-drops         : Very tasty candy. (Restores MP and HP)
+Elixir              : Legendary medicine. (Completely restores MP and HP)
+Miracle Powder      : Ressurects the dead. (Ressurect 33% dest.)
+Fate Coin           : It shows the goddess of luck. (Changes Luck)
+Rope of Return      : Enchanted rope. (Activates Teleport)
+Material Magic      : Crystal of solid magic. (Strengthens weapon)
+Material Flame      : Magic crystal fire. (Fire attr. to weapon)
+Material Water      : Magic crystal water. (Water attr. to weapon)
+Material Earth      : Magic crystal earth. (Earth attr. to weapon)
+Material Wind       : Magic crystalize wind. (Wind attr. to weapon)
+Material Light      : Magic crystal light. (Light attr. to weapon)
+Material Dark       : Magic crystal dark. (Dark attr. to weapon)
+Material Holiness   : Crystalized divinity. (Holy attr. to weapon)
+Material Evil       : Crystalized evil. (Evil attribute to weapon)
+Ambrosia            : Nectar of the “Changing Flower”. (Resurrection)
+Elixir              : Legendary medicine. (Completely restores MP and HP)
+Terror Card         : Frightening cards of cursing. (Confuses Foes)
+Tarot Card          : Magical Tarot cards. (? ? ?)
+Silent Box          : Odd music box. (Casts Silence 10% dest.)
+Pandora's Box       : Brings both hope and despair. (? ? ?)
+Jewel Box           : Holder gains fame. (? ? ?)
+Herbal Candy        : A strange tasting candy. (? ? ?)
+Healing Perfume     : Rousing fragrance. (Slowly restores HP)
+Recovery Perfume    : Mildly scented perfume. (Slowly restores MP)
+Empress' Perfume    : Grand perfume. (Restores both MP and HP)
+Fairy Perfume       : Created by fairies. (Activates Invincible)
+Fairy Wings         : A copy of fairy wings. (Levitate 25%dest.)
+Fairy Powder        : Made from fairy wings. (Activates Anti-Circle)
+Berserker Drug      : Dispels all fears. (Temporary Berserk)
+Red Spice           : Very hot spice. (Increases AT temporarily)
+Fire Jewel          : Gem of fire. (Activates Blaze; 25% Destruction)
+Fire Orb            : Orb of fire magic. (Activates Explosion)
+Ice Jewel           : Gem of ice. (Activates Blizzard; 25% Destruction)
+Frost Orb           : Orb of Ice magic. (Activates Freeze Beast)
+Wind Jewel          : Wind Gem. (Activates Lightning Bolt; 25% Dest.)
+Thunder Orb         : Orb of wind magic. (Activates Thunderbolt)
+Earth Jewel         : Earth Gem. (Activates Poison Cloud; 25% Dest.)
+Earth Orb           : Orb of earth magic. (Activates Earth Javelin)
+Light Orb           : Orb of light magic. (Activates Shining)
+Dark Orb            : Enchanted with dark magic. (Activates Dark Breath)
+Orb of Evil         : Orb of the evil powers. (Activates Death Spell)
+Rainbow Orb         : Magic-absorbing orb. (Activates Dispel Magic)
+Phantasm Orb        : Magic orb. (Activates Charm destroyed at 25%)
+Crystal Orb         : Holds life energy. (Full restoration of HP)
+Elemental Orb       : Orb of the spirits. (Summmons Elemental)
+Holy Orb            : Orb of holy power. (Activates Barrier)
+Holy Water          : Purifies the unclean. (Activates Turn Undead)
+Holy Lamp           : Ornamental Lamp. (Casts Holy Word 20% Dest.)
+Judge's Scale       : Used by ancients. (Call Angel50% dest)
+Wings of Seraphim   : A copy of angels' wings. (Rest. of Life)
+Wings of Lucifer    : Modeled after fallen angel. (Weaken Foe)
+Energy Flask        : Essence of vigor. (Cures drain 33% Dest.)
+Energy Crystal      : Life. (Activates Recover Energy 25% Dest.)
+Sheep Flute         :
+Fortune Clock       : Forever sand. (Activates Quick 33% dest.)
+Mysterious Clock    : Glowing Sandglass. (Heavy slow! 33% dest.)
+Blood Pen           : Uses blood ink. (Increase magic recovery rate)
+Feather Pen         : Big feather pen. (Increase magic recovery rate)
+Fine Oil            : High quality oil. (Temp. increase of fire attack)
+Blood Oil           : Made from blood. (Temp. increase dark attack)
+Red Ash             : Supposedly from a saint’s hand. (Increase STR)
+Gray Ash            : Supposedly from a saint’s hand. (Increase AGI)
+Green Ash           : Supposedly from a saint’s hand. (Increase CON)
+Blue Ash            : Supposedly from a saint’s hand. (Increase INT)
+White Ash           : Supposedly from a saint’s hand. (Increase WIL)
+Black Ash           : Supposedly from a saint’s hand. (Increase POW)
+
+
+-Herbs
+* In Item-Window
+Lavender            : A herb for healing a wounded body. (Restores HP)
+Sage                : Refreshes the exhausted soul. (Restores MP)
+Ironsage            : A herb which neutralizes poison. (Treatment of poison)
+Heavensage          : Frees one of paralyzation. (Treatment of paralyzation)
+Fennel              : Restores a body that was turned to stone.
+Hyssop              : Cures emotional confusion. (Treats mental confusion)
+Belladonna          : Dispels bad magic. (Neutralization of magic)
+
+* In Herb-Window
+Lavender            : Restores some life energy.
+Sage                : Restores some magical energy.
+Ironsage            : Neutralizes poison.
+Heavensage          : Cures paralyzation.
+Fennel              : Cures petrification.
+Hyssop              : Cures magic losing condition.
+Belladonna          : Removes curses.
+
+*+*+*+*+*+*+*+*+*+*+*+*+*
+VII. Item Potential (ITP)
+*+*+*+*+*+*+*+*+*+*+*+*+*
+
+This section is the section that tells exactly the amount that the objects
+can produce. Hope it is usefull!
+Here, like in the previous sections, the asterisk(*) sign means that the
+item can be used several times until it breaks.
+
+-HP/MP Items
+Healing Pin      : Restore HP by  10 -  20 to one party member
+Healing Potion   : Restore HP by  40 -  80 to one party member
+Life Potion      : Restore HP by 220 - 300 to one party member
+Healing Stone    : Restore HP by  60 -  80 to all party members * 25% dest
+Crystal Orb      : Restore HP by 200 - 320 to all party members
+Healing Perfume  : Regenerate HP by 4 to all party members
+Mind Potion      : Restore MP by  30 -  60 to one party member
+Wizard's Potion  : Restore MP by 120 - 200 to one party member
+Magical Stone    : Restore MP by  10 -  30 to all party members * 25% dest
+Recovery Perfume : Regenerate MP by 4 to all party members
+Tasty-drops      : Restore HP & MP by 10 - 40 to one party member
+Elixir           : Restore HP & MP to full to a member
+Wings of Seraphim: Restore HP & MP back to full and recover status ailments
+                  to all party members
+Empress Perfume  : Regenerate HP & MP by 4 to all party members
+Miracle Powder   : Resurrect an ally with 1/5 of max HP * 33% dest
+Ambrosia         : Resurrect an ally with full HP
+Pandora's Box    : Characters' & enemies' HP & MP are reduced to 1
+
+-Everlasting Status-adding Items
+Blood Extract    : Max Hit Point    +  1~6 (Permanent)
+Spirit Extract   : Max Magic Point  +  1~6 (Permanent)
+Red Ash          : Max Strength     +  1~6 (Permanent)
+Blue Ash         : Max Intelligent  +  1~6 (Permanent)
+White Ash        : Max Willpower    +  1~6 (Permanent)
+Gray Ash         : Max Agility      +  1~6 (Permanent)
+Green Ash        : Max Constitution +  1~6 (Permanent)
+Black Ash        : Max Power        +  1~6 (Permanent)
+Fate Coin        : Max Luck         + -3~3 (Permanent)
+Jewel Box        : Fundamental value of Luck increase
+Material Magic   : Weapon's At. & Armor's Df. + 1~3 (Permanent)
+Material Flame   : Weapon & Armor's fire attribute + 1~3 (Permanent)
+Material Water   : Weapon & Armor's water attribute + 1~3 (Permanent)
+Material Wind    : Weapon & Armor's wind attribute + 1~3 (Permanent)
+Material Earth   : Weapon & Armor's earth attribute + 1~3 (Permanent)
+Material Light   : Weapon & Armor's light attribute + 1~3 (Permanent)
+Material Dark    : Weapon & Armor's dark attribute + 1~3 (Permanent)
+Material Holiness: Weapon & Armor's holy attribute + 1~3 (Permanent)
+Material Evil    : Weapon & Armor's evil attribute + 1~3 (Permanent)
+
+-Magic-casting Objects
+Holy Water       : Cast Lvl 1 priest spell 'Turn Undead'
+Holy Orb         : Cast Lvl 3 priest spell 'Barrier'
+Holy Lamp        : Cast Lvl 4 priest spell 'Holy Word' * 20% dest
+Energy Crystal   : Cast Lvl 5 priest spell 'Recover Energy' * 25% dest
+Judge's Scale    : Cast Lvl 6 priest spell 'Call Angel' * 50% dest
+Fire Jewel       : Cast Lvl 3 wizard spell 'Blaze' * 25% dest
+Ice Jewel        : Cast Lvl 3 wizard spell 'Blizzard' * 25% dest
+Wind Jewel       : Cast Lvl 3 wizard spell 'Lightningbolt' * 25% dest
+Earth Jewel      : Cast Lvl 3 wizard spell 'Poison Cloud' * 25% dest
+Light Orb        : Cast Lvl 4 wizard spell 'Shining'
+Dark Orb         : Cast Lvl 4 wizard spell 'Dark Breath'
+Rainbow Orb      : Cast Lvl 4 wizard spell 'Dispell Magic'
+Fire Orb         : Cast Lvl 5 wizard spell 'Explosion'
+Frost Orb        : Cast Lvl 5 wizard spell 'Freeze Beast'
+Thunder Orb      : Cast Lvl 5 wizard spell 'Thunderbolt'
+Earth Orb        : Cast Lvl 5 wizard spell 'Earth Javelin'
+Evil Orb         : Cast Lvl 5 wizard spell 'Death Spell'
+Sheep Flute      : Cast Lvl 1 fairie spell 'Sleep' * 10% dest
+Phantasm Orb     : Cast Lvl 3 fairie spell 'Charm' * 25% dest
+Silent Box       : Cast Lvl 3 fairie spell 'Silence' * 10% dest
+Fairy Wings      : Cast Lvl 4 fairie spell 'Levitate' * 25% dest
+Fortune Clock    : Cast Lvl 5 fairie spell 'Quick' * 33% dest
+Mysterious Clock : Cast Lvl 5 fairie spell 'Heavy Slow' * 33% dest
+Fairy Perfume    : Cast Lvl 5 fairie spell 'Invincible'
+Fairy Powder     : Cast Lvl 5 fairie spell 'Anti-Circle'
+Elemental Orb    : Cast either one of Lvl 6 fairie spells
+Tarot Card       : Cast high level magic
+                  eg. Call Angel, Thunderbolt, Meteor Storm, etc
+-Miscellanous
+Cure Potion      : Status abnormal recovery to one member
+Energy Flask     : Cure 'Drain' * 33% dest
+Wings of Lucifer : Cast 'Weak' on all enemies
+Terror Card      : Cast 'Confusion' on all enemies
+Berserker Drug   : Cast 'Berserk' on yourself for 120 seconds
+Red Spice        : At. + 50% for 60 seconds
+Fine Oil         : Fire attribute + 30
+Blood Oil        : Darkness attribute + 30
+Feather Pen      : Magical acquisition rate increase
+Blood Pen        : Magical recovery factor increase
+Herbal Candy     : Random effects of herbs
+
+-Herb
+Lavender         : Potential = 10~30 + (Agi./ 4)
+Sage             : Porential = 10~30 + (Agi./ 4)
+
+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*
+VIII. Special Effects   (SPC)
+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*
+
+In this part, there are two different things that I interpret it as maybe
+the same. When I say MP regeneration + x (varies, depends on the equipment),
+it means that the MP regeneration that uses Power will be added by x. So, it
+is different from the one that is said like this : " regenerate MP by x",
+this means that the MP will be added continuously by x.
+
+-------
+Weapons
+-------
+
+Sword of Bane       : At + 60 / 6 HP, if HP below 7, it curses
+Bloodsword          : Drains HP from living enemies (decrease HP if undead)
+Answerer            : At + 50 / 15 MP
+Durandal            : Sometimes knock back enemies (even bosses)
+                     (probability 25%)
+Mistortain          : Critical attack ratio + 5%
+Dragonbane          : Dragon enemies, AT + 40
+Excalibur           : Demon enemies & magical living thing, At + 40
+Calvin's Blade      : Demon enemies & magical living thing, At + 60
+Gabriel             : Holy atk magic + 50%
+Ritual Hammer       : Critical attack ratio + 3%
+Wish Hammer         : At + 40 when HP 1/4
+Wand of Justice     : Demon enemies, At + 30
+Seraphim Rod        : Demon enemies, At + 40
+Hammer of Thor      : At + 20 / 8 MP & Giant enemies & magical living thing,
+                     At + 40 ~can be equipped by dwarves~
+Cat’s Claw          : Sometimes curse the enemy (8% probability)
+Blackjack           : Sometimes stun the enemy (8% probability)
+Blood Dagger        : Drains HP from living enemies (decrease HP if undead)
+Fabnihl             : Sometimes petrify / 16 MP (8% probabilty)
+Golden Harp         :
+Orichalca Dagger    : At + (WIL * 25%)
+Death Sickle        : At + 30 / 6 HP & Sometimes Instant Death (8% prob.)
+Dominion Dagger     : Demon & Undead enemies, At + 40
+Skystone Wand       :
+Godswand            : Sometimes shoot Fire Bullet / 1 MP (10% probability)
+Gaia Wand           : Sometimes shoot Stone Bullet if hit by normal attack
+                     (25% probability)
+Baphomet            : Wave attack
+Charmed Wand        : Mat + 30 / 3 MP
+Crystal Wand        : Critical attack ratio + 4%
+Trueheart           : Critical attack ratio + 3%
+Ranger's Bow        : Critical attack ratio + 3%
+Elven Bow           : Critical attack ratio + 6%
+Lightbolt           : Shoots Magic Missile / 10 MP
+Falconbolt          : Shoots 2 arrows in one attack
+Artemis             : At + 30 / 8 MP
+Bolt of Larie       : Sometimes petrify / 12 MP (15% probability)
+Perseus Bow         : Demon & dragon enemies, At + 60 & critical attack
+                     ratio + 6%
+Solitaire           : Drains MP from living enemies (decrease MP if undead)
+Poison Rapier       : Sometimes poison the enemy (10% probability)
+Minister            : Sometimes paralyze the enemy (10% probability)
+Chaos Rapier        : Sometimes confuse the enemy (12.5 % probability)
+Sword of Zeus       : Demon enemies, At + 50
+Executioner         : Critical attack ratio + 4%
+Valkyrie            : Critical attack ratio + 5%
+Great Axe           : Critical attack ratio + 6%
+Life Eater          : Drains HP from living enemies (decrease HP if undead)
+Berserker           : Sometimes knock back enemies (even bosses)
+                     (25% probability)& goes Berserk when you, in critical
+                     condition, hit enemy. (at least 1/2 of the max HP)
+Gulwick             : Sometimes Petrify / 8 MP (20% probability)
+Slaughterer         : Sometimes Instant Death (8% probability)
+Lucifer             : At + 20 / 6 HP, Can paralyze user if he hits with HP
+                     less than half
+Pavas Axe           : Demon enemies, At + 55
+Fey Rod             : At + (Enemy level / 3)
+Vampire Rod         : Drains MP from living enemies (decrease MP if undead)
+Holy Rod            : Starts to regenerate HP by 1 if HP lower than half
+Rainbow Rod         : Critical attack ratio + 7%
+Rhinoceros Rod      : Critical attack ratio + 2% & MP regeneration + 2
+Alchemist’s Rod     : Doubles the experience gained from attacking enemies
+Rod of Ishtar       : Undead enemies, At + 40
+Angel Rod           : Demon enemies, At + 40
+
+------------
+Armors/Robes
+------------
+
+Full Plate          : Critical attack ratio - 2%
+Master Plate        : Critical attack ratio + 5%
+Mirror Armor        : Sometimes block magic(healing,support & attack magic)
+                     (25% probability)
+Anti-magic Armor    : Df + (POW * 10%)
+Black Armor         : Df + 60 / 10 MP
+Holy Armor          : Evil elemental damage decreases
+Reflector           : Sometimes block magic(healing,support & attack magic)
+Elemental Shield    : Fire, Water, Wind, & Earth elemental damage decreases
+Dark Shield         :
+Holy Shield(ver1)   : Evil elemental damage decreases
+Holy Shield(ver2)   : Fire & Evil elemental damage decreases
+Moon Shield         : MP regeneration + 5
+Sun Shield          : Regenerate HP by 2
+Healing Robe        : Regenerate HP by 1
+Shadow Robe         : Sometimes block magic(healing,support & attack magic)
+                     (33% probability)
+Guardian Robe(ver2) : Darkness & Evil elemental damage decreases
+Infernal Robe       :
+Phantom Robe        :
+Robe of the Sages   : Fire, Water, Wind, Earth, & Evil elemental damage
+                     decreases
+
+-------
+Shields
+-------
+
+Flame Shield        : Reduce fire elemental attack
+Ice Shield          : Reduce water elemental attack
+Air Shield          : Reduce wind elemental attack
+Earth Shield        : Reduce earth elemental attack
+Reflective Shield   : Sometimes block magic(healing,support & attack magic)
+                     (25% probability)
+Lucifer Shield      : Sometimes cast 'Dark Wave' when attacked while
+                     guarding with 12 MP use
+Seraphim Shield     : Regenerate HP & MP by 1
+
+---------
+Clothings
+---------
+
+Moon Crown          : MP consumption - 25%
+Sol Crown           : MP consumption - 50%
+Devil's Horn        : MP consumption - 10% & MP regeneration + 1
+Element Cloak       : Decrease fire, water, wind, & earth damage
+Earth Tiara         : Decrease fire, wind, light, & holy damage
+Star Tiara          : Decrease water, earth, darkness,& evil damage
+Hermit's Ring       : MP regeneration + 1
+Talisman            : MP regeneration + 2
+Healing Amulet      : Regenerate HP by 1
+Elven Boots         : Regenerate HP by 1
+Death Mask          : Regenerate HP by -5% & critical attack ratio + 5%
+Necklace of Wonders : Regenerate HP by 2 & MP by 2
+Satan's Ring        : Regenerate MP by 3 & Curse the character
+Rune Amulet         : Wizard mag atk + 50%
+Mystical Veil       : Fairy mag atk + 50%
+Beauty Veil         : Priest mag atk + 50% & Increases the potential of
+                     healing magics.
+Elemental Ring      : Elemental Attack (fire,water,wind,earth) + 50%
+Red Ear-stud        : 10% magic recovery from fire & earth damage
+Blue Ear-stud       : 10% magic recovery from water & wind damage
+Shadow Veil         : 10% magic recovery from darkness & evil damage
+Reflector Ring      : Sometimes block magic(healing,support & attack magic)
+                     (50% probability)
+Solomon's Ring      : 100% block magic(healing,support & attack magic)
+Protect Ring        : Df + (POW * 25%)
+Resist Ring         : Mdf + (POW * 25%)
+Philos Ring         : Gain MP when you take damage
+Dropneal            : Increase the chance of getting Fate Coin & Doubles
+                     the experience gained from experience crystal.
+                     Plus: Multiplies the amount of money gotten from
+                     monsters.(thanks to James for this)
+Spring Cape         : Immune to Poison
+Silver Helmet       : Immune to Paralysis
+Summer Cape         : Immune to Paralysis
+Witch's Hat         : Immune to Magic-Loss
+Autumn Cape         : Immune to Magic-Loss
+Winter Cape         : Immune to Confusion
+Feather Shoes       : Immune to Slow
+Winged Boots        : Immune to Slow
+Princess Locket     : Immune to Sleep
+Misty Pendant       : Immune to Silence
+Basilisk Scales     : Immune to Petrify
+Cross               : Immune to Curse
+Gray Arc            : Immune to Drain
+Elven Hat           : Immune to Poison & Paralysis
+Hunting Cap         : Immune to Confusion & critical attack ratio + 1%
+Shaman's Tablet     : Immune to spiritual status abnormality (Magic-Loss,
+                     Confusion, etc)
+Water Mirror        : Reveal enemies’ alignment/element
+Mirror of Truth     : Reveal enemies’ Name & Hit Point (HP)
+Fool's Puppet       : Auto resurrect (1/3 HP & MP) (50% Destruction)
+Dominion Feather    : Auto resurrect(Full HP & MP) (50% Destruction)
+Dancing Doll        : Refill 4% of the MP when it goes to 0(50% Destruction)
+Rune Gloves         : Give the effect of 'Enchant Weapon' to equipped weapon
+Silver Gauntlets    : Give the effect of 'Enchant Weapon' to equipped weapon
+Hovering Shoes      : Give the effect of 'Levitate' to character
+Princess Pentagram  : Cut magic incantation by 25% & MP Regeneration + 4
+Magic Pentagram     : Cut magic incantation by 50%
+Knight's Gauntlet   : Critical attack ratio + 1%
+Berserker Bones     : Critical attack ratio + 2% & Goes berserk when in
+                     critical condition (at least 1/2 of the max HP)
+Minotaur Horn       : Sometimes knock back enemies (even bosses)
+                     (25% probability) & critical attack ratio + 2%
+Dragon Horn         : Critical attack ratio + 4%
+Technique Book      : Critical attack ratio + 5%
+Aqua Shawl          : Fire elemental damage decreases
+Quick Boots         : Wind elemental damage decreases
+Light Amulet        : Darkness elemental damage decreases
+
+*+*+*+*+*+*+*+*+*+*+*+*+*+*
+IX. Equipment Element (ELM)
+*+*+*+*+*+*+*+*+*+*+*+*+*+*
+
+This section will most likely to include the equipment(weapon, armor, &
+clothing)that have elements. So, non elemental equipments will not be
+listed here. As you can see, this section is not completed yet. I'll try
+to give as much info as I can.
+
+Abbreviation : Fir. = Fire   Wat. = Water     Win. = Wind   Ear. = Earth,
+              Lig. = Light  Dar. = Darkness  Hol. = Holy   Evi. = Evil
+
+------
+Weapon
+======
+             Fir.   Wat.    Win.    Ear.    Lig.   Dar.    Hol.    Evi.
+------------------------------------------------------------------------
+Flame Sword   10      0       0       0       0      0       0       0
+Revatin       25      0       0       0       0      0       0       0
+Ice Sword      0     12       0       0       0      0       0       0
+Fenris         0     30       0       0       0      0       0       0
+Lightning Bld. 0      0      10       0       0      0       0       0
+Earth Saber    0      0       0      14       0      0       0       0
+Sunblade       0      0       0       0      18      0       0       0
+Dragonbane     0      0       0       0      20      0       0       0
+Excalibur      0      0       0       0      25      0       0       0
+Darkblade      0      0       0       0       0     18       0       0
+Answerer       0      0       0       0       0     20       0       0
+Calvin's Bld. 30      0       0       0       0      0      30       0
+Bloodsword     0      0       0       0       0      0       0      10
+Sword of Bane  0      0       0       0       0      0       0      15
+Hammer of Thor 0      0      30       0       0      0       0       0
+Excalibur      0      0       0       0      25      0       0       0
+Blessed Hammer 0      0       0       0       0      0       8       0
+Holy Wand      0      0       0       0       0      0      18       0
+Wand of Jst.   0      0       0       0       0      0      25       0
+Seraphim Rod  25      0       0       0       0      0      25       0
+Gabriel        0      0       0       0      20      0      20       0
+Wand of Devils 0      0       0       0       0      0       0      24
+Ringnail      20      0       0       0       0      0       0       0
+Blood Dagger   0      0       0       0       0      0       0      10
+Death Sickle   0      0       0       0       0      0       0      15
+Fabnihl        0      0       0       0       0      0       0      20
+Gaia Wand      0      0       0      15       0      0       0       0
+Moon Wand      0      0       0       0       0     15       0       0
+Godswand       0      0       0       0       0      0      20       0
+Wand of Apollo 0      0       0       0       0      0      25       0
+Wand of Evil   0      0       0       0       0      0       0       8
+Windbolt       0      0       2       0       0      0       0       0
+Lightbolt      0      0       0       0      14      0       0       0
+Shadowbolt     0      0       0       0       0     26       0       0
+Perseus Bow    0      0       0       0      25      0      25       0
+Bolt of Larie  0      0       0       0       0     18       0      22
+Artemis        0      0       0      16      20      0      12       0
+Inferno       18      0       0       0       0      0       0       0
+Frostfurnace   0     18       0       0       0      0       0       0
+Thunderbolt    0      0      18       0       0      0       0       0
+Stonefoil      0      0       0      18       0      0       0       0
+Valkyrie       0      0       0       0      20      0       0       0
+Chaos Rapier   0      0       0       0       0     20       0       0
+Sword of Zeus  0     20       0       0       0      0      20       0
+Solitaire      0      0       0       0       0     12       0      16
+Flamespitter  22      0       0       0       0      0       0       0
+Frost Axe      0     16       0       0       0      0       0       0
+Poison Axe     0      0       0       8       0      0       0       0
+Gulwick        0      0       0      25       0      0       0       0
+Half-moon Axe  0      0       0       0      12      0       0       0
+Berserker      0      0       0       0       0     25       0       0
+Silver Axe     0      0       0       0       0      0       8       0
+Slaughterer    0      0       0       0       0      0       0      20
+Life Eater     0      0       0       0       0      0       0      23
+Lucifer        0      0       0       0       0      0       0      23
+Pavas Axe      0      0       0       0      30      0      30       0
+Flame Rod     12      0       0       0       0      0       0       0
+Water Rod      0     12       0       0       0      0       0       0
+Wind Rod       0      0      12       0       0      0       0       0
+Earth Rod      0      0       0      12       0      0       0       0
+Rod of Ishtar  0      0       0       0      21      0       0       0
+Star Rod       0      0       0       0      40      0       0       0
+Silver Rod     0      0       0       0       0      0      12       0
+Holy Rod       0      0       0       0       0      0      12       0
+Rhinoceros Rod 0      0       0       0       0      0      25       0
+Angel Rod      0      0       0       0       0      0      25       0
+Vampire Rod    0      0       0       0       0      0       0      18
+
+-------
+Defense
+=======
+             Fir.   Wat.    Win.    Ear.    Lig.   Dar.    Hol.    Evi.
+------------------------------------------------------------------------
+Dragonscale   16      0       0       0       0      0       0       0
+Holy Armor     0      0       0       0       0      0      20       0
+Pavas Armor    0      0       0       0      25      0      25       0
+Black Armor    0      0       0       0       0     16       0      16
+Demonscale     0      0       0       0       0     15       0      26
+Sun Shield     0      0       0       0      19      0       0       0
+Dark Shield    0      0       0       0       0     17       0       0
+Moon Shield    0      0       0       0       0     20       0       0
+Holy Shld(ver1)0      0       0       0       0      0      16       0
+Holy Shld(ver2)0      0       0       0      25      0      25       0
+Earth Robe     0      0       0      12       0      0       0       0
+Robe of Sor.   0      0       0       0       0      5       0       0
+Shadow Robe    0      0       0       0       0     32       0       0
+Healing Robe   0      0       0       0       0      0      20       0
+Holy Robe      0      0       0       0       0      0      30       0
+Rb. of t. Sages0      0       0       0      32      0      32       0
+Infernal Robe  0      0       0       0       0     20       0      20
+Phantom Robe   0      0       0       0       0     22       0      22
+
+------
+Shield
+======
+             Fir.   Wat.    Win.    Ear.    Lig.   Dar.    Hol.    Evi.
+------------------------------------------------------------------------
+Flame Shield   8      0       0       0       0      0       0       0
+Ice Shield     0      8       0       0       0      0       0       0
+Air Shield     0      0       8       0       0      0       0       0
+Earth Shield   0      0       0       8       0      0       0       0
+Lucifer Shield 0      0       0       0       0      0       0      15
+Seraphim Shld. 0      0       0       0      20      0      20       0
+
+--------
+Clothing
+========
+             Fir.   Wat.    Win.    Ear.    Lig.   Dar.    Hol.    Evi.
+------------------------------------------------------------------------
+Summer Cape    5      0       0       0       0      0       0       0
+Power Symbol   8      0       0       0       0      0       0       0
+Fire Necklace 24      0       0       0       0      0       0       0
+Winter Cape    0      5       0       0       0      0       0       0
+Aqua Shawl     0     20       0       0       0      0       0       0
+Water Necklace 0     24       0       0       0      0       0       0
+Quick Boots    0      0       3       0       0      0       0       0
+Autumn Cape    0      0       5       0       0      0       0       0
+Wind Necklace  0      0      24       0       0      0       0       0
+Neck. of Won.  0      0       0       4       0      0       0       0
+Spring Cape    0      0       0       5       0      0       0       0
+Earth Necklace 0      0       0      24       0      0       0       0
+Light Amulet   0      0       0       0      10      0       0       0
+Light Necklace 0      0       0       0      24      0       0       0
+Symb. of Dark. 0      0       0       0       0      8       0       0
+Dark Necklace  0      0       0       0       0     24       0       0
+Blessed Ring   0      0       0       0       0      0       4       0
+Cross          0      0       0       0       0      0      10       0
+Princess Pent. 0      0       0       0       0      0      10       0
+Holy Necklace  0      0       0       0       0      0      24       0
+Elder's Tablet 0      0       0       0       0      0      24       0
+Dom. Feather   0      0       0       0       0      0      30       0
+Holy Gloves    0      0       0       0       0      0      40       0
+Gray Arc       0      0       0       0       0      0      40       0
+Evil Necklace  0      0       0       0       0      0       0      24
+Satan's Ring   0      0       0       0       0      0       0      30
+
+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*
+IX. Equipment Attribute (ATR)
+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*
+
+Well, I think it will be almost impossible to make this section complete.
+But I'll gather as much information as I can.(If only I had think of
+doing this section 2 months ago, maybe this section can be completed, at
+least for 75% of all the equipments.)
+
+Added(ver 2.4): Well, what can I say? All the items are listed with the
+status enhancing attribute. Although it is not 100% correct, and some of
+them are still in '??' mark, it is still good to refer to this table.
+If you find any mistakes, don't wait and e-mail me straight away. :)
+(Phew, at last this section is 95% completed)
+
+------
+Weapon
+======
+            Str  Int  Wil  Agl  Con  Pow   Luk -  At   Mat   Def   Mdef
+Normal Sword  0    0    0    0     0    0    0  -   7    0     0      0
+Sword of Bane 0    0    0    0     0    0    0  -  10    0     0      0
+Broad Sword   0    0    0    0     0    0    0  -  12    0     0      0
+Long Sword    0    0    0    0     0    0    0  -  18    0     0      0
+Bloodsword    0    0    0    0     0    0    0  -  20    0     0      0
+Bastard Sword 0    0    0    0     0    0    0  -  25    0     0      0
+Silver Sword  0    0    0    0     0    0    0  -  28    0     0      0
+Claymore      0    0    0    0     0    0    0  -  30    0     0      0
+Earth Saber   0    0    0    0     0    0    0  -  32    0     0      0
+Ice Sword     0    0    0    0     0    0    0  -  34    0     0      0
+Flame Sword   0    0    0    0     0    0    0  -  36    0     0      0
+Lightning Bld.0    0    0    0     0    0    0  -  38    0     0      0
+Sunblade      0    0    0    0     0    0    0  -  44    0     0      0
+Darkblade     0    0    0    0     0    0    0  -  52    0     0      0
+Answerer      0    0    0    0     0    0    0  -  60    0     0      0
+Dragonbane    0    0    0    0     0    0    0  -  68    0     0      0
+Damascus Bld. 0    0    0    0     0    0    0  -  70    0     0      0
+Excalibur     0    0    0    0     0    0    0  -  72    0     0      0
+Guardian Swd. 0    0    0    0     0   20    0  -  75    0    20     20
+Durandal      0    0    0    0     0    0    0  -  80    0     0      0
+Revatin       0    0    0    0     0    0    0  -  87    0     0      0
+Mistortain    0    0    0    0     0    0    0  - 110    0     0      0
+Fenris        0    0    0    0     0    0    0  - 121    0     0      0
+Calvin's Bld. 0    0    0    0     0    0    0  - 128    0     0      0
+Club          0    0    0    0     0    0    0  -   5    0     0      0
+Mace          0    0    0    0     0    0    0  -   9    0     0      0
+Flail         0    0    0    0     0    0    0  -  13    0     0      0
+Warhammer     0    0    0    0     0    0    0  -  19    0     0      0
+Blessed Hmr.  0    0   15    0     0    0    0  -  24    0     0     12
+Long Hammer   0    0    0    0     0    0    0  -  28    0     0      0
+Morning Star  0    0    0    0     0    0    0  -  34    0     0      0
+Ritual Hammer 0   10    0    0     0    0    0  -  40    0     0      0
+Holy Wand     0    0    0    0     0    0    0  -  46    0     0      0
+Wnd. of Anc.  0    0    0    0     0    0    0  -  50    0     5      0
+Wand of Devil 0    0    0    0     0    0    0  -  55    0     0      0
+Amber Wand    0    0    0    0     0    0    0  -  62    0     0      0
+Gabriel       0    0    0    0     0    0    0  -  62    0     0      0
+Wish Hammer   0    0    0    0     0    0    0  -  65    0     0      0
+Wand of Just. 0    0    0    0     0    0    0  -  70    0     0      0
+Hmr. of Thor  0    0    0    0     0    0    0  -  95    0     0      0
+Seraphim Rod  0    0    0    0     0    0    0  - 104    0     0      0
+Dagger        0    0    0    0     0    0    0  -   5    0     0      0
+Gladius       0    0    0    0     0    0    0  -   9    0     0      0
+Daak          0    0    0    0     0    0    0  -  14    0     0      0
+Defender      0    0    0    0     0    0    0  -  18    0    10      0
+Silver Dagger 0    0    0    0     0    0    0  -  19    0     0      0
+Death Sickle  0    0    0    0     0    0    0  -  20    0     0      0
+Cat's Claw    0    0    0    0     0    0    0  -  21    0     0      0
+Bandit Dagger 0    0    0   10     0    0    0  -  26    0     0      0
+Blackjack     0    0    0    0     0    0    0  -  30    0     0      0
+Orichal. Dgr. 0    0    0    0     0   10    0  -  30    0     0      0
+Golden Harp   0    0    0    0     0    0    0  -  36    0     0      0
+Blood Dagger  0    0    0    0     0    0    0  -  42    0     0      0
+Mist Dagger   0    0    5    0     0   15    0  -  72    0     0     22
+Ringnail      0    0    0    0     0    0    0  -  81    0     0      0
+Fabnihl       0    0    0    0     0    0    0  -  92    0     0      0
+Dominion Dgr. 0    0    0    0     0    0    0  - 101    0     0      0
+Wooden Wand   0    0    0    0     0    0    0  -   5    2     0      0
+Iron Wand     0    0    0    0     0    0    0  -  12    1     0      0
+Skull Wand    0    0    0    0     0    0    0  -  ??   ??     0      0
+Pure Wand     0    0    0    0     0    0    0  -  16    3     0      0
+Magic Wand    2    5    3    4     1   12    0  -  24    8     0      0
+Wand of Runes 0    0    0    0     0   30    0  -  29   15     0      0
+Mithril Wand  0    0    0    0     0    0    0  -  36   18     0      0
+Skystone Wand 0    0    0    0     0    0    0  -  40    8     0      0
+Wand of Evil  0    0    0    0     0   12    0  -  43   21     0      0
+Moon Wand     0    0    0    0     0    0    0  -  58    8     0      0
+Gaia Wand     0    0    0    0     0    0    0  -  66    9     0      0
+Godswand      0    0    8    0     0    0    0  -  72    0     0      0
+Crystal Wand  0    0    0    0     0   70    0  -  80   12     0      0
+Charmed Wand  0    0    0    0     0   64    0  -  82   30     0     18
+Baphomet     20   40   30   15    25   35    1  -  92   20    10     20
+Wand of Apl.  0    0    0    0     0    0    0  - 121   82   -20    -10
+Shortbow      0    0    0    0     0    0    0  -   5    0     0      0
+Bow           0    0    0    0     0    0    0  -   7    0     0      0
+Trueheart     0    0    0    0     0    0    0  -  15    0     0      0
+Long Bow      0    0    0    0     0    0    0  -  19    0     0      0
+Cross Bow     0    0    0    0     0    0    0  -  22    0     0      0
+Ranger's Bow ??    0    0    0     0    0    0  -  41    0     0      0
+Falconbolt    0    0    0    0     0    0    0  -  50    0     0      0
+Windbolt      0    0    0    0     0    0    0  -  50    0     0      0
+Lightbolt     0    0    0    0     0    0    0  -  58    0     0      0
+Elven Bow     0    0    0    0     0    0    0  -  65    0     0      0
+Shadowbolt    0    0    0    0     0   12    0  -  72    0     0      0
+Compound Bow  0    0    0    0     0    0    0  -  82    0     0      0
+Artemis       0    0    0    0     0    0    0  -  86    0     0      0
+Bolt of Larie 0    0    0    0     0    0    0  -  92    0     0      0
+Perseus Bow   0    0    0   ??    ??   ??    0  -  96    0     0      0
+Shortsword    0    0    0    0     0    0    0  -   6    0     0      0
+Rapier        0    0    0    0     0    0    0  -   9    0     0      0
+Wvtooth. Rpr. 0    0    0    0     0    0    0  -  20    0     0      0
+Long Rapier   0    0    0    0     0    0    0  -  24    0     0      0
+Poison Rapier 0    0    0    0     0    0    0  -  26    0     0      0
+Silver Rapier 0    0    0    0     0    0    0  -  32    0     0      0
+Mithril Rpr.  0    0    0    0     0   12    0  -  40    0     0      0
+Inferno       0    0    0    0     0    0    0  -  52   ??     0      0
+Thunderbolt   0    0    0    0     0    0    0  -  56   12     0      0
+Solitaire     0    0    0    0     0    0    0  -  60    0     0      0
+Stonefoil     0    0    0    0     0    0    0  -  60    3     0      0
+Frostfurnace  0    0    0    0     0    0    0  -  65   18     0      0
+Chaos Rapier  0    0    0    0     0    0    0  -  76    0     0      0
+Valkyrie     12    8    8   12    12    8   16  -  80   30     0      0
+Minister      0    0    0    0     0    0    0  -  95    0     0      0
+Swd. of Zeus  0    0    0    0     0    0    0  - 102    0     0      0
+Tomahawk      0    0    0    0     0    0    0  -   8    0     0      0
+Hand Axe      0    0    0    0     0    0    0  -  13    0     0      0
+Battle Axe    0    0    0   -8     0    0    0  -  20    0     0      0
+Great Axe     0    0    0    0     0    0    0  -  28    0     0      0
+Fine Axe      0    0    0    0     0    0    0  -  29    0     0      0
+Life Eater    0    0    0    0     0    0    0  -  40    0     0      0
+Silver Axe    0    0    0    0     0    0    0  -  48    0     0      0
+Viking Axe   14    0    0    0     0    0    0  -  48    0     0      0
+Poison Axe    0    0    0    0     0    0    0  -  52    0     0      0
+Executioner   0    0    0    0     0    0    0  -  58    0     0      0
+Flamespitter  0    0    0    0     0    0    0  -  60    0     0      0
+Blood Axe     0    0    0  -20     0    0    0  -  67    0     0      0
+Slaughterer   0    0    0    0     0    0    0  -  80    0     0      0
+Half-moon Axe 0    0    0    0     0   20    0  -  81    0     0      0
+Ouga Axe     12  -20  -20    0    16    0    0  -  84    0     0      0
+Lucifer       0    0    0    0     0    0    0  -  90    0     0      0
+Berserker     0    0    0    0     0    0    0  - 110    0     0      0
+Frost Axe     0    0    0    0     0    0    0  - 116    0     0      0
+Pavas Axe     0    0    0    0     0    0    0  - 140    0     0      0
+Gulwick       0    0    0    0     0    0    0  - 146    0     0      0
+Rod           0    0    0    0     0    0    0  -   5    0     0      0
+Jewel Rod     0    0    0    0     0    0    0  -  10    0     0      0
+Fey Rod       0    0    0    0     0    0    0  -  14    0     0      0
+Crystal Rod   0    0    0    0     0    0    0  -  20    0     0      5
+Silver Rod    0    0    0    0     0    0    0  -  28    0     0      0
+Flame Rod     0    0    0    0     0    0    0  -  34    0     0      0
+Vampire Rod   0    0    0    0     0    0    0  -  40    0     0      0
+Water Rod     0    0    0    0     0    0    0  -  42    0     0      0
+Holy Rod      0    0    0    0     0    0    0  -  42    0     0      0
+Rainbow Rod   0    0    0    0     0    0   30  -  46    0     0      0
+Earth Rod     0    0    0    0     0    0    0  -  48    0     0      0
+Star Rod      0    0    0    0     0    0    0  -  52   20     0      0
+Wind Rod      0    0    0    0     0    0    0  -  56    0     0      0
+Rod of Ishtar 0    0    0    0     0    0    0  -  62   15    14     13
+Rhyno. Rod    0    0    0    0     0    0    0  -  71    0     0      0
+Alchemist's R.0    0    0    0     0    0    0  -  82    0     0      0
+Angel Rod     0    0    0    0     0    0    0  -  99    0     0      0
+
+-------
+Defense
+=======
+            Str  Int  Wil  Agl  Con  Pow   Luk -  At   Mat   Def   Mdef
+Bronze Armor  0    0    0    0    0    0     0  -   0    0    10      0
+Chainmail S.  0    0    0    0    0    0     0  -   0    0    18      0
+Breastplate   0    0    0    0    0    0     0  -   0    0    24      0
+Full Plate  -10    0    0  -10   -8    0     0  -   0    0    33      0
+Knight's Arm. 0    0    0    0    0    0     0  -   0    0    37      0
+Demonscale    0    0    0    0    0   25     0  -   0    0    40     40
+Silver Armor  0    0    0    0    0    0     0  -   0    0    42     12
+Mirror Armor  0    0    0    0    0    0     0  -   0    0    52     31
+Dragonscale   0    0    0    0    0    0     0  -   0    0    65      0
+Fata-mor. Arm.0   ??   ??    0    0    0     0  -   0    0    68     22
+Black Armor  10   -5  -24    0   22   20   -10  -   5    0    70     38
+Anti-mgc.Arm. 0    0    0    0    0   16     0  -   0    0    70     52
+Master Plate  0    0    0    0    0    0     0  -  12    0    88     24
+Guardian Arm.12    0    0    0   12    0     0  -  16    0    95     74
+Holy Armor    0    0    0    0    0    0     0  -   0    0   104     88
+Pavas Armor  32    0    0    0   48    0    16  -   0    0   110     80
+Leather Armor 0    0    0    0    0    0     0  -   0    0     5      0
+Leather Buck. 0    0    0    0    0    0     0  -   0    0    13      0
+Fine Leather  0    0    0    0    0    0     0  -   0    0    14      0
+Fine Shield   0    0    0    0    0    0     0  -   0    0    18      0
+Bandit Shield 0    0    0    8    0    0     8  -   0    0    26      6
+Silver Shield 0    0    0    0    0    0     0  -   0    0    48     21
+Elven Shield  0    0    0    0    0    0     0  -   0    0    55     41
+Runic Shield  0   ??   ??    0    0   20     0  -   0    0    60     21
+Reflector     0    0    0    0    0    0     0  -   0    0    66      0
+Life Shield   0    0    0    0    0    0     0  -   0    0    76      0
+Dark Shield   0    0    0    0    0    0     0  -   0    0    78      0
+Holy Sld.(v1) 0    0    0    0    0    0     0  -   0    0    81      0
+Sun Shield    0    0    0    0    0    0     0  -   0    0    85      0
+Moon Shield   0    0    0    0    0    0     0  -   0    0    86      0
+Elemental Sld.0    0    0    0    0    0     0  -   0    0    97      0
+Holy Sld.(v2) 0    0    0    0    0    0     0  -   0    0   122      0
+Robe          0    0    0    0    0    0     0  -   0    0     5      2
+Fine Robe     0    0    0    0    0    0     0  -   0    0     8      4
+Robe of Sor.  0    0    0    0    0   16     0  -   0   15    24      8
+Bishop's Robe 0    0   16    0    0    0     0  -   0    4    24     16
+Infernal Robe 0    0    0    0    0   30    14  -   0    0    28     51
+Queen's Robe  0    0   20    0    0    0     0  -   0    0    32     11
+Earth Robe    0    0    0    0    3    0     0  -   0    0    32     40
+Healing Robe 10    0    0    0   15    0     0  -   0    0    36     34
+Rune Robe     0    0    0    0    0   20     0  -   0   28    42     12
+Holy Robe     0    0    0    0    0    0     8  -   0   20    60     36
+Phantom Robe-16   16   16  -16  -16   16   -16  -   0    0    60     40
+Shadow Robe   0    0   12    0    0   42    24  -   0    0    62     42
+Spirit Robe   0    5   22    0    0    4     0  -   0   40    72     21
+Grdian. Rb.2  0   20    0    0    0   10    24  -   0    0    80     76
+R. of the Eld.0   15    0   12    0   22     0  -   0   39    81     60
+Grdian. Rb.1 24    0    0    0   24    0     0  -   0    0    92     90
+Rb. of Sages 24   32   32   24   24   32    32  -   0    0   130     97
+
+------
+Shield
+======
+            Str  Int  Wil  Agl  Con  Pow   Luk -  At   Mat   Def   Mdef
+Leather Sld.  0    0    0    0    0    0     0  -   0    0     1      0
+Round Shield  0    0    0    0    0    0     0  -   0    0     3      0
+Knight Shield 0    0    0    0    0    0     0  -   0    0    10      0
+Reflect Sld.  0    0    0    0    0    0     0  -   0    0    12     16
+Flame Shield  0    0    0    0    0    0     0  -   0    0    18     12
+Ice Shield    0    0    0    0    0    0     0  -   0    0    18     12
+Air Shield    0    0    0    0    0    0     0  -   0    0    18     12
+Earth Shield  0    0    0    0    0    0     0  -   0    0    18     12
+Guardian Sld. 0    0    0    0    0    0     0  -   0    5    31     18
+Lucifer Sld.  0    0    0    0    0   14     0  -   0   24    40      8
+Seraphim Sld. 0    0    0    0    0    0    16  -   0    0    48     32
+
+--------
+Clothing
+========
+            Str  Int   Wil  Agl  Con  Pow  Luk -  At   Mat   Def   Mdef
+Leather Hlmt. 0    0     0    0    0    0    0  -   0    0     2      0
+Iron Helmet   0    0     0    0    0    0    0  -   0    0     4      0
+Great Helmet  0    0     0    0    0    0    0  -   0    0     8      0
+Silver Helmet 0    0     0    0    0    0    0  -   0    0    15      0
+Winged Helmet 0    0     0    4    0    0    0  -   0    0    18      0
+Elven Hat     0    0     0    0    0    8    8  -   0    0     0      0
+Hunting Cap   0    0     8    8    0    0    0  -   0    0     0      0
+Beauty Veil   0    0     0    0    0    0    0  -   0    0     0      0
+Mistical Veil 0    0     0    0    0    0    0  -   0    0     0      0
+Shadow Veil   0    0     0    0    0    8    0  -   0    0     0      0
+Silver Crclt  0    0    10    0    0    0    0  -   0    0     0      0
+Queen's Crclt.0   ??     0    0    0    0    0  -   0    0     4      4
+Witch's Hat   0    4     0    0    0   16    0  -   0    0     4      4
+Earth Tiara   0    0     0    0    0    0    0  -   0    0     0      0
+Star Tiara    0    0     0    0    0    0    0  -   0    0     0      0
+Moon Crown    0    0     0    0    0    0    0  -   0    0     0      0
+Sun Crown     0    0     0    0    0    0    0  -   0    0     0      0
+Knight's Mask 0   -8     8    0    0   -8    0  -  15    0     0      0
+Death Mask   32   32    32   32   32   32   32  - 100  100   100    100
+Fire Necklc. 14    0     0    0    0    0    0  -   0    0     0      0
+Water Necklc. 0   14     0    0    0    0    0  -   0    0     0      0
+Light Necklc. 0    0    14    0    0    0    0  -   0    0     0      0
+Wind Necklace 0    0     0   14    0    0    0  -   0    0     0      0
+Earth Necklc. 0    0     0    0   14    0    0  -   0    0     0      0
+Dark Necklace 0    0     0    0    0   14    0  -   0    0     0      0
+Evil Necklace 0    0     0    0    0    0   14  -   0    0     0      0
+Holy Necklace 4    4     4    4    4    4    4  -   0    0     0      0
+Princess Lock.0    0     0    0    0    0    0  -   0    0     0      0
+Neck. of Wond.0    0     0    0    0    0    0  -   0    0     0      0
+Misty Pendant 0    0     0    0    0    0    0  -   0    0     0      0
+Fine Scarf    0    0     0    0    0    0    0  -   0    0     6      3
+Rune Cape     0    0     0    0    0    0    0  -   0    0     3      0
+Summer Cape   0    0     0    0    0    0    0  -   0    0     6      0
+Winter Cape   0    0     0    0    0    0    0  -   0    0     6      0
+Autumn Cape   0    0     0    0    0    0    0  -   0    0     6      0
+Spring Cape   0    0     0    0    0    0    0  -   0    0     6      0
+Aqua Shawl    0    8     0    0    0    0    0  -   0    0     0      0
+Cloak         0    0     0    0    0    0    0  -   0    0     4      2
+Leather Cloak 0    0     0    0    0    0    0  -   0    0     8      4
+Thieves'Cloak 0    0     0   12    0    0    0  -   0    0    12      6
+Resist Cloak  0    0     0    0    0    0    0  -   0    0    12     24
+Crusader Clk. 0    0     0    0    0    0    0  -   5    0    15      0
+Elven Cloak   0    4     4    0    0    4    0  -   0    0    16      8
+Element Cloak 0    0     0    0    0    0    0  -   0    0    17      0
+Feather Mntl. 0    0     0    0    0    0    0  -   0    0    17     12
+Dropneal      0    0     0    0    0    0    0  -   0    0     0      0
+Reflector Rng.0    0     0    0    0    0    0  -   0    0     0      0
+Jewel Ring    0    0     0    0    0    0   20  -   0    0     0      0
+Protect Ring  0    0     0    0    0    0    0  -   0    0    16      0
+Resist Ring   0    0     0    0    0    0    0  -   0    0     0     16
+Blessed Ring  0    0     0    0    0    0    0  -   8    8     8      8
+Hermit's Rng.24   24    24   24   24   24   24  -   0    0     0      0
+Merlin's Ring 0   24     0    0    0   16    0  -   0   24     0     20
+Satan's Ring  0    0     0    0    0    0    0  -   0   80     0     80
+Philos Ring   0   40     0    0    0   40    0  -   0    0     0      0
+Elemental Rng.0    0     0    0    0    0    0  -   0    0     0      0
+Solomon's Rng.0    0     0    0    0    0    0  -   0    0     0      0
+Gauntlets     0    0     0    0    0    0    0  -   2    0     2      0
+Gntl. of Str. 8    0     0    0    0    0    0  -   8    0     8      0
+Silver Gntl.  0    0     0    0    0    0    0  -  10    0    10      0
+Wing Gauntlets0    0     0    5    0    0    0  -   8    0    14      0
+Leather Glvs. 0    0     0    0    0    0    0  -   0    0     2      0
+Feather Glvs. 0    0     0    0    0    0    0  -   0    0     4      0
+Strong Gloves 8    0     0    0    0    0    0  -   8    0     8      0
+Rune Gloves   0    0     0    0    0    0    0  -  12    0     6      0
+Holy Gloves   0    0     0    0    0    0    0  -  20    0    12      0
+Princess Pent.0    8     8    0    0    8    0  -   0    0     0      0
+Magic Pent.   0    6     6    0    0   12    0  -   0    0     0      0
+Light Amulet  0    0     0    0    0    0    0  -   0    0     0      0
+Rune Amulet   0    0     0    0    0    6    0  -   0   12     0      0
+Dragon Amlt. 24    0     0    0   24    0    0  -  16    0    16      0
+Red Ear-stud  0    0     0    0    0    0    0  -   0    0     0      0
+Blue Ear-stud 0    0     0    0    0    0    0  -   0    0     0      0
+Crystal Earr. 0    0    20    0    0    0    0  -   0    0     0      0
+Lucky Earrings0    0     0    0    0    0   24  -   0    0     0      0
+Basilisk Scls.0    0     0    0    0    0    0  -   0    0     0      0
+Dragon Scales 0    0     0    0    0    0   16  -   0    0    12     12
+Silver Crclt. 0    0    10    0    0    0    0  -   0    0     0      0
+Silver Anklet 0    8     8    0    0    0    0  -   0    0     4      4
+Feather Aklt. 0    0     0   16    0    0    0  -   0    0     4      4
+Leather Boots 0    0     0    0    0    0    0  -   0    0     2      0
+Iron Boots    0    0     0    0    0    0    0  -   0    0     4      0
+Fine Boots    0    0     0    0    0    0    0  -   0    0     5      0
+Quick Boots   0    0     0   32    0    0    0  -   0    0     8      0
+Elven Boots   0    0     0    0    0    0    0  -   0    0    12      0
+Winged Boots  0    0     0   12    0    0    0  -   0    0    20      0
+Fine Shoes    0    0     0    0    0    0    0  -   0    0     2      0
+Hovering Shoes0    0     0    0    0    0    0  -   0    0     3      0
+Feather Shoes 0    0     0    0    0    0    0  -   0    0     6      0
+Minotaur Hrn.32    0     0    0    0    0    0  -   0    0     0      0
+Dragon Horn  30    0     0    0   30    0    0  -   0    0     0      0
+Devil's Horn  0    0     0    0    0   16    0  -   0    0     0      0
+Berserk. Bones0    0     0    0    0    0    0  -  12    0     0      0
+Power Band   32    0     0    0    0    0    0  -   0    0     0      0
+Power Symbol 32    0     0    0   15    0    0  -   0    0     0      0
+Symb. of Dark.0    0     0    0    0   30    0  -   0    0     0      0
+Talisman      0    0     0    0    0    0    0  -   0    0     0      0
+Healing Tlsmn.0    0     0    0    0    0    0  -   0    0     0      0
+Luck Talisman 0    0     0    0    0    0   32  -   0    0     0      0
+Knight's Ban.16    0    16   -8   16  -16    0  -   0    0     0      0
+Silver Brooch 0    0     0    0    0    0    0  -   0    0     0      0
+Jewel Brooch  0    0     0    0    0    0    8  -   0    0     0      0
+Dragon Tail   0    0     0    0    0    0   20  -   0    0     0      0
+Thief's Badge 0    0     0   16    0    0   24  -   0    0     0      0
+Shaman's Tblt.0    0     0    0    0    0    0  -   0    0     0      0
+Elder's Tblt. 0   16     0    0    0   16    0  -   0   20     0     20
+Renugeton     0   20     0    0    0    0    0  -   0   16     0      0
+Almander      0   40     0    0    0    0    0  -   0   22     0      0
+Tech. Book    0    0     0    0    0    0    0  -  15    0     0      0
+Bahil         0   80     0    0    0   40    0  -   0   30     0      0
+Fool's Puppet 0    0     0    0    0    0    0  -   0    0     0      0
+Dancing Doll  0    0     0   20    0    0    0  -   0    0     0      0
+Mir. of Trth. 0    0     0    0    0    0    0  -   0    0     0      0
+Water Mirror  0    0     0    0    0    0    0  -   0    0     0      0
+Bronze Medal  0    0     0    0    0    0    0  -   0    0     0      0
+Silver Medal  0    0     0    0    0    0    0  -   0    0     0      0
+Golden Medal  0    0     0    0    0    0    0  -   0    0     0      0
+Cross         0    0     0    0    0    0    0  -   0    0     0      0
+Gray Arc      0    0     0    0    0    0    0  -   0    0     0      0
+
+*+*+*+*+*+*+*+*+*+*+*+*
+X. Tricks         (TRC)
+*+*+*+*+*+*+*+*+*+*+*+*
+
+A) Lots of items.
+
+Here is the most important part if you want to collect more than one item of
+one chest in a single trip. It requires you to play at least 2 characters.
+The downside of this trick is that you must find a save point of the area
+nearby, otherwise, you wouldn't be able to get the items quick. Oh and also,
+it needs patient. Because a chest will give you random result of items. But
+some chests only have one item,and there are also chests that are programmed
+to give items based on the character's job. But don't worry, I already
+specified those chests in the part III.Okay,here is the cheat,when you are
+adventuring and find a treasure chest or more,don't open them.Instead find a
+save point first, then save the leader(the leader is anyone,player 1/2/3/4).
+Then get those items with the characters beside the leader. Save everyone
+that took the items except the leader. Then start again with the same leader
+and take the items with another character. Repeat until you get the item you
+want. Simple isn't it? Rather than you repeat the stage all over again just
+to get that one item of the chest.
+
+Advantage    : -Get items in the treasure chest faster.
+Requirements : -For player that has only one character, you need more space
+               for the new one.
+              -Need a near save point to the chests in order to be quicker.
+
+B) Appraising without going to the expert (appraiser)
+
+This cheat will only work for the green/black chests, not the chest dropped
+by enemies (red). The downside is that you can only appraise the items that
+you currently hold. It is very simple. If the chest contains , let's say,
+Healing Amulet and you coincidentally hold the same item, the item that lies
+in the chest will automatically be appraised. Actually, this trick is no big
+deal...
+
+Benefit      : -Only no need to go to the expert.
+Requirement  : -Need exactly the same item as the one in the chest.
+
+C) Getting Fate Coins with 100% probability
+
+Actually, the concept of this trick is basically the same with the trick A.
+You only need to go to the Old Palace and reach the second floor. Turn all
+the switch (A,B,C,D), and have an elf to open the seal and save. Next, open
+the chest in the right of the sealed room. if it is not fate coin, load and
+repeat until the chest give you Fate Coin but don't take the fate coin yet!
+Save first(the leader) then the second player may take it then save. Thus,
+load again with the same leader and other player to take the coin. Repeat as
+many as you want. The fastest I can score is 5 minutes per Fate Coin
+(Including the loading). I used fairy as the leader, casting Quick to
+make it faster.
+
+Advantage    : -100% chance of getting Fate Coins.
+Disadvantages: -You will definitely get bored.
+              -Need an elf if you don't have any.
+              -You slay less monsters(only the Green-Slime) rather than
+               getting it from Demons/Zombies
+
+D) Getting Holy Armor faster.
+
+I only know to get it from the Platinum-Knights which only appear once. But
+there is a way to make them appear more than once without reloading/start a
+new stage all over.Here is the trick. When you go to far from the door you
+entered, the door will be closed, right? So don't walk too far to make the
+door remain open. Then wait until the knights come to you and kill them
+except one. Then exit and re-enter. The 3 Platinum-Knights will be there
+again, repeat the same method. This is also a good way to stock up Fate
+Coins since they drop it quite often even without Dropneal.
+
+Benefits     : -The chance of dropping Fate Coins is second high to Silver
+               Gauntlets.
+              -Save time
+              -Also a good way to train the character until level 165
+
+Added(ver 2.3): You don't need to slay these platinum knights anymore.
+Just go to the labyrinth of the undead and go to the 8th underground crypt.
+Find a near save point and save. Then go to the secret room which has a
+treasure box. If it doesn't give you the holy armor, exit and load again.
+see section III for clearer Information.
+
+
+E) Power (MP regeneration)
+
+You know, your MP will increase in a certain amount of time. Although it
+won't if you are chanting (like pressing select & X for magician).But if
+you want it to be faster, you can. Just enter a door (that would lead to
+another screen),there your MP will increase a bit(depends on your Power)
+If you are low on MP, Just go in and out of a door. Maybe you already
+know this though....
+
+F) Stop time
+
+Thanks to Rebecca Paliwoda for this great trick. Actually the concept is
+very easy. If you are very low on HP, and there are many powerfull enemies
+around, and that you have no priest or no more healing items, make use of
+your constitution!It is time consuming if you have low constitution (but
+the HP regenerating equipments will make up for it). It is either by
+pressing the analog button for the Dual Shock joystick or by removing the
+port from the PS. That way the enemies and your character will stop. But
+your characters will regenerate their HP! Also this trick can also be the
+time for your characters' negative effects recovery.
+
+Benefits : -Regenerates HP/MP by using the characters attribute without the
+           interference of the enemies.
+          -Can wait for the character to heal their negative effects
+           without the the enemies' interruption.
+
+G) Duplicate Item - Thanks to James for this
+
+Enter an auction and sell armors or weapons in one of your characters, then
+the one who bought the armor/weapon(buyer) will save,don't save the one who
+sells the armor/weapon. Reset and load the game.
+Note: The armor/weapon must be unequipped.(Again, thanks to James for this)
+
+To tell you further, you can duplicate all kinds of equipment(not just
+weapon & armor). Too bad you can't duplicate objects (eg. Healing
+Potions, and most importantly, Fate Coins).
+
+Ummmm, some of the tricks are already explained by me in the message board,
+but had already been deleted. So I'll just write it here for the tricks to
+be permanent.
+
+H) Shortcut in the Valley of White Silver
+
+You know, the only way to get the Perseus Bow is only by fighting Griffon,
+the boss of the Valley of White Silver. Since the road to the Griffon Nest
+is a bit long, I found a shortcut! When in the very first screen, you can
+actually jump to the top by using a little help from the arising ground
+nearby the trees. There are actually two trees that can be used, which
+both are the nearest.
+
+I) Easiness in fighting Doppleganger - Thanks to ...(sorry forgot whom)
+
+Before fighting Doppleganger, unequip yourselves so that the AI will
+have disadvantages over equipments.
+
+- - - - - - - - - - - -
+This section is all thanks to James, who have have helped me a lot!
+These are the contribution that I forgot to put. Sorry!
+
+- Fast boat speed
+If you're playing with another player, press their analog button or
+unplug the controller.
+
+- Cancel the effect of magic
+When your character has a poison, paralysis (etc...) status, Cast a
+certain spell (priest) that can cure the status effect. While it
+animates, go thru a door, you will see the ailment/status is still
+there. (Who wants to do that?!?!)
+
+- Reverse-Magic
+When your enemy makes your def/atk down, cast a certain spell that
+makes it increase like 'striking', you will see that the effect is
+neutralized.
+
+- Effect of Materials
+When you use a material, for example fire, and it gives you
+additional 3, and you used next is water, which gives you 2. Your
+fire will decrease the amount of water you add. (you know that, the
+opposing elements)
+
+- Avoiding 'Drain'
+Simply Run! :) (I know! you know that!)
+
+- Keeping your Luck safe
+no matter what happens, don't try to get hit, fall and anything else
+that could make damage or status. When you level-up, you'll have the
+chance of increasing your luck. (I don't know if thats the point,
+e-mail me if that did'nt work for you)
+
+- - - - - - - - - - - - - - - - - -
+----------------------------------------------------------------------------
+
+*+*+*+*+*+*+*+*+*+*+*+*+*+*
+XI. Tips/Informations (TPI)
+*+*+*+*+*+*+*+*+*+*+*+*+*+*
+
+This section is the informations I found. The informations here are believed
+to be not common. I added this section so that the informations won't mix
+with the tricks section.
+
+A) Constitution (HP regeneration)
+
+This is an information on how to make use of Constitution (Restoring HP). In
+order to use it, you must stay put for about 10 seconds. Don’t even walk or
+chant spell. Attacking is also prevent the HP to increase. From there, your
+HP will start to increase depending on your Constitution.
+
+B) Invunerable to magic
+
+There are some equipments that make you block magics, even the healing
+magics. To make your chance of blocking magic higher, for warrior & dwarf,
+equip them with Mirror Armor, Reflective Shield, and Reflector Ring. For
+sorcerer, priest, & fairy, equip them with Shadow Robe and Reflector Ring.
+And for elf, rogue & hunter, equip them with Reflector (armor) & Reflector
+Ring.
+
+Advantage    : -Magic attacks seldom hit you
+Disadvantages: -Healing or any other support magics are also blocked, but
+               just unequip them to counter it.And FYI,when you are dead
+               and your priest want to revive the dead character, he/she
+               will find a hard time reviving the dead character even if
+               the dead character has been unequipped.
+
+Added (ver 2.4). There is an equipment called Solomon's Ring which
+deflects any kind of magics with 100% probability. So, just head for
+this clothing rather than equipping the anti-magic equipments. BTW,
+the Solomon's Ring is gotten from the Gigantes, one of the final 5
+bosses.
+
+C) Reincarnation
+
+just an information about the reincarnation spell. This spell is not only
+for reviving dead allies, but also restores the HP back to full. So this
+spell is not completely useless if you are playing by yourself. But using
+Restore magic is better since it uses less MP and the time used for the
+motion is not as much as the Reincarnation spell.
+
+Advantages    : Unless too revive an ally, this spell is only better at the
+               animation.(The animation is not so cool either ^_^;)
+Disadvantage  : Using this spell to yourself takes a long motion, the enemy
+               might kill you first before the spell heals you.
+
+D) Poison/Petrify
+
+I think these are the most dangerous status effects. Petrify reduce your HP
+as well as make you unable to move while poison only reduce your HP. Be
+aware that both status effects eliminate the ability for HP regeneration.
+I mean the HP regeneration used from constitution, not the one using
+equipment. So the Stop Time trick in the section above will give you no
+benefits except for the status effect recovery time. And if they are
+combined, you'll be dead if your HP is less than 3/4(if there is no one to
+heal you).
+
+Added(ver 2.4): Actually, just to correct that if both the status effects
+are combined, it would definitely kill you even if you have an absolutely
+high HP with full current HP. Because they decrease your HP by percentage.
+So, you have to have another player which can cure you. But just ignore
+this correction as petrification and poison will not get you at once
+(enemies rarely cause status effects). A thing to notice is that Poison
+status effect is very dangerous because it take more than 3/4 of your
+max HP.
+
+E) Mistranslation / Name Transformation
+
+I got some mistranslations from the japanese version,but not to say like
+that. Some items are not mistranslated, but given a new name. (you know,
+it's common)
+It's actually like this: They translated Sol Guard as Sun Shield, Sol Sword
+as Sunblade. But they didn't tell Sol Crown as Sun Crown...so far I only
+got these.
+_______________________________________________________________________
+
+English Version             Japanese Version            Supposed to be
+_______________________________________________________________________
+
+Equipments
+==========
+Wand(in all the priest wpn) Mace
+Wand(in all the wizard wpn) Staff
+Bolt(in all the hunter wpn) Arrow
+Shield(all mid-class armor) Guard
+Sword of Bane               Doom Sword
+Wand of the Ancient         Elder Mace
+Wand of Justice             Jugdement Mace
+Seraphim Rod                Seraphim Mace
+Long Hammer                 Pole Hammer
+Blessed Hammer              Priest's Hammer
+Orichalca Dagger            Orihalcon Dagger
+Ringnail                    Nail Ring
+Fabnihl                                                 Fafnil
+Magic Wand                  Wizard Staff
+Skystone Wand               Meteor Staff
+Godswand                    Divine Staff
+Charmed Wand                Ancient Staff
+Wand of Appolo              Aporion Staff
+Bow                         Normal Bow
+Trueheart                   Fine Arrow
+Ranger's Bow                Hunter Arrow
+Compound Bow                Composite Bow
+Wyvernstooth Rapier         Fine Rapier
+Inferno                     Flameberg
+Thunderbolt                 Spark Rapier
+Frost Furnace               Ice Veldan
+Solitaire                                               Soul Eater
+Minister                    (Galean?) Sword
+Sword of Zeus               (Sage's?) Rapier
+Executioner                 Halberd
+Slaughterer                 Vorpal Axe
+Half-moon Axe               Crescent Axe
+Frost Axe                   Freeze Axe
+Lucifer                     Devil Axe
+Fey Rod                     Fairy Rod
+Vampire Rod                 Drain Rod
+Holy Rod                    Heal Rod
+Rhinoceros Rod              Unicorn
+Anti-magic Armor            Ancient Armor
+Master Plate                Master Armor
+Fata Morgana Armor          Mirage Armor
+Dragonscale                 Dragon Mail
+Demonscale                  Demon Mail
+Bandit Shield               Thief's Guard
+Spirit Robe                 Mind Robe
+Guardian Robe(ver2)         Ancient Robe
+Infernal Robe               Evil Robe
+Holy Shield(ver2)           Perseus Guard
+Sol Crown                                               Sun Crown
+Shaman's Tablet             Prediction Plate
+Elder's Tablet              Elder Plate
+Gauntlets of Strength       Power Gauntlets
+Holy Gloves                 Saint Gloves
+Necklace of Wonders         (Vrishing?) Necklace
+Hovering Shoes              Float Shoes
+
+
+Items
+=====
+Energy Flask                Energy Bottle
+Terror Card                 Teller Card
+Fate Coin                   Destiny Coin
+Heavensage                  Savory
+Fennel                      Verbenna?
+
+Enemies
+=======
+Born-Golem                                              Bone-Golem
+Hard-Born                                               Hard-Bone
+Basirisk                                                Basilisk
+
+F) Luck Factor
+
+Hey, I got an interesting info! I got one of the uses of Luck! It also
+determines the critical attack ratio... I got it from one of the Japanese
+Blaze & Blade web pages...
+
+The max pure Luck is 200,so using fate coin or through leveling you can't
+pass 200. Except if you are using a Luck enhancing equipment (i.e. Jewel
+Ring, Luck Talisman, Lucky Earrings, Dragon Scales, etc)
+
+LUK   0 -  31, Critical Attack = 1% + (equipment critical ratio)
+LUK  32 -  63, Critical Attack = 2% + (equipment critical ratio)
+LUK  64 -  95, Critical Attack = 3% + (equipment critical ratio)
+LUK  96 - 127, Critical Attack = 4% + (equipment critical ratio)
+LUK 128 - 159, Critical Attack = 5% + (equipment critical ratio)
+LUK 160 - 191, Critical Attack = 6% + (equipment critical ratio)
+LUK 192 - 200, Critical Attack = 7% + (equipment critical ratio)
+
+As for the class Hunter & Rogue, the critical attack + 1% bonus
+
+And again, thanks to James for telling me this:
+The Luck won't affect the determination of the dropping of items.
+It may, but not high. James' Elf with the Luck of 3 still got
+items.
+
+I read it somewhere (forgotten) that the Luck also takes part in Items.
+-----------------------------------------------------------------------
+                              |              Affection                |
+-----------------------------------------------------------------------
+                              |   Luck    | Level    | Monster Beaten |
+-----------------------------------------------------------------------
+Rarity of items in Chest           little     high         none        |
+Percentage of enemy drop items     little     medium       little      |
+Resistance of Traps                 high      high         ??
+-----------------------------------------------------------------------
+
+G) At, Df, Mat, and Mdf.
+
+Again, I got it from the same site as for the Luck Factor. It is only
+to know how to calculate the growth.
+
+Attack Power
+------------
+At  = (level XXXX/4) + (Str XXX/ 4) + (equipment AT)
+
+Defense Power
+-------------
+Df  = (level XXXX/4) + (Agl XXX/16) + (Con XXX/13) + (equipment DF)
+
+Magical Attack Power
+--------------------
+Mat = (level XXXX/4) + (Pow XXX/ 4) + (equipment MAT)
+
+Magical Defense power
+---------------------
+Mdf = (level XXXX/4) + (Int XXX/13) + (Wil XXX/16) + (equipment MDF)
+
+For attack power, it is best to be added to the character that make use
+of physical attack alot. For example, Warriors, Hunters, Rogues, and
+Dwarves. For elves, You may want to make a well balanced attack for both
+physical attack and magical attack.
+
+To me, what you should raise for each character is:
+
+Warrior - ....
+Rogue   - ....
+Dwarf   - ....
+Hunter  - Agility (For the potential of healing using herbs)
+Priest  - Will Power (For the potential of healing magic)
+Sorcerer- Power (For great magical attack power)
+Elf     - ....
+Fairy   - ....
+
+In most RPG games:
+-A warrior should have high physical offense. (Str)
+-A dwarf should high physical defense.        (Con)
+-A priest should have more magical endurance. (Wil)
+-A sorcerer should be smart.                  (Int)
+-An elf can cast great magic.                 (Pow)
+-A rogue should be agile.                     (Agi)
+-An archer should be agile.                   (Agi)
+-A fairy should be lucky.                     (Luk)
+
+H) Blood Extract (not a trick) - This is contributed by James
+
+If you picked these items, use it! it will increase your HP to max.
+But the downside is, when you fall, damage is greater. (falling,
+stepping in a trap etc.) I think there's a percentage of damage you
+will get. for example, you falled in a pit, let's say you receive 5%
+damage of your HP. Got the Point? The higher your life, the more
+damage you will take. I'm currently receiving 100+ damage every trap!
+
+*+*+*+*+*+*+*+*+*+*+*+*
+XIII. Cheat Code  (CHC)
+*+*+*+*+*+*+*+*+*+*+*+*
+
+A new section for sharker!These codes are tested with Action Replay ver 1.4
+Although this is only a few codes, but it is quite useful!
+
+                    1234
+                    ||||
+Max      HP 800F0148 270F
+Infinite HP 800F014C 270F
+
+Max      MP 800F014A 270F
+Infinite MP 800F014E 270F
+
+-------------------------
+
+Max Str 800F0280 03E7
+Max Int 800F0282 03E7
+Max Wil 800F0284 03E7
+Max Agi 800F0286 03E7
+Max Con 800F0288 03E7
+Max Pow 800F028A 03E7
+Max Luk 800F028C 03E7
+
+Now, for the non-sharker:
+
+All the 4 digits in the right are represented in Hexadecimal, so you can
+adjust it to get the desired amount.
+
+The formula is:
+(X1 * 4096) + (X2 * 256) + (X3 * 16) + (X4 *1)
+
+Number:  0  1  2  3  4  5  6  7  8  9  10  11  12  13  14  15
+        ----------------------------------------------------
+Hex   :  0  1  2  3  4  5  6  7  8  9   A   B   C   D   E   F
+
+here: X1 is the 1st digit while the X2 is the second digit and so on.
+so 03E7 is   (0 * 4096) + (3 * 256) + (E * 16) + (7 * 1)
+          =    0       +   768     +   224    +    7
+          =   999
+
+and 270F is  (2 * 4096) + (7 * 256) + (0 * 16) + (F * 1)
+          =  8192      +  1792     +    0     +    15
+          =  9999
+
+Change the 4 digits to your liking...
+enjoy!!
+
+*+*+*+*+*+*+*+*+*+*+*+*+*+
+XIV. Asked Questions (ASQ)
+*+*+*+*+*+*+*+*+*+*+*+*+*+
+
+1. How do I use the spell commands?
+
+-  Just hold 'Select' button while executing the command
+
+2. How do I get the western chest(both northwest&southwest)in the Clearing?
+  I obviously have hunter in my party. but the only path he can pick up on
+  the west side is the path linking a top and bottom entrance on the west
+  side. Is there a path leading off from this?
+
+-  No, there is no path leading off from there. Actually, the west side has
+  4 paths.The two path you used is just to confuse you.
+
+3. Is there anything special about Jewel Box?
+
+-  According to someone(forgot whom), It increases the chance of enemy
+  dropping Items. But when I try it,I can't find the difference,or should
+  I say, it didn't work. James also told me that it didn't increase the
+  percentage. But it multiplies the amount of money you get from enemies.
+
+4. Can I get Hidden Spell by levelling?
+
+-  No, you MUST read it, and of course you must have enough Intelligent to
+  learn it. The requirements are as follows:
+
+--------------------------------------------------------------------------
+  Job      Spell Name             Place                Requirement
+==========================================================================
+  Priest : Reincarnation        * Ruins in the Lake  * Int 190 (or above)
+           Call/Summon Angel    * The Old Palace     * Int 210 (or above)
+  Wizard : Chaos Rage/Flare     * Lab. of the Undead * Int 240 (or above)
+           Meteor Storm/Smash   * The Old Palace     * Int 220 (or above)
+           Fusion               * The Roadside Inn   * Int 210 (or above)
+  Fairie : Elemental Control(4) * The Desert Valley  * Int 160 (or above)
+--------------------------------------------------------------------------
+
+5. What for is Pandora's Box? It seems to decrease my characters' HP to 1.
+
+-  Well, your HP decreases, but the enemies' HP are also decreased.
+
+6. Is there any cheat codes that allows you to be quick in Levelling?
+
+-  Yes, the cheat is:
+  80053F3A 00FF
+  800F0158 00FF (change 00FF to 0FFF on both codes for more efficient use)
+  (Taken from the Gamefaqs' Code & Secret section posted by Leo)
+  Although it said for japanese version, it works for the English version
+  too!
+ *In order to load the character's data with the cheat code, you must
+  switch off the Action Replay while you load the characters' data. Then
+  switch it on when you finished loading the characters' data.
+
+7. where can i get the penultimate magic of sorcerer? i already have chaos
+  flare and fusion.
+
+- The spell is located in the secret room along with the priest's forbidden
+ spell. After defeating the dark wizard, jump north through the wall. The
+ path there should lead you to the secret room.
+
+8. What's the difference between Energy Flask and Energy Crystal?
+
+- The difference is just the animation and that Energy Flask can only be
+ used when one party member is suffering from 'Drain', unlike the Energy
+ Crystal, which cast Priest Spell 'Recover Energy' whether the character
+ casted upon is ill from 'Drain' or not. Oh and their destruction rate
+ is also different.
+
+9. What for is Barrier & Magic Barrier of priest spell?It didn't increase
+  the Defense and Magic Defense!
+
+- They both are not used to stimulate statistic even for a while. The
+ Barrier is to repel enemies to go near you (must hold the X button)
+ while the Magic Barrier (Resist Field) is to block blockable magic.
+ Blockable    : Blaze, Blizzard, Poison Cloud, Meteor Storm, etc
+ Non-blockable: Lightningbolt, Thunderbolt, Chaos Rage, etc
+
+*+*+*+*+*+*+*+*+*+*+*+*
+XV. Credits        (CRD)
+*+*+*+*+*+*+*+*+*+*+*+*
+
+I would like to say thanks to the Fun Soft for publishing the english
+version and also the people in the message board for talking in it,
+giving me the courage to play it still.
+Added(ver 2.4):
+Especially the ones who still talks there, especially LethalBahamut,
+CloudvsSephiroth, Master GuanYu, TrueKyoKusanagi, and many more.
+
+Thanks also goes to my brother,
+Wandy who lend me his PS(should've said that in the first creation of
+this FAQ).And also, thanks a lot to all the people who gave their
+informations to me, namely (in no particular order):
+
+
+- Rebecca Paliwoda <becky@intvis.co.uk>
+- James <cacay.arnisto@eudoramail.com>
+- Theng Deqiang <kluvm@hotmail.com>
+
+
+Without them, I might find difficulty in making this FAQ more complete.
+Oh, and great thanks to CJayC for posting this FAQ (should've said this
+earlier ^_^;).
+
+Not to forget you, who read this FAQ. Without anyone reading this FAQ,
+the time and effort I spent will be in vain...
+
+Added(ver 2.4): I think my credit section for James is still not
+enough. I don't know how to thank or how to apologize('cause many of
+his contribution is not posted here). It is so because that time I was
+really busy. But don't worry, I didn't delete the e-mails, so I can
+refer to those and put it here.
+
+*+*+*+*+*+*+*+*+*+*+*+*
+XVI.  Last words  (LWD)
+*+*+*+*+*+*+*+*+*+*+*+*
+
+Now, if there is any questions regarding Blaze & Blade, just ask,maybe i can
+answer. And do NOT forget to type "Blaze & Blade" as the subject title.
+Informations regarding this game will be greatly appreciated. As this is the
+second update, 2 sections are added. It requires a lot of patience and time.
+So, I hope you all enjoy this!
+
+Wee, forgot to update this part for the 3rd update. Anyways, the fourth
+update, there are many things I discovered. Especially for the dropped item
+section. I guarantee that it's 80% complete!
+
+Now, for the 5th update, it is a dissapointment because the data that is
+supposed to be better is lost (the laptop I am using had a bad sector in the
+Hard Drive,therefore the data is suddenly gone before I was able to make the
+backup). But, the only lost is that you have to wait longer...
+
+The ver 2.4 should improve the Item Location a little. They are added with
+the word 'rumored'. It's because I haven't got it yet, therefore I won't
+confirm it. So, It will only be added in the Part II(Item Location, Part
+VIII (Special Effects), Part IX (Element), and Part X (Attribute).
+Of course the information in those parts are still vague (haven't checked
+yet). Because of the uncertainty, I won't add it to the Part IV (Dropped
+Items). In this update, I also changed the Part III(Chests). It is so
+because CloudVsSepiroth said he doesn't like the format (I'm just
+guessing that the format he doesn't like is in Part III).
+
+- End Of File -
