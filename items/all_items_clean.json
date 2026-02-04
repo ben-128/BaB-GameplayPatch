@@ -5526,9 +5526,9 @@
         "0x00F996F4"
       ],
       "id": 159,
-      "new_description": "Wave attack | STR+20, INT+40, WIL+30, AGL+15, CON+25, POW+35, LUK+1, MAT+20, MDEF+20",
+      "new_description": "Wave | S+20,I+40,W+30,A+15,C+25,P+35,M+20,D+20",
       "max_chars": 63,
-      "current_chars": 84
+      "current_chars": 46
     },
     {
       "name": "Fabnihl",
@@ -9581,9 +9581,9 @@
         "0x020FD3FC"
       ],
       "id": 273,
-      "new_description": "Sometimes block magic(healing,support & attack magic) | WIL+12, POW+42, LUK+24, MDEF+42",
+      "new_description": "Block magic(heal/atk) | W+12,P+42,L+24,D+42",
       "max_chars": 63,
-      "current_chars": 87
+      "current_chars": 43
     },
     {
       "name": "Shadow Veil",
@@ -10735,9 +10735,9 @@
         "0x02850D64"
       ],
       "id": 305,
-      "new_description": "Critical attack ratio + 5% | STR+12, INT+8, WIL+8, AGL+12, CON+12, POW+8, LUK+16, MAT+30",
+      "new_description": "Crit+5% | S+12,I+8,W+8,A+12,C+12,P+8,L+16,M+30",
       "max_chars": 63,
-      "current_chars": 88
+      "current_chars": 46
     },
     {
       "name": "Godswand",
@@ -11033,9 +11033,9 @@
         "0x02BB421C"
       ],
       "id": 313,
-      "new_description": "Regenerate HP by -5% & critical attack ratio + 5% | STR+32, INT+32, WIL+32, AGL+32, CON+32, POW+32, LUK+32, MAT+100, MDEF+100",
+      "new_description": "HP-5%,Crit+5% | All+32,M+100,D+100",
       "max_chars": 63,
-      "current_chars": 125
+      "current_chars": 34
     },
     {
       "name": "Death Sickle",
