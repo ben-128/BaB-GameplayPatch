@@ -22,27 +22,27 @@ REM Clear last log
 if exist "%LASTLOG%" del "%LASTLOG%"
 
 REM Initialize log file
-echo. > "%LOGFILE%"
+(
+echo ========================================================================
+echo   Bab Gameplay Patch Builder - Complete Edition
+echo ========================================================================
+echo.
+echo Build started: %date% %time%
+echo.
+echo Ce script va:
+echo   1. Patcher les prix Fate Coin Shop
+echo   2. Patcher les descriptions d'items
+echo   3. Injecter BLAZE.ALL dans le BIN
+echo   4. Patcher les stats des monstres
+echo   5. Mettre a jour la documentation
+echo   6. Commit et polish
+echo.
+echo ========================================================================
+echo.
+) > "%LOGFILE%" 2>&1
 
-REM Start logging
-call :log ""
-call :log "========================================================================"
-call :log "  Bab Gameplay Patch Builder - Complete Edition"
-call :log "========================================================================"
-call :log ""
-call :log "Build started: %date% %time%"
-call :log "Log file: %LOGFILE%"
-call :log ""
-call :log "Ce script va:"
-call :log "  1. Patcher les prix Fate Coin Shop"
-call :log "  2. Patcher les descriptions d'items"
-call :log "  3. Injecter BLAZE.ALL dans le BIN"
-call :log "  4. Patcher les stats des monstres"
-call :log "  5. Mettre a jour la documentation"
-call :log "  6. Commit et polish"
-call :log ""
-call :log "========================================================================"
-call :log ""
+REM Display same on console
+type "%LOGFILE%"
 
 REM ========================================================================
 REM Step 1: Patch Fate Coin Shop prices
