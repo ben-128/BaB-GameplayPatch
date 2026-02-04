@@ -50,9 +50,9 @@
         "0x006C6800"
       ],
       "id": 0,
-      "new_description": "A good sword for beginners to use.",
+      "new_description": "A good sword for beginners.",
       "max_chars": 63,
-      "current_chars": 34,
+      "current_chars": 27,
       "auction_price": 24,
       "auction_price_id": 7,
       "auction_price_source": "extracted_from_item_structure"
@@ -155,7 +155,7 @@
         "0x00B64768"
       ],
       "id": 3,
-      "new_description": "Common potion.(Restores HP to single unit)",
+      "new_description": "Common potion. Restores HP to single unit.",
       "max_chars": 63,
       "current_chars": 42,
       "auction_price": 10,
@@ -242,9 +242,9 @@
         "0x00E69558"
       ],
       "id": 5,
-      "new_description": "MDEF+2",
+      "new_description": "Robe made of heavy cloth.",
       "max_chars": 63,
-      "current_chars": 6,
+      "current_chars": 25,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -288,9 +288,9 @@
         "0x020772D7"
       ],
       "id": 6,
-      "new_description": "A normal, easily-to-use dagger.",
+      "new_description": "A normal, easy-to-use dagger.",
       "max_chars": 63,
-      "current_chars": 31,
+      "current_chars": 29,
       "auction_price": 23,
       "auction_price_id": 5,
       "auction_price_source": "extracted_from_item_structure"
@@ -325,9 +325,9 @@
         "0x006CC800"
       ],
       "id": 7,
-      "new_description": "MAT+2",
+      "new_description": "A solid wooden wand.",
       "max_chars": 63,
-      "current_chars": 5,
+      "current_chars": 20,
       "auction_price": 23,
       "auction_price_id": 5,
       "auction_price_source": "extracted_from_item_structure"
@@ -399,9 +399,9 @@
         "0x006D0800"
       ],
       "id": 9,
-      "new_description": "A normal, easy-to-wiel shortsword.",
+      "new_description": "A normal, easy-to-wield shortsword.",
       "max_chars": 63,
-      "current_chars": 34,
+      "current_chars": 35,
       "auction_price": 13,
       "auction_price_id": 6,
       "auction_price_source": "extracted_from_item_structure"
@@ -562,9 +562,9 @@
         "0x0172B860"
       ],
       "id": 13,
-      "new_description": "Shoots Magic Missile / 10 MP",
+      "new_description": "Casts Magic Missile for 10 MP.",
       "max_chars": 63,
-      "current_chars": 28
+      "current_chars": 30
     },
     {
       "name": "Thunderbolt",
@@ -603,9 +603,9 @@
         "0x02232048"
       ],
       "id": 14,
-      "new_description": "MAT+12",
+      "new_description": "Lightning staff. MAT+12",
       "max_chars": 63,
-      "current_chars": 6
+      "current_chars": 23
     },
     {
       "name": "Lavender",
@@ -688,9 +688,9 @@
         "0x0152E48C"
       ],
       "id": 16,
-      "new_description": "STR+24, INT+32, WIL+32, AGL+24, CON+24, POW+32, LUK+32, MDEF+97",
+      "new_description": "Sacred herb. STR+24, INT/WIL/POW/LUK+32, AGL/CON+24",
       "max_chars": 63,
-      "current_chars": 63
+      "current_chars": 51
     },
     {
       "name": "Hyssop",
@@ -1104,9 +1104,9 @@
         "0x028A4AF8"
       ],
       "id": 28,
-      "new_description": "MDEF+2",
+      "new_description": "Powerfully protective. Made by hell guardians.",
       "max_chars": 63,
-      "current_chars": 6,
+      "current_chars": 46,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -1145,9 +1145,9 @@
         "0x02436A5C"
       ],
       "id": 29,
-      "new_description": "Regenerate HP by 2",
+      "new_description": "Old shield regenerates life. Restores HP+2.",
       "max_chars": 63,
-      "current_chars": 18,
+      "current_chars": 43,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -1186,9 +1186,9 @@
         "0x00A7F230"
       ],
       "id": 30,
-      "new_description": "Holy atk magic + 50%",
+      "new_description": "Holy blade. +50% holy magic damage.",
       "max_chars": 63,
-      "current_chars": 20
+      "current_chars": 35
     },
     {
       "name": "Golden Harp",
@@ -1263,9 +1263,9 @@
         "0x025930C4"
       ],
       "id": 32,
-      "new_description": "Immune to Slow | AGL+12",
+      "new_description": "Enchanted boots with feathers. Immune to Slow, AGL+12",
       "max_chars": 63,
-      "current_chars": 23,
+      "current_chars": 53,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -1306,9 +1306,9 @@
         "0x00C3F260"
       ],
       "id": 33,
-      "new_description": "",
+      "new_description": "AT+2, DEF+2",
       "max_chars": 63,
-      "current_chars": 0,
+      "current_chars": 11,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -1450,9 +1450,9 @@
         "0x01AE8548"
       ],
       "id": 37,
-      "new_description": "Immune to Curse",
+      "new_description": "Holy cross protects against spells. Immune: Curse",
       "max_chars": 63,
-      "current_chars": 15,
+      "current_chars": 49,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -1482,9 +1482,9 @@
         "0x0199E84C"
       ],
       "id": 38,
-      "new_description": "Regenerate HP by 1",
+      "new_description": "Ancient amulet heals body. Restores HP+1.",
       "max_chars": 63,
-      "current_chars": 18,
+      "current_chars": 41,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -1521,9 +1521,9 @@
         "0x012DCA78"
       ],
       "id": 39,
-      "new_description": "Reveal enemies’ alignment/element",
+      "new_description": "Mirror reveals foe defenses and alignment.",
       "max_chars": 63,
-      "current_chars": 33,
+      "current_chars": 42,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -1551,9 +1551,9 @@
         "0x0243745C"
       ],
       "id": 40,
-      "new_description": "Elemental Attack (fire,water,wind,earth) + 50%",
+      "new_description": "Ring by spirit kings. +50% elem atk (fire/water/wind/earth)",
       "max_chars": 63,
-      "current_chars": 46,
+      "current_chars": 59,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -1611,9 +1611,9 @@
         "0x01D25000"
       ],
       "id": 42,
-      "new_description": "MP consumption - 50%",
+      "new_description": "Sun crown of ancient king. MP cost -50%.",
       "max_chars": 63,
-      "current_chars": 20,
+      "current_chars": 40,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -1651,9 +1651,9 @@
         "0x02A8E4D4"
       ],
       "id": 43,
-      "new_description": "",
+      "new_description": "AT+121",
       "max_chars": 63,
-      "current_chars": 0
+      "current_chars": 6
     },
     {
       "name": "Strong Gloves",
@@ -1695,9 +1695,9 @@
         "0x01D933C8"
       ],
       "id": 44,
-      "new_description": "STR+8",
+      "new_description": "Gloves increase wearer strength. STR+8",
       "max_chars": 63,
-      "current_chars": 5,
+      "current_chars": 38,
       "auction_price": 25,
       "auction_price_id": 8,
       "auction_price_source": "extracted_from_item_structure"
@@ -1737,9 +1737,9 @@
         "0x028A4878"
       ],
       "id": 45,
-      "new_description": "At + 40 when HP 1/4",
+      "new_description": "Last-stand hammer. +40 AT at low HP.",
       "max_chars": 63,
-      "current_chars": 19
+      "current_chars": 36
     },
     {
       "name": "Dark Shield",
@@ -1777,9 +1777,9 @@
         "0x02A90D54"
       ],
       "id": 46,
-      "new_description": "Helps against magic-absorbing barriers.",
+      "new_description": "Helps vs magic barriers.",
       "max_chars": 63,
-      "current_chars": 39,
+      "current_chars": 24,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -1815,9 +1815,9 @@
         "0x02850AE4"
       ],
       "id": 47,
-      "new_description": "A special small dagger which is hidden within a ring.",
+      "new_description": "Special small dagger hidden in ring.",
       "max_chars": 63,
-      "current_chars": 53
+      "current_chars": 36
     },
     {
       "name": "Crystal Wand",
@@ -1851,9 +1851,9 @@
         "0x00AAF390"
       ],
       "id": 48,
-      "new_description": "Critical attack ratio + 4% | POW+70, MAT+12",
+      "new_description": "Quartz wand with magic power. +4% crit, POW+70",
       "max_chars": 63,
-      "current_chars": 43
+      "current_chars": 46
     },
     {
       "name": "Falconbolt",
@@ -1889,9 +1889,9 @@
         "0x021AEE88"
       ],
       "id": 49,
-      "new_description": "Shoots 2 arrows in one attack",
+      "new_description": "Special bow shoots 2 arrows at once.",
       "max_chars": 63,
-      "current_chars": 29
+      "current_chars": 36
     },
     {
       "name": "Chaos Rapier",
@@ -1931,9 +1931,9 @@
         "0x028011E8"
       ],
       "id": 50,
-      "new_description": "Sometimes confuse the enemy (12.5 % probability)",
+      "new_description": "Forged to face Bane Wyrm. 12.5% confuse chance.",
       "max_chars": 63,
-      "current_chars": 48
+      "current_chars": 47
     },
     {
       "name": "Rapier",
@@ -1974,9 +1974,9 @@
         "0x011E96FC"
       ],
       "id": 51,
-      "new_description": "",
+      "new_description": "AT+9",
       "max_chars": 63,
-      "current_chars": 0,
+      "current_chars": 4,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -2018,9 +2018,9 @@
         "0x02908D64"
       ],
       "id": 52,
-      "new_description": "A demon forged axe with blades of ice.",
+      "new_description": "Demon-forged axe with ice blades.",
       "max_chars": 63,
-      "current_chars": 38
+      "current_chars": 33
     },
     {
       "name": "Silver Rod",
@@ -2054,9 +2054,9 @@
         "0x00B63868"
       ],
       "id": 53,
-      "new_description": "A silver rod with holy script engraved upon it.",
+      "new_description": "Silver rod with holy script engraved.",
       "max_chars": 63,
-      "current_chars": 47,
+      "current_chars": 37,
       "auction_price": 14,
       "auction_price_id": 28,
       "auction_price_source": "extracted_from_item_structure"
@@ -2103,9 +2103,9 @@
         "0x029067E4"
       ],
       "id": 54,
-      "new_description": "At + (Enemy level / 3)",
+      "new_description": "Elven rod with hidden powers. AT+(enemy lvl/3)",
       "max_chars": 63,
-      "current_chars": 22,
+      "current_chars": 46,
       "auction_price": 16,
       "auction_price_id": 14,
       "auction_price_source": "extracted_from_item_structure"
@@ -2140,9 +2140,9 @@
         "0x00D88CD0"
       ],
       "id": 55,
-      "new_description": "LUK+32",
+      "new_description": "Amulet brings good luck. LUK+32",
       "max_chars": 63,
-      "current_chars": 6,
+      "current_chars": 31,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -2185,9 +2185,9 @@
         "0x01DFF660"
       ],
       "id": 56,
-      "new_description": "MP regeneration + 2",
+      "new_description": "Mystical charm. Restores MP+2 steadily.",
       "max_chars": 63,
-      "current_chars": 19,
+      "current_chars": 39,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -2325,7 +2325,7 @@
         "0x01FB91CC"
       ],
       "id": 60,
-      "new_description": "Enchanted medicine.(Restores MP)",
+      "new_description": "Enchanted medicine. Restores MP.",
       "max_chars": 63,
       "current_chars": 32,
       "auction_price": 10,
@@ -2389,9 +2389,9 @@
         "0x0152CE0C"
       ],
       "id": 62,
-      "new_description": "A very fine axe forged by great smiths.",
+      "new_description": "Very fine axe forged by great smiths.",
       "max_chars": 63,
-      "current_chars": 39,
+      "current_chars": 37,
       "auction_price": 16,
       "auction_price_id": 29,
       "auction_price_source": "extracted_from_item_structure"
@@ -2522,9 +2522,9 @@
         "0x0164038C"
       ],
       "id": 66,
-      "new_description": "A rod with a jewel-encrusted top.",
+      "new_description": "Rod with jewel-encrusted top.",
       "max_chars": 63,
-      "current_chars": 33,
+      "current_chars": 29,
       "auction_price": 27,
       "auction_price_id": 10,
       "auction_price_source": "extracted_from_item_structure"
@@ -2733,9 +2733,9 @@
         "0x00BE01F8"
       ],
       "id": 73,
-      "new_description": "Darkness elemental damage decreases",
+      "new_description": "Brings forth light power. Lessens darkness dmg.",
       "max_chars": 63,
-      "current_chars": 35,
+      "current_chars": 47,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -2874,9 +2874,9 @@
         "0x012576D8"
       ],
       "id": 77,
-      "new_description": "MDEF+4",
+      "new_description": "Excellent robe of best materials.",
       "max_chars": 63,
-      "current_chars": 6,
+      "current_chars": 33,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -2998,9 +2998,9 @@
         "0x00C3C060"
       ],
       "id": 80,
-      "new_description": "Boots made of comfortable leather.",
+      "new_description": "Boots of comfortable leather.",
       "max_chars": 63,
-      "current_chars": 34,
+      "current_chars": 29,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -3045,9 +3045,9 @@
         "0x0163FC12"
       ],
       "id": 81,
-      "new_description": "MDEF+2",
+      "new_description": "Cloak made of thick cloth.",
       "max_chars": 63,
-      "current_chars": 6,
+      "current_chars": 26,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -3104,9 +3104,9 @@
         "0x00D2C4E8"
       ],
       "id": 83,
-      "new_description": "Critical attack ratio - 2%",
+      "new_description": "Full heavy armor protects whole body. -2% crit",
       "max_chars": 63,
-      "current_chars": 26,
+      "current_chars": 46,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -3255,9 +3255,9 @@
         "0x029F1EE8"
       ],
       "id": 87,
-      "new_description": "LUK+16, MDEF+12",
+      "new_description": "Wards off bad luck and misfortune. LUK+16",
       "max_chars": 63,
-      "current_chars": 15,
+      "current_chars": 41,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -3422,9 +3422,9 @@
         "0x01F22EF4"
       ],
       "id": 92,
-      "new_description": "Defense dagger for use with the left hand.",
+      "new_description": "Defense dagger for left hand.",
       "max_chars": 63,
-      "current_chars": 42,
+      "current_chars": 29,
       "auction_price": 47,
       "auction_price_id": 18,
       "auction_price_source": "extracted_from_item_structure"
@@ -3500,9 +3500,9 @@
         "0x01F20974"
       ],
       "id": 94,
-      "new_description": "Df + (POW * 25%)",
+      "new_description": "Protects with mystic powers. Df+(POW*25%)",
       "max_chars": 63,
-      "current_chars": 16,
+      "current_chars": 41,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -3540,9 +3540,9 @@
         "0x0179EE1C"
       ],
       "id": 95,
-      "new_description": "Mdf + (POW * 25%) | MDEF+16",
+      "new_description": "Protects with mystic powers. Mdf+(POW*25%)",
       "max_chars": 63,
-      "current_chars": 27,
+      "current_chars": 42,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -3581,9 +3581,9 @@
         "0x026637B4"
       ],
       "id": 96,
-      "new_description": "Fire elemental damage decreases | INT+8",
+      "new_description": "Magic shawl of water spirit. Lessens fire dmg, INT+8",
       "max_chars": 63,
-      "current_chars": 39,
+      "current_chars": 52,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -3620,9 +3620,9 @@
         "0x00F2156C"
       ],
       "id": 97,
-      "new_description": "STR+32",
+      "new_description": "Magically increases wearer strength. STR+32",
       "max_chars": 63,
-      "current_chars": 6,
+      "current_chars": 43,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -3658,9 +3658,9 @@
         "0x011E66F4"
       ],
       "id": 98,
-      "new_description": "Beautifully crafted boots made of fine material.",
+      "new_description": "Beautifully crafted boots of fine material.",
       "max_chars": 63,
-      "current_chars": 48,
+      "current_chars": 43,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -3698,9 +3698,9 @@
         "0x025D4F4C"
       ],
       "id": 99,
-      "new_description": "MDEF+4",
+      "new_description": "Cloak made of strong leather.",
       "max_chars": 63,
-      "current_chars": 6,
+      "current_chars": 29,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -3738,9 +3738,9 @@
         "0x01800270"
       ],
       "id": 100,
-      "new_description": "INT+4, WIL+4, POW+4, MDEF+8",
+      "new_description": "Light elven cloak for easy move. INT/WIL/POW+4",
       "max_chars": 63,
-      "current_chars": 27,
+      "current_chars": 46,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -3841,9 +3841,9 @@
         "0x018730FC"
       ],
       "id": 103,
-      "new_description": "Critical attack ratio + 4% | STR+30, CON+30",
+      "new_description": "Increases bearer abilities. +4% crit, STR/CON+30",
       "max_chars": 63,
-      "current_chars": 43,
+      "current_chars": 48,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -3884,9 +3884,9 @@
         "0x029F1C68"
       ],
       "id": 104,
-      "new_description": "LUK+20",
+      "new_description": "Tail of powerful dragon brings luck. LUK+20",
       "max_chars": 63,
-      "current_chars": 6,
+      "current_chars": 43,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -3926,9 +3926,9 @@
         "0x021B0008"
       ],
       "id": 105,
-      "new_description": "Armor forged of the heavy scales of a dragon.",
+      "new_description": "Armor of heavy dragon scales.",
       "max_chars": 63,
-      "current_chars": 45,
+      "current_chars": 29,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -4014,9 +4014,9 @@
         "0x00D88550"
       ],
       "id": 108,
-      "new_description": "Give the effect of 'Levitate' to character",
+      "new_description": "Shoes allow wearer to float. Grants Levitate.",
       "max_chars": 63,
-      "current_chars": 42,
+      "current_chars": 45,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -4055,9 +4055,9 @@
         "0x023092C4"
       ],
       "id": 109,
-      "new_description": "A soldier's iron helmet.",
+      "new_description": "A soldier iron helmet.",
       "max_chars": 63,
-      "current_chars": 24,
+      "current_chars": 22,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -4092,9 +4092,9 @@
         "0x00D89450"
       ],
       "id": 110,
-      "new_description": "Heavy but highly protective boots made of iron.",
+      "new_description": "Heavy but protective iron boots.",
       "max_chars": 63,
-      "current_chars": 47,
+      "current_chars": 32,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -4133,9 +4133,9 @@
         "0x01256F58"
       ],
       "id": 111,
-      "new_description": "Critical attack ratio + 6%",
+      "new_description": "Heavy axe renowned for hacking. +6% crit",
       "max_chars": 63,
-      "current_chars": 26,
+      "current_chars": 40,
       "auction_price": 14,
       "auction_price_id": 28,
       "auction_price_source": "extracted_from_item_structure"
@@ -4212,9 +4212,9 @@
         "0x02075250"
       ],
       "id": 113,
-      "new_description": "MAT+8, MDEF+8",
+      "new_description": "Blessed with holy symbols.",
       "max_chars": 63,
-      "current_chars": 13,
+      "current_chars": 26,
       "auction_price": 25,
       "auction_price_id": 8,
       "auction_price_source": "extracted_from_item_structure"
@@ -4257,9 +4257,9 @@
         "0x02909CE4"
       ],
       "id": 114,
-      "new_description": "Reduce water elemental attack | MDEF+12",
+      "new_description": "Ice shield with water spirits. Reduces water atk",
       "max_chars": 63,
-      "current_chars": 39,
+      "current_chars": 48,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -4303,9 +4303,9 @@
         "0x0230AE44"
       ],
       "id": 115,
-      "new_description": "Immune to Silence",
+      "new_description": "Mysterious locket with misty surface. Immune: Silence",
       "max_chars": 63,
-      "current_chars": 17,
+      "current_chars": 53,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -4340,9 +4340,9 @@
         "0x00E08278"
       ],
       "id": 116,
-      "new_description": "",
+      "new_description": "AT+82",
       "max_chars": 63,
-      "current_chars": 0
+      "current_chars": 5
     },
     {
       "name": "Bow",
@@ -4380,9 +4380,9 @@
         "0x025935CC"
       ],
       "id": 117,
-      "new_description": "",
+      "new_description": "AT+7",
       "max_chars": 63,
-      "current_chars": 0,
+      "current_chars": 4,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -4419,9 +4419,9 @@
         "0x00E084F8"
       ],
       "id": 118,
-      "new_description": "MAT+18",
+      "new_description": "Magical wand of mithril silver.",
       "max_chars": 63,
-      "current_chars": 6
+      "current_chars": 31
     },
     {
       "name": "Earth Rod",
@@ -4455,9 +4455,9 @@
         "0x00E08778"
       ],
       "id": 119,
-      "new_description": "1 of the 4 given to the elven king by a dead king.",
+      "new_description": "1 of 4 given to elven king by dead king.",
       "max_chars": 63,
-      "current_chars": 50
+      "current_chars": 40
     },
     {
       "name": "Poison Axe",
@@ -4491,9 +4491,9 @@
         "0x01FB804C"
       ],
       "id": 120,
-      "new_description": "An axe forged of poisonous metal.",
+      "new_description": "Axe forged of poisonous metal.",
       "max_chars": 63,
-      "current_chars": 33
+      "current_chars": 30
     },
     {
       "name": "Sunblade",
@@ -4527,9 +4527,9 @@
         "0x00E08C78"
       ],
       "id": 121,
-      "new_description": "",
+      "new_description": "AT+44",
       "max_chars": 63,
-      "current_chars": 0
+      "current_chars": 5
     },
     {
       "name": "Blackjack",
@@ -4563,9 +4563,9 @@
         "0x00E09178"
       ],
       "id": 122,
-      "new_description": "Sometimes stun the enemy (8% probability)",
+      "new_description": "Small weapon. 8% stun chance.",
       "max_chars": 63,
-      "current_chars": 41,
+      "current_chars": 29,
       "auction_price": 69,
       "auction_price_id": 30,
       "auction_price_source": "extracted_from_item_structure"
@@ -4658,9 +4658,9 @@
         "0x029085E4"
       ],
       "id": 125,
-      "new_description": "10% magic recovery from water & wind damage",
+      "new_description": "Ear-stud with blue jewel. 10% magic from water/wind dmg",
       "max_chars": 63,
-      "current_chars": 43,
+      "current_chars": 55,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -4701,9 +4701,9 @@
         "0x02908864"
       ],
       "id": 126,
-      "new_description": "MAT+18",
+      "new_description": "AT+65, MAT+18",
       "max_chars": 63,
-      "current_chars": 6
+      "current_chars": 13
     },
     {
       "name": "Mist Dagger",
@@ -4740,9 +4740,9 @@
         "0x02908AE4"
       ],
       "id": 127,
-      "new_description": "WIL+5, POW+15, MDEF+22",
+      "new_description": "Foggy blade. WIL+5, POW+15, MDEF+22",
       "max_chars": 63,
-      "current_chars": 22
+      "current_chars": 35
     },
     {
       "name": "Life Shield",
@@ -4777,9 +4777,9 @@
         "0x00F95574"
       ],
       "id": 128,
-      "new_description": "An excellent shield offering great protection.",
+      "new_description": "Excellent shield offers great protection.",
       "max_chars": 63,
-      "current_chars": 46,
+      "current_chars": 41,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -4802,9 +4802,9 @@
         "0x01AE87C8"
       ],
       "id": 129,
-      "new_description": "Raises one's spirits and repels demons.",
+      "new_description": "Raises spirits and repels demons.",
       "max_chars": 63,
-      "current_chars": 39,
+      "current_chars": 33,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -4868,9 +4868,9 @@
         "0x00E69F50"
       ],
       "id": 131,
-      "new_description": "MDEF+24",
+      "new_description": "Cloak protects against magical attacks.",
       "max_chars": 63,
-      "current_chars": 7,
+      "current_chars": 39,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -4909,9 +4909,9 @@
         "0x021AEC08"
       ],
       "id": 132,
-      "new_description": "A powerful wand made of amber.",
+      "new_description": "Powerful wand made of amber.",
       "max_chars": 63,
-      "current_chars": 30
+      "current_chars": 28
     },
     {
       "name": "Ouga Axe",
@@ -4937,9 +4937,9 @@
         "0x029F23E8"
       ],
       "id": 133,
-      "new_description": "Holds the night demon Ouga and great power.",
+      "new_description": "Holds night demon Ouga and great power.",
       "max_chars": 63,
-      "current_chars": 43
+      "current_chars": 39
     },
     {
       "name": "Red Ash",
@@ -5065,9 +5065,9 @@
         "0x02A8F654"
       ],
       "id": 137,
-      "new_description": "Sometimes knock back enemies (even bosses)",
+      "new_description": "Gives great strength. Knocks back enemies (even bosses)",
       "max_chars": 63,
-      "current_chars": 42,
+      "current_chars": 55,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -5169,9 +5169,9 @@
         "0x029F3CE8"
       ],
       "id": 140,
-      "new_description": "Decrease fire, wind, light, & holy damage",
+      "new_description": "1 of pair of tiaras. Lessens fire/wind/light/holy dmg",
       "max_chars": 63,
-      "current_chars": 41,
+      "current_chars": 53,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -5212,9 +5212,9 @@
         "0x02663CB4"
       ],
       "id": 141,
-      "new_description": "Decrease fire, water, wind, & earth damage",
+      "new_description": "Spirit cloak. Lessens fire/water/wind/earth dmg",
       "max_chars": 63,
-      "current_chars": 42,
+      "current_chars": 47,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -5252,9 +5252,9 @@
         "0x01C99E18"
       ],
       "id": 142,
-      "new_description": "Sometimes knock back enemies (even bosses)",
+      "new_description": "Bold knight sword cuts stone. Knocks back enemies",
       "max_chars": 63,
-      "current_chars": 42
+      "current_chars": 49
     },
     {
       "name": "Executioner",
@@ -5288,9 +5288,9 @@
         "0x00F2016C"
       ],
       "id": 143,
-      "new_description": "Critical attack ratio + 4%",
+      "new_description": "Long staff with axehead. +4% crit",
       "max_chars": 63,
-      "current_chars": 26
+      "current_chars": 33
     },
     {
       "name": "Great Helmet",
@@ -5367,9 +5367,9 @@
         "0x013BCE3C"
       ],
       "id": 145,
-      "new_description": "Critical attack ratio + 5% | MDEF+24",
+      "new_description": "Masterwork 1st class protection. +5% crit",
       "max_chars": 63,
-      "current_chars": 36,
+      "current_chars": 41,
       "auction_price": 29,
       "auction_price_id": 12,
       "auction_price_source": "extracted_from_item_structure"
@@ -5410,9 +5410,9 @@
         "0x01C3F504"
       ],
       "id": 146,
-      "new_description": "Drains HP from living enemies (decrease HP if undead)",
+      "new_description": "Axe devours souls. Drains HP from living (hurts undead)",
       "max_chars": 63,
-      "current_chars": 53
+      "current_chars": 55
     },
     {
       "name": "Gulwick",
@@ -5448,9 +5448,9 @@
         "0x00F20DEC"
       ],
       "id": 147,
-      "new_description": "Sometimes Petrify / 8 MP (20% probability)",
+      "new_description": "20% Petrify chance for 8 MP.",
       "max_chars": 63,
-      "current_chars": 42
+      "current_chars": 28
     },
     {
       "name": "Dropneal",
@@ -5491,9 +5491,9 @@
         "0x02A8E254"
       ],
       "id": 148,
-      "new_description": "Increase the chance of getting Fate Coin & Doubles",
+      "new_description": "Treasure brings wealth. Better chance: Fate Coin/Doubles",
       "max_chars": 63,
-      "current_chars": 50,
+      "current_chars": 56,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -5532,9 +5532,9 @@
         "0x02801968"
       ],
       "id": 149,
-      "new_description": "",
+      "new_description": "AT+52",
       "max_chars": 63,
-      "current_chars": 0
+      "current_chars": 5
     },
     {
       "name": "Ritual Hammer",
@@ -5569,7 +5569,7 @@
         "0x01D25280"
       ],
       "id": 150,
-      "new_description": "Critical attack ratio + 3% | INT+10",
+      "new_description": "Ceremonial hammer. +3% crit, INT+10",
       "max_chars": 63,
       "current_chars": 35
     },
@@ -5606,9 +5606,9 @@
         "0x01D92748"
       ],
       "id": 151,
-      "new_description": "MAT+8",
+      "new_description": "Magical wand from meteor.",
       "max_chars": 63,
-      "current_chars": 5
+      "current_chars": 25
     },
     {
       "name": "Holy Rod",
@@ -5644,9 +5644,9 @@
         "0x00F96974"
       ],
       "id": 152,
-      "new_description": "Starts to regenerate HP by 1 if HP lower than half",
+      "new_description": "Rod with holy power heals wounds. Restores HP+1 if low",
       "max_chars": 63,
-      "current_chars": 50
+      "current_chars": 54
     },
     {
       "name": "Inferno",
@@ -5673,9 +5673,9 @@
         "0x02972FDC"
       ],
       "id": 153,
-      "new_description": "The blade glows with a strange light from hell.",
+      "new_description": "Blade glows with strange light from hell.",
       "max_chars": 63,
-      "current_chars": 47
+      "current_chars": 41
     },
     {
       "name": "Flamespitter",
@@ -5712,9 +5712,9 @@
         "0x02A8D854"
       ],
       "id": 154,
-      "new_description": "",
+      "new_description": "AT+60",
       "max_chars": 63,
-      "current_chars": 0
+      "current_chars": 5
     },
     {
       "name": "Red Ear-stud",
@@ -5749,9 +5749,9 @@
         "0x029734DC"
       ],
       "id": 155,
-      "new_description": "10% magic recovery from fire & earth damage",
+      "new_description": "Ear-stud with red jewel. 10% magic from fire/earth dmg",
       "max_chars": 63,
-      "current_chars": 43,
+      "current_chars": 54,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -5822,9 +5822,9 @@
         "0x02975CDC"
       ],
       "id": 157,
-      "new_description": "",
+      "new_description": "AT+34",
       "max_chars": 63,
-      "current_chars": 0
+      "current_chars": 5
     },
     {
       "name": "Mistortain",
@@ -5860,9 +5860,9 @@
         "0x00F98C74"
       ],
       "id": 158,
-      "new_description": "Critical attack ratio + 5%",
+      "new_description": "Demonic sword killed god of light. +5% crit",
       "max_chars": 63,
-      "current_chars": 26
+      "current_chars": 43
     },
     {
       "name": "Baphomet",
@@ -5901,9 +5901,9 @@
         "0x00F996F4"
       ],
       "id": 159,
-      "new_description": "Wave | S+20,I+40,W+30,A+15,C+25,P+35,MA+20,MD+20",
+      "new_description": "Wave atk. STR+20, INT+40, WIL+30, CON+25, POW+35, LUK+1",
       "max_chars": 63,
-      "current_chars": 48
+      "current_chars": 55
     },
     {
       "name": "Fabnihl",
@@ -5939,9 +5939,9 @@
         "0x00F99174"
       ],
       "id": 160,
-      "new_description": "Sometimes petrify / 16 MP (8% probabilty)",
+      "new_description": "8% petrify for 16 MP.",
       "max_chars": 63,
-      "current_chars": 41
+      "current_chars": 21
     },
     {
       "name": "Gladius",
@@ -5974,9 +5974,9 @@
         "0x010A0D3C"
       ],
       "id": 161,
-      "new_description": "A dagger like those used by the ancients.",
+      "new_description": "Dagger used by the ancients.",
       "max_chars": 63,
-      "current_chars": 41,
+      "current_chars": 28,
       "auction_price": 26,
       "auction_price_id": 9,
       "auction_price_source": "extracted_from_item_structure"
@@ -6055,9 +6055,9 @@
         "0x0152D08C"
       ],
       "id": 163,
-      "new_description": "Favored dagger of the barbarian Normans.",
+      "new_description": "Favored dagger of barbarian Normans.",
       "max_chars": 63,
-      "current_chars": 40,
+      "current_chars": 36,
       "auction_price": 16,
       "auction_price_id": 14,
       "auction_price_source": "extracted_from_item_structure"
@@ -6099,9 +6099,9 @@
         "0x01A8DDD8"
       ],
       "id": 164,
-      "new_description": "A heavy sword with a wide blade.",
+      "new_description": "Heavy sword with wide blade.",
       "max_chars": 63,
-      "current_chars": 32,
+      "current_chars": 28,
       "auction_price": 29,
       "auction_price_id": 12,
       "auction_price_source": "extracted_from_item_structure"
@@ -6143,9 +6143,9 @@
         "0x01A8E058"
       ],
       "id": 165,
-      "new_description": "A finely adorned shield for knights.",
+      "new_description": "Finely adorned shield for knights.",
       "max_chars": 63,
-      "current_chars": 36,
+      "current_chars": 34,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -6252,9 +6252,9 @@
         "0x02722568"
       ],
       "id": 168,
-      "new_description": "Excellent shield made of the finest materials.",
+      "new_description": "Excellent shield of finest materials.",
       "max_chars": 63,
-      "current_chars": 46,
+      "current_chars": 37,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -6327,9 +6327,9 @@
         "0x02721DE8"
       ],
       "id": 170,
-      "new_description": "Critical attack ratio + 3%",
+      "new_description": "1st class bow of great workmanship. +3% crit",
       "max_chars": 63,
-      "current_chars": 26,
+      "current_chars": 44,
       "auction_price": 46,
       "auction_price_id": 15,
       "auction_price_source": "extracted_from_item_structure"
@@ -6365,9 +6365,9 @@
         "0x012562D8"
       ],
       "id": 171,
-      "new_description": "Steel hammer, easy to lift and strikes heavy blows.",
+      "new_description": "Steel hammer, easy to lift, strikes heavy blows.",
       "max_chars": 63,
-      "current_chars": 51,
+      "current_chars": 48,
       "auction_price": 48,
       "auction_price_id": 19,
       "auction_price_source": "extracted_from_item_structure"
@@ -6402,9 +6402,9 @@
         "0x01176CD0"
       ],
       "id": 172,
-      "new_description": "MAT+1",
+      "new_description": "AT+12, MAT+1",
       "max_chars": 63,
-      "current_chars": 5,
+      "current_chars": 12,
       "auction_price": 29,
       "auction_price_id": 12,
       "auction_price_source": "extracted_from_item_structure"
@@ -6446,9 +6446,9 @@
         "0x01F20474"
       ],
       "id": 173,
-      "new_description": "A magical rapier formed of mithril silver.",
+      "new_description": "Magical rapier of mithril silver.",
       "max_chars": 63,
-      "current_chars": 42
+      "current_chars": 33
     },
     {
       "name": "Long Rapier",
@@ -6481,9 +6481,9 @@
         "0x0152BC8C"
       ],
       "id": 174,
-      "new_description": "",
+      "new_description": "AT+24",
       "max_chars": 63,
-      "current_chars": 0,
+      "current_chars": 5,
       "auction_price": 16,
       "auction_price_id": 24,
       "auction_price_source": "extracted_from_item_structure"
@@ -6524,9 +6524,9 @@
         "0x02A8F3D4"
       ],
       "id": 175,
-      "new_description": "INT+8, WIL+8, MDEF+4",
+      "new_description": "Beautiful silver anklet. INT+8, WIL+8",
       "max_chars": 63,
-      "current_chars": 20,
+      "current_chars": 37,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -6562,9 +6562,9 @@
         "0x011E5A74"
       ],
       "id": 176,
-      "new_description": "Immune to Confusion & critical attack ratio + 1% | WIL+8, AGL+8",
+      "new_description": "Woodsman hat. Immune: Confusion, +1% crit, WIL/AGL+8",
       "max_chars": 63,
-      "current_chars": 63,
+      "current_chars": 52,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -6600,9 +6600,9 @@
         "0x01256A58"
       ],
       "id": 177,
-      "new_description": "A dangerous mechanized bow which is easy to use.",
+      "new_description": "Dangerous mechanized bow, easy to use.",
       "max_chars": 63,
-      "current_chars": 48,
+      "current_chars": 38,
       "auction_price": 49,
       "auction_price_id": 22,
       "auction_price_source": "extracted_from_item_structure"
@@ -6645,9 +6645,9 @@
         "0x01D93648"
       ],
       "id": 178,
-      "new_description": "Wind elemental damage decreases | AGL+32",
+      "new_description": "Quick agile movements. Lessens wind dmg, AGL+32",
       "max_chars": 63,
-      "current_chars": 40,
+      "current_chars": 47,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -6686,9 +6686,9 @@
         "0x020FA47C"
       ],
       "id": 179,
-      "new_description": "Immune to Poison",
+      "new_description": "1 of 4 capes by great master. Immune: Poison",
       "max_chars": 63,
-      "current_chars": 16,
+      "current_chars": 44,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -6796,9 +6796,9 @@
         "0x01B4D3E0"
       ],
       "id": 182,
-      "new_description": "A Long sword with a wide blade.",
+      "new_description": "Long sword with wide blade.",
       "max_chars": 63,
-      "current_chars": 31,
+      "current_chars": 27,
       "auction_price": 69,
       "auction_price_id": 25,
       "auction_price_source": "extracted_from_item_structure"
@@ -6837,9 +6837,9 @@
         "0x027227E8"
       ],
       "id": 183,
-      "new_description": "MAT+3",
+      "new_description": "Made of best materials by best smiths.",
       "max_chars": 63,
-      "current_chars": 5,
+      "current_chars": 38,
       "auction_price": 16,
       "auction_price_id": 16,
       "auction_price_source": "extracted_from_item_structure"
@@ -6874,9 +6874,9 @@
         "0x012571D8"
       ],
       "id": 184,
-      "new_description": "MDEF+5",
+      "new_description": "Quartz rod protects soul of wielder.",
       "max_chars": 63,
-      "current_chars": 6,
+      "current_chars": 36,
       "auction_price": 10,
       "auction_price_id": 20,
       "auction_price_source": "extracted_from_item_structure"
@@ -6911,9 +6911,9 @@
         "0x01257958"
       ],
       "id": 185,
-      "new_description": "Comfortable shoes made of the finest materials.",
+      "new_description": "Comfortable shoes of finest materials.",
       "max_chars": 63,
-      "current_chars": 47,
+      "current_chars": 38,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -6990,9 +6990,9 @@
         "0x012DC2F8"
       ],
       "id": 187,
-      "new_description": "STR+14",
+      "new_description": "Axe favored by northern seafarers. STR+14",
       "max_chars": 63,
-      "current_chars": 6
+      "current_chars": 41
     },
     {
       "name": "Rune Robe",
@@ -7030,9 +7030,9 @@
         "0x02792088"
       ],
       "id": 188,
-      "new_description": "POW+20, MAT+28, MDEF+12",
+      "new_description": "Robe with sigils amplifies magic. POW+20",
       "max_chars": 63,
-      "current_chars": 23,
+      "current_chars": 40,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -7071,9 +7071,9 @@
         "0x024380DC"
       ],
       "id": 189,
-      "new_description": "MDEF+21",
+      "new_description": "DEF+48, MDEF+21",
       "max_chars": 63,
-      "current_chars": 7,
+      "current_chars": 15,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -7114,9 +7114,9 @@
         "0x025D404C"
       ],
       "id": 190,
-      "new_description": "POW+14",
+      "new_description": "Protected by powers of the dark. POW+14",
       "max_chars": 63,
-      "current_chars": 6,
+      "current_chars": 39,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -7157,9 +7157,9 @@
         "0x028A68F8"
       ],
       "id": 191,
-      "new_description": "Reduce earth elemental attack | MDEF+12",
+      "new_description": "Magic shield by earth spirits. Reduces earth atk",
       "max_chars": 63,
-      "current_chars": 39,
+      "current_chars": 48,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -7200,9 +7200,9 @@
         "0x025D4A4C"
       ],
       "id": 192,
-      "new_description": "",
+      "new_description": "AT+32",
       "max_chars": 63,
-      "current_chars": 0
+      "current_chars": 5
     },
     {
       "name": "Light Necklace",
@@ -7223,9 +7223,9 @@
         "0x013530D4"
       ],
       "id": 193,
-      "new_description": "Wearer is protected by the powers of light.",
+      "new_description": "Protected by powers of light.",
       "max_chars": 63,
-      "current_chars": 43,
+      "current_chars": 29,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -7287,9 +7287,9 @@
         "0x021AE988"
       ],
       "id": 195,
-      "new_description": "Sometimes shoot Stone Bullet if hit by normal attack | MAT+9",
+      "new_description": "Sometimes shoot Stone Bullet if hit by normal atk | AT+66, M...",
       "max_chars": 63,
-      "current_chars": 60
+      "current_chars": 63
     },
     {
       "name": "Battle Axe",
@@ -7390,9 +7390,9 @@
         "0x017A049C"
       ],
       "id": 198,
-      "new_description": "STR+32, CON+15",
+      "new_description": "Draws out hidden strengths. STR+32, CON+15",
       "max_chars": 63,
-      "current_chars": 14,
+      "current_chars": 42,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -7429,9 +7429,9 @@
         "0x0163E08C"
       ],
       "id": 199,
-      "new_description": "POW+30, MAT+15",
+      "new_description": "Magic power through runes. POW+30",
       "max_chars": 63,
-      "current_chars": 14,
+      "current_chars": 33,
       "auction_price": 16,
       "auction_price_id": 29,
       "auction_price_source": "extracted_from_item_structure"
@@ -7467,9 +7467,9 @@
         "0x0163E58C"
       ],
       "id": 200,
-      "new_description": "Wizard mag atk + 50% | POW+6, MAT+12",
+      "new_description": "Runes enhance magic. +50% wizard mag atk, POW+6",
       "max_chars": 63,
-      "current_chars": 36,
+      "current_chars": 47,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -7508,9 +7508,9 @@
         "0x01C3F004"
       ],
       "id": 201,
-      "new_description": "Give the effect of 'Enchant Weapon' to equipped weapon",
+      "new_description": "Amplifies weapon power. Enchants worn weapon",
       "max_chars": 63,
-      "current_chars": 54,
+      "current_chars": 44,
       "auction_price": 29,
       "auction_price_id": 12,
       "auction_price_source": "extracted_from_item_structure"
@@ -7546,9 +7546,9 @@
         "0x0179D29C"
       ],
       "id": 202,
-      "new_description": "A cape with runes that increase magical power.",
+      "new_description": "Cape with runes increases magical power.",
       "max_chars": 63,
-      "current_chars": 46,
+      "current_chars": 40,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -7586,9 +7586,9 @@
         "0x0243605C"
       ],
       "id": 203,
-      "new_description": "Sometimes block magic(healing,support & attack magic)",
+      "new_description": "Protects from magic. Sometimes blocks spells",
       "max_chars": 63,
-      "current_chars": 53,
+      "current_chars": 44,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -7626,9 +7626,9 @@
         "0x017FFD70"
       ],
       "id": 204,
-      "new_description": "Regenerate HP by 1",
+      "new_description": "Wearer becomes tireless. Restores HP+1",
       "max_chars": 63,
-      "current_chars": 18,
+      "current_chars": 38,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -7665,9 +7665,9 @@
         "0x017FFFF0"
       ],
       "id": 205,
-      "new_description": "Immune to Poison & Paralysis | POW+8, LUK+8",
+      "new_description": "Enchanting hat. Immune: Poison/Paralysis, POW/LUK+8",
       "max_chars": 63,
-      "current_chars": 43,
+      "current_chars": 51,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -7705,9 +7705,9 @@
         "0x018004F0"
       ],
       "id": 206,
-      "new_description": "MDEF+41",
+      "new_description": "Shield enchanted by the elves.",
       "max_chars": 63,
-      "current_chars": 7,
+      "current_chars": 30,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -7747,9 +7747,9 @@
         "0x01800770"
       ],
       "id": 207,
-      "new_description": "Critical attack ratio + 6%",
+      "new_description": "Magic bow for king of elves. +6% crit",
       "max_chars": 63,
-      "current_chars": 26
+      "current_chars": 37
     },
     {
       "name": "Flame Shield",
@@ -7785,9 +7785,9 @@
         "0x02A8DFD4"
       ],
       "id": 208,
-      "new_description": "Reduce fire elemental attack | MDEF+12",
+      "new_description": "Magic shield with fire spirits. Reduces fire atk",
       "max_chars": 63,
-      "current_chars": 38,
+      "current_chars": 48,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -7822,9 +7822,9 @@
         "0x0172C4E0"
       ],
       "id": 209,
-      "new_description": "POW+12, MAT+21",
+      "new_description": "Wand with curse power. POW+12",
       "max_chars": 63,
-      "current_chars": 14
+      "current_chars": 29
     },
     {
       "name": "Flame Sword",
@@ -7860,9 +7860,9 @@
         "0x01DFDFE0"
       ],
       "id": 210,
-      "new_description": "",
+      "new_description": "AT+36",
       "max_chars": 63,
-      "current_chars": 0
+      "current_chars": 5
     },
     {
       "name": "Black Armor",
@@ -7890,9 +7890,9 @@
         "0x02801468"
       ],
       "id": 211,
-      "new_description": "Df + 60 / 10 MP",
+      "new_description": "Armor of accursed black knight. Df+60 for 10 MP",
       "max_chars": 63,
-      "current_chars": 15,
+      "current_chars": 47,
       "auction_price": 23,
       "auction_price_id": 5,
       "auction_price_source": "extracted_from_item_structure"
@@ -7932,9 +7932,9 @@
         "0x017A099C"
       ],
       "id": 212,
-      "new_description": "At + 50 / 15 MP",
+      "new_description": "Black sword by god of darkness. At+50 for 15 MP",
       "max_chars": 63,
-      "current_chars": 15
+      "current_chars": 47
     },
     {
       "name": "White Ash",
@@ -8001,9 +8001,9 @@
         "0x0179F31C"
       ],
       "id": 214,
-      "new_description": "1 of the 4 given to the elven king by a dead king.",
+      "new_description": "1 of 4 given to elven king by dead king.",
       "max_chars": 63,
-      "current_chars": 50
+      "current_chars": 40
     },
     {
       "name": "Windbolt",
@@ -8039,9 +8039,9 @@
         "0x0179F59C"
       ],
       "id": 215,
-      "new_description": "Magical bow inhabited by a wind fairy.",
+      "new_description": "Magical bow with wind fairy.",
       "max_chars": 63,
-      "current_chars": 38
+      "current_chars": 28
     },
     {
       "name": "Thunder Orb",
@@ -8113,9 +8113,9 @@
         "0x01C3F284"
       ],
       "id": 217,
-      "new_description": "Drains MP from living enemies (decrease MP if undead)",
+      "new_description": "Drains MP from living (hurts undead)",
       "max_chars": 63,
-      "current_chars": 53
+      "current_chars": 36
     },
     {
       "name": "Vampire Rod",
@@ -8151,9 +8151,9 @@
         "0x0179CB1C"
       ],
       "id": 218,
-      "new_description": "Drains MP from living enemies (decrease MP if undead)",
+      "new_description": "Cursed rod devours souls. Drains MP from living",
       "max_chars": 63,
-      "current_chars": 53
+      "current_chars": 47
     },
     {
       "name": "Mystical Veil",
@@ -8178,9 +8178,9 @@
         "0x029F37E8"
       ],
       "id": 219,
-      "new_description": "Fairy mag atk + 50%",
+      "new_description": "Veil with mysterious light. +50% fairy mag atk",
       "max_chars": 63,
-      "current_chars": 19,
+      "current_chars": 46,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -8221,9 +8221,9 @@
         "0x029F41E8"
       ],
       "id": 220,
-      "new_description": "MP consumption - 25%",
+      "new_description": "Crown of ancient king. MP cost -25%",
       "max_chars": 63,
-      "current_chars": 20,
+      "current_chars": 35,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -8261,9 +8261,9 @@
         "0x020FA6FC"
       ],
       "id": 221,
-      "new_description": "Immune to Paralysis",
+      "new_description": "1 of 4 capes by master. Immune: Paralysis",
       "max_chars": 63,
-      "current_chars": 19,
+      "current_chars": 41,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -8301,9 +8301,9 @@
         "0x020FA97C"
       ],
       "id": 222,
-      "new_description": "Immune to Magic-Loss",
+      "new_description": "1 of 4 capes by master. Immune: Magic-Loss",
       "max_chars": 63,
-      "current_chars": 20,
+      "current_chars": 42,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -8342,9 +8342,9 @@
         "0x02519AAC"
       ],
       "id": 223,
-      "new_description": "Immune to Confusion",
+      "new_description": "1 of 4 capes by master. Immune: Confusion",
       "max_chars": 63,
-      "current_chars": 19,
+      "current_chars": 41,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -8387,9 +8387,9 @@
         "0x0200FDDC"
       ],
       "id": 224,
-      "new_description": "The barbarian Normans forge these very sharp swords.",
+      "new_description": "Barbarian Normans forge sharp swords.",
       "max_chars": 63,
-      "current_chars": 52,
+      "current_chars": 37,
       "auction_price": 69,
       "auction_price_id": 30,
       "auction_price_source": "extracted_from_item_structure"
@@ -8434,9 +8434,9 @@
         "0x01D91848"
       ],
       "id": 225,
-      "new_description": "At + 60 / 6 HP, if HP below 7, it curses",
+      "new_description": "Last owner died terrible death. At+60 for 6 HP, curses",
       "max_chars": 63,
-      "current_chars": 40,
+      "current_chars": 54,
       "auction_price": 27,
       "auction_price_id": 10,
       "auction_price_source": "extracted_from_item_structure"
@@ -8513,9 +8513,9 @@
         "0x0243795C"
       ],
       "id": 227,
-      "new_description": "POW+20, MDEF+20",
+      "new_description": "Protector blade. POW+20, MDEF+20",
       "max_chars": 63,
-      "current_chars": 15
+      "current_chars": 32
     },
     {
       "name": "Silver Armor",
@@ -8551,9 +8551,9 @@
         "0x02074850"
       ],
       "id": 228,
-      "new_description": "MDEF+12",
+      "new_description": "Beautiful armor made of silver.",
       "max_chars": 63,
-      "current_chars": 7,
+      "current_chars": 31,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -8649,9 +8649,9 @@
         "0x021AE488"
       ],
       "id": 231,
-      "new_description": "Drains HP from living enemies (decrease HP if undead)",
+      "new_description": "Dagger stained by victims blood. Drains HP from living",
       "max_chars": 63,
-      "current_chars": 53
+      "current_chars": 54
     },
     {
       "name": "Green Ash",
@@ -8719,9 +8719,9 @@
         "0x0186EAFC"
       ],
       "id": 233,
-      "new_description": "Immune to Paralysis",
+      "new_description": "Beautifully designed silver helmet. Immune: Paralysis",
       "max_chars": 63,
-      "current_chars": 19,
+      "current_chars": 53,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -8755,9 +8755,9 @@
         "0x0186ED7C"
       ],
       "id": 234,
-      "new_description": "INT+20, MAT+16",
+      "new_description": "Magic book on demons. INT+20",
       "max_chars": 63,
-      "current_chars": 14,
+      "current_chars": 28,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -8798,9 +8798,9 @@
         "0x0186F9FC"
       ],
       "id": 235,
-      "new_description": "Undead enemies, At + 40 | MAT+15, MDEF+13",
+      "new_description": "Rod by goddess Ishtar. +40 AT vs undead",
       "max_chars": 63,
-      "current_chars": 41
+      "current_chars": 39
     },
     {
       "name": "Evil Necklace",
@@ -8840,9 +8840,9 @@
         "0x02795008"
       ],
       "id": 236,
-      "new_description": "LUK+14",
+      "new_description": "Devil prayer gives unholy power. LUK+14",
       "max_chars": 63,
-      "current_chars": 6,
+      "current_chars": 39,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -8911,9 +8911,9 @@
         "0x018708FC"
       ],
       "id": 238,
-      "new_description": "MAT+8",
+      "new_description": "Wand with power of the moon.",
       "max_chars": 63,
-      "current_chars": 5
+      "current_chars": 28
     },
     {
       "name": "Bolt of Larie",
@@ -8949,9 +8949,9 @@
         "0x018D0AC4"
       ],
       "id": 239,
-      "new_description": "Sometimes petrify / 12 MP (15% probability)",
+      "new_description": "Cursed arrow by demon Larie. 15% petrify for 12 MP",
       "max_chars": 63,
-      "current_chars": 43
+      "current_chars": 50
     },
     {
       "name": "Wand of Apollo",
@@ -8975,9 +8975,9 @@
         "0x018D0D44"
       ],
       "id": 240,
-      "new_description": "A wand that can destroy 100,000 things at once.",
+      "new_description": "Wand destroys 100,000 things at once.",
       "max_chars": 63,
-      "current_chars": 47
+      "current_chars": 37
     },
     {
       "name": "Angel Rod",
@@ -9013,9 +9013,9 @@
         "0x018D0FC4"
       ],
       "id": 241,
-      "new_description": "Demon enemies, At + 40",
+      "new_description": "Rod purifies the possessed. +40 AT vs demons",
       "max_chars": 63,
-      "current_chars": 22
+      "current_chars": 44
     },
     {
       "name": "Philos Ring",
@@ -9050,9 +9050,9 @@
         "0x028537E4"
       ],
       "id": 242,
-      "new_description": "Gain MP when you take damage | INT+40, POW+40",
+      "new_description": "Created by 12 Wisemen. Gain MP when damaged, INT/POW+40",
       "max_chars": 63,
-      "current_chars": 45,
+      "current_chars": 55,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -9086,9 +9086,9 @@
         "0x018D14C4"
       ],
       "id": 243,
-      "new_description": "INT+80, POW+40, MAT+30",
+      "new_description": "Spellbook on purification. INT+80, POW+40",
       "max_chars": 63,
-      "current_chars": 22,
+      "current_chars": 41,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -9128,9 +9128,9 @@
         "0x01C9AF98"
       ],
       "id": 244,
-      "new_description": "Evil elemental damage decreases | MDEF+88",
+      "new_description": "Holy aura protects vs possessed. Lessens evil dmg",
       "max_chars": 63,
-      "current_chars": 41,
+      "current_chars": 49,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -9168,9 +9168,9 @@
         "0x02B3F7A0"
       ],
       "id": 245,
-      "new_description": "",
+      "new_description": "AT+87",
       "max_chars": 63,
-      "current_chars": 0
+      "current_chars": 5
     },
     {
       "name": "Holy Gloves",
@@ -9204,9 +9204,9 @@
         "0x0199EACC"
       ],
       "id": 246,
-      "new_description": "Gloves which bestow the wearer with holy might.",
+      "new_description": "Gloves bestow wearer with holy might.",
       "max_chars": 63,
-      "current_chars": 47,
+      "current_chars": 37,
       "auction_price": 10,
       "auction_price_id": 20,
       "auction_price_source": "extracted_from_item_structure"
@@ -9245,9 +9245,9 @@
         "0x0199EFCC"
       ],
       "id": 247,
-      "new_description": "Mat + 30 / 3 MP | POW+64, MAT+30, MDEF+18",
+      "new_description": "Enhances magic power. Mat+30 for 3 MP, POW+64",
       "max_chars": 63,
-      "current_chars": 41
+      "current_chars": 45
     },
     {
       "name": "Fine Scarf",
@@ -9284,9 +9284,9 @@
         "0x01F21874"
       ],
       "id": 248,
-      "new_description": "MDEF+3",
+      "new_description": "Beautiful scarf of finest materials.",
       "max_chars": 63,
-      "current_chars": 6,
+      "current_chars": 36,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -9388,9 +9388,9 @@
         "0x01B4D660"
       ],
       "id": 251,
-      "new_description": "A heavy, long hammer with excellent range.",
+      "new_description": "Heavy long hammer with excellent range.",
       "max_chars": 63,
-      "current_chars": 42,
+      "current_chars": 39,
       "auction_price": 14,
       "auction_price_id": 28,
       "auction_price_source": "extracted_from_item_structure"
@@ -9427,9 +9427,9 @@
         "0x01AE8048"
       ],
       "id": 252,
-      "new_description": "Sometimes poison the enemy (10% probability)",
+      "new_description": "Rapier poisons wounds. 10% poison chance",
       "max_chars": 63,
-      "current_chars": 44,
+      "current_chars": 40,
       "auction_price": 80,
       "auction_price_id": 26,
       "auction_price_source": "extracted_from_item_structure"
@@ -9519,9 +9519,9 @@
         "0x01C3ED84"
       ],
       "id": 255,
-      "new_description": "STR+4, INT+4, WIL+4, AGL+4, CON+4, POW+4, LUK+4",
+      "new_description": "Blessed with holy power. All stats+4",
       "max_chars": 63,
-      "current_chars": 47,
+      "current_chars": 36,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -9591,9 +9591,9 @@
         "0x0200DD5C"
       ],
       "id": 257,
-      "new_description": "CON+3, MDEF+40",
+      "new_description": "Earthen garb. CON+3, MDEF+40",
       "max_chars": 63,
-      "current_chars": 14,
+      "current_chars": 28,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -9640,9 +9640,9 @@
         "0x023097C4"
       ],
       "id": 258,
-      "new_description": "Drains HP from living enemies (decrease HP if undead)",
+      "new_description": "Red from blood of killed. Drains HP from living",
       "max_chars": 63,
-      "current_chars": 53,
+      "current_chars": 47,
       "auction_price": 10,
       "auction_price_id": 20,
       "auction_price_source": "extracted_from_item_structure"
@@ -9684,9 +9684,9 @@
         "0x01F1FF74"
       ],
       "id": 259,
-      "new_description": "Made of silver. It can also damage lycanthropes.",
+      "new_description": "Made of silver. Damages lycanthropes.",
       "max_chars": 63,
-      "current_chars": 48,
+      "current_chars": 37,
       "auction_price": 14,
       "auction_price_id": 28,
       "auction_price_source": "extracted_from_item_structure"
@@ -9724,9 +9724,9 @@
         "0x01B4BAE0"
       ],
       "id": 260,
-      "new_description": "An axe made of silver and blessed with holy runes.",
+      "new_description": "Silver axe blessed with holy runes.",
       "max_chars": 63,
-      "current_chars": 50
+      "current_chars": 35
     },
     {
       "name": "Blessed Hammer",
@@ -9758,9 +9758,9 @@
         "0x01B4BD60"
       ],
       "id": 261,
-      "new_description": "WIL+15, MDEF+12",
+      "new_description": "Protective charm vs demons. WIL+15",
       "max_chars": 63,
-      "current_chars": 15,
+      "current_chars": 34,
       "auction_price": 16,
       "auction_price_id": 24,
       "auction_price_source": "extracted_from_item_structure"
@@ -9797,9 +9797,9 @@
         "0x01B4BFE0"
       ],
       "id": 262,
-      "new_description": "1 of the 4 given to the elven king by a dead king.",
+      "new_description": "1 of 4 given to elven king by dead king.",
       "max_chars": 63,
-      "current_chars": 50
+      "current_chars": 40
     },
     {
       "name": "Dancing Doll",
@@ -9833,9 +9833,9 @@
         "0x02232CC8"
       ],
       "id": 263,
-      "new_description": "Refill 4% of the MP when it goes to 0(50% Destruction) | AGL+20",
+      "new_description": "Magic puppet with enchanted soul. 4% MP refill, AGL+20",
       "max_chars": 63,
-      "current_chars": 63,
+      "current_chars": 54,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -9872,9 +9872,9 @@
         "0x01B4CEE0"
       ],
       "id": 264,
-      "new_description": "Sometimes paralyze the enemy (10% probability)",
+      "new_description": "10% paralyze chance.",
       "max_chars": 63,
-      "current_chars": 46
+      "current_chars": 20
     },
     {
       "name": "Demonscale",
@@ -9909,9 +9909,9 @@
         "0x01D91D48"
       ],
       "id": 265,
-      "new_description": "POW+25, MDEF+40",
+      "new_description": "Created through pact with demons. POW+25",
       "max_chars": 63,
-      "current_chars": 15,
+      "current_chars": 40,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -9936,9 +9936,9 @@
         "0x02A8F154"
       ],
       "id": 266,
-      "new_description": "Wearer is protected by the powers of fire.",
+      "new_description": "Protected by powers of fire.",
       "max_chars": 63,
-      "current_chars": 42,
+      "current_chars": 28,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -9975,9 +9975,9 @@
         "0x029F0FE8"
       ],
       "id": 267,
-      "new_description": "AGL+14",
+      "new_description": "Protected by powers of wind. AGL+14",
       "max_chars": 63,
-      "current_chars": 6,
+      "current_chars": 35,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -10043,9 +10043,9 @@
         "0x01F1F2F4"
       ],
       "id": 269,
-      "new_description": "LUK+20",
+      "new_description": "Ring with beautiful gem brings luck. LUK+20",
       "max_chars": 63,
-      "current_chars": 6,
+      "current_chars": 43,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -10087,9 +10087,9 @@
         "0x021AFD88"
       ],
       "id": 270,
-      "new_description": "MDEF+2",
+      "new_description": "Finely embroidered cloak worn by knights.",
       "max_chars": 63,
-      "current_chars": 6,
+      "current_chars": 41,
       "auction_price": 23,
       "auction_price_id": 5,
       "auction_price_source": "extracted_from_item_structure"
@@ -10125,9 +10125,9 @@
         "0x01C3E884"
       ],
       "id": 271,
-      "new_description": "LUK+8, MAT+20, MDEF+36",
+      "new_description": "Robe emits divine aura. LUK+8",
       "max_chars": 63,
-      "current_chars": 22,
+      "current_chars": 29,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -10164,9 +10164,9 @@
         "0x01C3EB04"
       ],
       "id": 272,
-      "new_description": "Gives its wielder holy might to destroy demons.",
+      "new_description": "Gives wielder holy might to destroy demons.",
       "max_chars": 63,
-      "current_chars": 47
+      "current_chars": 43
     },
     {
       "name": "Shadow Robe",
@@ -10211,9 +10211,9 @@
         "0x020FD3FC"
       ],
       "id": 273,
-      "new_description": "Block magic(heal/atk) | W+12,P+42,L+24,MD+42",
+      "new_description": "Black robe with dark spirits. Blocks magic, WIL+12, POW+42",
       "max_chars": 63,
-      "current_chars": 44,
+      "current_chars": 58,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -10258,9 +10258,9 @@
         "0x02795508"
       ],
       "id": 274,
-      "new_description": "10% magic recovery from darkness & evil damage | POW+8",
+      "new_description": "Heretic veil with dark powers. 10% magic from dark/evil, POW+8",
       "max_chars": 63,
-      "current_chars": 54,
+      "current_chars": 62,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -10327,9 +10327,9 @@
         "0x021B0288"
       ],
       "id": 276,
-      "new_description": "MP regeneration + 5",
+      "new_description": "Lunar shield restores MP+5.",
       "max_chars": 63,
-      "current_chars": 19,
+      "current_chars": 27,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -10366,9 +10366,9 @@
         "0x01D924C8"
       ],
       "id": 277,
-      "new_description": "A wand forged for demons by rebellious gods.",
+      "new_description": "Wand forged for demons by rebellious gods.",
       "max_chars": 63,
-      "current_chars": 44
+      "current_chars": 42
     },
     {
       "name": "Seraphim Rod",
@@ -10404,9 +10404,9 @@
         "0x01D929C8"
       ],
       "id": 278,
-      "new_description": "Demon enemies, At + 40",
+      "new_description": "Angelic rod exorcises demons. +40 AT vs demons",
       "max_chars": 63,
-      "current_chars": 22
+      "current_chars": 46
     },
     {
       "name": "Earth Saber",
@@ -10440,9 +10440,9 @@
         "0x01DFE760"
       ],
       "id": 279,
-      "new_description": "This blade was created by earth elementals.",
+      "new_description": "Blade created by earth elementals.",
       "max_chars": 63,
-      "current_chars": 43
+      "current_chars": 34
     },
     {
       "name": "Healing Robe",
@@ -10479,9 +10479,9 @@
         "0x02792308"
       ],
       "id": 280,
-      "new_description": "Regenerate HP by 1 | STR+10, CON+15, MDEF+34",
+      "new_description": "Life-saving robe heals wearer. Restores HP+1, STR+10, CON+15",
       "max_chars": 63,
-      "current_chars": 44,
+      "current_chars": 60,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -10518,9 +10518,9 @@
         "0x01DFEC60"
       ],
       "id": 281,
-      "new_description": "Sometimes block magic(healing,support & attack magic)",
+      "new_description": "Silver shield with mirror surface. Blocks magic",
       "max_chars": 63,
-      "current_chars": 53,
+      "current_chars": 47,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -10593,9 +10593,9 @@
         "0x027204E8"
       ],
       "id": 283,
-      "new_description": "Immune to Slow",
+      "new_description": "Enchanted shoes, light as feather. Immune: Slow",
       "max_chars": 63,
-      "current_chars": 14,
+      "current_chars": 47,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -10631,7 +10631,7 @@
         "0x01E9B248"
       ],
       "id": 284,
-      "new_description": "Magic-absorbing orb.(Activates Dispel Magic)",
+      "new_description": "Magic-absorbing orb. Activates Dispel Magic.",
       "max_chars": 63,
       "current_chars": 44,
       "auction_price": 10,
@@ -10672,9 +10672,9 @@
         "0x0230BDC4"
       ],
       "id": 285,
-      "new_description": "LUK+8",
+      "new_description": "Ugly brooch adorned with large jewels. LUK+8",
       "max_chars": 63,
-      "current_chars": 5,
+      "current_chars": 44,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -10716,9 +10716,9 @@
         "0x029F4768"
       ],
       "id": 286,
-      "new_description": "Decrease water, earth, darkness,& evil damage",
+      "new_description": "1 of pair of tiaras. Lessens water/earth/dark/evil dmg",
       "max_chars": 63,
-      "current_chars": 45,
+      "current_chars": 54,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -10753,9 +10753,9 @@
         "0x01F206F4"
       ],
       "id": 287,
-      "new_description": "A rod with a massive iron ball on a chain.",
+      "new_description": "Rod with massive iron ball on chain.",
       "max_chars": 63,
-      "current_chars": 42
+      "current_chars": 36
     },
     {
       "name": "Magic Wand",
@@ -10787,9 +10787,9 @@
         "0x01FB82CC"
       ],
       "id": 288,
-      "new_description": "STR+2, INT+5, WIL+3, AGL+4, CON+1, POW+12, MAT+8",
+      "new_description": "Master sorcerer wand. INT+5, WIL+3, AGL+4, POW+12, STR+2, CON+1",
       "max_chars": 63,
-      "current_chars": 48,
+      "current_chars": 63,
       "auction_price": 16,
       "auction_price_id": 24,
       "auction_price_source": "extracted_from_item_structure"
@@ -10826,9 +10826,9 @@
         "0x01FB87CC"
       ],
       "id": 289,
-      "new_description": "1 of the 4 given to the elven king by a dead king.",
+      "new_description": "1 of 4 given to elven king by dead king.",
       "max_chars": 63,
-      "current_chars": 50
+      "current_chars": 40
     },
     {
       "name": "Mirror Armor",
@@ -10864,9 +10864,9 @@
         "0x02437E5C"
       ],
       "id": 290,
-      "new_description": "Sometimes block magic(healing,support & attack magic) | MDEF+31",
+      "new_description": "Silver armor with reflective exterior. Blocks magic",
       "max_chars": 63,
-      "current_chars": 63,
+      "current_chars": 51,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -10908,9 +10908,9 @@
         "0x029F32E8"
       ],
       "id": 291,
-      "new_description": "Sometimes Instant Death (8% probability)",
+      "new_description": "Battle-axe took many victims. 8% Instant Death",
       "max_chars": 63,
-      "current_chars": 40
+      "current_chars": 46
     },
     {
       "name": "Fortune Clock",
@@ -10969,9 +10969,9 @@
         "0x021AD088"
       ],
       "id": 293,
-      "new_description": "A silver brooch which also wards off evil.",
+      "new_description": "Silver brooch wards off evil.",
       "max_chars": 63,
-      "current_chars": 42,
+      "current_chars": 29,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -11010,9 +11010,9 @@
         "0x021AE208"
       ],
       "id": 294,
-      "new_description": "Dragon enemies, AT + 40",
+      "new_description": "Dragon-slaying sword for ancient hero. +40 AT vs dragons",
       "max_chars": 63,
-      "current_chars": 23
+      "current_chars": 56
     },
     {
       "name": "Rainbow Rod",
@@ -11049,9 +11049,9 @@
         "0x021AF388"
       ],
       "id": 295,
-      "new_description": "Critical attack ratio + 7% | LUK+30",
+      "new_description": "Rod with mysterious powers. +7% crit, LUK+30",
       "max_chars": 63,
-      "current_chars": 35
+      "current_chars": 44
     },
     {
       "name": "Beauty Veil",
@@ -11087,9 +11087,9 @@
         "0x029F3568"
       ],
       "id": 296,
-      "new_description": "Priest mag atk + 50% & Increases the potential of",
+      "new_description": "Beautiful veil worn by priests. +50% priest mag atk",
       "max_chars": 63,
-      "current_chars": 49,
+      "current_chars": 51,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -11132,9 +11132,9 @@
         "0x029F4468"
       ],
       "id": 297,
-      "new_description": "At + 30 / 8 MP",
+      "new_description": "Bow by goddess Artemis. At+30 for 8 MP",
       "max_chars": 63,
-      "current_chars": 14
+      "current_chars": 38
     },
     {
       "name": "Infernal Robe",
@@ -11169,9 +11169,9 @@
         "0x02BB3A9C"
       ],
       "id": 298,
-      "new_description": "POW+30, LUK+14, MDEF+51",
+      "new_description": "Cursed robe of devil. POW+30, LUK+14",
       "max_chars": 63,
-      "current_chars": 23,
+      "current_chars": 36,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -11206,9 +11206,9 @@
         "0x02590844"
       ],
       "id": 299,
-      "new_description": "AGL+10",
+      "new_description": "Easy dagger favored by robbers. AGL+10",
       "max_chars": 63,
-      "current_chars": 6,
+      "current_chars": 38,
       "auction_price": 80,
       "auction_price_id": 26,
       "auction_price_source": "extracted_from_item_structure"
@@ -11268,9 +11268,9 @@
         "0x02592644"
       ],
       "id": 301,
-      "new_description": "AGL+4",
+      "new_description": "Feathered helm grants swift moves. AGL+4",
       "max_chars": 63,
-      "current_chars": 5,
+      "current_chars": 40,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -11310,9 +11310,9 @@
         "0x025935C4"
       ],
       "id": 302,
-      "new_description": "Demon & dragon enemies, At + 60 & critical attack",
+      "new_description": "+60 AT vs demons/dragons, crit chance",
       "max_chars": 63,
-      "current_chars": 49
+      "current_chars": 37
     },
     {
       "name": "Shadowbolt",
@@ -11348,9 +11348,9 @@
         "0x02800568"
       ],
       "id": 303,
-      "new_description": "POW+12",
+      "new_description": "Bow enchanted by night fairies. POW+12",
       "max_chars": 63,
-      "current_chars": 6
+      "current_chars": 38
     },
     {
       "name": "Excalibur",
@@ -11386,9 +11386,9 @@
         "0x02850864"
       ],
       "id": 304,
-      "new_description": "Demon enemies & magical living thing, At + 40",
+      "new_description": "+40 AT vs demons & magic living things",
       "max_chars": 63,
-      "current_chars": 45
+      "current_chars": 38
     },
     {
       "name": "Valkyrie",
@@ -11425,9 +11425,9 @@
         "0x02850D64"
       ],
       "id": 305,
-      "new_description": "Crit+5% | S+12,I+8,W+8,A+12,C+12,P+8,L+16,MA+30",
+      "new_description": "+5% crit. STR+12, INT/WIL/POW+8, AGL/CON+12, LUK+16",
       "max_chars": 63,
-      "current_chars": 47
+      "current_chars": 51
     },
     {
       "name": "Godswand",
@@ -11463,9 +11463,9 @@
         "0x02850FE4"
       ],
       "id": 306,
-      "new_description": "Sometimes shoot Fire Bullet / 1 MP (10% probability) | WIL+8",
+      "new_description": "10% shoots Fire Bullet for 1 MP. WIL+8",
       "max_chars": 63,
-      "current_chars": 60
+      "current_chars": 38
     },
     {
       "name": "Berserker",
@@ -11499,9 +11499,9 @@
         "0x02851764"
       ],
       "id": 307,
-      "new_description": "Sometimes knock back enemies (even bosses)",
+      "new_description": "Gives wielder strength of madness. Knocks back enemies",
       "max_chars": 63,
-      "current_chars": 42
+      "current_chars": 54
     },
     {
       "name": "Star Rod",
@@ -11533,9 +11533,9 @@
         "0x028519E4"
       ],
       "id": 308,
-      "new_description": "MAT+20",
+      "new_description": "Rod of starstone burns with eternal light.",
       "max_chars": 63,
-      "current_chars": 6
+      "current_chars": 42
     },
     {
       "name": "Air Shield",
@@ -11570,9 +11570,9 @@
         "0x029F0AE8"
       ],
       "id": 309,
-      "new_description": "Reduce wind elemental attack | MDEF+12",
+      "new_description": "Shield protected by wind spirits. Reduces wind atk",
       "max_chars": 63,
-      "current_chars": 38,
+      "current_chars": 50,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -11612,9 +11612,9 @@
         "0x02B40220"
       ],
       "id": 310,
-      "new_description": "At + 20 / 6 HP, Can paralyze user if he hits with HP",
+      "new_description": "Demon inhabited. At+20 for 6 HP, can paralyze user",
       "max_chars": 63,
-      "current_chars": 52
+      "current_chars": 50
     },
     {
       "name": "Hammer of Thor",
@@ -11651,9 +11651,9 @@
         "0x02B404A0"
       ],
       "id": 311,
-      "new_description": "At + 20 / 8 MP & Giant enemies & magical living thing,",
+      "new_description": "At+20 for 8 MP. +AT vs giants & magic living things",
       "max_chars": 63,
-      "current_chars": 54
+      "current_chars": 51
     },
     {
       "name": "Pavas Armor",
@@ -11688,9 +11688,9 @@
         "0x02B40720"
       ],
       "id": 312,
-      "new_description": "STR+32, CON+48, LUK+16, MDEF+80",
+      "new_description": "Legendary armor by gods. STR+32, CON+48, LUK+16",
       "max_chars": 63,
-      "current_chars": 31,
+      "current_chars": 47,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -11729,9 +11729,9 @@
         "0x02BB421C"
       ],
       "id": 313,
-      "new_description": "HP-5%,Crit+5% | All+32,MA+100,MD+100",
+      "new_description": "Invincible at cost of life. -5% HP regen, +5% crit, stats+32",
       "max_chars": 63,
-      "current_chars": 36
+      "current_chars": 60
     },
     {
       "name": "Death Sickle",
@@ -11767,9 +11767,9 @@
         "0x02BD32A4"
       ],
       "id": 314,
-      "new_description": "At + 30 / 6 HP & Sometimes Instant Death (8% prob.)",
+      "new_description": "Sickle cursed by dead. At+30 for 6 HP, 8% Instant Death",
       "max_chars": 63,
-      "current_chars": 51,
+      "current_chars": 55,
       "auction_price": 10,
       "auction_price_id": 20,
       "auction_price_source": "extracted_from_item_structure"
@@ -11806,9 +11806,9 @@
         "0x02BD3524"
       ],
       "id": 315,
-      "new_description": "MDEF+2",
+      "new_description": "Robe of dead devours soul. Causes gradual decay",
       "max_chars": 63,
-      "current_chars": 6,
+      "current_chars": 47,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
