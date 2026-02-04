@@ -227,12 +227,11 @@ REM ========================================================================
 REM Logging function - writes to both console and log file
 REM ========================================================================
 :log
-set "MSG=%~1"
-if "%MSG%"=="" (
+if "%~1"=="" (
     echo.
-    echo. >> "%LOGFILE%"
+    echo. >> "%LOGFILE%" 2>nul
 ) else (
-    echo.%MSG%
-    echo.%MSG% >> "%LOGFILE%"
+    <nul set /p "=.%~1" & echo.
+    <nul set /p "=.%~1" >> "%LOGFILE%" 2>nul & echo. >> "%LOGFILE%" 2>nul
 )
 goto :eof
