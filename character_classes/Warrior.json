@@ -1,0 +1,40 @@
+{
+  "class_name": "Warrior",
+  "offset_in_blaze_all": "0x0090B6E8",
+  "description": "Physical damage dealer with high HP and strength",
+  "playstyle": "Melee fighter, tank",
+  "base_stats": {
+    "level_1": {
+      "hp": null,
+      "mp": null,
+      "strength": null,
+      "defense": null,
+      "magic": null,
+      "magic_defense": null,
+      "speed": null,
+      "luck": null,
+      "notes": "Values to be determined through testing"
+    }
+  },
+  "stat_growth": {
+    "hp_per_level": 6,
+    "mp_per_level": 6,
+    "strength_per_level": 4,
+    "defense_per_level": 2,
+    "magic_per_level": 4,
+    "magic_defense_per_level": 7,
+    "speed_per_level": 7,
+    "luck_per_level": 2,
+    "notes": "Extracted from SLES_008.45 @ 0x0002BBFE"
+  },
+  "spell_list_id": null,
+  "research_status": {
+    "base_stats_found": false,
+    "growth_rates_found": true,
+    "spell_list_mapped": false,
+    "last_updated": "2026-02-04"
+  },
+  "notes": [
+    "Class data located at 0x0090B6E8 in BLAZE.ALL"
+  ]
+}

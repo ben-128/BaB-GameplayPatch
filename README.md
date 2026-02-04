@@ -42,10 +42,17 @@ GameplayPatch/
 │   ├── restore_original.bat    Restauration
 │   └── AUCTION_PRICE_SOLUTION.md  Documentation technique
 │
-└── spells/                     ✨ Base de données des sorts (90 sorts)
-    ├── *.json                  Fichiers individuels par sort
-    ├── INDEX.json              Vue d'ensemble
-    └── README.md               Documentation
+├── spells/                     ✨ Base de données des sorts (90 sorts)
+│   ├── *.json                  Fichiers individuels par sort
+│   ├── INDEX.json              Vue d'ensemble
+│   └── README.md               Documentation
+│
+└── character_classes/          🎭 Statistiques des classes (EN RECHERCHE)
+    ├── *.json                  Templates par classe (8 classes)
+    ├── _index.json             Index des classes
+    ├── explore_class_stats.py  Analyse de la zone mémoire
+    ├── DISCOVERY_REPORT.md     Découvertes détaillées
+    └── RESEARCH_GUIDE.md       Guide de recherche
 
 ```
 
@@ -168,6 +175,30 @@ Voir `spells/README.md` pour documentation complète.
 
 ---
 
+### 🎭 Character Classes (EN RECHERCHE)
+
+**Statut :** Structure identifiée, tests in-game requis
+
+**8 classes découvertes** avec versions Male/Female :
+- Warrior, Priest, Rogue, Sorcerer, Hunter, Elf, Dwarf, Fairy
+
+**Zone mémoire :** `0x0090B6E8 - 0x0090B7BC` dans BLAZE.ALL
+**Pattern trouvé :** `0B 01 D9 00` après chaque nom de classe
+
+**Données manquantes :**
+- Stats de base (HP, MP, Strength, Defense, etc.)
+- Progression par niveau
+- Mapping avec les 7 listes de sorts
+
+**Fichiers :**
+- Templates JSON pour chaque classe
+- Scripts d'analyse mémoire
+- Guide de recherche complet
+
+Voir `character_classes/RESEARCH_GUIDE.md` pour participer à la recherche.
+
+---
+
 ## 🔬 Méthodologie
 
 Toutes les données ont été extraites par **reverse engineering** du fichier `BLAZE.ALL` (46 MB) :
@@ -204,6 +235,7 @@ Le script `build_gameplay_patch.bat` exécute dans l'ordre :
 - **Monstres** : 124 (101 normaux + 23 boss)
 - **Sorts** : 90
 - **Items Fate Coin** : 23
+- **Classes de personnages** : 8 (+ versions M/F)
 - **Auction Prices** : 8 confirmés (recherche en cours)
 
 ---
@@ -229,6 +261,7 @@ Le script `build_gameplay_patch.bat` exécute dans l'ordre :
 
 ## 📅 Historique
 
+- **2026-02-04** : Character classes : Zone mémoire identifiée, 8 classes découvertes
 - **2026-02-04** : Organisation en sous-dossiers modulaires
 - **2026-02-04** : Découverte table prix enchères (0x002EA500)
 - **2026-02-04** : Monster stats : 124 monstres organisés

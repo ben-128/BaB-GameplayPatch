@@ -57,7 +57,9 @@ echo [OK] Found Blaze ^& Blade - Patched.bin
 
 REM Get original file sizes
 for %%A in ("..\work\BLAZE.ALL") do set "BLAZE_SIZE_BEFORE=%%~zA"
-for %%A in ("..\work\Blaze & Blade - Patched.bin") do set "BIN_SIZE_BEFORE=%%~zA"
+pushd "..\work"
+for %%A in ("Blaze & Blade - Patched.bin") do set "BIN_SIZE_BEFORE=%%~zA"
+popd
 
 echo.
 echo [INFO] BLAZE.ALL size: %BLAZE_SIZE_BEFORE% bytes
@@ -93,11 +95,13 @@ if errorlevel 1 (
     )
 
     REM Verify BLAZE.ALL was modified
-    for %%A in ("..\work\BLAZE.ALL") do set "BLAZE_SIZE_AFTER=%%~zA"
-    if "%BLAZE_SIZE_BEFORE%"=="%BLAZE_SIZE_AFTER%" (
-        echo [OK] BLAZE.ALL size unchanged: %BLAZE_SIZE_AFTER% bytes
+    pushd "..\work"
+    for %%A in ("BLAZE.ALL") do set "BLAZE_SIZE_AFTER=%%~zA"
+    popd
+    if "%BLAZE_SIZE_BEFORE%"=="!BLAZE_SIZE_AFTER!" (
+        echo [OK] BLAZE.ALL size unchanged: !BLAZE_SIZE_AFTER! bytes
     ) else (
-        echo [WARNING] BLAZE.ALL size changed: %BLAZE_SIZE_BEFORE% -^> %BLAZE_SIZE_AFTER% bytes
+        echo [WARNING] BLAZE.ALL size changed: %BLAZE_SIZE_BEFORE% -^> !BLAZE_SIZE_AFTER! bytes
     )
 )
 
@@ -123,11 +127,13 @@ if errorlevel 1 (
     echo [SUCCESS] BIN patching completed
 
     REM Verify BIN was modified
-    for %%A in ("..\work\Blaze & Blade - Patched.bin") do set "BIN_SIZE_AFTER=%%~zA"
-    if "%BIN_SIZE_BEFORE%"=="%BIN_SIZE_AFTER%" (
-        echo [OK] BIN size unchanged: %BIN_SIZE_AFTER% bytes
+    pushd "..\work"
+    for %%A in ("Blaze & Blade - Patched.bin") do set "BIN_SIZE_AFTER=%%~zA"
+    popd
+    if "%BIN_SIZE_BEFORE%"=="!BIN_SIZE_AFTER!" (
+        echo [OK] BIN size unchanged: !BIN_SIZE_AFTER! bytes
     ) else (
-        echo [WARNING] BIN size changed: %BIN_SIZE_BEFORE% -^> %BIN_SIZE_AFTER% bytes
+        echo [WARNING] BIN size changed: %BIN_SIZE_BEFORE% -^> !BIN_SIZE_AFTER! bytes
     )
 )
 

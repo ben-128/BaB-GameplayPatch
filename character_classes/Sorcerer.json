@@ -1,0 +1,40 @@
+{
+  "class_name": "Sorcerer",
+  "offset_in_blaze_all": "0x0090B718",
+  "description": "Pure magic class with high MP and spell damage",
+  "playstyle": "Magic damage dealer",
+  "base_stats": {
+    "level_1": {
+      "hp": null,
+      "mp": null,
+      "strength": null,
+      "defense": null,
+      "magic": null,
+      "magic_defense": null,
+      "speed": null,
+      "luck": null,
+      "notes": "Values to be determined through testing"
+    }
+  },
+  "stat_growth": {
+    "hp_per_level": 5,
+    "mp_per_level": 5,
+    "strength_per_level": 3,
+    "defense_per_level": 6,
+    "magic_per_level": 7,
+    "magic_defense_per_level": 2,
+    "speed_per_level": 4,
+    "luck_per_level": 3,
+    "notes": "Extracted from SLES_008.45 @ 0x0002BBFE"
+  },
+  "spell_list_id": null,
+  "research_status": {
+    "base_stats_found": false,
+    "growth_rates_found": true,
+    "spell_list_mapped": false,
+    "last_updated": "2026-02-04"
+  },
+  "notes": [
+    "Class data located at 0x0090B718 in BLAZE.ALL"
+  ]
+}

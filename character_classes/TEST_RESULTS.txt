@@ -1,0 +1,35 @@
+RESULTATS DES TESTS IN-GAME
+================================================================================
+
+Instructions:
+  - Pour chaque TEST_BYTEN, noter quelle stat explose
+  - Remplir le tableau ci-dessous
+
+--------------------------------------------------------------------------------
+
+| Byte | Fichier de test      | Stat identifiee | Valeur observee |
+|------|----------------------|-----------------|------------------|
+| [0]  | SLES_008.45_TEST_BYTE0 | ???             | ???              |
+| [1]  | SLES_008.45_TEST_BYTE1 | ???             | ???              |
+| [2]  | SLES_008.45_TEST_BYTE2 | ???             | ???              |
+| [3]  | SLES_008.45_TEST_BYTE3 | ???             | ???              |
+| [4]  | SLES_008.45_TEST_BYTE4 | ???             | ???              |
+| [5]  | SLES_008.45_TEST_BYTE5 | ???             | ???              |
+| [6]  | SLES_008.45_TEST_BYTE6 | ???             | ???              |
+| [7]  | SLES_008.45_TEST_BYTE7 | ???             | ???              |
+
+--------------------------------------------------------------------------------
+
+Stats possibles:
+  - HP (si monte de ~2000+, car derive de Con/etc)
+  - MP (si monte de ~2000+, car derive de Int/Pow/etc)
+  - Str (Strength)
+  - Wil (Will)
+  - Con (Constitution)
+  - Int (Intelligence)
+  - Agl (Agility)
+  - Pow (Power)
+
+Notes:
+  - Si HP/MP explosent, c'est que le byte controle leur growth direct
+  - Ou bien le byte controle une stat qui influence HP/MP (Con->HP, Int->MP)

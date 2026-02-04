@@ -1,0 +1,79 @@
+{
+  "description": "Character Classes Index - Blaze & Blade: Eternal Quest",
+  "total_classes": 9,
+  "classes": [
+    {
+      "name": "Dwarf",
+      "offset": "0x007EDE4B",
+      "file": "Dwarf.json",
+      "description": "Strong and durable with earth affinity"
+    },
+    {
+      "name": "Elf",
+      "offset": "0x0090B734",
+      "file": "Elf.json",
+      "description": "Balanced class with nature magic"
+    },
+    {
+      "name": "Fairy",
+      "offset": "0x0090B74C",
+      "file": "Fairy.json",
+      "description": "Magic-focused with enchantment abilities"
+    },
+    {
+      "name": "Fighter",
+      "offset": "0x00919984",
+      "file": "Fighter.json",
+      "description": "Combat specialist with weapon mastery"
+    },
+    {
+      "name": "Priest",
+      "offset": "0x0090B6F8",
+      "file": "Priest.json",
+      "description": "Healer and support class with holy magic"
+    },
+    {
+      "name": "Ranger",
+      "offset": "0x01FB854C",
+      "file": "Ranger.json",
+      "description": "Ranged specialist with nature skills"
+    },
+    {
+      "name": "Thief",
+      "offset": "0x0152AD8C",
+      "file": "Thief.json",
+      "description": "Agile rogue with stealth and tricks"
+    },
+    {
+      "name": "Warrior",
+      "offset": "0x0090B6E8",
+      "file": "Warrior.json",
+      "description": "Physical damage dealer with high HP and strength"
+    },
+    {
+      "name": "Wizard",
+      "offset": "0x0163CF0C",
+      "file": "Wizard.json",
+      "description": "Pure magic class with high MP and spell damage"
+    }
+  ],
+  "main_zone": {
+    "description": "Primary class data zone in BLAZE.ALL",
+    "start_offset": "0x0090B6E8",
+    "end_offset": "0x0090B7BC",
+    "size_bytes": 212,
+    "classes_in_zone": [
+      "Warrior",
+      "Priest",
+      "Elf",
+      "Fairy"
+    ]
+  },
+  "research_notes": [
+    "Zone 0x0090B6E8 - 0x0090B7BC contains class names and likely stats",
+    "7 spell lists found at 0x002CA424 (see spells/CLASS_DATA_ANALYSIS.md)",
+    "Fate Coin Shop has class-specific items (see fate_coin_shop/fate_coin_shop.json)",
+    "Monster stats structure (40 stats) may be similar to character stats",
+    "In-game testing required to validate all data"
+  ]
+}
