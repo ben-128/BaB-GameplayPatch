@@ -19,6 +19,9 @@ set LASTLOG=logs\last_build.log
 REM Clear last log
 if exist "%LASTLOG%" del "%LASTLOG%"
 
+REM Initialize log file
+echo. > "%LOGFILE%"
+
 REM Start logging
 call :log ""
 call :log "========================================================================"
@@ -219,7 +222,12 @@ REM ========================================================================
 REM Logging function - writes to both console and log file
 REM ========================================================================
 :log
-set MSG=%~1
-echo %MSG%
-echo %MSG% >> "%LOGFILE%"
+set "MSG=%~1"
+if "%MSG%"=="" (
+    echo.
+    echo. >> "%LOGFILE%"
+) else (
+    echo %MSG%
+    echo %MSG% >> "%LOGFILE%"
+)
 goto :eof
