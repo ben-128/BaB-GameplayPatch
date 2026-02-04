@@ -5526,9 +5526,9 @@
         "0x00F996F4"
       ],
       "id": 159,
-      "new_description": "Wave | S+20,I+40,W+30,A+15,C+25,P+35,M+20,MD+20",
+      "new_description": "Wave | S+20,I+40,W+30,A+15,C+25,P+35,MA+20,MD+20",
       "max_chars": 63,
-      "current_chars": 47
+      "current_chars": 48
     },
     {
       "name": "Fabnihl",
@@ -10735,9 +10735,9 @@
         "0x02850D64"
       ],
       "id": 305,
-      "new_description": "Crit+5% | S+12,I+8,W+8,A+12,C+12,P+8,L+16,M+30",
+      "new_description": "Crit+5% | S+12,I+8,W+8,A+12,C+12,P+8,L+16,MA+30",
       "max_chars": 63,
-      "current_chars": 46
+      "current_chars": 47
     },
     {
       "name": "Godswand",
@@ -11033,9 +11033,9 @@
         "0x02BB421C"
       ],
       "id": 313,
-      "new_description": "HP-5%,Crit+5% | All+32,M+100,MD+100",
+      "new_description": "HP-5%,Crit+5% | All+32,MA+100,MD+100",
       "max_chars": 63,
-      "current_chars": 35
+      "current_chars": 36
     },
     {
       "name": "Death Sickle",
