@@ -5,7 +5,7 @@
     "total_items": 316,
     "faq_items_total": 376,
     "extraction_date": "2026-02-04",
-    "note": "Extraction avec fuzzy matching. new_description: description ou special_effects | attributes"
+    "note": "Extraction avec fuzzy matching. new_description: description ou special_effects | attributes. max_chars: limite dans le binaire"
   },
   "items": [
     {
@@ -38,7 +38,9 @@
         "0x006C6800"
       ],
       "id": 0,
-      "new_description": "A good sword for beginners to use."
+      "new_description": "A good sword for beginners to use.",
+      "max_chars": 63,
+      "current_chars": 34
     },
     {
       "name": "Leather Armor",
@@ -75,7 +77,9 @@
         "0x006D2A80"
       ],
       "id": 1,
-      "new_description": "Armor made of thick leather."
+      "new_description": "Armor made of thick leather.",
+      "max_chars": 63,
+      "current_chars": 28
     },
     {
       "name": "Leather Shield",
@@ -97,7 +101,9 @@
         "0x006D2D00"
       ],
       "id": 2,
-      "new_description": "A light, easily used leather shield."
+      "new_description": "A light, easily used leather shield.",
+      "max_chars": 63,
+      "current_chars": 36
     },
     {
       "name": "Healing Potion",
@@ -128,7 +134,9 @@
         "0x00B64768"
       ],
       "id": 3,
-      "new_description": "Common potion.(Restores HP to single unit)"
+      "new_description": "Common potion.(Restores HP to single unit)",
+      "max_chars": 63,
+      "current_chars": 42
     },
     {
       "name": "Club",
@@ -163,7 +171,9 @@
         "0x0149833E"
       ],
       "id": 4,
-      "new_description": "A wooden club."
+      "new_description": "A wooden club.",
+      "max_chars": 63,
+      "current_chars": 14
     },
     {
       "name": "Robe",
@@ -205,7 +215,9 @@
         "0x00E69558"
       ],
       "id": 5,
-      "new_description": "MDEF+2"
+      "new_description": "MDEF+2",
+      "max_chars": 63,
+      "current_chars": 6
     },
     {
       "name": "Dagger",
@@ -246,7 +258,9 @@
         "0x020772D7"
       ],
       "id": 6,
-      "new_description": "A normal, easily-to-use dagger."
+      "new_description": "A normal, easily-to-use dagger.",
+      "max_chars": 63,
+      "current_chars": 31
     },
     {
       "name": "Wooden Wand",
@@ -278,7 +292,9 @@
         "0x006CC800"
       ],
       "id": 7,
-      "new_description": "MAT+2"
+      "new_description": "MAT+2",
+      "max_chars": 63,
+      "current_chars": 5
     },
     {
       "name": "Shortbow",
@@ -310,7 +326,9 @@
         "0x006CE800"
       ],
       "id": 8,
-      "new_description": "A simply made bow."
+      "new_description": "A simply made bow.",
+      "max_chars": 63,
+      "current_chars": 18
     },
     {
       "name": "Shortsword",
@@ -342,7 +360,9 @@
         "0x006D0800"
       ],
       "id": 9,
-      "new_description": "A normal, easy-to-wiel shortsword."
+      "new_description": "A normal, easy-to-wiel shortsword.",
+      "max_chars": 63,
+      "current_chars": 34
     },
     {
       "name": "Tomahawk",
@@ -374,7 +394,9 @@
         "0x006D2800"
       ],
       "id": 10,
-      "new_description": "A small, easy-to-wield axe."
+      "new_description": "A small, easy-to-wield axe.",
+      "max_chars": 63,
+      "current_chars": 27
     },
     {
       "name": "Rod",
@@ -415,7 +437,9 @@
         "0x00F96979"
       ],
       "id": 11,
-      "new_description": "A small rod, favored by fairies."
+      "new_description": "A small rod, favored by fairies.",
+      "max_chars": 63,
+      "current_chars": 32
     },
     {
       "name": "Fire Jewel",
@@ -447,7 +471,9 @@
         "0x0297285C"
       ],
       "id": 12,
-      "new_description": ""
+      "new_description": "",
+      "max_chars": 63,
+      "current_chars": 0
     },
     {
       "name": "Lightbolt",
@@ -488,7 +514,9 @@
         "0x0172B860"
       ],
       "id": 13,
-      "new_description": "Shoots Magic Missile / 10 MP"
+      "new_description": "Shoots Magic Missile / 10 MP",
+      "max_chars": 63,
+      "current_chars": 28
     },
     {
       "name": "Thunderbolt",
@@ -527,7 +555,9 @@
         "0x02232048"
       ],
       "id": 14,
-      "new_description": "MAT+12"
+      "new_description": "MAT+12",
+      "max_chars": 63,
+      "current_chars": 6
     },
     {
       "name": "Lavender",
@@ -561,7 +591,9 @@
         "0x01108958"
       ],
       "id": 15,
-      "new_description": ""
+      "new_description": "",
+      "max_chars": 63,
+      "current_chars": 0
     },
     {
       "name": "Sage",
@@ -608,7 +640,9 @@
         "0x0152E48C"
       ],
       "id": 16,
-      "new_description": "STR+24, INT+32, WIL+32, AGL+24, CON+24, POW+32, LUK+32, MDEF+97"
+      "new_description": "STR+24, INT+32, WIL+32, AGL+24, CON+24, POW+32, LUK+32, MDEF+97",
+      "max_chars": 63,
+      "current_chars": 63
     },
     {
       "name": "Hyssop",
@@ -638,7 +672,9 @@
         "0x013542D4"
       ],
       "id": 17,
-      "new_description": ""
+      "new_description": "",
+      "max_chars": 63,
+      "current_chars": 0
     },
     {
       "name": "Fennel",
@@ -671,7 +707,9 @@
         "0x01353854"
       ],
       "id": 18,
-      "new_description": ""
+      "new_description": "",
+      "max_chars": 63,
+      "current_chars": 0
     },
     {
       "name": "Belladonna",
@@ -701,7 +739,9 @@
         "0x028A8478"
       ],
       "id": 19,
-      "new_description": ""
+      "new_description": "",
+      "max_chars": 63,
+      "current_chars": 0
     },
     {
       "name": "Healing Pin",
@@ -728,7 +768,9 @@
         "0x01259558"
       ],
       "id": 20,
-      "new_description": "Acupuncture needle.(Restores HP 25% dest.)"
+      "new_description": "Acupuncture needle.(Restores HP 25% dest.)",
+      "max_chars": 63,
+      "current_chars": 42
     },
     {
       "name": "Material Earth",
@@ -758,7 +800,9 @@
         "0x01C97B18"
       ],
       "id": 21,
-      "new_description": "Magic crystal earth.(Earth attr. to weapon)"
+      "new_description": "Magic crystal earth.(Earth attr. to weapon)",
+      "max_chars": 63,
+      "current_chars": 43
     },
     {
       "name": "Material Flame",
@@ -788,7 +832,9 @@
         "0x02A8EED4"
       ],
       "id": 22,
-      "new_description": "Magic crystal fire.(Fire attr. to weapon)"
+      "new_description": "Magic crystal fire.(Fire attr. to weapon)",
+      "max_chars": 63,
+      "current_chars": 41
     },
     {
       "name": "Material Wind",
@@ -818,7 +864,9 @@
         "0x029F0D68"
       ],
       "id": 23,
-      "new_description": "Magic crystalize wind.(Wind attr. to weapon)"
+      "new_description": "Magic crystalize wind.(Wind attr. to weapon)",
+      "max_chars": 63,
+      "current_chars": 44
     },
     {
       "name": "Material Light",
@@ -848,7 +896,9 @@
         "0x01D29680"
       ],
       "id": 24,
-      "new_description": "Magic crystal light.(Light attr. to weapon)"
+      "new_description": "Magic crystal light.(Light attr. to weapon)",
+      "max_chars": 63,
+      "current_chars": 43
     },
     {
       "name": "Material Holy",
@@ -873,7 +923,9 @@
         "0x025D4CCC"
       ],
       "id": 25,
-      "new_description": "Crystal Divinity.(Holy attr. to weapon)"
+      "new_description": "Crystal Divinity.(Holy attr. to weapon)",
+      "max_chars": 63,
+      "current_chars": 39
     },
     {
       "name": "Material Evil",
@@ -903,7 +955,9 @@
         "0x01D938C8"
       ],
       "id": 26,
-      "new_description": "Crystalized evil.(Evil attribute to weapon)"
+      "new_description": "Crystalized evil.(Evil attribute to weapon)",
+      "max_chars": 63,
+      "current_chars": 43
     },
     {
       "name": "Material Magic",
@@ -933,7 +987,9 @@
         "0x017FD070"
       ],
       "id": 27,
-      "new_description": "Crystal of solid magic.(Strengthens weapon)"
+      "new_description": "Crystal of solid magic.(Strengthens weapon)",
+      "max_chars": 63,
+      "current_chars": 43
     },
     {
       "name": "Guardian Robe",
@@ -973,7 +1029,9 @@
         "0x028A4AF8"
       ],
       "id": 28,
-      "new_description": "MDEF+2"
+      "new_description": "MDEF+2",
+      "max_chars": 63,
+      "current_chars": 6
     },
     {
       "name": "Sun Shield",
@@ -1009,7 +1067,9 @@
         "0x02436A5C"
       ],
       "id": 29,
-      "new_description": "Regenerate HP by 2"
+      "new_description": "Regenerate HP by 2",
+      "max_chars": 63,
+      "current_chars": 18
     },
     {
       "name": "Gabriel",
@@ -1045,7 +1105,9 @@
         "0x00A7F230"
       ],
       "id": 30,
-      "new_description": "Holy atk magic + 50%"
+      "new_description": "Holy atk magic + 50%",
+      "max_chars": 63,
+      "current_chars": 20
     },
     {
       "name": "Golden Harp",
@@ -1081,7 +1143,9 @@
         "0x028A6DF8"
       ],
       "id": 31,
-      "new_description": "Strange golden dagger, favored by ancient heroes."
+      "new_description": "Strange golden dagger, favored by ancient heroes.",
+      "max_chars": 63,
+      "current_chars": 49
     },
     {
       "name": "Winged Boots",
@@ -1118,7 +1182,9 @@
         "0x025930C4"
       ],
       "id": 32,
-      "new_description": "Immune to Slow | AGL+12"
+      "new_description": "Immune to Slow | AGL+12",
+      "max_chars": 63,
+      "current_chars": 23
     },
     {
       "name": "Gauntlets",
@@ -1156,7 +1222,9 @@
         "0x00C3F260"
       ],
       "id": 33,
-      "new_description": ""
+      "new_description": "",
+      "max_chars": 63,
+      "current_chars": 0
     },
     {
       "name": "Material Water",
@@ -1185,7 +1253,9 @@
         "0x02908FE4"
       ],
       "id": 34,
-      "new_description": "Magic crystal water.(Water attr. to weapon)"
+      "new_description": "Magic crystal water.(Water attr. to weapon)",
+      "max_chars": 63,
+      "current_chars": 43
     },
     {
       "name": "Elixir",
@@ -1215,7 +1285,9 @@
         "0x02500514"
       ],
       "id": 35,
-      "new_description": "Legendary medicine.(Completely restores MP and HP)"
+      "new_description": "Legendary medicine.(Completely restores MP and HP)",
+      "max_chars": 63,
+      "current_chars": 50
     },
     {
       "name": "Ambrosia",
@@ -1245,7 +1317,9 @@
         "0x016C0278"
       ],
       "id": 36,
-      "new_description": "Nectar of the \"Changing Flower\".(Resurrection)"
+      "new_description": "Nectar of the \"Changing Flower\".(Resurrection)",
+      "max_chars": 63,
+      "current_chars": 46
     },
     {
       "name": "Cross",
@@ -1280,7 +1354,9 @@
         "0x01AE8548"
       ],
       "id": 37,
-      "new_description": "Immune to Curse"
+      "new_description": "Immune to Curse",
+      "max_chars": 63,
+      "current_chars": 15
     },
     {
       "name": "Healing Amulet",
@@ -1307,7 +1383,9 @@
         "0x0199E84C"
       ],
       "id": 38,
-      "new_description": "Regenerate HP by 1"
+      "new_description": "Regenerate HP by 1",
+      "max_chars": 63,
+      "current_chars": 18
     },
     {
       "name": "Water Mirror",
@@ -1341,7 +1419,9 @@
         "0x012DCA78"
       ],
       "id": 39,
-      "new_description": "Reveal enemies’ alignment/element"
+      "new_description": "Reveal enemies’ alignment/element",
+      "max_chars": 63,
+      "current_chars": 33
     },
     {
       "name": "Elemental Ring",
@@ -1366,7 +1446,9 @@
         "0x0243745C"
       ],
       "id": 40,
-      "new_description": "Elemental Attack (fire,water,wind,earth) + 50%"
+      "new_description": "Elemental Attack (fire,water,wind,earth) + 50%",
+      "max_chars": 63,
+      "current_chars": 46
     },
     {
       "name": "Guardian Armor",
@@ -1394,7 +1476,9 @@
         "0x02853564"
       ],
       "id": 41,
-      "new_description": "Armor forged by the warlords of hell."
+      "new_description": "Armor forged by the warlords of hell.",
+      "max_chars": 63,
+      "current_chars": 37
     },
     {
       "name": "Sol Crown",
@@ -1416,7 +1500,9 @@
         "0x01D25000"
       ],
       "id": 42,
-      "new_description": "MP consumption - 50%"
+      "new_description": "MP consumption - 50%",
+      "max_chars": 63,
+      "current_chars": 20
     },
     {
       "name": "Fenris",
@@ -1451,7 +1537,9 @@
         "0x02A8E4D4"
       ],
       "id": 43,
-      "new_description": ""
+      "new_description": "",
+      "max_chars": 63,
+      "current_chars": 0
     },
     {
       "name": "Strong Gloves",
@@ -1493,7 +1581,9 @@
         "0x01D933C8"
       ],
       "id": 44,
-      "new_description": "STR+8"
+      "new_description": "STR+8",
+      "max_chars": 63,
+      "current_chars": 5
     },
     {
       "name": "Wish Hammer",
@@ -1530,7 +1620,9 @@
         "0x028A4878"
       ],
       "id": 45,
-      "new_description": "At + 40 when HP 1/4"
+      "new_description": "At + 40 when HP 1/4",
+      "max_chars": 63,
+      "current_chars": 19
     },
     {
       "name": "Dark Shield",
@@ -1568,7 +1660,9 @@
         "0x02A90D54"
       ],
       "id": 46,
-      "new_description": "Helps against magic-absorbing barriers."
+      "new_description": "Helps against magic-absorbing barriers.",
+      "max_chars": 63,
+      "current_chars": 39
     },
     {
       "name": "Ringnail",
@@ -1601,7 +1695,9 @@
         "0x02850AE4"
       ],
       "id": 47,
-      "new_description": "A special small dagger which is hidden within a ring."
+      "new_description": "A special small dagger which is hidden within a ring.",
+      "max_chars": 63,
+      "current_chars": 53
     },
     {
       "name": "Crystal Wand",
@@ -1635,7 +1731,9 @@
         "0x00AAF390"
       ],
       "id": 48,
-      "new_description": "Critical attack ratio + 4% | POW+70, MAT+12"
+      "new_description": "Critical attack ratio + 4% | POW+70, MAT+12",
+      "max_chars": 63,
+      "current_chars": 43
     },
     {
       "name": "Falconbolt",
@@ -1671,7 +1769,9 @@
         "0x021AEE88"
       ],
       "id": 49,
-      "new_description": "Shoots 2 arrows in one attack"
+      "new_description": "Shoots 2 arrows in one attack",
+      "max_chars": 63,
+      "current_chars": 29
     },
     {
       "name": "Chaos Rapier",
@@ -1711,7 +1811,9 @@
         "0x028011E8"
       ],
       "id": 50,
-      "new_description": "Sometimes confuse the enemy (12.5 % probability)"
+      "new_description": "Sometimes confuse the enemy (12.5 % probability)",
+      "max_chars": 63,
+      "current_chars": 48
     },
     {
       "name": "Rapier",
@@ -1752,7 +1854,9 @@
         "0x011E96FC"
       ],
       "id": 51,
-      "new_description": ""
+      "new_description": "",
+      "max_chars": 63,
+      "current_chars": 0
     },
     {
       "name": "Frost Axe",
@@ -1791,7 +1895,9 @@
         "0x02908D64"
       ],
       "id": 52,
-      "new_description": "A demon forged axe with blades of ice."
+      "new_description": "A demon forged axe with blades of ice.",
+      "max_chars": 63,
+      "current_chars": 38
     },
     {
       "name": "Silver Rod",
@@ -1825,7 +1931,9 @@
         "0x00B63868"
       ],
       "id": 53,
-      "new_description": "A silver rod with holy script engraved upon it."
+      "new_description": "A silver rod with holy script engraved upon it.",
+      "max_chars": 63,
+      "current_chars": 47
     },
     {
       "name": "Fey Rod",
@@ -1869,7 +1977,9 @@
         "0x029067E4"
       ],
       "id": 54,
-      "new_description": "At + (Enemy level / 3)"
+      "new_description": "At + (Enemy level / 3)",
+      "max_chars": 63,
+      "current_chars": 22
     },
     {
       "name": "Luck Talisman",
@@ -1901,7 +2011,9 @@
         "0x00D88CD0"
       ],
       "id": 55,
-      "new_description": "LUK+32"
+      "new_description": "LUK+32",
+      "max_chars": 63,
+      "current_chars": 6
     },
     {
       "name": "Talisman",
@@ -1941,7 +2053,9 @@
         "0x01DFF660"
       ],
       "id": 56,
-      "new_description": "MP regeneration + 2"
+      "new_description": "MP regeneration + 2",
+      "max_chars": 63,
+      "current_chars": 19
     },
     {
       "name": "Fairy Perfume",
@@ -1971,7 +2085,9 @@
         "0x028A9678"
       ],
       "id": 57,
-      "new_description": "Created by fairies.(Activates Invincible)"
+      "new_description": "Created by fairies.(Activates Invincible)",
+      "max_chars": 63,
+      "current_chars": 41
     },
     {
       "name": "Fairy Wings",
@@ -2001,7 +2117,9 @@
         "0x02906064"
       ],
       "id": 58,
-      "new_description": "A copy of fairy wings.(Levitate 25%dest.)"
+      "new_description": "A copy of fairy wings.(Levitate 25%dest.)",
+      "max_chars": 63,
+      "current_chars": 41
     },
     {
       "name": "Fairy Powder",
@@ -2031,7 +2149,9 @@
         "0x028A86F8"
       ],
       "id": 59,
-      "new_description": "Made from fairy wings.(Activates Anti-Circle)"
+      "new_description": "Made from fairy wings.(Activates Anti-Circle)",
+      "max_chars": 63,
+      "current_chars": 45
     },
     {
       "name": "Mind Potion",
@@ -2061,7 +2181,9 @@
         "0x01FB91CC"
       ],
       "id": 60,
-      "new_description": "Enchanted medicine.(Restores MP)"
+      "new_description": "Enchanted medicine.(Restores MP)",
+      "max_chars": 63,
+      "current_chars": 32
     },
     {
       "name": "Herbal Candy",
@@ -2082,7 +2204,9 @@
         "0x00B64C68"
       ],
       "id": 61,
-      "new_description": "Strange tasting herbal candy.(? ? ?)"
+      "new_description": "Strange tasting herbal candy.(? ? ?)",
+      "max_chars": 63,
+      "current_chars": 36
     },
     {
       "name": "Fine Axe",
@@ -2115,7 +2239,9 @@
         "0x0152CE0C"
       ],
       "id": 62,
-      "new_description": "A very fine axe forged by great smiths."
+      "new_description": "A very fine axe forged by great smiths.",
+      "max_chars": 63,
+      "current_chars": 39
     },
     {
       "name": "Holy Lamp",
@@ -2138,7 +2264,9 @@
         "0x0163DB8C"
       ],
       "id": 63,
-      "new_description": "Ornamental lamp.(Casts Holy Word 20% Dest.)"
+      "new_description": "Ornamental lamp.(Casts Holy Word 20% Dest.)",
+      "max_chars": 63,
+      "current_chars": 43
     },
     {
       "name": "Fate Coin",
@@ -2168,7 +2296,9 @@
         "0x013BC13C"
       ],
       "id": 64,
-      "new_description": "It shows the Goddess of luck.(Changes Luck)"
+      "new_description": "It shows the Goddess of luck.(Changes Luck)",
+      "max_chars": 63,
+      "current_chars": 43
     },
     {
       "name": "Skull Wand",
@@ -2191,7 +2321,9 @@
         "0x011E5574"
       ],
       "id": 65,
-      "new_description": ""
+      "new_description": "",
+      "max_chars": 63,
+      "current_chars": 0
     },
     {
       "name": "Jewel Rod",
@@ -2228,7 +2360,9 @@
         "0x0164038C"
       ],
       "id": 66,
-      "new_description": "A rod with a jewel-encrusted top."
+      "new_description": "A rod with a jewel-encrusted top.",
+      "max_chars": 63,
+      "current_chars": 33
     },
     {
       "name": "Crystal Orb",
@@ -2258,7 +2392,9 @@
         "0x01C9A318"
       ],
       "id": 67,
-      "new_description": "Holds life energy.(Full restoration of HP)"
+      "new_description": "Holds life energy.(Full restoration of HP)",
+      "max_chars": 63,
+      "current_chars": 42
     },
     {
       "name": "Blood Oil",
@@ -2284,7 +2420,9 @@
         "0x020FD8FC"
       ],
       "id": 68,
-      "new_description": "Made from blood.(Temp. increase dark attack)"
+      "new_description": "Made from blood.(Temp. increase dark attack)",
+      "max_chars": 63,
+      "current_chars": 44
     },
     {
       "name": "Fire Orb",
@@ -2308,7 +2446,9 @@
         "0x02972ADC"
       ],
       "id": 69,
-      "new_description": "Orb of fire magic.(Activates Explosion)"
+      "new_description": "Orb of fire magic.(Activates Explosion)",
+      "max_chars": 63,
+      "current_chars": 39
     },
     {
       "name": "Earth Orb",
@@ -2330,7 +2470,9 @@
         "0x01258858"
       ],
       "id": 70,
-      "new_description": "Orb with earth magic.(Activates Earth Javelin)"
+      "new_description": "Orb with earth magic.(Activates Earth Javelin)",
+      "max_chars": 63,
+      "current_chars": 46
     },
     {
       "name": "Earth Necklace",
@@ -2350,7 +2492,9 @@
         "0x01BB1574"
       ],
       "id": 71,
-      "new_description": "Wearer is protected by the powers of earth."
+      "new_description": "Wearer is protected by the powers of earth.",
+      "max_chars": 63,
+      "current_chars": 43
     },
     {
       "name": "Leather Helmet",
@@ -2371,7 +2515,9 @@
         "0x01107CD8"
       ],
       "id": 72,
-      "new_description": "A helmet made of leather."
+      "new_description": "A helmet made of leather.",
+      "max_chars": 63,
+      "current_chars": 25
     },
     {
       "name": "Light Amulet",
@@ -2404,7 +2550,9 @@
         "0x00BE01F8"
       ],
       "id": 73,
-      "new_description": "Darkness elemental damage decreases"
+      "new_description": "Darkness elemental damage decreases",
+      "max_chars": 63,
+      "current_chars": 35
     },
     {
       "name": "Bronze Medal",
@@ -2436,7 +2584,9 @@
         "0x00BE0478"
       ],
       "id": 74,
-      "new_description": "Increases the wearer's defense during attacks."
+      "new_description": "Increases the wearer's defense during attacks.",
+      "max_chars": 63,
+      "current_chars": 46
     },
     {
       "name": "Silver Medal",
@@ -2468,7 +2618,9 @@
         "0x00BE06F8"
       ],
       "id": 75,
-      "new_description": "Increases the wearer's defense during attacks."
+      "new_description": "Increases the wearer's defense during attacks.",
+      "max_chars": 63,
+      "current_chars": 46
     },
     {
       "name": "Gold Medal",
@@ -2490,7 +2642,9 @@
         "0x022327C8"
       ],
       "id": 76,
-      "new_description": "Increases the wearer's defense during attacks."
+      "new_description": "Increases the wearer's defense during attacks.",
+      "max_chars": 63,
+      "current_chars": 46
     },
     {
       "name": "Fine Robe",
@@ -2525,7 +2679,9 @@
         "0x012576D8"
       ],
       "id": 77,
-      "new_description": "MDEF+4"
+      "new_description": "MDEF+4",
+      "max_chars": 63,
+      "current_chars": 6
     },
     {
       "name": "Long Sword",
@@ -2561,7 +2717,9 @@
         "0x016C36F8"
       ],
       "id": 78,
-      "new_description": "Longer than a normal sword."
+      "new_description": "Longer than a normal sword.",
+      "max_chars": 63,
+      "current_chars": 27
     },
     {
       "name": "Round Shield",
@@ -2602,7 +2760,9 @@
         "0x01A8DB58"
       ],
       "id": 79,
-      "new_description": "A simple round shield."
+      "new_description": "A simple round shield.",
+      "max_chars": 63,
+      "current_chars": 22
     },
     {
       "name": "Leather Boots",
@@ -2634,7 +2794,9 @@
         "0x00C3C060"
       ],
       "id": 80,
-      "new_description": "Boots made of comfortable leather."
+      "new_description": "Boots made of comfortable leather.",
+      "max_chars": 63,
+      "current_chars": 34
     },
     {
       "name": "Cloak",
@@ -2676,7 +2838,9 @@
         "0x0163FC12"
       ],
       "id": 81,
-      "new_description": "MDEF+2"
+      "new_description": "MDEF+2",
+      "max_chars": 63,
+      "current_chars": 6
     },
     {
       "name": "Earth Jewel",
@@ -2701,7 +2865,9 @@
         "0x02438ADC"
       ],
       "id": 82,
-      "new_description": "Earth Gem.(Activates Poison Cloud; 25% Dest.)"
+      "new_description": "Earth Gem.(Activates Poison Cloud; 25% Dest.)",
+      "max_chars": 63,
+      "current_chars": 45
     },
     {
       "name": "Full Plate",
@@ -2725,7 +2891,9 @@
         "0x00D2C4E8"
       ],
       "id": 83,
-      "new_description": "Critical attack ratio - 2%"
+      "new_description": "Critical attack ratio - 2%",
+      "max_chars": 63,
+      "current_chars": 26
     },
     {
       "name": "Cure Potion",
@@ -2755,7 +2923,9 @@
         "0x01A3BE40"
       ],
       "id": 84,
-      "new_description": "Restores the body.(Slowly restores status)"
+      "new_description": "Restores the body.(Slowly restores status)",
+      "max_chars": 63,
+      "current_chars": 42
     },
     {
       "name": "Life Potion",
@@ -2785,7 +2955,9 @@
         "0x014B9248"
       ],
       "id": 85,
-      "new_description": "Potion of essence of life.(Restores HP)"
+      "new_description": "Potion of essence of life.(Restores HP)",
+      "max_chars": 63,
+      "current_chars": 39
     },
     {
       "name": "Blood Extract",
@@ -2815,7 +2987,9 @@
         "0x010A263C"
       ],
       "id": 86,
-      "new_description": "Extract of blood.(Restores HP to maximum)"
+      "new_description": "Extract of blood.(Restores HP to maximum)",
+      "max_chars": 63,
+      "current_chars": 41
     },
     {
       "name": "Dragon Scales",
@@ -2856,7 +3030,9 @@
         "0x029F1EE8"
       ],
       "id": 87,
-      "new_description": "LUK+16, MDEF+12"
+      "new_description": "LUK+16, MDEF+12",
+      "max_chars": 63,
+      "current_chars": 15
     },
     {
       "name": "Water Necklace",
@@ -2878,7 +3054,9 @@
         "0x02909264"
       ],
       "id": 88,
-      "new_description": "Wearer is protected by the powers of water."
+      "new_description": "Wearer is protected by the powers of water.",
+      "max_chars": 63,
+      "current_chars": 43
     },
     {
       "name": "Wind Jewel",
@@ -2907,7 +3085,9 @@
         "0x029F19E8"
       ],
       "id": 89,
-      "new_description": "Wind Gem.(Activates Lightning Bolt; 25% Dest.)"
+      "new_description": "Wind Gem.(Activates Lightning Bolt; 25% Dest.)",
+      "max_chars": 63,
+      "current_chars": 46
     },
     {
       "name": "Ice Jewel",
@@ -2934,7 +3114,9 @@
         "0x029080E4"
       ],
       "id": 90,
-      "new_description": "Gem of ice.(Activates Blizzard; 25% Destruction)"
+      "new_description": "Gem of ice.(Activates Blizzard; 25% Destruction)",
+      "max_chars": 63,
+      "current_chars": 48
     },
     {
       "name": "Tasty-drops",
@@ -2955,7 +3137,9 @@
         "0x00CB9CB8"
       ],
       "id": 91,
-      "new_description": "Very tasty candy.(Restores MP and HP)"
+      "new_description": "Very tasty candy.(Restores MP and HP)",
+      "max_chars": 63,
+      "current_chars": 37
     },
     {
       "name": "Defender",
@@ -2998,7 +3182,9 @@
         "0x01F22EF4"
       ],
       "id": 92,
-      "new_description": "Defense dagger for use with the left hand."
+      "new_description": "Defense dagger for use with the left hand.",
+      "max_chars": 63,
+      "current_chars": 42
     },
     {
       "name": "Spirit Extract",
@@ -3028,7 +3214,9 @@
         "0x0200E4DC"
       ],
       "id": 93,
-      "new_description": "Concentrate of spirits.(Restore MP to max.)"
+      "new_description": "Concentrate of spirits.(Restore MP to max.)",
+      "max_chars": 63,
+      "current_chars": 43
     },
     {
       "name": "Protect Ring",
@@ -3066,7 +3254,9 @@
         "0x01F20974"
       ],
       "id": 94,
-      "new_description": "Df + (POW * 25%)"
+      "new_description": "Df + (POW * 25%)",
+      "max_chars": 63,
+      "current_chars": 16
     },
     {
       "name": "Resist Ring",
@@ -3101,7 +3291,9 @@
         "0x0179EE1C"
       ],
       "id": 95,
-      "new_description": "Mdf + (POW * 25%) | MDEF+16"
+      "new_description": "Mdf + (POW * 25%) | MDEF+16",
+      "max_chars": 63,
+      "current_chars": 27
     },
     {
       "name": "Aqua Shawl",
@@ -3137,7 +3329,9 @@
         "0x026637B4"
       ],
       "id": 96,
-      "new_description": "Fire elemental damage decreases | INT+8"
+      "new_description": "Fire elemental damage decreases | INT+8",
+      "max_chars": 63,
+      "current_chars": 39
     },
     {
       "name": "Power Band",
@@ -3171,7 +3365,9 @@
         "0x00F2156C"
       ],
       "id": 97,
-      "new_description": "STR+32"
+      "new_description": "STR+32",
+      "max_chars": 63,
+      "current_chars": 6
     },
     {
       "name": "Fine Boots",
@@ -3204,7 +3400,9 @@
         "0x011E66F4"
       ],
       "id": 98,
-      "new_description": "Beautifully crafted boots made of fine material."
+      "new_description": "Beautifully crafted boots made of fine material.",
+      "max_chars": 63,
+      "current_chars": 48
     },
     {
       "name": "Leather Cloak",
@@ -3239,7 +3437,9 @@
         "0x025D4F4C"
       ],
       "id": 99,
-      "new_description": "MDEF+4"
+      "new_description": "MDEF+4",
+      "max_chars": 63,
+      "current_chars": 6
     },
     {
       "name": "Elven Cloak",
@@ -3274,7 +3474,9 @@
         "0x01800270"
       ],
       "id": 100,
-      "new_description": "INT+4, WIL+4, POW+4, MDEF+8"
+      "new_description": "INT+4, WIL+4, POW+4, MDEF+8",
+      "max_chars": 63,
+      "current_chars": 27
     },
     {
       "name": "Red Spice",
@@ -3296,7 +3498,9 @@
         "0x02075750"
       ],
       "id": 101,
-      "new_description": "Very hot spice.(Increases AT temporarily)"
+      "new_description": "Very hot spice.(Increases AT temporarily)",
+      "max_chars": 63,
+      "current_chars": 41
     },
     {
       "name": "Dragon Amulet",
@@ -3325,7 +3529,9 @@
         "0x029F2168"
       ],
       "id": 102,
-      "new_description": "Engraved with the sacred dragon."
+      "new_description": "Engraved with the sacred dragon.",
+      "max_chars": 63,
+      "current_chars": 32
     },
     {
       "name": "Dragon Horn",
@@ -3362,7 +3568,9 @@
         "0x018730FC"
       ],
       "id": 103,
-      "new_description": "Critical attack ratio + 4% | STR+30, CON+30"
+      "new_description": "Critical attack ratio + 4% | STR+30, CON+30",
+      "max_chars": 63,
+      "current_chars": 43
     },
     {
       "name": "Dragon Tail",
@@ -3400,7 +3608,9 @@
         "0x029F1C68"
       ],
       "id": 104,
-      "new_description": "LUK+20"
+      "new_description": "LUK+20",
+      "max_chars": 63,
+      "current_chars": 6
     },
     {
       "name": "Dragonscale",
@@ -3437,7 +3647,9 @@
         "0x021B0008"
       ],
       "id": 105,
-      "new_description": "Armor forged of the heavy scales of a dragon."
+      "new_description": "Armor forged of the heavy scales of a dragon.",
+      "max_chars": 63,
+      "current_chars": 45
     },
     {
       "name": "Healing Stone",
@@ -3462,7 +3674,9 @@
         "0x02A90054"
       ],
       "id": 106,
-      "new_description": "Stone of healing.(HP to max. 20% Dest.)"
+      "new_description": "Stone of healing.(HP to max. 20% Dest.)",
+      "max_chars": 63,
+      "current_chars": 39
     },
     {
       "name": "Magical Stone",
@@ -3488,7 +3702,9 @@
         "0x02A90AD4"
       ],
       "id": 107,
-      "new_description": "Soothes the spirit.(MP to max. 25% Dest.)"
+      "new_description": "Soothes the spirit.(MP to max. 25% Dest.)",
+      "max_chars": 63,
+      "current_chars": 41
     },
     {
       "name": "Hovering Shoes",
@@ -3510,7 +3726,9 @@
         "0x00D88550"
       ],
       "id": 108,
-      "new_description": "Give the effect of 'Levitate' to character"
+      "new_description": "Give the effect of 'Levitate' to character",
+      "max_chars": 63,
+      "current_chars": 42
     },
     {
       "name": "Iron Helmet",
@@ -3546,7 +3764,9 @@
         "0x023092C4"
       ],
       "id": 109,
-      "new_description": "A soldier's iron helmet."
+      "new_description": "A soldier's iron helmet.",
+      "max_chars": 63,
+      "current_chars": 24
     },
     {
       "name": "Iron Boots",
@@ -3578,7 +3798,9 @@
         "0x00D89450"
       ],
       "id": 110,
-      "new_description": "Heavy but highly protective boots made of iron."
+      "new_description": "Heavy but highly protective boots made of iron.",
+      "max_chars": 63,
+      "current_chars": 47
     },
     {
       "name": "Great Axe",
@@ -3614,7 +3836,9 @@
         "0x01256F58"
       ],
       "id": 111,
-      "new_description": "Critical attack ratio + 6%"
+      "new_description": "Critical attack ratio + 6%",
+      "max_chars": 63,
+      "current_chars": 26
     },
     {
       "name": "Dark Orb",
@@ -3644,7 +3868,9 @@
         "0x020FCC7C"
       ],
       "id": 112,
-      "new_description": "Enchanted with dark magic.(Activates Dark Breath)"
+      "new_description": "Enchanted with dark magic.(Activates Dark Breath)",
+      "max_chars": 63,
+      "current_chars": 49
     },
     {
       "name": "Blessed Ring",
@@ -3683,7 +3909,9 @@
         "0x02075250"
       ],
       "id": 113,
-      "new_description": "MAT+8, MDEF+8"
+      "new_description": "MAT+8, MDEF+8",
+      "max_chars": 63,
+      "current_chars": 13
     },
     {
       "name": "Ice Shield",
@@ -3723,7 +3951,9 @@
         "0x02909CE4"
       ],
       "id": 114,
-      "new_description": "Reduce water elemental attack | MDEF+12"
+      "new_description": "Reduce water elemental attack | MDEF+12",
+      "max_chars": 63,
+      "current_chars": 39
     },
     {
       "name": "Misty Pendant",
@@ -3764,7 +3994,9 @@
         "0x0230AE44"
       ],
       "id": 115,
-      "new_description": "Immune to Silence"
+      "new_description": "Immune to Silence",
+      "max_chars": 63,
+      "current_chars": 17
     },
     {
       "name": "Compound Bow",
@@ -3796,7 +4028,9 @@
         "0x00E08278"
       ],
       "id": 116,
-      "new_description": ""
+      "new_description": "",
+      "max_chars": 63,
+      "current_chars": 0
     },
     {
       "name": "Bow",
@@ -3834,7 +4068,9 @@
         "0x025935CC"
       ],
       "id": 117,
-      "new_description": ""
+      "new_description": "",
+      "max_chars": 63,
+      "current_chars": 0
     },
     {
       "name": "Mithril Wand",
@@ -3868,7 +4104,9 @@
         "0x00E084F8"
       ],
       "id": 118,
-      "new_description": "MAT+18"
+      "new_description": "MAT+18",
+      "max_chars": 63,
+      "current_chars": 6
     },
     {
       "name": "Earth Rod",
@@ -3902,7 +4140,9 @@
         "0x00E08778"
       ],
       "id": 119,
-      "new_description": "1 of the 4 given to the elven king by a dead king."
+      "new_description": "1 of the 4 given to the elven king by a dead king.",
+      "max_chars": 63,
+      "current_chars": 50
     },
     {
       "name": "Poison Axe",
@@ -3936,7 +4176,9 @@
         "0x01FB804C"
       ],
       "id": 120,
-      "new_description": "An axe forged of poisonous metal."
+      "new_description": "An axe forged of poisonous metal.",
+      "max_chars": 63,
+      "current_chars": 33
     },
     {
       "name": "Sunblade",
@@ -3970,7 +4212,9 @@
         "0x00E08C78"
       ],
       "id": 121,
-      "new_description": ""
+      "new_description": "",
+      "max_chars": 63,
+      "current_chars": 0
     },
     {
       "name": "Blackjack",
@@ -4004,7 +4248,9 @@
         "0x00E09178"
       ],
       "id": 122,
-      "new_description": "Sometimes stun the enemy (8% probability)"
+      "new_description": "Sometimes stun the enemy (8% probability)",
+      "max_chars": 63,
+      "current_chars": 41
     },
     {
       "name": "Stone Foil",
@@ -4026,7 +4272,9 @@
         "0x00E093F8"
       ],
       "id": 123,
-      "new_description": ""
+      "new_description": "",
+      "max_chars": 63,
+      "current_chars": 0
     },
     {
       "name": "Frost Orb",
@@ -4051,7 +4299,9 @@
         "0x02908364"
       ],
       "id": 124,
-      "new_description": "Orb of ice magic.(Activates Freeze Beast)"
+      "new_description": "Orb of ice magic.(Activates Freeze Beast)",
+      "max_chars": 63,
+      "current_chars": 41
     },
     {
       "name": "Blue Ear-stud",
@@ -4087,7 +4337,9 @@
         "0x029085E4"
       ],
       "id": 125,
-      "new_description": "10% magic recovery from water & wind damage"
+      "new_description": "10% magic recovery from water & wind damage",
+      "max_chars": 63,
+      "current_chars": 43
     },
     {
       "name": "Frostfurnace",
@@ -4125,7 +4377,9 @@
         "0x02908864"
       ],
       "id": 126,
-      "new_description": "MAT+18"
+      "new_description": "MAT+18",
+      "max_chars": 63,
+      "current_chars": 6
     },
     {
       "name": "Mist Dagger",
@@ -4162,7 +4416,9 @@
         "0x02908AE4"
       ],
       "id": 127,
-      "new_description": "WIL+5, POW+15, MDEF+22"
+      "new_description": "WIL+5, POW+15, MDEF+22",
+      "max_chars": 63,
+      "current_chars": 22
     },
     {
       "name": "Life Shield",
@@ -4197,7 +4453,9 @@
         "0x00F95574"
       ],
       "id": 128,
-      "new_description": "An excellent shield offering great protection."
+      "new_description": "An excellent shield offering great protection.",
+      "max_chars": 63,
+      "current_chars": 46
     },
     {
       "name": "Silver Circlet",
@@ -4217,7 +4475,9 @@
         "0x01AE87C8"
       ],
       "id": 129,
-      "new_description": "Raises one's spirits and repels demons."
+      "new_description": "Raises one's spirits and repels demons.",
+      "max_chars": 63,
+      "current_chars": 39
     },
     {
       "name": "Phantasm Orb",
@@ -4240,7 +4500,9 @@
         "0x02852DE4"
       ],
       "id": 130,
-      "new_description": "Magic orb.(Activates Charm destroyed at 25%)"
+      "new_description": "Magic orb.(Activates Charm destroyed at 25%)",
+      "max_chars": 63,
+      "current_chars": 44
     },
     {
       "name": "Resist Cloak",
@@ -4273,7 +4535,9 @@
         "0x00E69F50"
       ],
       "id": 131,
-      "new_description": "MDEF+24"
+      "new_description": "MDEF+24",
+      "max_chars": 63,
+      "current_chars": 7
     },
     {
       "name": "Amber Wand",
@@ -4309,7 +4573,9 @@
         "0x021AEC08"
       ],
       "id": 132,
-      "new_description": "A powerful wand made of amber."
+      "new_description": "A powerful wand made of amber.",
+      "max_chars": 63,
+      "current_chars": 30
     },
     {
       "name": "Ouga Axe",
@@ -4335,7 +4601,9 @@
         "0x029F23E8"
       ],
       "id": 133,
-      "new_description": "Holds the night demon Ouga and great power."
+      "new_description": "Holds the night demon Ouga and great power.",
+      "max_chars": 63,
+      "current_chars": 43
     },
     {
       "name": "Red Ash",
@@ -4365,7 +4633,9 @@
         "0x01B4E060"
       ],
       "id": 134,
-      "new_description": "Supposedly from a saint's hand.(Increases STR)"
+      "new_description": "Supposedly from a saint's hand.(Increases STR)",
+      "max_chars": 63,
+      "current_chars": 46
     },
     {
       "name": "Feather Pen",
@@ -4395,7 +4665,9 @@
         "0x025914C4"
       ],
       "id": 135,
-      "new_description": "Big feather pen.(Increase magic recovery rate)"
+      "new_description": "Big feather pen.(Increase magic recovery rate)",
+      "max_chars": 63,
+      "current_chars": 46
     },
     {
       "name": "Black Ash",
@@ -4421,7 +4693,9 @@
         "0x02A8FDD4"
       ],
       "id": 136,
-      "new_description": "Supposedly from a saint's hand.(Increase POW)"
+      "new_description": "Supposedly from a saint's hand.(Increase POW)",
+      "max_chars": 63,
+      "current_chars": 45
     },
     {
       "name": "Minotaur Horn",
@@ -4446,7 +4720,9 @@
         "0x02A8F654"
       ],
       "id": 137,
-      "new_description": "Sometimes knock back enemies (even bosses)"
+      "new_description": "Sometimes knock back enemies (even bosses)",
+      "max_chars": 63,
+      "current_chars": 42
     },
     {
       "name": "Silent Box",
@@ -4468,7 +4744,9 @@
         "0x01C98F18"
       ],
       "id": 138,
-      "new_description": "Odd music box.(Casts Silence 10% dest.)"
+      "new_description": "Odd music box.(Casts Silence 10% dest.)",
+      "max_chars": 63,
+      "current_chars": 39
     },
     {
       "name": "Elemental Orb",
@@ -4497,7 +4775,9 @@
         "0x02B3F2A0"
       ],
       "id": 139,
-      "new_description": "Orb of the spirits.(Summons Elemental)"
+      "new_description": "Orb of the spirits.(Summons Elemental)",
+      "max_chars": 63,
+      "current_chars": 38
     },
     {
       "name": "Earth Tiara",
@@ -4535,7 +4815,9 @@
         "0x029F3CE8"
       ],
       "id": 140,
-      "new_description": "Decrease fire, wind, light, & holy damage"
+      "new_description": "Decrease fire, wind, light, & holy damage",
+      "max_chars": 63,
+      "current_chars": 41
     },
     {
       "name": "Element Cloak",
@@ -4573,7 +4855,9 @@
         "0x02663CB4"
       ],
       "id": 141,
-      "new_description": "Decrease fire, water, wind, & earth damage"
+      "new_description": "Decrease fire, water, wind, & earth damage",
+      "max_chars": 63,
+      "current_chars": 42
     },
     {
       "name": "Durandal",
@@ -4608,7 +4892,9 @@
         "0x01C99E18"
       ],
       "id": 142,
-      "new_description": "Sometimes knock back enemies (even bosses)"
+      "new_description": "Sometimes knock back enemies (even bosses)",
+      "max_chars": 63,
+      "current_chars": 42
     },
     {
       "name": "Executioner",
@@ -4642,7 +4928,9 @@
         "0x00F2016C"
       ],
       "id": 143,
-      "new_description": "Critical attack ratio + 4%"
+      "new_description": "Critical attack ratio + 4%",
+      "max_chars": 63,
+      "current_chars": 26
     },
     {
       "name": "Great Helmet",
@@ -4676,7 +4964,9 @@
         "0x013BCBBC"
       ],
       "id": 144,
-      "new_description": "A great, finely crafted helmet."
+      "new_description": "A great, finely crafted helmet.",
+      "max_chars": 63,
+      "current_chars": 31
     },
     {
       "name": "Master Plate",
@@ -4714,7 +5004,9 @@
         "0x013BCE3C"
       ],
       "id": 145,
-      "new_description": "Critical attack ratio + 5% | MDEF+24"
+      "new_description": "Critical attack ratio + 5% | MDEF+24",
+      "max_chars": 63,
+      "current_chars": 36
     },
     {
       "name": "Life Eater",
@@ -4752,7 +5044,9 @@
         "0x01C3F504"
       ],
       "id": 146,
-      "new_description": "Drains HP from living enemies (decrease HP if undead)"
+      "new_description": "Drains HP from living enemies (decrease HP if undead)",
+      "max_chars": 63,
+      "current_chars": 53
     },
     {
       "name": "Gulwick",
@@ -4788,7 +5082,9 @@
         "0x00F20DEC"
       ],
       "id": 147,
-      "new_description": "Sometimes Petrify / 8 MP (20% probability)"
+      "new_description": "Sometimes Petrify / 8 MP (20% probability)",
+      "max_chars": 63,
+      "current_chars": 42
     },
     {
       "name": "Dropneal",
@@ -4829,7 +5125,9 @@
         "0x02A8E254"
       ],
       "id": 148,
-      "new_description": "Increase the chance of getting Fate Coin & Doubles"
+      "new_description": "Increase the chance of getting Fate Coin & Doubles",
+      "max_chars": 63,
+      "current_chars": 50
     },
     {
       "name": "Darkblade",
@@ -4865,7 +5163,9 @@
         "0x02801968"
       ],
       "id": 149,
-      "new_description": ""
+      "new_description": "",
+      "max_chars": 63,
+      "current_chars": 0
     },
     {
       "name": "Ritual Hammer",
@@ -4900,7 +5200,9 @@
         "0x01D25280"
       ],
       "id": 150,
-      "new_description": "Critical attack ratio + 3% | INT+10"
+      "new_description": "Critical attack ratio + 3% | INT+10",
+      "max_chars": 63,
+      "current_chars": 35
     },
     {
       "name": "Skystone Wand",
@@ -4935,7 +5237,9 @@
         "0x01D92748"
       ],
       "id": 151,
-      "new_description": "MAT+8"
+      "new_description": "MAT+8",
+      "max_chars": 63,
+      "current_chars": 5
     },
     {
       "name": "Holy Rod",
@@ -4971,7 +5275,9 @@
         "0x00F96974"
       ],
       "id": 152,
-      "new_description": "Starts to regenerate HP by 1 if HP lower than half"
+      "new_description": "Starts to regenerate HP by 1 if HP lower than half",
+      "max_chars": 63,
+      "current_chars": 50
     },
     {
       "name": "Inferno",
@@ -4998,7 +5304,9 @@
         "0x02972FDC"
       ],
       "id": 153,
-      "new_description": "The blade glows with a strange light from hell."
+      "new_description": "The blade glows with a strange light from hell.",
+      "max_chars": 63,
+      "current_chars": 47
     },
     {
       "name": "Flamespitter",
@@ -5035,7 +5343,9 @@
         "0x02A8D854"
       ],
       "id": 154,
-      "new_description": ""
+      "new_description": "",
+      "max_chars": 63,
+      "current_chars": 0
     },
     {
       "name": "Red Ear-stud",
@@ -5070,7 +5380,9 @@
         "0x029734DC"
       ],
       "id": 155,
-      "new_description": "10% magic recovery from fire & earth damage"
+      "new_description": "10% magic recovery from fire & earth damage",
+      "max_chars": 63,
+      "current_chars": 43
     },
     {
       "name": "Light Orb",
@@ -5096,7 +5408,9 @@
         "0x0297555C"
       ],
       "id": 156,
-      "new_description": "Orb of light magic.(Activates Shining)"
+      "new_description": "Orb of light magic.(Activates Shining)",
+      "max_chars": 63,
+      "current_chars": 38
     },
     {
       "name": "Ice Sword",
@@ -5133,7 +5447,9 @@
         "0x02975CDC"
       ],
       "id": 157,
-      "new_description": ""
+      "new_description": "",
+      "max_chars": 63,
+      "current_chars": 0
     },
     {
       "name": "Mistortain",
@@ -5169,7 +5485,9 @@
         "0x00F98C74"
       ],
       "id": 158,
-      "new_description": "Critical attack ratio + 5%"
+      "new_description": "Critical attack ratio + 5%",
+      "max_chars": 63,
+      "current_chars": 26
     },
     {
       "name": "Baphomet",
@@ -5208,7 +5526,9 @@
         "0x00F996F4"
       ],
       "id": 159,
-      "new_description": "Wave attack | STR+20, INT+40, WIL+30, AGL+15, CON+25, POW+35, LUK+1, MAT+20, MDEF+20"
+      "new_description": "Wave attack | STR+20, INT+40, WIL+30, AGL+15, CON+25, POW+35, LUK+1, MAT+20, MDEF+20",
+      "max_chars": 63,
+      "current_chars": 84
     },
     {
       "name": "Fabnihl",
@@ -5244,7 +5564,9 @@
         "0x00F99174"
       ],
       "id": 160,
-      "new_description": "Sometimes petrify / 16 MP (8% probabilty)"
+      "new_description": "Sometimes petrify / 16 MP (8% probabilty)",
+      "max_chars": 63,
+      "current_chars": 41
     },
     {
       "name": "Gladius",
@@ -5277,7 +5599,9 @@
         "0x010A0D3C"
       ],
       "id": 161,
-      "new_description": "A dagger like those used by the ancients."
+      "new_description": "A dagger like those used by the ancients.",
+      "max_chars": 63,
+      "current_chars": 41
     },
     {
       "name": "Fine Leather",
@@ -5313,7 +5637,9 @@
         "0x01176550"
       ],
       "id": 162,
-      "new_description": "First class leather clothing."
+      "new_description": "First class leather clothing.",
+      "max_chars": 63,
+      "current_chars": 29
     },
     {
       "name": "Daak",
@@ -5348,7 +5674,9 @@
         "0x0152D08C"
       ],
       "id": 163,
-      "new_description": "Favored dagger of the barbarian Normans."
+      "new_description": "Favored dagger of the barbarian Normans.",
+      "max_chars": 63,
+      "current_chars": 40
     },
     {
       "name": "Broad Sword",
@@ -5387,7 +5715,9 @@
         "0x01A8DDD8"
       ],
       "id": 164,
-      "new_description": "A heavy sword with a wide blade."
+      "new_description": "A heavy sword with a wide blade.",
+      "max_chars": 63,
+      "current_chars": 32
     },
     {
       "name": "Knight Shield",
@@ -5426,7 +5756,9 @@
         "0x01A8E058"
       ],
       "id": 165,
-      "new_description": "A finely adorned shield for knights."
+      "new_description": "A finely adorned shield for knights.",
+      "max_chars": 63,
+      "current_chars": 36
     },
     {
       "name": "Hand Axe",
@@ -5459,7 +5791,9 @@
         "0x0152C90C"
       ],
       "id": 166,
-      "new_description": "A normal axe."
+      "new_description": "A normal axe.",
+      "max_chars": 63,
+      "current_chars": 13
     },
     {
       "name": "Leather Gloves",
@@ -5484,7 +5818,9 @@
         "0x029F14E8"
       ],
       "id": 167,
-      "new_description": "Gloves made of leather."
+      "new_description": "Gloves made of leather.",
+      "max_chars": 63,
+      "current_chars": 23
     },
     {
       "name": "Fine Shield",
@@ -5520,7 +5856,9 @@
         "0x02722568"
       ],
       "id": 168,
-      "new_description": "Excellent shield made of the finest materials."
+      "new_description": "Excellent shield made of the finest materials.",
+      "max_chars": 63,
+      "current_chars": 46
     },
     {
       "name": "Fine Oil",
@@ -5547,7 +5885,9 @@
         "0x02A8E754"
       ],
       "id": 169,
-      "new_description": "High quality oil.(Temp. increase of fire attack)"
+      "new_description": "High quality oil.(Temp. increase of fire attack)",
+      "max_chars": 63,
+      "current_chars": 48
     },
     {
       "name": "Trueheart",
@@ -5585,7 +5925,9 @@
         "0x02721DE8"
       ],
       "id": 170,
-      "new_description": "Critical attack ratio + 3%"
+      "new_description": "Critical attack ratio + 3%",
+      "max_chars": 63,
+      "current_chars": 26
     },
     {
       "name": "Warhammer",
@@ -5618,7 +5960,9 @@
         "0x012562D8"
       ],
       "id": 171,
-      "new_description": "Steel hammer, easy to lift and strikes heavy blows."
+      "new_description": "Steel hammer, easy to lift and strikes heavy blows.",
+      "max_chars": 63,
+      "current_chars": 51
     },
     {
       "name": "Iron Wand",
@@ -5650,7 +5994,9 @@
         "0x01176CD0"
       ],
       "id": 172,
-      "new_description": "MAT+1"
+      "new_description": "MAT+1",
+      "max_chars": 63,
+      "current_chars": 5
     },
     {
       "name": "Mithril Rapier",
@@ -5689,7 +6035,9 @@
         "0x01F20474"
       ],
       "id": 173,
-      "new_description": "A magical rapier formed of mithril silver."
+      "new_description": "A magical rapier formed of mithril silver.",
+      "max_chars": 63,
+      "current_chars": 42
     },
     {
       "name": "Long Rapier",
@@ -5722,7 +6070,9 @@
         "0x0152BC8C"
       ],
       "id": 174,
-      "new_description": ""
+      "new_description": "",
+      "max_chars": 63,
+      "current_chars": 0
     },
     {
       "name": "Silver Anklet",
@@ -5760,7 +6110,9 @@
         "0x02A8F3D4"
       ],
       "id": 175,
-      "new_description": "INT+8, WIL+8, MDEF+4"
+      "new_description": "INT+8, WIL+8, MDEF+4",
+      "max_chars": 63,
+      "current_chars": 20
     },
     {
       "name": "Hunting Cap",
@@ -5793,7 +6145,9 @@
         "0x011E5A74"
       ],
       "id": 176,
-      "new_description": "Immune to Confusion & critical attack ratio + 1% | WIL+8, AGL+8"
+      "new_description": "Immune to Confusion & critical attack ratio + 1% | WIL+8, AGL+8",
+      "max_chars": 63,
+      "current_chars": 63
     },
     {
       "name": "Crossbow",
@@ -5826,7 +6180,9 @@
         "0x01256A58"
       ],
       "id": 177,
-      "new_description": "A dangerous mechanized bow which is easy to use."
+      "new_description": "A dangerous mechanized bow which is easy to use.",
+      "max_chars": 63,
+      "current_chars": 48
     },
     {
       "name": "Quick Boots",
@@ -5866,7 +6222,9 @@
         "0x01D93648"
       ],
       "id": 178,
-      "new_description": "Wind elemental damage decreases | AGL+32"
+      "new_description": "Wind elemental damage decreases | AGL+32",
+      "max_chars": 63,
+      "current_chars": 40
     },
     {
       "name": "Spring Cape",
@@ -5902,7 +6260,9 @@
         "0x020FA47C"
       ],
       "id": 179,
-      "new_description": "Immune to Poison"
+      "new_description": "Immune to Poison",
+      "max_chars": 63,
+      "current_chars": 16
     },
     {
       "name": "Jewel Box",
@@ -5928,7 +6288,9 @@
         "0x02590AC4"
       ],
       "id": 180,
-      "new_description": "Holder gains fame.(? ? ?)"
+      "new_description": "Holder gains fame.(? ? ?)",
+      "max_chars": 63,
+      "current_chars": 25
     },
     {
       "name": "Miracle Powder",
@@ -5958,7 +6320,9 @@
         "0x02234348"
       ],
       "id": 181,
-      "new_description": "Resurrects the dead.(Resurrect 33% dest.)"
+      "new_description": "Resurrects the dead.(Resurrect 33% dest.)",
+      "max_chars": 63,
+      "current_chars": 41
     },
     {
       "name": "Bastard Sword",
@@ -5997,7 +6361,9 @@
         "0x01B4D3E0"
       ],
       "id": 182,
-      "new_description": "A Long sword with a wide blade."
+      "new_description": "A Long sword with a wide blade.",
+      "max_chars": 63,
+      "current_chars": 31
     },
     {
       "name": "Pure Wand",
@@ -6033,7 +6399,9 @@
         "0x027227E8"
       ],
       "id": 183,
-      "new_description": "MAT+3"
+      "new_description": "MAT+3",
+      "max_chars": 63,
+      "current_chars": 5
     },
     {
       "name": "Crystal Rod",
@@ -6065,7 +6433,9 @@
         "0x012571D8"
       ],
       "id": 184,
-      "new_description": "MDEF+5"
+      "new_description": "MDEF+5",
+      "max_chars": 63,
+      "current_chars": 6
     },
     {
       "name": "Fine Shoes",
@@ -6097,7 +6467,9 @@
         "0x01257958"
       ],
       "id": 185,
-      "new_description": "Comfortable shoes made of the finest materials."
+      "new_description": "Comfortable shoes made of the finest materials.",
+      "max_chars": 63,
+      "current_chars": 47
     },
     {
       "name": "Silver Dagger",
@@ -6134,7 +6506,9 @@
         "0x020772D0"
       ],
       "id": 186,
-      "new_description": "A charmed silver dagger."
+      "new_description": "A charmed silver dagger.",
+      "max_chars": 63,
+      "current_chars": 24
     },
     {
       "name": "Viking Axe",
@@ -6166,7 +6540,9 @@
         "0x012DC2F8"
       ],
       "id": 187,
-      "new_description": "STR+14"
+      "new_description": "STR+14",
+      "max_chars": 63,
+      "current_chars": 6
     },
     {
       "name": "Rune Robe",
@@ -6204,7 +6580,9 @@
         "0x02792088"
       ],
       "id": 188,
-      "new_description": "POW+20, MAT+28, MDEF+12"
+      "new_description": "POW+20, MAT+28, MDEF+12",
+      "max_chars": 63,
+      "current_chars": 23
     },
     {
       "name": "Silver Shield",
@@ -6240,7 +6618,9 @@
         "0x024380DC"
       ],
       "id": 189,
-      "new_description": "MDEF+21"
+      "new_description": "MDEF+21",
+      "max_chars": 63,
+      "current_chars": 7
     },
     {
       "name": "Dark Necklace",
@@ -6278,7 +6658,9 @@
         "0x025D404C"
       ],
       "id": 190,
-      "new_description": "POW+14"
+      "new_description": "POW+14",
+      "max_chars": 63,
+      "current_chars": 6
     },
     {
       "name": "Earth Shield",
@@ -6316,7 +6698,9 @@
         "0x028A68F8"
       ],
       "id": 191,
-      "new_description": "Reduce earth elemental attack | MDEF+12"
+      "new_description": "Reduce earth elemental attack | MDEF+12",
+      "max_chars": 63,
+      "current_chars": 39
     },
     {
       "name": "Silver Rapier",
@@ -6354,7 +6738,9 @@
         "0x025D4A4C"
       ],
       "id": 192,
-      "new_description": ""
+      "new_description": "",
+      "max_chars": 63,
+      "current_chars": 0
     },
     {
       "name": "Light Necklace",
@@ -6375,7 +6761,9 @@
         "0x013530D4"
       ],
       "id": 193,
-      "new_description": "Wearer is protected by the powers of light."
+      "new_description": "Wearer is protected by the powers of light.",
+      "max_chars": 63,
+      "current_chars": 43
     },
     {
       "name": "Blood Axe",
@@ -6395,7 +6783,9 @@
         "0x013BBC3C"
       ],
       "id": 194,
-      "new_description": "An extremely sharp axe."
+      "new_description": "An extremely sharp axe.",
+      "max_chars": 63,
+      "current_chars": 23
     },
     {
       "name": "Gaia Wand",
@@ -6432,7 +6822,9 @@
         "0x021AE988"
       ],
       "id": 195,
-      "new_description": "Sometimes shoot Stone Bullet if hit by normal attack | MAT+9"
+      "new_description": "Sometimes shoot Stone Bullet if hit by normal attack | MAT+9",
+      "max_chars": 63,
+      "current_chars": 60
     },
     {
       "name": "Battle Axe",
@@ -6457,7 +6849,9 @@
         "0x027218E8"
       ],
       "id": 196,
-      "new_description": ""
+      "new_description": "",
+      "max_chars": 63,
+      "current_chars": 0
     },
     {
       "name": "Bronze Armor",
@@ -6490,7 +6884,9 @@
         "0x0152F38C"
       ],
       "id": 197,
-      "new_description": "Normal armor made of bronze."
+      "new_description": "Normal armor made of bronze.",
+      "max_chars": 63,
+      "current_chars": 28
     },
     {
       "name": "Power Symbol",
@@ -6523,7 +6919,9 @@
         "0x017A049C"
       ],
       "id": 198,
-      "new_description": "STR+32, CON+15"
+      "new_description": "STR+32, CON+15",
+      "max_chars": 63,
+      "current_chars": 14
     },
     {
       "name": "Wand of Runes",
@@ -6557,7 +6955,9 @@
         "0x0163E08C"
       ],
       "id": 199,
-      "new_description": "POW+30, MAT+15"
+      "new_description": "POW+30, MAT+15",
+      "max_chars": 63,
+      "current_chars": 14
     },
     {
       "name": "Rune Amulet",
@@ -6590,7 +6990,9 @@
         "0x0163E58C"
       ],
       "id": 200,
-      "new_description": "Wizard mag atk + 50% | POW+6, MAT+12"
+      "new_description": "Wizard mag atk + 50% | POW+6, MAT+12",
+      "max_chars": 63,
+      "current_chars": 36
     },
     {
       "name": "Rune Gloves",
@@ -6626,7 +7028,9 @@
         "0x01C3F004"
       ],
       "id": 201,
-      "new_description": "Give the effect of 'Enchant Weapon' to equipped weapon"
+      "new_description": "Give the effect of 'Enchant Weapon' to equipped weapon",
+      "max_chars": 63,
+      "current_chars": 54
     },
     {
       "name": "Rune Cape",
@@ -6659,7 +7063,9 @@
         "0x0179D29C"
       ],
       "id": 202,
-      "new_description": "A cape with runes that increase magical power."
+      "new_description": "A cape with runes that increase magical power.",
+      "max_chars": 63,
+      "current_chars": 46
     },
     {
       "name": "Reflector Ring",
@@ -6694,7 +7100,9 @@
         "0x0243605C"
       ],
       "id": 203,
-      "new_description": "Sometimes block magic(healing,support & attack magic)"
+      "new_description": "Sometimes block magic(healing,support & attack magic)",
+      "max_chars": 63,
+      "current_chars": 53
     },
     {
       "name": "Elven Boots",
@@ -6729,7 +7137,9 @@
         "0x017FFD70"
       ],
       "id": 204,
-      "new_description": "Regenerate HP by 1"
+      "new_description": "Regenerate HP by 1",
+      "max_chars": 63,
+      "current_chars": 18
     },
     {
       "name": "Elven Hat",
@@ -6763,7 +7173,9 @@
         "0x017FFFF0"
       ],
       "id": 205,
-      "new_description": "Immune to Poison & Paralysis | POW+8, LUK+8"
+      "new_description": "Immune to Poison & Paralysis | POW+8, LUK+8",
+      "max_chars": 63,
+      "current_chars": 43
     },
     {
       "name": "Elven Shield",
@@ -6798,7 +7210,9 @@
         "0x018004F0"
       ],
       "id": 206,
-      "new_description": "MDEF+41"
+      "new_description": "MDEF+41",
+      "max_chars": 63,
+      "current_chars": 7
     },
     {
       "name": "Elven Bow",
@@ -6835,7 +7249,9 @@
         "0x01800770"
       ],
       "id": 207,
-      "new_description": "Critical attack ratio + 6%"
+      "new_description": "Critical attack ratio + 6%",
+      "max_chars": 63,
+      "current_chars": 26
     },
     {
       "name": "Flame Shield",
@@ -6871,7 +7287,9 @@
         "0x02A8DFD4"
       ],
       "id": 208,
-      "new_description": "Reduce fire elemental attack | MDEF+12"
+      "new_description": "Reduce fire elemental attack | MDEF+12",
+      "max_chars": 63,
+      "current_chars": 38
     },
     {
       "name": "Wand of Evil",
@@ -6903,7 +7321,9 @@
         "0x0172C4E0"
       ],
       "id": 209,
-      "new_description": "POW+12, MAT+21"
+      "new_description": "POW+12, MAT+21",
+      "max_chars": 63,
+      "current_chars": 14
     },
     {
       "name": "Flame Sword",
@@ -6939,7 +7359,9 @@
         "0x01DFDFE0"
       ],
       "id": 210,
-      "new_description": ""
+      "new_description": "",
+      "max_chars": 63,
+      "current_chars": 0
     },
     {
       "name": "Black Armor",
@@ -6967,7 +7389,9 @@
         "0x02801468"
       ],
       "id": 211,
-      "new_description": "Df + 60 / 10 MP"
+      "new_description": "Df + 60 / 10 MP",
+      "max_chars": 63,
+      "current_chars": 15
     },
     {
       "name": "Answerer",
@@ -7004,7 +7428,9 @@
         "0x017A099C"
       ],
       "id": 212,
-      "new_description": "At + 50 / 15 MP"
+      "new_description": "At + 50 / 15 MP",
+      "max_chars": 63,
+      "current_chars": 15
     },
     {
       "name": "White Ash",
@@ -7031,7 +7457,9 @@
         "0x02792A88"
       ],
       "id": 213,
-      "new_description": "Supposedly from a saint's hand.(Increase MIN)"
+      "new_description": "Supposedly from a saint's hand.(Increase MIN)",
+      "max_chars": 63,
+      "current_chars": 45
     },
     {
       "name": "Wind Rod",
@@ -7066,7 +7494,9 @@
         "0x0179F31C"
       ],
       "id": 214,
-      "new_description": "1 of the 4 given to the elven king by a dead king."
+      "new_description": "1 of the 4 given to the elven king by a dead king.",
+      "max_chars": 63,
+      "current_chars": 50
     },
     {
       "name": "Windbolt",
@@ -7102,7 +7532,9 @@
         "0x0179F59C"
       ],
       "id": 215,
-      "new_description": "Magical bow inhabited by a wind fairy."
+      "new_description": "Magical bow inhabited by a wind fairy.",
+      "max_chars": 63,
+      "current_chars": 38
     },
     {
       "name": "Thunder Orb",
@@ -7132,7 +7564,9 @@
         "0x029F0868"
       ],
       "id": 216,
-      "new_description": "Orb of wind magic.(Activates Thunderbolt)"
+      "new_description": "Orb of wind magic.(Activates Thunderbolt)",
+      "max_chars": 63,
+      "current_chars": 41
     },
     {
       "name": "Solitaire",
@@ -7169,7 +7603,9 @@
         "0x01C3F284"
       ],
       "id": 217,
-      "new_description": "Drains MP from living enemies (decrease MP if undead)"
+      "new_description": "Drains MP from living enemies (decrease MP if undead)",
+      "max_chars": 63,
+      "current_chars": 53
     },
     {
       "name": "Vampire Rod",
@@ -7205,7 +7641,9 @@
         "0x0179CB1C"
       ],
       "id": 218,
-      "new_description": "Drains MP from living enemies (decrease MP if undead)"
+      "new_description": "Drains MP from living enemies (decrease MP if undead)",
+      "max_chars": 63,
+      "current_chars": 53
     },
     {
       "name": "Mystical Veil",
@@ -7230,7 +7668,9 @@
         "0x029F37E8"
       ],
       "id": 219,
-      "new_description": "Fairy mag atk + 50%"
+      "new_description": "Fairy mag atk + 50%",
+      "max_chars": 63,
+      "current_chars": 19
     },
     {
       "name": "Moon Crown",
@@ -7268,7 +7708,9 @@
         "0x029F41E8"
       ],
       "id": 220,
-      "new_description": "MP consumption - 25%"
+      "new_description": "MP consumption - 25%",
+      "max_chars": 63,
+      "current_chars": 20
     },
     {
       "name": "Summer Cape",
@@ -7303,7 +7745,9 @@
         "0x020FA6FC"
       ],
       "id": 221,
-      "new_description": "Immune to Paralysis"
+      "new_description": "Immune to Paralysis",
+      "max_chars": 63,
+      "current_chars": 19
     },
     {
       "name": "Autumn Cape",
@@ -7338,7 +7782,9 @@
         "0x020FA97C"
       ],
       "id": 222,
-      "new_description": "Immune to Magic-Loss"
+      "new_description": "Immune to Magic-Loss",
+      "max_chars": 63,
+      "current_chars": 20
     },
     {
       "name": "Winter Cape",
@@ -7374,7 +7820,9 @@
         "0x02519AAC"
       ],
       "id": 223,
-      "new_description": "Immune to Confusion"
+      "new_description": "Immune to Confusion",
+      "max_chars": 63,
+      "current_chars": 19
     },
     {
       "name": "Claymore",
@@ -7414,7 +7862,9 @@
         "0x0200FDDC"
       ],
       "id": 224,
-      "new_description": "The barbarian Normans forge these very sharp swords."
+      "new_description": "The barbarian Normans forge these very sharp swords.",
+      "max_chars": 63,
+      "current_chars": 52
     },
     {
       "name": "Sword of Bane",
@@ -7456,7 +7906,9 @@
         "0x01D91848"
       ],
       "id": 225,
-      "new_description": "At + 60 / 6 HP, if HP below 7, it curses"
+      "new_description": "At + 60 / 6 HP, if HP below 7, it curses",
+      "max_chars": 63,
+      "current_chars": 40
     },
     {
       "name": "Damascus Blade",
@@ -7490,7 +7942,9 @@
         "0x018D1C44"
       ],
       "id": 226,
-      "new_description": "A great sword. Really sharp."
+      "new_description": "A great sword. Really sharp.",
+      "max_chars": 63,
+      "current_chars": 28
     },
     {
       "name": "Guardian Sword",
@@ -7528,7 +7982,9 @@
         "0x0243795C"
       ],
       "id": 227,
-      "new_description": "POW+20, MDEF+20"
+      "new_description": "POW+20, MDEF+20",
+      "max_chars": 63,
+      "current_chars": 15
     },
     {
       "name": "Silver Armor",
@@ -7564,7 +8020,9 @@
         "0x02074850"
       ],
       "id": 228,
-      "new_description": "MDEF+12"
+      "new_description": "MDEF+12",
+      "max_chars": 63,
+      "current_chars": 7
     },
     {
       "name": "Terror Card",
@@ -7587,7 +8045,9 @@
         "0x02854764"
       ],
       "id": 229,
-      "new_description": "Frightening cards of cursing.(Confuses Foes)"
+      "new_description": "Frightening cards of cursing.(Confuses Foes)",
+      "max_chars": 63,
+      "current_chars": 44
     },
     {
       "name": "Tarot Card",
@@ -7609,7 +8069,9 @@
         "0x021AD308"
       ],
       "id": 230,
-      "new_description": "Magical Tarot cards.(? ? ?)"
+      "new_description": "Magical Tarot cards.(? ? ?)",
+      "max_chars": 63,
+      "current_chars": 27
     },
     {
       "name": "Blood Dagger",
@@ -7647,7 +8109,9 @@
         "0x021AE488"
       ],
       "id": 231,
-      "new_description": "Drains HP from living enemies (decrease HP if undead)"
+      "new_description": "Drains HP from living enemies (decrease HP if undead)",
+      "max_chars": 63,
+      "current_chars": 53
     },
     {
       "name": "Green Ash",
@@ -7676,7 +8140,9 @@
         "0x029F2DE8"
       ],
       "id": 232,
-      "new_description": "Supposedly from a saint's hand.(Increase CON)"
+      "new_description": "Supposedly from a saint's hand.(Increase CON)",
+      "max_chars": 63,
+      "current_chars": 45
     },
     {
       "name": "Silver Helmet",
@@ -7710,7 +8176,9 @@
         "0x0186EAFC"
       ],
       "id": 233,
-      "new_description": "Immune to Paralysis"
+      "new_description": "Immune to Paralysis",
+      "max_chars": 63,
+      "current_chars": 19
     },
     {
       "name": "Renugeton",
@@ -7741,7 +8209,9 @@
         "0x0186ED7C"
       ],
       "id": 234,
-      "new_description": "INT+20, MAT+16"
+      "new_description": "INT+20, MAT+16",
+      "max_chars": 63,
+      "current_chars": 14
     },
     {
       "name": "Rod of Ishtar",
@@ -7779,7 +8249,9 @@
         "0x0186F9FC"
       ],
       "id": 235,
-      "new_description": "Undead enemies, At + 40 | MAT+15, MDEF+13"
+      "new_description": "Undead enemies, At + 40 | MAT+15, MDEF+13",
+      "max_chars": 63,
+      "current_chars": 41
     },
     {
       "name": "Evil Necklace",
@@ -7819,7 +8291,9 @@
         "0x02795008"
       ],
       "id": 236,
-      "new_description": "LUK+14"
+      "new_description": "LUK+14",
+      "max_chars": 63,
+      "current_chars": 6
     },
     {
       "name": "Blue Ash",
@@ -7846,7 +8320,9 @@
         "0x02792D08"
       ],
       "id": 237,
-      "new_description": "Supposedly from a saint's hand.(Increase INT)"
+      "new_description": "Supposedly from a saint's hand.(Increase INT)",
+      "max_chars": 63,
+      "current_chars": 45
     },
     {
       "name": "Moon Wand",
@@ -7880,7 +8356,9 @@
         "0x018708FC"
       ],
       "id": 238,
-      "new_description": "MAT+8"
+      "new_description": "MAT+8",
+      "max_chars": 63,
+      "current_chars": 5
     },
     {
       "name": "Bolt of Larie",
@@ -7916,7 +8394,9 @@
         "0x018D0AC4"
       ],
       "id": 239,
-      "new_description": "Sometimes petrify / 12 MP (15% probability)"
+      "new_description": "Sometimes petrify / 12 MP (15% probability)",
+      "max_chars": 63,
+      "current_chars": 43
     },
     {
       "name": "Wand of Apollo",
@@ -7940,7 +8420,9 @@
         "0x018D0D44"
       ],
       "id": 240,
-      "new_description": "A wand that can destroy 100,000 things at once."
+      "new_description": "A wand that can destroy 100,000 things at once.",
+      "max_chars": 63,
+      "current_chars": 47
     },
     {
       "name": "Angel Rod",
@@ -7976,7 +8458,9 @@
         "0x018D0FC4"
       ],
       "id": 241,
-      "new_description": "Demon enemies, At + 40"
+      "new_description": "Demon enemies, At + 40",
+      "max_chars": 63,
+      "current_chars": 22
     },
     {
       "name": "Philos Ring",
@@ -8011,7 +8495,9 @@
         "0x028537E4"
       ],
       "id": 242,
-      "new_description": "Gain MP when you take damage | INT+40, POW+40"
+      "new_description": "Gain MP when you take damage | INT+40, POW+40",
+      "max_chars": 63,
+      "current_chars": 45
     },
     {
       "name": "Bahil",
@@ -8042,7 +8528,9 @@
         "0x018D14C4"
       ],
       "id": 243,
-      "new_description": "INT+80, POW+40, MAT+30"
+      "new_description": "INT+80, POW+40, MAT+30",
+      "max_chars": 63,
+      "current_chars": 22
     },
     {
       "name": "Holy Armor",
@@ -8079,7 +8567,9 @@
         "0x01C9AF98"
       ],
       "id": 244,
-      "new_description": "Evil elemental damage decreases | MDEF+88"
+      "new_description": "Evil elemental damage decreases | MDEF+88",
+      "max_chars": 63,
+      "current_chars": 41
     },
     {
       "name": "Revatin",
@@ -8114,7 +8604,9 @@
         "0x02B3F7A0"
       ],
       "id": 245,
-      "new_description": ""
+      "new_description": "",
+      "max_chars": 63,
+      "current_chars": 0
     },
     {
       "name": "Holy Gloves",
@@ -8148,7 +8640,9 @@
         "0x0199EACC"
       ],
       "id": 246,
-      "new_description": "Gloves which bestow the wearer with holy might."
+      "new_description": "Gloves which bestow the wearer with holy might.",
+      "max_chars": 63,
+      "current_chars": 47
     },
     {
       "name": "Charmed Wand",
@@ -8184,7 +8678,9 @@
         "0x0199EFCC"
       ],
       "id": 247,
-      "new_description": "Mat + 30 / 3 MP | POW+64, MAT+30, MDEF+18"
+      "new_description": "Mat + 30 / 3 MP | POW+64, MAT+30, MDEF+18",
+      "max_chars": 63,
+      "current_chars": 41
     },
     {
       "name": "Fine Scarf",
@@ -8221,7 +8717,9 @@
         "0x01F21874"
       ],
       "id": 248,
-      "new_description": "MDEF+3"
+      "new_description": "MDEF+3",
+      "max_chars": 63,
+      "current_chars": 6
     },
     {
       "name": "Gray Ash",
@@ -8250,7 +8748,9 @@
         "0x02A8DD54"
       ],
       "id": 249,
-      "new_description": "Supposedly from a saint's hand.(Increase AGL)"
+      "new_description": "Supposedly from a saint's hand.(Increase AGL)",
+      "max_chars": 63,
+      "current_chars": 45
     },
     {
       "name": "Blood Pen",
@@ -8276,7 +8776,9 @@
         "0x0230A6C4"
       ],
       "id": 250,
-      "new_description": "Uses blood ink.(Increase magic recovery rate)"
+      "new_description": "Uses blood ink.(Increase magic recovery rate)",
+      "max_chars": 63,
+      "current_chars": 45
     },
     {
       "name": "Long Hammer",
@@ -8310,7 +8812,9 @@
         "0x01B4D660"
       ],
       "id": 251,
-      "new_description": "A heavy, long hammer with excellent range."
+      "new_description": "A heavy, long hammer with excellent range.",
+      "max_chars": 63,
+      "current_chars": 42
     },
     {
       "name": "Poison Rapier",
@@ -8344,7 +8848,9 @@
         "0x01AE8048"
       ],
       "id": 252,
-      "new_description": "Sometimes poison the enemy (10% probability)"
+      "new_description": "Sometimes poison the enemy (10% probability)",
+      "max_chars": 63,
+      "current_chars": 44
     },
     {
       "name": "Holy Water",
@@ -8366,7 +8872,9 @@
         "0x021AFB08"
       ],
       "id": 253,
-      "new_description": "Purifies the unclean.(Activates Turn Undead)"
+      "new_description": "Purifies the unclean.(Activates Turn Undead)",
+      "max_chars": 63,
+      "current_chars": 44
     },
     {
       "name": "Holy Orb",
@@ -8389,7 +8897,9 @@
         "0x01DFDAE0"
       ],
       "id": 254,
-      "new_description": "Orb of holy power.(Activates Barrier)"
+      "new_description": "Orb of holy power.(Activates Barrier)",
+      "max_chars": 63,
+      "current_chars": 37
     },
     {
       "name": "Holy Necklace",
@@ -8421,7 +8931,9 @@
         "0x01C3ED84"
       ],
       "id": 255,
-      "new_description": "STR+4, INT+4, WIL+4, AGL+4, CON+4, POW+4, LUK+4"
+      "new_description": "STR+4, INT+4, WIL+4, AGL+4, CON+4, POW+4, LUK+4",
+      "max_chars": 63,
+      "current_chars": 47
     },
     {
       "name": "Energy Flask",
@@ -8447,7 +8959,9 @@
         "0x0200E25C"
       ],
       "id": 256,
-      "new_description": "Essence of vigor.(Cures drain 33% dest.)"
+      "new_description": "Essence of vigor.(Cures drain 33% dest.)",
+      "max_chars": 63,
+      "current_chars": 40
     },
     {
       "name": "Earth Robe",
@@ -8483,7 +8997,9 @@
         "0x0200DD5C"
       ],
       "id": 257,
-      "new_description": "CON+3, MDEF+40"
+      "new_description": "CON+3, MDEF+40",
+      "max_chars": 63,
+      "current_chars": 14
     },
     {
       "name": "Bloodsword",
@@ -8527,7 +9043,9 @@
         "0x023097C4"
       ],
       "id": 258,
-      "new_description": "Drains HP from living enemies (decrease HP if undead)"
+      "new_description": "Drains HP from living enemies (decrease HP if undead)",
+      "max_chars": 63,
+      "current_chars": 53
     },
     {
       "name": "Silver Sword",
@@ -8566,7 +9084,9 @@
         "0x01F1FF74"
       ],
       "id": 259,
-      "new_description": "Made of silver. It can also damage lycanthropes."
+      "new_description": "Made of silver. It can also damage lycanthropes.",
+      "max_chars": 63,
+      "current_chars": 48
     },
     {
       "name": "Silver Axe",
@@ -8601,7 +9121,9 @@
         "0x01B4BAE0"
       ],
       "id": 260,
-      "new_description": "An axe made of silver and blessed with holy runes."
+      "new_description": "An axe made of silver and blessed with holy runes.",
+      "max_chars": 63,
+      "current_chars": 50
     },
     {
       "name": "Blessed Hammer",
@@ -8633,7 +9155,9 @@
         "0x01B4BD60"
       ],
       "id": 261,
-      "new_description": "WIL+15, MDEF+12"
+      "new_description": "WIL+15, MDEF+12",
+      "max_chars": 63,
+      "current_chars": 15
     },
     {
       "name": "Flame Rod",
@@ -8667,7 +9191,9 @@
         "0x01B4BFE0"
       ],
       "id": 262,
-      "new_description": "1 of the 4 given to the elven king by a dead king."
+      "new_description": "1 of the 4 given to the elven king by a dead king.",
+      "max_chars": 63,
+      "current_chars": 50
     },
     {
       "name": "Dancing Doll",
@@ -8701,7 +9227,9 @@
         "0x02232CC8"
       ],
       "id": 263,
-      "new_description": "Refill 4% of the MP when it goes to 0(50% Destruction) | AGL+20"
+      "new_description": "Refill 4% of the MP when it goes to 0(50% Destruction) | AGL+20",
+      "max_chars": 63,
+      "current_chars": 63
     },
     {
       "name": "Minister",
@@ -8735,7 +9263,9 @@
         "0x01B4CEE0"
       ],
       "id": 264,
-      "new_description": "Sometimes paralyze the enemy (10% probability)"
+      "new_description": "Sometimes paralyze the enemy (10% probability)",
+      "max_chars": 63,
+      "current_chars": 46
     },
     {
       "name": "Demonscale",
@@ -8770,7 +9300,9 @@
         "0x01D91D48"
       ],
       "id": 265,
-      "new_description": "POW+25, MDEF+40"
+      "new_description": "POW+25, MDEF+40",
+      "max_chars": 63,
+      "current_chars": 15
     },
     {
       "name": "Fire Necklace",
@@ -8792,7 +9324,9 @@
         "0x02A8F154"
       ],
       "id": 266,
-      "new_description": "Wearer is protected by the powers of fire."
+      "new_description": "Wearer is protected by the powers of fire.",
+      "max_chars": 63,
+      "current_chars": 42
     },
     {
       "name": "Wind Necklace",
@@ -8826,7 +9360,9 @@
         "0x029F0FE8"
       ],
       "id": 267,
-      "new_description": "AGL+14"
+      "new_description": "AGL+14",
+      "max_chars": 63,
+      "current_chars": 6
     },
     {
       "name": "Energy Crystal",
@@ -8850,7 +9386,9 @@
         "0x02851C64"
       ],
       "id": 268,
-      "new_description": "Life.(Activates Recover Energy 25% dest.)"
+      "new_description": "Life.(Activates Recover Energy 25% dest.)",
+      "max_chars": 63,
+      "current_chars": 41
     },
     {
       "name": "Jewel Ring",
@@ -8884,7 +9422,9 @@
         "0x01F1F2F4"
       ],
       "id": 269,
-      "new_description": "LUK+20"
+      "new_description": "LUK+20",
+      "max_chars": 63,
+      "current_chars": 6
     },
     {
       "name": "Crusader Cloak",
@@ -8923,7 +9463,9 @@
         "0x021AFD88"
       ],
       "id": 270,
-      "new_description": "MDEF+2"
+      "new_description": "MDEF+2",
+      "max_chars": 63,
+      "current_chars": 6
     },
     {
       "name": "Holy Robe",
@@ -8956,7 +9498,9 @@
         "0x01C3E884"
       ],
       "id": 271,
-      "new_description": "LUK+8, MAT+20, MDEF+36"
+      "new_description": "LUK+8, MAT+20, MDEF+36",
+      "max_chars": 63,
+      "current_chars": 22
     },
     {
       "name": "Holy Wand",
@@ -8990,7 +9534,9 @@
         "0x01C3EB04"
       ],
       "id": 272,
-      "new_description": "Gives its wielder holy might to destroy demons."
+      "new_description": "Gives its wielder holy might to destroy demons.",
+      "max_chars": 63,
+      "current_chars": 47
     },
     {
       "name": "Shadow Robe",
@@ -9035,7 +9581,9 @@
         "0x020FD3FC"
       ],
       "id": 273,
-      "new_description": "Sometimes block magic(healing,support & attack magic) | WIL+12, POW+42, LUK+24, MDEF+42"
+      "new_description": "Sometimes block magic(healing,support & attack magic) | WIL+12, POW+42, LUK+24, MDEF+42",
+      "max_chars": 63,
+      "current_chars": 87
     },
     {
       "name": "Shadow Veil",
@@ -9077,7 +9625,9 @@
         "0x02795508"
       ],
       "id": 274,
-      "new_description": "10% magic recovery from darkness & evil damage | POW+8"
+      "new_description": "10% magic recovery from darkness & evil damage | POW+8",
+      "max_chars": 63,
+      "current_chars": 54
     },
     {
       "name": "Holy Shield",
@@ -9099,7 +9649,9 @@
         "0x02BB449C"
       ],
       "id": 275,
-      "new_description": ""
+      "new_description": "",
+      "max_chars": 63,
+      "current_chars": 0
     },
     {
       "name": "Moon Shield",
@@ -9136,7 +9688,9 @@
         "0x021B0288"
       ],
       "id": 276,
-      "new_description": "MP regeneration + 5"
+      "new_description": "MP regeneration + 5",
+      "max_chars": 63,
+      "current_chars": 19
     },
     {
       "name": "Wand of Devils",
@@ -9170,7 +9724,9 @@
         "0x01D924C8"
       ],
       "id": 277,
-      "new_description": "A wand forged for demons by rebellious gods."
+      "new_description": "A wand forged for demons by rebellious gods.",
+      "max_chars": 63,
+      "current_chars": 44
     },
     {
       "name": "Seraphim Rod",
@@ -9206,7 +9762,9 @@
         "0x01D929C8"
       ],
       "id": 278,
-      "new_description": "Demon enemies, At + 40"
+      "new_description": "Demon enemies, At + 40",
+      "max_chars": 63,
+      "current_chars": 22
     },
     {
       "name": "Earth Saber",
@@ -9240,7 +9798,9 @@
         "0x01DFE760"
       ],
       "id": 279,
-      "new_description": "This blade was created by earth elementals."
+      "new_description": "This blade was created by earth elementals.",
+      "max_chars": 63,
+      "current_chars": 43
     },
     {
       "name": "Healing Robe",
@@ -9277,7 +9837,9 @@
         "0x02792308"
       ],
       "id": 280,
-      "new_description": "Regenerate HP by 1 | STR+10, CON+15, MDEF+34"
+      "new_description": "Regenerate HP by 1 | STR+10, CON+15, MDEF+34",
+      "max_chars": 63,
+      "current_chars": 44
     },
     {
       "name": "Reflector",
@@ -9311,7 +9873,9 @@
         "0x01DFEC60"
       ],
       "id": 281,
-      "new_description": "Sometimes block magic(healing,support & attack magic)"
+      "new_description": "Sometimes block magic(healing,support & attack magic)",
+      "max_chars": 63,
+      "current_chars": 53
     },
     {
       "name": "Feather Gloves",
@@ -9338,7 +9902,9 @@
         "0x0271FFE8"
       ],
       "id": 282,
-      "new_description": "Gloves made from feathers."
+      "new_description": "Gloves made from feathers.",
+      "max_chars": 63,
+      "current_chars": 26
     },
     {
       "name": "Feather Shoes",
@@ -9376,7 +9942,9 @@
         "0x027204E8"
       ],
       "id": 283,
-      "new_description": "Immune to Slow"
+      "new_description": "Immune to Slow",
+      "max_chars": 63,
+      "current_chars": 14
     },
     {
       "name": "Rainbow Orb",
@@ -9409,7 +9977,9 @@
         "0x01E9B248"
       ],
       "id": 284,
-      "new_description": "Magic-absorbing orb.(Activates Dispel Magic)"
+      "new_description": "Magic-absorbing orb.(Activates Dispel Magic)",
+      "max_chars": 63,
+      "current_chars": 44
     },
     {
       "name": "Jewel Brooch",
@@ -9445,7 +10015,9 @@
         "0x0230BDC4"
       ],
       "id": 285,
-      "new_description": "LUK+8"
+      "new_description": "LUK+8",
+      "max_chars": 63,
+      "current_chars": 5
     },
     {
       "name": "Star Tiara",
@@ -9484,7 +10056,9 @@
         "0x029F4768"
       ],
       "id": 286,
-      "new_description": "Decrease water, earth, darkness,& evil damage"
+      "new_description": "Decrease water, earth, darkness,& evil damage",
+      "max_chars": 63,
+      "current_chars": 45
     },
     {
       "name": "Morning Star",
@@ -9516,7 +10090,9 @@
         "0x01F206F4"
       ],
       "id": 287,
-      "new_description": "A rod with a massive iron ball on a chain."
+      "new_description": "A rod with a massive iron ball on a chain.",
+      "max_chars": 63,
+      "current_chars": 42
     },
     {
       "name": "Magic Wand",
@@ -9548,7 +10124,9 @@
         "0x01FB82CC"
       ],
       "id": 288,
-      "new_description": "STR+2, INT+5, WIL+3, AGL+4, CON+1, POW+12, MAT+8"
+      "new_description": "STR+2, INT+5, WIL+3, AGL+4, CON+1, POW+12, MAT+8",
+      "max_chars": 63,
+      "current_chars": 48
     },
     {
       "name": "Water Rod",
@@ -9582,7 +10160,9 @@
         "0x01FB87CC"
       ],
       "id": 289,
-      "new_description": "1 of the 4 given to the elven king by a dead king."
+      "new_description": "1 of the 4 given to the elven king by a dead king.",
+      "max_chars": 63,
+      "current_chars": 50
     },
     {
       "name": "Mirror Armor",
@@ -9618,7 +10198,9 @@
         "0x02437E5C"
       ],
       "id": 290,
-      "new_description": "Sometimes block magic(healing,support & attack magic) | MDEF+31"
+      "new_description": "Sometimes block magic(healing,support & attack magic) | MDEF+31",
+      "max_chars": 63,
+      "current_chars": 63
     },
     {
       "name": "Slaughterer",
@@ -9657,7 +10239,9 @@
         "0x029F32E8"
       ],
       "id": 291,
-      "new_description": "Sometimes Instant Death (8% probability)"
+      "new_description": "Sometimes Instant Death (8% probability)",
+      "max_chars": 63,
+      "current_chars": 40
     },
     {
       "name": "Fortune Clock",
@@ -9680,7 +10264,9 @@
         "0x02853064"
       ],
       "id": 292,
-      "new_description": "Forever sand.(Activates Quick 33% dest.)"
+      "new_description": "Forever sand.(Activates Quick 33% dest.)",
+      "max_chars": 63,
+      "current_chars": 40
     },
     {
       "name": "Silver Brooch",
@@ -9711,7 +10297,9 @@
         "0x021AD088"
       ],
       "id": 293,
-      "new_description": "A silver brooch which also wards off evil."
+      "new_description": "A silver brooch which also wards off evil.",
+      "max_chars": 63,
+      "current_chars": 42
     },
     {
       "name": "Dragonbane",
@@ -9747,7 +10335,9 @@
         "0x021AE208"
       ],
       "id": 294,
-      "new_description": "Dragon enemies, AT + 40"
+      "new_description": "Dragon enemies, AT + 40",
+      "max_chars": 63,
+      "current_chars": 23
     },
     {
       "name": "Rainbow Rod",
@@ -9784,7 +10374,9 @@
         "0x021AF388"
       ],
       "id": 295,
-      "new_description": "Critical attack ratio + 7% | LUK+30"
+      "new_description": "Critical attack ratio + 7% | LUK+30",
+      "max_chars": 63,
+      "current_chars": 35
     },
     {
       "name": "Beauty Veil",
@@ -9820,7 +10412,9 @@
         "0x029F3568"
       ],
       "id": 296,
-      "new_description": "Priest mag atk + 50% & Increases the potential of"
+      "new_description": "Priest mag atk + 50% & Increases the potential of",
+      "max_chars": 63,
+      "current_chars": 49
     },
     {
       "name": "Artemis",
@@ -9860,7 +10454,9 @@
         "0x029F4468"
       ],
       "id": 297,
-      "new_description": "At + 30 / 8 MP"
+      "new_description": "At + 30 / 8 MP",
+      "max_chars": 63,
+      "current_chars": 14
     },
     {
       "name": "Infernal Robe",
@@ -9895,7 +10491,9 @@
         "0x02BB3A9C"
       ],
       "id": 298,
-      "new_description": "POW+30, LUK+14, MDEF+51"
+      "new_description": "POW+30, LUK+14, MDEF+51",
+      "max_chars": 63,
+      "current_chars": 23
     },
     {
       "name": "Bandit Dagger",
@@ -9927,7 +10525,9 @@
         "0x02590844"
       ],
       "id": 299,
-      "new_description": "AGL+10"
+      "new_description": "AGL+10",
+      "max_chars": 63,
+      "current_chars": 6
     },
     {
       "name": "Feather Anklet",
@@ -9947,7 +10547,9 @@
         "0x025923C4"
       ],
       "id": 300,
-      "new_description": "Anklet with beautiful decorative feathers."
+      "new_description": "Anklet with beautiful decorative feathers.",
+      "max_chars": 63,
+      "current_chars": 42
     },
     {
       "name": "Winged Helmet",
@@ -9979,7 +10581,9 @@
         "0x02592644"
       ],
       "id": 301,
-      "new_description": "AGL+4"
+      "new_description": "AGL+4",
+      "max_chars": 63,
+      "current_chars": 5
     },
     {
       "name": "Perseus Bow",
@@ -10016,7 +10620,9 @@
         "0x025935C4"
       ],
       "id": 302,
-      "new_description": "Demon & dragon enemies, At + 60 & critical attack"
+      "new_description": "Demon & dragon enemies, At + 60 & critical attack",
+      "max_chars": 63,
+      "current_chars": 49
     },
     {
       "name": "Shadowbolt",
@@ -10052,7 +10658,9 @@
         "0x02800568"
       ],
       "id": 303,
-      "new_description": "POW+12"
+      "new_description": "POW+12",
+      "max_chars": 63,
+      "current_chars": 6
     },
     {
       "name": "Excalibur",
@@ -10088,7 +10696,9 @@
         "0x02850864"
       ],
       "id": 304,
-      "new_description": "Demon enemies & magical living thing, At + 40"
+      "new_description": "Demon enemies & magical living thing, At + 40",
+      "max_chars": 63,
+      "current_chars": 45
     },
     {
       "name": "Valkyrie",
@@ -10125,7 +10735,9 @@
         "0x02850D64"
       ],
       "id": 305,
-      "new_description": "Critical attack ratio + 5% | STR+12, INT+8, WIL+8, AGL+12, CON+12, POW+8, LUK+16, MAT+30"
+      "new_description": "Critical attack ratio + 5% | STR+12, INT+8, WIL+8, AGL+12, CON+12, POW+8, LUK+16, MAT+30",
+      "max_chars": 63,
+      "current_chars": 88
     },
     {
       "name": "Godswand",
@@ -10161,7 +10773,9 @@
         "0x02850FE4"
       ],
       "id": 306,
-      "new_description": "Sometimes shoot Fire Bullet / 1 MP (10% probability) | WIL+8"
+      "new_description": "Sometimes shoot Fire Bullet / 1 MP (10% probability) | WIL+8",
+      "max_chars": 63,
+      "current_chars": 60
     },
     {
       "name": "Berserker",
@@ -10195,7 +10809,9 @@
         "0x02851764"
       ],
       "id": 307,
-      "new_description": "Sometimes knock back enemies (even bosses)"
+      "new_description": "Sometimes knock back enemies (even bosses)",
+      "max_chars": 63,
+      "current_chars": 42
     },
     {
       "name": "Star Rod",
@@ -10227,7 +10843,9 @@
         "0x028519E4"
       ],
       "id": 308,
-      "new_description": "MAT+20"
+      "new_description": "MAT+20",
+      "max_chars": 63,
+      "current_chars": 6
     },
     {
       "name": "Air Shield",
@@ -10262,7 +10880,9 @@
         "0x029F0AE8"
       ],
       "id": 309,
-      "new_description": "Reduce wind elemental attack | MDEF+12"
+      "new_description": "Reduce wind elemental attack | MDEF+12",
+      "max_chars": 63,
+      "current_chars": 38
     },
     {
       "name": "Lucifer",
@@ -10299,7 +10919,9 @@
         "0x02B40220"
       ],
       "id": 310,
-      "new_description": "At + 20 / 6 HP, Can paralyze user if he hits with HP"
+      "new_description": "At + 20 / 6 HP, Can paralyze user if he hits with HP",
+      "max_chars": 63,
+      "current_chars": 52
     },
     {
       "name": "Hammer of Thor",
@@ -10336,7 +10958,9 @@
         "0x02B404A0"
       ],
       "id": 311,
-      "new_description": "At + 20 / 8 MP & Giant enemies & magical living thing,"
+      "new_description": "At + 20 / 8 MP & Giant enemies & magical living thing,",
+      "max_chars": 63,
+      "current_chars": 54
     },
     {
       "name": "Pavas Armor",
@@ -10371,7 +10995,9 @@
         "0x02B40720"
       ],
       "id": 312,
-      "new_description": "STR+32, CON+48, LUK+16, MDEF+80"
+      "new_description": "STR+32, CON+48, LUK+16, MDEF+80",
+      "max_chars": 63,
+      "current_chars": 31
     },
     {
       "name": "Death Mask",
@@ -10407,7 +11033,9 @@
         "0x02BB421C"
       ],
       "id": 313,
-      "new_description": "Regenerate HP by -5% & critical attack ratio + 5% | STR+32, INT+32, WIL+32, AGL+32, CON+32, POW+32, LUK+32, MAT+100, MDEF+100"
+      "new_description": "Regenerate HP by -5% & critical attack ratio + 5% | STR+32, INT+32, WIL+32, AGL+32, CON+32, POW+32, LUK+32, MAT+100, MDEF+100",
+      "max_chars": 63,
+      "current_chars": 125
     },
     {
       "name": "Death Sickle",
@@ -10443,7 +11071,9 @@
         "0x02BD32A4"
       ],
       "id": 314,
-      "new_description": "At + 30 / 6 HP & Sometimes Instant Death (8% prob.)"
+      "new_description": "At + 30 / 6 HP & Sometimes Instant Death (8% prob.)",
+      "max_chars": 63,
+      "current_chars": 51
     },
     {
       "name": "Phantom Robe",
@@ -10477,7 +11107,9 @@
         "0x02BD3524"
       ],
       "id": 315,
-      "new_description": "MDEF+2"
+      "new_description": "MDEF+2",
+      "max_chars": 63,
+      "current_chars": 6
     }
   ]
 }
