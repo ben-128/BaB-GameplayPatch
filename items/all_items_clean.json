@@ -1306,9 +1306,9 @@
         "0x00C3F260"
       ],
       "id": 33,
-      "new_description": "AT+2, DEF+2",
+      "new_description": "Heavy fighting gloves.",
       "max_chars": 63,
-      "current_chars": 11,
+      "current_chars": 22,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -1651,9 +1651,9 @@
         "0x02A8E4D4"
       ],
       "id": 43,
-      "new_description": "AT+121",
+      "new_description": "Legendary wolf blade.",
       "max_chars": 63,
-      "current_chars": 6
+      "current_chars": 21
     },
     {
       "name": "Strong Gloves",
@@ -1974,9 +1974,9 @@
         "0x011E96FC"
       ],
       "id": 51,
-      "new_description": "AT+9",
+      "new_description": "Light thrusting sword.",
       "max_chars": 63,
-      "current_chars": 4,
+      "current_chars": 22,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -2103,9 +2103,9 @@
         "0x029067E4"
       ],
       "id": 54,
-      "new_description": "Elven rod with hidden powers. AT+(enemy lvl/3)",
+      "new_description": "Elven rod with hidden powers. Grows with foe strength",
       "max_chars": 63,
-      "current_chars": 46,
+      "current_chars": 53,
       "auction_price": 16,
       "auction_price_id": 14,
       "auction_price_source": "extracted_from_item_structure"
@@ -4340,9 +4340,9 @@
         "0x00E08278"
       ],
       "id": 116,
-      "new_description": "AT+82",
+      "new_description": "Advanced mechanical bow.",
       "max_chars": 63,
-      "current_chars": 5
+      "current_chars": 24
     },
     {
       "name": "Bow",
@@ -4380,9 +4380,9 @@
         "0x025935CC"
       ],
       "id": 117,
-      "new_description": "AT+7",
+      "new_description": "Standard hunting bow.",
       "max_chars": 63,
-      "current_chars": 4,
+      "current_chars": 21,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -4527,9 +4527,9 @@
         "0x00E08C78"
       ],
       "id": 121,
-      "new_description": "AT+44",
+      "new_description": "Radiant blessed sword.",
       "max_chars": 63,
-      "current_chars": 5
+      "current_chars": 22
     },
     {
       "name": "Blackjack",
@@ -4701,9 +4701,9 @@
         "0x02908864"
       ],
       "id": 126,
-      "new_description": "AT+65, MAT+18",
+      "new_description": "Icy forge hammer.",
       "max_chars": 63,
-      "current_chars": 13
+      "current_chars": 17
     },
     {
       "name": "Mist Dagger",
@@ -5532,9 +5532,9 @@
         "0x02801968"
       ],
       "id": 149,
-      "new_description": "AT+52",
+      "new_description": "Shadow-forged blade.",
       "max_chars": 63,
-      "current_chars": 5
+      "current_chars": 20
     },
     {
       "name": "Ritual Hammer",
@@ -5712,9 +5712,9 @@
         "0x02A8D854"
       ],
       "id": 154,
-      "new_description": "AT+60",
+      "new_description": "Fire-breathing bow.",
       "max_chars": 63,
-      "current_chars": 5
+      "current_chars": 19
     },
     {
       "name": "Red Ear-stud",
@@ -5822,9 +5822,9 @@
         "0x02975CDC"
       ],
       "id": 157,
-      "new_description": "AT+34",
+      "new_description": "Frozen crystal blade.",
       "max_chars": 63,
-      "current_chars": 5
+      "current_chars": 21
     },
     {
       "name": "Mistortain",
@@ -6402,9 +6402,9 @@
         "0x01176CD0"
       ],
       "id": 172,
-      "new_description": "AT+12, MAT+1",
+      "new_description": "Basic iron wand.",
       "max_chars": 63,
-      "current_chars": 12,
+      "current_chars": 16,
       "auction_price": 29,
       "auction_price_id": 12,
       "auction_price_source": "extracted_from_item_structure"
@@ -6481,9 +6481,9 @@
         "0x0152BC8C"
       ],
       "id": 174,
-      "new_description": "AT+24",
+      "new_description": "Extended dueling blade.",
       "max_chars": 63,
-      "current_chars": 5,
+      "current_chars": 23,
       "auction_price": 16,
       "auction_price_id": 24,
       "auction_price_source": "extracted_from_item_structure"
@@ -7071,9 +7071,9 @@
         "0x024380DC"
       ],
       "id": 189,
-      "new_description": "DEF+48, MDEF+21",
+      "new_description": "Blessed silver shield.",
       "max_chars": 63,
-      "current_chars": 15,
+      "current_chars": 22,
       "auction_price": 10,
       "auction_price_id": 0,
       "auction_price_source": "extracted_from_item_structure"
@@ -7200,9 +7200,9 @@
         "0x025D4A4C"
       ],
       "id": 192,
-      "new_description": "AT+32",
+      "new_description": "Elegant silver blade.",
       "max_chars": 63,
-      "current_chars": 5
+      "current_chars": 21
     },
     {
       "name": "Light Necklace",
@@ -7287,9 +7287,9 @@
         "0x021AE988"
       ],
       "id": 195,
-      "new_description": "Sometimes shoot Stone Bullet if hit by normal atk | AT+66, M...",
+      "new_description": "Earth star wand. Shoots Stone Bullet when hit",
       "max_chars": 63,
-      "current_chars": 63
+      "current_chars": 45
     },
     {
       "name": "Battle Axe",
@@ -7860,9 +7860,9 @@
         "0x01DFDFE0"
       ],
       "id": 210,
-      "new_description": "AT+36",
+      "new_description": "Blazing fire sword.",
       "max_chars": 63,
-      "current_chars": 5
+      "current_chars": 19
     },
     {
       "name": "Black Armor",
@@ -9168,9 +9168,9 @@
         "0x02B3F7A0"
       ],
       "id": 245,
-      "new_description": "AT+87",
+      "new_description": "Ancient war blade.",
       "max_chars": 63,
-      "current_chars": 5
+      "current_chars": 18
     },
     {
       "name": "Holy Gloves",
