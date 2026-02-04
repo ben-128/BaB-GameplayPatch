@@ -1,7 +1,7 @@
 @echo off
-setlocal enabledelayedexpansion
+setlocal
 cd /d "%~dp0"
-chcp 65001 >NUL
+REM chcp 65001 >NUL
 
 REM ========================================================================
 REM Initialize logging
@@ -10,11 +10,13 @@ REM ========================================================================
 REM Create logs directory if it doesn't exist
 if not exist "logs" mkdir logs
 
-REM Generate log filename with timestamp
-set TIMESTAMP=%date:~-4%%date:~3,2%%date:~0,2%_%time:~0,2%%time:~3,2%
-set TIMESTAMP=%TIMESTAMP: =0%
+REM Generate log filename with simple counter
+for /f %%i in ('powershell -command "Get-Date -Format yyyyMMdd_HHmm"') do set TIMESTAMP=%%i
 set LOGFILE=logs\build_%TIMESTAMP%.log
 set LASTLOG=logs\last_build.log
+
+echo Initializing build system...
+echo Log file: %LOGFILE%
 
 REM Clear last log
 if exist "%LASTLOG%" del "%LASTLOG%"
@@ -212,11 +214,14 @@ copy /Y "%LOGFILE%" "%LASTLOG%" >NUL 2>&1
 
 :end
 echo.
-echo Log file saved: %LOGFILE%
-echo Quick access: logs\last_build.log
+if exist "%LOGFILE%" (
+    echo Log file saved: %LOGFILE%
+    echo Quick access: logs\last_build.log
+) else (
+    echo WARNING: Log file was not created
+)
 echo.
 pause
-exit /b
 
 REM ========================================================================
 REM Logging function - writes to both console and log file
