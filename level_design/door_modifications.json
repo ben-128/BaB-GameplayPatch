@@ -1,0 +1,53 @@
+{
+  "_comment": "Door Modification Configuration",
+  "_instructions": [
+    "Modify the 'modifications' array to change door states",
+    "offset: Hex offset from door_analysis.json",
+    "new_type: Door type (0=Unlocked, 1=KeyLocked, 2=MagicLocked, etc.)",
+    "new_key_id: Key ID required (0 = no key)",
+    "new_dest_id: Destination level ID",
+    "Set enabled: true to apply the modification"
+  ],
+  "_door_types": {
+    "UNLOCKED": 0,
+    "KEY_LOCKED": 1,
+    "MAGIC_LOCKED": 2,
+    "DEMON_ENGRAVED": 3,
+    "GHOST_ENGRAVED": 4,
+    "EVENT_LOCKED": 5,
+    "BOSS_DOOR": 6,
+    "ONE_WAY": 7
+  },
+  "modifications": [
+    {
+      "name": "Example: Unlock first door",
+      "offset": "0x100000",
+      "current_type": 1,
+      "new_type": 0,
+      "new_key_id": 0,
+      "new_dest_id": null,
+      "comment": "Change from Key Locked to Unlocked",
+      "enabled": false
+    },
+    {
+      "name": "Example: Remove key requirement",
+      "offset": "0x100010",
+      "current_type": 1,
+      "new_type": null,
+      "new_key_id": 0,
+      "new_dest_id": null,
+      "comment": "Keep type, just remove key requirement",
+      "enabled": false
+    },
+    {
+      "name": "Example: Change destination",
+      "offset": "0x100020",
+      "current_type": null,
+      "new_type": null,
+      "new_key_id": null,
+      "new_dest_id": 10,
+      "comment": "Redirect door to level 10",
+      "enabled": false
+    }
+  ]
+}

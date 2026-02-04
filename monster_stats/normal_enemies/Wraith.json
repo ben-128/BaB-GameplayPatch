@@ -52,5 +52,6 @@
     "_stat24_comment": "[Défaut: 51] Résistance aux altérations d'état",
     "stat16_elem_divine_malefic": 4096,
     "_stat16_elem_divine_malefic_comment": "[Défaut: 4096] Dégâts élémentaires: Divin/Maléfique"
-  }
+  },
+  "id": 119
 }

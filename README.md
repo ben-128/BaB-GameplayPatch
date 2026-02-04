@@ -32,6 +32,12 @@ GameplayPatch/
 │   ├── patch_monster_stats_bin.py  Patcher de stats
 │   └── update_index.py         Mise à jour de l'index
 │
+├── items/                      🎒 Base de données des items (291 items)
+│   ├── all_items_clean.json    Base complète des items authentiques
+│   ├── extract_with_faq_reference.py  Extracteur avec FAQ référence
+│   ├── Blaze objets.txt        FAQ GameFAQs (référence 346 items)
+│   └── README.md               Documentation
+│
 ├── fate_coin_shop/             💰 Boutique Fate Coin
 │   ├── fate_coin_shop.json     Données de la boutique (23 items)
 │   └── patch_fate_coin_shop.py Script de modification
@@ -47,12 +53,21 @@ GameplayPatch/
 │   ├── INDEX.json              Vue d'ensemble
 │   └── README.md               Documentation
 │
-└── character_classes/          🎭 Statistiques des classes (EN RECHERCHE)
-    ├── *.json                  Templates par classe (8 classes)
-    ├── _index.json             Index des classes
-    ├── explore_class_stats.py  Analyse de la zone mémoire
-    ├── DISCOVERY_REPORT.md     Découvertes détaillées
-    └── RESEARCH_GUIDE.md       Guide de recherche
+├── character_classes/          🎭 Statistiques des classes (EN RECHERCHE)
+│   ├── *.json                  Templates par classe (8 classes)
+│   ├── _index.json             Index des classes
+│   ├── explore_class_stats.py  Analyse de la zone mémoire
+│   ├── DISCOVERY_REPORT.md     Découvertes détaillées
+│   └── RESEARCH_GUIDE.md       Guide de recherche
+│
+└── level_design/               🗺️ Level Design & Coordonnées 3D (NOUVEAU)
+    ├── *.py                    5 scripts d'analyse
+    ├── *.json                  Données extraites (level names, spawns, coords)
+    ├── coordinates_*.csv       Coordonnées 3D (5 zones, 2500+ points)
+    ├── LEVEL_DESIGN_REPORT.md  Rapport initial
+    ├── LEVEL_DESIGN_FINDINGS.md Analyse approfondie
+    ├── COORDINATE_VISUALIZATION.md Guide visualisation 3D
+    └── README.md               Documentation complète
 
 ```
 
@@ -109,6 +124,54 @@ with open('monster_stats/boss/Red-Dragon.json', 'w') as f:
 
 # Appliquer au jeu
 # py -3 monster_stats\patch_monster_stats_bin.py
+```
+
+---
+
+### 🎒 Items Database (424 items)
+
+**Base de données complète** de tous les items du jeu extraits de BLAZE.ALL :
+- Armes : épées, haches, arcs, bâtons, etc.
+- Armures : armures lourdes, robes, vêtements
+- Boucliers et casques
+- Accessoires : anneaux, amulettes, bottes, gants
+- Consommables : potions, élixirs, poudres
+- Matériaux magiques
+- Objets de quête
+
+**Structure des données :**
+- Nom de l'item
+- Description (quand disponible)
+- Offset dans BLAZE.ALL
+- Statistiques binaires (valeurs uint16)
+- Catégorie (Weapons, Armor, Consumables, etc.)
+- Nombre d'occurrences dans le jeu
+
+**Fichiers :**
+- `items/all_items_clean.json` : Base complète (424 items)
+- `items/extract_complete_database.py` : Extracteur
+- `items/README.md` : Documentation complète
+
+**Exemples d'items :**
+```json
+{
+  "name": "Healing Potion",
+  "description": "Common potion.(Restores HP to single unit)",
+  "offset": "0x006C6F80",
+  "category": "Consumables",
+  "stats": {
+    "0x10": 5,
+    "0x12": 37119
+  }
+}
+```
+
+**Usage :**
+```python
+import json
+with open('items/all_items_clean.json', 'r') as f:
+    data = json.load(f)
+    weapons = [i for i in data['items'] if i['category'] == 'Weapons']
 ```
 
 ---
@@ -199,6 +262,56 @@ Voir `character_classes/RESEARCH_GUIDE.md` pour participer à la recherche.
 
 ---
 
+### 🗺️ Level Design & Coordonnées 3D (NOUVEAU)
+
+**Statut :** Coordonnées 3D extraites, visualisation recommandée
+
+**Découvertes majeures :**
+- **11 noms de niveaux** identifiés avec offsets exacts
+- **2,500+ coordonnées 3D** extraites de 5 zones différentes
+- **6 zones de données** mappées (Graphics, Level Data, Game Logic, Text)
+- **672 références de rooms** cataloguées
+- **266 portals** + 337 doors + 150 gates
+
+**Zones de coordonnées identifiées :**
+- `Zone 5MB (0x500000)` : Géométrie floor/ceiling ⭐ PLUS PROMETTEUSE
+- `Zone 9MB (0x900000)` : Caméras/Spawns (±8192 range)
+- `Zone 1-3MB` : Géométrie et vertex data
+
+**Fichiers exploitables :**
+- `coordinates_zone_*.csv` : 5 fichiers CSV (Excel/Python/Unity compatible)
+- `coordinates_export.json` : Master file avec toutes les coordonnées
+- `level_data_analysis.json` : Structures autour des noms de niveaux
+
+**Niveaux découverts :**
+- Castle Of Vamp (02, 03, 05 BOSS, 06)
+- CAVERN OF DEATH
+- The Sealed Cave
+- The Mountain of the Fire Dragon
+- VALLEY OF WHITE WIND
+- Et 6 autres zones...
+
+**Scripts d'analyse :**
+- `explore_level_design.py` : Extraction strings & keywords
+- `analyze_level_data.py` : Analyse structures de niveaux
+- `extract_spawn_data.py` : Détection spawns & objets
+- `deep_structure_analysis.py` : Analyse binaire approfondie
+- `export_coordinates.py` : Export coordonnées 3D
+
+**Visualisation :**
+Voir `level_design/COORDINATE_VISUALIZATION.md` pour:
+- Instructions Python (matplotlib 3D)
+- Import Blender
+- Import Unity
+- Méthodes en ligne
+
+**Documentation complète :**
+- `level_design/README.md` : Vue d'ensemble
+- `LEVEL_DESIGN_REPORT.md` : Rapport initial
+- `LEVEL_DESIGN_FINDINGS.md` : Analyse approfondie
+
+---
+
 ## 🔬 Méthodologie
 
 Toutes les données ont été extraites par **reverse engineering** du fichier `BLAZE.ALL` (46 MB) :
@@ -232,11 +345,16 @@ Le script `build_gameplay_patch.bat` exécute dans l'ordre :
 
 ## 📈 Statistiques
 
+- **Items** : 424 (armes, armures, consommables, etc.)
 - **Monstres** : 124 (101 normaux + 23 boss)
 - **Sorts** : 90
 - **Items Fate Coin** : 23
 - **Classes de personnages** : 8 (+ versions M/F)
 - **Auction Prices** : 8 confirmés (recherche en cours)
+- **Niveaux identifiés** : 11 zones uniques
+- **Coordonnées 3D extraites** : 2,500+ points
+- **Rooms** : 672 références
+- **Portals/Doors/Gates** : 653 références combinées
 
 ---
 
@@ -261,6 +379,8 @@ Le script `build_gameplay_patch.bat` exécute dans l'ordre :
 
 ## 📅 Historique
 
+- **2026-02-04** : **Level Design** : 11 niveaux identifiés, 2500+ coordonnées 3D extraites, 5 zones mappées
+- **2026-02-04** : **Items** : Extraction complète de 424 items du jeu
 - **2026-02-04** : Character classes : Zone mémoire identifiée, 8 classes découvertes
 - **2026-02-04** : Organisation en sous-dossiers modulaires
 - **2026-02-04** : Découverte table prix enchères (0x002EA500)

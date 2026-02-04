@@ -54,5 +54,6 @@
     "_stat38_comment": "[Défaut: 60] Données attaque multiple (offset/direction?)",
     "stat16_elem_divine_malefic": 32,
     "_stat16_elem_divine_malefic_comment": "[Défaut: 32] Dégâts élémentaires: Divin/Maléfique"
-  }
+  },
+  "id": 105
 }
