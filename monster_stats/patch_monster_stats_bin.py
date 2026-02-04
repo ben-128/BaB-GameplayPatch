@@ -13,6 +13,7 @@ from pathlib import Path
 # Configuration
 SCRIPT_DIR = Path(__file__).parent
 BIN_FILE = SCRIPT_DIR.parent / "work" / "Blaze & Blade - Patched.bin"
+BLAZE_ALL = SCRIPT_DIR.parent / "work" / "BLAZE.ALL"
 JSON_DIR = SCRIPT_DIR  # Monster stats JSONs are in the same directory as this script
 
 # Disc format
@@ -178,9 +179,42 @@ def main():
     print(f"Patched {total_patched} total monster entries")
     print()
 
-    # Write output
+    # Write BIN output
     print(f"Writing {BIN_FILE}...")
     BIN_FILE.write_bytes(bin_data)
+    print("  BIN patched successfully")
+
+    # Also patch BLAZE.ALL if it exists
+    print()
+    if BLAZE_ALL.exists():
+        print(f"Patching {BLAZE_ALL}...")
+        blaze_data = bytearray(BLAZE_ALL.read_bytes())
+        print(f"  Size: {len(blaze_data)} bytes")
+
+        blaze_patched = 0
+        for json_file in sorted(json_files):
+            try:
+                with open(json_file, 'r', encoding='utf-8') as f:
+                    monster = json.load(f)
+
+                name = monster.get('name', json_file.stem)
+                stats = monster.get('stats', {})
+
+                # Find ALL occurrences in BLAZE.ALL
+                offsets = find_all_occurrences(bytes(blaze_data), name)
+
+                if offsets:
+                    for offset in offsets:
+                        patch_stats(blaze_data, offset, stats, name)
+                    blaze_patched += len(offsets)
+
+            except Exception:
+                pass
+
+        BLAZE_ALL.write_bytes(blaze_data)
+        print(f"  BLAZE.ALL patched: {blaze_patched} entries")
+    else:
+        print(f"BLAZE.ALL not found, skipping...")
 
     print()
     print("=" * 60)

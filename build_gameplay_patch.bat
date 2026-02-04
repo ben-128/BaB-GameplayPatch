@@ -30,12 +30,11 @@ echo.
 echo Build started: %date% %time%
 echo.
 echo Ce script va:
-echo   1. Patcher les prix Fate Coin Shop
-echo   2. Patcher les descriptions d'items
-echo   3. Injecter BLAZE.ALL dans le BIN
-echo   4. Patcher les stats des monstres
+echo   1. Patcher les prix Fate Coin Shop dans BLAZE.ALL
+echo   2. Patcher les descriptions d'items dans BLAZE.ALL
+echo   3. Patcher les stats des monstres dans BLAZE.ALL
+echo   4. Injecter BLAZE.ALL dans le BIN (2 emplacements)
 echo   5. Mettre a jour la documentation
-echo   6. Commit et polish
 echo.
 echo ========================================================================
 echo.
@@ -83,9 +82,26 @@ call :log "[OK] Items descriptions patched (294 items)"
 call :log ""
 
 REM ========================================================================
-REM Step 3: Inject BLAZE.ALL into BIN
+REM Step 3: Patch monster stats in BLAZE.ALL
 REM ========================================================================
-call :log "[3/6] Injecting BLAZE.ALL into BIN..."
+call :log "[3/5] Patching monster stats in BLAZE.ALL..."
+call :log ""
+
+py -3 monster_stats\patch_monster_stats.py >> "%LOGFILE%" 2>&1
+if errorlevel 1 (
+    call :log ""
+    call :log "[ERROR] Monster stats patch failed!"
+    goto :error
+)
+
+call :log ""
+call :log "[OK] Monster stats patched in BLAZE.ALL"
+call :log ""
+
+REM ========================================================================
+REM Step 4: Inject BLAZE.ALL into BIN (2 locations)
+REM ========================================================================
+call :log "[4/5] Injecting BLAZE.ALL into BIN (2 locations)..."
 call :log ""
 
 py -3 patch_blaze_all.py >> "%LOGFILE%" 2>&1
@@ -100,26 +116,9 @@ call :log "[OK] BLAZE.ALL injected into BIN"
 call :log ""
 
 REM ========================================================================
-REM Step 4: Patch monster stats
-REM ========================================================================
-call :log "[4/6] Patching monster stats into BIN..."
-call :log ""
-
-py -3 monster_stats\patch_monster_stats_bin.py >> "%LOGFILE%" 2>&1
-if errorlevel 1 (
-    call :log ""
-    call :log "[ERROR] Monster stats patch failed!"
-    goto :error
-)
-
-call :log ""
-call :log "[OK] Monster stats patched"
-call :log ""
-
-REM ========================================================================
 REM Step 5: Update documentation
 REM ========================================================================
-call :log "[5/6] Updating documentation..."
+call :log "[5/5] Updating documentation..."
 call :log ""
 
 py -3 -c "from pathlib import Path; from datetime import datetime; readme = Path('README.md'); content = readme.read_text(encoding='utf-8'); patch_info = f'\n## Last Patch Build\n\n**Date:** {datetime.now().strftime(\"%%Y-%%m-%%d %%H:%%M:%%S\")}\n\n**Patches Applied:**\n- Fate Coin Shop prices adjusted\n- Items descriptions updated (294 items)\n- Monster stats balanced\n- BLAZE.ALL integrated\n\n**Output:** work/patched.bin\n\n'; import re; content = re.sub(r'## Last Patch Build.*?(?=##|\Z)', patch_info, content, flags=re.DOTALL) if '## Last Patch Build' in content else content + patch_info; readme.write_text(content, encoding='utf-8'); print('[OK] README.md updated')" >> "%LOGFILE%" 2>&1
@@ -128,41 +127,6 @@ if errorlevel 1 (
     call :log "[WARNING] Could not update README.md"
 ) else (
     call :log "[OK] README.md updated"
-)
-
-call :log ""
-
-REM ========================================================================
-REM Step 6: Commit and polish
-REM ========================================================================
-call :log "[6/6] Commit and polish..."
-call :log ""
-
-git diff --quiet
-if errorlevel 1 (
-    call :log "Git changes detected, committing..."
-
-    git add . >> "%LOGFILE%" 2>&1
-
-    git commit -m "Build gameplay patch - Auto-generated
-
-Patches applied:
-- Fate Coin Shop prices
-- Items descriptions (294 items with MA+/MD+ abbreviations)
-- Monster stats balancing
-- Documentation updated
-
-Output: work/patched.bin ready for testing
-
-Co-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>" >> "%LOGFILE%" 2>&1
-
-    if errorlevel 1 (
-        call :log "[WARNING] Git commit failed"
-    ) else (
-        call :log "[OK] Changes committed"
-    )
-) else (
-    call :log "[INFO] No changes to commit"
 )
 
 call :log ""
