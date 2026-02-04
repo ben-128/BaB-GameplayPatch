@@ -1,0 +1,110 @@
+{
+  "metadata": {
+    "price_offset": 115,
+    "price_offset_hex": "0x73",
+    "items_with_prices": 20,
+    "extraction_date": "2026-02-04"
+  },
+  "items": [
+    {
+      "name": "Hyssop",
+      "price": 1,
+      "offset": "0x00909D08"
+    },
+    {
+      "name": "Silent Box",
+      "price": 41,
+      "offset": "0x00ECBF54"
+    },
+    {
+      "name": "Leather Shield",
+      "price": 46,
+      "offset": "0x006C6D00"
+    },
+    {
+      "name": "Winged Boots",
+      "price": 46,
+      "offset": "0x00A7F9B0"
+    },
+    {
+      "name": "Sol Crown",
+      "price": 46,
+      "offset": "0x00AADD10"
+    },
+    {
+      "name": "Wish Hammer",
+      "price": 46,
+      "offset": "0x00AAE990"
+    },
+    {
+      "name": "Dark Shield",
+      "price": 46,
+      "offset": "0x00AAEC10"
+    },
+    {
+      "name": "Defender",
+      "price": 46,
+      "offset": "0x00CBABB8"
+    },
+    {
+      "name": "Mithril Wand",
+      "price": 46,
+      "offset": "0x00E084F8"
+    },
+    {
+      "name": "Frostfurnace",
+      "price": 46,
+      "offset": "0x00E0B978"
+    },
+    {
+      "name": "Skystone Wand",
+      "price": 46,
+      "offset": "0x00F95F74"
+    },
+    {
+      "name": "Rune Amulet",
+      "price": 46,
+      "offset": "0x0163E58C"
+    },
+    {
+      "name": "Elven Hat",
+      "price": 46,
+      "offset": "0x0163F98C"
+    },
+    {
+      "name": "Black Armor",
+      "price": 46,
+      "offset": "0x0172D160"
+    },
+    {
+      "name": "Sword of Bane",
+      "price": 46,
+      "offset": "0x017A139C"
+    },
+    {
+      "name": "Silver Helmet",
+      "price": 46,
+      "offset": "0x0186EAFC"
+    },
+    {
+      "name": "Dancing Doll",
+      "price": 46,
+      "offset": "0x01B4C4E0"
+    },
+    {
+      "name": "Moon Shield",
+      "price": 46,
+      "offset": "0x01D92248"
+    },
+    {
+      "name": "Lavender",
+      "price": 256,
+      "offset": "0x00909C18"
+    },
+    {
+      "name": "Sage",
+      "price": 256,
+      "offset": "0x00909C48"
+    }
+  ]
+}
