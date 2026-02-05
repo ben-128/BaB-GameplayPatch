@@ -1,0 +1,86 @@
+{
+  "name": "Shield",
+  "type": "buff",
+  "offset": "0x00909A68",
+  "stats": {
+    "mp_cost": 170,
+    "power_damage": 30,
+    "hit_chance": null,
+    "effect_type": null,
+    "level_requirement": null,
+    "casting_time": null,
+    "range": null,
+    "area_of_effect": null
+  },
+  "raw_data": {
+    "hex_offset": "0x00909A68",
+    "structure_size": 48,
+    "raw_values": [
+      25932,
+      26998,
+      24948,
+      25972,
+      0,
+      0,
+      0,
+      0,
+      170,
+      6145,
+      30,
+      0,
+      0,
+      0,
+      13824,
+      2049,
+      8320,
+      16448,
+      4112,
+      4112,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "detailed_stats": {
+    "spell_id": 170,
+    "mp_cost": 170,
+    "power_damage": null,
+    "magic_level": 24,
+    "element": 0,
+    "effect_type_byte": 8,
+    "target_flags": 8320,
+    "range_flags": 16448,
+    "special_flags": {
+      "flag1": 0,
+      "flag2": 54,
+      "flag3": 1,
+      "flag4": 8
+    }
+  },
+  "interpretations": {
+    "element": "Neutral",
+    "effect_type": "Unknown (0x08)",
+    "target": "Single Ally"
+  },
+  "mp_cost_info": {
+    "ingame_cost": 12,
+    "structure_cost": 170,
+    "match": false,
+    "occurrences_found": 8,
+    "sample_locations": [
+      "0x002CA424",
+      "0x002CA760",
+      "0x003707E0",
+      "0x003707EC",
+      "0x00370C36"
+    ]
+  },
+  "modification_guide": {
+    "description": "To modify MP cost, replace all occurrences of the pattern [spell_id, old_mp_cost]",
+    "current_pattern_hex": "AA 00 0C 00",
+    "example_new_pattern_hex": "AA 00 [NEW_MP_LO] [NEW_MP_HI]",
+    "occurrences_to_replace": 8,
+    "warning": "Replace ALL occurrences for consistency"
+  }
+}

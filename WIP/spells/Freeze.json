@@ -1,0 +1,66 @@
+{
+  "name": "Freeze",
+  "type": "ice",
+  "offset": "0x00909288",
+  "stats": {
+    "mp_cost": 45,
+    "power_damage": 5,
+    "hit_chance": 70,
+    "effect_type": null,
+    "level_requirement": 116,
+    "casting_time": null,
+    "range": null,
+    "area_of_effect": null
+  },
+  "raw_data": {
+    "hex_offset": "0x00909288",
+    "structure_size": 48,
+    "raw_values": [
+      26708,
+      28277,
+      25956,
+      25202,
+      27759,
+      116,
+      0,
+      0,
+      277,
+      15366,
+      45,
+      5,
+      70,
+      0,
+      17921,
+      2049,
+      32784,
+      4128,
+      4224,
+      12320,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "detailed_stats": {
+    "spell_id": 21,
+    "mp_cost": 21,
+    "power_damage": 70,
+    "magic_level": 60,
+    "element": 5,
+    "effect_type_byte": 8,
+    "target_flags": 32784,
+    "range_flags": 4128,
+    "special_flags": {
+      "flag1": 1,
+      "flag2": 70,
+      "flag3": 1,
+      "flag4": 8
+    }
+  },
+  "interpretations": {
+    "element": "Ice",
+    "effect_type": "Unknown (0x08)",
+    "target": "Unknown (0x8010)"
+  }
+}

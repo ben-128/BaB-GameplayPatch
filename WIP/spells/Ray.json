@@ -1,0 +1,66 @@
+{
+  "name": "Ray",
+  "type": "unknown",
+  "offset": "0x0090913E",
+  "stats": {
+    "mp_cost": 32,
+    "power_damage": null,
+    "hit_chance": 99,
+    "effect_type": null,
+    "level_requirement": 14,
+    "casting_time": null,
+    "range": null,
+    "area_of_effect": null
+  },
+  "raw_data": {
+    "hex_offset": "0x0090913E",
+    "structure_size": 48,
+    "raw_values": [
+      21248,
+      25968,
+      27756,
+      0,
+      0,
+      14,
+      10242,
+      32,
+      0,
+      0,
+      0,
+      14080,
+      1537,
+      4224,
+      32800,
+      8256,
+      0,
+      0,
+      0,
+      0,
+      0,
+      24909,
+      26983,
+      99
+    ]
+  },
+  "detailed_stats": {
+    "spell_id": 0,
+    "mp_cost": null,
+    "power_damage": 1,
+    "magic_level": 0,
+    "element": 0,
+    "effect_type_byte": 32,
+    "target_flags": 0,
+    "range_flags": 0,
+    "special_flags": {
+      "flag1": 32,
+      "flag2": 128,
+      "flag3": 64,
+      "flag4": 32
+    }
+  },
+  "interpretations": {
+    "element": "Neutral",
+    "effect_type": "Unknown (0x20)",
+    "target": "Unknown (0x0000)"
+  }
+}

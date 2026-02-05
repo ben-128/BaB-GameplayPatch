@@ -1,0 +1,66 @@
+{
+  "name": "Vervain",
+  "type": "unknown",
+  "offset": "0x00909C78",
+  "stats": {
+    "mp_cost": 79,
+    "power_damage": 1,
+    "hit_chance": 79,
+    "effect_type": null,
+    "level_requirement": null,
+    "casting_time": null,
+    "range": null,
+    "area_of_effect": null
+  },
+  "raw_data": {
+    "hex_offset": "0x00909C78",
+    "structure_size": 48,
+    "raw_values": [
+      24915,
+      25959,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      79,
+      5,
+      1,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "detailed_stats": {
+    "spell_id": 79,
+    "mp_cost": 79,
+    "power_damage": null,
+    "magic_level": 0,
+    "element": 0,
+    "effect_type_byte": 0,
+    "target_flags": 0,
+    "range_flags": 0,
+    "special_flags": {
+      "flag1": 1,
+      "flag2": 0,
+      "flag3": 1,
+      "flag4": 0
+    }
+  },
+  "interpretations": {
+    "element": "Neutral",
+    "effect_type": "Unknown (0x00)",
+    "target": "Unknown (0x0000)"
+  }
+}

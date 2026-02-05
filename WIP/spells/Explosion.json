@@ -1,0 +1,66 @@
+{
+  "name": "Explosion",
+  "type": "unknown",
+  "offset": "0x00909228",
+  "stats": {
+    "mp_cost": 19,
+    "power_damage": 38,
+    "hit_chance": 50,
+    "effect_type": null,
+    "level_requirement": null,
+    "casting_time": null,
+    "range": null,
+    "area_of_effect": null
+  },
+  "raw_data": {
+    "hex_offset": "0x00909228",
+    "structure_size": 48,
+    "raw_values": [
+      25936,
+      29300,
+      26217,
+      25441,
+      26996,
+      28271,
+      0,
+      0,
+      19,
+      9220,
+      38,
+      4,
+      50,
+      0,
+      16385,
+      2049,
+      4224,
+      8256,
+      16416,
+      32784,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "detailed_stats": {
+    "spell_id": 19,
+    "mp_cost": 19,
+    "power_damage": 50,
+    "magic_level": 36,
+    "element": 4,
+    "effect_type_byte": 8,
+    "target_flags": 4224,
+    "range_flags": 8256,
+    "special_flags": {
+      "flag1": 1,
+      "flag2": 64,
+      "flag3": 1,
+      "flag4": 8
+    }
+  },
+  "interpretations": {
+    "element": "Unknown (4)",
+    "effect_type": "Unknown (0x08)",
+    "target": "Unknown (0x1080)"
+  }
+}

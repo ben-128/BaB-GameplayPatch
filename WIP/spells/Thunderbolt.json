@@ -1,0 +1,66 @@
+{
+  "name": "Thunderbolt",
+  "type": "lightning",
+  "offset": "0x00909258",
+  "stats": {
+    "mp_cost": 20,
+    "power_damage": 45,
+    "hit_chance": 70,
+    "effect_type": null,
+    "level_requirement": 110,
+    "casting_time": null,
+    "range": null,
+    "area_of_effect": null
+  },
+  "raw_data": {
+    "hex_offset": "0x00909258",
+    "structure_size": 48,
+    "raw_values": [
+      30789,
+      27760,
+      29551,
+      28521,
+      110,
+      0,
+      0,
+      0,
+      20,
+      15360,
+      45,
+      2,
+      70,
+      0,
+      17409,
+      2305,
+      4128,
+      32800,
+      8320,
+      12304,
+      32,
+      0,
+      0,
+      0
+    ]
+  },
+  "detailed_stats": {
+    "spell_id": 20,
+    "mp_cost": 20,
+    "power_damage": 70,
+    "magic_level": 60,
+    "element": 2,
+    "effect_type_byte": 9,
+    "target_flags": 4128,
+    "range_flags": 32800,
+    "special_flags": {
+      "flag1": 1,
+      "flag2": 68,
+      "flag3": 1,
+      "flag4": 9
+    }
+  },
+  "interpretations": {
+    "element": "Lightning",
+    "effect_type": "Multi-Target",
+    "target": "Enemy Group"
+  }
+}

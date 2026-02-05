@@ -1,0 +1,113 @@
+{
+  "_readme": "Spawn groups for Hall of Demons",
+  "_usage": "Edit monster names, then run: py -3 patch_spawn_groups.py",
+  "level_name": "Hall of Demons",
+  "groups": [
+    {
+      "name": "Area 1",
+      "offset": "0x2BEB1A4",
+      "monsters": [
+        "Evil-Stalker",
+        "Blood-Shadow",
+        "Spirit-Ball",
+        "Gray-Arm",
+        "Gremlin"
+      ]
+    },
+    {
+      "name": "Area 2",
+      "offset": "0x2BEF188",
+      "monsters": [
+        "Hell-Harpy",
+        "Gray-Arm",
+        "Dark-Goblin",
+        "Goblin-Wizard"
+      ]
+    },
+    {
+      "name": "Area 3",
+      "offset": "0x2BF19AC",
+      "monsters": [
+        "Evil-Stalker",
+        "Death-Knight",
+        "Blood-Shadow",
+        "Spirit-Ball",
+        "Gray-Arm",
+        "Gremlin"
+      ]
+    },
+    {
+      "name": "Area 4",
+      "offset": "0x2BF49A4",
+      "monsters": [
+        "Death-Knight",
+        "Blood-Shadow",
+        "Evil-Stalker",
+        "Gremlin",
+        "Gray-Arm"
+      ]
+    },
+    {
+      "name": "Area 5",
+      "offset": "0x2BF71C0",
+      "monsters": [
+        "Zombie-Dragon",
+        "Evil-Ball"
+      ]
+    },
+    {
+      "name": "Area 6",
+      "offset": "0x2BFC190",
+      "monsters": [
+        "Hell-Ogre",
+        "Basirisk",
+        "Hell-Hound",
+        "Gremlin"
+      ]
+    },
+    {
+      "name": "Area 7",
+      "offset": "0x2BFF17C",
+      "monsters": [
+        "Gremlin",
+        "Succubus"
+      ]
+    },
+    {
+      "name": "Area 8",
+      "offset": "0x2C0017C",
+      "monsters": [
+        "Salamander",
+        "Hell-Hound",
+        "Hell-Ogre"
+      ]
+    },
+    {
+      "name": "Area 9",
+      "offset": "0x2C03158",
+      "monsters": [
+        "Gray-Arm",
+        "Hell-Ogre",
+        "Succubus"
+      ]
+    },
+    {
+      "name": "Area 10",
+      "offset": "0x2C07184",
+      "monsters": [
+        "Carberos",
+        "Hell-Hound",
+        "Gorgon"
+      ]
+    },
+    {
+      "name": "Area 11",
+      "offset": "0x2C08974",
+      "monsters": [
+        "Gray-Arm",
+        "Hell-Ogre",
+        "Succubus"
+      ]
+    }
+  ]
+}

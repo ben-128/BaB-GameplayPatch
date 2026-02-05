@@ -1,0 +1,66 @@
+{
+  "name": "Recover",
+  "type": "unknown",
+  "offset": "0x009097C8",
+  "stats": {
+    "mp_cost": 50,
+    "power_damage": 62,
+    "hit_chance": 50,
+    "effect_type": null,
+    "level_requirement": null,
+    "casting_time": null,
+    "range": null,
+    "area_of_effect": null
+  },
+  "raw_data": {
+    "hex_offset": "0x009097C8",
+    "structure_size": 48,
+    "raw_values": [
+      25938,
+      30067,
+      29298,
+      25445,
+      26996,
+      28271,
+      0,
+      0,
+      50,
+      15360,
+      62,
+      8,
+      0,
+      0,
+      17920,
+      2049,
+      8208,
+      32800,
+      49200,
+      8224,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "detailed_stats": {
+    "spell_id": 50,
+    "mp_cost": 50,
+    "power_damage": null,
+    "magic_level": 60,
+    "element": 8,
+    "effect_type_byte": 8,
+    "target_flags": 8208,
+    "range_flags": 32800,
+    "special_flags": {
+      "flag1": 0,
+      "flag2": 70,
+      "flag3": 1,
+      "flag4": 8
+    }
+  },
+  "interpretations": {
+    "element": "Holy/Healing",
+    "effect_type": "Unknown (0x08)",
+    "target": "Unknown (0x2010)"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "_readme": "Spawn groups for Undersea / Lake",
+  "_usage": "Edit monster names, then run: py -3 patch_spawn_groups.py",
+  "level_name": "Undersea / Lake",
+  "groups": [
+    {
+      "name": "Area 1",
+      "offset": "0x269B1BC",
+      "monsters": [
+        "Black-Lizard",
+        "Wyrm",
+        "Kraken-Hand",
+        "Kraken-Foot",
+        "Kraken"
+      ]
+    },
+    {
+      "name": "Area 2",
+      "offset": "0x269E1A4",
+      "monsters": [
+        "Black-Lizard",
+        "Wyrm",
+        "Kraken-Hand",
+        "Kraken-Foot",
+        "Kraken"
+      ]
+    }
+  ]
+}

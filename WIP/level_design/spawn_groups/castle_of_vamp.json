@@ -1,0 +1,123 @@
+{
+  "_readme": "Spawn groups for Castle of Vamp",
+  "_usage": "Edit monster names, then run: py -3 patch_spawn_groups.py",
+  "level_name": "Castle of Vamp",
+  "groups": [
+    {
+      "name": "Floor 1 - Area 1",
+      "offset": "0x23FF1B4",
+      "monsters": [
+        "Zombie",
+        "Harpy",
+        "Wolf"
+      ]
+    },
+    {
+      "name": "Floor 1 - Area 2",
+      "offset": "0x2407174",
+      "monsters": [
+        "Zombie",
+        "Ghost",
+        "Blood-Skeleton"
+      ]
+    },
+    {
+      "name": "Floor 2 - Area 1",
+      "offset": "0x240D9B0",
+      "monsters": [
+        "Zombie",
+        "Gargoyle",
+        "Ghost",
+        "Blood-Skeleton",
+        "Marble-Gargoyle"
+      ]
+    },
+    {
+      "name": "Floor 3 - Area 1",
+      "offset": "0x2414974",
+      "monsters": [
+        "Ghost",
+        "Harpy",
+        "Blood-Skeleton"
+      ]
+    },
+    {
+      "name": "Floor 3 - Area 2",
+      "offset": "0x2416190",
+      "monsters": [
+        "Ghost",
+        "Harpy",
+        "Blood-Skeleton",
+        "Silver-Wolf"
+      ]
+    },
+    {
+      "name": "Floor 3 - Area 3",
+      "offset": "0x2417998",
+      "monsters": [
+        "Werewolf",
+        "Weretiger",
+        "Harpy",
+        "Silver-Wolf"
+      ]
+    },
+    {
+      "name": "Floor 4 - Area 1",
+      "offset": "0x241A9A8",
+      "monsters": [
+        "Lesser-Vampire",
+        "Marble-Gargoyle",
+        "Shadow",
+        "Vampire-Bat"
+      ]
+    },
+    {
+      "name": "Floor 5 - Area 1",
+      "offset": "0x2421194",
+      "monsters": [
+        "Marble-Gargoyle",
+        "Red-Knight",
+        "Lesser-Vampire"
+      ]
+    },
+    {
+      "name": "Floor 5 - Area 2",
+      "offset": "0x2426970",
+      "monsters": [
+        "Chimera",
+        "Lesser-Vampire",
+        "Chimera",
+        "Lesser-Vampire"
+      ]
+    },
+    {
+      "name": "Floor 5 - Area 3",
+      "offset": "0x242B188",
+      "monsters": [
+        "Chimera",
+        "Vampire",
+        "Succubus",
+        "Red-Knight"
+      ]
+    },
+    {
+      "name": "Floor 5 - Area 4",
+      "offset": "0x242D17C",
+      "monsters": [
+        "Red-Knight",
+        "Vampire",
+        "Shadow",
+        "Lesser-Vampire"
+      ]
+    },
+    {
+      "name": "Floor 5 - Area 5",
+      "offset": "0x243397C",
+      "monsters": [
+        "Vampire-Lord",
+        "Vampire-Lord",
+        "Succubus"
+      ]
+    }
+  ]
+}

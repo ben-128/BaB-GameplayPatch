@@ -1,0 +1,66 @@
+{
+  "name": "Teleport",
+  "type": "unknown",
+  "offset": "0x00909318",
+  "stats": {
+    "mp_cost": 60,
+    "power_damage": 9,
+    "hit_chance": 60,
+    "effect_type": null,
+    "level_requirement": 104,
+    "casting_time": null,
+    "range": null,
+    "area_of_effect": null
+  },
+  "raw_data": {
+    "hex_offset": "0x00909318",
+    "structure_size": 48,
+    "raw_values": [
+      25924,
+      29793,
+      104,
+      28755,
+      27749,
+      108,
+      0,
+      0,
+      280,
+      15362,
+      60,
+      9,
+      3,
+      0,
+      18945,
+      3329,
+      16512,
+      4128,
+      16512,
+      4128,
+      8320,
+      4160,
+      32,
+      0
+    ]
+  },
+  "detailed_stats": {
+    "spell_id": 24,
+    "mp_cost": 24,
+    "power_damage": 3,
+    "magic_level": 60,
+    "element": 9,
+    "effect_type_byte": 13,
+    "target_flags": 16512,
+    "range_flags": 4128,
+    "special_flags": {
+      "flag1": 1,
+      "flag2": 74,
+      "flag3": 1,
+      "flag4": 13
+    }
+  },
+  "interpretations": {
+    "element": "Unknown (9)",
+    "effect_type": "Unknown (0x0D)",
+    "target": "Unknown (0x4080)"
+  }
+}

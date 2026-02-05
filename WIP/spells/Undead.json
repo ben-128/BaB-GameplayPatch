@@ -1,0 +1,66 @@
+{
+  "name": "Undead",
+  "type": "unknown",
+  "offset": "0x009093DD",
+  "stats": {
+    "mp_cost": null,
+    "power_damage": null,
+    "hit_chance": null,
+    "effect_type": null,
+    "level_requirement": 110,
+    "casting_time": null,
+    "range": null,
+    "area_of_effect": null
+  },
+  "raw_data": {
+    "hex_offset": "0x009093DD",
+    "structure_size": 48,
+    "raw_values": [
+      110,
+      0,
+      0,
+      0,
+      0,
+      7168,
+      0,
+      25720,
+      1536,
+      2560,
+      0,
+      256,
+      768,
+      12300,
+      8208,
+      32784,
+      16400,
+      16400,
+      4112,
+      48,
+      0,
+      21504,
+      29301,
+      110
+    ]
+  },
+  "detailed_stats": {
+    "spell_id": 0,
+    "mp_cost": null,
+    "power_damage": null,
+    "magic_level": 10,
+    "element": 0,
+    "effect_type_byte": 128,
+    "target_flags": 16400,
+    "range_flags": 16400,
+    "special_flags": {
+      "flag1": 16,
+      "flag2": 32,
+      "flag3": 16,
+      "flag4": 128
+    }
+  },
+  "interpretations": {
+    "element": "Neutral",
+    "effect_type": "Unknown (0x80)",
+    "target": "Unknown (0x4010)"
+  }
+}

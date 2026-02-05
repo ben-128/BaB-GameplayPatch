@@ -1,0 +1,66 @@
+{
+  "name": "Refresh",
+  "type": "unknown",
+  "offset": "0x009094C8",
+  "stats": {
+    "mp_cost": 55,
+    "power_damage": 2,
+    "hit_chance": 55,
+    "effect_type": null,
+    "level_requirement": null,
+    "casting_time": null,
+    "range": null,
+    "area_of_effect": null
+  },
+  "raw_data": {
+    "hex_offset": "0x009094C8",
+    "structure_size": 48,
+    "raw_values": [
+      25924,
+      25972,
+      29795,
+      16640,
+      26988,
+      28263,
+      0,
+      0,
+      55,
+      2048,
+      2,
+      0,
+      0,
+      0,
+      6657,
+      769,
+      16512,
+      32,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "detailed_stats": {
+    "spell_id": 55,
+    "mp_cost": 55,
+    "power_damage": null,
+    "magic_level": 8,
+    "element": 0,
+    "effect_type_byte": 3,
+    "target_flags": 16512,
+    "range_flags": 32,
+    "special_flags": {
+      "flag1": 1,
+      "flag2": 26,
+      "flag3": 1,
+      "flag4": 3
+    }
+  },
+  "interpretations": {
+    "element": "Neutral",
+    "effect_type": "Status/Buff",
+    "target": "Unknown (0x4080)"
+  }
+}

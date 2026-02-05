@@ -1,0 +1,66 @@
+{
+  "name": "Death",
+  "type": "unknown",
+  "offset": "0x009092E8",
+  "stats": {
+    "mp_cost": 110,
+    "power_damage": 45,
+    "hit_chance": null,
+    "effect_type": null,
+    "level_requirement": 104,
+    "casting_time": null,
+    "range": null,
+    "area_of_effect": null
+  },
+  "raw_data": {
+    "hex_offset": "0x009092E8",
+    "structure_size": 48,
+    "raw_values": [
+      24901,
+      29810,
+      104,
+      24906,
+      25974,
+      26988,
+      110,
+      0,
+      23,
+      15363,
+      45,
+      4,
+      8,
+      0,
+      18433,
+      2306,
+      4224,
+      16512,
+      32784,
+      16416,
+      32,
+      0,
+      0,
+      0
+    ]
+  },
+  "detailed_stats": {
+    "spell_id": 23,
+    "mp_cost": 23,
+    "power_damage": 8,
+    "magic_level": 60,
+    "element": 4,
+    "effect_type_byte": 9,
+    "target_flags": 4224,
+    "range_flags": 16512,
+    "special_flags": {
+      "flag1": 1,
+      "flag2": 72,
+      "flag3": 2,
+      "flag4": 9
+    }
+  },
+  "interpretations": {
+    "element": "Unknown (4)",
+    "effect_type": "Multi-Target",
+    "target": "Unknown (0x1080)"
+  }
+}

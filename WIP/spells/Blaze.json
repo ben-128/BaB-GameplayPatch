@@ -1,0 +1,86 @@
+{
+  "name": "Blaze",
+  "type": "fire",
+  "offset": "0x00909048",
+  "stats": {
+    "mp_cost": 9,
+    "power_damage": 15,
+    "hit_chance": null,
+    "effect_type": null,
+    "level_requirement": 116,
+    "casting_time": null,
+    "range": null,
+    "area_of_effect": null
+  },
+  "raw_data": {
+    "hex_offset": "0x00909048",
+    "structure_size": 48,
+    "raw_values": [
+      28229,
+      26723,
+      28257,
+      116,
+      25943,
+      28769,
+      28271,
+      0,
+      9,
+      6153,
+      15,
+      0,
+      0,
+      0,
+      8960,
+      1026,
+      32800,
+      4160,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "detailed_stats": {
+    "spell_id": 9,
+    "mp_cost": 9,
+    "power_damage": null,
+    "magic_level": 24,
+    "element": 0,
+    "effect_type_byte": 4,
+    "target_flags": 32800,
+    "range_flags": 4160,
+    "special_flags": {
+      "flag1": 0,
+      "flag2": 35,
+      "flag3": 2,
+      "flag4": 4
+    }
+  },
+  "interpretations": {
+    "element": "Neutral",
+    "effect_type": "Direct Damage",
+    "target": "All Enemies"
+  },
+  "mp_cost_info": {
+    "ingame_cost": 16,
+    "structure_cost": 9,
+    "match": false,
+    "occurrences_found": 50,
+    "sample_locations": [
+      "0x00203BC6",
+      "0x00223260",
+      "0x0022BD8E",
+      "0x0022D770",
+      "0x00233EEE"
+    ]
+  },
+  "modification_guide": {
+    "description": "To modify MP cost, replace all occurrences of the pattern [spell_id, old_mp_cost]",
+    "current_pattern_hex": "09 00 10 00",
+    "example_new_pattern_hex": "09 00 [NEW_MP_LO] [NEW_MP_HI]",
+    "occurrences_to_replace": 50,
+    "warning": "Replace ALL occurrences for consistency"
+  }
+}

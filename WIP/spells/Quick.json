@@ -1,0 +1,66 @@
+{
+  "name": "Quick",
+  "type": "unknown",
+  "offset": "0x00909AC8",
+  "stats": {
+    "mp_cost": 40,
+    "power_damage": null,
+    "hit_chance": null,
+    "effect_type": null,
+    "level_requirement": null,
+    "casting_time": null,
+    "range": null,
+    "area_of_effect": null
+  },
+  "raw_data": {
+    "hex_offset": "0x00909AC8",
+    "structure_size": 48,
+    "raw_values": [
+      25928,
+      30305,
+      121,
+      27731,
+      30575,
+      0,
+      0,
+      0,
+      428,
+      10252,
+      40,
+      0,
+      0,
+      0,
+      17153,
+      2049,
+      8320,
+      16448,
+      4224,
+      16416,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "detailed_stats": {
+    "spell_id": 172,
+    "mp_cost": 172,
+    "power_damage": null,
+    "magic_level": 40,
+    "element": 0,
+    "effect_type_byte": 8,
+    "target_flags": 8320,
+    "range_flags": 16448,
+    "special_flags": {
+      "flag1": 1,
+      "flag2": 67,
+      "flag3": 1,
+      "flag4": 8
+    }
+  },
+  "interpretations": {
+    "element": "Neutral",
+    "effect_type": "Unknown (0x08)",
+    "target": "Single Ally"
+  }
+}

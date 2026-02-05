@@ -1,0 +1,66 @@
+{
+  "name": "Anti-poison",
+  "type": "poison",
+  "offset": "0x00909528",
+  "stats": {
+    "mp_cost": 56,
+    "power_damage": 2,
+    "hit_chance": 56,
+    "effect_type": null,
+    "level_requirement": null,
+    "casting_time": null,
+    "range": null,
+    "area_of_effect": null
+  },
+  "raw_data": {
+    "hex_offset": "0x00909528",
+    "structure_size": 48,
+    "raw_values": [
+      25924,
+      25972,
+      29795,
+      17664,
+      25966,
+      26989,
+      29541,
+      0,
+      56,
+      4096,
+      2,
+      0,
+      0,
+      0,
+      8705,
+      769,
+      16416,
+      128,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "detailed_stats": {
+    "spell_id": 56,
+    "mp_cost": 56,
+    "power_damage": null,
+    "magic_level": 16,
+    "element": 0,
+    "effect_type_byte": 3,
+    "target_flags": 16416,
+    "range_flags": 128,
+    "special_flags": {
+      "flag1": 1,
+      "flag2": 34,
+      "flag3": 1,
+      "flag4": 3
+    }
+  },
+  "interpretations": {
+    "element": "Neutral",
+    "effect_type": "Status/Buff",
+    "target": "Unknown (0x4020)"
+  }
+}
