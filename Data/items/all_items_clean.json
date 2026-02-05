@@ -11544,7 +11544,7 @@
     {
       "name": "Flail",
       "offset": "0xb65668",
-      "offset_decimal": 11949672,
+      "offset_decimal": 0,
       "category": "Priest’s Wand/Hammer",
       "description": "",
       "stats": {},
@@ -11564,9 +11564,7 @@
         "mdef": 0
       },
       "occurrences_count": 1,
-      "all_offsets": [
-        "0xb65668"
-      ],
+      "all_offsets": [],
       "id": 326,
       "max_chars": 63,
       "current_chars": 0,
@@ -11831,7 +11829,7 @@
     {
       "name": "Mace",
       "offset": "0x1176050",
-      "offset_decimal": 18309200,
+      "offset_decimal": 0,
       "category": "Priest’s Wand/Hammer",
       "description": "",
       "stats": {},
@@ -11851,9 +11849,7 @@
         "mdef": 0
       },
       "occurrences_count": 1,
-      "all_offsets": [
-        "0x1176050"
-      ],
+      "all_offsets": [],
       "id": 335,
       "max_chars": 63,
       "current_chars": 0,
@@ -12854,7 +12850,7 @@
     {
       "name": "Breastplate",
       "offset": "0x1b53da4c",
-      "offset_decimal": 458480204,
+      "offset_decimal": 18774132,
       "category": "Armors (warrior & dwarf)",
       "description": "",
       "stats": {},
@@ -12875,7 +12871,8 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x1b53da4c"
+        "0x011E7874",
+        "0x011E78B5"
       ],
       "id": 366,
       "new_description": "",
@@ -12885,7 +12882,7 @@
     {
       "name": "Knight's Armor",
       "offset": "0x1b902825",
-      "offset_decimal": 462432293,
+      "offset_decimal": 22215501,
       "category": "Armors (warrior & dwarf)",
       "description": "",
       "stats": {},
@@ -12906,7 +12903,8 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x1b902825"
+        "0x0152FB4D",
+        "0x015AC861"
       ],
       "id": 367,
       "new_description": "",
@@ -13378,7 +13376,7 @@
     {
       "name": "Longbow",
       "offset": "0x1b43cd30",
-      "offset_decimal": 457428272,
+      "offset_decimal": 17858392,
       "category": "Bows (hunter)",
       "description": "",
       "stats": {},
@@ -13399,7 +13397,8 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x1b43cd30"
+        "0x01107F58",
+        "0x01107F99"
       ],
       "id": 382,
       "new_description": "",
