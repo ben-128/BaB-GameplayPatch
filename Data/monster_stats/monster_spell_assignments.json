@@ -1,0 +1,846 @@
+{
+  "description": "Table d'assignation des sorts pour monstres lanceurs",
+  "table_start": "0x9E8D8E",
+  "entry_size": 16,
+  "structure": {
+    "bytes_0_1": "Flags/identifiers",
+    "bytes_2_9": "Attack spells (repeated for probability weighting)",
+    "bytes_10_15": "Support/utility spells"
+  },
+  "goblin_shaman_entry_index": 6,
+  "goblin_shaman_spells": [
+    "Magic Missile",
+    "Stone Bullet",
+    "Sleep",
+    "Healing"
+  ],
+  "entries": [
+    {
+      "index": 0,
+      "offset_hex": "0x9E8D8E",
+      "raw_bytes": [
+        0,
+        0,
+        0,
+        1,
+        2,
+        3,
+        0,
+        0,
+        0,
+        0,
+        175,
+        0,
+        160,
+        0,
+        160,
+        31
+      ],
+      "spells": [
+        "Stone Bullet",
+        "Water Bullet",
+        "Spark Bullet",
+        "Healing",
+        "Sleep"
+      ]
+    },
+    {
+      "index": 1,
+      "offset_hex": "0x9E8D9E",
+      "raw_bytes": [
+        175,
+        31,
+        3,
+        2,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        175,
+        31,
+        160,
+        31,
+        160,
+        0
+      ],
+      "spells": [
+        "Stone Bullet",
+        "Water Bullet",
+        "Spark Bullet",
+        "Healing",
+        "Sleep"
+      ]
+    },
+    {
+      "index": 2,
+      "offset_hex": "0x9E8DAE",
+      "raw_bytes": [
+        175,
+        0,
+        0,
+        4,
+        5,
+        3,
+        2,
+        2,
+        2,
+        2,
+        176,
+        0,
+        191,
+        0,
+        191,
+        31
+      ],
+      "spells": [
+        "Stone Bullet",
+        "Water Bullet",
+        "Striking",
+        "Healing",
+        "Lightbolt"
+      ]
+    },
+    {
+      "index": 3,
+      "offset_hex": "0x9E8DBE",
+      "raw_bytes": [
+        176,
+        31,
+        3,
+        5,
+        4,
+        0,
+        3,
+        3,
+        3,
+        3,
+        176,
+        31,
+        191,
+        31,
+        191,
+        0
+      ],
+      "spells": [
+        "Striking",
+        "Stone Bullet",
+        "Healing",
+        "Lightbolt"
+      ]
+    },
+    {
+      "index": 4,
+      "offset_hex": "0x9E8DCE",
+      "raw_bytes": [
+        176,
+        0,
+        0,
+        6,
+        7,
+        3,
+        1,
+        1,
+        1,
+        1,
+        175,
+        0,
+        191,
+        0,
+        191,
+        31
+      ],
+      "spells": [
+        "Stone Bullet",
+        "Spark Bullet",
+        "Smash",
+        "Dark Wave",
+        "Healing"
+      ]
+    },
+    {
+      "index": 5,
+      "offset_hex": "0x9E8DDE",
+      "raw_bytes": [
+        175,
+        31,
+        3,
+        7,
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        175,
+        31,
+        191,
+        31,
+        191,
+        0
+      ],
+      "spells": [
+        "Stone Bullet",
+        "Healing",
+        "Dark Wave",
+        "Smash"
+      ]
+    },
+    {
+      "index": 6,
+      "offset_hex": "0x9E8DEE",
+      "raw_bytes": [
+        175,
+        0,
+        0,
+        8,
+        9,
+        3,
+        3,
+        3,
+        3,
+        3,
+        176,
+        0,
+        160,
+        0,
+        160,
+        31
+      ],
+      "spells": [
+        "Stone Bullet",
+        "Enchant Weapon",
+        "Healing",
+        "Sleep",
+        "Magic Missile"
+      ]
+    },
+    {
+      "index": 7,
+      "offset_hex": "0x9E8DFE",
+      "raw_bytes": [
+        176,
+        31,
+        3,
+        9,
+        8,
+        0,
+        2,
+        2,
+        2,
+        2,
+        176,
+        31,
+        160,
+        31,
+        160,
+        0
+      ],
+      "spells": [
+        "Stone Bullet",
+        "Water Bullet",
+        "Enchant Weapon",
+        "Healing",
+        "Sleep",
+        "Magic Missile"
+      ]
+    },
+    {
+      "index": 8,
+      "offset_hex": "0x9E8E0E",
+      "raw_bytes": [
+        176,
+        0,
+        10,
+        11,
+        12,
+        13,
+        4,
+        4,
+        4,
+        4,
+        192,
+        47,
+        223,
+        47,
+        223,
+        32
+      ],
+      "spells": [
+        "Striking",
+        "Lightningbolt",
+        "Poison Cloud",
+        "Remove",
+        "Blizzard",
+        "Protection",
+        "Blaze"
+      ]
+    },
+    {
+      "index": 9,
+      "offset_hex": "0x9E8E1E",
+      "raw_bytes": [
+        192,
+        32,
+        12,
+        14,
+        15,
+        13,
+        4,
+        4,
+        4,
+        4,
+        192,
+        32,
+        192,
+        47,
+        223,
+        47
+      ],
+      "spells": [
+        "Striking",
+        "Poison Cloud",
+        "Remove",
+        "Blizzard",
+        "Extend Spell",
+        "Protection",
+        "Magic Ray"
+      ]
+    },
+    {
+      "index": 10,
+      "offset_hex": "0x9E8E2E",
+      "raw_bytes": [
+        223,
+        32,
+        13,
+        15,
+        16,
+        17,
+        5,
+        5,
+        5,
+        5,
+        223,
+        48,
+        192,
+        48,
+        192,
+        63
+      ],
+      "spells": [
+        "Poison Cloud",
+        "Dark Breath",
+        "Remove2",
+        "Protection",
+        "Magic Ray",
+        "Lightbolt",
+        "Shining"
+      ]
+    },
+    {
+      "index": 11,
+      "offset_hex": "0x9E8E3E",
+      "raw_bytes": [
+        223,
+        63,
+        15,
+        14,
+        18,
+        16,
+        6,
+        6,
+        6,
+        6,
+        223,
+        48,
+        192,
+        48,
+        192,
+        63
+      ],
+      "spells": [
+        "Extend Spell",
+        "Remove2",
+        "Dark Wave",
+        "Magic Ray",
+        "Dispell Magic",
+        "Shining"
+      ]
+    },
+    {
+      "index": 12,
+      "offset_hex": "0x9E8E4E",
+      "raw_bytes": [
+        223,
+        63,
+        14,
+        12,
+        19,
+        18,
+        7,
+        7,
+        7,
+        7,
+        223,
+        48,
+        192,
+        48,
+        192,
+        63
+      ],
+      "spells": [
+        "Smash",
+        "Extend Spell",
+        "Blizzard",
+        "Remove2",
+        "Dispell Magic",
+        "Petrifaction"
+      ]
+    },
+    {
+      "index": 13,
+      "offset_hex": "0x9E8E5E",
+      "raw_bytes": [
+        223,
+        63,
+        12,
+        11,
+        20,
+        19,
+        8,
+        8,
+        8,
+        8,
+        223,
+        48,
+        192,
+        48,
+        192,
+        63
+      ],
+      "spells": [
+        "Explosion",
+        "Lightningbolt",
+        "Blizzard",
+        "Remove2",
+        "Petrifaction",
+        "Magic Missile"
+      ]
+    },
+    {
+      "index": 14,
+      "offset_hex": "0x9E8E6E",
+      "raw_bytes": [
+        223,
+        63,
+        11,
+        10,
+        21,
+        20,
+        9,
+        9,
+        9,
+        9,
+        223,
+        48,
+        192,
+        48,
+        192,
+        63
+      ],
+      "spells": [
+        "Explosion",
+        "Lightningbolt",
+        "Remove2",
+        "Enchant Weapon",
+        "Thunderbolt",
+        "Blaze"
+      ]
+    },
+    {
+      "index": 15,
+      "offset_hex": "0x9E8E7E",
+      "raw_bytes": [
+        223,
+        63,
+        10,
+        13,
+        17,
+        21,
+        10,
+        10,
+        10,
+        10,
+        223,
+        48,
+        192,
+        48,
+        192,
+        63
+      ],
+      "spells": [
+        "Poison Cloud",
+        "Dark Breath",
+        "Remove2",
+        "Thunderbolt",
+        "Blaze"
+      ]
+    },
+    {
+      "index": 16,
+      "offset_hex": "0x9E8E8E",
+      "raw_bytes": [
+        223,
+        63,
+        22,
+        0,
+        13,
+        0,
+        16,
+        0,
+        8,
+        0,
+        22,
+        0,
+        13,
+        0,
+        8,
+        0
+      ],
+      "spells": [
+        "Freeze Beast",
+        "Magic Missile",
+        "Poison Cloud",
+        "Shining"
+      ]
+    },
+    {
+      "index": 17,
+      "offset_hex": "0x9E8E9E",
+      "raw_bytes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        12,
+        0,
+        4,
+        0
+      ],
+      "spells": [
+        "Blizzard",
+        "Striking"
+      ]
+    },
+    {
+      "index": 18,
+      "offset_hex": "0x9E8EAE",
+      "raw_bytes": [
+        0,
+        0,
+        64,
+        0,
+        0,
+        0,
+        240,
+        0,
+        0,
+        0,
+        88,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "spells": [
+        "Spark Bullet"
+      ]
+    },
+    {
+      "index": 19,
+      "offset_hex": "0x9E8EBE",
+      "raw_bytes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "spells": []
+    },
+    {
+      "index": 20,
+      "offset_hex": "0x9E8ECE",
+      "raw_bytes": [
+        0,
+        0,
+        0,
+        0,
+        40,
+        0,
+        244,
+        255,
+        0,
+        0,
+        0,
+        0,
+        40,
+        0,
+        0,
+        0
+      ],
+      "spells": [
+        "Sanity"
+      ]
+    },
+    {
+      "index": 21,
+      "offset_hex": "0x9E8EDE",
+      "raw_bytes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        244,
+        255
+      ],
+      "spells": []
+    },
+    {
+      "index": 22,
+      "offset_hex": "0x9E8EEE",
+      "raw_bytes": [
+        0,
+        0,
+        0,
+        0,
+        40,
+        0,
+        12,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        12,
+        0
+      ],
+      "spells": [
+        "Blizzard",
+        "Sanity"
+      ]
+    },
+    {
+      "index": 23,
+      "offset_hex": "0x9E8EFE",
+      "raw_bytes": [
+        0,
+        0,
+        12,
+        0,
+        40,
+        0,
+        0,
+        0,
+        0,
+        0,
+        12,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "spells": [
+        "Blizzard",
+        "Sanity"
+      ]
+    },
+    {
+      "index": 24,
+      "offset_hex": "0x9E8F0E",
+      "raw_bytes": [
+        0,
+        0,
+        244,
+        255,
+        40,
+        0,
+        0,
+        0,
+        0,
+        0,
+        244,
+        255,
+        0,
+        0,
+        0,
+        0
+      ],
+      "spells": [
+        "Sanity"
+      ]
+    },
+    {
+      "index": 25,
+      "offset_hex": "0x9E8F1E",
+      "raw_bytes": [
+        0,
+        0,
+        248,
+        255,
+        104,
+        0,
+        248,
+        255,
+        0,
+        0,
+        8,
+        0,
+        104,
+        0,
+        248,
+        255
+      ],
+      "spells": [
+        "Magic Missile"
+      ]
+    },
+    {
+      "index": 26,
+      "offset_hex": "0x9E8F2E",
+      "raw_bytes": [
+        0,
+        0,
+        16,
+        0,
+        60,
+        0,
+        240,
+        255,
+        0,
+        0,
+        240,
+        255,
+        60,
+        0,
+        240,
+        255
+      ],
+      "spells": [
+        "Shining"
+      ]
+    },
+    {
+      "index": 27,
+      "offset_hex": "0x9E8F3E",
+      "raw_bytes": [
+        0,
+        0,
+        8,
+        0,
+        104,
+        0,
+        8,
+        0,
+        0,
+        0,
+        16,
+        0,
+        60,
+        0,
+        16,
+        0
+      ],
+      "spells": [
+        "Shining",
+        "Magic Missile"
+      ]
+    },
+    {
+      "index": 28,
+      "offset_hex": "0x9E8F4E",
+      "raw_bytes": [
+        0,
+        0,
+        248,
+        255,
+        104,
+        0,
+        8,
+        0,
+        0,
+        0,
+        240,
+        255,
+        60,
+        0,
+        16,
+        0
+      ],
+      "spells": [
+        "Shining",
+        "Magic Missile"
+      ]
+    },
+    {
+      "index": 29,
+      "offset_hex": "0x9E8F5E",
+      "raw_bytes": [
+        0,
+        0,
+        236,
+        255,
+        60,
+        0,
+        236,
+        255,
+        0,
+        0,
+        20,
+        0,
+        60,
+        0,
+        236,
+        255
+      ],
+      "spells": [
+        "Explosion"
+      ]
+    }
+  ]
+}

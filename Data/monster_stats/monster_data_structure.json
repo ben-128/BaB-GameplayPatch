@@ -1,0 +1,183 @@
+{
+  "description": "Structure des données de monstres et des attaques spéciales",
+  "note": "Les sorts que les monstres peuvent lancer ne sont PAS dans les stats de monstre. L'assignation monstre->sort est gérée par le code AI dans l'exécutable (SLES_008.45).",
+  "monster_stats_structure": {
+    "total_size": 96,
+    "fields": [
+      {
+        "offset": "0x00",
+        "size": 16,
+        "name": "name",
+        "description": "Nom du monstre (ASCII, null-terminated)"
+      },
+      {
+        "offset": "0x10",
+        "size": 80,
+        "name": "stats",
+        "description": "40 valeurs int16 (voir monster JSON files)"
+      }
+    ]
+  },
+  "spell_assignment_table": {
+    "location": "0x9E8D8E",
+    "entry_size": 16,
+    "description": "Table d'assignation des sorts pour monstres lanceurs de sorts",
+    "structure": {
+      "bytes_0_1": "Flags/identifiers (ex: AF, B0, BF, C0, DF)",
+      "bytes_2_4": "IDs de sorts d'attaque principaux",
+      "bytes_5_9": "ID de sort répété (pondération de probabilité)",
+      "bytes_10_15": "Sorts de support/utilitaires"
+    },
+    "known_entries": {
+      "entry_6_goblin_shaman": {
+        "offset": "0x9E8DEE",
+        "spells": ["Stone Bullet(3)", "Magic Missile(8)", "Enchant Weapon(9)", "Sleep(160)", "Healing(31)"],
+        "raw": "AF 00 00 08 09 03 03 03 03 03 B0 00 A0 00 A0 1F"
+      }
+    },
+    "notes": [
+      "Les sorts répétés (ex: 03 03 03 03 03) indiquent une probabilité plus élevée d'utilisation",
+      "Cette table est distincte de la table des sorts joueurs (0x908E68) et des attaques monstres (0x909DF0)"
+    ]
+  },
+  "spell_system_analysis": {
+    "executable_functions": {
+      "spell_handler": {
+        "address": "0x80023698",
+        "calls": 46,
+        "description": "Fonction principale de gestion des sorts/attaques. Reçoit le type d'attaque en paramètre."
+      },
+      "monster_attack_setup": {
+        "address": "0x80029184",
+        "description": "Configure une attaque de monstre. Charge la valeur 29 (ID type attaque monstre) et appelle spell_handler."
+      }
+    },
+    "attack_type_id": {
+      "value": 29,
+      "hex": "0x1D",
+      "description": "Toutes les attaques spéciales de monstres utilisent cet ID de catégorie (différent des sorts de joueurs qui ont des IDs 0-28, 30+)"
+    }
+  },
+  "spell_table": {
+    "location": "0x908E68",
+    "entry_size": 48,
+    "total_entries": 69,
+    "description": "Table des sorts de joueurs - les monstres peuvent utiliser ces sorts mais le lien est dans le code AI"
+  },
+  "monster_attacks": {
+    "location": "0x909DF0",
+    "entry_size": 48,
+    "total_entries": 22,
+    "description": "Attaques spécifiques aux monstres (toutes ont ID=29)",
+    "attacks": [
+      {
+        "index": 0,
+        "name": "Poison Touch"
+      },
+      {
+        "index": 1,
+        "name": "Paralyze Touch"
+      },
+      {
+        "index": 2,
+        "name": "Paralyze Eye"
+      },
+      {
+        "index": 3,
+        "name": "Confusion Eye"
+      },
+      {
+        "index": 4,
+        "name": "Sleep Eye"
+      },
+      {
+        "index": 5,
+        "name": "Fire Breath"
+      },
+      {
+        "index": 6,
+        "name": "Cold Breath"
+      },
+      {
+        "index": 7,
+        "name": "ThunderBreath"
+      },
+      {
+        "index": 8,
+        "name": "AcidBreath"
+      },
+      {
+        "index": 9,
+        "name": "Poison Breath"
+      },
+      {
+        "index": 10,
+        "name": "Stun Breath"
+      },
+      {
+        "index": 11,
+        "name": "Mad Scream"
+      },
+      {
+        "index": 12,
+        "name": "Drain"
+      },
+      {
+        "index": 13,
+        "name": "Howling"
+      },
+      {
+        "index": 14,
+        "name": "Knockback"
+      },
+      {
+        "index": 15,
+        "name": "Stun"
+      },
+      {
+        "index": 16,
+        "name": "Sleep Song"
+      },
+      {
+        "index": 17,
+        "name": "Evil Eye"
+      },
+      {
+        "index": 18,
+        "name": "Evil Howling"
+      },
+      {
+        "index": 19,
+        "name": "Evil Field"
+      },
+      {
+        "index": 20,
+        "name": "Invincible"
+      },
+      {
+        "index": 21,
+        "name": "Regeneration"
+      }
+    ]
+  },
+  "items_between_spells_and_attacks": {
+    "location": "0x909C00 - 0x909DF0",
+    "description": "Items consommables (herbes, flèches, etc.)",
+    "items": [
+      "Lavender",
+      "Sage",
+      "Vervain",
+      "Savory",
+      "Rue",
+      "Hyssop",
+      "NightShade",
+      "Wave",
+      "Arrow",
+      "Stardust"
+    ]
+  },
+  "unknown": {
+    "monster_spell_assignment": "La façon dont les monstres sont liés à leurs sorts n'est pas encore trouvée. Probablement dans le code AI.",
+    "stat4_magic": "Cette valeur (ex: 91 pour Goblin-Shaman) indique la puissance magique mais ne semble pas être un index direct vers une liste de sorts."
+  }
+}

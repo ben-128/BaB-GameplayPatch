@@ -1,0 +1,119 @@
+{
+  "description": "Attaques spécifiques aux monstres (non utilisables par les joueurs)",
+  "note": "Ces attaques ont toutes l'ID 29 (0x1D) qui est la catégorie \"attaque de monstre\"",
+  "area_start": "0x909DF0",
+  "area_end": "0x90A1E0",
+  "entry_size": 48,
+  "attacks": [
+    {
+      "id": 29,
+      "name": "Poison Touch",
+      "offset_hex": "0x909DF0"
+    },
+    {
+      "id": 29,
+      "name": "Paralyze Touch",
+      "offset_hex": "0x909E20"
+    },
+    {
+      "id": 29,
+      "name": "Paralyze Eye",
+      "offset_hex": "0x909E50"
+    },
+    {
+      "id": 29,
+      "name": "Confusion Eye",
+      "offset_hex": "0x909E80"
+    },
+    {
+      "id": 29,
+      "name": "Sleep Eye",
+      "offset_hex": "0x909EB0"
+    },
+    {
+      "id": 29,
+      "name": "Fire Breath",
+      "offset_hex": "0x909EE0"
+    },
+    {
+      "id": 29,
+      "name": "Cold Breath",
+      "offset_hex": "0x909F10"
+    },
+    {
+      "id": 29,
+      "name": "ThunderBreath",
+      "offset_hex": "0x909F40"
+    },
+    {
+      "id": 29,
+      "name": "AcidBreath",
+      "offset_hex": "0x909F70"
+    },
+    {
+      "id": 29,
+      "name": "Poison Breath",
+      "offset_hex": "0x909FA0"
+    },
+    {
+      "id": 29,
+      "name": "Stun Breath",
+      "offset_hex": "0x909FD0"
+    },
+    {
+      "id": 29,
+      "name": "Mad Scream",
+      "offset_hex": "0x90A000"
+    },
+    {
+      "id": 29,
+      "name": "Drain",
+      "offset_hex": "0x90A030"
+    },
+    {
+      "id": 29,
+      "name": "Howling",
+      "offset_hex": "0x90A060"
+    },
+    {
+      "id": 29,
+      "name": "Knockback",
+      "offset_hex": "0x90A090"
+    },
+    {
+      "id": 29,
+      "name": "Stun",
+      "offset_hex": "0x90A0C0"
+    },
+    {
+      "id": 29,
+      "name": "Sleep Song",
+      "offset_hex": "0x90A0F0"
+    },
+    {
+      "id": 29,
+      "name": "Evil Eye",
+      "offset_hex": "0x90A120"
+    },
+    {
+      "id": 29,
+      "name": "Evil Howling",
+      "offset_hex": "0x90A150"
+    },
+    {
+      "id": 29,
+      "name": "Evil Field",
+      "offset_hex": "0x90A180"
+    },
+    {
+      "id": 29,
+      "name": "Invincible",
+      "offset_hex": "0x90A1B0"
+    },
+    {
+      "id": 29,
+      "name": "Regeneration",
+      "offset_hex": "0x90A1E0"
+    }
+  ]
+}

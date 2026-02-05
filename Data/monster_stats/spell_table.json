@@ -1,0 +1,354 @@
+{
+  "description": "Table des sorts de BLAZE.ALL",
+  "note": "Chaque entrée fait 48 octets (16 nom + 32 paramètres). Le premier octet après le nom est l'ID du sort.",
+  "spell_area_start": "0x908E68",
+  "entry_size": 48,
+  "total_spells": 69,
+  "spells": [
+    {
+      "id": 0,
+      "name": "Fire Bullet",
+      "offset_hex": "0x908E68"
+    },
+    {
+      "id": 1,
+      "name": "Spark Bullet",
+      "offset_hex": "0x908E98"
+    },
+    {
+      "id": 2,
+      "name": "Water Bullet",
+      "offset_hex": "0x908EC8"
+    },
+    {
+      "id": 3,
+      "name": "Stone Bullet",
+      "offset_hex": "0x908EF8"
+    },
+    {
+      "id": 4,
+      "name": "Striking",
+      "offset_hex": "0x908F28"
+    },
+    {
+      "id": 5,
+      "name": "Lightbolt",
+      "offset_hex": "0x908F58"
+    },
+    {
+      "id": 6,
+      "name": "Dark Wave",
+      "offset_hex": "0x908F88"
+    },
+    {
+      "id": 7,
+      "name": "Smash",
+      "offset_hex": "0x908FB8"
+    },
+    {
+      "id": 8,
+      "name": "Magic Missile",
+      "offset_hex": "0x908FE8"
+    },
+    {
+      "id": 9,
+      "name": "Enchant Weapon",
+      "offset_hex": "0x909018"
+    },
+    {
+      "id": 10,
+      "name": "Blaze",
+      "offset_hex": "0x909048"
+    },
+    {
+      "id": 11,
+      "name": "Lightningbolt",
+      "offset_hex": "0x909078"
+    },
+    {
+      "id": 12,
+      "name": "Blizzard",
+      "offset_hex": "0x9090A8"
+    },
+    {
+      "id": 13,
+      "name": "Poison Cloud",
+      "offset_hex": "0x9090D8"
+    },
+    {
+      "id": 14,
+      "name": "Extend Spell",
+      "offset_hex": "0x909108"
+    },
+    {
+      "id": 15,
+      "name": "Magic Ray",
+      "offset_hex": "0x909138"
+    },
+    {
+      "id": 16,
+      "name": "Shining",
+      "offset_hex": "0x909168"
+    },
+    {
+      "id": 17,
+      "name": "Dark Breath",
+      "offset_hex": "0x909198"
+    },
+    {
+      "id": 18,
+      "name": "Dispell Magic",
+      "offset_hex": "0x9091C8"
+    },
+    {
+      "id": 19,
+      "name": "Petrifaction",
+      "offset_hex": "0x9091F8"
+    },
+    {
+      "id": 20,
+      "name": "Explosion",
+      "offset_hex": "0x909228"
+    },
+    {
+      "id": 21,
+      "name": "Thunderbolt",
+      "offset_hex": "0x909258"
+    },
+    {
+      "id": 22,
+      "name": "Freeze Beast",
+      "offset_hex": "0x909288"
+    },
+    {
+      "id": 23,
+      "name": "Earth Javelin",
+      "offset_hex": "0x9092B8"
+    },
+    {
+      "id": 24,
+      "name": "Death Spell",
+      "offset_hex": "0x9092E8"
+    },
+    {
+      "id": 25,
+      "name": "Teleport",
+      "offset_hex": "0x909318"
+    },
+    {
+      "id": 26,
+      "name": "Chaos Flare",
+      "offset_hex": "0x909348"
+    },
+    {
+      "id": 27,
+      "name": "Meteor Smash",
+      "offset_hex": "0x909378"
+    },
+    {
+      "id": 28,
+      "name": "Fusion",
+      "offset_hex": "0x9093A8"
+    },
+    {
+      "id": 30,
+      "name": "Turn Undead",
+      "offset_hex": "0x9093D8"
+    },
+    {
+      "id": 31,
+      "name": "Healing",
+      "offset_hex": "0x909408"
+    },
+    {
+      "id": 32,
+      "name": "Protection",
+      "offset_hex": "0x909438"
+    },
+    {
+      "id": 33,
+      "name": "Resist",
+      "offset_hex": "0x909468"
+    },
+    {
+      "id": 35,
+      "name": "Refresh",
+      "offset_hex": "0x9094C8"
+    },
+    {
+      "id": 37,
+      "name": "Anti-poison",
+      "offset_hex": "0x909528"
+    },
+    {
+      "id": 38,
+      "name": "Anti-paralysis",
+      "offset_hex": "0x909558"
+    },
+    {
+      "id": 39,
+      "name": "Anti-feeble",
+      "offset_hex": "0x909588"
+    },
+    {
+      "id": 40,
+      "name": "Sanity",
+      "offset_hex": "0x9095B8"
+    },
+    {
+      "id": 41,
+      "name": "Restore",
+      "offset_hex": "0x9095E8"
+    },
+    {
+      "id": 42,
+      "name": "Barrier",
+      "offset_hex": "0x909618"
+    },
+    {
+      "id": 43,
+      "name": "Resist",
+      "offset_hex": "0x909648"
+    },
+    {
+      "id": 44,
+      "name": "Stone",
+      "offset_hex": "0x909678"
+    },
+    {
+      "id": 45,
+      "name": "Requiem",
+      "offset_hex": "0x9096A8"
+    },
+    {
+      "id": 46,
+      "name": "Holy",
+      "offset_hex": "0x9096D8"
+    },
+    {
+      "id": 47,
+      "name": "Remove",
+      "offset_hex": "0x909708"
+    },
+    {
+      "id": 48,
+      "name": "Remove",
+      "offset_hex": "0x909738"
+    },
+    {
+      "id": 49,
+      "name": "Regeneration",
+      "offset_hex": "0x909768"
+    },
+    {
+      "id": 55,
+      "name": "Detect",
+      "offset_hex": "0x909498"
+    },
+    {
+      "id": 56,
+      "name": "Detect",
+      "offset_hex": "0x9094F8"
+    },
+    {
+      "id": 160,
+      "name": "Sleep",
+      "offset_hex": "0x909858"
+    },
+    {
+      "id": 161,
+      "name": "Slow",
+      "offset_hex": "0x909888"
+    },
+    {
+      "id": 162,
+      "name": "Haste",
+      "offset_hex": "0x9098B8"
+    },
+    {
+      "id": 163,
+      "name": "Enchant Fire",
+      "offset_hex": "0x9098E8"
+    },
+    {
+      "id": 164,
+      "name": "Enchant Earth",
+      "offset_hex": "0x909918"
+    },
+    {
+      "id": 165,
+      "name": "Enchant Wind",
+      "offset_hex": "0x909948"
+    },
+    {
+      "id": 166,
+      "name": "Enchant Water",
+      "offset_hex": "0x909978"
+    },
+    {
+      "id": 167,
+      "name": "Charm",
+      "offset_hex": "0x9099A8"
+    },
+    {
+      "id": 168,
+      "name": "Silence",
+      "offset_hex": "0x9099D8"
+    },
+    {
+      "id": 169,
+      "name": "Magic Shield",
+      "offset_hex": "0x909A08"
+    },
+    {
+      "id": 170,
+      "name": "Levitate",
+      "offset_hex": "0x909A38"
+    },
+    {
+      "id": 171,
+      "name": "Shield",
+      "offset_hex": "0x909A68"
+    },
+    {
+      "id": 172,
+      "name": "Heavy Slow",
+      "offset_hex": "0x909A98"
+    },
+    {
+      "id": 173,
+      "name": "Quick",
+      "offset_hex": "0x909AC8"
+    },
+    {
+      "id": 174,
+      "name": "Invincible",
+      "offset_hex": "0x909AF8"
+    },
+    {
+      "id": 175,
+      "name": "Anti-Circle",
+      "offset_hex": "0x909B28"
+    },
+    {
+      "id": 176,
+      "name": "Summon Water",
+      "offset_hex": "0x909B58"
+    },
+    {
+      "id": 177,
+      "name": "Summon Fire",
+      "offset_hex": "0x909B88"
+    },
+    {
+      "id": 178,
+      "name": "Summon Wind",
+      "offset_hex": "0x909BB8"
+    },
+    {
+      "id": 179,
+      "name": "Summon Earth",
+      "offset_hex": "0x909BE8"
+    }
+  ]
+}
