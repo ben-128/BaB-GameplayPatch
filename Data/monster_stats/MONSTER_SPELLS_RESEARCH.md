@@ -1,6 +1,6 @@
-# Monster Spells Research - FAILED
+# Monster Spells Research - IN PROGRESS
 
-Status: **NOT WORKING** - Unable to modify monster spells
+Status: **TESTING** - Found initialization code that maps monster type to spell table
 
 ## Goal
 
@@ -140,8 +140,40 @@ To change monster spells, we would need to:
 - `analyze_goblin_shaman_ai.py` - Analyzes the type 0x18 handler
 - `find_spell_lists.py` - Searches for spell list data
 
-## Next Steps to Investigate
+## NEW DISCOVERY: Initialization Code (2026-02-05)
 
-1. **Trace the jal calls** - Functions called by AI handlers (e.g., `0x8001C16C`)
-2. **Memory debugging** - Use emulator with debugger to see what gets loaded into `0x80054670`
-3. **Patch the executable** - Modify AI handlers to change spell behavior
+Found the code that maps monster type to spell table index!
+
+### Location: RAM 0x8002B630
+
+```assembly
+lui v0, 0x8005
+addiu v0, v0, 0xC594    ; v0 = 0x8004C594 (mapping table)
+li a2, 6                ; spell table index 6
+sh a2, 0(v0)            ; store index at [v0+0]
+li a1, 0x18             ; monster type 0x18 (Goblin-Shaman)
+sh a1, 2(v0)            ; store type at [v0+2]
+```
+
+### Structure at 0x8004C594
+
+| Offset | Value | Meaning |
+|--------|-------|---------|
+| 0 | 6 | Spell table entry index |
+| 2 | 0x18 | Monster type (Goblin-Shaman) |
+| 4 | 640 | Unknown |
+| 6 | 240 | Unknown |
+
+### Patch Approach
+
+Change `li a2, 6` to `li a2, 7` (or other index) to make Goblin-Shaman use a different spell table entry.
+
+Pattern in BIN: `06 00 06 34 00 00 46 A4 18 00 05 34`
+
+**Status: TESTING**
+
+## Next Steps
+
+1. Test if changing spell table index actually changes spells
+2. Map all spell table entries to their spells
+3. Create a proper patching system for monster spell assignments
