@@ -17,14 +17,88 @@ BLAZE_ALL = OUTPUT_DIR / "BLAZE.ALL"
 ITEM_ENTRY_SIZE = 128
 
 
-def patch_item_description(data, offset, new_description, max_length=63):
-    """Patch la description d'un item dans les données binaires"""
+def detect_offset_type(data, offset, item_name):
+    """Detecte le type de stockage a cet offset
+
+    Returns:
+        - "item_entry": Item entry with name at +0x00, desc at +0x41
+        - "direct_text": "Name/Description" directly at offset
+        - None: Invalid offset
+    """
+    if offset < 0 or offset >= len(data):
+        return None
+
+    # Check if "Name/" starts directly at offset (format 3)
+    name_prefix = f"{item_name}/".encode('ascii')
+    if data[offset:offset + len(name_prefix)] == name_prefix:
+        return "direct_text"
+
+    # Check if item name is at offset+0x00 (format 1 or 2)
+    name_data = data[offset:offset + 32]
+    null_pos = name_data.find(b'\x00')
+    if null_pos > 0:
+        try:
+            found_name = name_data[:null_pos].decode('ascii', errors='ignore')
+            if found_name == item_name:
+                return "item_entry"
+        except:
+            pass
+
+    return None
+
+
+def detect_description_format(data, offset, item_name):
+    """Detecte si la description utilise le format 'Name/Desc' ou juste 'Desc'
+    (pour les item_entry seulement)
+    """
     desc_offset = offset + 0x41
+    if desc_offset >= len(data):
+        return "desc_only"
 
-    if desc_offset < 0 or desc_offset >= len(data):
-        return False
+    # Lire la description existante
+    desc_data = data[desc_offset:desc_offset + 64]
+    null_pos = desc_data.find(b'\x00')
+    if null_pos > 0:
+        try:
+            existing = desc_data[:null_pos].decode('ascii', errors='ignore')
+            # Check if it starts with "ItemName/"
+            if existing.startswith(f"{item_name}/"):
+                return "name_prefix"  # Format: "Name/Description"
+            else:
+                return "desc_only"    # Format: "Description"
+        except:
+            pass
+    return "desc_only"  # Default to description only
 
-    desc_bytes = new_description.encode('ascii', errors='ignore')
+
+def patch_item_description(data, offset, item_name, new_description, offset_type, max_length=63):
+    """Patch la description d'un item dans les données binaires
+
+    Three formats exist in BLAZE.ALL:
+    - item_entry (aligned): "ItemName/Description" at offset+0x41
+    - item_entry (unaligned): "Description" only at offset+0x41
+    - direct_text: "ItemName/Description" directly at offset
+    """
+    if offset_type == "direct_text":
+        # Format 3: "Name/Description" directly at offset
+        desc_offset = offset
+        full_desc = f"{item_name}/{new_description}"
+    else:
+        # Format 1 & 2: item_entry, description at offset+0x41
+        desc_offset = offset + 0x41
+
+        if desc_offset >= len(data):
+            return False
+
+        # Detect if it uses "Name/Desc" or just "Desc" format
+        format_type = detect_description_format(data, offset, item_name)
+
+        if format_type == "name_prefix":
+            full_desc = f"{item_name}/{new_description}"
+        else:
+            full_desc = new_description
+
+    desc_bytes = full_desc.encode('ascii', errors='ignore')
 
     if len(desc_bytes) > max_length:
         desc_bytes = desc_bytes[:max_length]
@@ -33,14 +107,17 @@ def patch_item_description(data, offset, new_description, max_length=63):
     if end_offset >= len(data):
         return False
 
+    # Write the description
     data[desc_offset:end_offset] = desc_bytes
 
+    # Add null terminator
     if end_offset < len(data):
         data[end_offset] = 0
 
-    entry_end = offset + ITEM_ENTRY_SIZE
-    if end_offset + 1 < entry_end and entry_end <= len(data):
-        for i in range(end_offset + 1, entry_end):
+    # Zero-fill remaining space (up to 63 chars from desc_offset)
+    max_end = desc_offset + max_length
+    if max_end <= len(data):
+        for i in range(end_offset + 1, max_end):
             data[i] = 0
 
     return True
@@ -90,10 +167,11 @@ def patch_blaze_all(items):
 
     for item in items:
         new_desc = item.get('new_description', '')
-        if not new_desc:
+        item_name = item.get('name', '')
+        if not new_desc or not item_name:
             continue
 
-        # Patcher TOUTES les occurrences de cet item
+        # Patcher TOUTES les occurrences valides de cet item
         all_offsets = item.get('all_offsets', [])
         if not all_offsets:
             # Fallback sur offset_decimal si all_offsets n'existe pas
@@ -105,9 +183,14 @@ def patch_blaze_all(items):
         for offset_hex in all_offsets:
             try:
                 offset = int(offset_hex, 16)
-                if offset > 0 and patch_item_description(blaze_data, offset, new_desc):
-                    patched_occurrences += 1
-                    item_patched = True
+                if offset > 0:
+                    # Detect what type of data is at this offset
+                    offset_type = detect_offset_type(blaze_data, offset, item_name)
+                    if offset_type is None:
+                        continue
+                    if patch_item_description(blaze_data, offset, item_name, new_desc, offset_type):
+                        patched_occurrences += 1
+                        item_patched = True
             except (ValueError, TypeError):
                 continue
 

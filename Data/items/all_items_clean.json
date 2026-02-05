@@ -89,7 +89,7 @@
         "0x006D2A80"
       ],
       "id": 1,
-      "new_description": "AHAHAHA CA MARCHE ! Armor made of thick leather.",
+      "new_description": "Armor made of thick leather.",
       "max_chars": 63,
       "current_chars": 28
     },
@@ -135,7 +135,7 @@
       "special_effects": [],
       "attributes": {},
       "occurrences_count": 41,
-      "new_description": "Restores HP",
+      "new_description": "Common potion.(Restores HP to single unit)",
       "max_chars": 63,
       "current_chars": 11,
       "all_offsets": [
@@ -11604,9 +11604,9 @@
       "new_description": "Strength enchant. STR+8"
     },
     {
-      "name": "Gray Arc",
+      "name": "Gray Arch",
       "offset": "0x24bf720",
-      "offset_decimal": 38532896,
+      "offset_decimal": 38535009,
       "category": "Clothings",
       "description": "",
       "stats": {},
@@ -11629,7 +11629,9 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x24bf720"
+        "0x024BFF61",
+        "0x024BF720",
+        "0x024BFF20"
       ],
       "id": 328,
       "max_chars": 63,
@@ -12126,7 +12128,7 @@
     {
       "name": "Robe of Sorcery",
       "offset": "0xd2cca9",
-      "offset_decimal": 13814953,
+      "offset_decimal": 23320909,
       "category": "Robes (priest,sorcerer,& fairy)",
       "description": "Robe woven of magical energies and silk.",
       "stats": {},
@@ -12147,7 +12149,8 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0xd2cca9"
+        "0x0163D94D",
+        "0x0199F50D"
       ],
       "id": 344,
       "max_chars": 63,
@@ -12157,7 +12160,7 @@
     {
       "name": "Robe of Spirits",
       "offset": "0xe69591",
-      "offset_decimal": 15111569,
+      "offset_decimal": 16339765,
       "category": "Robes (priest,sorcerer,& fairy)",
       "description": "Amplifies its wearer’s magical power.",
       "stats": {},
@@ -12178,7 +12181,8 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0xe69591"
+        "0x00F95335",
+        "0x02A8DB15"
       ],
       "id": 345,
       "max_chars": 63,
@@ -12188,7 +12192,7 @@
     {
       "name": "Robe of the Elders",
       "offset": "0xaae4d1",
-      "offset_decimal": 11199697,
+      "offset_decimal": 15854381,
       "category": "Robes (priest,sorcerer,& fairy)",
       "description": "Made by the elders. Gives great protection.",
       "stats": {},
@@ -12209,7 +12213,15 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0xaae4d1"
+        "0x00F1EB2D",
+        "0x00F987B5",
+        "0x01870BBD",
+        "0x01C9AAD9",
+        "0x020FB63D",
+        "0x021B0549",
+        "0x026A1319",
+        "0x02793749",
+        "0x02800329"
       ],
       "id": 346,
       "max_chars": 63,
@@ -12708,7 +12720,7 @@
     {
       "name": "Calvin's Blade",
       "offset": "0x1b297b9d",
-      "offset_decimal": 455703453,
+      "offset_decimal": 16356405,
       "category": "Swords (warrior)",
       "description": "",
       "stats": {},
@@ -12731,7 +12743,7 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x1b297b9d"
+        "0x00F99435"
       ],
       "id": 362,
       "new_description": "Demon & magic enemies, At +60",
@@ -12741,7 +12753,7 @@
     {
       "name": "Ranger's Bow",
       "offset": "0x1c51b695",
-      "offset_decimal": 475117205,
+      "offset_decimal": 33260941,
       "category": "Bows (hunter)",
       "description": "",
       "stats": {},
@@ -12764,7 +12776,7 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x1c51b695"
+        "0x01FB858D"
       ],
       "id": 363,
       "new_description": "Critical +3%",
@@ -12774,7 +12786,7 @@
     {
       "name": "Rhino Rod",
       "offset": "0x1acf3a68",
-      "offset_decimal": 449788520,
+      "offset_decimal": 11206032,
       "category": "Rods (fairy)",
       "description": "",
       "stats": {},
@@ -12797,7 +12809,9 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x1acf3a68"
+        "0x00AAFD90",
+        "0x00AB0590",
+        "0x029099E4"
       ],
       "id": 364,
       "new_description": "Critical +2% & MP regen +2",
@@ -12807,7 +12821,7 @@
     {
       "name": "Alchemist's Rod",
       "offset": "0x1bd2f54d",
-      "offset_decimal": 466810189,
+      "offset_decimal": 26027653,
       "category": "Rods (fairy)",
       "description": "",
       "stats": {},
@@ -12830,7 +12844,7 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x1bd2f54d"
+        "0x018D2685"
       ],
       "id": 365,
       "new_description": "2x EXP from attacks",
@@ -12902,7 +12916,7 @@
     {
       "name": "Bandit Shield",
       "offset": "0x1bf2ad60",
-      "offset_decimal": 468888928,
+      "offset_decimal": 27837656,
       "category": "Light Armors (hunter, elf & rogue)",
       "description": "",
       "stats": {},
@@ -12923,7 +12937,7 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x1bf2ad60"
+        "0x01A8C4D8"
       ],
       "id": 368,
       "new_description": "AGL+8 LUK+8 MDEF+6",
@@ -12933,7 +12947,7 @@
     {
       "name": "Bishop's Robe",
       "offset": "0x1afcec31",
-      "offset_decimal": 452783153,
+      "offset_decimal": 23320269,
       "category": "Robes (priest,sorcerer,& fairy)",
       "description": "",
       "stats": {},
@@ -12954,7 +12968,7 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x1afcec31"
+        "0x0163D6CD"
       ],
       "id": 369,
       "new_description": "WIL+16 MAT+4 MDEF+16",
@@ -12964,7 +12978,7 @@
     {
       "name": "Queen's Robe",
       "offset": "0x1ba3a045",
-      "offset_decimal": 463708229,
+      "offset_decimal": 23326669,
       "category": "Robes (priest,sorcerer,& fairy)",
       "description": "",
       "stats": {},
@@ -12985,7 +12999,9 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x1ba3a045"
+        "0x0163EFCD",
+        "0x0179E95D",
+        "0x02074B11"
       ],
       "id": 370,
       "new_description": "WIL+20 MDEF+11",
@@ -12995,7 +13011,7 @@
     {
       "name": "Witch's Hat",
       "offset": "0x1b8fdda5",
-      "offset_decimal": 462413221,
+      "offset_decimal": 22198861,
       "category": "Clothings",
       "description": "",
       "stats": {},
@@ -13018,7 +13034,7 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x1b8fdda5"
+        "0x0152BA4D"
       ],
       "id": 371,
       "new_description": "Immune Magic-Loss. INT+4 POW+16 MDEF+4",
@@ -13028,7 +13044,7 @@
     {
       "name": "Knight's Mask",
       "offset": "0x1c11ed1d",
-      "offset_decimal": 470936861,
+      "offset_decimal": 29620805,
       "category": "Clothings",
       "description": "",
       "stats": {},
@@ -13049,7 +13065,7 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x1c11ed1d"
+        "0x01C3FA45"
       ],
       "id": 372,
       "new_description": "INT-8 WIL+8 POW-8",
@@ -13059,7 +13075,7 @@
     {
       "name": "Princess Locket",
       "offset": "0x1b20bad5",
-      "offset_decimal": 455129813,
+      "offset_decimal": 15856941,
       "category": "Clothings",
       "description": "",
       "stats": {},
@@ -13082,7 +13098,7 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x1b20bad5"
+        "0x00F1F52D"
       ],
       "id": 373,
       "new_description": "Immune Sleep",
@@ -13092,7 +13108,7 @@
     {
       "name": "Thieves' Cloak",
       "offset": "0x1afcefe1",
-      "offset_decimal": 452784097,
+      "offset_decimal": 40511897,
       "category": "Clothings",
       "description": "",
       "stats": {},
@@ -13113,7 +13129,11 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x1afcefe1"
+        "0x026A2999",
+        "0x02720CA9",
+        "0x02795A49",
+        "0x02802629",
+        "0x029F17A9"
       ],
       "id": 374,
       "new_description": "AGL+12 MDEF+6",
@@ -13123,7 +13143,7 @@
     {
       "name": "Hermit's Ring",
       "offset": "0x1c11f21d",
-      "offset_decimal": 470938141,
+      "offset_decimal": 29622085,
       "category": "Clothings",
       "description": "",
       "stats": {},
@@ -13144,7 +13164,8 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x1c11f21d"
+        "0x01C3FF45",
+        "0x02BB3D5D"
       ],
       "id": 375,
       "new_description": "S+24 I+24 W+24 A+24 C+24 P+24 L+24",
@@ -13154,7 +13175,7 @@
     {
       "name": "Merlin's Ring",
       "offset": "0x1bbcd525",
-      "offset_decimal": 465360165,
+      "offset_decimal": 24764893,
       "category": "Clothings",
       "description": "",
       "stats": {},
@@ -13175,7 +13196,11 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x1bbcd525"
+        "0x0179E1DD",
+        "0x017FEEB1",
+        "0x02397F81",
+        "0x0243659D",
+        "0x02852425"
       ],
       "id": 376,
       "new_description": "INT+24 POW+16 MAT+24 MDEF+20",
@@ -13185,7 +13210,7 @@
     {
       "name": "Princess Pentagram",
       "offset": "0x1bace941",
-      "offset_decimal": 464316737,
+      "offset_decimal": 23856441,
       "category": "Clothings",
       "description": "",
       "stats": {},
@@ -13208,7 +13233,8 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x1bace941"
+        "0x016C0539",
+        "0x02397081"
       ],
       "id": 377,
       "new_description": "Cast time -25% & MP regen +4. INT+8 WIL+8 POW+8",
@@ -13218,7 +13244,7 @@
     {
       "name": "Devil's Horn",
       "offset": "0x1bd2fdfd",
-      "offset_decimal": 466812413,
+      "offset_decimal": 26029573,
       "category": "Clothings",
       "description": "",
       "stats": {},
@@ -13241,7 +13267,10 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x1bd2fdfd"
+        "0x018D2E05",
+        "0x018D3605",
+        "0x02A8F915",
+        "0x02B7E85D"
       ],
       "id": 378,
       "new_description": "MP cost -10% & MP regen +1. POW+16",
@@ -13251,7 +13280,7 @@
     {
       "name": "Thief's Badge",
       "offset": "0x1b8fcec5",
-      "offset_decimal": 462409413,
+      "offset_decimal": 22195661,
       "category": "Clothings",
       "description": "",
       "stats": {},
@@ -13272,7 +13301,7 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x1b8fcec5"
+        "0x0152ADCD"
       ],
       "id": 379,
       "new_description": "AGL+16 LUK+24",
@@ -13282,7 +13311,7 @@
     {
       "name": "Elder's Tablet",
       "offset": "0x1ba37255",
-      "offset_decimal": 463696469,
+      "offset_decimal": 23316429,
       "category": "Clothings",
       "description": "",
       "stats": {},
@@ -13303,7 +13332,8 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x1ba37255"
+        "0x0163C7CD",
+        "0x02397801"
       ],
       "id": 380,
       "new_description": "INT+16 POW+16 MAT+20 MDEF+20",
@@ -13313,7 +13343,7 @@
     {
       "name": "Fool's Puppet",
       "offset": "0x1c007329",
-      "offset_decimal": 469791529,
+      "offset_decimal": 28623521,
       "category": "Clothings",
       "description": "",
       "stats": {},
@@ -13336,7 +13366,9 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x1c007329"
+        "0x01B4C2A1",
+        "0x02232A89",
+        "0x02397581"
       ],
       "id": 381,
       "new_description": "Auto resurrect 1/3 HP&MP (50% break)",
@@ -13377,7 +13409,7 @@
     {
       "name": "Cat's Claw",
       "offset": "0x1b3467d5",
-      "offset_decimal": 456419285,
+      "offset_decimal": 16979821,
       "category": "Knives (rogue)",
       "description": "",
       "stats": {},
@@ -13400,7 +13432,9 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x1b3467d5"
+        "0x0103176D",
+        "0x010A177D",
+        "0x01F20235"
       ],
       "id": 383,
       "new_description": "8% curse enemy",
@@ -13410,7 +13444,7 @@
     {
       "name": "Zeus Rapier",
       "offset": "0x1c98e6c8",
-      "offset_decimal": 479782600,
+      "offset_decimal": 37323200,
       "category": "Rapiers (elf)",
       "description": "",
       "stats": {},
@@ -13433,7 +13467,7 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x1c98e6c8"
+        "0x023981C0"
       ],
       "id": 384,
       "new_description": "Demon enemies, At +50",
@@ -13443,7 +13477,7 @@
     {
       "name": "Queen's Circlet",
       "offset": "0x1b20bd55",
-      "offset_decimal": 455130453,
+      "offset_decimal": 15857581,
       "category": "Clothings",
       "description": "",
       "stats": {},
@@ -13464,7 +13498,11 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x1b20bd55"
+        "0x00F1F7AD",
+        "0x022AC91D",
+        "0x02398981",
+        "0x029074A5",
+        "0x029F3AA9"
       ],
       "id": 385,
       "new_description": "MDEF+4",
@@ -13474,7 +13512,7 @@
     {
       "name": "Runic shield",
       "offset": "0x1ba39254",
-      "offset_decimal": 463704660,
+      "offset_decimal": 23323404,
       "category": "Light Armors (hunter, elf & rogue)",
       "description": "Engraved with runes to enhance magical power",
       "stats": {},
@@ -13495,7 +13533,10 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x1ba39254"
+        "0x0163E30C",
+        "0x017A201C",
+        "0x017FF5F0",
+        "0x018721FC"
       ],
       "id": 386,
       "new_description": "Rune-engraved. POW+20 MDEF+21",
@@ -13505,7 +13546,7 @@
     {
       "name": "Feather Cloak",
       "offset": "0x1b43e4c0",
-      "offset_decimal": 457434304,
+      "offset_decimal": 31458721,
       "category": "Clothing",
       "description": "A magnificent cloak adorned with feathers.",
       "stats": {},
@@ -13526,7 +13567,23 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x1b43e4c0"
+        "0x01E005A1",
+        "0x01FB9C0D",
+        "0x0200F41D",
+        "0x02076691",
+        "0x0251AEED",
+        "0x0251B6ED",
+        "0x02591A05",
+        "0x027202A9",
+        "0x01109358",
+        "0x01E00560",
+        "0x01FB9BCC",
+        "0x0200F3DC",
+        "0x02076650",
+        "0x0251AEAC",
+        "0x0251B6AC",
+        "0x025919C4",
+        "0x02720268"
       ],
       "id": 387,
       "new_description": "A magnificent cloak adorned with feathers. MDEF+12",
@@ -13537,7 +13594,7 @@
     {
       "name": "Empress' Perfume",
       "offset": "0x1c3d3881",
-      "offset_decimal": 473774209,
+      "offset_decimal": 32091529,
       "category": "Accessories",
       "description": "Grand perfume.",
       "stats": {},
@@ -13558,7 +13615,8 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x1c3d3881"
+        "0x01E9AD89",
+        "0x020F95BD"
       ],
       "id": 388,
       "new_description": "Grand perfume.",
@@ -13568,7 +13626,7 @@
     {
       "name": "Judge's Scale",
       "offset": "0x1b1ac79d",
-      "offset_decimal": 454739869,
+      "offset_decimal": 15517461,
       "category": "Accessories",
       "description": "Used by ancients.",
       "stats": {},
@@ -13589,7 +13647,12 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x1b1ac79d"
+        "0x00ECC715",
+        "0x01B4CCA1",
+        "0x01BB33B5",
+        "0x01C42C45",
+        "0x01C98CD9",
+        "0x01D27341"
       ],
       "id": 389,
       "new_description": "Used by ancients.",
@@ -13599,7 +13662,7 @@
     {
       "name": "Knight's Banner",
       "offset": "0x1c07fb9d",
-      "offset_decimal": 470285213,
+      "offset_decimal": 29053365,
       "category": "Accessories",
       "description": "A flag with a knightly coat of arms.",
       "stats": {},
@@ -13620,7 +13683,13 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x1c07fb9d"
+        "0x01BB51B5",
+        "0x01C40E45",
+        "0x01C9BC59",
+        "0x01D261C1",
+        "0x021B0CC9",
+        "0x022ADA9D",
+        "0x02309585"
       ],
       "id": 390,
       "new_description": "A flag with a knightly coat of arms.",
@@ -13630,7 +13699,7 @@
     {
       "name": "Knight's Gauntlets",
       "offset": "0x1acef659",
-      "offset_decimal": 449771097,
+      "offset_decimal": 11190737,
       "category": "Gloves",
       "description": "Beautiful protective gloves for knights.",
       "stats": {},
@@ -13651,7 +13720,11 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x1acef659"
+        "0x00AAC1D1",
+        "0x00BE3439",
+        "0x00BE3C39",
+        "0x00C3F521",
+        "0x00C3FD21"
       ],
       "id": 391,
       "new_description": "Beautiful protective gloves for knights.",
@@ -13661,7 +13734,7 @@
     {
       "name": "Lucifer's Shield",
       "offset": "0x1d302f3d",
-      "offset_decimal": 489697085,
+      "offset_decimal": 45956325,
       "category": "Shields",
       "description": "A legendary shield forged by satan.",
       "stats": {},
@@ -13682,7 +13755,8 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x1d302f3d"
+        "0x02BD3CE5",
+        "0x02BD44E5"
       ],
       "id": 392,
       "new_description": "A legendary shield forged by satan.",
@@ -13693,7 +13767,7 @@
     {
       "name": "Pandora's Box",
       "offset": "0x1b1ac29d",
-      "offset_decimal": 454738589,
+      "offset_decimal": 15516181,
       "category": "Accessories",
       "description": "Brings both hope and despair.",
       "stats": {},
@@ -13714,7 +13788,8 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x1b1ac29d"
+        "0x00ECC215",
+        "0x02B7ED5D"
       ],
       "id": 393,
       "new_description": "Brings both hope and despair.",
@@ -13724,7 +13799,7 @@
     {
       "name": "Sheep Lute",
       "offset": "0x1c321ca9",
-      "offset_decimal": 473046185,
+      "offset_decimal": 31457441,
       "category": "Accessories",
       "description": "Lovely sounding lute.",
       "stats": {},
@@ -13745,7 +13820,16 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x1c321ca9"
+        "0x01E000A1",
+        "0x01FB970D",
+        "0x0200EF1D",
+        "0x02076191",
+        "0x0271FDA9",
+        "0x01E00060",
+        "0x01FB96CC",
+        "0x0200EEDC",
+        "0x02076150",
+        "0x0271FD68"
       ],
       "id": 394,
       "new_description": "Lovely sounding lute.",
@@ -13755,7 +13839,7 @@
     {
       "name": "Wizard's Potion",
       "offset": "0x1ba37b05",
-      "offset_decimal": 463698693,
+      "offset_decimal": 23318349,
       "category": "Consumables",
       "description": "Essential potion of magic.",
       "stats": {},
@@ -13776,7 +13860,14 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x1ba37b05"
+        "0x0163CF4D",
+        "0x0179E45D",
+        "0x01A39B01",
+        "0x01F21635",
+        "0x020FC7BD",
+        "0x021AF8C9",
+        "0x024FFAD5",
+        "0x025002D5"
       ],
       "id": 395,
       "new_description": "Essential potion of magic.",
@@ -13786,7 +13877,7 @@
     {
       "name": "Ironsage",
       "offset": "0x1ac6b76d",
-      "offset_decimal": 449230701,
+      "offset_decimal": 10720261,
       "category": "Consumables",
       "description": "A herb which neutralizes poison. (Treatment of poison)",
       "stats": {},
@@ -13807,7 +13898,29 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x1ac6b76d"
+        "0x00A39405",
+        "0x00B66AA9",
+        "0x00BE2039",
+        "0x00C3D9A1",
+        "0x01177491",
+        "0x012DF2B9",
+        "0x01353395",
+        "0x014B9F09",
+        "0x0152E74D",
+        "0x016C20B9",
+        "0x02722D29",
+        "0x0090B878",
+        "0x00A393C4",
+        "0x00B66A68",
+        "0x00BE1FF8",
+        "0x00C3D960",
+        "0x01177450",
+        "0x012DF278",
+        "0x01353354",
+        "0x014B9EC8",
+        "0x0152E70C",
+        "0x016C2078",
+        "0x02722CE8"
       ],
       "id": 396,
       "new_description": "A herb which neutralizes poison. (Treatment of poison)",
@@ -13817,7 +13930,7 @@
     {
       "name": "Material Dark",
       "offset": "0x1ac6a38d",
-      "offset_decimal": 449225613,
+      "offset_decimal": 10715781,
       "category": "Materials",
       "description": "Magic crystal dark.",
       "stats": {},
@@ -13838,7 +13951,34 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x1ac6a38d"
+        "0x00A38285",
+        "0x00AABA51",
+        "0x0172CCA1",
+        "0x017A025D",
+        "0x017FDAB1",
+        "0x01C415C5",
+        "0x01C982D9",
+        "0x01D27841",
+        "0x020FCF3D",
+        "0x02234889",
+        "0x022AB29D",
+        "0x0230AC05",
+        "0x024BF261",
+        "0x024BFA61",
+        "0x00A38244",
+        "0x00AABA10",
+        "0x0172CC60",
+        "0x017A021C",
+        "0x017FDA70",
+        "0x01C41584",
+        "0x01C98298",
+        "0x01D27800",
+        "0x020FCEFC",
+        "0x02234848",
+        "0x022AB25C",
+        "0x0230ABC4",
+        "0x024BF220",
+        "0x024BFA20"
       ],
       "id": 397,
       "new_description": "Magic crystal dark.",
@@ -13848,7 +13988,7 @@
     {
       "name": "Flail Staff",
       "offset": "0x1adc4250",
-      "offset_decimal": 450642512,
+      "offset_decimal": 11949737,
       "category": "Staves",
       "description": "Staff with an iron ball on a chain.",
       "stats": {},
@@ -13869,7 +14009,12 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x1adc4250"
+        "0x00B656A9",
+        "0x00BE0EB9",
+        "0x01108E99",
+        "0x00B65668",
+        "0x00BE0E78",
+        "0x01108E58"
       ],
       "id": 398,
       "new_description": "Staff with an iron ball on a chain.",
@@ -13879,7 +14024,7 @@
     {
       "name": "Mace Staff",
       "offset": "0x1b4bb498",
-      "offset_decimal": 457946264,
+      "offset_decimal": 18309265,
       "category": "Staves",
       "description": "A staff with an iron ball on its tip.",
       "stats": {},
@@ -13900,7 +14045,8 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x1b4bb498"
+        "0x01176091",
+        "0x01176050"
       ],
       "id": 399,
       "new_description": "A staff with an iron ball on its tip.",
