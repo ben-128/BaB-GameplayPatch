@@ -9,7 +9,7 @@
     "stat2": 6,
     "_stat2_comment": "[Défaut: 6] Inconnu (mais corrélé avec le niveau du monstre)",
     "hp": 184,
-    "_hp_comment": "[Défaut: 92] Points de vie du monstre",
+    "_hp_comment": "[Défaut: 92] Points de vie du monstre (2x base)",
     "stat4_magic": 24,
     "_stat4_magic_comment": "[Défaut: 19] Puissance magique / Mana - élevé pour les mages et boss",
     "stat5_randomness": 54,
