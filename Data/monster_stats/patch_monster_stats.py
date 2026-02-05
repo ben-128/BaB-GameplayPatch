@@ -16,39 +16,52 @@ BLAZE_ALL = SCRIPT_DIR.parent.parent / "output" / "BLAZE.ALL"
 JSON_DIR = SCRIPT_DIR
 
 # Stats field order (offset from monster entry + 0x10)
-STATS_FIELDS = {
-    'hp': 0x00,
-    'mp': 0x02,
-    'str': 0x04,
-    'int': 0x06,
-    'wil': 0x08,
-    'agl': 0x0A,
-    'con': 0x0C,
-    'pow': 0x0E,
-    'luk': 0x10,
-    'at': 0x12,
-    'mat': 0x14,
-    'def': 0x16,
-    'mdef': 0x18,
-    'exp': 0x1A,
-    'gold': 0x1C
-}
+# Must match inject_monster_stats.py STATS_ORDER
+STATS_ORDER = [
+    "exp_reward",           # 0  - 0x10
+    "stat2",                # 1  - 0x12
+    "hp",                   # 2  - 0x14
+    "stat4_magic",          # 3  - 0x16
+    "stat5_randomness",     # 4  - 0x18
+    "stat6_collider_type",  # 5  - 0x1A
+    "stat7_death_fx_size",  # 6  - 0x1C
+    "stat8",                # 7  - 0x1E
+    "stat9_collider_size",  # 8  - 0x20
+    "stat10_drop_rate",     # 9  - 0x22
+    "stat11_creature_type", # 10 - 0x24
+    "stat12_armor_type",    # 11 - 0x26
+    "stat13_elem_fire_ice", # 12 - 0x28
+    "stat14_elem_poison_air", # 13 - 0x2A
+    "stat15_elem_light_night", # 14 - 0x2C
+    "stat16_elem_divine_malefic", # 15 - 0x2E
+    "stat17_dmg",           # 16 - 0x30
+    "stat18_armor",         # 17 - 0x32
+    "stat19",               # 18 - 0x34
+    "stat20",               # 19 - 0x36
+    "stat21",               # 20 - 0x38
+    "stat22_magic_atk",     # 21 - 0x3A
+    "stat23",               # 22 - 0x3C
+    "stat24",               # 23 - 0x3E
+]
 
 
 def patch_stats(data: bytearray, name_offset: int, stats: dict, name: str) -> bool:
     """Patch monster stats in data at given name offset"""
     stats_base = name_offset + 0x10
 
-    for field, field_offset in STATS_FIELDS.items():
-        if field in stats:
-            value = stats[field]
-            write_offset = stats_base + field_offset
+    for i, stat_name in enumerate(STATS_ORDER):
+        if stat_name in stats:
+            value = stats[stat_name]
+            write_offset = stats_base + (i * 2)
 
             if write_offset + 2 > len(data):
                 return False
 
-            # Pack as little-endian uint16
-            packed = struct.pack('<H', value)
+            # Handle both negative and large positive values
+            if value < 0:
+                packed = struct.pack('<h', value)  # signed int16
+            else:
+                packed = struct.pack('<H', min(value, 65535))  # unsigned uint16, capped
             data[write_offset:write_offset+2] = packed
 
     return True
