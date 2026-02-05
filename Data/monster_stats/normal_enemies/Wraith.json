@@ -53,5 +53,26 @@
     "stat16_elem_divine_malefic": 4096,
     "_stat16_elem_divine_malefic_comment": "[Défaut: 4096] Dégâts élémentaires: Divin/Maléfique"
   },
-  "id": 119
+  "id": 119,
+  "spell_table": {
+    "offset_hex": "0x1DEB6FC",
+    "offset_relative": "+0x484",
+    "raw_ids": [
+      25,
+      25,
+      25,
+      26,
+      26,
+      26,
+      27,
+      27
+    ],
+    "_raw_ids_comment": "IDs des sorts répétés = probabilité (voir spell_index.json)",
+    "spells": {
+      "25": "Teleport (38%)",
+      "26": "Chaos (38%)",
+      "27": "Meteor (25%)"
+    },
+    "_spells_comment": "ID: Nom du sort (probabilité)"
+  }
 }

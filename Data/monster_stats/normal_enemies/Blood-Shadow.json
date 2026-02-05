@@ -53,5 +53,29 @@
     "stat16_elem_divine_malefic": 7680,
     "_stat16_elem_divine_malefic_comment": "[Défaut: 7680] Dégâts élémentaires: Divin/Maléfique"
   },
-  "id": 30
+  "id": 30,
+  "spell_table": {
+    "offset_hex": "0x2BF4F84",
+    "offset_relative": "+0x580",
+    "raw_ids": [
+      9,
+      9,
+      10,
+      10,
+      11,
+      11,
+      12,
+      12,
+      38
+    ],
+    "_raw_ids_comment": "IDs des sorts répétés = probabilité (voir spell_index.json)",
+    "spells": {
+      "9": "Enchant Fire (22%)",
+      "10": "Blaze (22%)",
+      "11": "Lightningbolt (22%)",
+      "12": "Blizzard (22%)",
+      "38": "Unknown_38 (11%)"
+    },
+    "_spells_comment": "ID: Nom du sort (probabilité)"
+  }
 }

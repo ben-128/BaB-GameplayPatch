@@ -9,7 +9,7 @@
     "stat2": 20,
     "_stat2_comment": "[Défaut: 20] Inconnu (mais corrélé avec le niveau du monstre)",
     "hp": 21,
-    "_hp_comment": "[Défaut: 120] Points de vie du monstre",
+    "_hp_comment": "[Défaut: 12] Points de vie du monstre",
     "stat4_magic": 1,
     "_stat4_magic_comment": "[Défaut: 1] Puissance magique / Mana - élevé pour les mages et boss",
     "stat5_randomness": 8,
@@ -53,5 +53,25 @@
     "stat24": 0,
     "_stat24_comment": "[Défaut: 0] Résistance aux altérations d'état"
   },
-  "id": 48
+  "id": 48,
+  "action_table": {
+    "offset_hex": "0x148C870",
+    "offset_relative": "+0x62C",
+    "raw_ids": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      31
+    ],
+    "_raw_ids_comment": "IDs d'action répétés = probabilité (système pondéré)",
+    "actions": {
+      "0": "Basic Attack (88%)",
+      "31": "Healing (12%)"
+    },
+    "_actions_comment": "ID: Action (probabilité) - contrôle le comportement du monstre"
+  }
 }

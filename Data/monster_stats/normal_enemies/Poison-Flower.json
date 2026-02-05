@@ -57,5 +57,31 @@
     "stat16_elem_divine_malefic": 0,
     "_stat16_elem_divine_malefic_comment": "[Défaut: 0] Dégâts élémentaires: Divin/Maléfique"
   },
-  "id": 97
+  "id": 97,
+  "spell_table": {
+    "offset_hex": "0x14AA8D4",
+    "offset_relative": "+0x674",
+    "raw_ids": [
+      12,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      17,
+      25
+    ],
+    "_raw_ids_comment": "IDs des sorts répétés = probabilité (voir spell_index.json)",
+    "spells": {
+      "12": "Blizzard (22%)",
+      "13": "Poison Cloud (11%)",
+      "14": "Extend (11%)",
+      "15": "Magic Missile (11%)",
+      "16": "Shining (11%)",
+      "17": "Dark Wave (22%)",
+      "25": "Teleport (11%)"
+    },
+    "_spells_comment": "ID: Nom du sort (probabilité)"
+  }
 }

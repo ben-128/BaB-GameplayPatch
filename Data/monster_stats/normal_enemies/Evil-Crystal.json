@@ -53,5 +53,26 @@
     "stat16_elem_divine_malefic": 2048,
     "_stat16_elem_divine_malefic_comment": "[Défaut: 0] Dégâts élémentaires: Divin/Maléfique"
   },
-  "id": 43
+  "id": 43,
+  "action_table": {
+    "offset_hex": "0x19921BC",
+    "offset_relative": "+0x614",
+    "raw_ids": [
+      8,
+      8,
+      8,
+      9,
+      9,
+      9,
+      10,
+      10
+    ],
+    "_raw_ids_comment": "IDs d'action répétés = probabilité (système pondéré)",
+    "actions": {
+      "8": "Enchant Weapon (38%)",
+      "9": "Enchant Fire (38%)",
+      "10": "Blaze (25%)"
+    },
+    "_actions_comment": "ID: Action (probabilité) - contrôle le comportement du monstre"
+  }
 }

@@ -53,5 +53,25 @@
     "stat16_elem_divine_malefic": 5632,
     "_stat16_elem_divine_malefic_comment": "[Défaut: 5632] Dégâts élémentaires: Divin/Maléfique"
   },
-  "id": 9
+  "id": 9,
+  "spell_table": {
+    "offset_hex": "0x1DE88AA",
+    "offset_relative": "+0x63A",
+    "raw_ids": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      3
+    ],
+    "_raw_ids_comment": "IDs des sorts répétés = probabilité (voir spell_index.json)",
+    "spells": {
+      "0": "Basic Attack (88%)",
+      "3": "Action 3 (12%)"
+    },
+    "_spells_comment": "ID: Nom du sort (probabilité)"
+  }
 }

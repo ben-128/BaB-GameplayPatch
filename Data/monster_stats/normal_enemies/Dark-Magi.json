@@ -53,5 +53,27 @@
     "stat16_elem_divine_malefic": 0,
     "_stat16_elem_divine_malefic_comment": "[Défaut: 0] Dégâts élémentaires: Divin/Maléfique"
   },
-  "id": 39
+  "id": 39,
+  "spell_table": {
+    "offset_hex": "0x19767C4",
+    "offset_relative": "+0x628",
+    "raw_ids": [
+      10,
+      10,
+      10,
+      10,
+      11,
+      11,
+      11,
+      11,
+      21
+    ],
+    "_raw_ids_comment": "IDs des sorts répétés = probabilité (voir spell_index.json)",
+    "spells": {
+      "10": "Blaze (44%)",
+      "11": "Lightningbolt (44%)",
+      "21": "Thunderbolt (11%)"
+    },
+    "_spells_comment": "ID: Nom du sort (probabilité)"
+  }
 }

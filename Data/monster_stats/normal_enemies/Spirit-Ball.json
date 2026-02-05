@@ -53,5 +53,29 @@
     "stat16_elem_divine_malefic": 5632,
     "_stat16_elem_divine_malefic_comment": "[Défaut: 5632] Dégâts élémentaires: Divin/Maléfique"
   },
-  "id": 107
+  "id": 107,
+  "spell_table": {
+    "offset_hex": "0x2BF20C8",
+    "offset_relative": "+0x5FC",
+    "raw_ids": [
+      22,
+      22,
+      22,
+      23,
+      23,
+      24,
+      24,
+      25,
+      29
+    ],
+    "_raw_ids_comment": "IDs des sorts répétés = probabilité (voir spell_index.json)",
+    "spells": {
+      "22": "Freeze (33%)",
+      "23": "Earth Spike (22%)",
+      "24": "Death (22%)",
+      "25": "Teleport (11%)",
+      "29": "Poison Touch (11%)"
+    },
+    "_spells_comment": "ID: Nom du sort (probabilité)"
+  }
 }

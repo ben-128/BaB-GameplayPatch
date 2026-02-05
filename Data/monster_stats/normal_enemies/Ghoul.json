@@ -53,5 +53,25 @@
     "stat16_elem_divine_malefic": 3072,
     "_stat16_elem_divine_malefic_comment": "[Défaut: 3072] Dégâts élémentaires: Divin/Maléfique"
   },
-  "id": 47
+  "id": 47,
+  "action_table": {
+    "offset_hex": "0x1DE8842",
+    "offset_relative": "+0x632",
+    "raw_ids": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      31
+    ],
+    "_raw_ids_comment": "IDs d'action répétés = probabilité (système pondéré)",
+    "actions": {
+      "0": "Basic Attack (88%)",
+      "31": "Healing (12%)"
+    },
+    "_actions_comment": "ID: Action (probabilité) - contrôle le comportement du monstre"
+  }
 }
