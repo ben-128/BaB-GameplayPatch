@@ -1,0 +1,47 @@
+ Comment modifier les sorts d'un ennemi
+
+  Emplacement des données
+
+  La table d'assignation des sorts est à 0x9E8D8E dans BLAZE.ALL.
+
+  Structure d'une entrée (16 octets)
+
+  Octet  Position   Usage
+  0-1    Flags      Identifiants (AF, B0, BF, etc.)
+  2-4    Attaques   IDs de sorts d'attaque
+  5-9    Pondéré    Sort répété (plus de répétitions = plus de chances)
+  10-11  Flags      Identifiants
+  12-14  Utilitaire Sorts utilitaires (Sleep, etc.)
+  15     Support    Sort de soutien (Healing, etc.)
+
+  Exemple : Goblin-Shaman (Entry 6 à 0x9E8DEE)
+
+  AF 00 00 08 09 03 03 03 03 03 B0 00 A0 00 A0 1F
+           │  │  └──────────────┘       │     └─ 1F = Healing (31)
+           │  │         │               └─ A0 = Sleep (160)
+           │  │         └─ Stone Bullet (3) répété 5x
+           │  └─ Enchant Weapon (9)
+           └─ Magic Missile (8)
+
+  Pour modifier :
+
+  1. Ouvrir BLAZE.ALL avec un éditeur hexadécimal
+  2. Aller à l'offset de l'entrée (ex: 0x9E8DEE pour Goblin-Shaman)
+  3. Remplacer l'ID du sort par un autre (voir spell_table.json pour les IDs)
+
+  IDs de sorts utiles :
+  ┌─────┬───────────────┬─────┬───────────────┐
+  │ ID  │     Sort      │ ID  │     Sort      │
+  ├─────┼───────────────┼─────┼───────────────┤
+  │ 0   │ Fire Bullet   │ 10  │ Blaze         │
+  ├─────┼───────────────┼─────┼───────────────┤
+  │ 3   │ Stone Bullet  │ 11  │ Lightningbolt │
+  ├─────┼───────────────┼─────┼───────────────┤
+  │ 8   │ Magic Missile │ 12  │ Blizzard      │
+  ├─────┼───────────────┼─────┼───────────────┤
+  │ 31  │ Healing       │ 160 │ Sleep         │
+  └─────┴───────────────┴─────┴───────────────┘
+  Limitation actuelle
+
+  On ne sait pas encore comment les monstres sont liés à leurs entrées dans cette table. Entry 6 = Goblin-Shaman, mais
+  le mapping pour les autres monstres reste à découvrir.
