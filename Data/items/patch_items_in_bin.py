@@ -85,19 +85,37 @@ def patch_blaze_all(items):
 
     # Patcher
     print("\nPatch des items...")
-    patched_count = 0
+    patched_items = 0
+    patched_occurrences = 0
 
     for item in items:
-        offset = item.get('offset_decimal', 0)
         new_desc = item.get('new_description', '')
-
-        if offset <= 0 or not new_desc:
+        if not new_desc:
             continue
 
-        if patch_item_description(blaze_data, offset, new_desc):
-            patched_count += 1
+        # Patcher TOUTES les occurrences de cet item
+        all_offsets = item.get('all_offsets', [])
+        if not all_offsets:
+            # Fallback sur offset_decimal si all_offsets n'existe pas
+            offset = item.get('offset_decimal', 0)
+            if offset > 0:
+                all_offsets = [f"0x{offset:08X}"]
 
-    print(f"  Items patches: {patched_count}")
+        item_patched = False
+        for offset_hex in all_offsets:
+            try:
+                offset = int(offset_hex, 16)
+                if offset > 0 and patch_item_description(blaze_data, offset, new_desc):
+                    patched_occurrences += 1
+                    item_patched = True
+            except (ValueError, TypeError):
+                continue
+
+        if item_patched:
+            patched_items += 1
+
+    print(f"  Items patches: {patched_items}")
+    print(f"  Occurrences patchees: {patched_occurrences}")
 
     # Sauvegarder
     print(f"\nSauvegarde de {BLAZE_ALL.name}...")
