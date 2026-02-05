@@ -53,24 +53,5 @@
     "stat24": 0,
     "_stat24_comment": "[Défaut: 0] Résistance aux altérations d'état"
   },
-  "id": 48,
-  "spell_table": {
-    "offset_hex": "0x148C870",
-    "offset_relative": "+0x62C",
-    "raw_ids": [
-      10,
-      10,
-      10,
-      10,
-      10,
-      10,
-      10,
-      10
-    ],
-    "_raw_ids_comment": "Test injection: Blaze x8",
-    "spells": {
-      "10": "Blaze (100%)"
-    },
-    "_spells_comment": "Test si Giant-Ant peut lancer des sorts"
-  }
+  "id": 48
 }

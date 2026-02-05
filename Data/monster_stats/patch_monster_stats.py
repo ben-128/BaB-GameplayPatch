@@ -83,34 +83,6 @@ def patch_stats(data: bytearray, name_offset: int, stats: dict, name: str) -> bo
     return True
 
 
-def patch_spell_table(data: bytearray, name_offset: int, spell_table: dict, name: str) -> bool:
-    """Patch monster spell table in data using relative offset from monster name"""
-    if not spell_table:
-        return False
-
-    raw_ids = spell_table.get('raw_ids', [])
-    if not raw_ids:
-        return False
-
-    # Always use relative offset for patching (works with all monster instances)
-    offset_relative = spell_table.get('offset_relative', '')
-    if not offset_relative:
-        return False
-
-    rel = int(offset_relative.replace('+', ''), 16)
-    write_offset = name_offset + rel
-
-    if write_offset + len(raw_ids) * 2 > len(data):
-        return False
-
-    # Write each spell ID as uint16
-    for i, spell_id in enumerate(raw_ids):
-        packed = struct.pack('<H', spell_id)
-        data[write_offset + i * 2:write_offset + i * 2 + 2] = packed
-
-    return True
-
-
 def find_all_occurrences(data: bytes, name: str) -> list:
     """Find all offsets where monster name appears"""
     search = name.encode('ascii')
@@ -168,7 +140,6 @@ def main():
 
             name = monster.get('name', json_file.stem)
             stats = monster.get('stats', {})
-            spell_table = monster.get('spell_table', {})
 
             # Find ALL occurrences
             offsets = find_all_occurrences(bytes(blaze_data), name)
@@ -181,16 +152,8 @@ def main():
             for offset in offsets:
                 patch_stats(blaze_data, offset, stats, name)
 
-            # Patch spell table at ALL occurrences (using relative offset)
-            spell_patched = 0
-            if spell_table and spell_table.get('raw_ids'):
-                for offset in offsets:
-                    if patch_spell_table(blaze_data, offset, spell_table, name):
-                        spell_patched += 1
-
             total_patched += len(offsets)
-            spell_info = f" + {spell_patched} spell table{'s' if spell_patched > 1 else ''}" if spell_patched else ""
-            print(f"  {name}: patched {len(offsets)} occurrence{'s' if len(offsets) > 1 else ''}{spell_info}")
+            print(f"  {name}: patched {len(offsets)} occurrence{'s' if len(offsets) > 1 else ''}")
 
         except Exception as e:
             print(f"  ERROR: {json_file.name}: {e}")

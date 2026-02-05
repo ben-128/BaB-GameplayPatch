@@ -1,0 +1,970 @@
+{
+  "_readme": "Associations monstres/zones deduites de l analyse des offsets dans BLAZE.ALL",
+  "_method": "Les monstres proches dans le fichier binaire sont probablement dans la meme zone",
+  "_confidence": "Moyenne - base sur le regroupement des offsets et les dialogues de boss",
+  "zones": {
+    "Forest": {
+      "description": "Zone de foret - debut du jeu",
+      "level_range": "1-20",
+      "boss": "OwlBear",
+      "monsters": [
+        "Kobold",
+        "Lv6.Kobold",
+        "Giant-Ant",
+        "Giant-Snake",
+        "Killer-Bear",
+        "Giant-Club",
+        "Barricade",
+        "Goblin",
+        "Goblin-Shaman",
+        "Wing-Fish",
+        "OwlBear",
+        "Killer-Bee",
+        "Poison-Flower",
+        "Trent",
+        "Will-O-The-Wisp"
+      ],
+      "source": "groupes offsets 0x148-0x14B",
+      "monsters_details": [
+        {
+          "name": "Barricade",
+          "id": 24,
+          "level": 0,
+          "type": "normal"
+        },
+        {
+          "name": "Kobold",
+          "id": 79,
+          "level": 1,
+          "type": "normal"
+        },
+        {
+          "name": "Lv6.Kobold",
+          "id": 88,
+          "level": 1,
+          "type": "normal"
+        },
+        {
+          "name": "Goblin",
+          "id": 61,
+          "level": 2,
+          "type": "normal"
+        },
+        {
+          "name": "Goblin-Shaman",
+          "id": 59,
+          "level": 3,
+          "type": "normal"
+        },
+        {
+          "name": "Giant-Snake",
+          "id": 54,
+          "level": 5,
+          "type": "normal"
+        },
+        {
+          "name": "Killer-Bear",
+          "id": 75,
+          "level": 6,
+          "type": "normal"
+        },
+        {
+          "name": "Trent",
+          "id": 110,
+          "level": 15,
+          "type": "normal"
+        },
+        {
+          "name": "Killer-Bee",
+          "id": 76,
+          "level": 16,
+          "type": "normal"
+        },
+        {
+          "name": "Poison-Flower",
+          "id": 97,
+          "level": 17,
+          "type": "normal"
+        },
+        {
+          "name": "Giant-Ant",
+          "id": 48,
+          "level": 20,
+          "type": "normal"
+        },
+        {
+          "name": "Will-O-The-Wisp",
+          "id": 115,
+          "level": 41,
+          "type": "normal"
+        },
+        {
+          "name": "Giant-Club",
+          "id": 52,
+          "level": 45,
+          "type": "normal"
+        },
+        {
+          "name": "Wing-Fish",
+          "id": 116,
+          "level": 50,
+          "type": "normal"
+        },
+        {
+          "name": "OwlBear",
+          "id": 15,
+          "level": 68,
+          "type": "boss"
+        }
+      ]
+    },
+    "Cavern of Death": {
+      "description": "Grotte - monstres insectes et betes",
+      "level_range": "5-40",
+      "monsters": [
+        "Giant-Bat",
+        "Big-Viper",
+        "Giant-Scorpion",
+        "Giant-Centipede",
+        "Dragon-Puppy",
+        "Giant-Spider",
+        "Killer-Fish",
+        "Cave-Scissors",
+        "Cave-Bear",
+        "Blue-Slime",
+        "Green-Giant",
+        "Ogre",
+        "Troll"
+      ],
+      "source": "groupes offsets 0xF86-0xF93",
+      "monsters_details": [
+        {
+          "name": "Giant-Bat",
+          "id": 49,
+          "level": 4,
+          "type": "normal"
+        },
+        {
+          "name": "Big-Viper",
+          "id": 26,
+          "level": 5,
+          "type": "normal"
+        },
+        {
+          "name": "Cave-Bear",
+          "id": 34,
+          "level": 6,
+          "type": "normal"
+        },
+        {
+          "name": "Blue-Slime",
+          "id": 32,
+          "level": 7,
+          "type": "normal"
+        },
+        {
+          "name": "Giant-Scorpion",
+          "id": 53,
+          "level": 10,
+          "type": "normal"
+        },
+        {
+          "name": "Giant-Centipede",
+          "id": 51,
+          "level": 12,
+          "type": "normal"
+        },
+        {
+          "name": "Green-Giant",
+          "id": 64,
+          "level": 14,
+          "type": "normal"
+        },
+        {
+          "name": "Giant-Spider",
+          "id": 55,
+          "level": 37,
+          "type": "normal"
+        },
+        {
+          "name": "Cave-Scissors",
+          "id": 35,
+          "level": 45,
+          "type": "normal"
+        },
+        {
+          "name": "Killer-Fish",
+          "id": 77,
+          "level": 50,
+          "type": "normal"
+        },
+        {
+          "name": "Ogre",
+          "id": 95,
+          "level": 57,
+          "type": "normal"
+        },
+        {
+          "name": "Troll",
+          "id": 17,
+          "level": 64,
+          "type": "boss"
+        },
+        {
+          "name": "Dragon-Puppy",
+          "id": 8,
+          "level": 65,
+          "type": "boss"
+        }
+      ]
+    },
+    "Castle Of Vamp (Lower)": {
+      "description": "Chateau des vampires - etages inferieurs",
+      "level_range": "27-45",
+      "boss": "Werewolf",
+      "monsters": [
+        "Zombie",
+        "Blood-Skeleton",
+        "Skeleton",
+        "Ghost",
+        "Werewolf",
+        "Weretiger",
+        "Harpy",
+        "Silver-Wolf",
+        "Vampire-Bat",
+        "Marble-Gargoyle"
+      ],
+      "source": "groupes offsets 0x240-0x242",
+      "monsters_details": [
+        {
+          "name": "Vampire-Bat",
+          "id": 112,
+          "level": 4,
+          "type": "normal"
+        },
+        {
+          "name": "Marble-Gargoyle",
+          "id": 90,
+          "level": 21,
+          "type": "normal"
+        },
+        {
+          "name": "Zombie",
+          "id": 123,
+          "level": 27,
+          "type": "normal"
+        },
+        {
+          "name": "Ghost",
+          "id": 46,
+          "level": 31,
+          "type": "normal"
+        },
+        {
+          "name": "Blood-Skeleton",
+          "id": 31,
+          "level": 32,
+          "type": "normal"
+        },
+        {
+          "name": "Silver-Wolf",
+          "id": 104,
+          "level": 35,
+          "type": "normal"
+        },
+        {
+          "name": "Skeleton",
+          "id": 105,
+          "level": 40,
+          "type": "normal"
+        },
+        {
+          "name": "Harpy",
+          "id": 69,
+          "level": 51,
+          "type": "normal"
+        },
+        {
+          "name": "Werewolf",
+          "id": 21,
+          "level": 77,
+          "type": "boss"
+        },
+        {
+          "name": "Weretiger",
+          "id": 20,
+          "level": 78,
+          "type": "boss"
+        }
+      ]
+    },
+    "Castle Of Vamp (Upper)": {
+      "description": "Chateau des vampires - etages superieurs",
+      "level_range": "34-79",
+      "boss": "Vampire-Lord",
+      "monsters": [
+        "Red-Knight",
+        "Vampire",
+        "Shadow",
+        "Lesser-Vampire",
+        "Vampire-Lord"
+      ],
+      "source": "groupes offsets 0x242-0x243",
+      "monsters_details": [
+        {
+          "name": "Vampire",
+          "id": 113,
+          "level": 34,
+          "type": "normal"
+        },
+        {
+          "name": "Lesser-Vampire",
+          "id": 80,
+          "level": 34,
+          "type": "normal"
+        },
+        {
+          "name": "Red-Knight",
+          "id": 98,
+          "level": 38,
+          "type": "normal"
+        },
+        {
+          "name": "Shadow",
+          "id": 103,
+          "level": 39,
+          "type": "normal"
+        },
+        {
+          "name": "Vampire-Lord",
+          "id": 19,
+          "level": 79,
+          "type": "boss"
+        }
+      ]
+    },
+    "Ancient Ruins": {
+      "description": "Ruines antiques",
+      "level_range": "15-60",
+      "monsters": [
+        "Desert-Lizard",
+        "Giant",
+        "Gargoyle",
+        "Metal-Ball",
+        "Wolf",
+        "Chimera",
+        "Metal-Slime"
+      ],
+      "source": "groupes offsets 0x14B, 0x251",
+      "monsters_details": [
+        {
+          "name": "Metal-Slime",
+          "id": 92,
+          "level": 7,
+          "type": "normal"
+        },
+        {
+          "name": "Giant",
+          "id": 56,
+          "level": 14,
+          "type": "normal"
+        },
+        {
+          "name": "Gargoyle",
+          "id": 45,
+          "level": 21,
+          "type": "normal"
+        },
+        {
+          "name": "Wolf",
+          "id": 118,
+          "level": 35,
+          "type": "normal"
+        },
+        {
+          "name": "Metal-Ball",
+          "id": 91,
+          "level": 41,
+          "type": "normal"
+        },
+        {
+          "name": "Chimera",
+          "id": 36,
+          "level": 42,
+          "type": "normal"
+        },
+        {
+          "name": "Desert-Lizard",
+          "id": 41,
+          "level": 58,
+          "type": "normal"
+        }
+      ]
+    },
+    "Tower": {
+      "description": "Tour mystique - golems et mages",
+      "level_range": "22-73",
+      "boss": "Dark-Wizard",
+      "monsters": [
+        "Lv30.Goblin",
+        "Guard-Golem",
+        "Dark-Magi",
+        "Goblin-Fly",
+        "Green-Slime",
+        "Lizard-Man",
+        "Crimson-Lizard",
+        "Born-Golem",
+        "Stalker",
+        "Black-Knight",
+        "Living-Sword",
+        "Living-Armor",
+        "Dark-Elf",
+        "Wyvern",
+        "Evil-Crystal",
+        "Platinum-Knight",
+        "Dark-Wizard",
+        "Shadow-Demon",
+        "Arch-Magi",
+        "Hard-Born"
+      ],
+      "source": "groupes offsets 0x196-0x199",
+      "monsters_details": [
+        {
+          "name": "Evil-Crystal",
+          "id": 43,
+          "level": 0,
+          "type": "normal"
+        },
+        {
+          "name": "Lv30.Goblin",
+          "id": 86,
+          "level": 2,
+          "type": "normal"
+        },
+        {
+          "name": "Green-Slime",
+          "id": 65,
+          "level": 7,
+          "type": "normal"
+        },
+        {
+          "name": "Lizard-Man",
+          "id": 83,
+          "level": 19,
+          "type": "normal"
+        },
+        {
+          "name": "Crimson-Lizard",
+          "id": 37,
+          "level": 19,
+          "type": "normal"
+        },
+        {
+          "name": "Dark-Magi",
+          "id": 39,
+          "level": 22,
+          "type": "normal"
+        },
+        {
+          "name": "Arch-Magi",
+          "id": 23,
+          "level": 22,
+          "type": "normal"
+        },
+        {
+          "name": "Born-Golem",
+          "id": 33,
+          "level": 23,
+          "type": "normal"
+        },
+        {
+          "name": "Hard-Born",
+          "id": 68,
+          "level": 23,
+          "type": "normal"
+        },
+        {
+          "name": "Stalker",
+          "id": 108,
+          "level": 24,
+          "type": "normal"
+        },
+        {
+          "name": "Black-Knight",
+          "id": 27,
+          "level": 25,
+          "type": "normal"
+        },
+        {
+          "name": "Platinum-Knight",
+          "id": 96,
+          "level": 25,
+          "type": "normal"
+        },
+        {
+          "name": "Living-Sword",
+          "id": 82,
+          "level": 26,
+          "type": "normal"
+        },
+        {
+          "name": "Guard-Golem",
+          "id": 67,
+          "level": 40,
+          "type": "normal"
+        },
+        {
+          "name": "Living-Armor",
+          "id": 81,
+          "level": 40,
+          "type": "normal"
+        },
+        {
+          "name": "Goblin-Fly",
+          "id": 57,
+          "level": 60,
+          "type": "normal"
+        },
+        {
+          "name": "Dark-Elf",
+          "id": 5,
+          "level": 71,
+          "type": "boss"
+        },
+        {
+          "name": "Wyvern",
+          "id": 121,
+          "level": 72,
+          "type": "normal"
+        },
+        {
+          "name": "Dark-Wizard",
+          "id": 6,
+          "level": 73,
+          "type": "boss"
+        },
+        {
+          "name": "Shadow-Demon",
+          "id": 102,
+          "level": 93,
+          "type": "normal"
+        }
+      ]
+    },
+    "Sealed Cave (Undead)": {
+      "description": "Grotte scellee - morts-vivants",
+      "level_range": "28-75",
+      "boss": "Undead-Master",
+      "monsters": [
+        "Wight",
+        "Ghoul",
+        "Durahan",
+        "Blood-Mummy",
+        "Wraith",
+        "Red-Slime",
+        "Undead-Knight",
+        "Mummy",
+        "Revenant",
+        "Yellow-Slime",
+        "Noble-Mummy",
+        "King-Mummy",
+        "Black-Durahan",
+        "Undead-Master"
+      ],
+      "source": "groupes offsets 0x1DE-0x1DF",
+      "monsters_details": [
+        {
+          "name": "Red-Slime",
+          "id": 99,
+          "level": 7,
+          "type": "normal"
+        },
+        {
+          "name": "Yellow-Slime",
+          "id": 122,
+          "level": 7,
+          "type": "normal"
+        },
+        {
+          "name": "Ghoul",
+          "id": 47,
+          "level": 28,
+          "type": "normal"
+        },
+        {
+          "name": "Blood-Mummy",
+          "id": 29,
+          "level": 29,
+          "type": "normal"
+        },
+        {
+          "name": "Mummy",
+          "id": 93,
+          "level": 29,
+          "type": "normal"
+        },
+        {
+          "name": "Noble-Mummy",
+          "id": 94,
+          "level": 29,
+          "type": "normal"
+        },
+        {
+          "name": "King-Mummy",
+          "id": 78,
+          "level": 29,
+          "type": "normal"
+        },
+        {
+          "name": "Wraith",
+          "id": 119,
+          "level": 30,
+          "type": "normal"
+        },
+        {
+          "name": "Revenant",
+          "id": 100,
+          "level": 33,
+          "type": "normal"
+        },
+        {
+          "name": "Wight",
+          "id": 114,
+          "level": 36,
+          "type": "normal"
+        },
+        {
+          "name": "Undead-Knight",
+          "id": 111,
+          "level": 38,
+          "type": "normal"
+        },
+        {
+          "name": "Durahan",
+          "id": 9,
+          "level": 74,
+          "type": "boss"
+        },
+        {
+          "name": "Black-Durahan",
+          "id": 1,
+          "level": 74,
+          "type": "boss"
+        },
+        {
+          "name": "Undead-Master",
+          "id": 18,
+          "level": 75,
+          "type": "boss"
+        }
+      ]
+    },
+    "Valley of White Wind": {
+      "description": "Vallee du vent blanc - zone de glace",
+      "level_range": "6-85",
+      "boss": "Griffin",
+      "monsters": [
+        "Snow-Bear",
+        "Winter-Wolf",
+        "Hippogriff",
+        "Griffin"
+      ],
+      "source": "groupe offset 0x25D",
+      "monsters_details": [
+        {
+          "name": "Snow-Bear",
+          "id": 106,
+          "level": 6,
+          "type": "normal"
+        },
+        {
+          "name": "Winter-Wolf",
+          "id": 117,
+          "level": 35,
+          "type": "normal"
+        },
+        {
+          "name": "Hippogriff",
+          "id": 73,
+          "level": 52,
+          "type": "normal"
+        },
+        {
+          "name": "Griffin",
+          "id": 12,
+          "level": 85,
+          "type": "boss"
+        }
+      ]
+    },
+    "Undersea / Lake": {
+      "description": "Zone aquatique",
+      "level_range": "19-83",
+      "boss": "Kraken",
+      "monsters": [
+        "Black-Lizard",
+        "Wyrm",
+        "Kraken-Hand",
+        "Kraken-Foot"
+      ],
+      "source": "groupe offset 0x269",
+      "monsters_details": [
+        {
+          "name": "Black-Lizard",
+          "id": 28,
+          "level": 19,
+          "type": "normal"
+        },
+        {
+          "name": "Wyrm",
+          "id": 120,
+          "level": 53,
+          "type": "normal"
+        },
+        {
+          "name": "Kraken-Hand",
+          "id": 14,
+          "level": 82,
+          "type": "boss"
+        },
+        {
+          "name": "Kraken-Foot",
+          "id": 13,
+          "level": 83,
+          "type": "boss"
+        }
+      ]
+    },
+    "Hall of Demons": {
+      "description": "Salle des demons - zone finale",
+      "level_range": "58-100",
+      "boss": "Demon-Lord",
+      "monsters": [
+        "Hell-Harpy",
+        "Dark-Goblin",
+        "Goblin-Wizard",
+        "Death-Knight",
+        "Spirit-Ball",
+        "Blood-Shadow",
+        "Evil-Stalker",
+        "Zombie-Dragon",
+        "Evil-Ball",
+        "Basirisk",
+        "Gremlin",
+        "Ice-Salamander",
+        "Salamander",
+        "Carberos",
+        "Hell-Hound",
+        "Gorgon",
+        "Gray-Arm",
+        "Hell-Ogre",
+        "Succubus",
+        "Efreet",
+        "Greater-Demon",
+        "Demon-Lord",
+        "Dark-Angel",
+        "Budgietom"
+      ],
+      "source": "groupes offsets 0x2BE-0x2C0",
+      "monsters_details": [
+        {
+          "name": "Dark-Goblin",
+          "id": 38,
+          "level": 2,
+          "type": "normal"
+        },
+        {
+          "name": "Goblin-Wizard",
+          "id": 60,
+          "level": 2,
+          "type": "normal"
+        },
+        {
+          "name": "Ice-Salamander",
+          "id": 74,
+          "level": 9,
+          "type": "normal"
+        },
+        {
+          "name": "Evil-Stalker",
+          "id": 44,
+          "level": 24,
+          "type": "normal"
+        },
+        {
+          "name": "Death-Knight",
+          "id": 40,
+          "level": 38,
+          "type": "normal"
+        },
+        {
+          "name": "Blood-Shadow",
+          "id": 30,
+          "level": 39,
+          "type": "normal"
+        },
+        {
+          "name": "Spirit-Ball",
+          "id": 107,
+          "level": 41,
+          "type": "normal"
+        },
+        {
+          "name": "Evil-Ball",
+          "id": 42,
+          "level": 41,
+          "type": "normal"
+        },
+        {
+          "name": "Hell-Harpy",
+          "id": 70,
+          "level": 51,
+          "type": "normal"
+        },
+        {
+          "name": "Gray-Arm",
+          "id": 63,
+          "level": 53,
+          "type": "normal"
+        },
+        {
+          "name": "Hell-Ogre",
+          "id": 72,
+          "level": 57,
+          "type": "normal"
+        },
+        {
+          "name": "Basirisk",
+          "id": 25,
+          "level": 58,
+          "type": "normal"
+        },
+        {
+          "name": "Gorgon",
+          "id": 62,
+          "level": 59,
+          "type": "normal"
+        },
+        {
+          "name": "Gremlin",
+          "id": 66,
+          "level": 60,
+          "type": "normal"
+        },
+        {
+          "name": "Hell-Hound",
+          "id": 71,
+          "level": 61,
+          "type": "normal"
+        },
+        {
+          "name": "Succubus",
+          "id": 109,
+          "level": 62,
+          "type": "normal"
+        },
+        {
+          "name": "Efreet",
+          "id": 10,
+          "level": 66,
+          "type": "boss"
+        },
+        {
+          "name": "Zombie-Dragon",
+          "id": 22,
+          "level": 88,
+          "type": "boss"
+        },
+        {
+          "name": "Carberos",
+          "id": 3,
+          "level": 89,
+          "type": "boss"
+        },
+        {
+          "name": "Greater-Demon",
+          "id": 11,
+          "level": 93,
+          "type": "boss"
+        },
+        {
+          "name": "Demon-Lord",
+          "id": 7,
+          "level": 98,
+          "type": "boss"
+        },
+        {
+          "name": "Dark-Angel",
+          "id": 4,
+          "level": 99,
+          "type": "boss"
+        },
+        {
+          "name": "Budgietom",
+          "id": 2,
+          "level": 100,
+          "type": "boss"
+        },
+        {
+          "name": "Salamander",
+          "id": 101,
+          "level": 220,
+          "type": "normal"
+        }
+      ]
+    },
+    "Fire Mountain": {
+      "description": "Montagne de feu",
+      "level_range": "67-70",
+      "boss": "Red-Dragon",
+      "monsters": [
+        "Red-Dragon",
+        "Behemoth"
+      ],
+      "source": "groupes offsets 0x102, 0x14B",
+      "monsters_details": [
+        {
+          "name": "Red-Dragon",
+          "id": 16,
+          "level": 67,
+          "type": "boss"
+        },
+        {
+          "name": "Behemoth",
+          "id": 0,
+          "level": 70,
+          "type": "boss"
+        }
+      ]
+    },
+    "Unknown / Multi-zone": {
+      "description": "Monstres apparaissant dans plusieurs zones ou zone inconnue",
+      "monsters": [
+        "Lv20.Goblin",
+        "Goblin-Leader",
+        "Giant-Beetle"
+      ],
+      "source": "offsets isoles",
+      "monsters_details": [
+        {
+          "name": "Lv20.Goblin",
+          "id": 84,
+          "level": 2,
+          "type": "normal"
+        },
+        {
+          "name": "Giant-Beetle",
+          "id": 50,
+          "level": 18,
+          "type": "normal"
+        },
+        {
+          "name": "Goblin-Leader",
+          "id": 58,
+          "level": 63,
+          "type": "normal"
+        }
+      ]
+    }
+  }
+}

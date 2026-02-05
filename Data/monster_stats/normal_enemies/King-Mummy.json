@@ -53,29 +53,5 @@
     "stat16_elem_divine_malefic": 6144,
     "_stat16_elem_divine_malefic_comment": "[Défaut: 6144] Dégâts élémentaires: Divin/Maléfique"
   },
-  "id": 78,
-  "spell_table": {
-    "offset_hex": "0x1DF5990",
-    "offset_relative": "+0x56C",
-    "raw_ids": [
-      29,
-      29,
-      30,
-      30,
-      31,
-      32,
-      33,
-      34
-    ],
-    "_raw_ids_comment": "IDs des sorts répétés = probabilité (voir spell_index.json)",
-    "spells": {
-      "29": "Poison Touch (25%)",
-      "30": "Turn Undead (25%)",
-      "31": "Healing (12%)",
-      "32": "Protection (12%)",
-      "33": "Resist (12%)",
-      "34": "Detect (12%)"
-    },
-    "_spells_comment": "ID: Nom du sort (probabilité)"
-  }
+  "id": 78
 }

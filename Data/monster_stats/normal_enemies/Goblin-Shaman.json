@@ -53,24 +53,5 @@
     "stat16_elem_divine_malefic": 0,
     "_stat16_elem_divine_malefic_comment": "[Défaut: 0] Dégâts élémentaires: Divin/Maléfique"
   },
-  "id": 59,
-  "spell_table": {
-    "offset_hex": "0x197CA20",
-    "offset_relative": "+0x7FC",
-    "raw_ids": [
-      27,
-      27,
-      27,
-      27,
-      27,
-      27,
-      27,
-      27
-    ],
-    "_raw_ids_comment": "TEST: Meteor x8 (original: 8,8,9,9,10,10,11,12)",
-    "spells": {
-      "27": "Meteor (100%)"
-    },
-    "_spells_comment": "ID: Nom du sort (probabilité)"
-  }
+  "id": 59
 }
