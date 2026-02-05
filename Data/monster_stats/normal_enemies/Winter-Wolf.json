@@ -28,7 +28,7 @@
     "_stat11_creature_type_comment": "[Défaut: 512] Type de créature: 2=mythique, 4=géant, 8=construct, 16=animal, 128=dragon, 256=mort-vivant, 512=incorporel, 1024=lycanthrope, 2048=slime, 32768=boss (cumulables)",
     "stat12_armor_type": 16,
     "_stat12_armor_type_comment": "[Défaut: 16] Type d'armure (son + réduction de dégâts): 2=bête mythique, 4=géant, 8=construct/métal, 16=animal, 32=plante, 64=insecte, 128=dragon, 256=mort-vivant, 768=incorporel, 2048=slime, 32768=boss",
-    "stat13_elem_fire_ice": 8192,
+    "stat13_elem_fire_ice": 2048,
     "_stat13_elem_fire_ice_comment": "[Défaut: 0] Dégâts élémentaires: 1-100=Feu, 8192+=Glace/Eau",
     "stat14_elem_poison_air": 0,
     "_stat14_elem_poison_air_comment": "[Défaut: 0] Dégâts élémentaires: 1-50=Poison/Terre, 2048-6144=Air, 8192=Air (fort)",

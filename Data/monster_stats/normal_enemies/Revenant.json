@@ -30,7 +30,7 @@
     "_stat12_armor_type_comment": "[Défaut: 256] Type d'armure (son + réduction de dégâts): 2=bête mythique, 4=géant, 8=construct/métal, 16=animal, 32=plante, 64=insecte, 128=dragon, 256=mort-vivant, 768=incorporel, 2048=slime, 32768=boss",
     "stat13_elem_fire_ice": 10,
     "_stat13_elem_fire_ice_comment": "[Défaut: 10] Dégâts élémentaires: 1-100=Feu, 8192+=Glace/Eau",
-    "stat14_elem_poison_air": 1,
+    "stat14_elem_poison_air": 10,
     "_stat14_elem_poison_air_comment": "[Défaut: 10] Dégâts élémentaires: 1-50=Poison/Terre, 2048-6144=Air, 8192=Air (fort)",
     "stat15_elem_light_night": 2560,
     "_stat15_elem_light_night_comment": "[Défaut: 2560] Dégâts élémentaires: 1-200=Lumière, 4096-7680=Nuit",

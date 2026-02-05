@@ -32,7 +32,7 @@
     "_stat13_elem_fire_ice_comment": "[Défaut: 0] Dégâts élémentaires: 1-100=Feu, 8192+=Glace/Eau",
     "stat14_elem_poison_air": 0,
     "_stat14_elem_poison_air_comment": "[Défaut: 0] Dégâts élémentaires: 1-50=Poison/Terre, 2048-6144=Air, 8192=Air (fort)",
-    "stat15_elem_light_night": 4096,
+    "stat15_elem_light_night": 2048,
     "_stat15_elem_light_night_comment": "[Défaut: 0] Dégâts élémentaires: 1-200=Lumière, 4096-7680=Nuit",
     "stat17_dmg": 65,
     "_stat17_dmg_comment": "[Défaut: 40] Dégâts par attaque - augmente les dommages infligés",
