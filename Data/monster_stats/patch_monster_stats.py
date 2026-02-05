@@ -42,6 +42,22 @@ STATS_ORDER = [
     "stat22_magic_atk",     # 21 - 0x3A
     "stat23",               # 22 - 0x3C
     "stat24",               # 23 - 0x3E
+    "stat25",               # 24 - 0x40
+    "stat26",               # 25 - 0x42
+    "stat27",               # 26 - 0x44
+    "stat28",               # 27 - 0x46
+    "stat29",               # 28 - 0x48
+    "stat30",               # 29 - 0x4A
+    "stat31",               # 30 - 0x4C
+    "stat32",               # 31 - 0x4E
+    "stat33",               # 32 - 0x50
+    "stat34",               # 33 - 0x52
+    "stat35",               # 34 - 0x54
+    "stat36",               # 35 - 0x56
+    "stat37",               # 36 - 0x58
+    "stat38",               # 37 - 0x5A
+    "stat39",               # 38 - 0x5C
+    "stat40",               # 39 - 0x5E
 ]
 
 
@@ -63,6 +79,40 @@ def patch_stats(data: bytearray, name_offset: int, stats: dict, name: str) -> bo
             else:
                 packed = struct.pack('<H', min(value, 65535))  # unsigned uint16, capped
             data[write_offset:write_offset+2] = packed
+
+    return True
+
+
+def patch_spell_table(data: bytearray, name_offset: int, spell_table: dict, name: str) -> bool:
+    """Patch monster spell table in data"""
+    if not spell_table:
+        return False
+
+    raw_ids = spell_table.get('raw_ids', [])
+    if not raw_ids:
+        return False
+
+    # Get offset from spell_table data
+    offset_hex = spell_table.get('offset_hex', '')
+    if offset_hex:
+        # Use absolute offset from JSON
+        write_offset = int(offset_hex, 16)
+    else:
+        # Fallback: use relative offset
+        offset_relative = spell_table.get('offset_relative', '')
+        if offset_relative:
+            rel = int(offset_relative.replace('+', ''), 16)
+            write_offset = name_offset + rel
+        else:
+            return False
+
+    if write_offset + len(raw_ids) * 2 > len(data):
+        return False
+
+    # Write each spell ID as uint16
+    for i, spell_id in enumerate(raw_ids):
+        packed = struct.pack('<H', spell_id)
+        data[write_offset + i * 2:write_offset + i * 2 + 2] = packed
 
     return True
 
@@ -124,6 +174,7 @@ def main():
 
             name = monster.get('name', json_file.stem)
             stats = monster.get('stats', {})
+            spell_table = monster.get('spell_table', {})
 
             # Find ALL occurrences
             offsets = find_all_occurrences(bytes(blaze_data), name)
@@ -136,8 +187,14 @@ def main():
             for offset in offsets:
                 patch_stats(blaze_data, offset, stats, name)
 
+            # Patch spell table (uses absolute offset, so only once)
+            spell_patched = False
+            if spell_table and spell_table.get('raw_ids'):
+                spell_patched = patch_spell_table(blaze_data, offsets[0], spell_table, name)
+
             total_patched += len(offsets)
-            print(f"  {name}: patched {len(offsets)} occurrence{'s' if len(offsets) > 1 else ''}")
+            spell_info = " + spells" if spell_patched else ""
+            print(f"  {name}: patched {len(offsets)} occurrence{'s' if len(offsets) > 1 else ''}{spell_info}")
 
         except Exception as e:
             print(f"  ERROR: {json_file.name}: {e}")
