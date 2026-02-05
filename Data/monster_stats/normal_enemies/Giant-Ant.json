@@ -54,7 +54,7 @@
     "_stat24_comment": "[Défaut: 0] Résistance aux altérations d'état"
   },
   "id": 48,
-  "action_table": {
+  "spell_table": {
     "offset_hex": "0x148C870",
     "offset_relative": "+0x62C",
     "raw_ids": [
@@ -67,11 +67,11 @@
       0,
       31
     ],
-    "_raw_ids_comment": "IDs d'action répétés = probabilité (système pondéré)",
-    "actions": {
+    "_raw_ids_comment": "Données brutes - probablement pas une table active (Giant-Ant ne lance pas de sorts). Point d'injection potentiel?",
+    "spells": {
       "0": "Basic Attack (88%)",
       "31": "Healing (12%)"
     },
-    "_actions_comment": "ID: Action (probabilité) - contrôle le comportement du monstre"
+    "_spells_comment": "Modifier raw_ids pour injecter des sorts (IDs 8-46)"
   }
 }

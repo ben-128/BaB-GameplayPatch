@@ -54,7 +54,7 @@
     "_stat16_elem_divine_malefic_comment": "[Défaut: 0] Dégâts élémentaires: Divin/Maléfique"
   },
   "id": 76,
-  "action_table": {
+  "spell_table": {
     "offset_hex": "0x14A2932",
     "offset_relative": "+0x70A",
     "raw_ids": [
@@ -67,11 +67,11 @@
       0,
       30
     ],
-    "_raw_ids_comment": "IDs d'action répétés = probabilité (système pondéré)",
-    "actions": {
+    "_raw_ids_comment": "Table vide - point d'injection potentiel pour ajouter des sorts",
+    "spells": {
       "0": "Basic Attack (88%)",
       "30": "Turn Undead (12%)"
     },
-    "_actions_comment": "ID: Action (probabilité) - contrôle le comportement du monstre"
+    "_spells_comment": "Modifier raw_ids pour injecter des sorts (IDs 8-46)"
   }
 }

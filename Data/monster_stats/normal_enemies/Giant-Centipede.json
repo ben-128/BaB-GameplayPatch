@@ -54,7 +54,7 @@
     "_stat16_elem_divine_malefic_comment": "[Défaut: 0] Dégâts élémentaires: Divin/Maléfique"
   },
   "id": 51,
-  "action_table": {
+  "spell_table": {
     "offset_hex": "0xF88252",
     "offset_relative": "+0x7EE",
     "raw_ids": [
@@ -67,11 +67,11 @@
       0,
       0
     ],
-    "_raw_ids_comment": "IDs d'action répétés = probabilité (système pondéré)",
-    "actions": {
+    "_raw_ids_comment": "Table vide - point d'injection potentiel pour ajouter des sorts",
+    "spells": {
       "0": "Basic Attack (88%)",
       "32": "Protection (12%)"
     },
-    "_actions_comment": "ID: Action/Sort (probabilité)"
+    "_spells_comment": "Modifier raw_ids pour injecter des sorts (IDs 8-46)"
   }
 }
