@@ -12,8 +12,9 @@ from pathlib import Path
 
 # Configuration
 SCRIPT_DIR = Path(__file__).parent
-BLAZE_ALL = SCRIPT_DIR.parent.parent / "output" / "BLAZE.ALL"
-JSON_DIR = SCRIPT_DIR
+MONSTER_STATS_DIR = SCRIPT_DIR.parent
+BLAZE_ALL = MONSTER_STATS_DIR.parent.parent / "output" / "BLAZE.ALL"
+JSON_DIR = MONSTER_STATS_DIR
 
 # Stats field order (offset from monster entry + 0x10)
 # Must match inject_monster_stats.py STATS_ORDER

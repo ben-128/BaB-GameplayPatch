@@ -7,10 +7,11 @@ import json
 from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).parent
+MONSTER_STATS_DIR = SCRIPT_DIR.parent
 
 def main():
     # Read all monster JSON files
-    json_files = sorted([f for f in SCRIPT_DIR.glob("**/*.json") if not f.name.startswith('_')])
+    json_files = sorted([f for f in MONSTER_STATS_DIR.glob("**/*.json") if not f.name.startswith('_')])
 
     print(f"Found {len(json_files)} monster files")
     print()
@@ -19,7 +20,7 @@ def main():
 
     for json_file in json_files:
         # Get relative path from monster_stats directory
-        rel_path = json_file.relative_to(SCRIPT_DIR)
+        rel_path = json_file.relative_to(MONSTER_STATS_DIR)
 
         # Read monster data
         with open(json_file, 'r', encoding='utf-8') as f:
@@ -85,7 +86,7 @@ def main():
     }
 
     # Write index
-    output_file = SCRIPT_DIR / "_index.json"
+    output_file = MONSTER_STATS_DIR / "_index.json"
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(index, f, indent=2, ensure_ascii=False)
 

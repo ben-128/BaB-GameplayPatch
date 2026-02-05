@@ -4,7 +4,7 @@ Search for AI/behavior code that references spells
 import struct
 from pathlib import Path
 
-BLAZE_ALL = Path(__file__).parent.parent.parent / "output" / "BLAZE.ALL"
+BLAZE_ALL = Path(__file__).parent.parent.parent.parent / "output" / "BLAZE.ALL"
 data = BLAZE_ALL.read_bytes()
 
 print("=" * 70)
