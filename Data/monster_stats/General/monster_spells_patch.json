@@ -47,6 +47,7 @@
       "name": "Goblin-Shaman",
       "offset_hex": "0x9E8DEE",
       "enabled": true,
+      "original_bytes": [175, 0, 0, 8, 9, 3, 3, 3, 3, 3, 176, 0, 160, 0, 160, 31],
       "flags1": [175, 0],
       "attack_spells": [10, 11, 12],
       "weighted_spell": 10,

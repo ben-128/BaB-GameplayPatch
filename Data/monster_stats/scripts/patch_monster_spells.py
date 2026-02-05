@@ -1,6 +1,6 @@
 """
 patch_monster_spells.py
-Patches monster spell assignments in BLAZE.ALL
+Patches monster spell assignments in BLAZE.ALL at ALL occurrences
 
 Usage: py -3 patch_monster_spells.py
 """
@@ -14,7 +14,7 @@ MONSTER_STATS_DIR = SCRIPT_DIR.parent
 BLAZE_ALL = MONSTER_STATS_DIR.parent.parent / "output" / "BLAZE.ALL"
 SPELL_PATCH_FILE = MONSTER_STATS_DIR / "General" / "monster_spells_patch.json"
 
-# Spell table location
+# Spell table location (primary)
 SPELL_TABLE_START = 0x9E8D8E
 SPELL_ENTRY_SIZE = 16
 
@@ -55,6 +55,19 @@ def build_spell_entry(entry: dict) -> bytes:
     return bytes(result)
 
 
+def find_all_occurrences(data: bytes, pattern: bytes) -> list:
+    """Find all occurrences of a pattern in data."""
+    occurrences = []
+    pos = 0
+    while True:
+        pos = data.find(pattern, pos)
+        if pos == -1:
+            break
+        occurrences.append(pos)
+        pos += 1
+    return occurrences
+
+
 def main():
     print("=" * 60)
     print("  Monster Spell Assignment Patcher")
@@ -86,43 +99,70 @@ def main():
     print()
 
     # Patch each enabled entry
-    patched_count = 0
+    total_patches = 0
     for entry in entries:
         if not entry.get("enabled", True):
             continue
 
         index = entry.get("index")
         name = entry.get("name", f"Entry {index}")
-        offset_hex = entry.get("offset_hex")
 
-        if offset_hex:
-            # Use explicit offset
-            offset = int(offset_hex, 16)
-        elif index is not None:
-            # Calculate from index
-            offset = SPELL_TABLE_START + (index * SPELL_ENTRY_SIZE)
+        # Get the original bytes from the primary location
+        if index is not None:
+            primary_offset = SPELL_TABLE_START + (index * SPELL_ENTRY_SIZE)
         else:
-            print(f"  WARNING: {name} - no index or offset specified, skipping")
-            continue
+            offset_hex = entry.get("offset_hex")
+            if offset_hex:
+                primary_offset = int(offset_hex, 16)
+            else:
+                print(f"  WARNING: {name} - no index or offset specified, skipping")
+                continue
 
-        # Build the entry bytes
+        # Get original bytes - either from config or from file
+        if "original_bytes" in entry:
+            original_entry = bytes(entry["original_bytes"])
+        else:
+            original_entry = bytes(blaze_data[primary_offset:primary_offset+16])
+
+        # Build the new entry
         new_entry = build_spell_entry(entry)
 
-        # Show what we're patching
-        old_entry = blaze_data[offset:offset+16]
-        old_hex = ' '.join(f'{b:02X}' for b in old_entry)
+        # Skip if already patched
+        if original_entry == new_entry:
+            print(f"  {name}: Already patched at primary location")
+            # Still search for other occurrences of original pattern
+            # in case there are unpatched copies elsewhere
+
+        old_hex = ' '.join(f'{b:02X}' for b in original_entry)
         new_hex = ' '.join(f'{b:02X}' for b in new_entry)
 
-        print(f"  {name} (entry {index}) at 0x{offset:X}:")
-        print(f"    OLD: {old_hex}")
-        print(f"    NEW: {new_hex}")
+        print(f"  {name} (entry {index}):")
+        print(f"    Original: {old_hex}")
+        print(f"    New:      {new_hex}")
 
-        # Apply patch
-        blaze_data[offset:offset+16] = new_entry
-        patched_count += 1
+        # Find ALL occurrences of the original entry in the entire file
+        occurrences = find_all_occurrences(bytes(blaze_data), original_entry)
+
+        if not occurrences:
+            # Maybe already patched - check for new_entry pattern
+            already_patched = find_all_occurrences(bytes(blaze_data), new_entry)
+            if already_patched:
+                print(f"    -> Already patched at {len(already_patched)} location(s)")
+                continue
+            else:
+                print(f"    -> WARNING: Original pattern not found!")
+                continue
+
+        print(f"    -> Found {len(occurrences)} occurrence(s) to patch:")
+
+        # Patch ALL occurrences
+        for offset in occurrences:
+            print(f"       0x{offset:X}")
+            blaze_data[offset:offset+16] = new_entry
+            total_patches += 1
 
     print()
-    print(f"Patched {patched_count} spell entries")
+    print(f"Total patches applied: {total_patches}")
     print()
 
     # Write output
