@@ -148,6 +148,21 @@ call :log ""
 call :log "[OK] Monster stats patched in BLAZE.ALL"
 call :log ""
 
+REM Patch monster spell assignments
+call :log "[5b/8] Patching monster spell assignments in BLAZE.ALL..."
+call :log ""
+
+py -3 Data\monster_stats\scripts\patch_monster_spells.py >> "%LOGFILE%" 2>&1
+if errorlevel 1 (
+    call :log ""
+    call :log "[ERROR] Monster spell patch failed!"
+    goto :error
+)
+
+call :log ""
+call :log "[OK] Monster spell assignments patched in BLAZE.ALL"
+call :log ""
+
 REM ========================================================================
 REM Step 6: Create fresh patched BIN from clean original
 REM ========================================================================
