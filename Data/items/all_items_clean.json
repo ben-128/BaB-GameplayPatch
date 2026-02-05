@@ -1196,7 +1196,7 @@
         "0x025930C4"
       ],
       "id": 32,
-      "new_description": "Enchanted boots adorned with feathers. Immune Slow AGL+12",
+      "new_description": "Enchanted boots adorned with feathers. Imm Slow",
       "max_chars": 63,
       "current_chars": 57
     },
@@ -1368,7 +1368,7 @@
         "0x01AE8548"
       ],
       "id": 37,
-      "new_description": "A holy cross which protects against all spells. Immune Curse",
+      "new_description": "A holy cross which protects against all spells. Imm Curse",
       "max_chars": 63,
       "current_chars": 60
     },
@@ -1397,7 +1397,7 @@
         "0x0199E84C"
       ],
       "id": 38,
-      "new_description": "An ancient amulet that heals the body. Regen HP +1",
+      "new_description": "An old amulet that heals the body. Regen HP +1",
       "max_chars": 63,
       "current_chars": 50
     },
@@ -1496,7 +1496,7 @@
         "0x02853564"
       ],
       "id": 41,
-      "new_description": "Armor forged by the warlords of hell. STR+12 CON+12 MDEF+74",
+      "new_description": "Armor forged by the warlords of hell. S+12 C+12",
       "max_chars": 63,
       "current_chars": 59
     },
@@ -1520,7 +1520,7 @@
         "0x01D25000"
       ],
       "id": 42,
-      "new_description": "The sun crown of a powerful ancient king. MP cost -50%",
+      "new_description": "The sun crown of a powerful old king. MP cost -50%",
       "max_chars": 63,
       "current_chars": 54
     },
@@ -1831,7 +1831,7 @@
         "0x028011E8"
       ],
       "id": 50,
-      "new_description": "It was forged to face the Bane Wyrm. 12.5% confuse enemy",
+      "new_description": "It was forged to face the Bane Wyrm. 12.5%",
       "max_chars": 63,
       "current_chars": 56
     },
@@ -2514,7 +2514,7 @@
         "0x01BB1574"
       ],
       "id": 71,
-      "new_description": "Wearer is protected by the powers of earth. CON+14",
+      "new_description": "Wearer is protected by the powers of earth. C+14",
       "max_chars": 63,
       "current_chars": 50
     },
@@ -2574,7 +2574,7 @@
         "0x00BE01F8"
       ],
       "id": 73,
-      "new_description": "Brings forth the power of light. Dark elem dmg decreases",
+      "new_description": "Brings forth the power of light. Dark elem dmg -",
       "max_chars": 63,
       "current_chars": 56
     },
@@ -3059,7 +3059,7 @@
         "0x029F1EE8"
       ],
       "id": 87,
-      "new_description": "Supposedly wards off bad luck and misfortune. LUK+16 MDEF+12",
+      "new_description": "Supposedly wards off bad luck and misfortune.",
       "max_chars": 63,
       "current_chars": 60
     },
@@ -3085,7 +3085,7 @@
         "0x02909264"
       ],
       "id": 88,
-      "new_description": "Wearer is protected by the powers of water. INT+14",
+      "new_description": "Wearer is protected by the powers of water. I+14",
       "max_chars": 63,
       "current_chars": 50
     },
@@ -3285,7 +3285,7 @@
         "0x01F20974"
       ],
       "id": 94,
-      "new_description": "Protects with strange mysterious powers. Df + (POW * 25%)",
+      "new_description": "Protects with strange mystic powers. Df + (P *",
       "max_chars": 63,
       "current_chars": 57
     },
@@ -3505,7 +3505,7 @@
         "0x01800270"
       ],
       "id": 100,
-      "new_description": "Light cloak for easy movement worn by elves. I+4 W+4 P+4 MD+8",
+      "new_description": "Light cloak for easy movement worn by elves. I+4",
       "max_chars": 63,
       "current_chars": 61
     },
@@ -3644,7 +3644,7 @@
         "0x029F1C68"
       ],
       "id": 104,
-      "new_description": "Tail of a powerful dragon, said to bring luck. LUK+20",
+      "new_description": "Tail of a powerful dragon, said to bring luck. L+20",
       "max_chars": 63,
       "current_chars": 53
     },
@@ -3874,7 +3874,7 @@
         "0x01256F58"
       ],
       "id": 111,
-      "new_description": "A heavy axe reknowned for its hacking ability. Critical +6%",
+      "new_description": "A heavy axe reknowned for its hacking ability. Crit",
       "max_chars": 63,
       "current_chars": 12
     },
@@ -3947,7 +3947,7 @@
         "0x02075250"
       ],
       "id": 113,
-      "new_description": "Blessed and engraved with holy symbols. MAT+8 MDEF+8",
+      "new_description": "Blessed and engraved with holy symbols. MA+8 MD+8",
       "max_chars": 63,
       "current_chars": 49
     },
@@ -4032,7 +4032,7 @@
         "0x0230AE44"
       ],
       "id": 115,
-      "new_description": "Mysterious locket with misty swirling surface. Immune Silence",
+      "new_description": "Mysterious locket with misty swirling surface.",
       "max_chars": 63,
       "current_chars": 11
     },
@@ -4587,7 +4587,7 @@
         "0x00E69F50"
       ],
       "id": 131,
-      "new_description": "Cloak that protects against magical attacks. MDEF+24",
+      "new_description": "Cloak that protects against magical attacks. MD+24",
       "max_chars": 63,
       "current_chars": 50
     },
@@ -4659,7 +4659,7 @@
         "0x029F23E8"
       ],
       "id": 133,
-      "new_description": "Holds the night demon Ouga and great power. S+12 I-20 W-20 C+16",
+      "new_description": "Holds the night demon Ouga and great power. S+12 I-20",
       "max_chars": 63,
       "current_chars": 39
     },
@@ -4988,7 +4988,7 @@
         "0x00F2016C"
       ],
       "id": 143,
-      "new_description": "A long staff with an axehead on one end. Critical +4%",
+      "new_description": "A long staff with an axehead on one end. Crit +4%",
       "max_chars": 63,
       "current_chars": 12
     },
@@ -5064,7 +5064,7 @@
         "0x013BCE3C"
       ],
       "id": 145,
-      "new_description": "Masterwork, 1st class protection. Critical +5%. MDEF+24",
+      "new_description": "Masterwork, 1st class protection. Crit +5%. MD+24",
       "max_chars": 63,
       "current_chars": 19
     },
@@ -5547,7 +5547,7 @@
         "0x00F98C74"
       ],
       "id": 158,
-      "new_description": "A demonic sword which killed the god of light. Critical +5%",
+      "new_description": "A demonic sword that killed the god of light. Crit",
       "max_chars": 63,
       "current_chars": 12
     },
@@ -5588,7 +5588,7 @@
         "0x00F996F4"
       ],
       "id": 159,
-      "new_description": "Wave attack. S+20 I+40 W+30 A+15 C+25 P+35 L+1 MA+20 MD+20",
+      "new_description": "Wave attack. S+20 I+40 W+30 A+15 C+25 P+35 L+1 MA+20",
       "max_chars": 63,
       "current_chars": 58
     },
@@ -6099,7 +6099,7 @@
         "0x01F20474"
       ],
       "id": 173,
-      "new_description": "A magical rapier formed of mithril silver. POW+12",
+      "new_description": "A magical rapier formed of mithril silver. P+12",
       "max_chars": 63,
       "current_chars": 33
     },
@@ -6174,7 +6174,7 @@
         "0x02A8F3D4"
       ],
       "id": 175,
-      "new_description": "A beautifully decorated silver anklet. INT+8 WIL+8 MDEF+4",
+      "new_description": "A finely decorated silver anklet. I+8 W+8 MD+4",
       "max_chars": 63,
       "current_chars": 51
     },
@@ -6324,7 +6324,7 @@
         "0x020FA47C"
       ],
       "id": 179,
-      "new_description": "One of the four capes created by a great master. Immune Poison",
+      "new_description": "One of 4 master capes. Immune Poison",
       "max_chars": 63,
       "current_chars": 10
     },
@@ -6463,7 +6463,7 @@
         "0x027227E8"
       ],
       "id": 183,
-      "new_description": "Created of the best materials by the best smiths. MAT+3",
+      "new_description": "Created of the best materials by the best smiths.",
       "max_chars": 63,
       "current_chars": 54
     },
@@ -6497,7 +6497,7 @@
         "0x012571D8"
       ],
       "id": 184,
-      "new_description": "Quartz rod which protects the soul of its wielder. MDEF+5",
+      "new_description": "Quartz rod which prot the soul of its wielder. MD+5",
       "max_chars": 63,
       "current_chars": 55
     },
@@ -6722,7 +6722,7 @@
         "0x025D404C"
       ],
       "id": 190,
-      "new_description": "Wearer is protected by the powers of the dark. POW+14",
+      "new_description": "Wearer is protected by the powers of the dark.",
       "max_chars": 63,
       "current_chars": 51
     },
@@ -6827,7 +6827,7 @@
         "0x013530D4"
       ],
       "id": 193,
-      "new_description": "Wearer is protected by the powers of light. WIL+14",
+      "new_description": "Wearer is protected by the powers of light. W+14",
       "max_chars": 63,
       "current_chars": 48
     },
@@ -6991,7 +6991,7 @@
         "0x017A049C"
       ],
       "id": 198,
-      "new_description": "Talisman that draws out one's hidden strengths. STR+32 CON+15",
+      "new_description": "Talisman that draws out one's hidden strengths.",
       "max_chars": 63,
       "current_chars": 57
     },
@@ -7027,7 +7027,7 @@
         "0x0163E08C"
       ],
       "id": 199,
-      "new_description": "Has magical powers through the runes upon it. POW+30 MAT+15",
+      "new_description": "Has magic powers through the runes upon it. P+30",
       "max_chars": 63,
       "current_chars": 56
     },
@@ -7100,7 +7100,7 @@
         "0x01C3F004"
       ],
       "id": 201,
-      "new_description": "Amplifies the power of equipped weapons. Enchant Weapon",
+      "new_description": "Amplifies the power of equipped weapons. Enchant",
       "max_chars": 63,
       "current_chars": 21
     },
@@ -7209,7 +7209,7 @@
         "0x017FFD70"
       ],
       "id": 204,
-      "new_description": "The wearer of these boots becomes tireless. Regen HP +1",
+      "new_description": "The wearer of these boots becomes tireless. Regen",
       "max_chars": 63,
       "current_chars": 11
     },
@@ -7321,7 +7321,7 @@
         "0x01800770"
       ],
       "id": 207,
-      "new_description": "A magical bow made for the king of the elves. Critical +6%",
+      "new_description": "A magic bow made for the king of the elves. Crit +6%",
       "max_chars": 63,
       "current_chars": 12
     },
@@ -7471,7 +7471,7 @@
         "0x02801468"
       ],
       "id": 211,
-      "new_description": "Df +60 / 10 MP. S+10 I-5 W-24 C+22 P+20 L-10 MDEF+38",
+      "new_description": "Df +60 / 10 MP. S+10 I-5 W-24 C+22 P+20 L-10 MD+38",
       "max_chars": 63,
       "current_chars": 50
     },
@@ -7510,7 +7510,7 @@
         "0x017A099C"
       ],
       "id": 212,
-      "new_description": "A black sword, forged by the god of darkness. At + 50 / 15 MP",
+      "new_description": "A black sword, forged by the god of darkness. At + 50",
       "max_chars": 63,
       "current_chars": 15
     },
@@ -7723,7 +7723,7 @@
         "0x0179CB1C"
       ],
       "id": 218,
-      "new_description": "A cursed rod which devours souls. Drains MP from living enemies",
+      "new_description": "A cursed rod that devours souls. Drains MP from",
       "max_chars": 63,
       "current_chars": 21
     },
@@ -7750,7 +7750,7 @@
         "0x029F37E8"
       ],
       "id": 219,
-      "new_description": "A veil which gives off a mysterious light. Fairy mag atk +50%",
+      "new_description": "A veil that gives off a mystic light. Fairy mag",
       "max_chars": 63,
       "current_chars": 18
     },
@@ -7790,7 +7790,7 @@
         "0x029F41E8"
       ],
       "id": 220,
-      "new_description": "Crown of an acient king who wielded great power. MP cost -25%",
+      "new_description": "Crown of an acient king who wielded great power. MP",
       "max_chars": 63,
       "current_chars": 12
     },
@@ -7827,7 +7827,7 @@
         "0x020FA6FC"
       ],
       "id": 221,
-      "new_description": "One of four capes by a great master. Immune Paralysis",
+      "new_description": "One of 4 master capes. Immune Paralysis",
       "max_chars": 63,
       "current_chars": 13
     },
@@ -7864,7 +7864,7 @@
         "0x020FA97C"
       ],
       "id": 222,
-      "new_description": "One of four capes by a great master. Immune Magic-Loss",
+      "new_description": "One of 4 master capes. Immune Magic-Loss",
       "max_chars": 63,
       "current_chars": 14
     },
@@ -7902,7 +7902,7 @@
         "0x02519AAC"
       ],
       "id": 223,
-      "new_description": "One of four capes by a great master. Immune Confusion",
+      "new_description": "One of 4 master capes. Immune Confusion",
       "max_chars": 63,
       "current_chars": 13
     },
@@ -8191,7 +8191,7 @@
         "0x021AE488"
       ],
       "id": 231,
-      "new_description": "Dagger stained by blood of its victims. Drains HP from living",
+      "new_description": "Dagger stained by blood of its victims. Drains HP",
       "max_chars": 63,
       "current_chars": 21
     },
@@ -8258,7 +8258,7 @@
         "0x0186EAFC"
       ],
       "id": 233,
-      "new_description": "A beautifully designed silver helmet. Immune Paralysis",
+      "new_description": "A finely designed silver helmet. Imm Paralysis",
       "max_chars": 63,
       "current_chars": 13
     },
@@ -8331,7 +8331,7 @@
         "0x0186F9FC"
       ],
       "id": 235,
-      "new_description": "Rod by goddess Ishtar. Undead, At +40. MAT+15 MDEF+13",
+      "new_description": "Rod by goddess Ishtar. Undead, At +40. MA+15",
       "max_chars": 63,
       "current_chars": 27
     },
@@ -8373,7 +8373,7 @@
         "0x02795008"
       ],
       "id": 236,
-      "new_description": "Engraved devil's prayer gives unholy power. LUK+14",
+      "new_description": "Engraved devil's prayer gives unholy power. L+14",
       "max_chars": 63,
       "current_chars": 48
     },
@@ -8476,7 +8476,7 @@
         "0x018D0AC4"
       ],
       "id": 239,
-      "new_description": "A cursed arrow made by the demon Larie. 15% petrify / 12 MP",
+      "new_description": "A cursed arrow made by the demon Larie. 15%",
       "max_chars": 63,
       "current_chars": 19
     },
@@ -8811,7 +8811,7 @@
         "0x01F21874"
       ],
       "id": 248,
-      "new_description": "Beautiful scarf made from the finest materials. MDEF+3",
+      "new_description": "Beautiful scarf made from the finest materials. MD+3",
       "max_chars": 63,
       "current_chars": 52
     },
@@ -8942,7 +8942,7 @@
         "0x01AE8048"
       ],
       "id": 252,
-      "new_description": "A rapier which poisons anyone it wounds. 10% poison enemy",
+      "new_description": "A rapier that poisons anyone it wounds. 10%",
       "max_chars": 63,
       "current_chars": 16
     },
@@ -9025,7 +9025,7 @@
         "0x01C3ED84"
       ],
       "id": 255,
-      "new_description": "Wearer is blessed with holy power. S+4 I+4 W+4 A+4 C+4 P+4 L+4",
+      "new_description": "Wearer is blessed with holy power. S+4 I+4 W+4",
       "max_chars": 63,
       "current_chars": 62
     },
@@ -9137,7 +9137,7 @@
         "0x023097C4"
       ],
       "id": 258,
-      "new_description": "Red from the blood of those it killed. Drains HP from living",
+      "new_description": "Red from the blood of those it killed. Drains HP",
       "max_chars": 63,
       "current_chars": 21
     },
@@ -9249,7 +9249,7 @@
         "0x01B4BD60"
       ],
       "id": 261,
-      "new_description": "Carries a protective charm against demons. WIL+15 MDEF+12",
+      "new_description": "Carries a protective charm vs demons. W+15 MD+12",
       "max_chars": 63,
       "current_chars": 53
     },
@@ -9394,7 +9394,7 @@
         "0x01D91D48"
       ],
       "id": 265,
-      "new_description": "Created through a pact with the demons. POW+25 MDEF+40",
+      "new_description": "Created through a pact with the demons. P+25 MDEF+40",
       "max_chars": 63,
       "current_chars": 57
     },
@@ -9518,7 +9518,7 @@
         "0x01F1F2F4"
       ],
       "id": 269,
-      "new_description": "Ring set with a beautiful gem said to bring luck. LUK+20",
+      "new_description": "Ring set with a fine gem said to bring luck. L+20",
       "max_chars": 63,
       "current_chars": 54
     },
@@ -9594,7 +9594,7 @@
         "0x01C3E884"
       ],
       "id": 271,
-      "new_description": "A robe which emits a divine aura. LUK+8 MAT+20 MDEF+36",
+      "new_description": "A robe which emits a divine aura. L+8 MAT+20 MDEF+36",
       "max_chars": 63,
       "current_chars": 49
     },
@@ -10117,7 +10117,7 @@
         "0x0230BDC4"
       ],
       "id": 285,
-      "new_description": "A rather ugly brooch adorned with large jewels. LUK+8",
+      "new_description": "A rather ugly brooch adorned with large jewels.",
       "max_chars": 63,
       "current_chars": 51
     },
@@ -10226,7 +10226,7 @@
         "0x01FB82CC"
       ],
       "id": 288,
-      "new_description": "Favored wand of the master sorce. S+2 I+5 W+3 A+4 C+1 P+12 MA+8",
+      "new_description": "Favored wand of the master sorce. S+2 I+5 W+3 A+4",
       "max_chars": 63,
       "current_chars": 63
     },
@@ -10593,7 +10593,7 @@
         "0x02BB3A9C"
       ],
       "id": 298,
-      "new_description": "Cursed robe of the devil and his helpers. POW+30 LUK+14 MDEF+51",
+      "new_description": "Cursed robe of the devil and his helpers. P+30",
       "max_chars": 63,
       "current_chars": 59
     },
@@ -10653,7 +10653,7 @@
         "0x025923C4"
       ],
       "id": 300,
-      "new_description": "Anklet with beautiful decorative feathers. AGL+16 MDEF+4",
+      "new_description": "Anklet with fine decorative feathers. A+16 MD+4",
       "max_chars": 63,
       "current_chars": 52
     },
@@ -10949,7 +10949,7 @@
         "0x028519E4"
       ],
       "id": 308,
-      "new_description": "A rod of starstone which burns with eternal light. MAT+20",
+      "new_description": "A rod of starstone that burns with eternal light.",
       "max_chars": 63,
       "current_chars": 56
     },
@@ -11101,7 +11101,7 @@
         "0x02B40720"
       ],
       "id": 312,
-      "new_description": "Legendary armor. Given to a hero by the g. S+32 C+48 L+16 MD+80",
+      "new_description": "Legendary armor. Given to a hero by the g. S+32",
       "max_chars": 63,
       "current_chars": 63
     },
@@ -11213,7 +11213,7 @@
         "0x02BD3524"
       ],
       "id": 315,
-      "new_description": "Cursed robe. S-16 I+16 W+16 A-16 C-16 P+16 L-16 MD+40",
+      "new_description": "Cursed robe. S-16 I+16 W+16 A-16 C-16 P+16 L-16",
       "max_chars": 63,
       "current_chars": 53
     },
@@ -11665,7 +11665,7 @@
       "id": 329,
       "max_chars": 63,
       "current_chars": 56,
-      "new_description": "Made by warriors, increases magical power. MAT+5 MDEF+18"
+      "new_description": "Made by warriors, + magic power. MA+5 MD+18"
     },
     {
       "name": "Half-moon Axe",
@@ -11696,7 +11696,7 @@
       "id": 330,
       "max_chars": 63,
       "current_chars": 50,
-      "new_description": "Increases the power of the wielder's magic. POW+20"
+      "new_description": "Increases the power of the wielder's magic. P+20"
     },
     {
       "name": "Healing Perfume",
@@ -12183,7 +12183,7 @@
       "id": 345,
       "max_chars": 63,
       "current_chars": 62,
-      "new_description": "Amplifies its wearer’s magical power. I+5 W+22 P+4 MA+40 MD+21"
+      "new_description": "Amplifies its wearer’s magic power. I+5 W+22"
     },
     {
       "name": "Robe of the Elders",
@@ -12222,7 +12222,7 @@
       "id": 346,
       "max_chars": 63,
       "current_chars": 60,
-      "new_description": "Elders' protective robe. INT+15 AGL+12 POW+22 MAT+39 MDEF+60"
+      "new_description": "Elders' protective robe. I+15 A+12 P+22"
     },
     {
       "name": "Robe of the Sages",
@@ -12482,7 +12482,7 @@
       "id": 354,
       "max_chars": 63,
       "current_chars": 47,
-      "new_description": "Talisman that amplifies the dark powers. POW+30"
+      "new_description": "Talisman that amplifies the dark powers."
     },
     {
       "name": "Technique Book",
@@ -13235,7 +13235,7 @@
         "0x02397081"
       ],
       "id": 377,
-      "new_description": "Cast time -25% & MP regen +4. INT+8 WIL+8 POW+8",
+      "new_description": "Cast time -25% & MP regen +4. I+8 W+8 POW+8",
       "max_chars": 63,
       "current_chars": 41
     },
@@ -13585,7 +13585,7 @@
         "0x02720268"
       ],
       "id": 387,
-      "new_description": "A magnificent cloak adorned with feathers. MDEF+12",
+      "new_description": "A magnificent cloak adorned with feathers. MD+12",
       "max_chars": 63,
       "current_chars": 42,
       "note": "English equivalent of Feather Mantle (Federmantel in German)"
