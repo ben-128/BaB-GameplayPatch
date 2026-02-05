@@ -435,13 +435,18 @@ Cette analyse est fournie "as-is" à des fins de recherche et de préservation d
 
 
 
+
+
+
+
 ## Last Patch Build
 
-**Date:** 2026-02-05 14:03:00
+**Date:** 2026-02-05 15:00:49
 
 **Patches Applied:**
 - Fate Coin Shop prices adjusted
 - Items descriptions updated (376 items)
+- Auction base prices set to 0
 - Monster stats balanced
 - BLAZE.ALL integrated
 

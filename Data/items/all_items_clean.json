@@ -148,7 +148,36 @@
         "0x006D2F80",
         "0x006D4D00",
         "0x009EB814",
-        "0x00B64768"
+        "0x00B64768",
+        "0x00BDF078",
+        "0x00C3E360",
+        "0x00CBA1B8",
+        "0x00D8A350",
+        "0x00E09B78",
+        "0x00E6ABD0",
+        "0x00ECCE54",
+        "0x0103082C",
+        "0x010A083C",
+        "0x011095D8",
+        "0x01178AD0",
+        "0x011E9174",
+        "0x01259258",
+        "0x0152F10C",
+        "0x016C2A78",
+        "0x019A064C",
+        "0x01A3AEC0",
+        "0x01A8C9D8",
+        "0x01AE8F48",
+        "0x01BB4274",
+        "0x01DFF3E0",
+        "0x01E9B748",
+        "0x01F21AF4",
+        "0x020107DC",
+        "0x02076DD0",
+        "0x02438FDC",
+        "0x024397DC",
+        "0x02439FDC",
+        "0x0251A22C"
       ],
       "id": 3
     },
@@ -226,7 +255,62 @@
         "0x00BE0BFD",
         "0x00D2C770",
         "0x00D2CC70",
-        "0x00E69558"
+        "0x00E69558",
+        "0x00F1EAF2",
+        "0x00F952FC",
+        "0x00F9877A",
+        "0x011E7AF9",
+        "0x012576DD",
+        "0x012DC57D",
+        "0x0163D694",
+        "0x0163D914",
+        "0x0163EF93",
+        "0x0179E923",
+        "0x017A22A1",
+        "0x017FF875",
+        "0x01870B82",
+        "0x01872481",
+        "0x018D2B4D",
+        "0x018D334D",
+        "0x0199F4D4",
+        "0x01AE994E",
+        "0x01BB3D7A",
+        "0x01C3E889",
+        "0x01C41A8B",
+        "0x01C9AA9E",
+        "0x01C9D01F",
+        "0x01D27D07",
+        "0x01D93DCF",
+        "0x01D945CF",
+        "0x01DFE9E8",
+        "0x01E9C64F",
+        "0x01F229FB",
+        "0x01FB8F53",
+        "0x0200DD62",
+        "0x0200E763",
+        "0x02074AD7",
+        "0x020FB602",
+        "0x020FD403",
+        "0x020FDC03",
+        "0x021B050E",
+        "0x0230B0CB",
+        "0x0230B8CB",
+        "0x023972C9",
+        "0x024367E5",
+        "0x026A12DE",
+        "0x026A1F5F",
+        "0x0279208D",
+        "0x02792310",
+        "0x0279370E",
+        "0x0279528F",
+        "0x028002EE",
+        "0x02801E6F",
+        "0x028532ED",
+        "0x028A4B01",
+        "0x02A8DADC",
+        "0x02BB3AA5",
+        "0x02BD352C",
+        "0x02BD41AA"
       ],
       "id": 5,
       "new_description": "Robe made of heavy cloth. MDEF+2",
@@ -269,7 +353,10 @@
         "0x01D25505",
         "0x02010CE3",
         "0x02074FD6",
-        "0x020772D7"
+        "0x020772D7",
+        "0x021AE48E",
+        "0x0259084B",
+        "0x02908AE9"
       ],
       "id": 6,
       "new_description": "A normal, easily-to-use dagger.",
@@ -448,7 +535,30 @@
         "0x00BE1AFE",
         "0x00C3D466",
         "0x00E0877E",
-        "0x00F96979"
+        "0x00F96979",
+        "0x01176F56",
+        "0x012571E0",
+        "0x014BA8CE",
+        "0x01640392",
+        "0x0172E7E5",
+        "0x0179CB24",
+        "0x0179F321",
+        "0x018D0FCA",
+        "0x018D264F",
+        "0x01B4BFE6",
+        "0x01D929D1",
+        "0x01FB87D2",
+        "0x021AF390",
+        "0x026A3D5C",
+        "0x026A455C",
+        "0x02796E0C",
+        "0x0279760C",
+        "0x028039EC",
+        "0x028519E9",
+        "0x028A897C",
+        "0x028A917C",
+        "0x029067E8",
+        "0x029099EA"
       ],
       "id": 11,
       "new_description": "A small rod, favored by fairies.",
@@ -491,8 +601,8 @@
     },
     {
       "name": "Lightbolt",
-      "offset": "0x00908F58",
-      "offset_decimal": 9473880,
+      "offset": "0x00F961F4",
+      "offset_decimal": 16343540,
       "category": "Bows (hunter)",
       "description": "",
       "stats": {
@@ -523,7 +633,6 @@
       },
       "occurrences_count": 3,
       "all_offsets": [
-        "0x00908F58",
         "0x00F961F4",
         "0x0172B860"
       ],
@@ -534,8 +643,8 @@
     },
     {
       "name": "Thunderbolt",
-      "offset": "0x00909258",
-      "offset_decimal": 9474648,
+      "offset": "0x0172BFE0",
+      "offset_decimal": 24297440,
       "category": "Rapiers (elf)",
       "description": "",
       "stats": {
@@ -564,7 +673,6 @@
       },
       "occurrences_count": 3,
       "all_offsets": [
-        "0x00909258",
         "0x0172BFE0",
         "0x02232048"
       ],
@@ -575,8 +683,8 @@
     },
     {
       "name": "Lavender",
-      "offset": "0x00909C18",
-      "offset_decimal": 9477144,
+      "offset": "0x00A38EC4",
+      "offset_decimal": 10718916,
       "category": "Herbs",
       "description": "",
       "stats": {
@@ -593,8 +701,6 @@
       "attributes": {},
       "occurrences_count": 21,
       "all_offsets": [
-        "0x00909C18",
-        "0x0090B864",
         "0x00A38EC4",
         "0x00B658E8",
         "0x00BE10F8",
@@ -602,7 +708,18 @@
         "0x010321AC",
         "0x010A23BC",
         "0x010A2BBC",
-        "0x01108958"
+        "0x01108958",
+        "0x011762D0",
+        "0x014B8AC8",
+        "0x0152D58C",
+        "0x016C0C78",
+        "0x02233E48",
+        "0x022AA85C",
+        "0x024BE820",
+        "0x02721B68",
+        "0x028A7578",
+        "0x029739DC",
+        "0x02A8E9D4"
       ],
       "id": 15,
       "new_description": "",
@@ -611,8 +728,8 @@
     },
     {
       "name": "Sage",
-      "offset": "0x00909C48",
-      "offset_decimal": 9477192,
+      "offset": "0x00A39144",
+      "offset_decimal": 10719556,
       "category": "Herbs",
       "description": "",
       "stats": {
@@ -642,8 +759,6 @@
       },
       "occurrences_count": 17,
       "all_offsets": [
-        "0x00909C48",
-        "0x0090B870",
         "0x00A39144",
         "0x00B667E8",
         "0x00BE1D78",
@@ -651,7 +766,14 @@
         "0x01108BD8",
         "0x011771D0",
         "0x014B9C48",
-        "0x0152E48C"
+        "0x0152E48C",
+        "0x016C1DF8",
+        "0x0172E560",
+        "0x0179F09C",
+        "0x022340C8",
+        "0x022AAADC",
+        "0x024BEAA0",
+        "0x02722A68"
       ],
       "id": 16,
       "new_description": "STR+24 INT+32 WIL+32 AGL+24 CON+24 POW+32 LUK+32 MDEF+97",
@@ -660,8 +782,8 @@
     },
     {
       "name": "Hyssop",
-      "offset": "0x00909D08",
-      "offset_decimal": 9477384,
+      "offset": "0x00A39B44",
+      "offset_decimal": 10722116,
       "category": "Herbs",
       "description": "",
       "stats": {
@@ -677,8 +799,6 @@
       "attributes": {},
       "occurrences_count": 7,
       "all_offsets": [
-        "0x00909D08",
-        "0x0090B898",
         "0x00A39B44",
         "0x00A3A344",
         "0x012DF9F8",
@@ -692,8 +812,8 @@
     },
     {
       "name": "Fennel",
-      "offset": "0x0090B890",
-      "offset_decimal": 9484432,
+      "offset": "0x00A398C4",
+      "offset_decimal": 10721476,
       "category": "Herbs",
       "description": "",
       "stats": {
@@ -709,7 +829,6 @@
       "attributes": {},
       "occurrences_count": 18,
       "all_offsets": [
-        "0x0090B890",
         "0x00A398C4",
         "0x00A3A0C4",
         "0x00B66F68",
@@ -718,7 +837,15 @@
         "0x00C3DE60",
         "0x01177950",
         "0x012DF778",
-        "0x01353854"
+        "0x01353854",
+        "0x014BA3C8",
+        "0x0152EC0C",
+        "0x016C2578",
+        "0x026A1058",
+        "0x027231E8",
+        "0x02793488",
+        "0x02800068",
+        "0x02A8FB54"
       ],
       "id": 18,
       "new_description": "",
@@ -727,8 +854,8 @@
     },
     {
       "name": "Belladonna",
-      "offset": "0x0090B8A0",
-      "offset_decimal": 9484448,
+      "offset": "0x00A39DC4",
+      "offset_decimal": 10722756,
       "category": "Herbs",
       "description": "",
       "stats": {
@@ -741,7 +868,6 @@
       "attributes": {},
       "occurrences_count": 11,
       "all_offsets": [
-        "0x0090B8A0",
         "0x00A39DC4",
         "0x00A3A5C4",
         "0x012DFC78",
@@ -750,7 +876,8 @@
         "0x026A3858",
         "0x02796908",
         "0x028034E8",
-        "0x028A8478"
+        "0x028A8478",
+        "0x029062E4"
       ],
       "id": 19,
       "new_description": "",
@@ -811,7 +938,8 @@
         "0x013BAD3C",
         "0x01433818",
         "0x017FD2F0",
-        "0x01C97B18"
+        "0x01C97B18",
+        "0x028A7078"
       ],
       "id": 21,
       "new_description": "Magic crystal earth.(Earth attr. to weapon)",
@@ -843,7 +971,8 @@
         "0x01C97D98",
         "0x028A7A78",
         "0x02972D5C",
-        "0x02A8EED4"
+        "0x02A8EED4",
+        "0x02B3F020"
       ],
       "id": 22,
       "new_description": "Magic crystal fire.(Fire attr. to weapon)",
@@ -907,7 +1036,8 @@
         "0x017FDCF0",
         "0x01C98518",
         "0x01D28E80",
-        "0x01D29680"
+        "0x01D29680",
+        "0x02975A5C"
       ],
       "id": 24,
       "new_description": "Magic crystal light.(Light attr. to weapon)",
@@ -966,7 +1096,16 @@
         "0x00F1FEEC",
         "0x017FE1F0",
         "0x01C98A18",
-        "0x01D938C8"
+        "0x01D938C8",
+        "0x026A17D8",
+        "0x02793C08",
+        "0x028007E8",
+        "0x02853A64",
+        "0x028A63F8",
+        "0x0297505C",
+        "0x029F3068",
+        "0x02B7EF9C",
+        "0x02B7F79C"
       ],
       "id": 26,
       "new_description": "Crystalized evil.(Evil attribute to weapon)",
@@ -998,7 +1137,19 @@
         "0x016C4678",
         "0x0172D8E0",
         "0x017A111C",
-        "0x017FD070"
+        "0x017FD070",
+        "0x0186FC7C",
+        "0x01C97898",
+        "0x01F21374",
+        "0x020FC9FC",
+        "0x021B1188",
+        "0x022345C8",
+        "0x02234DC8",
+        "0x022AAFDC",
+        "0x024371DC",
+        "0x024BEFA0",
+        "0x024FFF94",
+        "0x02500794"
       ],
       "id": 27,
       "new_description": "Crystal of solid magic.(Strengthens weapon)",
@@ -1233,7 +1384,15 @@
         "0x00BE367C",
         "0x00BE3BFD",
         "0x00BE3E7C",
-        "0x00C3F260"
+        "0x00C3F260",
+        "0x00C3F4E5",
+        "0x00C3F764",
+        "0x00C3FA60",
+        "0x00C3FCE5",
+        "0x00C3FF64",
+        "0x018D19C8",
+        "0x02592B48",
+        "0x02593348"
       ],
       "id": 33,
       "new_description": "",
@@ -1296,7 +1455,9 @@
         "0x01BB1F74",
         "0x01D24880",
         "0x024FFD14",
-        "0x02500514"
+        "0x02500514",
+        "0x028528E4",
+        "0x028A4FF8"
       ],
       "id": 35,
       "new_description": "Legendary medicine.(Completely restores MP and HP)",
@@ -1326,9 +1487,14 @@
         "0x012580D8",
         "0x012DFEF8",
         "0x01353FD4",
-        "0x013547D4",
         "0x0163D40C",
-        "0x016C0278"
+        "0x016C0278",
+        "0x01BB30F4",
+        "0x01C42984",
+        "0x01C9A598",
+        "0x01D27080",
+        "0x02852164",
+        "0x028A5278"
       ],
       "id": 36,
       "new_description": "Nectar of the \"Changing Flower\".(Resurrection)",
@@ -1871,7 +2037,22 @@
         "0x011E52F9",
         "0x011E84F4",
         "0x011E8EFC",
-        "0x011E96FC"
+        "0x011E96FC",
+        "0x012DCF78",
+        "0x012DD980",
+        "0x012DE0FF",
+        "0x013526DB",
+        "0x0152BC91",
+        "0x0152C413",
+        "0x016C2CF8",
+        "0x016C3480",
+        "0x01AE804F",
+        "0x01F2047C",
+        "0x021AE70E",
+        "0x023981C5",
+        "0x025D4A53",
+        "0x0279460E",
+        "0x028011EE"
       ],
       "id": 51,
       "new_description": "",
@@ -2070,7 +2251,9 @@
         "0x019A08CC",
         "0x01A3B140",
         "0x01A8CC58",
-        "0x01DFF660"
+        "0x01DFF660",
+        "0x01E9B9C8",
+        "0x01F21D74"
       ],
       "id": 56,
       "new_description": "MP regen +2",
@@ -2102,7 +2285,8 @@
         "0x02797088",
         "0x02803C68",
         "0x028A8E78",
-        "0x028A9678"
+        "0x028A9678",
+        "0x02906CE4"
       ],
       "id": 57,
       "new_description": "Created by fairies.(Activates Invincible)",
@@ -2166,7 +2350,8 @@
         "0x02797388",
         "0x02803768",
         "0x02803F68",
-        "0x028A86F8"
+        "0x028A86F8",
+        "0x02906564"
       ],
       "id": 59,
       "new_description": "Made from fairy wings.(Activates Anti-Circle)",
@@ -2198,7 +2383,11 @@
         "0x01D28C00",
         "0x01DFFDE0",
         "0x01F210F4",
-        "0x01FB91CC"
+        "0x01FB91CC",
+        "0x0200E9DC",
+        "0x02075C50",
+        "0x02437BDC",
+        "0x0271F868"
       ],
       "id": 60,
       "new_description": "Enchanted medicine.(Restores MP)",
@@ -2313,7 +2502,44 @@
         "0x011E89F4",
         "0x012DD478",
         "0x013517D4",
-        "0x013BC13C"
+        "0x013BC13C",
+        "0x014B8FC8",
+        "0x0152D30C",
+        "0x015ACFA0",
+        "0x0163ED0C",
+        "0x016C1178",
+        "0x0179E69C",
+        "0x0187017C",
+        "0x018D1744",
+        "0x0199FECC",
+        "0x01A3A740",
+        "0x01A8CED8",
+        "0x01AEA348",
+        "0x01AEAB48",
+        "0x01B4EF60",
+        "0x01B4F760",
+        "0x01BB49F4",
+        "0x01C40684",
+        "0x01C9B498",
+        "0x01D25A00",
+        "0x01D92EC8",
+        "0x01DFF8E0",
+        "0x01E9BC48",
+        "0x01F21FF4",
+        "0x01FB944C",
+        "0x0200EC5C",
+        "0x02075ED0",
+        "0x021B0788",
+        "0x022AD55C",
+        "0x02309044",
+        "0x025D454C",
+        "0x026A3FD8",
+        "0x0271FAE8",
+        "0x02794108",
+        "0x02800CE8",
+        "0x028A8BF8",
+        "0x028A93F8",
+        "0x02906A64"
       ],
       "id": 64,
       "new_description": "It shows the Goddess of luck.(Changes Luck)",
@@ -2409,7 +2635,12 @@
         "0x016C27F8",
         "0x0199F24C",
         "0x01BB21F4",
-        "0x01C9A318"
+        "0x01C9A318",
+        "0x01D24B00",
+        "0x01DFD860",
+        "0x020F9A7C",
+        "0x02723468",
+        "0x028A4D78"
       ],
       "id": 67,
       "new_description": "Holds life energy.(Full restoration of HP)",
@@ -2859,7 +3090,33 @@
         "0x01109360",
         "0x013BAFC4",
         "0x0152A894",
-        "0x0163FC12"
+        "0x0163FC12",
+        "0x0179DF24",
+        "0x01800276",
+        "0x01BB4EFD",
+        "0x01BB56FD",
+        "0x01C40B8D",
+        "0x01C9B9A1",
+        "0x01D25F09",
+        "0x01E00568",
+        "0x01FB9BD4",
+        "0x0200F3E4",
+        "0x02076658",
+        "0x020FAE85",
+        "0x021AFD91",
+        "0x02397CC8",
+        "0x0251AEB4",
+        "0x0251B6B4",
+        "0x025919CC",
+        "0x025D4F54",
+        "0x025D6854",
+        "0x02663CBC",
+        "0x026A2960",
+        "0x02720270",
+        "0x02720C70",
+        "0x02795A10",
+        "0x028025F0",
+        "0x029F1770"
       ],
       "id": 81,
       "new_description": "A cloak made of thick cloth. MDEF+2",
@@ -2949,7 +3206,16 @@
         "0x019A0DCC",
         "0x019A15CC",
         "0x01A3B640",
-        "0x01A3BE40"
+        "0x01A3BE40",
+        "0x01A8D3D8",
+        "0x01B4D8E0",
+        "0x01BB4774",
+        "0x01C40404",
+        "0x01C9B218",
+        "0x01D25780",
+        "0x028A59F8",
+        "0x0297465C",
+        "0x029F2668"
       ],
       "id": 84,
       "new_description": "Restores the body.(Slowly restores status)",
@@ -2981,7 +3247,25 @@
         "0x00ECD0D4",
         "0x00F212EC",
         "0x010A1C3C",
-        "0x014B9248"
+        "0x014B9248",
+        "0x0152DA8C",
+        "0x0163CA0C",
+        "0x016C13F8",
+        "0x017A1B1C",
+        "0x017FF0F0",
+        "0x01871CFC",
+        "0x01A39840",
+        "0x01AE91C8",
+        "0x01BB1CF4",
+        "0x01E00CE0",
+        "0x01E014E0",
+        "0x021AF608",
+        "0x0243925C",
+        "0x0251A4AC",
+        "0x02722068",
+        "0x028A77F8",
+        "0x02973C5C",
+        "0x02A8EC54"
       ],
       "id": 85,
       "new_description": "Potion of essence of life.(Restores HP)",
@@ -3013,7 +3297,19 @@
         "0x00ECC954",
         "0x01031EAC",
         "0x010326AC",
-        "0x010A263C"
+        "0x010A263C",
+        "0x010A2E3C",
+        "0x01109AD8",
+        "0x011E93F4",
+        "0x01258AD8",
+        "0x01C99418",
+        "0x01D29380",
+        "0x01E00F60",
+        "0x01E01760",
+        "0x0200FB5C",
+        "0x02077550",
+        "0x024394DC",
+        "0x0251982C"
       ],
       "id": 86,
       "new_description": "Extract of blood.(Restores HP to maximum)",
@@ -3210,7 +3506,11 @@
         "0x01B4F4E0",
         "0x01E9CB48",
         "0x01E9D348",
-        "0x01F22EF4"
+        "0x01F22EF4",
+        "0x01F236F4",
+        "0x01FBA5CC",
+        "0x01FBADCC",
+        "0x0201005C"
       ],
       "id": 92,
       "new_description": "Defense dagger for use with the left hand.",
@@ -3242,7 +3542,13 @@
         "0x01E9C3C8",
         "0x01F22774",
         "0x01FB8CCC",
-        "0x0200E4DC"
+        "0x0200E4DC",
+        "0x020FBFFC",
+        "0x021B1B88",
+        "0x021B2388",
+        "0x022336C8",
+        "0x022AB4DC",
+        "0x02309A44"
       ],
       "id": 93,
       "new_description": "Concentrate of spirits.(Restore MP to max.)",
@@ -3798,7 +4104,6 @@
         "0x00D88F50",
         "0x021B0A08",
         "0x022AD7DC",
-        "0x022ADFDC",
         "0x023092C4"
       ],
       "id": 109,
@@ -3903,7 +4208,9 @@
         "0x01C41304",
         "0x01C9CB18",
         "0x01D27580",
-        "0x020FCC7C"
+        "0x020FCC7C",
+        "0x0230A944",
+        "0x026A2458"
       ],
       "id": 112,
       "new_description": "Enchanted with dark magic.(Activates Dark Breath)",
@@ -4681,14 +4988,24 @@
       "all_offsets": [
         "0x00E6BD50",
         "0x00ECDFD4",
-        "0x00ECE7D4",
         "0x00F21CEC",
         "0x019A12CC",
         "0x01A3BB40",
         "0x01A8D8D8",
         "0x01AEA5C8",
         "0x01AEADC8",
-        "0x01B4E060"
+        "0x01B4E060",
+        "0x01BB3874",
+        "0x01E9CDC8",
+        "0x01E9D5C8",
+        "0x01F23174",
+        "0x01FBA84C",
+        "0x020102DC",
+        "0x02792588",
+        "0x028541E4",
+        "0x028A5EF8",
+        "0x02974B5C",
+        "0x029F2B68"
       ],
       "id": 134,
       "new_description": "Supposedly from a saint's hand.(Increases STR)",
@@ -4831,7 +5148,6 @@
         "0x025D6DCC",
         "0x02663A34",
         "0x029757DC",
-        "0x02975FDC",
         "0x02B3F2A0"
       ],
       "id": 139,
@@ -6381,7 +6697,11 @@
         "0x01C9C118",
         "0x01D28200",
         "0x01D92C48",
-        "0x02234348"
+        "0x02234348",
+        "0x02234B48",
+        "0x022AAD5C",
+        "0x024BED20",
+        "0x024FF814"
       ],
       "id": 181,
       "new_description": "Resurrects the dead.(Resurrect 33% dest.)",
@@ -8370,7 +8690,8 @@
         "0x022AB9DC",
         "0x02309F44",
         "0x026A1CD8",
-        "0x02795008"
+        "0x02795008",
+        "0x02801BE8"
       ],
       "id": 236,
       "new_description": "Devil prayer, unholy power. LUK+14",
@@ -8902,7 +9223,6 @@
       "occurrences_count": 3,
       "all_offsets": [
         "0x01A8E7D8",
-        "0x01A8EFD8",
         "0x01B4D660"
       ],
       "id": 251,
@@ -9674,7 +9994,13 @@
         "0x01F229F4",
         "0x01FB8F4C",
         "0x0200E75C",
-        "0x020FD3FC"
+        "0x020FD3FC",
+        "0x020FDBFC",
+        "0x0230B0C4",
+        "0x0230B8C4",
+        "0x026A1F58",
+        "0x02795288",
+        "0x02801E68"
       ],
       "id": 273,
       "new_description": "33% block magic. WIL+12 POW+42 LUK+24 MDEF+42",
@@ -9718,7 +10044,8 @@
         "0x0230B344",
         "0x0230BB44",
         "0x026A21D8",
-        "0x02795508"
+        "0x02795508",
+        "0x028020E8"
       ],
       "id": 274,
       "new_description": "10% MP recovery from dark/evil dmg. POW+8",
@@ -11219,7 +11546,7 @@
     },
     {
       "name": "Almander",
-      "offset": "0xa7f771",
+      "offset": "0x00A7F771",
       "offset_decimal": 11007857,
       "category": "Clothings",
       "description": "Magical book containing knowledge about demons.",
@@ -11241,16 +11568,17 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0xa7f771"
+        "0x00A7F771"
       ],
       "id": 316,
       "max_chars": 63,
       "current_chars": 32,
-      "new_description": "Demon knowledge book. INT+40 MAT+22"
+      "new_description": "Demon knowledge book. INT+40 MAT+22",
+      "storage_format": "direct_text"
     },
     {
       "name": "Anti-magic Armor",
-      "offset": "0xa7e871",
+      "offset": "0x00A7E871",
       "offset_decimal": 11004017,
       "category": "Armors (warrior & dwarf)",
       "description": "Created by the 12 sages. Against sorcery.",
@@ -11274,16 +11602,17 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0xa7e871"
+        "0x00A7E871"
       ],
       "id": 317,
       "max_chars": 63,
       "current_chars": 32,
-      "new_description": "Df + (POW * 10%). POW+16 MDEF+52"
+      "new_description": "Df + (POW * 10%). POW+16 MDEF+52",
+      "storage_format": "direct_text"
     },
     {
       "name": "Basilisk Scales",
-      "offset": "0x13ba87d",
+      "offset": "0x013BA87D",
       "offset_decimal": 20686973,
       "category": "Clothings",
       "description": "Protect against being turned to stone.",
@@ -11307,16 +11636,20 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x13ba87d"
+        "0x013BA87D",
+        "0x01433FD9",
+        "0x014347D9",
+        "0x028A6BB9"
       ],
       "id": 318,
       "max_chars": 63,
       "current_chars": 14,
-      "new_description": "Immune Petrify"
+      "new_description": "Immune Petrify",
+      "storage_format": "direct_text"
     },
     {
       "name": "Berserker Bones",
-      "offset": "0xd2f4a9",
+      "offset": "0x00D2F4A9",
       "offset_decimal": 13825193,
       "category": "Clothings",
       "description": "Skullbone of a fallen-mad warrior.",
@@ -11342,16 +11675,28 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0xd2f4a9"
+        "0x00D2F4A9",
+        "0x00E09939",
+        "0x00E6A991",
+        "0x00ECCC15",
+        "0x0172DE21",
+        "0x01872C3D",
+        "0x0187343D",
+        "0x01B4C7A1",
+        "0x02075A11",
+        "0x028A5CB9",
+        "0x0297491D",
+        "0x029F2929"
       ],
       "id": 319,
       "max_chars": 63,
       "current_chars": 38,
-      "new_description": "Critical +2%, Berserk when critical HP"
+      "new_description": "Critical +2%, Berserk when critical HP",
+      "storage_format": "direct_text"
     },
     {
       "name": "Berserker Drug",
-      "offset": "0x110a019",
+      "offset": "0x0110A019",
       "offset_decimal": 17866777,
       "category": "Items",
       "description": "Dispels all fears. (Temporary Berserk)",
@@ -11375,16 +11720,25 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x110a019"
+        "0x0110A019",
+        "0x011E82B5",
+        "0x01259019",
+        "0x01C43145",
+        "0x01C43945",
+        "0x01C9C3D9",
+        "0x01D284C1",
+        "0x01D93189",
+        "0x02074D91"
       ],
       "id": 320,
       "max_chars": 63,
       "current_chars": 38,
-      "new_description": "Dispels all fears. (Temporary Berserk)"
+      "new_description": "Dispels all fears. (Temporary Berserk)",
+      "storage_format": "direct_text"
     },
     {
       "name": "Chainmail Shirt",
-      "offset": "0xb660a9",
+      "offset": "0x00B660A9",
       "offset_decimal": 11952297,
       "category": "Armors (warrior & dwarf)",
       "description": "A shirt made of steel chainmail.",
@@ -11406,16 +11760,19 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0xb660a9"
+        "0x00B660A9",
+        "0x00BE18B9",
+        "0x01107599"
       ],
       "id": 321,
       "max_chars": 63,
       "current_chars": 32,
-      "new_description": "A shirt made of steel chainmail."
+      "new_description": "A shirt made of steel chainmail.",
+      "storage_format": "direct_text"
     },
     {
       "name": "Crystal Earrings",
-      "offset": "0xd88811",
+      "offset": "0x00D88811",
       "offset_decimal": 14190609,
       "category": "Clothings",
       "description": "Said to strengthen mind and spirit.",
@@ -11437,16 +11794,17 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0xd88811"
+        "0x00D88811"
       ],
       "id": 322,
       "max_chars": 63,
       "current_chars": 24,
-      "new_description": "Strengthens mind. WIL+20"
+      "new_description": "Strengthens mind. WIL+20",
+      "storage_format": "direct_text"
     },
     {
       "name": "Dominion Feather",
-      "offset": "0xaace51",
+      "offset": "0x00AACE51",
       "offset_decimal": 11193937,
       "category": "Clothings",
       "description": "Beautiful feather with hidden holy power.",
@@ -11470,16 +11828,22 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0xaace51"
+        "0x00AACE51",
+        "0x018D0885",
+        "0x01C401C5",
+        "0x01C9A859",
+        "0x029F12A9",
+        "0x02BD3065"
       ],
       "id": 323,
       "max_chars": 63,
       "current_chars": 37,
-      "new_description": "Auto resurrect full HP&MP (50% break)"
+      "new_description": "Auto resurrect full HP&MP (50% break)",
+      "storage_format": "direct_text"
     },
     {
       "name": "Elemental Shield",
-      "offset": "0xaaeed1",
+      "offset": "0x00AAEED1",
       "offset_decimal": 11202257,
       "category": "Light Armors (hunter, elf & rogue)",
       "description": "Magically made by the greatest sorcerers.",
@@ -11503,16 +11867,22 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0xaaeed1"
+        "0x00AAEED1",
+        "0x025D6B0D",
+        "0x02663F75",
+        "0x029097A5",
+        "0x02909FA5",
+        "0x02B3F561"
       ],
       "id": 324,
       "max_chars": 63,
       "current_chars": 35,
-      "new_description": "Fire/Water/Wind/Earth dmg decreases"
+      "new_description": "Fire/Water/Wind/Earth dmg decreases",
+      "storage_format": "direct_text"
     },
     {
       "name": "Fata Morgana Armor",
-      "offset": "0xaad0d1",
+      "offset": "0x00AAD0D1",
       "offset_decimal": 11194577,
       "category": "Armors (warrior & dwarf)",
       "description": "Imbued with illusionary magic.",
@@ -11534,12 +11904,15 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0xaad0d1"
+        "0x00AAD0D1",
+        "0x00E69091",
+        "0x0163C04D"
       ],
       "id": 325,
       "max_chars": 63,
       "current_chars": 38,
-      "new_description": "Imbued with illusionary magic. MDEF+22"
+      "new_description": "Imbued with illusionary magic. MDEF+22",
+      "storage_format": "direct_text"
     },
     {
       "name": "Flail",
@@ -11572,7 +11945,7 @@
     },
     {
       "name": "Gauntlets of Strength",
-      "offset": "0x172c2a1",
+      "offset": "0x0172C2A1",
       "offset_decimal": 24298145,
       "category": "Clothings",
       "description": "Enchanted to increase strength.",
@@ -11594,17 +11967,21 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x172c2a1"
+        "0x0172C2A1",
+        "0x027943C9",
+        "0x02800FA9",
+        "0x02BB385D"
       ],
       "id": 327,
       "max_chars": 63,
       "current_chars": 23,
-      "new_description": "Strength enchant. STR+8"
+      "new_description": "Strength enchant. STR+8",
+      "storage_format": "direct_text"
     },
     {
       "name": "Gray Arch",
-      "offset": "0x24bf720",
-      "offset_decimal": 38535009,
+      "offset": "0x024BF720",
+      "offset_decimal": 38532896,
       "category": "Clothings",
       "description": "",
       "stats": {},
@@ -11627,7 +12004,6 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x024BFF61",
         "0x024BF720",
         "0x024BFF20"
       ],
@@ -11638,7 +12014,7 @@
     },
     {
       "name": "Guardian Shield",
-      "offset": "0x243771d",
+      "offset": "0x0243771D",
       "offset_decimal": 37975837,
       "category": "Shields (warrior & dwarf)",
       "description": "Mabe by warriors, increases magical power.",
@@ -11660,16 +12036,18 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x243771d"
+        "0x0243771D",
+        "0x02852BA5"
       ],
       "id": 329,
       "max_chars": 63,
       "current_chars": 56,
-      "new_description": "Warrior shield. MAT+5 MDEF+18"
+      "new_description": "Warrior shield. MAT+5 MDEF+18",
+      "storage_format": "direct_text"
     },
     {
       "name": "Half-moon Axe",
-      "offset": "0x199ed8d",
+      "offset": "0x0199ED8D",
       "offset_decimal": 26865037,
       "category": "Axes (dwarf)",
       "description": "Increases the power of the wielder's magic.",
@@ -11691,16 +12069,17 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x199ed8d"
+        "0x0199ED8D"
       ],
       "id": 330,
       "max_chars": 63,
       "current_chars": 50,
-      "new_description": "Boosts wielder magic power. POW+20"
+      "new_description": "Boosts wielder magic power. POW+20",
+      "storage_format": "direct_text"
     },
     {
       "name": "Healing Perfume",
-      "offset": "0x12de8b9",
+      "offset": "0x012DE8B9",
       "offset_decimal": 19785913,
       "category": "Items",
       "description": "Rousing fragrance. (Slowly restores HP)",
@@ -11726,16 +12105,22 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x12de8b9"
+        "0x012DE8B9",
+        "0x01351315",
+        "0x0152C6CD",
+        "0x016BFB39",
+        "0x01E9A889",
+        "0x020F933D"
       ],
       "id": 331,
       "max_chars": 63,
       "current_chars": 39,
-      "new_description": "Rousing fragrance. (Slowly restores HP)"
+      "new_description": "Rousing fragrance. (Slowly restores HP)",
+      "storage_format": "direct_text"
     },
     {
       "name": "Leather Buckler",
-      "offset": "0xb65e29",
+      "offset": "0x00B65E29",
       "offset_decimal": 11951657,
       "category": "Light Armors (hunter, elf & rogue)",
       "description": "Small shield which protects against demons.",
@@ -11757,16 +12142,24 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0xb65e29"
+        "0x00B65E29",
+        "0x00BE1639",
+        "0x010A1EFD",
+        "0x011E7DB5",
+        "0x014B9509",
+        "0x0152DD4D",
+        "0x016C16B9",
+        "0x02722329"
       ],
       "id": 332,
       "max_chars": 63,
       "current_chars": 43,
-      "new_description": "Small shield which protects against demons."
+      "new_description": "Small shield which protects against demons.",
+      "storage_format": "direct_text"
     },
     {
       "name": "Lightning Blade",
-      "offset": "0x1dfe521",
+      "offset": "0x01DFE521",
       "offset_decimal": 31450401,
       "category": "Swords (warrior)",
       "description": "",
@@ -11788,16 +12181,17 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x1dfe521"
+        "0x01DFE521"
       ],
       "id": 333,
       "max_chars": 63,
       "current_chars": 38,
-      "new_description": "Blade crackling with lightning energy."
+      "new_description": "Blade crackling with lightning energy.",
+      "storage_format": "direct_text"
     },
     {
       "name": "Lucky Earrings",
-      "offset": "0xecb815",
+      "offset": "0x00ECB815",
       "offset_decimal": 15513621,
       "category": "Clothings",
       "description": "Beautiful earrings which bring luck.",
@@ -11819,12 +12213,13 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0xecb815"
+        "0x00ECB815"
       ],
       "id": 334,
       "max_chars": 63,
       "current_chars": 22,
-      "new_description": "Lucky earrings. LUK+24"
+      "new_description": "Lucky earrings. LUK+24",
+      "storage_format": "direct_text"
     },
     {
       "name": "Mace",
@@ -11857,7 +12252,7 @@
     },
     {
       "name": "Magic Pentagram",
-      "offset": "0xa80171",
+      "offset": "0x00A80171",
       "offset_decimal": 11010417,
       "category": "Clothings",
       "description": "Gloves that quicken incantations of magic.",
@@ -11881,16 +12276,21 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0xa80171"
+        "0x00A80171",
+        "0x016C07B9",
+        "0x01870E3D",
+        "0x0200E01D",
+        "0x02232589"
       ],
       "id": 336,
       "max_chars": 63,
       "current_chars": 34,
-      "new_description": "Cast time -50%. INT+6 WIL+6 POW+12"
+      "new_description": "Cast time -50%. INT+6 WIL+6 POW+12",
+      "storage_format": "direct_text"
     },
     {
       "name": "Mirror of Truth",
-      "offset": "0xaad351",
+      "offset": "0x00AAD351",
       "offset_decimal": 11195217,
       "category": "Clothings",
       "description": "Mirror of truth that can reveal identities.",
@@ -11914,16 +12314,18 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0xaad351"
+        "0x00AAD351",
+        "0x00D89211"
       ],
       "id": 337,
       "max_chars": 63,
       "current_chars": 22,
-      "new_description": "Reveal enemy Name & HP"
+      "new_description": "Reveal enemy Name & HP",
+      "storage_format": "direct_text"
     },
     {
       "name": "Mysterious Clock",
-      "offset": "0xf1f02d",
+      "offset": "0x00F1F02D",
       "offset_decimal": 15855661,
       "category": "Items",
       "description": "Glowing Sandglass. (Heavy slow! 33% dest.)",
@@ -11947,16 +12349,19 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0xf1f02d"
+        "0x00F1F02D",
+        "0x020F9D3D",
+        "0x021ADD49"
       ],
       "id": 338,
       "max_chars": 63,
       "current_chars": 42,
-      "new_description": "Glowing Sandglass. (Heavy slow! 33% dest.)"
+      "new_description": "Glowing Sandglass. (Heavy slow! 33% dest.)",
+      "storage_format": "direct_text"
     },
     {
       "name": "Necklace of Wonders",
-      "offset": "0xa7fc71",
+      "offset": "0x00A7FC71",
       "offset_decimal": 11009137,
       "category": "Clothings",
       "description": "Beautiful necklace made in long ago.",
@@ -11982,16 +12387,20 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0xa7fc71"
+        "0x00A7FC71",
+        "0x00A80471",
+        "0x021AD5C9",
+        "0x02A90815"
       ],
       "id": 339,
       "max_chars": 63,
       "current_chars": 18,
-      "new_description": "Regen HP +2, MP +2"
+      "new_description": "Regen HP +2, MP +2",
+      "storage_format": "direct_text"
     },
     {
       "name": "Orb of Evil",
-      "offset": "0x1b4e5a1",
+      "offset": "0x01B4E5A1",
       "offset_decimal": 28632481,
       "category": "Jewels",
       "description": "Orb of the evil powers. (Activates Death Spell)",
@@ -12013,16 +12422,25 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x1b4e5a1"
+        "0x01B4E5A1",
+        "0x01D91B09",
+        "0x01DFDDA1",
+        "0x026A1A99",
+        "0x02793EC9",
+        "0x02800AA9",
+        "0x02853D25",
+        "0x02854525",
+        "0x02B7EADD"
       ],
       "id": 340,
       "max_chars": 63,
       "current_chars": 47,
-      "new_description": "Orb of the evil powers. (Activates Death Spell)"
+      "new_description": "Orb of the evil powers. (Activates Death Spell)",
+      "storage_format": "direct_text"
     },
     {
       "name": "Orichalca Dagger",
-      "offset": "0xd2ed29",
+      "offset": "0x00D2ED29",
       "offset_decimal": 13823273,
       "category": "Knives (rogue)",
       "description": "Golden dagger made of a fabled metal.",
@@ -12046,16 +12464,18 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0xd2ed29"
+        "0x00D2ED29",
+        "0x00F95D35"
       ],
       "id": 341,
       "max_chars": 63,
       "current_chars": 24,
-      "new_description": "At + (WIL * 25%). POW+10"
+      "new_description": "At + (WIL * 25%). POW+10",
+      "storage_format": "direct_text"
     },
     {
       "name": "Recovery Perfume",
-      "offset": "0x12de639",
+      "offset": "0x012DE639",
       "offset_decimal": 19785273,
       "category": "Items",
       "description": "Mildly scented perfume. (Slowly restores MP)",
@@ -12081,16 +12501,21 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x12de639"
+        "0x012DE639",
+        "0x01351095",
+        "0x016BF8B9",
+        "0x01E9AB09",
+        "0x020F90BD"
       ],
       "id": 342,
       "max_chars": 63,
       "current_chars": 44,
-      "new_description": "Mildly scented perfume. (Slowly restores MP)"
+      "new_description": "Mildly scented perfume. (Slowly restores MP)",
+      "storage_format": "direct_text"
     },
     {
       "name": "Reflective Shield",
-      "offset": "0x163de4d",
+      "offset": "0x0163DE4D",
       "offset_decimal": 23322189,
       "category": "Shields (warrior & dwarf)",
       "description": "Polished surface, protects against magic.",
@@ -12114,17 +12539,19 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x163de4d"
+        "0x0163DE4D",
+        "0x0243839D"
       ],
       "id": 343,
       "max_chars": 63,
       "current_chars": 24,
-      "new_description": "25% block magic. MDEF+16"
+      "new_description": "25% block magic. MDEF+16",
+      "storage_format": "direct_text"
     },
     {
       "name": "Robe of Sorcery",
-      "offset": "0xd2cca9",
-      "offset_decimal": 23320909,
+      "offset": "0x00D2CCA9",
+      "offset_decimal": 13814953,
       "category": "Robes (priest,sorcerer,& fairy)",
       "description": "Robe woven of magical energies and silk.",
       "stats": {},
@@ -12145,18 +12572,20 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
+        "0x00D2CCA9",
         "0x0163D94D",
         "0x0199F50D"
       ],
       "id": 344,
       "max_chars": 63,
       "current_chars": 38,
-      "new_description": "Magic silk robe. POW+16 MAT+15 MDEF+8"
+      "new_description": "Magic silk robe. POW+16 MAT+15 MDEF+8",
+      "storage_format": "direct_text"
     },
     {
       "name": "Robe of Spirits",
-      "offset": "0xe69591",
-      "offset_decimal": 16339765,
+      "offset": "0x00E69591",
+      "offset_decimal": 15111569,
       "category": "Robes (priest,sorcerer,& fairy)",
       "description": "Amplifies its wearer’s magical power.",
       "stats": {},
@@ -12177,18 +12606,20 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
+        "0x00E69591",
         "0x00F95335",
         "0x02A8DB15"
       ],
       "id": 345,
       "max_chars": 63,
       "current_chars": 62,
-      "new_description": "Amplifies magic. I+5 W+22 P+4 MA+40"
+      "new_description": "Amplifies magic. I+5 W+22 P+4 MA+40",
+      "storage_format": "direct_text"
     },
     {
       "name": "Robe of the Elders",
-      "offset": "0xaae4d1",
-      "offset_decimal": 15854381,
+      "offset": "0x00AAE4D1",
+      "offset_decimal": 11199697,
       "category": "Robes (priest,sorcerer,& fairy)",
       "description": "Made by the elders. Gives great protection.",
       "stats": {},
@@ -12209,6 +12640,7 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
+        "0x00AAE4D1",
         "0x00F1EB2D",
         "0x00F987B5",
         "0x01870BBD",
@@ -12222,11 +12654,12 @@
       "id": 346,
       "max_chars": 63,
       "current_chars": 60,
-      "new_description": "Elder robe. I+15 A+12 P+22 MA+39 MD+60"
+      "new_description": "Elder robe. I+15 A+12 P+22 MA+39 MD+60",
+      "storage_format": "direct_text"
     },
     {
       "name": "Robe of the Sages",
-      "offset": "0x2bd41e5",
+      "offset": "0x02BD41E5",
       "offset_decimal": 45957605,
       "category": "Robes (priest,sorcerer,& fairy)",
       "description": "It was supposedly created by the 12 Sages.",
@@ -12250,16 +12683,17 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x2bd41e5"
+        "0x02BD41E5"
       ],
       "id": 347,
       "max_chars": 63,
       "current_chars": 37,
-      "new_description": "Fi/Wa/Wi/Ea/Ev resist. All stats +24/32 MD+97"
+      "new_description": "Fi/Wa/Wi/Ea/Ev resist. All stats +24/32 MD+97",
+      "storage_format": "direct_text"
     },
     {
       "name": "Rope of Return",
-      "offset": "0xaaa8d1",
+      "offset": "0x00AAA8D1",
       "offset_decimal": 11184337,
       "category": "Items",
       "description": "Enchanted rope. (Activates Teleport)",
@@ -12281,16 +12715,23 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0xaaa8d1"
+        "0x00AAA8D1",
+        "0x01108499",
+        "0x019A108D",
+        "0x01A3B901",
+        "0x01A8D699",
+        "0x01B4DE21",
+        "0x02590D85"
       ],
       "id": 348,
       "max_chars": 63,
       "current_chars": 36,
-      "new_description": "Enchanted rope. (Activates Teleport)"
+      "new_description": "Enchanted rope. (Activates Teleport)",
+      "storage_format": "direct_text"
     },
     {
       "name": "Satan's Ring",
-      "offset": "0x18d2905",
+      "offset": "0x018D2905",
       "offset_decimal": 26028293,
       "category": "Clothings",
       "description": "Cursed ring created through a pact with Satan.",
@@ -12314,16 +12755,19 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x18d2905"
+        "0x018D2905",
+        "0x018D3105",
+        "0x02B7F4DD"
       ],
       "id": 349,
       "max_chars": 63,
       "current_chars": 35,
-      "new_description": "Regen MP +3, Curse. MAT+80 MDEF+80"
+      "new_description": "Regen MP +3, Curse. MAT+80 MDEF+80",
+      "storage_format": "direct_text"
     },
     {
       "name": "Seraphim Shield",
-      "offset": "0x2bd3f65",
+      "offset": "0x02BD3F65",
       "offset_decimal": 45956965,
       "category": "Shields (warrior & dwarf)",
       "description": "",
@@ -12347,16 +12791,18 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x2bd3f65"
+        "0x02BD3F65",
+        "0x02BD4765"
       ],
       "id": 350,
       "max_chars": 63,
       "current_chars": 32,
-      "new_description": "Regen HP & MP +1. LUK+16 MDEF+32"
+      "new_description": "Regen HP & MP +1. LUK+16 MDEF+32",
+      "storage_format": "direct_text"
     },
     {
       "name": "Shaman's Tablet",
-      "offset": "0x2397a81",
+      "offset": "0x02397A81",
       "offset_decimal": 37321345,
       "category": "Clothings",
       "description": "A stone tablet which warns of coming danger.",
@@ -12380,16 +12826,18 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x2397a81"
+        "0x02397A81",
+        "0x02436F9D"
       ],
       "id": 351,
       "max_chars": 63,
       "current_chars": 44,
-      "new_description": "Immune spirit status (Magic-Loss, Confusion)"
+      "new_description": "Immune spirit status (Magic-Loss, Confusion)",
+      "storage_format": "direct_text"
     },
     {
       "name": "Silver Gauntlets",
-      "offset": "0xbe36b9",
+      "offset": "0x00BE36B9",
       "offset_decimal": 12465849,
       "category": "Clothings",
       "description": "",
@@ -12413,16 +12861,21 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0xbe36b9"
+        "0x00BE36B9",
+        "0x00BE3EB9",
+        "0x00C3F7A1",
+        "0x00C3FFA1",
+        "0x018D1A05"
       ],
       "id": 352,
       "max_chars": 63,
       "current_chars": 21,
-      "new_description": "Enchant Weapon effect"
+      "new_description": "Enchant Weapon effect",
+      "storage_format": "direct_text"
     },
     {
       "name": "Solomon's Ring",
-      "offset": "0x2bb3fdd",
+      "offset": "0x02BB3FDD",
       "offset_decimal": 45826013,
       "category": "Clothings",
       "description": "Ring of an ancient king, subdues demons.",
@@ -12446,16 +12899,18 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x2bb3fdd"
+        "0x02BB3FDD",
+        "0x02BB47DD"
       ],
       "id": 353,
       "max_chars": 63,
       "current_chars": 16,
-      "new_description": "100% block magic"
+      "new_description": "100% block magic",
+      "storage_format": "direct_text"
     },
     {
       "name": "Symbol of Darkness",
-      "offset": "0x18706bd",
+      "offset": "0x018706BD",
       "offset_decimal": 25626301,
       "category": "Clothings",
       "description": "Talisman that amplifies the dark powers.",
@@ -12477,16 +12932,19 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x18706bd"
+        "0x018706BD",
+        "0x02794B49",
+        "0x02801729"
       ],
       "id": 354,
       "max_chars": 63,
       "current_chars": 47,
-      "new_description": "Amplifies dark powers. POW+30"
+      "new_description": "Amplifies dark powers. POW+30",
+      "storage_format": "direct_text"
     },
     {
       "name": "Technique Book",
-      "offset": "0xa7eff1",
+      "offset": "0x00A7EFF1",
       "offset_decimal": 11005937,
       "category": "Clothings",
       "description": "Book containing the secrets of swordmanship.",
@@ -12512,16 +12970,18 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0xa7eff1"
+        "0x00A7EFF1",
+        "0x0172BB21"
       ],
       "id": 355,
       "max_chars": 63,
       "current_chars": 12,
-      "new_description": "Critical +5%"
+      "new_description": "Critical +5%",
+      "storage_format": "direct_text"
     },
     {
       "name": "Wand of Justice",
-      "offset": "0x28512a5",
+      "offset": "0x028512A5",
       "offset_decimal": 42275493,
       "category": "Priest’s Wand/Hammer",
       "description": "Judges good and evil in the hearts of men.",
@@ -12547,16 +13007,17 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x28512a5"
+        "0x028512A5"
       ],
       "id": 356,
       "max_chars": 63,
       "current_chars": 13,
-      "new_description": "Demon, At +30"
+      "new_description": "Demon, At +30",
+      "storage_format": "direct_text"
     },
     {
       "name": "Wand of the Ancients",
-      "offset": "0xe08f39",
+      "offset": "0x00E08F39",
       "offset_decimal": 14716729,
       "category": "Priest’s Wand/Hammer",
       "description": "A powerful wand enchanted by the arcanes.",
@@ -12578,16 +13039,17 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0xe08f39"
+        "0x00E08F39"
       ],
       "id": 357,
       "max_chars": 63,
       "current_chars": 41,
-      "new_description": "A powerful wand enchanted by the arcanes."
+      "new_description": "A powerful wand enchanted by the arcanes.",
+      "storage_format": "direct_text"
     },
     {
       "name": "Wing Gauntlets",
-      "offset": "0xa7fef1",
+      "offset": "0x00A7FEF1",
       "offset_decimal": 11009777,
       "category": "Clothings",
       "description": "Magical feathered gauntlets.",
@@ -12609,16 +13071,20 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0xa7fef1"
+        "0x00A7FEF1",
+        "0x00A806F1",
+        "0x02592B85",
+        "0x02593385"
       ],
       "id": 358,
       "max_chars": 63,
       "current_chars": 34,
-      "new_description": "Magical feathered gauntlets. AGL+5"
+      "new_description": "Magical feathered gauntlets. AGL+5",
+      "storage_format": "direct_text"
     },
     {
       "name": "Wings of Lucifer",
-      "offset": "0x2b7f25d",
+      "offset": "0x02B7F25D",
       "offset_decimal": 45609565,
       "category": "Items",
       "description": "Modeled after fallen angel. (Weaken Foe)",
@@ -12642,16 +13108,18 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x2b7f25d"
+        "0x02B7F25D",
+        "0x02BD37E5"
       ],
       "id": 359,
       "max_chars": 63,
       "current_chars": 40,
-      "new_description": "Modeled after fallen angel. (Weaken Foe)"
+      "new_description": "Modeled after fallen angel. (Weaken Foe)",
+      "storage_format": "direct_text"
     },
     {
       "name": "Wings of Seraphim",
-      "offset": "0xc3cd21",
+      "offset": "0x00C3CD21",
       "offset_decimal": 12832033,
       "category": "Items",
       "description": "A copy of angels' wings. (Rest. of Life)",
@@ -12675,16 +13143,23 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0xc3cd21"
+        "0x00C3CD21",
+        "0x00F1F2AD",
+        "0x01258399",
+        "0x0186F7BD",
+        "0x01C9A0D9",
+        "0x028A5539",
+        "0x02BD3A65"
       ],
       "id": 360,
       "max_chars": 63,
       "current_chars": 40,
-      "new_description": "A copy of angels' wings. (Rest. of Life)"
+      "new_description": "A copy of angels' wings. (Rest. of Life)",
+      "storage_format": "direct_text"
     },
     {
       "name": "Wyvernstooth Rapier",
-      "offset": "0x1178611",
+      "offset": "0x01178611",
       "offset_decimal": 18318865,
       "category": "Rapiers (elf)",
       "description": "First class rapier of the finest material.",
@@ -12706,16 +13181,25 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x1178611"
+        "0x01178611",
+        "0x011E8CB5",
+        "0x01256D19",
+        "0x012DD739",
+        "0x01352215",
+        "0x0152BF4D",
+        "0x015ACAE1",
+        "0x016C3239",
+        "0x025D430D"
       ],
       "id": 361,
       "max_chars": 63,
       "current_chars": 42,
-      "new_description": "First class rapier of the finest material."
+      "new_description": "First class rapier of the finest material.",
+      "storage_format": "direct_text"
     },
     {
       "name": "Calvin's Blade",
-      "offset": "0x1b297b9d",
+      "offset": "0x00F99435",
       "offset_decimal": 16356405,
       "category": "Swords (warrior)",
       "description": "",
@@ -12744,11 +13228,12 @@
       "id": 362,
       "new_description": "Demon & magic enemies, At +60",
       "max_chars": 63,
-      "current_chars": 29
+      "current_chars": 29,
+      "storage_format": "direct_text"
     },
     {
       "name": "Ranger's Bow",
-      "offset": "0x1c51b695",
+      "offset": "0x01FB858D",
       "offset_decimal": 33260941,
       "category": "Bows (hunter)",
       "description": "",
@@ -12777,7 +13262,8 @@
       "id": 363,
       "new_description": "Critical +3%",
       "max_chars": 63,
-      "current_chars": 12
+      "current_chars": 12,
+      "storage_format": "direct_text"
     },
     {
       "name": "Rhino Rod",
@@ -12816,7 +13302,7 @@
     },
     {
       "name": "Alchemist's Rod",
-      "offset": "0x1bd2f54d",
+      "offset": "0x018D2685",
       "offset_decimal": 26027653,
       "category": "Rods (fairy)",
       "description": "",
@@ -12845,11 +13331,12 @@
       "id": 365,
       "new_description": "2x EXP from attacks",
       "max_chars": 63,
-      "current_chars": 19
+      "current_chars": 19,
+      "storage_format": "direct_text"
     },
     {
       "name": "Breastplate",
-      "offset": "0x1b53da4c",
+      "offset": "0x011E7874",
       "offset_decimal": 18774132,
       "category": "Armors (warrior & dwarf)",
       "description": "",
@@ -12871,8 +13358,7 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x011E7874",
-        "0x011E78B5"
+        "0x011E7874"
       ],
       "id": 366,
       "new_description": "",
@@ -12881,7 +13367,7 @@
     },
     {
       "name": "Knight's Armor",
-      "offset": "0x1b902825",
+      "offset": "0x0152FB4D",
       "offset_decimal": 22215501,
       "category": "Armors (warrior & dwarf)",
       "description": "",
@@ -12909,7 +13395,8 @@
       "id": 367,
       "new_description": "",
       "max_chars": 63,
-      "current_chars": 0
+      "current_chars": 0,
+      "storage_format": "direct_text"
     },
     {
       "name": "Bandit Shield",
@@ -12944,8 +13431,8 @@
     },
     {
       "name": "Bishop's Robe",
-      "offset": "0x1afcec31",
-      "offset_decimal": 23320269,
+      "offset": "0x00D2C7A9",
+      "offset_decimal": 13813673,
       "category": "Robes (priest,sorcerer,& fairy)",
       "description": "",
       "stats": {},
@@ -12966,16 +13453,18 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
+        "0x00D2C7A9",
         "0x0163D6CD"
       ],
       "id": 369,
       "new_description": "WIL+16 MAT+4 MDEF+16",
       "max_chars": 63,
-      "current_chars": 15
+      "current_chars": 15,
+      "storage_format": "direct_text"
     },
     {
       "name": "Queen's Robe",
-      "offset": "0x1ba3a045",
+      "offset": "0x0163EFCD",
       "offset_decimal": 23326669,
       "category": "Robes (priest,sorcerer,& fairy)",
       "description": "",
@@ -13004,11 +13493,12 @@
       "id": 370,
       "new_description": "WIL+20 MDEF+11",
       "max_chars": 63,
-      "current_chars": 10
+      "current_chars": 10,
+      "storage_format": "direct_text"
     },
     {
       "name": "Witch's Hat",
-      "offset": "0x1b8fdda5",
+      "offset": "0x0152BA4D",
       "offset_decimal": 22198861,
       "category": "Clothings",
       "description": "",
@@ -13037,11 +13527,12 @@
       "id": 371,
       "new_description": "Immune Magic-Loss. INT+4 POW+16 MDEF+4",
       "max_chars": 63,
-      "current_chars": 32
+      "current_chars": 32,
+      "storage_format": "direct_text"
     },
     {
       "name": "Knight's Mask",
-      "offset": "0x1c11ed1d",
+      "offset": "0x01C3FA45",
       "offset_decimal": 29620805,
       "category": "Clothings",
       "description": "",
@@ -13068,11 +13559,12 @@
       "id": 372,
       "new_description": "INT-8 WIL+8 POW-8",
       "max_chars": 63,
-      "current_chars": 11
+      "current_chars": 11,
+      "storage_format": "direct_text"
     },
     {
       "name": "Princess Locket",
-      "offset": "0x1b20bad5",
+      "offset": "0x00F1F52D",
       "offset_decimal": 15856941,
       "category": "Clothings",
       "description": "",
@@ -13101,12 +13593,13 @@
       "id": 373,
       "new_description": "Immune Sleep",
       "max_chars": 63,
-      "current_chars": 12
+      "current_chars": 12,
+      "storage_format": "direct_text"
     },
     {
       "name": "Thieves' Cloak",
-      "offset": "0x1afcefe1",
-      "offset_decimal": 40511897,
+      "offset": "0x00D2CA29",
+      "offset_decimal": 13814313,
       "category": "Clothings",
       "description": "",
       "stats": {},
@@ -13127,6 +13620,8 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
+        "0x00D2CA29",
+        "0x0152A8CD",
         "0x026A2999",
         "0x02720CA9",
         "0x02795A49",
@@ -13136,11 +13631,12 @@
       "id": 374,
       "new_description": "AGL+12 MDEF+6",
       "max_chars": 63,
-      "current_chars": 9
+      "current_chars": 9,
+      "storage_format": "direct_text"
     },
     {
       "name": "Hermit's Ring",
-      "offset": "0x1c11f21d",
+      "offset": "0x01C3FF45",
       "offset_decimal": 29622085,
       "category": "Clothings",
       "description": "",
@@ -13168,11 +13664,12 @@
       "id": 375,
       "new_description": "S+24 I+24 W+24 A+24 C+24 P+24 L+24",
       "max_chars": 63,
-      "current_chars": 34
+      "current_chars": 34,
+      "storage_format": "direct_text"
     },
     {
       "name": "Merlin's Ring",
-      "offset": "0x1bbcd525",
+      "offset": "0x0179E1DD",
       "offset_decimal": 24764893,
       "category": "Clothings",
       "description": "",
@@ -13203,11 +13700,12 @@
       "id": 376,
       "new_description": "INT+24 POW+16 MAT+24 MDEF+20",
       "max_chars": 63,
-      "current_chars": 21
+      "current_chars": 21,
+      "storage_format": "direct_text"
     },
     {
       "name": "Princess Pentagram",
-      "offset": "0x1bace941",
+      "offset": "0x016C0539",
       "offset_decimal": 23856441,
       "category": "Clothings",
       "description": "",
@@ -13237,11 +13735,12 @@
       "id": 377,
       "new_description": "Cast -25% & MP regen +4. I+8 W+8 P+8",
       "max_chars": 63,
-      "current_chars": 41
+      "current_chars": 41,
+      "storage_format": "direct_text"
     },
     {
       "name": "Devil's Horn",
-      "offset": "0x1bd2fdfd",
+      "offset": "0x018D2E05",
       "offset_decimal": 26029573,
       "category": "Clothings",
       "description": "",
@@ -13273,11 +13772,12 @@
       "id": 378,
       "new_description": "MP cost -10% & MP regen +1. POW+16",
       "max_chars": 63,
-      "current_chars": 32
+      "current_chars": 32,
+      "storage_format": "direct_text"
     },
     {
       "name": "Thief's Badge",
-      "offset": "0x1b8fcec5",
+      "offset": "0x0152ADCD",
       "offset_decimal": 22195661,
       "category": "Clothings",
       "description": "",
@@ -13304,11 +13804,12 @@
       "id": 379,
       "new_description": "AGL+16 LUK+24",
       "max_chars": 63,
-      "current_chars": 9
+      "current_chars": 9,
+      "storage_format": "direct_text"
     },
     {
       "name": "Elder's Tablet",
-      "offset": "0x1ba37255",
+      "offset": "0x0163C7CD",
       "offset_decimal": 23316429,
       "category": "Clothings",
       "description": "",
@@ -13336,11 +13837,12 @@
       "id": 380,
       "new_description": "INT+16 POW+16 MAT+20 MDEF+20",
       "max_chars": 63,
-      "current_chars": 21
+      "current_chars": 21,
+      "storage_format": "direct_text"
     },
     {
       "name": "Fool's Puppet",
-      "offset": "0x1c007329",
+      "offset": "0x01B4C2A1",
       "offset_decimal": 28623521,
       "category": "Clothings",
       "description": "",
@@ -13371,11 +13873,12 @@
       "id": 381,
       "new_description": "Auto resurrect 1/3 HP&MP (50% break)",
       "max_chars": 63,
-      "current_chars": 36
+      "current_chars": 36,
+      "storage_format": "direct_text"
     },
     {
       "name": "Longbow",
-      "offset": "0x1b43cd30",
+      "offset": "0x01107F58",
       "offset_decimal": 17858392,
       "category": "Bows (hunter)",
       "description": "",
@@ -13397,8 +13900,7 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x01107F58",
-        "0x01107F99"
+        "0x01107F58"
       ],
       "id": 382,
       "new_description": "",
@@ -13407,7 +13909,7 @@
     },
     {
       "name": "Cat's Claw",
-      "offset": "0x1b3467d5",
+      "offset": "0x0103176D",
       "offset_decimal": 16979821,
       "category": "Knives (rogue)",
       "description": "",
@@ -13438,7 +13940,8 @@
       "id": 383,
       "new_description": "8% curse enemy",
       "max_chars": 63,
-      "current_chars": 14
+      "current_chars": 14,
+      "storage_format": "direct_text"
     },
     {
       "name": "Zeus Rapier",
@@ -13475,7 +13978,7 @@
     },
     {
       "name": "Queen's Circlet",
-      "offset": "0x1b20bd55",
+      "offset": "0x00F1F7AD",
       "offset_decimal": 15857581,
       "category": "Clothings",
       "description": "",
@@ -13506,7 +14009,8 @@
       "id": 385,
       "new_description": "MDEF+4",
       "max_chars": 63,
-      "current_chars": 4
+      "current_chars": 4,
+      "storage_format": "direct_text"
     },
     {
       "name": "Runic shield",
@@ -13544,8 +14048,8 @@
     },
     {
       "name": "Feather Cloak",
-      "offset": "0x1b43e4c0",
-      "offset_decimal": 31458721,
+      "offset": "0x01109358",
+      "offset_decimal": 17863512,
       "category": "Clothing",
       "description": "A magnificent cloak adorned with feathers.",
       "stats": {},
@@ -13566,14 +14070,6 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x01E005A1",
-        "0x01FB9C0D",
-        "0x0200F41D",
-        "0x02076691",
-        "0x0251AEED",
-        "0x0251B6ED",
-        "0x02591A05",
-        "0x027202A9",
         "0x01109358",
         "0x01E00560",
         "0x01FB9BCC",
@@ -13592,7 +14088,7 @@
     },
     {
       "name": "Empress' Perfume",
-      "offset": "0x1c3d3881",
+      "offset": "0x01E9AD89",
       "offset_decimal": 32091529,
       "category": "Accessories",
       "description": "Grand perfume.",
@@ -13620,11 +14116,12 @@
       "id": 388,
       "new_description": "Grand perfume.",
       "max_chars": 63,
-      "current_chars": 14
+      "current_chars": 14,
+      "storage_format": "direct_text"
     },
     {
       "name": "Judge's Scale",
-      "offset": "0x1b1ac79d",
+      "offset": "0x00ECC715",
       "offset_decimal": 15517461,
       "category": "Accessories",
       "description": "Used by ancients.",
@@ -13656,11 +14153,12 @@
       "id": 389,
       "new_description": "Used by ancients.",
       "max_chars": 63,
-      "current_chars": 17
+      "current_chars": 17,
+      "storage_format": "direct_text"
     },
     {
       "name": "Knight's Banner",
-      "offset": "0x1c07fb9d",
+      "offset": "0x01BB51B5",
       "offset_decimal": 29053365,
       "category": "Accessories",
       "description": "A flag with a knightly coat of arms.",
@@ -13693,11 +14191,12 @@
       "id": 390,
       "new_description": "A flag with a knightly coat of arms.",
       "max_chars": 63,
-      "current_chars": 36
+      "current_chars": 36,
+      "storage_format": "direct_text"
     },
     {
       "name": "Knight's Gauntlets",
-      "offset": "0x1acef659",
+      "offset": "0x00AAC1D1",
       "offset_decimal": 11190737,
       "category": "Gloves",
       "description": "Beautiful protective gloves for knights.",
@@ -13728,11 +14227,12 @@
       "id": 391,
       "new_description": "Beautiful protective gloves for knights.",
       "max_chars": 63,
-      "current_chars": 40
+      "current_chars": 40,
+      "storage_format": "direct_text"
     },
     {
       "name": "Lucifer's Shield",
-      "offset": "0x1d302f3d",
+      "offset": "0x02BD3CE5",
       "offset_decimal": 45956325,
       "category": "Shields",
       "description": "A legendary shield forged by satan.",
@@ -13761,11 +14261,12 @@
       "new_description": "A legendary shield forged by satan.",
       "max_chars": 63,
       "current_chars": 35,
-      "note": "This is the English version of Lucifer Shield from FAQ"
+      "note": "This is the English version of Lucifer Shield from FAQ",
+      "storage_format": "direct_text"
     },
     {
       "name": "Pandora's Box",
-      "offset": "0x1b1ac29d",
+      "offset": "0x00ECC215",
       "offset_decimal": 15516181,
       "category": "Accessories",
       "description": "Brings both hope and despair.",
@@ -13793,12 +14294,13 @@
       "id": 393,
       "new_description": "Brings both hope and despair.",
       "max_chars": 63,
-      "current_chars": 29
+      "current_chars": 29,
+      "storage_format": "direct_text"
     },
     {
       "name": "Sheep Lute",
-      "offset": "0x1c321ca9",
-      "offset_decimal": 31457441,
+      "offset": "0x01E00060",
+      "offset_decimal": 31457376,
       "category": "Accessories",
       "description": "Lovely sounding lute.",
       "stats": {},
@@ -13819,11 +14321,6 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x01E000A1",
-        "0x01FB970D",
-        "0x0200EF1D",
-        "0x02076191",
-        "0x0271FDA9",
         "0x01E00060",
         "0x01FB96CC",
         "0x0200EEDC",
@@ -13837,7 +14334,7 @@
     },
     {
       "name": "Wizard's Potion",
-      "offset": "0x1ba37b05",
+      "offset": "0x0163CF4D",
       "offset_decimal": 23318349,
       "category": "Consumables",
       "description": "Essential potion of magic.",
@@ -13871,12 +14368,13 @@
       "id": 395,
       "new_description": "Essential potion of magic.",
       "max_chars": 63,
-      "current_chars": 26
+      "current_chars": 26,
+      "storage_format": "direct_text"
     },
     {
       "name": "Ironsage",
-      "offset": "0x1ac6b76d",
-      "offset_decimal": 10720261,
+      "offset": "0x00A393C4",
+      "offset_decimal": 10720196,
       "category": "Consumables",
       "description": "A herb which neutralizes poison. (Treatment of poison)",
       "stats": {},
@@ -13897,18 +14395,6 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x00A39405",
-        "0x00B66AA9",
-        "0x00BE2039",
-        "0x00C3D9A1",
-        "0x01177491",
-        "0x012DF2B9",
-        "0x01353395",
-        "0x014B9F09",
-        "0x0152E74D",
-        "0x016C20B9",
-        "0x02722D29",
-        "0x0090B878",
         "0x00A393C4",
         "0x00B66A68",
         "0x00BE1FF8",
@@ -13928,8 +14414,8 @@
     },
     {
       "name": "Material Dark",
-      "offset": "0x1ac6a38d",
-      "offset_decimal": 10715781,
+      "offset": "0x00A38244",
+      "offset_decimal": 10715716,
       "category": "Materials",
       "description": "Magic crystal dark.",
       "stats": {},
@@ -13950,20 +14436,6 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x00A38285",
-        "0x00AABA51",
-        "0x0172CCA1",
-        "0x017A025D",
-        "0x017FDAB1",
-        "0x01C415C5",
-        "0x01C982D9",
-        "0x01D27841",
-        "0x020FCF3D",
-        "0x02234889",
-        "0x022AB29D",
-        "0x0230AC05",
-        "0x024BF261",
-        "0x024BFA61",
         "0x00A38244",
         "0x00AABA10",
         "0x0172CC60",
@@ -13986,8 +14458,8 @@
     },
     {
       "name": "Flail Staff",
-      "offset": "0x1adc4250",
-      "offset_decimal": 11949737,
+      "offset": "0x00B65668",
+      "offset_decimal": 11949672,
       "category": "Staves",
       "description": "Staff with an iron ball on a chain.",
       "stats": {},
@@ -14008,9 +14480,6 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x00B656A9",
-        "0x00BE0EB9",
-        "0x01108E99",
         "0x00B65668",
         "0x00BE0E78",
         "0x01108E58"
@@ -14022,8 +14491,8 @@
     },
     {
       "name": "Mace Staff",
-      "offset": "0x1b4bb498",
-      "offset_decimal": 18309265,
+      "offset": "0x01176050",
+      "offset_decimal": 18309200,
       "category": "Staves",
       "description": "A staff with an iron ball on its tip.",
       "stats": {},
@@ -14044,7 +14513,6 @@
       },
       "occurrences_count": 1,
       "all_offsets": [
-        "0x01176091",
         "0x01176050"
       ],
       "id": 399,

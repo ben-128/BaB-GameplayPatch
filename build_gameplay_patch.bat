@@ -33,7 +33,7 @@ echo Ce script va:
 echo   1. Copier BLAZE.ALL clean depuis extract vers work
 echo   2. Patcher les prix Fate Coin Shop dans BLAZE.ALL
 echo   3. Patcher les descriptions d'items dans BLAZE.ALL
-echo   4. Patcher les prix d'enchere (base a 0) dans BLAZE.ALL
+echo   4. Patcher les prix d'enchere - base a 0 - dans BLAZE.ALL
 echo   5. Patcher les stats des monstres dans BLAZE.ALL
 echo   6. Creer le BIN patche a partir du BIN clean original
 echo   7. Injecter BLAZE.ALL dans le BIN (2 emplacements)
@@ -197,7 +197,7 @@ REM ========================================================================
 call :log "[8/8] Updating documentation..."
 call :log ""
 
-py -3 -c "from pathlib import Path; from datetime import datetime; import sys; items_count = sys.argv[1]; readme = Path('README.md'); content = readme.read_text(encoding='utf-8'); patch_info = f'\n## Last Patch Build\n\n**Date:** {datetime.now().strftime(\"%%Y-%%m-%%d %%H:%%M:%%S\")}\n\n**Patches Applied:**\n- Fate Coin Shop prices adjusted\n- Items descriptions updated ({items_count} items)\n- Auction base prices set to 0 (lower sell prices)\n- Monster stats balanced\n- BLAZE.ALL integrated\n\n**Source:** Blaze & Blade - Eternal Quest (Europe).bin\n**Output:** output/Blaze & Blade - Patched.bin\n\n'; import re; content = re.sub(r'## Last Patch Build.*?(?=##|\Z)', patch_info, content, flags=re.DOTALL) if '## Last Patch Build' in content else content + patch_info; readme.write_text(content, encoding='utf-8'); print('[OK] README.md updated')" %ITEMS_PATCHED% >> "%LOGFILE%" 2>&1
+py -3 -c "from pathlib import Path; from datetime import datetime; import sys; items_count = sys.argv[1]; readme = Path('README.md'); content = readme.read_text(encoding='utf-8'); patch_info = f'\n## Last Patch Build\n\n**Date:** {datetime.now().strftime(\"%%Y-%%m-%%d %%H:%%M:%%S\")}\n\n**Patches Applied:**\n- Fate Coin Shop prices adjusted\n- Items descriptions updated ({items_count} items)\n- Auction base prices set to 0\n- Monster stats balanced\n- BLAZE.ALL integrated\n\n**Source:** Blaze & Blade - Eternal Quest (Europe).bin\n**Output:** output/Blaze & Blade - Patched.bin\n\n'; import re; content = re.sub(r'## Last Patch Build.*?(?=##|\Z)', patch_info, content, flags=re.DOTALL) if '## Last Patch Build' in content else content + patch_info; readme.write_text(content, encoding='utf-8'); print('[OK] README.md updated')" %ITEMS_PATCHED% >> "%LOGFILE%" 2>&1
 
 if errorlevel 1 (
     call :log "[WARNING] Could not update README.md"
