@@ -1,0 +1,140 @@
+{
+  "summary": {
+    "description": "Items from FAQ (items_reference.json) not found in game binary (Europe version)",
+    "total": 5,
+    "note": "Some items don't exist at all in Europe release"
+  },
+  "weapons": [
+    {
+      "name": "Dominion Dagger",
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 101,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      },
+      "special_effect": "Demon & Undead enemies, At + 40",
+      "status": "not_found",
+      "note": "Not found in Europe BIN (German 'Dominionfeder' is Dominion Feather, different item)"
+    },
+    {
+      "name": "Pavas Axe",
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 140,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      },
+      "special_effect": "Demon enemies, At + 55",
+      "status": "not_found",
+      "note": "Only 'Pavas Armor' found in BIN, not the axe"
+    }
+  ],
+  "armors": [
+    {
+      "name": "Holy Shield (ver2)",
+      "attributes": {
+        "str": 0,
+        "int": 0,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 0,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 122,
+        "mdef": 0
+      },
+      "special_effect": "Fire & Evil elemental damage decreases",
+      "status": "not_found",
+      "note": "User suggested 'Perseus Guard' but not found. Only 'Holy Shield' (def 4) and 'Perseus Bow' exist"
+    }
+  ],
+  "robes": [
+    {
+      "name": "Guardian Robe (ver2)",
+      "attributes": {
+        "str": 0,
+        "int": 20,
+        "wil": 0,
+        "agl": 0,
+        "con": 0,
+        "pow": 10,
+        "luk": 24,
+        "at": 0,
+        "mat": 0,
+        "def": 80,
+        "mdef": 76
+      },
+      "special_effect": "Darkness & Evil elemental damage decreases",
+      "status": "not_found",
+      "note": "User suggested 'Ancient Robe' but not found in BIN"
+    }
+  ],
+  "shields": [],
+  "clothings": [
+    {
+      "name": "Knight's Bangle",
+      "attributes": {
+        "str": 16,
+        "int": 0,
+        "wil": 16,
+        "agl": -8,
+        "con": 16,
+        "pow": -16,
+        "luk": 0,
+        "at": 0,
+        "mat": 0,
+        "def": 0,
+        "mdef": 0
+      },
+      "special_effect": "",
+      "status": "not_found",
+      "note": "No 'Bangle' or 'Bracelet' items found in BIN"
+    }
+  ],
+  "found_equivalents": [
+    {
+      "faq_name": "Feather Mantle",
+      "game_name": "Feather Cloak",
+      "english_offset": "0x1b43e4c0",
+      "german_name": "Federmantel",
+      "german_offset": "0x18199031",
+      "note": "Added to all_items_clean.json as Feather Cloak"
+    },
+    {
+      "faq_name": "Lucifer Shield",
+      "game_name": "Lucifer's Shield",
+      "english_offset": "0x1d302f3d",
+      "english_description": "A legendary shield forged by satan.",
+      "german_name": "Luziferschild",
+      "german_offset": "0x1a0648ad",
+      "note": "Found as 'Lucifer's Shield' (with apostrophe). Added to all_items_clean.json"
+    },
+    {
+      "faq_name": "Healing Talisman",
+      "game_name": "Healing Amulet",
+      "english_offset": "0x1acf0189",
+      "english_description": "An ancient amulet that heals the body.",
+      "german_name": "Heiltalisman",
+      "german_offset": "0x17a41089",
+      "german_description": "Sehr altes Amulett, das langsam Wunden heilt",
+      "note": "Already in all_items_clean.json as 'Healing Amulet'"
+    }
+  ]
+}

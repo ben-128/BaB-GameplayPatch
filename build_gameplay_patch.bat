@@ -8,12 +8,12 @@ REM Initialize logging
 REM ========================================================================
 
 REM Create logs directory if it doesn't exist
-if not exist "logs" mkdir logs
+if not exist "output\logs" mkdir "output\logs"
 
 REM Generate log filename with simple counter
 for /f %%i in ('powershell -command "Get-Date -Format yyyyMMdd_HHmm"') do set TIMESTAMP=%%i
-set LOGFILE=%~dp0logs\build_%TIMESTAMP%.log
-set LASTLOG=%~dp0logs\last_build.log
+set LOGFILE=%~dp0output\logs\build_%TIMESTAMP%.log
+set LASTLOG=%~dp0output\output\logs\last_build.log
 
 echo Initializing build system...
 echo Log file: %LOGFILE%
@@ -30,11 +30,13 @@ echo.
 echo Build started: %date% %time%
 echo.
 echo Ce script va:
-echo   1. Patcher les prix Fate Coin Shop dans BLAZE.ALL
-echo   2. Patcher les descriptions d'items dans BLAZE.ALL
-echo   3. Patcher les stats des monstres dans BLAZE.ALL
-echo   4. Injecter BLAZE.ALL dans le BIN (2 emplacements)
-echo   5. Mettre a jour la documentation
+echo   1. Copier BLAZE.ALL clean depuis extract vers work
+echo   2. Patcher les prix Fate Coin Shop dans BLAZE.ALL
+echo   3. Patcher les descriptions d'items dans BLAZE.ALL
+echo   4. Patcher les stats des monstres dans BLAZE.ALL
+echo   5. Creer le BIN patche a partir du BIN clean original
+echo   6. Injecter BLAZE.ALL dans le BIN (2 emplacements)
+echo   7. Mettre a jour la documentation
 echo.
 echo ========================================================================
 echo.
@@ -44,12 +46,37 @@ REM Display same on console
 type "%LOGFILE%"
 
 REM ========================================================================
-REM Step 1: Patch Fate Coin Shop prices
+REM Step 1: Copy clean BLAZE.ALL from extract to work
 REM ========================================================================
-call :log "[1/6] Patching Fate Coin Shop prices..."
+call :log "[1/7] Copying clean BLAZE.ALL from extract to work..."
 call :log ""
 
-py -3 fate_coin_shop\patch_fate_coin_shop.py >> "%LOGFILE%" 2>&1
+set CLEAN_BLAZE=%~dp0Blaze  Blade - Eternal Quest (Europe)\extract\BLAZE.ALL
+set WORK_BLAZE=%~dp0output\BLAZE.ALL
+
+if not exist "%CLEAN_BLAZE%" (
+    call :log "[ERROR] Clean BLAZE.ALL not found: %CLEAN_BLAZE%"
+    goto :error
+)
+
+copy /Y "%CLEAN_BLAZE%" "%WORK_BLAZE%" >> "%LOGFILE%" 2>&1
+if errorlevel 1 (
+    call :log ""
+    call :log "[ERROR] Failed to copy clean BLAZE.ALL!"
+    goto :error
+)
+
+call :log ""
+call :log "[OK] Clean BLAZE.ALL copied to work folder"
+call :log ""
+
+REM ========================================================================
+REM Step 2: Patch Fate Coin Shop prices
+REM ========================================================================
+call :log "[2/7] Patching Fate Coin Shop prices..."
+call :log ""
+
+py -3 Data\fate_coin_shop\patch_fate_coin_shop.py >> "%LOGFILE%" 2>&1
 if errorlevel 1 (
     call :log ""
     call :log "[ERROR] Fate Coin Shop patch failed!"
@@ -61,15 +88,16 @@ call :log "[OK] Fate Coin Shop prices patched"
 call :log ""
 
 REM ========================================================================
-REM Step 2: Patch Items descriptions
+REM Step 3: Patch Items descriptions
 REM ========================================================================
-call :log "[2/6] Patching Items descriptions (BLAZE.ALL + patched.bin)..."
+call :log "[3/7] Patching Items descriptions in BLAZE.ALL..."
 call :log ""
 
-cd items
-py -3 patch_items_in_bin.py >> "%LOGFILE%" 2>&1
+cd Data\items
+py -3 patch_items_in_bin.py > "%TEMP%\items_patch_output.txt" 2>&1
 set ITEMS_ERRORLEVEL=%errorlevel%
-cd ..
+type "%TEMP%\items_patch_output.txt" >> "%LOGFILE%"
+cd ..\..
 
 if %ITEMS_ERRORLEVEL% neq 0 (
     call :log ""
@@ -77,17 +105,21 @@ if %ITEMS_ERRORLEVEL% neq 0 (
     goto :error
 )
 
+REM Extract patched count from output
+set ITEMS_PATCHED=0
+for /f "tokens=2 delims==" %%a in ('findstr "PATCHED_COUNT=" "%TEMP%\items_patch_output.txt"') do set ITEMS_PATCHED=%%a
+
 call :log ""
-call :log "[OK] Items descriptions patched (294 items)"
+call :log "[OK] Items descriptions patched (%ITEMS_PATCHED% items)"
 call :log ""
 
 REM ========================================================================
-REM Step 3: Patch monster stats in BLAZE.ALL
+REM Step 4: Patch monster stats in BLAZE.ALL
 REM ========================================================================
-call :log "[3/5] Patching monster stats in BLAZE.ALL..."
+call :log "[4/7] Patching monster stats in BLAZE.ALL..."
 call :log ""
 
-py -3 monster_stats\patch_monster_stats.py >> "%LOGFILE%" 2>&1
+py -3 Data\monster_stats\patch_monster_stats.py >> "%LOGFILE%" 2>&1
 if errorlevel 1 (
     call :log ""
     call :log "[ERROR] Monster stats patch failed!"
@@ -99,9 +131,35 @@ call :log "[OK] Monster stats patched in BLAZE.ALL"
 call :log ""
 
 REM ========================================================================
-REM Step 4: Inject BLAZE.ALL into BIN (2 locations)
+REM Step 5: Create fresh patched BIN from clean original
 REM ========================================================================
-call :log "[4/5] Injecting BLAZE.ALL into BIN (2 locations)..."
+call :log "[5/7] Creating fresh patched BIN from clean original..."
+call :log ""
+
+set CLEAN_BIN=%~dp0Blaze  Blade - Eternal Quest (Europe)\Blaze ^& Blade - Eternal Quest (Europe).bin
+set PATCHED_BIN=%~dp0output\Blaze ^& Blade - Patched.bin
+
+if not exist "%CLEAN_BIN%" (
+    call :log "[ERROR] Clean BIN not found: %CLEAN_BIN%"
+    goto :error
+)
+
+copy /Y "%CLEAN_BIN%" "%PATCHED_BIN%" >> "%LOGFILE%" 2>&1
+
+if not exist "%PATCHED_BIN%" (
+    call :log ""
+    call :log "[ERROR] Failed to copy clean BIN!"
+    goto :error
+)
+
+call :log ""
+call :log "[OK] Fresh patched BIN created from clean original"
+call :log ""
+
+REM ========================================================================
+REM Step 6: Inject BLAZE.ALL into BIN (2 locations)
+REM ========================================================================
+call :log "[6/7] Injecting BLAZE.ALL into BIN (2 locations)..."
 call :log ""
 
 py -3 patch_blaze_all.py >> "%LOGFILE%" 2>&1
@@ -116,12 +174,12 @@ call :log "[OK] BLAZE.ALL injected into BIN"
 call :log ""
 
 REM ========================================================================
-REM Step 5: Update documentation
+REM Step 7: Update documentation
 REM ========================================================================
-call :log "[5/5] Updating documentation..."
+call :log "[7/7] Updating documentation..."
 call :log ""
 
-py -3 -c "from pathlib import Path; from datetime import datetime; readme = Path('README.md'); content = readme.read_text(encoding='utf-8'); patch_info = f'\n## Last Patch Build\n\n**Date:** {datetime.now().strftime(\"%%Y-%%m-%%d %%H:%%M:%%S\")}\n\n**Patches Applied:**\n- Fate Coin Shop prices adjusted\n- Items descriptions updated (294 items)\n- Monster stats balanced\n- BLAZE.ALL integrated\n\n**Output:** work/patched.bin\n\n'; import re; content = re.sub(r'## Last Patch Build.*?(?=##|\Z)', patch_info, content, flags=re.DOTALL) if '## Last Patch Build' in content else content + patch_info; readme.write_text(content, encoding='utf-8'); print('[OK] README.md updated')" >> "%LOGFILE%" 2>&1
+py -3 -c "from pathlib import Path; from datetime import datetime; import sys; items_count = sys.argv[1]; readme = Path('README.md'); content = readme.read_text(encoding='utf-8'); patch_info = f'\n## Last Patch Build\n\n**Date:** {datetime.now().strftime(\"%%Y-%%m-%%d %%H:%%M:%%S\")}\n\n**Patches Applied:**\n- Fate Coin Shop prices adjusted\n- Items descriptions updated ({items_count} items)\n- Monster stats balanced\n- BLAZE.ALL integrated\n\n**Source:** Blaze & Blade - Eternal Quest (Europe).bin\n**Output:** output/Blaze & Blade - Patched.bin\n\n'; import re; content = re.sub(r'## Last Patch Build.*?(?=##|\Z)', patch_info, content, flags=re.DOTALL) if '## Last Patch Build' in content else content + patch_info; readme.write_text(content, encoding='utf-8'); print('[OK] README.md updated')" %ITEMS_PATCHED% >> "%LOGFILE%" 2>&1
 
 if errorlevel 1 (
     call :log "[WARNING] Could not update README.md"
@@ -141,14 +199,13 @@ call :log ""
 call :log "Build finished: %date% %time%"
 call :log ""
 call :log "Fichiers crees:"
-call :log "  - work/BLAZE.ALL (patched)"
-call :log "  - work/patched.bin (patched, ready for game)"
+call :log "  - output/BLAZE.ALL (patched)"
+call :log "  - output/Blaze ^& Blade - Patched.bin (ready for game)"
 call :log ""
-call :log "Backups:"
-call :log "  - work/BLAZE.ALL.backup"
-call :log "  - work/patched.bin.backup"
+call :log "Source:"
+call :log "  - Blaze ^& Blade - Eternal Quest (Europe).bin (clean original)"
 call :log ""
-call :log "Items patches: 294/316 items (93%%)"
+call :log "Items patches: %ITEMS_PATCHED% items"
 call :log "Abbreviations: STR=S+, INT=I+, WIL=W+, AGL=A+, CON=C+, POW=P+, LUK=L+, MAT=MA+, MDEF=MD+"
 call :log ""
 call :log "Le patch est pret pour le test en jeu!"
@@ -180,7 +237,7 @@ copy /Y "%LOGFILE%" "%LASTLOG%" >NUL 2>&1
 echo.
 if exist "%LOGFILE%" (
     echo Log file saved: %LOGFILE%
-    echo Quick access: logs\last_build.log
+    echo Quick access: output\logs\last_build.log
 ) else (
     echo WARNING: Log file was not created
 )

@@ -1,0 +1,70 @@
+== INSTRUCTIONS: Mise à jour des new_description dans all_items_clean.json ==
+
+OBJECTIF:
+Mettre à jour le champ "new_description" de chaque item pour qu'il contienne:
+1. La description originale (si elle rentre dans max_chars)
+2. Les special_effects (si présents)
+3. Les attributs modifiés (!=0), SAUF "def" et "at"
+
+REGLES:
+- max_chars = 63 caractères maximum
+- Si la description originale rentre (<=63 chars), la garder telle quelle
+- Ne PAS raccourcir inutilement si ça rentre
+- Ajouter les special_effects après la description
+- Ajouter les attributs non-nuls (sauf def/at) à la fin
+
+ATTRIBUTS A INCLURE (si !=0):
+- STR (str) - Force
+- INT (int) - Intelligence
+- WIL (wil) - Volonté
+- AGL (agl) - Agilité
+- CON (con) - Constitution
+- POW (pow) - Puissance
+- LUK (luk) - Chance
+- MAT (mat) - Attaque Magique
+- MDEF (mdef) - Défense Magique  <-- INCLURE
+
+ATTRIBUTS A EXCLURE:
+- DEF (def) - Défense physique
+- AT (at) - Attaque physique
+
+FORMAT DES ATTRIBUTS:
+- Utiliser 3 lettres si possible (STR, INT, WIL, AGL, CON, POW, LUK, MAT, MDEF)
+- Format: ATTR+valeur ou ATTR-valeur (ex: STR+24, AGL-8)
+- Séparer par espace
+
+EXEMPLES:
+- Item sans attrs: "A good sword for beginners to use."
+- Item avec special: "An ancient amulet that heals the body. Regen HP +1"
+- Item avec attrs: "Gloves that increase the wearer's strength. STR+8"
+- Item avec special+attrs: "Enchanted boots adorned with feathers. Immune Slow AGL+12"
+- Item attrs seulement: "STR+24 INT+32 WIL+32 AGL+24 CON+24 POW+32 LUK+32 MDEF+97"
+
+SI TROP LONG (>63 chars):
+- Reformuler la description pour qu'elle soit plus courte
+- Garder les special_effects et attributs
+- Priorité: special_effects > attributs > description raccourcie
+
+PROGRESSION:
+- Items 0-29: TERMINE
+- Items 30-59: TERMINE
+- Items 60-89: TERMINE
+- Items 90-119: TERMINE
+- Items 120-149: TERMINE
+- Items 150-179: TERMINE
+- Items 180-209: TERMINE
+- Items 210-239: TERMINE
+- Items 240-269: TERMINE
+- Items 270-299: TERMINE
+- Items 300-329: TERMINE
+- Items 330-359: TERMINE
+- Items 360-399: TERMINE (tous les items complétés)
+
+COMMANDE POUR VERIFIER:
+python3 -c "
+import json
+with open('all_items_clean.json', 'r', encoding='utf-8') as f:
+    data = json.load(f)
+for i, item in enumerate(data['items'][START:END], start=START):
+    # ... vérification
+"

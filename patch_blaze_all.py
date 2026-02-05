@@ -9,9 +9,9 @@ from pathlib import Path
 
 # Configuration - Use script directory as base
 SCRIPT_DIR  = Path(__file__).parent
-BIN_IN      = SCRIPT_DIR / "work" / "Blaze & Blade - Patched.bin"
-BIN_OUT     = SCRIPT_DIR / "work" / "Blaze & Blade - Patched.bin"  # Overwrite in place
-BLAZE_ALL   = SCRIPT_DIR / "work" / "BLAZE.ALL"
+BIN_IN      = SCRIPT_DIR / "output" / "Blaze & Blade - Patched.bin"
+BIN_OUT     = SCRIPT_DIR / "output" / "Blaze & Blade - Patched.bin"  # Overwrite in place
+BLAZE_ALL   = SCRIPT_DIR / "output" / "BLAZE.ALL"
 
 # Two copies of BLAZE.ALL in the BIN
 LBA_LOCATIONS = [163167, 185765]  # LBAs where BLAZE.ALL starts

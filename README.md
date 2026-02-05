@@ -429,15 +429,20 @@ Cette analyse est fournie "as-is" à des fins de recherche et de préservation d
 
 
 
+
+
+
+
 ## Last Patch Build
 
-**Date:** 2026-02-04 16:41:07
+**Date:** 2026-02-05 11:42:47
 
 **Patches Applied:**
 - Fate Coin Shop prices adjusted
-- Items descriptions updated (294 items)
+- Items descriptions updated (376 items)
 - Monster stats balanced
 - BLAZE.ALL integrated
 
-**Output:** work/patched.bin
+**Source:** Blaze & Blade - Eternal Quest (Europe).bin
+**Output:** output/Blaze & Blade - Patched.bin
 
