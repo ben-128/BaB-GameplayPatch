@@ -137,7 +137,7 @@ REM ========================================================================
 call :log "[5/8] Patching monster stats in BLAZE.ALL..."
 call :log ""
 
-py -3 Data\monster_stats\patch_monster_stats.py >> "%LOGFILE%" 2>&1
+py -3 Data\monster_stats\scripts\patch_monster_stats.py >> "%LOGFILE%" 2>&1
 if errorlevel 1 (
     call :log ""
     call :log "[ERROR] Monster stats patch failed!"
