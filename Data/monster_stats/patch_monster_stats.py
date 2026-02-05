@@ -84,7 +84,7 @@ def patch_stats(data: bytearray, name_offset: int, stats: dict, name: str) -> bo
 
 
 def patch_spell_table(data: bytearray, name_offset: int, spell_table: dict, name: str) -> bool:
-    """Patch monster spell table in data"""
+    """Patch monster spell table in data using relative offset from monster name"""
     if not spell_table:
         return False
 
@@ -92,19 +92,13 @@ def patch_spell_table(data: bytearray, name_offset: int, spell_table: dict, name
     if not raw_ids:
         return False
 
-    # Get offset from spell_table data
-    offset_hex = spell_table.get('offset_hex', '')
-    if offset_hex:
-        # Use absolute offset from JSON
-        write_offset = int(offset_hex, 16)
-    else:
-        # Fallback: use relative offset
-        offset_relative = spell_table.get('offset_relative', '')
-        if offset_relative:
-            rel = int(offset_relative.replace('+', ''), 16)
-            write_offset = name_offset + rel
-        else:
-            return False
+    # Always use relative offset for patching (works with all monster instances)
+    offset_relative = spell_table.get('offset_relative', '')
+    if not offset_relative:
+        return False
+
+    rel = int(offset_relative.replace('+', ''), 16)
+    write_offset = name_offset + rel
 
     if write_offset + len(raw_ids) * 2 > len(data):
         return False
@@ -187,13 +181,15 @@ def main():
             for offset in offsets:
                 patch_stats(blaze_data, offset, stats, name)
 
-            # Patch spell table (uses absolute offset, so only once)
-            spell_patched = False
+            # Patch spell table at ALL occurrences (using relative offset)
+            spell_patched = 0
             if spell_table and spell_table.get('raw_ids'):
-                spell_patched = patch_spell_table(blaze_data, offsets[0], spell_table, name)
+                for offset in offsets:
+                    if patch_spell_table(blaze_data, offset, spell_table, name):
+                        spell_patched += 1
 
             total_patched += len(offsets)
-            spell_info = " + spells" if spell_patched else ""
+            spell_info = f" + {spell_patched} spell table{'s' if spell_patched > 1 else ''}" if spell_patched else ""
             print(f"  {name}: patched {len(offsets)} occurrence{'s' if len(offsets) > 1 else ''}{spell_info}")
 
         except Exception as e:

@@ -55,26 +55,21 @@
   },
   "id": 59,
   "spell_table": {
-    "offset_hex": "0x1498844",
-    "offset_relative": "+0x5CC",
+    "offset_hex": "0x197CA20",
+    "offset_relative": "+0x7FC",
     "raw_ids": [
-      9,
-      9,
-      10,
-      10,
-      11,
-      11,
-      12,
-      12,
-      16
+      27,
+      27,
+      27,
+      27,
+      27,
+      27,
+      27,
+      27
     ],
-    "_raw_ids_comment": "IDs des sorts répétés = probabilité (voir spell_index.json)",
+    "_raw_ids_comment": "TEST: Meteor x8 (original: 8,8,9,9,10,10,11,12)",
     "spells": {
-      "9": "Enchant Fire (22%)",
-      "10": "Blaze (22%)",
-      "11": "Lightningbolt (22%)",
-      "12": "Blizzard (22%)",
-      "16": "Shining (11%)"
+      "27": "Meteor (100%)"
     },
     "_spells_comment": "ID: Nom du sort (probabilité)"
   }
