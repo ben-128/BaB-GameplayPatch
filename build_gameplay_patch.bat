@@ -33,10 +33,11 @@ echo Ce script va:
 echo   1. Copier BLAZE.ALL clean depuis extract vers work
 echo   2. Patcher les prix Fate Coin Shop dans BLAZE.ALL
 echo   3. Patcher les descriptions d'items dans BLAZE.ALL
-echo   4. Patcher les stats des monstres dans BLAZE.ALL
-echo   5. Creer le BIN patche a partir du BIN clean original
-echo   6. Injecter BLAZE.ALL dans le BIN (2 emplacements)
-echo   7. Mettre a jour la documentation
+echo   4. Patcher les prix d'enchere (base a 0) dans BLAZE.ALL
+echo   5. Patcher les stats des monstres dans BLAZE.ALL
+echo   6. Creer le BIN patche a partir du BIN clean original
+echo   7. Injecter BLAZE.ALL dans le BIN (2 emplacements)
+echo   8. Mettre a jour la documentation
 echo.
 echo ========================================================================
 echo.
@@ -48,7 +49,7 @@ type "%LOGFILE%"
 REM ========================================================================
 REM Step 1: Copy clean BLAZE.ALL from extract to work
 REM ========================================================================
-call :log "[1/7] Copying clean BLAZE.ALL from extract to work..."
+call :log "[1/8] Copying clean BLAZE.ALL from extract to work..."
 call :log ""
 
 set CLEAN_BLAZE=%~dp0Blaze  Blade - Eternal Quest (Europe)\extract\BLAZE.ALL
@@ -73,7 +74,7 @@ call :log ""
 REM ========================================================================
 REM Step 2: Patch Fate Coin Shop prices
 REM ========================================================================
-call :log "[2/7] Patching Fate Coin Shop prices..."
+call :log "[2/8] Patching Fate Coin Shop prices..."
 call :log ""
 
 py -3 Data\fate_coin_shop\patch_fate_coin_shop.py >> "%LOGFILE%" 2>&1
@@ -90,7 +91,7 @@ call :log ""
 REM ========================================================================
 REM Step 3: Patch Items descriptions
 REM ========================================================================
-call :log "[3/7] Patching Items descriptions in BLAZE.ALL..."
+call :log "[3/8] Patching Items descriptions in BLAZE.ALL..."
 call :log ""
 
 cd Data\items
@@ -114,9 +115,26 @@ call :log "[OK] Items descriptions patched (%ITEMS_PATCHED% items)"
 call :log ""
 
 REM ========================================================================
-REM Step 4: Patch monster stats in BLAZE.ALL
+REM Step 4: Patch auction base prices to 0
 REM ========================================================================
-call :log "[4/7] Patching monster stats in BLAZE.ALL..."
+call :log "[4/8] Patching auction base prices (set to 0)..."
+call :log ""
+
+py -3 Data\auction_prices\patch_auction_base_prices.py >> "%LOGFILE%" 2>&1
+if errorlevel 1 (
+    call :log ""
+    call :log "[ERROR] Auction base prices patch failed!"
+    goto :error
+)
+
+call :log ""
+call :log "[OK] Auction base prices set to 0"
+call :log ""
+
+REM ========================================================================
+REM Step 5: Patch monster stats in BLAZE.ALL
+REM ========================================================================
+call :log "[5/8] Patching monster stats in BLAZE.ALL..."
 call :log ""
 
 py -3 Data\monster_stats\patch_monster_stats.py >> "%LOGFILE%" 2>&1
@@ -131,9 +149,9 @@ call :log "[OK] Monster stats patched in BLAZE.ALL"
 call :log ""
 
 REM ========================================================================
-REM Step 5: Create fresh patched BIN from clean original
+REM Step 6: Create fresh patched BIN from clean original
 REM ========================================================================
-call :log "[5/7] Creating fresh patched BIN from clean original..."
+call :log "[6/8] Creating fresh patched BIN from clean original..."
 call :log ""
 
 set CLEAN_BIN=%~dp0Blaze  Blade - Eternal Quest (Europe)\Blaze ^& Blade - Eternal Quest (Europe).bin
@@ -157,9 +175,9 @@ call :log "[OK] Fresh patched BIN created from clean original"
 call :log ""
 
 REM ========================================================================
-REM Step 6: Inject BLAZE.ALL into BIN (2 locations)
+REM Step 7: Inject BLAZE.ALL into BIN (2 locations)
 REM ========================================================================
-call :log "[6/7] Injecting BLAZE.ALL into BIN (2 locations)..."
+call :log "[7/8] Injecting BLAZE.ALL into BIN (2 locations)..."
 call :log ""
 
 py -3 patch_blaze_all.py >> "%LOGFILE%" 2>&1
@@ -174,12 +192,12 @@ call :log "[OK] BLAZE.ALL injected into BIN"
 call :log ""
 
 REM ========================================================================
-REM Step 7: Update documentation
+REM Step 8: Update documentation
 REM ========================================================================
-call :log "[7/7] Updating documentation..."
+call :log "[8/8] Updating documentation..."
 call :log ""
 
-py -3 -c "from pathlib import Path; from datetime import datetime; import sys; items_count = sys.argv[1]; readme = Path('README.md'); content = readme.read_text(encoding='utf-8'); patch_info = f'\n## Last Patch Build\n\n**Date:** {datetime.now().strftime(\"%%Y-%%m-%%d %%H:%%M:%%S\")}\n\n**Patches Applied:**\n- Fate Coin Shop prices adjusted\n- Items descriptions updated ({items_count} items)\n- Monster stats balanced\n- BLAZE.ALL integrated\n\n**Source:** Blaze & Blade - Eternal Quest (Europe).bin\n**Output:** output/Blaze & Blade - Patched.bin\n\n'; import re; content = re.sub(r'## Last Patch Build.*?(?=##|\Z)', patch_info, content, flags=re.DOTALL) if '## Last Patch Build' in content else content + patch_info; readme.write_text(content, encoding='utf-8'); print('[OK] README.md updated')" %ITEMS_PATCHED% >> "%LOGFILE%" 2>&1
+py -3 -c "from pathlib import Path; from datetime import datetime; import sys; items_count = sys.argv[1]; readme = Path('README.md'); content = readme.read_text(encoding='utf-8'); patch_info = f'\n## Last Patch Build\n\n**Date:** {datetime.now().strftime(\"%%Y-%%m-%%d %%H:%%M:%%S\")}\n\n**Patches Applied:**\n- Fate Coin Shop prices adjusted\n- Items descriptions updated ({items_count} items)\n- Auction base prices set to 0 (lower sell prices)\n- Monster stats balanced\n- BLAZE.ALL integrated\n\n**Source:** Blaze & Blade - Eternal Quest (Europe).bin\n**Output:** output/Blaze & Blade - Patched.bin\n\n'; import re; content = re.sub(r'## Last Patch Build.*?(?=##|\Z)', patch_info, content, flags=re.DOTALL) if '## Last Patch Build' in content else content + patch_info; readme.write_text(content, encoding='utf-8'); print('[OK] README.md updated')" %ITEMS_PATCHED% >> "%LOGFILE%" 2>&1
 
 if errorlevel 1 (
     call :log "[WARNING] Could not update README.md"
