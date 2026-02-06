@@ -1,0 +1,13 @@
+{
+  "level_name": "The Sealed Cave",
+  "name": "Area 10",
+  "group_offset": "0x1DF99A0",
+  "monsters": [
+    "Black-Durahan",
+    "Undead-Master",
+    "Revenant",
+    "Blood-Shadow"
+  ],
+  "formation_count": 0,
+  "formations": []
+}

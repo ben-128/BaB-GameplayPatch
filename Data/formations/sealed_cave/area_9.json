@@ -1,0 +1,16 @@
+{
+  "level_name": "The Sealed Cave",
+  "name": "Area 9",
+  "group_offset": "0x1DF51E4",
+  "monsters": [
+    "Undead-Knight",
+    "Shadow",
+    "Mummy",
+    "Revenant",
+    "Yellow-Slime",
+    "Noble-Mummy",
+    "King-Mummy"
+  ],
+  "formation_count": 0,
+  "formations": []
+}

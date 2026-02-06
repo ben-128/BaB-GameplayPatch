@@ -1,0 +1,77 @@
+{
+  "level_name": "Cavern of Death",
+  "name": "Floor 4 - Area 1",
+  "group_offset": "0xF8B1A0",
+  "monsters": [
+    "Cave-Scissors",
+    "Killer-Fish",
+    "Spirit-Ball",
+    "Blue-Slime"
+  ],
+  "formation_count": 4,
+  "formations": [
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 0,
+          "monster": "Cave-Scissors"
+        }
+      ],
+      "slots": [
+        0,
+        0,
+        0
+      ],
+      "offset": "0xF8B7B4"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 1,
+          "monster": "Killer-Fish"
+        }
+      ],
+      "slots": [
+        1,
+        1,
+        1
+      ],
+      "offset": "0xF8B818"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 2,
+          "monster": "Spirit-Ball"
+        }
+      ],
+      "slots": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "offset": "0xF8B87C"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 3,
+          "monster": "Blue-Slime"
+        }
+      ],
+      "slots": [
+        3
+      ],
+      "offset": "0xF8B900"
+    }
+  ]
+}

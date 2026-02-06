@@ -1,0 +1,79 @@
+{
+  "level_name": "The Sealed Cave",
+  "name": "Area 2",
+  "group_offset": "0x1DDC974",
+  "monsters": [
+    "Skeleton",
+    "Zombie",
+    "Ghoul"
+  ],
+  "formation_count": 4,
+  "formations": [
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Skeleton"
+        }
+      ],
+      "slots": [
+        0,
+        0
+      ],
+      "offset": "0x1DDD84C"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Zombie"
+        }
+      ],
+      "slots": [
+        1,
+        1
+      ],
+      "offset": "0x1DDD890"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 0,
+          "monster": "Skeleton"
+        },
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Zombie"
+        }
+      ],
+      "slots": [
+        0,
+        1,
+        1
+      ],
+      "offset": "0x1DDD8D4"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 2,
+          "monster": "Ghoul"
+        }
+      ],
+      "slots": [
+        2,
+        2
+      ],
+      "offset": "0x1DDD938"
+    }
+  ]
+}

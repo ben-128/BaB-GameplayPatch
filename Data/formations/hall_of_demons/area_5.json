@@ -1,0 +1,11 @@
+{
+  "level_name": "Hall of Demons",
+  "name": "Area 5",
+  "group_offset": "0x2BF71C0",
+  "monsters": [
+    "Zombie-Dragon",
+    "Evil-Ball"
+  ],
+  "formation_count": 0,
+  "formations": []
+}

@@ -1,0 +1,80 @@
+{
+  "level_name": "The Tower (Old Palace)",
+  "name": "Area 2",
+  "group_offset": "0x196E1A8",
+  "monsters": [
+    "Lv30.Goblin",
+    "Goblin-Shaman",
+    "Green-Slime",
+    "Guard-Golem"
+  ],
+  "formation_count": 4,
+  "formations": [
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Lv30.Goblin"
+        }
+      ],
+      "slots": [
+        0,
+        0
+      ],
+      "offset": "0x196EC0C"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Goblin-Shaman"
+        }
+      ],
+      "slots": [
+        1,
+        1
+      ],
+      "offset": "0x196EC50"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 2,
+          "monster": "Green-Slime"
+        }
+      ],
+      "slots": [
+        2,
+        2
+      ],
+      "offset": "0x196EC94"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Lv30.Goblin"
+        },
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Goblin-Shaman"
+        }
+      ],
+      "slots": [
+        0,
+        0,
+        1
+      ],
+      "offset": "0x196ECD8"
+    }
+  ]
+}

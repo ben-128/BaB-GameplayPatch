@@ -1,0 +1,12 @@
+{
+  "level_name": "Castle of Vamp",
+  "name": "Floor 5 - Area 5",
+  "group_offset": "0x243397C",
+  "monsters": [
+    "Vampire-Lord",
+    "Vampire-Lord",
+    "Succubus"
+  ],
+  "formation_count": 0,
+  "formations": []
+}

@@ -1,0 +1,76 @@
+{
+  "level_name": "The Tower (Old Palace)",
+  "name": "Area 3",
+  "group_offset": "0x1973158",
+  "monsters": [
+    "Crimson-Lizard",
+    "Gargoyle"
+  ],
+  "formation_count": 4,
+  "formations": [
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 0,
+          "monster": "Crimson-Lizard"
+        }
+      ],
+      "slots": [
+        0
+      ],
+      "offset": "0x19737A4"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Gargoyle"
+        }
+      ],
+      "slots": [
+        1
+      ],
+      "offset": "0x19737C8"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Crimson-Lizard"
+        }
+      ],
+      "slots": [
+        0,
+        0
+      ],
+      "offset": "0x19737EC"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 0,
+          "monster": "Crimson-Lizard"
+        },
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Gargoyle"
+        }
+      ],
+      "slots": [
+        0,
+        1,
+        1
+      ],
+      "offset": "0x1973830"
+    }
+  ]
+}

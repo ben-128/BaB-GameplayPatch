@@ -7,6 +7,7 @@ Patches formation template slot indices (byte[8]) in BLAZE.ALL.
 Edit the "slots" arrays in the formation JSONs, then run this script.
 Only byte[8] (monster slot index) is patched - record count stays the same.
 
+Reads from: Data/formations/<level>/<area>.json
 Usage: py -3 Data/formations/patch_formations.py
 """
 
@@ -30,7 +31,7 @@ MARKER_BYTE_OFFSET = 9
 MARKER_VALUE = 0xFF
 
 
-def verify_record(data, offset, expected_slot=None):
+def verify_record(data, offset):
     """Verify that a valid formation template record exists at offset."""
     if offset + RECORD_SIZE > len(data):
         return False, "offset out of bounds"
@@ -101,6 +102,17 @@ def patch_area_formations(data, area):
     return patched, errors
 
 
+def find_area_jsons():
+    """Find all area JSONs in level subdirectories."""
+    results = []
+    for level_dir in sorted(FORMATIONS_DIR.iterdir()):
+        if not level_dir.is_dir():
+            continue
+        for json_file in sorted(level_dir.glob("*.json")):
+            results.append(json_file)
+    return results
+
+
 def main():
     print("=" * 60)
     print("  Formation Template Patcher")
@@ -117,53 +129,51 @@ def main():
     print("  Size: {:,} bytes".format(len(data)))
     print()
 
-    # Find all formation JSONs
-    json_files = sorted(FORMATIONS_DIR.glob("*.json"))
+    # Find all area JSONs in level subdirectories
+    json_files = find_area_jsons()
     if not json_files:
         print("No formation JSON files found in {}".format(FORMATIONS_DIR))
         return 1
 
-    print("Found {} level files".format(len(json_files)))
+    print("Found {} area files".format(len(json_files)))
     print()
 
     total_patched = 0
     total_errors = 0
     total_formations = 0
+    current_level = None
 
     for json_file in json_files:
         with open(json_file, 'r', encoding='utf-8') as f:
-            level_data = json.load(f)
+            area = json.load(f)
 
-        level_name = level_data.get("level_name", json_file.stem)
-        areas = level_data.get("areas", [])
-
-        # Skip levels with no formations to patch
-        has_formations = any(a.get("formations") for a in areas)
-        if not has_formations:
+        level_name = area.get("level_name", json_file.parent.name)
+        formations = area.get("formations", [])
+        if not formations:
             continue
 
-        print("--- {} ---".format(level_name))
+        # Print level header when it changes
+        if level_name != current_level:
+            if current_level is not None:
+                print()
+            print("--- {} ---".format(level_name))
+            current_level = level_name
 
-        for area in areas:
-            formations = area.get("formations", [])
-            if not formations:
-                continue
+        area_name = area["name"]
+        total_formations += len(formations)
 
-            area_name = area["name"]
-            total_formations += len(formations)
+        patched, errors = patch_area_formations(data, area)
+        total_patched += patched
+        total_errors += errors
 
-            patched, errors = patch_area_formations(data, area)
-            total_patched += patched
-            total_errors += errors
+        if patched == 0 and errors == 0:
+            print("  {}: {} formations (no changes)".format(
+                area_name, len(formations)))
+        elif errors > 0:
+            print("  {}: {} patched, {} ERRORS".format(
+                area_name, patched, errors))
 
-            if patched == 0 and errors == 0:
-                print("  {}: {} formations (no changes)".format(
-                    area_name, len(formations)))
-            elif errors > 0:
-                print("  {}: {} patched, {} ERRORS".format(
-                    area_name, patched, errors))
-
-        print()
+    print()
 
     # Write back
     if total_errors > 0:

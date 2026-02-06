@@ -1,0 +1,89 @@
+{
+  "level_name": "Castle of Vamp",
+  "name": "Floor 3 - Area 1",
+  "group_offset": "0x2414974",
+  "monsters": [
+    "Ghost",
+    "Harpy",
+    "Blood-Skeleton"
+  ],
+  "formation_count": 4,
+  "formations": [
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 0,
+          "monster": "Ghost"
+        }
+      ],
+      "slots": [
+        0,
+        0,
+        0
+      ],
+      "offset": "0x2414EDC"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 1,
+          "monster": "Harpy"
+        }
+      ],
+      "slots": [
+        1,
+        1,
+        1
+      ],
+      "offset": "0x2414F40"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 2,
+          "monster": "Blood-Skeleton"
+        }
+      ],
+      "slots": [
+        2,
+        2,
+        2
+      ],
+      "offset": "0x2414FA4"
+    },
+    {
+      "total": 5,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Ghost"
+        },
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Harpy"
+        },
+        {
+          "count": 2,
+          "slot": 2,
+          "monster": "Blood-Skeleton"
+        }
+      ],
+      "slots": [
+        0,
+        0,
+        1,
+        2,
+        2
+      ],
+      "offset": "0x2415008"
+    }
+  ]
+}

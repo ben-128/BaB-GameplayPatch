@@ -1,0 +1,42 @@
+{
+  "level_name": "Ancient Ruins",
+  "name": "Area 2",
+  "group_offset": "0x2517158",
+  "monsters": [
+    "Chimera",
+    "Metal-Slime"
+  ],
+  "formation_count": 2,
+  "formations": [
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Chimera"
+        }
+      ],
+      "slots": [
+        0,
+        0
+      ],
+      "offset": "0x2517590"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Metal-Slime"
+        }
+      ],
+      "slots": [
+        1,
+        1
+      ],
+      "offset": "0x25175D4"
+    }
+  ]
+}

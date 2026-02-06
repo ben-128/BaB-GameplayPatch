@@ -1,0 +1,14 @@
+{
+  "level_name": "The Tower (Old Palace)",
+  "name": "Area 7",
+  "group_offset": "0x19859B4",
+  "monsters": [
+    "Dark-Magi",
+    "Stalker",
+    "Black-Knight",
+    "Living-Sword",
+    "Living-Armor"
+  ],
+  "formation_count": 0,
+  "formations": []
+}

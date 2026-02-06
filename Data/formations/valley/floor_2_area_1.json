@@ -1,0 +1,11 @@
+{
+  "level_name": "Valley of White Wind",
+  "name": "Floor 2 - Area 1",
+  "group_offset": "0x25D2958",
+  "monsters": [
+    "Hippogriff",
+    "Griffin"
+  ],
+  "formation_count": 0,
+  "formations": []
+}

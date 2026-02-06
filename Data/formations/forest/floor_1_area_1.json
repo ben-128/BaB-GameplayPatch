@@ -1,0 +1,132 @@
+{
+  "level_name": "The Forest",
+  "name": "Floor 1 - Area 1",
+  "group_offset": "0x148C184",
+  "monsters": [
+    "Kobold",
+    "Giant-Beetle",
+    "Giant-Ant"
+  ],
+  "formation_count": 6,
+  "formations": [
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 0,
+          "monster": "Kobold"
+        }
+      ],
+      "slots": [
+        0,
+        0,
+        0
+      ],
+      "offset": "0x148CCC4"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Giant-Beetle"
+        },
+        {
+          "count": 2,
+          "slot": 2,
+          "monster": "Giant-Ant"
+        }
+      ],
+      "slots": [
+        2,
+        2,
+        1
+      ],
+      "offset": "0x148CD28"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Giant-Beetle"
+        },
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Giant-Ant"
+        }
+      ],
+      "slots": [
+        1,
+        1,
+        2
+      ],
+      "offset": "0x148CD8C"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 1,
+          "monster": "Giant-Beetle"
+        }
+      ],
+      "slots": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "offset": "0x148CDF0"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Kobold"
+        },
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Giant-Ant"
+        }
+      ],
+      "slots": [
+        0,
+        0,
+        2
+      ],
+      "offset": "0x148CE74"
+    },
+    {
+      "total": 5,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 0,
+          "monster": "Kobold"
+        },
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Giant-Beetle"
+        }
+      ],
+      "slots": [
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "offset": "0x148CED8"
+    }
+  ]
+}

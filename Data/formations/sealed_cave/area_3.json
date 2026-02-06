@@ -1,0 +1,13 @@
+{
+  "level_name": "The Sealed Cave",
+  "name": "Area 3",
+  "group_offset": "0x1DE1998",
+  "monsters": [
+    "Skeleton",
+    "Zombie",
+    "Ghoul",
+    "Wight"
+  ],
+  "formation_count": 0,
+  "formations": []
+}

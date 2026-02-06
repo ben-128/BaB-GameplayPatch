@@ -1,0 +1,28 @@
+{
+  "level_name": "Ancient Ruins",
+  "name": "Area 1",
+  "group_offset": "0x2514984",
+  "monsters": [
+    "Gargoyle",
+    "Metal-Ball",
+    "Wolf"
+  ],
+  "formation_count": 1,
+  "formations": [
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Gargoyle"
+        }
+      ],
+      "slots": [
+        0,
+        0
+      ],
+      "offset": "0x25150E0"
+    }
+  ]
+}

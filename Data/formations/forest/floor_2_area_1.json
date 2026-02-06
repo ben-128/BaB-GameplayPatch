@@ -1,0 +1,47 @@
+{
+  "level_name": "The Forest",
+  "name": "Floor 2 - Area 1",
+  "group_offset": "0x14A21C8",
+  "monsters": [
+    "OwlBear",
+    "Killer-Bee",
+    "Killer-Bear",
+    "Killer-Bear"
+  ],
+  "formation_count": 2,
+  "formations": [
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 2,
+          "monster": "Killer-Bear"
+        }
+      ],
+      "slots": [
+        2,
+        2
+      ],
+      "offset": "0x14A2A4C"
+    },
+    {
+      "total": 5,
+      "composition": [
+        {
+          "count": 5,
+          "slot": 1,
+          "monster": "Killer-Bee"
+        }
+      ],
+      "slots": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "offset": "0x14A2A90"
+    }
+  ]
+}

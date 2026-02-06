@@ -1,0 +1,13 @@
+{
+  "level_name": "Cavern of Death",
+  "name": "Floor 7 - Area 1",
+  "group_offset": "0xF8E9A0",
+  "monsters": [
+    "Cave-Bear",
+    "Blue-Slime",
+    "Spirit-Ball",
+    "Ogre"
+  ],
+  "formation_count": 0,
+  "formations": []
+}

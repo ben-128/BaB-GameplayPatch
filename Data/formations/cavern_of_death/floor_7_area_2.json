@@ -1,0 +1,110 @@
+{
+  "level_name": "Cavern of Death",
+  "name": "Floor 7 - Area 2",
+  "group_offset": "0xF911A0",
+  "monsters": [
+    "Cave-Bear",
+    "Blue-Slime",
+    "Spirit-Ball",
+    "Ogre"
+  ],
+  "formation_count": 5,
+  "formations": [
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Cave-Bear"
+        },
+        {
+          "count": 2,
+          "slot": 2,
+          "monster": "Spirit-Ball"
+        }
+      ],
+      "slots": [
+        0,
+        0,
+        2,
+        2
+      ],
+      "offset": "0xF91910"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 1,
+          "monster": "Blue-Slime"
+        }
+      ],
+      "slots": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "offset": "0xF91994"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 2,
+          "monster": "Spirit-Ball"
+        }
+      ],
+      "slots": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "offset": "0xF91A18"
+    },
+    {
+      "total": 6,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Blue-Slime"
+        },
+        {
+          "count": 4,
+          "slot": 2,
+          "monster": "Spirit-Ball"
+        }
+      ],
+      "slots": [
+        1,
+        1,
+        2,
+        2,
+        2,
+        2
+      ],
+      "offset": "0xF91A9C"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 3,
+          "monster": "Ogre"
+        }
+      ],
+      "slots": [
+        3,
+        3,
+        3
+      ],
+      "offset": "0xF91B60"
+    }
+  ]
+}

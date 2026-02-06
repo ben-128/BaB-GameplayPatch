@@ -1,0 +1,109 @@
+{
+  "level_name": "Castle of Vamp",
+  "name": "Floor 3 - Area 2",
+  "group_offset": "0x2416190",
+  "monsters": [
+    "Ghost",
+    "Harpy",
+    "Blood-Skeleton",
+    "Silver-Wolf"
+  ],
+  "formation_count": 5,
+  "formations": [
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Ghost"
+        }
+      ],
+      "slots": [
+        0,
+        0
+      ],
+      "offset": "0x24167AC"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 1,
+          "monster": "Harpy"
+        }
+      ],
+      "slots": [
+        1,
+        1,
+        1
+      ],
+      "offset": "0x24167F0"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 2,
+          "monster": "Blood-Skeleton"
+        }
+      ],
+      "slots": [
+        2,
+        2,
+        2
+      ],
+      "offset": "0x2416854"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 3,
+          "monster": "Silver-Wolf"
+        }
+      ],
+      "slots": [
+        3,
+        3,
+        3
+      ],
+      "offset": "0x24168B8"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 0,
+          "monster": "Ghost"
+        },
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Harpy"
+        },
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Blood-Skeleton"
+        },
+        {
+          "count": 1,
+          "slot": 3,
+          "monster": "Silver-Wolf"
+        }
+      ],
+      "slots": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "offset": "0x241691C"
+    }
+  ]
+}

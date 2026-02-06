@@ -1,0 +1,29 @@
+{
+  "level_name": "The Tower (Old Palace)",
+  "name": "Area 8",
+  "group_offset": "0x198A99C",
+  "monsters": [
+    "Living-Armor",
+    "Dark-Elf",
+    "Wyvern"
+  ],
+  "formation_count": 1,
+  "formations": [
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 0,
+          "monster": "Living-Armor"
+        }
+      ],
+      "slots": [
+        0,
+        0,
+        0
+      ],
+      "offset": "0x198B79C"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "level_name": "The Sealed Cave",
+  "name": "Area 7",
+  "group_offset": "0x1DEF1A0",
+  "monsters": [
+    "Undead-Knight",
+    "Shadow",
+    "Mummy",
+    "Revenant"
+  ],
+  "formation_count": 4,
+  "formations": [
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Undead-Knight"
+        }
+      ],
+      "slots": [
+        0,
+        0
+      ],
+      "offset": "0x1DEFAE0"
+    },
+    {
+      "total": 6,
+      "composition": [
+        {
+          "count": 6,
+          "slot": 1,
+          "monster": "Shadow"
+        }
+      ],
+      "slots": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "offset": "0x1DEFB24"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 2,
+          "monster": "Mummy"
+        }
+      ],
+      "slots": [
+        2,
+        2
+      ],
+      "offset": "0x1DEFBE8"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 3,
+          "monster": "Revenant"
+        }
+      ],
+      "slots": [
+        3,
+        3
+      ],
+      "offset": "0x1DEFC2C"
+    }
+  ]
+}

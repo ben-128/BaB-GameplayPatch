@@ -1,0 +1,12 @@
+{
+  "level_name": "The Tower (Old Palace)",
+  "name": "Area 10",
+  "group_offset": "0x199518C",
+  "monsters": [
+    "Platinum-Knight",
+    "Dark-Wizard",
+    "Shadow-Demon"
+  ],
+  "formation_count": 0,
+  "formations": []
+}

@@ -1,0 +1,76 @@
+{
+  "level_name": "Hall of Demons",
+  "name": "Area 8",
+  "group_offset": "0x2C0017C",
+  "monsters": [
+    "Salamander",
+    "Hell-Hound",
+    "Hell-Ogre"
+  ],
+  "formation_count": 4,
+  "formations": [
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 1,
+          "monster": "Hell-Hound"
+        }
+      ],
+      "slots": [
+        1,
+        1,
+        1
+      ],
+      "offset": "0x2C00EDC"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 2,
+          "monster": "Hell-Ogre"
+        }
+      ],
+      "slots": [
+        2,
+        2
+      ],
+      "offset": "0x2C00F40"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 0,
+          "monster": "Salamander"
+        }
+      ],
+      "slots": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "offset": "0x2C00F84"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Salamander"
+        }
+      ],
+      "slots": [
+        0,
+        0
+      ],
+      "offset": "0x2C01028"
+    }
+  ]
+}

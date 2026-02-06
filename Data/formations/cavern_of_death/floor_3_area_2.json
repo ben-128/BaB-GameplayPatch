@@ -1,0 +1,14 @@
+{
+  "level_name": "Cavern of Death",
+  "name": "Floor 3 - Area 2",
+  "group_offset": "0xF87A04",
+  "monsters": [
+    "Giant-Scorpion",
+    "Giant-Centipede",
+    "Dragon-Puppy",
+    "Giant-Spider",
+    "Cave-Bear"
+  ],
+  "formation_count": 0,
+  "formations": []
+}

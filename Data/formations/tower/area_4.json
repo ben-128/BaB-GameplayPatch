@@ -1,0 +1,12 @@
+{
+  "level_name": "The Tower (Old Palace)",
+  "name": "Area 4",
+  "group_offset": "0x197619C",
+  "monsters": [
+    "Dark-Magi",
+    "Dark-Elf",
+    "Goblin-Fly"
+  ],
+  "formation_count": 0,
+  "formations": []
+}

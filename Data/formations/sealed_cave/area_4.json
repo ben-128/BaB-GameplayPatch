@@ -1,0 +1,77 @@
+{
+  "level_name": "The Sealed Cave",
+  "name": "Area 4",
+  "group_offset": "0x1DE597C",
+  "monsters": [
+    "Red-Slime",
+    "Wraith",
+    "Blood-Skeleton"
+  ],
+  "formation_count": 4,
+  "formations": [
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 0,
+          "monster": "Red-Slime"
+        }
+      ],
+      "slots": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "offset": "0x1DE6148"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Wraith"
+        }
+      ],
+      "slots": [
+        1,
+        1
+      ],
+      "offset": "0x1DE61CC"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 2,
+          "monster": "Blood-Skeleton"
+        }
+      ],
+      "slots": [
+        2,
+        2,
+        2
+      ],
+      "offset": "0x1DE6210"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 1,
+          "monster": "Wraith"
+        }
+      ],
+      "slots": [
+        1,
+        1,
+        1
+      ],
+      "offset": "0x1DE6274"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "level_name": "Hall of Demons",
+  "name": "Area 9",
+  "group_offset": "0x2C03158",
+  "monsters": [
+    "Gray-Arm",
+    "Hell-Ogre",
+    "Succubus"
+  ],
+  "formation_count": 4,
+  "formations": [
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 0,
+          "monster": "Gray-Arm"
+        }
+      ],
+      "slots": [
+        0,
+        0,
+        0
+      ],
+      "offset": "0x2C03EE0"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Gray-Arm"
+        }
+      ],
+      "slots": [
+        0,
+        0
+      ],
+      "offset": "0x2C03F44"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Hell-Ogre"
+        }
+      ],
+      "slots": [
+        1,
+        1
+      ],
+      "offset": "0x2C03F88"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 0,
+          "monster": "Gray-Arm"
+        },
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Hell-Ogre"
+        }
+      ],
+      "slots": [
+        0,
+        1,
+        1
+      ],
+      "offset": "0x2C03FCC"
+    }
+  ]
+}

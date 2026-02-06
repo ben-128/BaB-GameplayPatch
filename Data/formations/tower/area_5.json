@@ -1,0 +1,15 @@
+{
+  "level_name": "The Tower (Old Palace)",
+  "name": "Area 5",
+  "group_offset": "0x197C1C4",
+  "monsters": [
+    "Lv30.Goblin",
+    "Goblin-Shaman",
+    "Green-Slime",
+    "Lizard-Man",
+    "Gargoyle",
+    "Crimson-Lizard"
+  ],
+  "formation_count": 0,
+  "formations": []
+}

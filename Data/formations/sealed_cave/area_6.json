@@ -1,0 +1,71 @@
+{
+  "level_name": "The Sealed Cave",
+  "name": "Area 6",
+  "group_offset": "0x1DEB1B8",
+  "monsters": [
+    "Mummy",
+    "Blood-Mummy",
+    "Wraith",
+    "Red-Slime",
+    "Undead-Knight"
+  ],
+  "formation_count": 3,
+  "formations": [
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 1,
+          "monster": "Blood-Mummy"
+        }
+      ],
+      "slots": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "offset": "0x1DEBDF0"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 2,
+          "monster": "Wraith"
+        }
+      ],
+      "slots": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "offset": "0x1DEBE74"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Blood-Mummy"
+        },
+        {
+          "count": 2,
+          "slot": 3,
+          "monster": "Red-Slime"
+        }
+      ],
+      "slots": [
+        1,
+        1,
+        3,
+        3
+      ],
+      "offset": "0x1DEBEF8"
+    }
+  ]
+}

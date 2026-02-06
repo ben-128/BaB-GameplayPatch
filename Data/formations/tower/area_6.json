@@ -1,0 +1,86 @@
+{
+  "level_name": "The Tower (Old Palace)",
+  "name": "Area 6",
+  "group_offset": "0x1981990",
+  "monsters": [
+    "Gargoyle",
+    "Born-Golem",
+    "Stalker",
+    "Black-Knight"
+  ],
+  "formation_count": 4,
+  "formations": [
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Gargoyle"
+        }
+      ],
+      "slots": [
+        0,
+        0
+      ],
+      "offset": "0x19821E4"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Born-Golem"
+        }
+      ],
+      "slots": [
+        1,
+        1
+      ],
+      "offset": "0x1982228"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Born-Golem"
+        },
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Stalker"
+        }
+      ],
+      "slots": [
+        1,
+        1,
+        2
+      ],
+      "offset": "0x198226C"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 0,
+          "monster": "Gargoyle"
+        },
+        {
+          "count": 2,
+          "slot": 3,
+          "monster": "Black-Knight"
+        }
+      ],
+      "slots": [
+        3,
+        3,
+        0
+      ],
+      "offset": "0x19822D0"
+    }
+  ]
+}

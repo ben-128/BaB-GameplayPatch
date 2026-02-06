@@ -1,0 +1,112 @@
+{
+  "level_name": "Cavern of Death",
+  "name": "Floor 3 - Area 1",
+  "group_offset": "0xF86198",
+  "monsters": [
+    "Giant-Scorpion",
+    "Giant-Bat",
+    "Big-Viper",
+    "Giant-Spider"
+  ],
+  "formation_count": 5,
+  "formations": [
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 0,
+          "monster": "Giant-Scorpion"
+        }
+      ],
+      "slots": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "offset": "0xF86750"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 1,
+          "monster": "Giant-Bat"
+        }
+      ],
+      "slots": [
+        1,
+        1,
+        1
+      ],
+      "offset": "0xF867D4"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 2,
+          "monster": "Big-Viper"
+        }
+      ],
+      "slots": [
+        2,
+        2,
+        2
+      ],
+      "offset": "0xF86838"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 3,
+          "monster": "Giant-Spider"
+        }
+      ],
+      "slots": [
+        3,
+        3,
+        3
+      ],
+      "offset": "0xF8689C"
+    },
+    {
+      "total": 5,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Giant-Scorpion"
+        },
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Giant-Bat"
+        },
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Big-Viper"
+        },
+        {
+          "count": 1,
+          "slot": 3,
+          "monster": "Giant-Spider"
+        }
+      ],
+      "slots": [
+        0,
+        0,
+        1,
+        2,
+        3
+      ],
+      "offset": "0xF86900"
+    }
+  ]
+}

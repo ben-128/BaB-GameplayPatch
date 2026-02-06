@@ -1,0 +1,13 @@
+{
+  "level_name": "Castle of Vamp",
+  "name": "Floor 5 - Area 2",
+  "group_offset": "0x2426970",
+  "monsters": [
+    "Chimera",
+    "Lesser-Vampire",
+    "Chimera",
+    "Lesser-Vampire"
+  ],
+  "formation_count": 0,
+  "formations": []
+}

@@ -1,0 +1,72 @@
+{
+  "level_name": "Hall of Demons",
+  "name": "Area 7",
+  "group_offset": "0x2BFF17C",
+  "monsters": [
+    "Gremlin",
+    "Succubus"
+  ],
+  "formation_count": 4,
+  "formations": [
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 0,
+          "monster": "Gremlin"
+        }
+      ],
+      "slots": [
+        0,
+        0,
+        0
+      ],
+      "offset": "0x2BFF768"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Succubus"
+        }
+      ],
+      "slots": [
+        1
+      ],
+      "offset": "0x2BFF7CC"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 0,
+          "monster": "Gremlin"
+        }
+      ],
+      "slots": [
+        0,
+        0,
+        0
+      ],
+      "offset": "0x2BFFF68"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Succubus"
+        }
+      ],
+      "slots": [
+        1
+      ],
+      "offset": "0x2BFFFCC"
+    }
+  ]
+}

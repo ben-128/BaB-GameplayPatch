@@ -1,0 +1,11 @@
+{
+  "level_name": "The Forest",
+  "name": "Floor 1 - Area 5",
+  "group_offset": "0x149BA24",
+  "monsters": [
+    "Lizard-Man",
+    "Killer-Bear"
+  ],
+  "formation_count": 0,
+  "formations": []
+}

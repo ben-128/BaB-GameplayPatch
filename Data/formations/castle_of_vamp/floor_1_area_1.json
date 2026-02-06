@@ -1,0 +1,12 @@
+{
+  "level_name": "Castle of Vamp",
+  "name": "Floor 1 - Area 1",
+  "group_offset": "0x23FF1B4",
+  "monsters": [
+    "Zombie",
+    "Harpy",
+    "Wolf"
+  ],
+  "formation_count": 0,
+  "formations": []
+}

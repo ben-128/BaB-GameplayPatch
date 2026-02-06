@@ -1,0 +1,91 @@
+{
+  "level_name": "Cavern of Death",
+  "name": "Floor 2 - Area 1",
+  "group_offset": "0xF819A0",
+  "monsters": [
+    "Goblin-Shaman",
+    "Giant-Bat",
+    "Big-Viper",
+    "Goblin-Leader"
+  ],
+  "formation_count": 4,
+  "formations": [
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 1,
+          "monster": "Giant-Bat"
+        }
+      ],
+      "slots": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "offset": "0xF82340"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 2,
+          "monster": "Big-Viper"
+        }
+      ],
+      "slots": [
+        2,
+        2,
+        2
+      ],
+      "offset": "0xF823C4"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 1,
+          "monster": "Giant-Bat"
+        },
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Big-Viper"
+        }
+      ],
+      "slots": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "offset": "0xF82428"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 0,
+          "monster": "Goblin-Shaman"
+        },
+        {
+          "count": 1,
+          "slot": 3,
+          "monster": "Goblin-Leader"
+        }
+      ],
+      "slots": [
+        3,
+        0,
+        0,
+        0
+      ],
+      "offset": "0xF824AC"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "level_name": "Hall of Demons",
+  "name": "Area 4",
+  "group_offset": "0x2BF49A4",
+  "monsters": [
+    "Death-Knight",
+    "Blood-Shadow",
+    "Evil-Stalker",
+    "Gremlin",
+    "Gray-Arm"
+  ],
+  "formation_count": 5,
+  "formations": [
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 0,
+          "monster": "Death-Knight"
+        }
+      ],
+      "slots": [
+        0
+      ],
+      "offset": "0x2BF5234"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 0,
+          "monster": "Death-Knight"
+        }
+      ],
+      "slots": [
+        0,
+        0,
+        0
+      ],
+      "offset": "0x2BF5258"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 1,
+          "monster": "Blood-Shadow"
+        }
+      ],
+      "slots": [
+        1,
+        1,
+        1
+      ],
+      "offset": "0x2BF52BC"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 2,
+          "monster": "Evil-Stalker"
+        }
+      ],
+      "slots": [
+        2,
+        2,
+        2
+      ],
+      "offset": "0x2BF5320"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 3,
+          "monster": "Gremlin"
+        }
+      ],
+      "slots": [
+        3,
+        3,
+        3
+      ],
+      "offset": "0x2BF5384"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "level_name": "The Forest",
+  "name": "Floor 1 - Area 3",
+  "group_offset": "0x1494198",
+  "monsters": [
+    "Giant-Snake",
+    "Killer-Bear",
+    "Killer-Bee",
+    "Giant-Club"
+  ],
+  "formation_count": 0,
+  "formations": []
+}

@@ -1,0 +1,133 @@
+{
+  "level_name": "The Forest",
+  "name": "Floor 2 - Area 2",
+  "group_offset": "0x14AA1A0",
+  "monsters": [
+    "Lizard-Man",
+    "Trent",
+    "Poison-Flower",
+    "Black-Lizard",
+    "Will-O-The-Wisp"
+  ],
+  "formation_count": 6,
+  "formations": [
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 0,
+          "monster": "Lizard-Man"
+        },
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Trent"
+        }
+      ],
+      "slots": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "offset": "0x14AACF4"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Trent"
+        },
+        {
+          "count": 2,
+          "slot": 2,
+          "monster": "Poison-Flower"
+        }
+      ],
+      "slots": [
+        1,
+        2,
+        2
+      ],
+      "offset": "0x14AAD78"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 2,
+          "monster": "Poison-Flower"
+        }
+      ],
+      "slots": [
+        2,
+        2,
+        2
+      ],
+      "offset": "0x14AADDC"
+    },
+    {
+      "total": 5,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Lizard-Man"
+        },
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Trent"
+        },
+        {
+          "count": 2,
+          "slot": 2,
+          "monster": "Poison-Flower"
+        }
+      ],
+      "slots": [
+        0,
+        0,
+        1,
+        2,
+        2
+      ],
+      "offset": "0x14AAE40"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 3,
+          "monster": "Black-Lizard"
+        }
+      ],
+      "slots": [
+        3
+      ],
+      "offset": "0x14AAEE4"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 4,
+          "monster": "Will-O-The-Wisp"
+        }
+      ],
+      "slots": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "offset": "0x14AAF08"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "level_name": "The Forest",
+  "name": "Floor 1 - Area 4",
+  "group_offset": "0x14981B8",
+  "monsters": [
+    "Barricade",
+    "Goblin",
+    "Goblin-Shaman",
+    "Lizard-Man",
+    "Giant-Club",
+    "Wing-Fish"
+  ],
+  "formation_count": 4,
+  "formations": [
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 3,
+          "monster": "Lizard-Man"
+        }
+      ],
+      "slots": [
+        3,
+        3
+      ],
+      "offset": "0x1498CB8"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 4,
+          "monster": "Giant-Club"
+        }
+      ],
+      "slots": [
+        4,
+        4
+      ],
+      "offset": "0x1498CFC"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 3,
+          "monster": "Lizard-Man"
+        },
+        {
+          "count": 2,
+          "slot": 4,
+          "monster": "Giant-Club"
+        }
+      ],
+      "slots": [
+        3,
+        3,
+        4,
+        4
+      ],
+      "offset": "0x1498D40"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 4,
+          "monster": "Giant-Club"
+        }
+      ],
+      "slots": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "offset": "0x1498DC4"
+    }
+  ]
+}

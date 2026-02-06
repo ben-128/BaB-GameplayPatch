@@ -1,0 +1,53 @@
+{
+  "level_name": "The Tower (Old Palace)",
+  "name": "Area 11",
+  "group_offset": "0x199B228",
+  "monsters": [
+    "Arch-Magi",
+    "Hard-Born",
+    "Living-Sword",
+    "Living-Armor",
+    "Evil-Crystal"
+  ],
+  "formation_count": 2,
+  "formations": [
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Hard-Born"
+        },
+        {
+          "count": 2,
+          "slot": 2,
+          "monster": "Living-Sword"
+        }
+      ],
+      "slots": [
+        1,
+        2,
+        2
+      ],
+      "offset": "0x199C000"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 0,
+          "monster": "Arch-Magi"
+        }
+      ],
+      "slots": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "offset": "0x199C0A8"
+    }
+  ]
+}

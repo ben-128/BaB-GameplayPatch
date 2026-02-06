@@ -1,0 +1,12 @@
+{
+  "level_name": "The Forest",
+  "name": "Floor 2 - Area 4",
+  "group_offset": "0x14B316C",
+  "monsters": [
+    "Desert-Lizard",
+    "Wyrm",
+    "Giant"
+  ],
+  "formation_count": 0,
+  "formations": []
+}

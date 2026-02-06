@@ -1,0 +1,77 @@
+{
+  "level_name": "Castle of Vamp",
+  "name": "Floor 2 - Area 1",
+  "group_offset": "0x240D9B0",
+  "monsters": [
+    "Zombie",
+    "Gargoyle",
+    "Ghost",
+    "Blood-Skeleton",
+    "Marble-Gargoyle"
+  ],
+  "formation_count": 4,
+  "formations": [
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 0,
+          "monster": "Zombie"
+        }
+      ],
+      "slots": [
+        0,
+        0,
+        0
+      ],
+      "offset": "0x240E46C"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Gargoyle"
+        }
+      ],
+      "slots": [
+        1,
+        1
+      ],
+      "offset": "0x240E4D0"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 2,
+          "monster": "Ghost"
+        }
+      ],
+      "slots": [
+        2,
+        2,
+        2
+      ],
+      "offset": "0x240E514"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 3,
+          "monster": "Blood-Skeleton"
+        }
+      ],
+      "slots": [
+        3,
+        3
+      ],
+      "offset": "0x240E578"
+    }
+  ]
+}

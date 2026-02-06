@@ -1,0 +1,169 @@
+{
+  "level_name": "Cavern of Death",
+  "name": "Floor 1 - Area 1",
+  "group_offset": "0xF7A97C",
+  "monsters": [
+    "Lv20.Goblin",
+    "Goblin-Shaman",
+    "Giant-Bat"
+  ],
+  "formation_count": 8,
+  "formations": [
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 0,
+          "monster": "Lv20.Goblin"
+        }
+      ],
+      "slots": [
+        0,
+        0,
+        0
+      ],
+      "offset": "0xF7AFFC"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Lv20.Goblin"
+        },
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Goblin-Shaman"
+        }
+      ],
+      "slots": [
+        0,
+        0,
+        1
+      ],
+      "offset": "0xF7B060"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Goblin-Shaman"
+        }
+      ],
+      "slots": [
+        1,
+        1
+      ],
+      "offset": "0xF7B0C4"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 2,
+          "monster": "Giant-Bat"
+        }
+      ],
+      "slots": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "offset": "0xF7B108"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Lv20.Goblin"
+        },
+        {
+          "count": 2,
+          "slot": 2,
+          "monster": "Giant-Bat"
+        }
+      ],
+      "slots": [
+        0,
+        0,
+        2,
+        2
+      ],
+      "offset": "0xF7B18C"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 1,
+          "monster": "Goblin-Shaman"
+        }
+      ],
+      "slots": [
+        1,
+        1,
+        1
+      ],
+      "offset": "0xF7B210"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Lv20.Goblin"
+        },
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Goblin-Shaman"
+        }
+      ],
+      "slots": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "offset": "0xF7B274"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Lv20.Goblin"
+        },
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Goblin-Shaman"
+        },
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Giant-Bat"
+        }
+      ],
+      "slots": [
+        0,
+        0,
+        1,
+        2
+      ],
+      "offset": "0xF7B2F8"
+    }
+  ]
+}

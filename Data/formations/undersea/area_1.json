@@ -1,0 +1,31 @@
+{
+  "level_name": "Undersea / Lake",
+  "name": "Area 1",
+  "group_offset": "0x269B1BC",
+  "monsters": [
+    "Black-Lizard",
+    "Wyrm",
+    "Kraken-Hand",
+    "Kraken-Foot",
+    "Kraken"
+  ],
+  "formation_count": 1,
+  "formations": [
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 1,
+          "monster": "Wyrm"
+        }
+      ],
+      "slots": [
+        1,
+        1,
+        1
+      ],
+      "offset": "0x269BB50"
+    }
+  ]
+}

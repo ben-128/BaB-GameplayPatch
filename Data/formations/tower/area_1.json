@@ -1,0 +1,12 @@
+{
+  "level_name": "The Tower (Old Palace)",
+  "name": "Area 1",
+  "group_offset": "0x196A96C",
+  "monsters": [
+    "Lv30.Goblin",
+    "Goblin-Shaman",
+    "Goblin-Fly"
+  ],
+  "formation_count": 0,
+  "formations": []
+}

@@ -1,0 +1,13 @@
+{
+  "level_name": "The Forest",
+  "name": "Floor 2 - Area 3",
+  "group_offset": "0x14AF988",
+  "monsters": [
+    "Trent",
+    "Black-Lizard",
+    "Will-O-The-Wisp",
+    "Poison-Flower"
+  ],
+  "formation_count": 0,
+  "formations": []
+}

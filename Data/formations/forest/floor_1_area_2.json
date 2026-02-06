@@ -1,0 +1,14 @@
+{
+  "level_name": "The Forest",
+  "name": "Floor 1 - Area 2",
+  "group_offset": "0x14909B0",
+  "monsters": [
+    "Lv6.Kobold",
+    "Kobold",
+    "Giant-Beetle",
+    "Wing-Fish",
+    "Giant-Club"
+  ],
+  "formation_count": 0,
+  "formations": []
+}

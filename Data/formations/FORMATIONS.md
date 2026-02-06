@@ -96,29 +96,38 @@ Some areas show 0 detected formations. These are likely:
 - Cutscene/transition areas
 - Areas using a different spawn mechanism (direct script commands)
 
-## JSON Format
+## Directory Structure
 
-Each level has a JSON file with this structure:
+One JSON per area, organized in level subdirectories:
+
+```
+Data/formations/
+  cavern_of_death/
+    floor_1_area_1.json
+    floor_1_area_2.json
+    ...
+  forest/
+    floor_1_area_1.json
+    ...
+```
+
+Each area JSON:
 
 ```json
 {
   "level_name": "Cavern of Death",
-  "areas": [
+  "name": "Floor 1 - Area 1",
+  "group_offset": "0xF7A97C",
+  "monsters": ["Lv20.Goblin", "Goblin-Shaman", "Giant-Bat"],
+  "formation_count": 8,
+  "formations": [
     {
-      "name": "Floor 1 - Area 1",
-      "group_offset": "0xF7A97C",
-      "monsters": ["Lv20.Goblin", "Goblin-Shaman", "Giant-Bat"],
-      "formation_count": 8,
-      "formations": [
-        {
-          "total": 3,
-          "composition": [
-            {"count": 3, "slot": 0, "monster": "Lv20.Goblin"}
-          ],
-          "slots": [0, 0, 0],
-          "offset": "0xF7AFFC"
-        }
-      ]
+      "total": 3,
+      "composition": [
+        {"count": 3, "slot": 0, "monster": "Lv20.Goblin"}
+      ],
+      "slots": [0, 0, 0],
+      "offset": "0xF7AFFC"
     }
   ]
 }

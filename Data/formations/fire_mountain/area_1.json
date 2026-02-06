@@ -1,0 +1,28 @@
+{
+  "level_name": "Fire Mountain",
+  "name": "Area 1",
+  "group_offset": "0x102E1F8",
+  "monsters": [
+    "Red-Dragon",
+    "Salamander"
+  ],
+  "formation_count": 1,
+  "formations": [
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 1,
+          "monster": "Salamander"
+        }
+      ],
+      "slots": [
+        1,
+        1,
+        1
+      ],
+      "offset": "0x102E804"
+    }
+  ]
+}

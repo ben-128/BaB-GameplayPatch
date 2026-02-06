@@ -1,0 +1,13 @@
+{
+  "level_name": "Hall of Demons",
+  "name": "Area 6",
+  "group_offset": "0x2BFC190",
+  "monsters": [
+    "Hell-Ogre",
+    "Basirisk",
+    "Hell-Hound",
+    "Gremlin"
+  ],
+  "formation_count": 0,
+  "formations": []
+}

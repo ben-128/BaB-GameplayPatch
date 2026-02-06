@@ -1,0 +1,13 @@
+{
+  "level_name": "Castle of Vamp",
+  "name": "Floor 4 - Area 1",
+  "group_offset": "0x241A9A8",
+  "monsters": [
+    "Lesser-Vampire",
+    "Marble-Gargoyle",
+    "Shadow",
+    "Vampire-Bat"
+  ],
+  "formation_count": 0,
+  "formations": []
+}

@@ -1,0 +1,109 @@
+{
+  "level_name": "The Sealed Cave",
+  "name": "Area 8",
+  "group_offset": "0x1DF198C",
+  "monsters": [
+    "Undead-Knight",
+    "Revenant",
+    "Shadow"
+  ],
+  "formation_count": 5,
+  "formations": [
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 0,
+          "monster": "Undead-Knight"
+        }
+      ],
+      "slots": [
+        0,
+        0,
+        0
+      ],
+      "offset": "0x1DF262C"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Revenant"
+        },
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Shadow"
+        }
+      ],
+      "slots": [
+        1,
+        1,
+        2
+      ],
+      "offset": "0x1DF2690"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 2,
+          "monster": "Shadow"
+        }
+      ],
+      "slots": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "offset": "0x1DF26F4"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Undead-Knight"
+        },
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Revenant"
+        }
+      ],
+      "slots": [
+        1,
+        0,
+        0
+      ],
+      "offset": "0x1DF2778"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Revenant"
+        },
+        {
+          "count": 2,
+          "slot": 2,
+          "monster": "Shadow"
+        }
+      ],
+      "slots": [
+        1,
+        2,
+        2
+      ],
+      "offset": "0x1DF27DC"
+    }
+  ]
+}

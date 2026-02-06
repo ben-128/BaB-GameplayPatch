@@ -10,12 +10,13 @@ monster stat entries). They define the composition of each encounter:
   - bytes[12:18] = coordinates (always 0,0,0 for templates)
   - bytes[4:8] = FF FF FF FF marks the START of a new formation group
 
-Output: one JSON per level in Data/formations/
+Output: Data/formations/<level_key>/<area_key>.json
 """
 
 import struct
 import json
 import os
+import re
 from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).parent
@@ -26,6 +27,11 @@ OUTPUT_DIR = SCRIPT_DIR
 BLAZE_ALL = PROJECT_ROOT / "output" / "BLAZE.ALL"
 if not BLAZE_ALL.exists():
     BLAZE_ALL = PROJECT_ROOT / "Blaze  Blade - Eternal Quest (Europe)" / "extract" / "BLAZE.ALL"
+
+
+def area_name_to_key(name):
+    """Convert area name to filename-safe key. e.g. 'Floor 1 - Area 2' -> 'floor_1_area_2'"""
+    return re.sub(r'[^a-z0-9]+', '_', name.lower()).strip('_')
 
 
 def load_all_spawn_groups():
@@ -53,8 +59,7 @@ def load_all_spawn_groups():
     return levels
 
 
-def extract_formations(blaze_data, group_offset, num_monsters, scan_end,
-                       max_slots=16):
+def extract_formations(blaze_data, group_offset, num_monsters, scan_end):
     """Extract formation template records from the script area."""
     script_start = group_offset + num_monsters * 96
     scan_size = scan_end - script_start
@@ -106,12 +111,21 @@ def extract_formations(blaze_data, group_offset, num_monsters, scan_end,
         })
 
     # Split into formations by group-start delimiter
+    # Also enforce contiguity: within a formation, each record must be
+    # exactly 32 bytes after the previous one
     formations = []
     current = []
     for rec in template_records:
         if rec['is_group_start'] and current:
             formations.append(current)
             current = []
+        elif current:
+            prev_offset = current[-1]['abs_offset']
+            expected = prev_offset + 32
+            if rec['abs_offset'] != expected:
+                # Non-contiguous record - start new formation
+                formations.append(current)
+                current = []
         current.append(rec)
     if current:
         formations.append(current)
@@ -155,17 +169,17 @@ def main():
     print("  Total groups: {}".format(total_groups))
     print()
 
+    total_files = 0
+
     for level_key, level_data in sorted(levels.items()):
         level_name = level_data['level_name']
         groups = level_data['groups']
 
-        print("Processing: {} ({} areas)".format(level_name, len(groups)))
+        # Create level directory
+        level_dir = OUTPUT_DIR / level_key
+        level_dir.mkdir(exist_ok=True)
 
-        output = {
-            "_readme": "Formation templates for {}. Each formation defines the monster composition of an encounter.".format(level_name),
-            "level_name": level_name,
-            "areas": [],
-        }
+        print("Processing: {} ({} areas)".format(level_name, len(groups)))
 
         for i, group in enumerate(groups):
             offset = group['offset']
@@ -181,6 +195,7 @@ def main():
             formations = extract_formations(blaze_data, offset, num_monsters, scan_end)
 
             area_data = {
+                "level_name": level_name,
                 "name": group['name'],
                 "group_offset": "0x{:X}".format(offset),
                 "monsters": group['monsters'],
@@ -193,25 +208,26 @@ def main():
                     format_formation(formation, slot_names)
                 )
 
-            output["areas"].append(area_data)
+            # Write area JSON
+            area_key = area_name_to_key(group['name'])
+            out_path = level_dir / "{}.json".format(area_key)
+            with open(out_path, 'w', encoding='utf-8') as f:
+                json.dump(area_data, f, indent=2, ensure_ascii=False)
+            total_files += 1
 
             # Print summary
             total_f = len(formations)
-            print("  {} - {} formations".format(group['name'], total_f))
+            print("  {} - {} formations -> {}/{}".format(
+                group['name'], total_f, level_key, out_path.name))
             for fidx, f in enumerate(area_data["formations"]):
                 parts = []
                 for c in f["composition"]:
                     parts.append("{}x{}".format(c["count"], c["monster"]))
                 print("    F{:02d}: [{}] {}".format(fidx, f["total"], " + ".join(parts)))
 
-        # Write JSON
-        out_path = OUTPUT_DIR / "{}.json".format(level_key)
-        with open(out_path, 'w', encoding='utf-8') as f:
-            json.dump(output, f, indent=2, ensure_ascii=False)
-        print("  -> {}".format(out_path.name))
         print()
 
-    print("Done! All formation JSONs written to {}".format(OUTPUT_DIR))
+    print("Done! {} area JSONs written to {}".format(total_files, OUTPUT_DIR))
 
 
 if __name__ == '__main__':

@@ -1,0 +1,107 @@
+{
+  "level_name": "Cavern of Death",
+  "name": "Floor 5 - Area 1",
+  "group_offset": "0xF8C9BC",
+  "monsters": [
+    "Cave-Bear",
+    "Blue-Slime",
+    "Cave-Scissors",
+    "Spirit-Ball"
+  ],
+  "formation_count": 5,
+  "formations": [
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Cave-Bear"
+        }
+      ],
+      "slots": [
+        0,
+        0
+      ],
+      "offset": "0xF8D138"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Blue-Slime"
+        }
+      ],
+      "slots": [
+        1,
+        1
+      ],
+      "offset": "0xF8D17C"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 2,
+          "monster": "Cave-Scissors"
+        }
+      ],
+      "slots": [
+        2,
+        2
+      ],
+      "offset": "0xF8D1C0"
+    },
+    {
+      "total": 6,
+      "composition": [
+        {
+          "count": 6,
+          "slot": 3,
+          "monster": "Spirit-Ball"
+        }
+      ],
+      "slots": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "offset": "0xF8D204"
+    },
+    {
+      "total": 6,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Blue-Slime"
+        },
+        {
+          "count": 2,
+          "slot": 2,
+          "monster": "Cave-Scissors"
+        },
+        {
+          "count": 2,
+          "slot": 3,
+          "monster": "Spirit-Ball"
+        }
+      ],
+      "slots": [
+        1,
+        1,
+        2,
+        2,
+        3,
+        3
+      ],
+      "offset": "0xF8D2C8"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "level_name": "Castle of Vamp",
+  "name": "Floor 3 - Area 3",
+  "group_offset": "0x2417998",
+  "monsters": [
+    "Werewolf",
+    "Weretiger",
+    "Harpy",
+    "Silver-Wolf"
+  ],
+  "formation_count": 0,
+  "formations": []
+}

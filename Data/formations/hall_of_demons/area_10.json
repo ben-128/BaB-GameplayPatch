@@ -1,0 +1,12 @@
+{
+  "level_name": "Hall of Demons",
+  "name": "Area 10",
+  "group_offset": "0x2C07184",
+  "monsters": [
+    "Carberos",
+    "Hell-Hound",
+    "Gorgon"
+  ],
+  "formation_count": 0,
+  "formations": []
+}

@@ -1,0 +1,13 @@
+{
+  "level_name": "Hall of Demons",
+  "name": "Area 2",
+  "group_offset": "0x2BEF188",
+  "monsters": [
+    "Hell-Harpy",
+    "Gray-Arm",
+    "Dark-Goblin",
+    "Goblin-Wizard"
+  ],
+  "formation_count": 0,
+  "formations": []
+}

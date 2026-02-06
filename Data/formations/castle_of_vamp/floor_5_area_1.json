@@ -1,0 +1,72 @@
+{
+  "level_name": "Castle of Vamp",
+  "name": "Floor 5 - Area 1",
+  "group_offset": "0x2421194",
+  "monsters": [
+    "Marble-Gargoyle",
+    "Red-Knight",
+    "Lesser-Vampire"
+  ],
+  "formation_count": 3,
+  "formations": [
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Red-Knight"
+        },
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Lesser-Vampire"
+        }
+      ],
+      "slots": [
+        1,
+        1,
+        2
+      ],
+      "offset": "0x2422058"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Marble-Gargoyle"
+        },
+        {
+          "count": 2,
+          "slot": 2,
+          "monster": "Lesser-Vampire"
+        }
+      ],
+      "slots": [
+        0,
+        0,
+        2,
+        2
+      ],
+      "offset": "0x24220BC"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 2,
+          "monster": "Lesser-Vampire"
+        }
+      ],
+      "slots": [
+        2,
+        2,
+        2
+      ],
+      "offset": "0x2422140"
+    }
+  ]
+}
