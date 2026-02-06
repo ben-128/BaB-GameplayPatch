@@ -1,0 +1,200 @@
+{
+  "groups_analyzed": [
+    {
+      "name": "Cavern Floor 1 Area 1",
+      "offset": "0xF7A97C",
+      "monsters": [
+        "Lv20.Goblin",
+        "Goblin-Shaman",
+        "Giant-Bat"
+      ],
+      "expected_ids": [
+        84,
+        59,
+        49
+      ],
+      "findings_by_range": {
+        "Near (-64 to -16)": {
+          "uint8": [],
+          "uint16_le": [],
+          "uint32_le": []
+        },
+        "Formation region (-176 to -64)": {
+          "uint8": [],
+          "uint16_le": [],
+          "uint32_le": []
+        },
+        "Medium range (-512 to -176)": {
+          "uint8": [
+            {
+              "id": 84,
+              "offset": -348,
+              "hex_offset": "-015C",
+              "context": "4c 03 00 00 54 03 00 00 64"
+            },
+            {
+              "id": 84,
+              "offset": -256,
+              "hex_offset": "-0100",
+              "context": "18 02 00 00 54 00 00 00 bc"
+            }
+          ],
+          "uint16_le": [
+            {
+              "id": 84,
+              "offset": -256,
+              "hex_offset": "-0100",
+              "context": "18 02 00 00 54 00 00 00 bc 02"
+            }
+          ],
+          "uint32_le": [
+            {
+              "id": 84,
+              "offset": -256,
+              "hex_offset": "-0100",
+              "context": "18 02 00 00 54 00 00 00 bc 02 00 00"
+            }
+          ]
+        },
+        "Far range (-2048 to -512)": {
+          "uint8": [
+            {
+              "id": 84,
+              "offset": -1732,
+              "hex_offset": "-06C4",
+              "context": "9a 78 56 45 54 66 87 98 ba"
+            },
+            {
+              "id": 84,
+              "offset": -1586,
+              "hex_offset": "-0632",
+              "context": "33 34 23 42 54 66 87 99 aa"
+            },
+            {
+              "id": 84,
+              "offset": -1141,
+              "hex_offset": "-0475",
+              "context": "00 00 00 50 54 00 00 00 00"
+            },
+            {
+              "id": 84,
+              "offset": -915,
+              "hex_offset": "-0393",
+              "context": "00 00 00 30 54 66 00 00 00"
+            },
+            {
+              "id": 84,
+              "offset": -516,
+              "hex_offset": "-0204",
+              "context": "00 00 00 40 54 03 00 00"
+            }
+          ],
+          "uint16_le": [
+            {
+              "id": 84,
+              "offset": -1141,
+              "hex_offset": "-0475",
+              "context": "00 00 00 50 54 00 00 00 00 00"
+            }
+          ],
+          "uint32_le": [
+            {
+              "id": 84,
+              "offset": -1141,
+              "hex_offset": "-0475",
+              "context": "00 00 00 50 54 00 00 00 00 00 00 00"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Cavern Floor 1 Area 2",
+      "offset": "0xF7E1A8",
+      "monsters": [
+        "Lv20.Goblin",
+        "Goblin-Shaman",
+        "Giant-Bat",
+        "Goblin-Leader"
+      ],
+      "expected_ids": [
+        84,
+        59,
+        49,
+        58
+      ],
+      "findings_by_range": {
+        "Near (-64 to -16)": {
+          "uint8": [],
+          "uint16_le": [],
+          "uint32_le": []
+        },
+        "Formation region (-176 to -64)": {
+          "uint8": [],
+          "uint16_le": [],
+          "uint32_le": []
+        },
+        "Medium range (-512 to -176)": {
+          "uint8": [],
+          "uint16_le": [],
+          "uint32_le": []
+        },
+        "Far range (-2048 to -512)": {
+          "uint8": [],
+          "uint16_le": [],
+          "uint32_le": []
+        }
+      }
+    },
+    {
+      "name": "Forest Area",
+      "offset": "0x1498278",
+      "monsters": [
+        "Goblin-Shaman",
+        "Lizard-Man",
+        "Giant-Club",
+        "Wing-Fish"
+      ],
+      "expected_ids": [
+        59
+      ],
+      "findings_by_range": {
+        "Near (-64 to -16)": {
+          "uint8": [],
+          "uint16_le": [],
+          "uint32_le": []
+        },
+        "Formation region (-176 to -64)": {
+          "uint8": [
+            {
+              "id": 59,
+              "offset": -172,
+              "hex_offset": "-00AC",
+              "context": "01 00 00 00 3b 00 0d 00 4d"
+            }
+          ],
+          "uint16_le": [
+            {
+              "id": 59,
+              "offset": -172,
+              "hex_offset": "-00AC",
+              "context": "01 00 00 00 3b 00 0d 00 4d 00"
+            }
+          ],
+          "uint32_le": []
+        },
+        "Medium range (-512 to -176)": {
+          "uint8": [],
+          "uint16_le": [],
+          "uint32_le": []
+        },
+        "Far range (-2048 to -512)": {
+          "uint8": [],
+          "uint16_le": [],
+          "uint32_le": []
+        }
+      }
+    }
+  ],
+  "consistent_patterns": []
+}

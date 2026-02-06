@@ -1,0 +1,195 @@
+================================================================================
+SPAWN COMMAND STRUCTURE ANALYSIS
+================================================================================
+
+
+Goblin-Shaman (ID 59) at 0xF7AECC
+--------------------------------------------------------------------------------
+
+Nearby potential coordinates (int16):
+  0xF7AEBC: 2816
+  0xF7AEBD: 2315
+  0xF7AEBE: 9
+  0xF7AEBF: -7680
+  0xF7AEC0: 1506
+  0xF7AEC2: -215
+  0xF7AEC4: -2350
+  0xF7AEC5: 246
+  0xF7AEC6: 0
+  0xF7AEC7: 0
+
+FF terminators after ID: 0
+
+Hex dump (128 bytes, ID byte in brackets):
+00F7AE8C  84 11 00 00 1E 05 00 00 C8 4C 00 00 28 05 00 00               .........L..(...
+00F7AE9C  F0 4F 00 00 32 05 00 00 00 15 00 00 02 00 03 00               .O..2...........
+00F7AEAC  04 00 05 00 06 00 07 00 08 00 09 00 FF FF FF FF               ................
+00F7AEBC  00 0B 09 00 E2 05 29 FF D2 F6 00 00 00 00 00 00               ......).........
+00F7AECC  [3B] 02 FF FF FF FF FF FF 00 00 00 00 00 00 00 00             ;...............
+00F7AEDC  00 0B 09 00 A5 06 29 FF 94 F2 00 00 00 00 00 00               ......).........
+00F7AEEC  41 02 FF FF FF FF FF FF 00 00 00 00 00 00 00 00               A...............
+00F7AEFC  00 0B 09 00 AA 03 61 FE 08 F5 00 00 00 00 00 00               ......a.........
+
+
+Giant-Bat #1 (ID 49) at 0xF7B4D0
+--------------------------------------------------------------------------------
+
+Structure Pattern: [ID] [param] [00] [00] ...
+  monster_id: 49
+  param1: 1
+  param1_hex: 0x01
+
+Nearby potential coordinates (int16):
+  0xF7B4C0: 0
+  0xF7B4C1: 0
+  0xF7B4C2: 0
+  0xF7B4C3: 0
+  0xF7B4C4: 0
+  0xF7B4C5: 1024
+  0xF7B4C6: 4
+  0xF7B4C7: 512
+  0xF7B4C8: -254
+  0xF7B4C9: 255
+
+FF terminators after ID: 0
+
+Hex dump (128 bytes, ID byte in brackets):
+00F7B490  64 00 00 00 00 00 00 00 71 03 FF FF FF FF FF FF               d.......q.......
+00F7B4A0  00 00 00 00 1C 1C 09 00 02 FF 00 00 0D 01 F0 FB               ................
+00F7B4B0  CF 01 00 00 10 0D 00 00 FF FF FF FF FF FF FF FF               ................
+00F7B4C0  00 00 00 00 00 00 04 00 02 FF 00 00 D6 00 F2 FB               ................
+00F7B4D0  [31] 01 00 00 D0 07 00 00 FF FF FF FF FF FF FF FF             1...............
+00F7B4E0  00 00 00 00 00 00 04 00 02 FF 00 00 7D F6 F6 FB               ............}...
+00F7B4F0  4C 04 00 00 00 08 00 00 FF FF FF FF FF FF FF FF               L...............
+00F7B500  00 00 00 00 00 00 04 00 02 FF 00 00 83 F6 F5 FB               ................
+
+
+Lv20.Goblin #1 (ID 84) at 0xF7B5EC
+--------------------------------------------------------------------------------
+
+Nearby potential coordinates (int16):
+  0xF7B5DC: -1
+  0xF7B5DD: -1
+  0xF7B5DE: -1
+  0xF7B5DF: 255
+  0xF7B5E0: 0
+  0xF7B5E1: 0
+  0xF7B5E2: 0
+  0xF7B5E3: 4352
+  0xF7B5E4: 17
+  0xF7B5E5: 1280
+
+FF terminators after ID: 0
+
+Hex dump (128 bytes, ID byte in brackets):
+00F7B5AC  C4 F3 04 FC 18 00 00 00 00 0C 00 00 57 03 FF FF               ............W...
+00F7B5BC  FF FF FF FF 00 00 00 00 11 00 05 00 82 FF 00 00               ................
+00F7B5CC  FC F3 EC FF 98 EF 00 00 00 00 00 00 92 01 FF FF               ................
+00F7B5DC  FF FF FF FF 00 00 00 00 11 00 05 00 82 FF 00 00               ................
+00F7B5EC  [54] F4 EC FF 44 EF 00 00 00 0E 00 00 92 01 FF FF             T...D...........
+00F7B5FC  FF FF FF FF 00 00 00 00 12 00 05 00 82 FF 00 00               ................
+00F7B60C  EC F6 5C FE 14 F9 00 00 00 02 00 00 80 00 FF FF               ..\.............
+00F7B61C  FF FF FF FF 00 00 00 00 12 00 05 00 82 FF 00 00               ................
+
+
+Lv20.Goblin #2 (ID 84) at 0xF7C474
+--------------------------------------------------------------------------------
+
+Structure Pattern: [ID] [param] [00] [00] ...
+  monster_id: 84
+  param1: 254
+  param1_hex: 0xFE
+
+Nearby potential coordinates (int16):
+  0xF7C464: 0
+  0xF7C465: 0
+  0xF7C466: 0
+  0xF7C467: 1280
+  0xF7C468: 5
+  0xF7C469: 512
+  0xF7C46A: 2
+  0xF7C46C: -126
+  0xF7C46D: 255
+  0xF7C46E: 0
+
+FF terminators after ID: 0
+
+Hex dump (128 bytes, ID byte in brackets):
+00F7C434  B4 F8 00 00 00 08 00 00 89 03 FF FF FF FF FF FF               ................
+00F7C444  00 00 00 00 05 00 02 00 82 FF 00 00 18 FE 04 FC               ................
+00F7C454  48 F3 00 00 00 08 00 00 87 03 FF FF FF FF FF FF               H...............
+00F7C464  00 00 00 00 05 00 02 00 82 FF 00 00 60 13 24 FF               ............`.$.
+00F7C474  [54] FE 00 00 00 08 00 00 8E 03 FF FF FF FF FF FF             T...............
+00F7C484  00 00 00 00 05 00 02 00 82 FF 00 00 7A 13 24 FF               ............z.$.
+00F7C494  8F F8 00 00 00 00 00 00 8F 03 FF FF FF FF FF FF               ................
+00F7C4A4  00 00 00 00 06 00 01 00 82 FF 00 00 DC 0F 25 FF               ..............%.
+
+
+================================================================================
+CLUSTERED OCCURRENCES (within 128 bytes)
+================================================================================
+
+
+Cluster #8: 2 IDs
+  Range: 0xF7CC29 - 0xF7CC7D
+  IDs: 49, 84
+
+  Hex dump:
+  00F7CC19  FF FF FF FF FF FF FF B1 17 00 00 58 67 00 00 42               ...........Xg..B
+  00F7CC29  31 00 00 08 00 1F D0 51 0C 1D 3A 0D 1C 03 08 00               1......Q..:.....
+  00F7CC39  0F 1F D0 2A 0C 44 6F 20 79 6F 75 20 77 61 6E 74               ...*.Do you want
+  00F7CC49  20 74 6F 20 74 61 6B 65 20 74 68 65 20 65 6C 65                to take the ele
+  00F7CC59  76 61 74 6F 72 3F 0F 1F D0 2A 0C 59 65 73 0D 4E               vator?...*.Yes.N
+  00F7CC69  6F 0D 09 00 0A 03 00 08 01 00 00 1F D0 78 08 00               o............x..
+  00F7CC79  0C 20 2D 20 54 68 65 20 41 62 61 6E 64 6F 6E 65               . - The Abandone
+  00F7CC89  64 20 4D 69 6E 65 20 2D 0D 4F 6E 63 65 20 74 68               d Mine -.Once th
+  00F7CC99  69 73 20 77 61 73 20 74 68 65 20 67 72 65 61 74               is was the great
+
+
+Cluster #9: 3 IDs
+  Range: 0xF7CD10 - 0xF7CD55
+  IDs: 84, 84, 49
+
+  Hex dump:
+  00F7CD00  73 73 65 73 73 69 6F 6E 20 6F 66 20 69 74 2E 20               ssession of it. 
+  00F7CD10  54 6F 64 61 79 20 69 74 20 69 73 20 74 68 65 69               Today it is thei
+  00F7CD20  72 20 64 6F 6D 61 69 6E 2E 2E 2E 0F 08 01 0A 13               r domain........
+  00F7CD30  00 00 00 00 1F D0 2A 08 00 0C 20 2D 20 54 68 65               ......*... - The
+  00F7CD40  20 41 62 61 6E 64 6F 6E 65 64 20 4D 69 6E 65 20                Abandoned Mine 
+  00F7CD50  2D 0D 20 2D 20 31 73 74 20 55 6E 64 65 72 6C 65               -. - 1st Underle
+  00F7CD60  76 65 6C 20 2D 0F 08 01 00 00 00 00 08 00 1F D0               vel -...........
+  00F7CD70  44 0C 1D 3A 0D 1C 03 18 00 0F 08 01 0A 18 00 00               D..:............
+
+
+Cluster #10: 2 IDs
+  Range: 0xF7CEBC - 0xF7CF00
+  IDs: 84, 84
+
+  Hex dump:
+  00F7CEAC  65 76 61 74 6F 72 2C 20 72 69 67 68 74 3F 00 00               evator, right?..
+  00F7CEBC  54 68 61 74 20 62 6C 61 73 74 65 64 20 74 68 69               That blasted thi
+  00F7CECC  6E 67 20 6C 6F 6F 6B 73 20 6C 69 6B 65 20 69 74               ng looks like it
+  00F7CEDC  20 6D 69 67 68 74 20 67 6F 20 74 6F 20 74 68 65                might go to the
+  00F7CEEC  20 35 74 68 20 55 6E 64 65 72 6C 65 76 65 6C 2E                5th Underlevel.
+  00F7CEFC  00 00 00 00 54 68 61 74 20 74 68 69 6E 67 20 6C               ....That thing l
+  00F7CF0C  6F 6F 6B 73 20 6C 69 6B 65 20 69 74 20 6D 69 67               ooks like it mig
+  00F7CF1C  68 74 20 67 6F 20 74 6F 20 74 68 65 20 35 74 68               ht go to the 5th
+
+
+Cluster #11: 3 IDs
+  Range: 0xF7D10B - 0xF7D194
+  IDs: 84, 84, 84
+
+  Hex dump:
+  00F7D0FB  65 72 6C 65 76 65 6C 2E 2E 2E 00 00 00 2E 2E 2E               erlevel.........
+  00F7D10B  54 68 61 74 27 73 20 68 6F 77 20 49 27 6C 6C 20               That's how I'll 
+  00F7D11B  67 65 74 20 74 6F 20 35 74 68 20 55 6E 64 65 72               get to 5th Under
+  00F7D12B  6C 65 76 65 6C 2E 2E 2E 00 2E 2E 2E 49 27 6C 6C               level.......I'll
+  00F7D13B  20 67 65 74 20 74 6F 20 74 68 65 20 35 74 68 20                get to the 5th 
+  00F7D14B  55 6E 64 65 72 6C 65 76 65 6C 20 77 69 74 68 20               Underlevel with 
+  00F7D15B  74 68 61 74 2E 2E 2E 00 00 54 68 65 20 67 72 6F               that.....The gro
+  00F7D16B  75 6E 64 20 69 73 20 70 6F 69 73 6F 6E 65 64 2E               und is poisoned.
+  00F7D17B  2E 2E 20 68 6F 77 20 63 61 6E 20 49 20 63 72 6F               .. how can I cro
+  00F7D18B  73 73 20 69 74 3F 00 00 00 54 68 65 20 67 72 6F               ss it?...The gro
+  00F7D19B  75 6E 64 20 69 73 20 70 6F 69 73 6F 6E 65 64 2E               und is poisoned.
+  00F7D1AB  2E 2E 20 68 6F 77 20 63 61 6E 20 49 20 63 72 6F               .. how can I cro
