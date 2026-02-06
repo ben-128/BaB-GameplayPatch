@@ -7,7 +7,6 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #1a1a2e; color: #e0e0e0; padding: 20px; }
 h1 { color: #e94560; margin-bottom: 10px; font-size: 1.4em; }
-h2 { color: #16213e; font-size: 1.1em; }
 
 .header { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; flex-wrap: wrap; }
 .header label { font-weight: 600; }
@@ -36,6 +35,8 @@ button.primary { background: #e94560; color: #fff; }
 button.primary:hover { background: #ff6b80; }
 button:disabled { opacity: 0.4; cursor: default; }
 
+.section-title { color: #e94560; font-size: 1.1em; font-weight: 700; margin: 20px 0 10px; padding-bottom: 4px; border-bottom: 1px solid #2a2a4e; }
+
 .formations { display: flex; flex-direction: column; gap: 12px; }
 .formation-card { background: #16213e; border-radius: 8px; padding: 14px; border: 2px solid transparent; transition: border-color 0.2s; }
 .formation-card.selected { border-color: #e94560; }
@@ -56,9 +57,19 @@ button:disabled { opacity: 0.4; cursor: default; }
 
 .card-actions { display: flex; gap: 6px; margin-top: 10px; }
 
-.summary { background: #16213e; border-radius: 6px; padding: 12px 16px; margin-top: 16px; }
-.summary h3 { color: #53a8b6; margin-bottom: 6px; font-size: 0.95em; }
-.summary .row { color: #808090; font-size: 0.85em; padding: 2px 0; }
+/* Spawn group cards */
+.spawn-card { background: #16213e; border-radius: 8px; padding: 14px; margin-bottom: 8px; }
+.spawn-card-header { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.spawn-card-header .g-label { font-weight: 700; font-size: 0.9em; color: #53a8b6; }
+.spawn-card-header .g-info { color: #808090; font-size: 0.8em; }
+.spawn-card-header .g-suffix { color: #505060; font-size: 0.75em; font-family: monospace; margin-left: auto; }
+
+.spawn-records { display: flex; flex-direction: column; gap: 4px; }
+.spawn-record { display: flex; align-items: center; gap: 8px; background: #0a0a1a; border-radius: 4px; padding: 4px 8px; font-size: 0.82em; }
+.spawn-record .rec-pill { padding: 2px 8px; border-radius: 8px; font-weight: 600; color: #000; cursor: pointer; user-select: none; min-width: 90px; text-align: center; transition: transform 0.1s; }
+.spawn-record .rec-pill:hover { transform: scale(1.05); }
+.spawn-record .rec-coords { color: #707080; font-family: monospace; font-size: 0.9em; }
+.spawn-record .rec-meta { color: #505060; font-family: monospace; font-size: 0.85em; }
 
 #status { margin-top: 12px; padding: 8px 12px; border-radius: 4px; display: none; font-weight: 600; }
 #status.ok { display: block; background: #0f3460; color: #53a8b6; }
@@ -99,13 +110,14 @@ button:disabled { opacity: 0.4; cursor: default; }
 
 <div id="formationsArea" class="formations"></div>
 
-<div id="spawnSummary" class="summary" style="display:none">
-  <h3>Spawn Points (read-only)</h3>
-  <div id="spawnRows"></div>
+<div id="spawnSection" style="display:none">
+  <div class="section-title">Spawn Points (click monster to change type)</div>
+  <div id="spawnCards"></div>
 </div>
-<div id="zoneSummary" class="summary" style="display:none">
-  <h3>Zone Spawns (read-only)</h3>
-  <div id="zoneRows"></div>
+
+<div id="zoneSection" style="display:none">
+  <div class="section-title">Zone Spawns (click monster to change type)</div>
+  <div id="zoneCards"></div>
 </div>
 
 <div id="status"></div>
@@ -119,6 +131,8 @@ const SLOT_COLORS = [
 
 let areaData = null;
 let formations = [];
+let spawnPoints = [];
+let zoneSpawns = [];
 let undoStack = [];
 let loadedFileName = '';
 
@@ -127,7 +141,7 @@ const $ = id => document.getElementById(id);
 function slotColor(idx) { return SLOT_COLORS[idx % SLOT_COLORS.length]; }
 
 function pushUndo() {
-  undoStack.push(JSON.stringify(formations));
+  undoStack.push(JSON.stringify({ formations, spawnPoints, zoneSpawns }));
   if (undoStack.length > 50) undoStack.shift();
 }
 
@@ -159,6 +173,21 @@ function compositionFromSlots(slots, monsters) {
   const counts = {};
   const order = [];
   for (const s of slots) {
+    if (!(s in counts)) order.push(s);
+    counts[s] = (counts[s] || 0) + 1;
+  }
+  return order.map(s => ({
+    count: counts[s],
+    slot: s,
+    monster: monsters[s] || '?slot' + s
+  }));
+}
+
+function compositionFromRecords(records, monsters) {
+  const counts = {};
+  const order = [];
+  for (const r of records) {
+    const s = r.slot;
     if (!(s in counts)) order.push(s);
     counts[s] = (counts[s] || 0) + 1;
   }
@@ -327,7 +356,6 @@ function mergeSelected() {
 
   pushUndo();
 
-  // Merge all into the first selected
   const target = formations[selIdx[0]];
   for (let i = 1; i < selIdx.length; i++) {
     target.slots = target.slots.concat(formations[selIdx[i]].slots);
@@ -335,7 +363,6 @@ function mergeSelected() {
   target.slots.sort((a, b) => a - b);
   target._selected = false;
 
-  // Remove merged formations (reverse order to keep indices valid)
   for (let i = selIdx.length - 1; i >= 1; i--) {
     formations.splice(selIdx[i], 1);
   }
@@ -356,18 +383,124 @@ function addFormation() {
 
 function undo() {
   if (undoStack.length === 0) return;
-  formations = JSON.parse(undoStack.pop());
+  const state = JSON.parse(undoStack.pop());
+  formations = state.formations;
+  spawnPoints = state.spawnPoints;
+  zoneSpawns = state.zoneSpawns;
   renderFormations();
+  renderSpawnSection(spawnPoints, 'spawnSection', 'spawnCards');
+  renderSpawnSection(zoneSpawns, 'zoneSection', 'zoneCards');
   showStatus('Undo', true);
 }
 
+// --- Spawn / Zone Spawn editing ---
+
+function renderSpawnSection(groups, sectionId, containerId) {
+  const section = $(sectionId);
+  const container = $(containerId);
+  container.innerHTML = '';
+
+  if (!groups || groups.length === 0) {
+    section.style.display = 'none';
+    return;
+  }
+  section.style.display = 'block';
+
+  const monsters = areaData.monsters;
+  const numSlots = monsters.length;
+
+  groups.forEach((group, gidx) => {
+    const card = document.createElement('div');
+    card.className = 'spawn-card';
+
+    // Header with composition pills
+    const hdr = document.createElement('div');
+    hdr.className = 'spawn-card-header';
+
+    const lbl = document.createElement('span');
+    lbl.className = 'g-label';
+    lbl.textContent = 'Group ' + gidx;
+
+    const info = document.createElement('span');
+    info.className = 'g-info';
+    info.textContent = group.records.length + ' record' + (group.records.length !== 1 ? 's' : '');
+
+    const suf = document.createElement('span');
+    suf.className = 'g-suffix';
+    suf.textContent = 'suffix: ' + (group.suffix || '00000000');
+
+    hdr.appendChild(lbl);
+    hdr.appendChild(info);
+    hdr.appendChild(suf);
+    card.appendChild(hdr);
+
+    // Composition pills (rebuilt from records)
+    const pills = document.createElement('div');
+    pills.className = 'pills';
+    const comp = compositionFromRecords(group.records, monsters);
+    for (const c of comp) {
+      const pill = document.createElement('span');
+      pill.className = 'pill';
+      pill.style.background = slotColor(c.slot);
+      pill.textContent = c.count + 'x ' + c.monster;
+      pills.appendChild(pill);
+    }
+    card.appendChild(pills);
+
+    // Records
+    const recsDiv = document.createElement('div');
+    recsDiv.className = 'spawn-records';
+
+    group.records.forEach((rec, ridx) => {
+      const row = document.createElement('div');
+      row.className = 'spawn-record';
+
+      // Clickable slot pill - cycles through monsters
+      const recPill = document.createElement('span');
+      recPill.className = 'rec-pill';
+      recPill.style.background = slotColor(rec.slot);
+      recPill.textContent = monsters[rec.slot] || '?slot' + rec.slot;
+      recPill.title = 'Click to change monster type (slot ' + rec.slot + ')';
+      recPill.addEventListener('click', () => {
+        pushUndo();
+        rec.slot = (rec.slot + 1) % numSlots;
+        // Re-render just this section
+        renderSpawnSection(groups, sectionId, containerId);
+      });
+      recPill.addEventListener('contextmenu', (e) => {
+        e.preventDefault();
+        pushUndo();
+        rec.slot = (rec.slot - 1 + numSlots) % numSlots;
+        renderSpawnSection(groups, sectionId, containerId);
+      });
+
+      const coords = document.createElement('span');
+      coords.className = 'rec-coords';
+      coords.textContent = '(' + rec.x + ', ' + rec.y + ', ' + rec.z + ')';
+
+      const meta = document.createElement('span');
+      meta.className = 'rec-meta';
+      meta.textContent = 'b0:' + rec.byte0 + ' id:' + rec.area_id;
+
+      row.appendChild(recPill);
+      row.appendChild(coords);
+      row.appendChild(meta);
+      recsDiv.appendChild(row);
+    });
+
+    card.appendChild(recsDiv);
+    container.appendChild(card);
+  });
+}
+
+// --- Build output ---
+
 function buildOutputJSON() {
-  // Deep clone original
   const out = JSON.parse(JSON.stringify(areaData));
   const monsters = out.monsters;
 
   // Rebuild formations
-  out.formations = formations.map((f, fidx) => {
+  out.formations = formations.map((f) => {
     const slots = f.slots.slice();
     const comp = compositionFromSlots(slots, monsters);
     const obj = {
@@ -376,13 +509,46 @@ function buildOutputJSON() {
       slots: slots,
       suffix: f.suffix || '00000000'
     };
-    // Preserve original offset if it existed
     if (f.offset) obj.offset = f.offset;
     return obj;
   });
 
   out.formation_count = out.formations.length;
   out.original_total_slots = formations.reduce((s, f) => s + f.slots.length, 0);
+
+  // Rebuild spawn points from edited records
+  if (spawnPoints.length > 0) {
+    out.spawn_points = spawnPoints.map(group => {
+      const records = group.records.map(r => Object.assign({}, r));
+      const comp = compositionFromRecords(records, monsters);
+      return {
+        total: records.length,
+        composition: comp,
+        records: records,
+        suffix: group.suffix || '00000000',
+        offset: group.offset || undefined
+      };
+    });
+    out.spawn_point_count = out.spawn_points.length;
+    out.original_total_spawn_slots = spawnPoints.reduce((s, g) => s + g.records.length, 0);
+  }
+
+  // Rebuild zone spawns from edited records
+  if (zoneSpawns.length > 0) {
+    out.zone_spawns = zoneSpawns.map(group => {
+      const records = group.records.map(r => Object.assign({}, r));
+      const comp = compositionFromRecords(records, monsters);
+      return {
+        total: records.length,
+        composition: comp,
+        records: records,
+        suffix: group.suffix || '00000000',
+        offset: group.offset || undefined
+      };
+    });
+    out.zone_spawn_count = out.zone_spawns.length;
+    out.original_total_zone_spawn_slots = zoneSpawns.reduce((s, g) => s + g.records.length, 0);
+  }
 
   return out;
 }
@@ -394,7 +560,6 @@ function saveJSON() {
     return;
   }
 
-  // Validate no empty formations
   for (let i = 0; i < formations.length; i++) {
     if (formations[i].slots.length === 0) {
       showStatus('Cannot save: formation F' + String(i).padStart(2, '0') + ' is empty', false);
@@ -414,29 +579,12 @@ function saveJSON() {
   showStatus('Saved ' + a.download, true);
 }
 
-function renderSpawnSummary(items, containerId) {
-  const el = $(containerId);
-  el.innerHTML = '';
-  if (!items || items.length === 0) {
-    el.innerHTML = '<div class="row">None</div>';
-    return;
-  }
-  const monsters = areaData.monsters;
-  items.forEach((sp, i) => {
-    const comp = sp.composition || [];
-    const parts = comp.map(c => c.count + 'x ' + (c.monster || monsters[c.slot] || '?'));
-    const row = document.createElement('div');
-    row.className = 'row';
-    row.textContent = 'Group ' + i + ': [' + sp.total + '] ' + parts.join(' + ') + '  (suffix: ' + (sp.suffix || '00000000') + ')';
-    el.appendChild(row);
-  });
-}
+// --- Load ---
 
 function loadArea(data, fileName) {
   areaData = data;
   loadedFileName = fileName;
 
-  // Display area info
   $('areaInfo').style.display = 'block';
   $('areaTitle').textContent = (data.level_name || '?') + ' - ' + (data.name || '?');
   $('areaSubtitle').textContent = 'Area ID: ' + (data.area_id || '?') + '  |  Budget: ' + data.formation_area_bytes + ' bytes';
@@ -459,26 +607,29 @@ function loadArea(data, fileName) {
     offset: f.offset || null,
     _selected: false
   }));
+
+  // Load spawn points (deep copy records)
+  spawnPoints = (data.spawn_points || []).map(group => ({
+    records: (group.records || []).map(r => Object.assign({}, r)),
+    suffix: group.suffix || '00000000',
+    offset: group.offset || null
+  }));
+
+  // Load zone spawns (deep copy records)
+  zoneSpawns = (data.zone_spawns || []).map(group => ({
+    records: (group.records || []).map(r => Object.assign({}, r)),
+    suffix: group.suffix || '00000000',
+    offset: group.offset || null
+  }));
+
   undoStack = [];
 
   $('budgetBar').style.display = 'block';
   $('toolbarArea').style.display = 'flex';
 
   renderFormations();
-
-  // Spawn summaries
-  if (data.spawn_points && data.spawn_points.length > 0) {
-    $('spawnSummary').style.display = 'block';
-    renderSpawnSummary(data.spawn_points, 'spawnRows');
-  } else {
-    $('spawnSummary').style.display = 'none';
-  }
-  if (data.zone_spawns && data.zone_spawns.length > 0) {
-    $('zoneSummary').style.display = 'block';
-    renderSpawnSummary(data.zone_spawns, 'zoneRows');
-  } else {
-    $('zoneSummary').style.display = 'none';
-  }
+  renderSpawnSection(spawnPoints, 'spawnSection', 'spawnCards');
+  renderSpawnSection(zoneSpawns, 'zoneSection', 'zoneCards');
 }
 
 // Event listeners
