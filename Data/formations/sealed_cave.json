@@ -1,0 +1,477 @@
+{
+  "_readme": "Formation templates for The Sealed Cave. Each formation defines the monster composition of an encounter.",
+  "level_name": "The Sealed Cave",
+  "areas": [
+    {
+      "name": "Area 1",
+      "group_offset": "0x1DD6984",
+      "monsters": [
+        "Skeleton",
+        "Zombie",
+        "Ghoul"
+      ],
+      "formation_count": 0,
+      "formations": []
+    },
+    {
+      "name": "Area 2",
+      "group_offset": "0x1DDC974",
+      "monsters": [
+        "Skeleton",
+        "Zombie",
+        "Ghoul"
+      ],
+      "formation_count": 4,
+      "formations": [
+        {
+          "total": 2,
+          "composition": [
+            {
+              "count": 2,
+              "slot": 0,
+              "monster": "Skeleton"
+            }
+          ],
+          "slots": [
+            0,
+            0
+          ],
+          "offset": "0x1DDD84C"
+        },
+        {
+          "total": 2,
+          "composition": [
+            {
+              "count": 2,
+              "slot": 1,
+              "monster": "Zombie"
+            }
+          ],
+          "slots": [
+            1,
+            1
+          ],
+          "offset": "0x1DDD890"
+        },
+        {
+          "total": 3,
+          "composition": [
+            {
+              "count": 1,
+              "slot": 0,
+              "monster": "Skeleton"
+            },
+            {
+              "count": 2,
+              "slot": 1,
+              "monster": "Zombie"
+            }
+          ],
+          "slots": [
+            0,
+            1,
+            1
+          ],
+          "offset": "0x1DDD8D4"
+        },
+        {
+          "total": 2,
+          "composition": [
+            {
+              "count": 2,
+              "slot": 2,
+              "monster": "Ghoul"
+            }
+          ],
+          "slots": [
+            2,
+            2
+          ],
+          "offset": "0x1DDD938"
+        }
+      ]
+    },
+    {
+      "name": "Area 3",
+      "group_offset": "0x1DE1998",
+      "monsters": [
+        "Skeleton",
+        "Zombie",
+        "Ghoul",
+        "Wight"
+      ],
+      "formation_count": 0,
+      "formations": []
+    },
+    {
+      "name": "Area 4",
+      "group_offset": "0x1DE597C",
+      "monsters": [
+        "Red-Slime",
+        "Wraith",
+        "Blood-Skeleton"
+      ],
+      "formation_count": 4,
+      "formations": [
+        {
+          "total": 4,
+          "composition": [
+            {
+              "count": 4,
+              "slot": 0,
+              "monster": "Red-Slime"
+            }
+          ],
+          "slots": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "offset": "0x1DE6148"
+        },
+        {
+          "total": 2,
+          "composition": [
+            {
+              "count": 2,
+              "slot": 1,
+              "monster": "Wraith"
+            }
+          ],
+          "slots": [
+            1,
+            1
+          ],
+          "offset": "0x1DE61CC"
+        },
+        {
+          "total": 3,
+          "composition": [
+            {
+              "count": 3,
+              "slot": 2,
+              "monster": "Blood-Skeleton"
+            }
+          ],
+          "slots": [
+            2,
+            2,
+            2
+          ],
+          "offset": "0x1DE6210"
+        },
+        {
+          "total": 3,
+          "composition": [
+            {
+              "count": 3,
+              "slot": 1,
+              "monster": "Wraith"
+            }
+          ],
+          "slots": [
+            1,
+            1,
+            1
+          ],
+          "offset": "0x1DE6274"
+        }
+      ]
+    },
+    {
+      "name": "Area 5",
+      "group_offset": "0x1DE81B0",
+      "monsters": [
+        "Wight",
+        "Ghoul",
+        "Durahan",
+        "Blood-Skeleton"
+      ],
+      "formation_count": 0,
+      "formations": []
+    },
+    {
+      "name": "Area 6",
+      "group_offset": "0x1DEB1B8",
+      "monsters": [
+        "Mummy",
+        "Blood-Mummy",
+        "Wraith",
+        "Red-Slime",
+        "Undead-Knight"
+      ],
+      "formation_count": 3,
+      "formations": [
+        {
+          "total": 4,
+          "composition": [
+            {
+              "count": 4,
+              "slot": 1,
+              "monster": "Blood-Mummy"
+            }
+          ],
+          "slots": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "offset": "0x1DEBDF0"
+        },
+        {
+          "total": 4,
+          "composition": [
+            {
+              "count": 4,
+              "slot": 2,
+              "monster": "Wraith"
+            }
+          ],
+          "slots": [
+            2,
+            2,
+            2,
+            2
+          ],
+          "offset": "0x1DEBE74"
+        },
+        {
+          "total": 4,
+          "composition": [
+            {
+              "count": 2,
+              "slot": 1,
+              "monster": "Blood-Mummy"
+            },
+            {
+              "count": 2,
+              "slot": 3,
+              "monster": "Red-Slime"
+            }
+          ],
+          "slots": [
+            1,
+            1,
+            3,
+            3
+          ],
+          "offset": "0x1DEBEF8"
+        }
+      ]
+    },
+    {
+      "name": "Area 7",
+      "group_offset": "0x1DEF1A0",
+      "monsters": [
+        "Undead-Knight",
+        "Shadow",
+        "Mummy",
+        "Revenant"
+      ],
+      "formation_count": 4,
+      "formations": [
+        {
+          "total": 2,
+          "composition": [
+            {
+              "count": 2,
+              "slot": 0,
+              "monster": "Undead-Knight"
+            }
+          ],
+          "slots": [
+            0,
+            0
+          ],
+          "offset": "0x1DEFAE0"
+        },
+        {
+          "total": 6,
+          "composition": [
+            {
+              "count": 6,
+              "slot": 1,
+              "monster": "Shadow"
+            }
+          ],
+          "slots": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "offset": "0x1DEFB24"
+        },
+        {
+          "total": 2,
+          "composition": [
+            {
+              "count": 2,
+              "slot": 2,
+              "monster": "Mummy"
+            }
+          ],
+          "slots": [
+            2,
+            2
+          ],
+          "offset": "0x1DEFBE8"
+        },
+        {
+          "total": 2,
+          "composition": [
+            {
+              "count": 2,
+              "slot": 3,
+              "monster": "Revenant"
+            }
+          ],
+          "slots": [
+            3,
+            3
+          ],
+          "offset": "0x1DEFC2C"
+        }
+      ]
+    },
+    {
+      "name": "Area 8",
+      "group_offset": "0x1DF198C",
+      "monsters": [
+        "Undead-Knight",
+        "Revenant",
+        "Shadow"
+      ],
+      "formation_count": 5,
+      "formations": [
+        {
+          "total": 3,
+          "composition": [
+            {
+              "count": 3,
+              "slot": 0,
+              "monster": "Undead-Knight"
+            }
+          ],
+          "slots": [
+            0,
+            0,
+            0
+          ],
+          "offset": "0x1DF262C"
+        },
+        {
+          "total": 3,
+          "composition": [
+            {
+              "count": 2,
+              "slot": 1,
+              "monster": "Revenant"
+            },
+            {
+              "count": 1,
+              "slot": 2,
+              "monster": "Shadow"
+            }
+          ],
+          "slots": [
+            1,
+            1,
+            2
+          ],
+          "offset": "0x1DF2690"
+        },
+        {
+          "total": 4,
+          "composition": [
+            {
+              "count": 4,
+              "slot": 2,
+              "monster": "Shadow"
+            }
+          ],
+          "slots": [
+            2,
+            2,
+            2,
+            2
+          ],
+          "offset": "0x1DF26F4"
+        },
+        {
+          "total": 3,
+          "composition": [
+            {
+              "count": 2,
+              "slot": 0,
+              "monster": "Undead-Knight"
+            },
+            {
+              "count": 1,
+              "slot": 1,
+              "monster": "Revenant"
+            }
+          ],
+          "slots": [
+            1,
+            0,
+            0
+          ],
+          "offset": "0x1DF2778"
+        },
+        {
+          "total": 3,
+          "composition": [
+            {
+              "count": 1,
+              "slot": 1,
+              "monster": "Revenant"
+            },
+            {
+              "count": 2,
+              "slot": 2,
+              "monster": "Shadow"
+            }
+          ],
+          "slots": [
+            1,
+            2,
+            2
+          ],
+          "offset": "0x1DF27DC"
+        }
+      ]
+    },
+    {
+      "name": "Area 9",
+      "group_offset": "0x1DF51E4",
+      "monsters": [
+        "Undead-Knight",
+        "Shadow",
+        "Mummy",
+        "Revenant",
+        "Yellow-Slime",
+        "Noble-Mummy",
+        "King-Mummy"
+      ],
+      "formation_count": 0,
+      "formations": []
+    },
+    {
+      "name": "Area 10",
+      "group_offset": "0x1DF99A0",
+      "monsters": [
+        "Black-Durahan",
+        "Undead-Master",
+        "Revenant",
+        "Blood-Shadow"
+      ],
+      "formation_count": 0,
+      "formations": []
+    }
+  ]
+}

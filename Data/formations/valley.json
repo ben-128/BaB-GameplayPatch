@@ -1,0 +1,94 @@
+{
+  "_readme": "Formation templates for Valley of White Wind. Each formation defines the monster composition of an encounter.",
+  "level_name": "Valley of White Wind",
+  "areas": [
+    {
+      "name": "Floor 1 - Area 1",
+      "group_offset": "0x25D0974",
+      "monsters": [
+        "Snow-Bear",
+        "Winter-Wolf",
+        "Hippogriff"
+      ],
+      "formation_count": 4,
+      "formations": [
+        {
+          "total": 2,
+          "composition": [
+            {
+              "count": 2,
+              "slot": 0,
+              "monster": "Snow-Bear"
+            }
+          ],
+          "slots": [
+            0,
+            0
+          ],
+          "offset": "0x25D0D68"
+        },
+        {
+          "total": 2,
+          "composition": [
+            {
+              "count": 2,
+              "slot": 1,
+              "monster": "Winter-Wolf"
+            }
+          ],
+          "slots": [
+            1,
+            1
+          ],
+          "offset": "0x25D0DAC"
+        },
+        {
+          "total": 3,
+          "composition": [
+            {
+              "count": 1,
+              "slot": 0,
+              "monster": "Snow-Bear"
+            },
+            {
+              "count": 2,
+              "slot": 1,
+              "monster": "Winter-Wolf"
+            }
+          ],
+          "slots": [
+            0,
+            1,
+            1
+          ],
+          "offset": "0x25D0DF0"
+        },
+        {
+          "total": 2,
+          "composition": [
+            {
+              "count": 2,
+              "slot": 2,
+              "monster": "Hippogriff"
+            }
+          ],
+          "slots": [
+            2,
+            2
+          ],
+          "offset": "0x25D0E54"
+        }
+      ]
+    },
+    {
+      "name": "Floor 2 - Area 1",
+      "group_offset": "0x25D2958",
+      "monsters": [
+        "Hippogriff",
+        "Griffin"
+      ],
+      "formation_count": 0,
+      "formations": []
+    }
+  ]
+}

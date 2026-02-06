@@ -1,0 +1,621 @@
+{
+  "_readme": "Formation templates for Hall of Demons. Each formation defines the monster composition of an encounter.",
+  "level_name": "Hall of Demons",
+  "areas": [
+    {
+      "name": "Area 1",
+      "group_offset": "0x2BEB1A4",
+      "monsters": [
+        "Evil-Stalker",
+        "Blood-Shadow",
+        "Spirit-Ball",
+        "Gray-Arm",
+        "Gremlin"
+      ],
+      "formation_count": 6,
+      "formations": [
+        {
+          "total": 1,
+          "composition": [
+            {
+              "count": 1,
+              "slot": 0,
+              "monster": "Evil-Stalker"
+            }
+          ],
+          "slots": [
+            0
+          ],
+          "offset": "0x2BEC1F8"
+        },
+        {
+          "total": 2,
+          "composition": [
+            {
+              "count": 2,
+              "slot": 0,
+              "monster": "Evil-Stalker"
+            }
+          ],
+          "slots": [
+            0,
+            0
+          ],
+          "offset": "0x2BEC21C"
+        },
+        {
+          "total": 2,
+          "composition": [
+            {
+              "count": 2,
+              "slot": 1,
+              "monster": "Blood-Shadow"
+            }
+          ],
+          "slots": [
+            1,
+            1
+          ],
+          "offset": "0x2BEC260"
+        },
+        {
+          "total": 4,
+          "composition": [
+            {
+              "count": 4,
+              "slot": 2,
+              "monster": "Spirit-Ball"
+            }
+          ],
+          "slots": [
+            2,
+            2,
+            2,
+            2
+          ],
+          "offset": "0x2BEC2A4"
+        },
+        {
+          "total": 2,
+          "composition": [
+            {
+              "count": 2,
+              "slot": 3,
+              "monster": "Gray-Arm"
+            }
+          ],
+          "slots": [
+            3,
+            3
+          ],
+          "offset": "0x2BEC328"
+        },
+        {
+          "total": 2,
+          "composition": [
+            {
+              "count": 2,
+              "slot": 4,
+              "monster": "Gremlin"
+            }
+          ],
+          "slots": [
+            4,
+            4
+          ],
+          "offset": "0x2BEC36C"
+        }
+      ]
+    },
+    {
+      "name": "Area 2",
+      "group_offset": "0x2BEF188",
+      "monsters": [
+        "Hell-Harpy",
+        "Gray-Arm",
+        "Dark-Goblin",
+        "Goblin-Wizard"
+      ],
+      "formation_count": 0,
+      "formations": []
+    },
+    {
+      "name": "Area 3",
+      "group_offset": "0x2BF19AC",
+      "monsters": [
+        "Evil-Stalker",
+        "Death-Knight",
+        "Blood-Shadow",
+        "Spirit-Ball",
+        "Gray-Arm",
+        "Gremlin"
+      ],
+      "formation_count": 4,
+      "formations": [
+        {
+          "total": 2,
+          "composition": [
+            {
+              "count": 2,
+              "slot": 0,
+              "monster": "Evil-Stalker"
+            }
+          ],
+          "slots": [
+            0,
+            0
+          ],
+          "offset": "0x2BF2B70"
+        },
+        {
+          "total": 2,
+          "composition": [
+            {
+              "count": 2,
+              "slot": 1,
+              "monster": "Death-Knight"
+            }
+          ],
+          "slots": [
+            1,
+            1
+          ],
+          "offset": "0x2BF2BB4"
+        },
+        {
+          "total": 3,
+          "composition": [
+            {
+              "count": 3,
+              "slot": 2,
+              "monster": "Blood-Shadow"
+            }
+          ],
+          "slots": [
+            2,
+            2,
+            2
+          ],
+          "offset": "0x2BF2BF8"
+        },
+        {
+          "total": 3,
+          "composition": [
+            {
+              "count": 3,
+              "slot": 4,
+              "monster": "Gray-Arm"
+            }
+          ],
+          "slots": [
+            4,
+            4,
+            4
+          ],
+          "offset": "0x2BF2C5C"
+        }
+      ]
+    },
+    {
+      "name": "Area 4",
+      "group_offset": "0x2BF49A4",
+      "monsters": [
+        "Death-Knight",
+        "Blood-Shadow",
+        "Evil-Stalker",
+        "Gremlin",
+        "Gray-Arm"
+      ],
+      "formation_count": 5,
+      "formations": [
+        {
+          "total": 1,
+          "composition": [
+            {
+              "count": 1,
+              "slot": 0,
+              "monster": "Death-Knight"
+            }
+          ],
+          "slots": [
+            0
+          ],
+          "offset": "0x2BF5234"
+        },
+        {
+          "total": 3,
+          "composition": [
+            {
+              "count": 3,
+              "slot": 0,
+              "monster": "Death-Knight"
+            }
+          ],
+          "slots": [
+            0,
+            0,
+            0
+          ],
+          "offset": "0x2BF5258"
+        },
+        {
+          "total": 3,
+          "composition": [
+            {
+              "count": 3,
+              "slot": 1,
+              "monster": "Blood-Shadow"
+            }
+          ],
+          "slots": [
+            1,
+            1,
+            1
+          ],
+          "offset": "0x2BF52BC"
+        },
+        {
+          "total": 3,
+          "composition": [
+            {
+              "count": 3,
+              "slot": 2,
+              "monster": "Evil-Stalker"
+            }
+          ],
+          "slots": [
+            2,
+            2,
+            2
+          ],
+          "offset": "0x2BF5320"
+        },
+        {
+          "total": 3,
+          "composition": [
+            {
+              "count": 3,
+              "slot": 3,
+              "monster": "Gremlin"
+            }
+          ],
+          "slots": [
+            3,
+            3,
+            3
+          ],
+          "offset": "0x2BF5384"
+        }
+      ]
+    },
+    {
+      "name": "Area 5",
+      "group_offset": "0x2BF71C0",
+      "monsters": [
+        "Zombie-Dragon",
+        "Evil-Ball"
+      ],
+      "formation_count": 0,
+      "formations": []
+    },
+    {
+      "name": "Area 6",
+      "group_offset": "0x2BFC190",
+      "monsters": [
+        "Hell-Ogre",
+        "Basirisk",
+        "Hell-Hound",
+        "Gremlin"
+      ],
+      "formation_count": 0,
+      "formations": []
+    },
+    {
+      "name": "Area 7",
+      "group_offset": "0x2BFF17C",
+      "monsters": [
+        "Gremlin",
+        "Succubus"
+      ],
+      "formation_count": 4,
+      "formations": [
+        {
+          "total": 3,
+          "composition": [
+            {
+              "count": 3,
+              "slot": 0,
+              "monster": "Gremlin"
+            }
+          ],
+          "slots": [
+            0,
+            0,
+            0
+          ],
+          "offset": "0x2BFF768"
+        },
+        {
+          "total": 1,
+          "composition": [
+            {
+              "count": 1,
+              "slot": 1,
+              "monster": "Succubus"
+            }
+          ],
+          "slots": [
+            1
+          ],
+          "offset": "0x2BFF7CC"
+        },
+        {
+          "total": 3,
+          "composition": [
+            {
+              "count": 3,
+              "slot": 0,
+              "monster": "Gremlin"
+            }
+          ],
+          "slots": [
+            0,
+            0,
+            0
+          ],
+          "offset": "0x2BFFF68"
+        },
+        {
+          "total": 1,
+          "composition": [
+            {
+              "count": 1,
+              "slot": 1,
+              "monster": "Succubus"
+            }
+          ],
+          "slots": [
+            1
+          ],
+          "offset": "0x2BFFFCC"
+        }
+      ]
+    },
+    {
+      "name": "Area 8",
+      "group_offset": "0x2C0017C",
+      "monsters": [
+        "Salamander",
+        "Hell-Hound",
+        "Hell-Ogre"
+      ],
+      "formation_count": 3,
+      "formations": [
+        {
+          "total": 3,
+          "composition": [
+            {
+              "count": 3,
+              "slot": 1,
+              "monster": "Hell-Hound"
+            }
+          ],
+          "slots": [
+            1,
+            1,
+            1
+          ],
+          "offset": "0x2C00EDC"
+        },
+        {
+          "total": 2,
+          "composition": [
+            {
+              "count": 2,
+              "slot": 2,
+              "monster": "Hell-Ogre"
+            }
+          ],
+          "slots": [
+            2,
+            2
+          ],
+          "offset": "0x2C00F40"
+        },
+        {
+          "total": 6,
+          "composition": [
+            {
+              "count": 6,
+              "slot": 0,
+              "monster": "Salamander"
+            }
+          ],
+          "slots": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "offset": "0x2C00F84"
+        }
+      ]
+    },
+    {
+      "name": "Area 9",
+      "group_offset": "0x2C03158",
+      "monsters": [
+        "Gray-Arm",
+        "Hell-Ogre",
+        "Succubus"
+      ],
+      "formation_count": 4,
+      "formations": [
+        {
+          "total": 3,
+          "composition": [
+            {
+              "count": 3,
+              "slot": 0,
+              "monster": "Gray-Arm"
+            }
+          ],
+          "slots": [
+            0,
+            0,
+            0
+          ],
+          "offset": "0x2C03EE0"
+        },
+        {
+          "total": 2,
+          "composition": [
+            {
+              "count": 2,
+              "slot": 0,
+              "monster": "Gray-Arm"
+            }
+          ],
+          "slots": [
+            0,
+            0
+          ],
+          "offset": "0x2C03F44"
+        },
+        {
+          "total": 2,
+          "composition": [
+            {
+              "count": 2,
+              "slot": 1,
+              "monster": "Hell-Ogre"
+            }
+          ],
+          "slots": [
+            1,
+            1
+          ],
+          "offset": "0x2C03F88"
+        },
+        {
+          "total": 3,
+          "composition": [
+            {
+              "count": 1,
+              "slot": 0,
+              "monster": "Gray-Arm"
+            },
+            {
+              "count": 2,
+              "slot": 1,
+              "monster": "Hell-Ogre"
+            }
+          ],
+          "slots": [
+            0,
+            1,
+            1
+          ],
+          "offset": "0x2C03FCC"
+        }
+      ]
+    },
+    {
+      "name": "Area 10",
+      "group_offset": "0x2C07184",
+      "monsters": [
+        "Carberos",
+        "Hell-Hound",
+        "Gorgon"
+      ],
+      "formation_count": 0,
+      "formations": []
+    },
+    {
+      "name": "Area 11",
+      "group_offset": "0x2C08974",
+      "monsters": [
+        "Gray-Arm",
+        "Hell-Ogre",
+        "Succubus"
+      ],
+      "formation_count": 4,
+      "formations": [
+        {
+          "total": 3,
+          "composition": [
+            {
+              "count": 3,
+              "slot": 0,
+              "monster": "Gray-Arm"
+            }
+          ],
+          "slots": [
+            0,
+            0,
+            0
+          ],
+          "offset": "0x2C09848"
+        },
+        {
+          "total": 2,
+          "composition": [
+            {
+              "count": 2,
+              "slot": 1,
+              "monster": "Hell-Ogre"
+            }
+          ],
+          "slots": [
+            1,
+            1
+          ],
+          "offset": "0x2C098AC"
+        },
+        {
+          "total": 2,
+          "composition": [
+            {
+              "count": 2,
+              "slot": 2,
+              "monster": "Succubus"
+            }
+          ],
+          "slots": [
+            2,
+            2
+          ],
+          "offset": "0x2C098F0"
+        },
+        {
+          "total": 3,
+          "composition": [
+            {
+              "count": 1,
+              "slot": 0,
+              "monster": "Gray-Arm"
+            },
+            {
+              "count": 1,
+              "slot": 1,
+              "monster": "Hell-Ogre"
+            },
+            {
+              "count": 1,
+              "slot": 2,
+              "monster": "Succubus"
+            }
+          ],
+          "slots": [
+            0,
+            1,
+            2
+          ],
+          "offset": "0x2C09934"
+        }
+      ]
+    }
+  ]
+}
