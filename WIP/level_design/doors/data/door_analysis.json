@@ -1,0 +1,2654 @@
+{
+  "door_types": {
+    "magic_locked": [
+      {
+        "offset": "0x7edc32",
+        "context": "Key created in ancient times.\u0000\u0000\u0000Magical Key\u0000Opens doors locked by magic.\u0000\u0000\u0000\u0000Fire Jewel\u0000\u0000Protects aga"
+      },
+      {
+        "offset": "0x7edcda",
+        "context": "Enhances magical thunder.\u0000\u0000\u0000Demon Amulet\u0000\u0000\u0000\u0000Opens doors with demon engravings.\u0000\u0000Ghost Amulet\u0000\u0000\u0000\u0000Open"
+      },
+      {
+        "offset": "0x7edd0e",
+        "context": "ors with demon engravings.\u0000\u0000Ghost Amulet\u0000\u0000\u0000\u0000Opens doors with ghost engravings.\u0000\u0000Thunder Medallion\u0000\u0000\u0000"
+      },
+      {
+        "offset": "0x7ee432",
+        "context": "Key created in ancient times.\u0000\u0000\u0000Magical Key\u0000Opens doors locked by magic.\u0000\u0000\u0000\u0000Fire Jewel\u0000\u0000Protects aga"
+      },
+      {
+        "offset": "0x7ee4da",
+        "context": "Enhances magical thunder.\u0000\u0000\u0000Demon Amulet\u0000\u0000\u0000\u0000Opens doors with demon engravings.\u0000\u0000Ghost Amulet\u0000\u0000\u0000\u0000Open"
+      },
+      {
+        "offset": "0x7ee50e",
+        "context": "ors with demon engravings.\u0000\u0000Ghost Amulet\u0000\u0000\u0000\u0000Opens doors with ghost engravings.\u0000\u0000Thunder Medallion\u0000\u0000\u0000"
+      },
+      {
+        "offset": "0x7eec32",
+        "context": "Key created in ancient times.\u0000\u0000\u0000Magical Key\u0000Opens doors locked by magic.\u0000\u0000\u0000\u0000Fire Jewel\u0000\u0000Protects aga"
+      },
+      {
+        "offset": "0x7eecda",
+        "context": "Enhances magical thunder.\u0000\u0000\u0000Demon Amulet\u0000\u0000\u0000\u0000Opens doors with demon engravings.\u0000\u0000Ghost Amulet\u0000\u0000\u0000\u0000Open"
+      },
+      {
+        "offset": "0x7eed0e",
+        "context": "ors with demon engravings.\u0000\u0000Ghost Amulet\u0000\u0000\u0000\u0000Opens doors with ghost engravings.\u0000\u0000Thunder Medallion\u0000\u0000\u0000"
+      },
+      {
+        "offset": "0x7f4af2",
+        "context": "Key created in ancient times.\u0000\u0000\u0000Magical Key\u0000Opens doors locked by magic.\u0000\u0000\u0000\u0000Fire Gem\u0000\u0000\u0000\u0000Protects aga"
+      },
+      {
+        "offset": "0x7f4b8a",
+        "context": "Enhances magical thunder.\u0000\u0000\u0000Demon Amulet\u0000\u0000\u0000\u0000Opens doors with demon engravings.\u0000\u0000Ghost Amulet\u0000\u0000\u0000\u0000Open"
+      },
+      {
+        "offset": "0x7f4bbe",
+        "context": "ors with demon engravings.\u0000\u0000Ghost Amulet\u0000\u0000\u0000\u0000Opens doors with ghost engravings.\u0000\u0000Thunder Medallion\u0000\u0000\u0000"
+      },
+      {
+        "offset": "0x7f52f2",
+        "context": "Key created in ancient times.\u0000\u0000\u0000Magical Key\u0000Opens doors locked by magic.\u0000\u0000\u0000\u0000Fire Gem\u0000\u0000\u0000\u0000Protects aga"
+      },
+      {
+        "offset": "0x7f538a",
+        "context": "Enhances magical thunder.\u0000\u0000\u0000Demon Amulet\u0000\u0000\u0000\u0000Opens doors with demon engravings.\u0000\u0000Ghost Amulet\u0000\u0000\u0000\u0000Open"
+      },
+      {
+        "offset": "0x7f53be",
+        "context": "ors with demon engravings.\u0000\u0000Ghost Amulet\u0000\u0000\u0000\u0000Opens doors with ghost engravings.\u0000\u0000Thunder Medallion\u0000\u0000\u0000"
+      },
+      {
+        "offset": "0x90bc30",
+        "context": "\u0000\u0000Untouchable\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f \f\u0014\u0007The door won't open!\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f \f\u0014\u0007It's empty...\u000f\b\u0001\u0000\u0000\u0000\u0000"
+      },
+      {
+        "offset": "0x90c430",
+        "context": "\u0000\u0000Untouchable\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f \f\u0014\u0007The door won't open!\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f \f\u0014\u0007It's empty...\u000f\b\u0001\u0000\u0000\u0000\u0000"
+      },
+      {
+        "offset": "0x19713b8",
+        "context": "\u0000\u0000\b\u0000\u001f7\fA magical energy can be detected from the door... it seems to be sealed.\u000f\u001c\u0002P\u0000\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fThe do"
+      },
+      {
+        "offset": "0x197a17e",
+        "context": "e key turns within the lock...\u000f\u001c\u0002@\u0000\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fThe door opens!\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f7\fI sense a magical power whic"
+      },
+      {
+        "offset": "0x197a1c6",
+        "context": "7\fI sense a magical power which emanates from the door...\u000f\u001fQ\f\u001d:\r\u001c\u0003.\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\u0007\u0003\u0002\u0018\u0000\u0000\u0000\u0000\b\u0000\u001f7\fDark Elf:\rHe"
+      },
+      {
+        "offset": "0x1989082",
+        "context": "\u0000\n=\u0000\b\u0001\u0000\u0000\b\u0000\u001fD\f\u001d:\r\u001c\u0003\"\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe seal on the door is broken!\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f7\fI can sense magic here..."
+      },
+      {
+        "offset": "0x19890bd",
+        "context": "roken!\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f7\fI can sense magic here...\rthis door is sealed!\u000f\u001c\u0002P\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe seal on the door is"
+      },
+      {
+        "offset": "0x19890ea",
+        "context": "this door is sealed!\u000f\u001c\u0002P\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe seal on the door is broken!\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f7\fI can sense some magic h"
+      },
+      {
+        "offset": "0x198912a",
+        "context": "!\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f7\fI can sense some magic here...\rthis door is sealed!\u000f\u001c\u0002P\u0000\u0000\u0000\u001f*\b\u0000\f - The Ancient Tower -\r "
+      },
+      {
+        "offset": "0x198d66a",
+        "context": "\u0007!\nN\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fYou have the key!\u000f\b\u0001\u0000\u0000\b\u0000\u001f\u001d\fThe door is locked...\u000f\u001c\u0002@\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fThe seal dissipates!\u000f"
+      },
+      {
+        "offset": "0x198d6d3",
+        "context": "\u0000\u0000\u0000\b\u0000\u001f7\fI can feel a magical energy here... This door is sealed.\u000f\u001c\u0002P\u0000\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fYou take the \u0014\u0004Dark E"
+      },
+      {
+        "offset": "0x1dfb1da",
+        "context": "....\u000f\n\u0007\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fI sense a powerful magic on the door...\u000f\u001fD\f\u001d:\r\u001c\u0003\u0019\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\u0007\u0003\u0002\b\u0000\u0000\u0000\u0000\b\u0000\u001f^\fThe Lord of t"
+      },
+      {
+        "offset": "0x2403bff",
+        "context": "round Floor -\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f7\f\u001d:\r\u001c\u0003\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f7\fThis door is enchanted with powerful magic...\u000f\u001fD\f\u001d:\r\u001c\u0003~\u0000\u000f\b"
+      },
+      {
+        "offset": "0x2403c43",
+        "context": "with powerful magic...\u000f\u001fD\f\u001d:\r\u001c\u0003~\u0000\u000f\b\u0001\u0000\u0000\b\u0000\u001f7\fThis door is enchanted with powerful magic...\u000f\fWhen you t"
+      },
+      {
+        "offset": "0x2403c80",
+        "context": "hanted with powerful magic...\u000f\fWhen you touch the door the Sagestone seems to vibrate slightly...\u000f\f\u001d"
+      },
+      {
+        "offset": "0x2403ce3",
+        "context": ":\rThere, it's vibrating again...\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f7\fThis door is enchanted with powerful magic...\u000f\u001fD\f\u001d:\r\u001c\u0003~\u0000\u000f"
+      },
+      {
+        "offset": "0x2403d27",
+        "context": "with powerful magic...\u000f\u001fD\f\u001d:\r\u001c\u0003~\u0000\u000f\b\u0001\u0000\u0000\b\u0000\u001f7\fThis door is enchanted with powerful magic...\u000f\fWhen you t"
+      },
+      {
+        "offset": "0x2403d64",
+        "context": "hanted with powerful magic...\u000f\fWhen you touch the door the Sagestone suddenly glows!\u000f\n\u0000\u0000\u0000\b\u0000\u000b\u0001%\u0001\t\u0000\b\u0001\n"
+      },
+      {
+        "offset": "0x2412272",
+        "context": "\u0004bat medallion\u0014\u0007!\nj\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe seal on the door is broken!\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f7\fYou sense a magical ener"
+      },
+      {
+        "offset": "0x24122b0",
+        "context": "en!\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f7\fYou sense a magical energy on the door... it seems to be sealed.\u000f\u001c\u0002P\u0000\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe se"
+      },
+      {
+        "offset": "0x24122ee",
+        "context": "eems to be sealed.\u000f\u001c\u0002P\u0000\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe seal on the door is broken!\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f7\fYou sense a magical ener"
+      },
+      {
+        "offset": "0x241232c",
+        "context": "en!\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f7\fYou sense a magical energy on the door... it seems to be sealed.\u000f\u001c\u0002P\u0000\u0000\u0000\u0000\u0000\u0000\u001f*\b\u0000\f - The"
+      },
+      {
+        "offset": "0x2418e90",
+        "context": "lace Gate\rContinue Expedition\r\t\u0000\b\u0001\n\u001e\u0000\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f7\fA door upon which powerful magic lies...\u000f\u001fD\f\u001d:\r\u001c\u00031\u0000\u000f\b"
+      },
+      {
+        "offset": "0x2418ed0",
+        "context": "h powerful magic lies...\u000f\u001fD\f\u001d:\r\u001c\u00031\u0000\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f7\fA door upon which powerful magic lies...\u000f\fWhen you tou"
+      },
+      {
+        "offset": "0x2418f0b",
+        "context": "which powerful magic lies...\u000f\fWhen you touch the door, the Sagestone vibrates lightly...\u000f\u001f7\f\u001d:\rIt lo"
+      },
+      {
+        "offset": "0x2418f74",
+        "context": "as if the Sagestone just vibrated...\u000f\b\u0001\u0000\u0000\b\u0000\u001f7\fA door upon which powerful magic lies...\u000f\u001fD\f\u001d:\r\u001c\u00031\u0000\u000f\b\u0001"
+      },
+      {
+        "offset": "0x2418fb4",
+        "context": "h powerful magic lies...\u000f\u001fD\f\u001d:\r\u001c\u00031\u0000\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f7\fA door upon which powerful magic lies...\u000f\fWhen you tou"
+      },
+      {
+        "offset": "0x2418fef",
+        "context": "which powerful magic lies...\u000f\fWhen you touch the door, the Sagestone lights up suddenly...\u000f\n$\u0000\u0000\u0000\u0000\u0000\b\u0000"
+      },
+      {
+        "offset": "0x241ee8a",
+        "context": "he \u0014\u0004Iron Staff\u0014\u0007!\n~\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe seal on the door is broken!\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f7\fYou can sense a magical "
+      },
+      {
+        "offset": "0x241eecc",
+        "context": "\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f7\fYou can sense a magical energy on the door... it seems to be sealed.\u000f\u001c\u0002P\u0000\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe se"
+      },
+      {
+        "offset": "0x241ef0a",
+        "context": "eems to be sealed.\u000f\u001c\u0002P\u0000\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe seal on the door is broken!\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f7\fYou can sense a magical "
+      },
+      {
+        "offset": "0x241ef4c",
+        "context": "\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f7\fYou can sense a magical energy on the door... it seems to be sealed.\u000f\u001c\u0002P\u0000\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe se"
+      },
+      {
+        "offset": "0x241ef8a",
+        "context": "eems to be sealed.\u000f\u001c\u0002P\u0000\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe seal on the door is broken!\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f7\fYou can sense a magical "
+      },
+      {
+        "offset": "0x241efcc",
+        "context": "\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f7\fYou can sense a magical energy on the door... it seems to be sealed.\u000f\u001c\u0002P\u0000\u0000\u0000\u0000\u0000\u0000\u001f7\b\u0000\f - The"
+      },
+      {
+        "offset": "0x2429af6",
+        "context": "he wall...\u000f\u001fQ\f\u001d:\r\u001c\u0003\u000e\u0000\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f*\fThe seal on the door is broken!\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f7\fMagical energy can be sen"
+      },
+      {
+        "offset": "0x2429b39",
+        "context": "\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f7\fMagical energy can be sensed from this door... it seems to be sealed.\u000f\u001c\u0002P\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe sea"
+      },
+      {
+        "offset": "0x2429b76",
+        "context": "seems to be sealed.\u000f\u001c\u0002P\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe seal on the door is broken!\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f7\fMagical energy can be se"
+      },
+      {
+        "offset": "0x2429bb9",
+        "context": "\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f7\fMagical energy can be sensed from this door... it seems to be sealed.\u000f\u001c\u0002P\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fA lever"
+      },
+      {
+        "offset": "0x242c90a",
+        "context": "West Wing, 3rd Floor -\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fThe seal on the door is broken!\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f7\fMagical energy can be sen"
+      },
+      {
+        "offset": "0x242c94d",
+        "context": "\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f7\fMagical energy can be sensed from this door... it seems to be sealed.\u000f\u001c\u0002P\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fYou pic"
+      },
+      {
+        "offset": "0x242c99e",
+        "context": "\u0002P\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fYou pick the lock!\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fThe door is locked...\u000f\u001c\u0002@\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe seal on the door i"
+      },
+      {
+        "offset": "0x242c9ce",
+        "context": "e door is locked...\u000f\u001c\u0002@\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe seal on the door is broken!\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f7\fMagical energy can be se"
+      },
+      {
+        "offset": "0x242ca11",
+        "context": "\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f7\fMagical energy can be sensed from this door... it seems to be sealed.\u000f\u001c\u0002P\u0000\u0000\u0000\u0000\u0000\u0000\u0000/\u0000\u0002b\u0001\u0000F\u0000\u0000\u0000"
+      },
+      {
+        "offset": "0x2bfde26",
+        "context": "7\fWhen you set the crystal pearl in the ring, the door opens!\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fThe door is locked tight.\u000f\b"
+      },
+      {
+        "offset": "0x2bfde42",
+        "context": "earl in the ring, the door opens!\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fThe door is locked tight.\u000f\b\u0001\u0000\u0000\b\u0000\u001fD\f\u001d:\r\u001c\u0003@\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fT"
+      },
+      {
+        "offset": "0x2bfde92",
+        "context": "D\f\u001d:\r\u001c\u0003@\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe \u0014\u0004magic key \u0014\u0007opens the door!\u000f\b\u0001\u0000\u0000\b\u0000\u001f\u001d\fYou pick the lock!\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fThe d"
+      }
+    ],
+    "demon_engraved": [
+      {
+        "offset": "0x197a132",
+        "context": "e before these demons destroy us.\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fThe door opens!\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe key turns within the loc"
+      },
+      {
+        "offset": "0x2c05415",
+        "context": "ectricity.\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f \fA demon is engraved in the door.\u000f\u001f0\f\u001d:\r\u001c\u00036\u0000\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f \fThe \u0014\u0004demon amulet\u0014\u0007 ope"
+      },
+      {
+        "offset": "0x2c05451",
+        "context": ":\r\u001c\u00036\u0000\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f \fThe \u0014\u0004demon amulet\u0014\u0007 opens the door!\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f \fA ghost is engraved in the door.\u000f\u001f0\f"
+      }
+    ],
+    "ghost_engraved": [
+      {
+        "offset": "0x2c0547d",
+        "context": "s the door!\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f \fA ghost is engraved in the door.\u000f\u001f0\f\u001d:\r\u001c\u00036\u0000\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f \fThe \u0014\u0004ghost amulet\u0014\u0007 ope"
+      },
+      {
+        "offset": "0x2c054b9",
+        "context": ":\r\u001c\u00036\u0000\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f \fThe \u0014\u0004ghost amulet\u0014\u0007 opens the door!\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f \fYou are struck back by lightning!\u000f\u001f0"
+      }
+    ],
+    "key_locked": [
+      {
+        "offset": "0x7ef29f",
+        "context": "o the boathouse.\u0000\u0000\u0000Cellar Key\u0000\u0000To open the cellar door in the woodcutter's cabin.\u0000\u0000Key to the Cleari"
+      },
+      {
+        "offset": "0x7f0ae2",
+        "context": "rated with a sigil.\u0000Storage Room Key\u0000\u0000\u0000\u0000Opens the door to the storage room.\u0000Control Room Key\u0000\u0000\u0000\u0000Key "
+      },
+      {
+        "offset": "0x7f12e2",
+        "context": "rated with a sigil.\u0000Storage Room Key\u0000\u0000\u0000\u0000Opens the door to the storage room.\u0000Control Room Key\u0000\u0000\u0000\u0000Key "
+      },
+      {
+        "offset": "0xad715a",
+        "context": "@ ??\u0001\u0002\u0000\u0000\u001f\u001d\b\u0000\f - The Roadside Inn -\u000f\b\u0001\u0000\u0000\b\u0000\u001f\u001d\fThe door is locked...\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fThe\u0014\u0006 innkeeper's door ke"
+      },
+      {
+        "offset": "0xad7188",
+        "context": "The door is locked...\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fThe\u0014\u0006 innkeeper's door key \u0014\u0007opens the door.\u000f\b\u0001\u0000\u0000\u0000\u001fD\fThe receptionist"
+      },
+      {
+        "offset": "0xad719d",
+        "context": "\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fThe\u0014\u0006 innkeeper's door key \u0014\u0007opens the door.\u000f\b\u0001\u0000\u0000\u0000\u001fD\fThe receptionist:\rYour room is on the"
+      },
+      {
+        "offset": "0xae241a",
+        "context": "\u0001\u0002\u0000\u0000\u001f\u001d\b\u0000\f  - The Roadside Inn -\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fThe door is locked...\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fThe \u0014\u0006host's key \u0014\u0007opens "
+      },
+      {
+        "offset": "0xae2453",
+        "context": "locked...\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fThe \u0014\u0006host's key \u0014\u0007opens the door!\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\u001f7\fThe receptionist:\rThink carefully ab"
+      },
+      {
+        "offset": "0xaec342",
+        "context": "\u0001\u0002\u0000\u0000\u001f \b\u0000\f  - The Roadside Inn -\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fThe door is locked...\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fThe \u0014\u0006host's key \u0014\u0007opens "
+      },
+      {
+        "offset": "0xaec37b",
+        "context": "locked...\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fThe \u0014\u0006host's key \u0014\u0007opens the door!\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\u001f7\fThe receptionist:\rHow are you? So yo"
+      },
+      {
+        "offset": "0xafa57a",
+        "context": "\u0001\u0002\u0000\u0000\u001f\u001d\b\u0000\f  - The Roadside Inn -\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fThe door is locked...\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fThe\u0014\u0006 host's key \u0014\u0007opens "
+      },
+      {
+        "offset": "0xafa5b3",
+        "context": "locked...\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fThe\u0014\u0006 host's key \u0014\u0007opens the door!\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\u001f7\fThe receptionist:\rOnce and a while o"
+      },
+      {
+        "offset": "0xb05b42",
+        "context": "\u0001\u0002\u0000\u0000\u001f\u001d\b\u0000\f  - The Roadside Inn -\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fThe door is locked...\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fThe \u0014\u0006host's key\u0014\u0007 opens "
+      },
+      {
+        "offset": "0xb05b7b",
+        "context": "locked...\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fThe \u0014\u0006host's key\u0014\u0007 opens the door!\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\u001f7\fThe receptionist:\rOnce and a while a"
+      },
+      {
+        "offset": "0xb0fb22",
+        "context": "\u0001\u0002\u0000\u0000\u001f\u001d\b\u0000\f  - The Roadside Inn -\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fThe door is locked...\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fThe \u0014\u0006host's key\u0014\u0007 opens "
+      },
+      {
+        "offset": "0xb0fb5b",
+        "context": "locked...\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fThe \u0014\u0006host's key\u0014\u0007 opens the door!\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\u001f7\fThe receptionist:\rWould you like to "
+      },
+      {
+        "offset": "0xb19b86",
+        "context": "\u0001\u0002\u0000\u0000\u001f\u001d\b\u0000\f  - The Roadside Inn -\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fThe door is locked...\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fThe \u0014\u0006host's key\u0014\u0007 opens "
+      },
+      {
+        "offset": "0xb19bbf",
+        "context": "locked...\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fThe \u0014\u0006host's key\u0014\u0007 opens the door!\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\u001f7\fThe receptionist:\rFrom your expressi"
+      },
+      {
+        "offset": "0xb24352",
+        "context": "\u0001\u0002\u0000\u0000\u001f \b\u0000\f  - The Roadside Inn -\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fThe door is locked...\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fThe \u0014\u0006host's key\u0014\u0007 opens "
+      },
+      {
+        "offset": "0xb2438b",
+        "context": "locked...\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fThe \u0014\u0006host's key\u0014\u0007 opens the door!\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\u001fD\fThe receptionist:\rWelcome home! Woul"
+      },
+      {
+        "offset": "0xb2fb4e",
+        "context": "\u0001\u0002\u0000\u0000\u001f\u001d\b\u0000\f  - The Roadside Inn -\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fThe door is locked...\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fThe \u0014\u0006host's key\u0014\u0007 opens "
+      },
+      {
+        "offset": "0xb2fb87",
+        "context": "locked...\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fThe \u0014\u0006host's key\u0014\u0007 opens the door!\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\u001f7\fThe receptionist:\rWelcome back! Have"
+      },
+      {
+        "offset": "0xb3ab8e",
+        "context": "\u0001\u0002\u0000\u0000\u001f\u001d\b\u0000\f  - The Roadside Inn -\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fThe door is locked...\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fThe \u0014\u0006host's key\u0014\u0007 opens "
+      },
+      {
+        "offset": "0xb3abc7",
+        "context": "locked...\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fThe \u0014\u0006host's key\u0014\u0007 opens the door!\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\u001f7\fThe receptionist:\rWelcome back! Have"
+      },
+      {
+        "offset": "0xb473e6",
+        "context": "\u0001\u0002\u0000\u0000\u001f\u001d\b\u0000\f  - The Roadside Inn -\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fThe door is locked...\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fThe \u0014\u0006host's key\u0014\u0007 opens "
+      },
+      {
+        "offset": "0xb4741f",
+        "context": "locked...\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fThe \u0014\u0006host's key\u0014\u0007 opens the door!\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\u001f7\fThe receptionist:\rYou're looking pre"
+      },
+      {
+        "offset": "0x1492ef8",
+        "context": "\u0000\u0000Lake Side\u0000\u0000\u0000\b\u0000\u001f*\f\"Boathouse\" is written on the door...\u000f\n4\u0000\u001f7\f\u001d:\r\u001c\u0003\n\u0000\u000f\n8\u0000\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fYou've opened t"
+      },
+      {
+        "offset": "0x1492f30",
+        "context": ".\u000f\n4\u0000\u001f7\f\u001d:\r\u001c\u0003\n\u0000\u000f\n8\u0000\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fYou've opened the door with the \u0014\u0006boathouse key\u0014\u0007!\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fSomethi"
+      },
+      {
+        "offset": "0x1493289",
+        "context": "ocked.\u0000\u0000\u0000It won't open. It must be locked.\u0000\u0000\u0000This door is locked, I cannot open it.\u0000\u0000This door is lo"
+      },
+      {
+        "offset": "0x14932b1",
+        "context": "d.\u0000\u0000\u0000This door is locked, I cannot open it.\u0000\u0000This door is locked, I cannot open it.\u0000\u0000It appears to b"
+      },
+      {
+        "offset": "0x1493348",
+        "context": "ocked!\u0000\u0000\u0000\u0000Aw, it's locked!\u0000\u0000\u0000\u0000Someone locked this door!\u0000\u0000\u0000Someone locked this door!\u0000\u0000\u0000It would appea"
+      },
+      {
+        "offset": "0x1493364",
+        "context": "\u0000\u0000Someone locked this door!\u0000\u0000\u0000Someone locked this door!\u0000\u0000\u0000It would appear to be locked.\u0000\u0000\u0000It would a"
+      },
+      {
+        "offset": "0x149f4b6",
+        "context": "nd the \u0014\u0004key to the clearing\u0014\u0007!\nI\u0000\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f\u001d\fThe doorbell rings...\u000f\u001f7\f\u001d:\r\u001c\u0003 \u0000\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fSomething is "
+      },
+      {
+        "offset": "0x149f73a",
+        "context": "- The Forest -\u000f\u0004\u0010\u0010\b\u0001\u0000\u0000\b\u0000\u001f7\fYou open the cellar door with the \u0014\u0006cellar key\u0014\u0007!\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fThere is a tra"
+      },
+      {
+        "offset": "0x149f771",
+        "context": "with the \u0014\u0006cellar key\u0014\u0007!\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fThere is a trapdoor in the floor...\u000f\n\u001e\u0000\u001f7\f\u001d:\r\u001c\u00030\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\n'\u0000\u0000\u0000\u0000\u0000\u0000\b"
+      },
+      {
+        "offset": "0x149f8bf",
+        "context": "pty...\u000f\b\u0001\u0000\u0000\b\u0000\u001f7\f\u001d:\r\u001c\u00030\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fYou open the door with the\r\u0014\u0006 splendid key\u0014\u0007!\u000f\n&\u0000\u0000\u0000\u0000\u0000\u0000\u001f\u001d\b\u0000\fWhere "
+      },
+      {
+        "offset": "0x14ae697",
+        "context": "or be opened?\u0000\u0000It's securely closed! How can this door be opened?\u0000\u0000That won't work, this door is loc"
+      },
+      {
+        "offset": "0x14ae6be",
+        "context": "w can this door be opened?\u0000\u0000That won't work, this door is locked tight.\u0000It won't work, this door is "
+      },
+      {
+        "offset": "0x14ae6e8",
+        "context": "k, this door is locked tight.\u0000It won't work, this door is locked tight.\u0000\u0000\u0000Umpf, this thing is barred"
+      },
+      {
+        "offset": "0x14ae72d",
+        "context": "t.\u0000\u0000\u0000Umpf, this thing is barred up tight...\u0000\u0000This door seems to be locked up tight...\u0000\u0000\u0000\u0000It won't wo"
+      },
+      {
+        "offset": "0x19713ea",
+        "context": "door... it seems to be sealed.\u000f\u001c\u0002P\u0000\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fThe door opens!\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe key turns within the doo"
+      },
+      {
+        "offset": "0x197141b",
+        "context": "door opens!\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe key turns within the door's lock...\u000f\u001c\u0002@\u0000\u0000\u0000\b\u0000\u001f*\fSomething is written on th"
+      },
+      {
+        "offset": "0x197abb2",
+        "context": "'t work, there is a powerful seal affixed to this door.\u0000Won't work, this door is locked with a power"
+      },
+      {
+        "offset": "0x197abc9",
+        "context": "erful seal affixed to this door.\u0000Won't work, this door is locked with a powerful seal.\u0000\u0000\u0000Impossible,"
+      },
+      {
+        "offset": "0x197ac01",
+        "context": "s locked with a powerful seal.\u0000\u0000\u0000Impossible, this door is locked with a powerful seal.\u0000\u0000\u0000Blast, undo"
+      },
+      {
+        "offset": "0x197f7e0",
+        "context": "ey\u0014\u0007!\nB\u0000\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f*\fThere is a red crystal on the door...\u000f\u001f7\f\u001d:\r\u001c\u0003\u0014\u0000\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fYou open the door with "
+      },
+      {
+        "offset": "0x197f80b",
+        "context": "on the door...\u000f\u001f7\f\u001d:\r\u001c\u0003\u0014\u0000\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fYou open the door with the \u0014\u0006red key\u0014\u0007...\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fThere is a blu"
+      },
+      {
+        "offset": "0x197f851",
+        "context": "key\u0014\u0007...\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fThere is a blue crystal on the door...\u000f\u001f7\f\u001d:\r\u001c\u0003\u0014\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fYou open the door wi"
+      },
+      {
+        "offset": "0x197f87f",
+        "context": "the door...\u000f\u001f7\f\u001d:\r\u001c\u0003\u0014\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fYou open the door with the \u0014\u0004blue key\u0014\u0007...\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fA crystal "
+      },
+      {
+        "offset": "0x1980144",
+        "context": "pen! It seems to be blocked by that device on the door.\u0000\u0000\u0000It won't open! It seems to be blocked by t"
+      },
+      {
+        "offset": "0x1980188",
+        "context": "pen! It seems to be blocked by that device on the door.\u0000\u0000\u0000It's obvious that this device is obstructi"
+      },
+      {
+        "offset": "0x198027d",
+        "context": "ing the door, isn't it?\u0000\u0000Odd device, there on the door...\u0000\u0000\u0000\u0000Odd device, there on the door...\u0000\u0000\u0000\u0000Bla"
+      },
+      {
+        "offset": "0x19802a1",
+        "context": "there on the door...\u0000\u0000\u0000\u0000Odd device, there on the door...\u0000\u0000\u0000\u0000Blast it! The door is obviously blocked "
+      },
+      {
+        "offset": "0x19802ba",
+        "context": "Odd device, there on the door...\u0000\u0000\u0000\u0000Blast it! The door is obviously blocked by that device.\u0000Curse it"
+      },
+      {
+        "offset": "0x198030a",
+        "context": "hat device.\u0000Curse it! That device is blocking the door.\u0000Might the door be blocked by that device?\u0000\u0000\u0000"
+      },
+      {
+        "offset": "0x198031a",
+        "context": "e it! That device is blocking the door.\u0000Might the door be blocked by that device?\u0000\u0000\u0000That device ther"
+      },
+      {
+        "offset": "0x1980361",
+        "context": "at device?\u0000\u0000\u0000That device there is obstructing the door.\u0000\u0000Hey, is the door locked with that thing?\u0000\u0000\u0000"
+      },
+      {
+        "offset": "0x1980374",
+        "context": "evice there is obstructing the door.\u0000\u0000Hey, is the door locked with that thing?\u0000\u0000\u0000\u0000Hmmm... that thing"
+      },
+      {
+        "offset": "0x19846f2",
+        "context": "e.\n*\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThere is a large keyhole in the door...\u000f\u001f7\f\u001d:\r\u001c\u0003\n\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fYou open the door wit"
+      },
+      {
+        "offset": "0x198471f",
+        "context": "the door...\u000f\u001f7\f\u001d:\r\u001c\u0003\n\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fYou open the door with the \u0014\u0006great key\u0014\u0007.\u000f\b\u0001\u0000\u0000\u001f*\b\u0000\f - The Ancient "
+      },
+      {
+        "offset": "0x1984969",
+        "context": "nto this special portal...\u000f\u001f7\fWhen you touch the door, the tablet suddenly glows!\u000f\n(\u0000\u0000\u0000\u0000It won't ope"
+      },
+      {
+        "offset": "0x198d5f3",
+        "context": "\u0000\u001f7\fWhen you set the \u0014\u0006Dark Elven Sigil\u0014\u0007 in the door, it opens!\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f*\fYou have discovered the \u0014"
+      },
+      {
+        "offset": "0x198d769",
+        "context": ":\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe \u0014\u0004black quartz Key \u0014\u0007opens the door!\u000f\b\u0001\n#\u0000\u0000\u0000\u0000\u0000\u001f*\b\u0000\f - The Ancient Tower -\r - 6th F"
+      },
+      {
+        "offset": "0x1dd9f6a",
+        "context": "\u0003-\u0000\u000f\f\u001d:\r\u001c\u0003=\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001fD\f\u001d:\r\u001c\u0003M\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fThe door opens!\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f7\fYou open the door with the \u0014\u0006"
+      },
+      {
+        "offset": "0x1dd9f8f",
+        "context": "\u0000\u0000\u0000\b\u0000\u001f\u001d\fThe door opens!\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f7\fYou open the door with the \u0014\u0006control room key\u0014\u0007!\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f*\fThe si"
+      },
+      {
+        "offset": "0x1dda21b",
+        "context": "Room 1 -\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f*\fThe \u0014\u0006Bone Sigil\u0014\u0007 opens the door!\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe door is locked tight...\u000f\u001fQ\f\u001d:\r"
+      },
+      {
+        "offset": "0x1dda232",
+        "context": "e \u0014\u0006Bone Sigil\u0014\u0007 opens the door!\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe door is locked tight...\u000f\u001fQ\f\u001d:\r\u001c\u0003m\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f \fThe \u0014"
+      },
+      {
+        "offset": "0x1dda285",
+        "context": "m\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f \fThe \u0014\u0006control room key \u0014\u0007opens the door!\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f \fThis door can only be opened with a"
+      },
+      {
+        "offset": "0x1dda29b",
+        "context": "ontrol room key \u0014\u0007opens the door!\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f \fThis door can only be opened with a certain key...\u000f\b\u0001\u0000\u0000\u0000"
+      },
+      {
+        "offset": "0x1de4492",
+        "context": "s...\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThere is a special lock on this door...\u000f\u001fD\f\u001d:\r\u001c\u00038\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f7\fThe door can be opene"
+      },
+      {
+        "offset": "0x1de44b6",
+        "context": "lock on this door...\u000f\u001fD\f\u001d:\r\u001c\u00038\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f7\fThe door can be opened with the \u0014\u0006storage room key\u0014\u0007.\u000f\b\u0001\u0000"
+      },
+      {
+        "offset": "0x1de44f6",
+        "context": "ened with the \u0014\u0006storage room key\u0014\u0007.\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fThe door doesn't yield...\u000f\b\u0001\u0000\u0000\b\u0000\u001f\u001d\fThe door opens!\u000f\b\u0001\u0000\u0000"
+      },
+      {
+        "offset": "0x1de9d7e",
+        "context": "\u0000\u0000\u0000\u0000\b\u0000\u001f*\fDulahan:\rWaaaaaahh!!!\u000f\n\u0012\u0000\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fThe door lock is open...\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f*\fThe key turns in the "
+      },
+      {
+        "offset": "0x1dea3eb",
+        "context": "anybody supposed to get past it?\u0000\u0000Curse it, this door is blocked by some great power...\u0000\u0000\u0000It won't w"
+      },
+      {
+        "offset": "0x1dea428",
+        "context": "cked by some great power...\u0000\u0000\u0000It won't work, this door is blocked by some great power.\u0000\u0000\u0000\u0000Huff... it"
+      },
+      {
+        "offset": "0x1dee412",
+        "context": "Fc8\u0000\u0000\u0000\u0000NOROINO CHIKABOCHI B6\u0000\u0000\u0000\b\u0000\u001f\u001d\fThe door opens!\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe key turns in the lock...\u000f\u001c\u0002@\u0000\u0000\u0000\u0000\u0000"
+      },
+      {
+        "offset": "0x1deec12",
+        "context": "Fc8\u0000\u0000\u0000\u0000NOROINO CHIKABOCHI B6\u0000\u0000\u0000\b\u0000\u001f\u001d\fThe door opens!\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe key turns in the lock...\u000f\u001c\u0002@\u0000\u0000\u0000\u0000\u0000"
+      },
+      {
+        "offset": "0x1df0c7e",
+        "context": "*\fYou have the \u0014\u0004golden key\u0014\u0007!\n'\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe door is closed tight...\u000f\u001fD\f\u001d:\r\u001c\u0003\u001c\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe\u0014\u0006"
+      },
+      {
+        "offset": "0x1df0ccb",
+        "context": ":\r\u001c\u0003\u001c\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe\u0014\u0006 golden key\u0014\u0007 opens the door!\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fSomething is written on the board.."
+      },
+      {
+        "offset": "0x1df855f",
+        "context": ":\u0000\u0000,\u001a\u0001\u0000NOROINO CHIKABOCHI B9\u0000\u0000\u0000\b\u0000\u001f*\fYou open the door with the \u0014\u0006sigil key\u0014\u0007!\u000f\b\u0001\u0000\u0000\b\u0000\u001f\u001d\fThe door open"
+      },
+      {
+        "offset": "0x1df858a",
+        "context": "en the door with the \u0014\u0006sigil key\u0014\u0007!\u000f\b\u0001\u0000\u0000\b\u0000\u001f\u001d\fThe door opens!\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f7\fA key with the form of a sig"
+      },
+      {
+        "offset": "0x1df85ce",
+        "context": "\b\u0000\u001f7\fA key with the form of a sigil fits in this door...\u000f\u001fD\f\u001d:\r\u001c\u0003\u000b\u0000\u000f\f\u001d:\r\u001c\u0003\u001b\u0000\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f*\fYou have the\u0014"
+      },
+      {
+        "offset": "0x240307e",
+        "context": "\u0018=\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThere is a copper sigil on this door...\u000f\u001fD\f\u001d:\r\u001c\u0003.\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fYou open the door with "
+      },
+      {
+        "offset": "0x24030ab",
+        "context": "this door...\u000f\u001fD\f\u001d:\r\u001c\u0003.\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fYou open the door with the \u0014\u0006copper key\u0014\u0007!\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThere is a"
+      },
+      {
+        "offset": "0x24030f6",
+        "context": "y\u0014\u0007!\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThere is a silver sigil on this door...\u000f\u001fD\f\u001d:\r\u001c\u0003.\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fYou open the door wit"
+      },
+      {
+        "offset": "0x2403123",
+        "context": "this door...\u000f\u001fD\f\u001d:\r\u001c\u0003.\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fYou open the door with the \u0014\u0006silver key\u0014\u0007!\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThere is a"
+      },
+      {
+        "offset": "0x240316e",
+        "context": "y\u0014\u0007!\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThere is a golden sigil on this door...\u000f\u001fD\f\u001d:\r\u001c\u0003.\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fYou open the door wit"
+      },
+      {
+        "offset": "0x240319b",
+        "context": "this door...\u000f\u001fD\f\u001d:\r\u001c\u0003.\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fYou open the door with the \u0014\u0006gold key\u0014\u0007!\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f\u001d\fYou have \u0014\u0004The"
+      },
+      {
+        "offset": "0x2403246",
+        "context": "space on the bookshelf!\n\u0000\u000f\n\u0000\nN\u0000\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe doorplate says: Guest Room.\u000f\u001fD\f\u001d:\r\u001c\u0003.\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fYou "
+      },
+      {
+        "offset": "0x2403287",
+        "context": "Guest Room.\u000f\u001fD\f\u001d:\r\u001c\u0003.\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fYou open the door with the \u0014\u0006guest room key\u0014\u0007!\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThere i"
+      },
+      {
+        "offset": "0x2404050",
+        "context": "here seems to be a powerful seal placed upon this door.\u0000\u0000\u0000That won't work, there is a powerful seal "
+      },
+      {
+        "offset": "0x240408c",
+        "context": "at won't work, there is a powerful seal upon this door.\u0000\u0000\u0000Won't work, it's locked up by a powerfuly "
+      },
+      {
+        "offset": "0x2404cd7",
+        "context": "supposed to get that thing open?\u0000\u0000Curse it, this door is blocked by a strong power...\u0000That won't wor"
+      },
+      {
+        "offset": "0x2404d12",
+        "context": "locked by a strong power...\u0000That won't work, this door is blocked by a strong power.\u0000\u0000\u0000\u0000Huff... that"
+      },
+      {
+        "offset": "0x240ad4d",
+        "context": "Of Vamp 02\u0000\u0000\u0000\b\u0000\u001f*\fThere is a bronze sigil on the door...\u000f\u001fD\f\u001d:\r\u001c\u00034\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fYou open the door wi"
+      },
+      {
+        "offset": "0x240ad7b",
+        "context": "the door...\u000f\u001fD\f\u001d:\r\u001c\u00034\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fYou open the door with the \u0014\u0006bronze key\u0014\u0007.\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\f\"Theater R"
+      },
+      {
+        "offset": "0x240adc7",
+        "context": "\u0014\u0007.\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\f\"Theater Room\" is written on the door...\u000f\u001fD\f\u001d:\r\u001c\u00034\u0000\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f*\fYou open the door with"
+      },
+      {
+        "offset": "0x240adf3",
+        "context": "n the door...\u000f\u001fD\f\u001d:\r\u001c\u00034\u0000\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f*\fYou open the door with the \u0014\u0006theater room key\u0014\u0007!\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f*\fThere "
+      },
+      {
+        "offset": "0x240ae48",
+        "context": "\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f*\fThere is a star sigil engraved in the door...\u000f\u001fD\f\u001d:\r\u001c\u00034\u0000\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fYou open the door with "
+      },
+      {
+        "offset": "0x240ae73",
+        "context": "in the door...\u000f\u001fD\f\u001d:\r\u001c\u00034\u0000\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fYou open the door with the \u0014\u0006star key\u0014\u0007!\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f*\fA moon sigil i"
+      },
+      {
+        "offset": "0x240aebc",
+        "context": "y\u0014\u0007!\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f*\fA moon sigil is engraved into the door...\u000f\u001fD\f\u001d:\r\u001c\u00034\u0000\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fYou open the door with "
+      },
+      {
+        "offset": "0x240aee7",
+        "context": "to the door...\u000f\u001fD\f\u001d:\r\u001c\u00034\u0000\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fYou open the door with the \u0014\u0006moon key\u0014\u0007!\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f,\fSomething is w"
+      },
+      {
+        "offset": "0x240b669",
+        "context": "\u0001\u0000\u0000\u0000\u0000\b\u0000\u001fD\fYou sense a sorcerous energy about the door\r...it seems to be sealed.\u000f\u001c\u0002P\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fYou pic"
+      },
+      {
+        "offset": "0x240b6ba",
+        "context": "\u0002P\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fYou pick the lock!\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fThe door is locked...\u000f\u001c\u0002@\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fYou pick the lock!\u000f\b\u0001\u0000"
+      },
+      {
+        "offset": "0x240b6fe",
+        "context": "\u0002@\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fYou pick the lock!\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fThe door is locked...\u000f\u001c\u0002@\u0000\u0000\u0000\u0000\u0000\u001f*\b\u0000\f - The Palace of the I"
+      },
+      {
+        "offset": "0x240ba20",
+        "context": "here seems to be a powerful seal placed upon this door.\u0000\u0000\u0000That won't work, there is a powerful seal "
+      },
+      {
+        "offset": "0x240ba5c",
+        "context": "at won't work, there is a powerful seal upon this door.\u0000\u0000\u0000Won't work, it's locked up by a powerfuly "
+      },
+      {
+        "offset": "0x24195e3",
+        "context": "one have to do to get it open?\u0000\u0000\u0000\u0000Curse it, this door is blocked by a strong power...\u0000That won't wor"
+      },
+      {
+        "offset": "0x241961e",
+        "context": "locked by a strong power...\u0000That won't work, this door is blocked by a strong power.\u0000\u0000\u0000\u0000Huff... that"
+      },
+      {
+        "offset": "0x241edef",
+        "context": "\u0000\u001f\u001d\fThere's nothing here.\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fYou open the door with the \u0014\u0006cell key\u0014\u0007!\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f*\f\"Cell\" is writ"
+      },
+      {
+        "offset": "0x24247fb",
+        "context": "The sigil of the white dragon is engraved in the door...\u000f\u001fD\f\u001d:\r\u001c\u0003N\u0000\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f*\fYou open the door with"
+      },
+      {
+        "offset": "0x2424827",
+        "context": "n the door...\u000f\u001fD\f\u001d:\r\u001c\u0003N\u0000\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f*\fYou open the door with the \u0014\u0006white dragon key\u0014\u0007.\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f7\fThe si"
+      },
+      {
+        "offset": "0x2424887",
+        "context": "The sigil of the black dragon is engraved in the door...\u000f\u001fD\f\u001d:\r\u001c\u0003N\u0000\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f*\fYou open the door with"
+      },
+      {
+        "offset": "0x24248b3",
+        "context": "n the door...\u000f\u001fD\f\u001d:\r\u001c\u0003N\u0000\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f*\fYou open the door with the \u0014\u0006black dragon key\u0014\u0007.\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f7\fOnly a"
+      },
+      {
+        "offset": "0x242497a",
+        "context": "7\fThe sigil of the blue dragon is engraved in the door...\u000f\u001fD\f\u001d:\r\u001c\u0003N\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fYou open the door wi"
+      },
+      {
+        "offset": "0x24249a7",
+        "context": "the door...\u000f\u001fD\f\u001d:\r\u001c\u0003N\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fYou open the door with the \u0014\u0006blue dragon key\u0014\u0007!\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fTake ca"
+      },
+      {
+        "offset": "0x2424a69",
+        "context": "7\fThe sigil of the red dragon is engraved in the door...\u000f\u001fD\f\u001d:\r\u001c\u0003N\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fYou open the door wi"
+      },
+      {
+        "offset": "0x2424a97",
+        "context": "the door...\u000f\u001fD\f\u001d:\r\u001c\u0003N\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fYou open the door with the \u0014\u0006red dragon key\u0014\u0007!\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fYou ha"
+      },
+      {
+        "offset": "0x2424b97",
+        "context": "th a notch...\u000f\u001fQ\f\u001d:\r\u001c\u0003n\u0000\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f\u001d\fYou open the door!\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe door seems to be locked...\u000f\u001c\u0002@"
+      },
+      {
+        "offset": "0x2424bae",
+        "context": "n\u0000\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f\u001d\fYou open the door!\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe door seems to be locked...\u000f\u001c\u0002@\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fYou open the "
+      },
+      {
+        "offset": "0x2424be3",
+        "context": "r seems to be locked...\u000f\u001c\u0002@\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fYou open the door!\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe door seems to be locked...\u000f\u001c\u0002"
+      },
+      {
+        "offset": "0x2424bfa",
+        "context": "\u000f\u001c\u0002@\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fYou open the door!\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe door seems to be locked...\u000f\u001c\u0002@\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fYou open the "
+      },
+      {
+        "offset": "0x2424c2f",
+        "context": "r seems to be locked...\u000f\u001c\u0002@\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fYou open the door!\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe door seems to be locked...\u000f\u001c\u0002"
+      },
+      {
+        "offset": "0x2424c46",
+        "context": "\u000f\u001c\u0002@\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fYou open the door!\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe door seems to be locked...\u000f\u001c\u0002@\u0000\u0000\u0000\u0000\u001f*\b\u0000\f - The Palace"
+      },
+      {
+        "offset": "0x2bf372e",
+        "context": "*\fYou get the \u0014\u0004antique key\u0014\u0007!\nH\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe door has a special lock on it...\u000f\u001fD\f\u001d:\r\u001c\u0003\r\u0000\u000f\f\u001d:\r\u001c\u0003\u001d"
+      },
+      {
+        "offset": "0x2bf3772",
+        "context": "lock on it...\u000f\u001fD\f\u001d:\r\u001c\u0003\r\u0000\u000f\f\u001d:\r\u001c\u0003\u001d\u0000\u000f\b\u0001\u0000\u0000\b\u0000\u001f \fThe door has a special lock on it...\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f*\fYou open t"
+      },
+      {
+        "offset": "0x2bf37ab",
+        "context": "s a special lock on it...\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f*\fYou open the door with the \u0014\u0004antique key\u0014\u0007!\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fYou open "
+      },
+      {
+        "offset": "0x2bf37e3",
+        "context": "ith the \u0014\u0004antique key\u0014\u0007!\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fYou open the door!\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f7\f\u001d:\rIt won't open\u001c\u0003-\u0000\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f\u001d\fYo"
+      },
+      {
+        "offset": "0x2bf383a",
+        "context": "-\u0000\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f\u001d\fYou pick the lock!\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fThe door is locked...\u000f\u001c\u0002@\u0000\u0000\u0000\u0000\u0000\u001f*\b\u0000\f - The Sealed Cave -\r"
+      },
+      {
+        "offset": "0x2bfdec6",
+        "context": "or!\u000f\b\u0001\u0000\u0000\b\u0000\u001f\u001d\fYou pick the lock!\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fThe door is locked...\u000f\u001c\u0002@\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fYou pick the lock!\u000f\b\u0001"
+      },
+      {
+        "offset": "0x2bfdf0a",
+        "context": "\u0002@\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fYou pick the lock!\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fThe door is locked...\u000f\u001c\u0002@\u0000\u0000\u0000\u0000\u0000\u001f*\b\u0000\f - The Sealed Cave -\r "
+      }
+    ],
+    "generic": [
+      {
+        "offset": "0xad71e1",
+        "context": "receptionist:\rYour room is on the 2nd floor, 2nd door to the left.\u000f\n\u0012\u0000\u0000\u0000\u001f7\fThe receptionist:\rTake th"
+      },
+      {
+        "offset": "0xb3015c",
+        "context": "Q\fThe old drunk:\rA patient told me that there's a door to another world in the third underlevel of t"
+      },
+      {
+        "offset": "0x14addb3",
+        "context": "\b\u0000\u0004\b\u0010\f - The Isle of Ruins -\u000f\u0004\u0010\u0010\b\u0001\u0000\u0000\u0000\b\u0000\u001f7\fThis door is surrounded by a wondrous energy...\u000f\u001fD\f\u001d:\r\u001c\u00030\u0000"
+      },
+      {
+        "offset": "0x14ade27",
+        "context": "\u000f\u001f*\f\u001d:\r..............\u000f\u001fQ\f\u001d:\r\u001c\u0003P\u0000\u000f\b\u0001\u0000\u0000\b\u0000\u001f7\fThis door is surrounded by a wondrous energy...\u000f\fWhen you "
+      },
+      {
+        "offset": "0x14ade66",
+        "context": "unded by a wondrous energy...\u000f\fWhen you touch the door the statue trembles slightly...\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f7\fThi"
+      },
+      {
+        "offset": "0x14ade9b",
+        "context": "r the statue trembles slightly...\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f7\fThis door is surrounded by a wondrous energy...\u000f\u001fD\f\u001d:\r\u001c\u0003"
+      },
+      {
+        "offset": "0x14adf0f",
+        "context": "\u000f\u001f*\f\u001d:\r..............\u000f\u001fQ\f\u001d:\r\u001c\u0003P\u0000\u000f\b\u0001\u0000\u0000\b\u0000\u001f7\fThis door is surrounded by a wondrous energy...\u000f\fWhen you "
+      },
+      {
+        "offset": "0x14adf4e",
+        "context": "unded by a wondrous energy...\u000f\fWhen you touch the door the statue begins to glow!\u000f\b\u0001\nE\u0000\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe"
+      },
+      {
+        "offset": "0x14ae663",
+        "context": "at statue...\u0000\u0000\u0000It's securely closed! How can this door be opened?\u0000\u0000It's securely closed! How can thi"
+      },
+      {
+        "offset": "0x196d0ae",
+        "context": "nergy field.\u0000\u0000\u0000\u0000This energy field is blocking the door.\u0000Blast! The energy field's in the way!\u0000\u0000\u0000Curs"
+      },
+      {
+        "offset": "0x1971b7f",
+        "context": "\u000f\u001fD\fDoor switch\rThis switch opens and closes the door.\u000f\u001f*\fDo you flip the switch?\u000f\u001f*\fFlip it\rLeave i"
+      },
+      {
+        "offset": "0x19750e2",
+        "context": "s some sort of mechanism.\u0000\u0000\u0000It doesn't open. This door...\u0000\u0000\u0000It won't open, will it? This door...\u0000\u0000\u0000\u0000"
+      },
+      {
+        "offset": "0x1975109",
+        "context": "open. This door...\u0000\u0000\u0000It won't open, will it? This door...\u0000\u0000\u0000\u0000It won't open. Maybe there is some sort"
+      },
+      {
+        "offset": "0x19752cc",
+        "context": "t it open?\u0000\u0000\u0000\u0000It won't open...\u0000\u0000\u0000\u0000Curses, now the door will never close!\u0000\u0000Curses, now the door will "
+      },
+      {
+        "offset": "0x19752f4",
+        "context": ", now the door will never close!\u0000\u0000Curses, now the door will never close!\u0000\u0000Oh no... get away from the"
+      },
+      {
+        "offset": "0x1975386",
+        "context": "es!\u0000Are you trying to get yourself crushed by the door?\u0000If you just keep standing there, the door go"
+      },
+      {
+        "offset": "0x19753b1",
+        "context": "by the door?\u0000If you just keep standing there, the door going to crush you!\u0000\u0000\u0000Move it, or the door's "
+      },
+      {
+        "offset": "0x19753dc",
+        "context": "e, the door going to crush you!\u0000\u0000\u0000Move it, or the door's going to crush you!\u0000\u0000You idiot! Watch out!\u0000"
+      },
+      {
+        "offset": "0x1975436",
+        "context": "atch out!\u0000\u0000\u0000Hey, watch out!\u0000Get out of there! The door!\u0000Get away from there! The door!\u0000\u0000Get back! Mo"
+      },
+      {
+        "offset": "0x1975455",
+        "context": "out of there! The door!\u0000Get away from there! The door!\u0000\u0000Get back! Move it!\u0000\u0000Move it now! The door ca"
+      },
+      {
+        "offset": "0x1975481",
+        "context": "! The door!\u0000\u0000Get back! Move it!\u0000\u0000Move it now! The door can't close!\u0000\u0000...move it...\u0000\u0000\u0000...get outta th"
+      },
+      {
+        "offset": "0x1975b86",
+        "context": "\u0005\u0005\u0006(\u0002\u001c\u0000\u0000\u001b\u0001\u000f\u0002\u0000\u0010\u0002\u0000\u0011\u0001\u000b\u0013\u0000\u0000d\u0000\u0003\u0005\u0005\u0002\u001f\u0000\u0000\u0000\u0000rushed by the door?\u0000If you just keep standing there, the door going"
+      },
+      {
+        "offset": "0x1975bb1",
+        "context": "by the door?\u0000If you just keep standing there, the door going to crush you!\u0000\u0000\u0000Move it, or the door's "
+      },
+      {
+        "offset": "0x1975bdc",
+        "context": "e, the door going to crush you!\u0000\u0000\u0000Move it, or the door's going to crush you!\u0000\u0000You idiot! Watch out!\u0000"
+      },
+      {
+        "offset": "0x1975c36",
+        "context": "atch out!\u0000\u0000\u0000Hey, watch out!\u0000Get out of there! The door!\u0000Get away from there! The door!\u0000\u0000Get back! Mo"
+      },
+      {
+        "offset": "0x1975c55",
+        "context": "out of there! The door!\u0000Get away from there! The door!\u0000\u0000Get back! Move it!\u0000\u0000Move it now! The door ca"
+      },
+      {
+        "offset": "0x1975c81",
+        "context": "! The door!\u0000\u0000Get back! Move it!\u0000\u0000Move it now! The door can't close!\u0000\u0000...move it...\u0000\u0000\u0000...get outta th"
+      },
+      {
+        "offset": "0x197ab70",
+        "context": "re seems to be some sort of powerful seal on this door.\u0000\u0000\u0000That won't work, there is a powerful seal "
+      },
+      {
+        "offset": "0x197ac49",
+        "context": "powerful seal.\u0000\u0000\u0000Blast, undoubtably a very stable door...\u0000\u0000\u0000\u0000Blast, undoubtably a very stable door.."
+      },
+      {
+        "offset": "0x197ac75",
+        "context": "table door...\u0000\u0000\u0000\u0000Blast, undoubtably a very stable door...\u0000\u0000\u0000\u0000Curse it! There seems to be a powerful "
+      },
+      {
+        "offset": "0x197f9b5",
+        "context": "mes to a stop...\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fAn odd device bars the door...\u000f\u001fD\f\u001d:\r\u001c\u00034\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fThe door opens!\u000f\b\u0001\u0000\u0000"
+      },
+      {
+        "offset": "0x197f9da",
+        "context": "ice bars the door...\u000f\u001fD\f\u001d:\r\u001c\u00034\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fThe door opens!\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fAn odd device bars the door.."
+      },
+      {
+        "offset": "0x197fa09",
+        "context": "he door opens!\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fAn odd device bars the door...\u000f\u001fD\f\u001d:\r\u001c\u00034\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fThe door opens!\u000f\b\u0001\u0000\u0000"
+      },
+      {
+        "offset": "0x197fa2e",
+        "context": "ice bars the door...\u000f\u001fD\f\u001d:\r\u001c\u00034\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fThe door opens!\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fSomething is written on the b"
+      },
+      {
+        "offset": "0x19801c1",
+        "context": "\u0000It's obvious that this device is obstructing the door.\u0000\u0000It's pretty clear that this device is obstr"
+      },
+      {
+        "offset": "0x19801fe",
+        "context": "pretty clear that this device is obstructing the door.\u0000This blasted thing is blocking the door.\u0000\u0000\u0000\u0000T"
+      },
+      {
+        "offset": "0x1980227",
+        "context": "ting the door.\u0000This blasted thing is blocking the door.\u0000\u0000\u0000\u0000This blasted thing is blocking the door, "
+      },
+      {
+        "offset": "0x1980253",
+        "context": "g the door.\u0000\u0000\u0000\u0000This blasted thing is blocking the door, isn't it?\u0000\u0000Odd device, there on the door...\u0000"
+      },
+      {
+        "offset": "0x19803b7",
+        "context": "that thing?\u0000\u0000\u0000\u0000Hmmm... that thing is blocking the door.\u0000\u0000\u0000\u0000...an odd door...\u0000\u0000\u0000...an odd door...\u0000\u0000\u0000L"
+      },
+      {
+        "offset": "0x19803ca",
+        "context": "... that thing is blocking the door.\u0000\u0000\u0000\u0000...an odd door...\u0000\u0000\u0000...an odd door...\u0000\u0000\u0000Looks like the servi"
+      },
+      {
+        "offset": "0x19803de",
+        "context": "ocking the door.\u0000\u0000\u0000\u0000...an odd door...\u0000\u0000\u0000...an odd door...\u0000\u0000\u0000Looks like the service instructions for "
+      },
+      {
+        "offset": "0x198072d",
+        "context": "t seems to be some sort of closing device for the door.\u0000\u0000That seems to be some sort of closing devic"
+      },
+      {
+        "offset": "0x1980769",
+        "context": "t seems to be some sort of closing device for the door.\u0000\u0000That's some sort of closing device for the "
+      },
+      {
+        "offset": "0x198079b",
+        "context": "door.\u0000\u0000That's some sort of closing device for the door.\u0000\u0000\u0000\u0000That's some sort of closing device for th"
+      },
+      {
+        "offset": "0x19807cf",
+        "context": "or.\u0000\u0000\u0000\u0000That's some sort of closing device for the door.\u0000\u0000\u0000\u0000That must be some kind of closing device "
+      },
+      {
+        "offset": "0x1980809",
+        "context": "\u0000That must be some kind of closing device for the door.\u0000\u0000It looks like that must be some kind of clo"
+      },
+      {
+        "offset": "0x1980850",
+        "context": "that must be some kind of closing device for that door.\u0000\u0000\u0000Looks like a locking mechanism for a door."
+      },
+      {
+        "offset": "0x198087d",
+        "context": "that door.\u0000\u0000\u0000Looks like a locking mechanism for a door.\u0000\u0000Looks like a locking mechanism for a door.\u0000"
+      },
+      {
+        "offset": "0x19808a9",
+        "context": "for a door.\u0000\u0000Looks like a locking mechanism for a door.\u0000\u0000That blasted thing is the closing device fo"
+      },
+      {
+        "offset": "0x19808df",
+        "context": ".\u0000\u0000That blasted thing is the closing device for a door.\u0000\u0000\u0000\u0000That blasted thing is the closing device "
+      },
+      {
+        "offset": "0x1980917",
+        "context": "\u0000\u0000\u0000That blasted thing is the closing device for a door.\u0000\u0000\u0000\u0000Looks to be some sort of closing device f"
+      },
+      {
+        "offset": "0x198094e",
+        "context": "\u0000\u0000\u0000\u0000Looks to be some sort of closing device for a door.\u0000Looks to be some sort of closing device for "
+      },
+      {
+        "offset": "0x1980982",
+        "context": "or.\u0000Looks to be some sort of closing device for a door.\u0000That's some kind of closing device for some "
+      },
+      {
+        "offset": "0x19809b4",
+        "context": "door.\u0000That's some kind of closing device for some door.\u0000\u0000\u0000Looks like it's some kind of closing devic"
+      },
+      {
+        "offset": "0x19809ee",
+        "context": "Looks like it's some kind of closing device for a door.\u0000...closing device for a door...?\u0000\u0000\u0000\u0000...closi"
+      },
+      {
+        "offset": "0x1980a0c",
+        "context": "losing device for a door.\u0000...closing device for a door...?\u0000\u0000\u0000\u0000...closing device for a door...\u0000The de"
+      },
+      {
+        "offset": "0x1980a30",
+        "context": "device for a door...?\u0000\u0000\u0000\u0000...closing device for a door...\u0000The device seems to have stopped!\u0000\u0000\u0000The dev"
+      },
+      {
+        "offset": "0x1984778",
+        "context": "- The Ancient Tower -\r - 4th Floor -\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fA door has been set into this special portal...\u000f\u001fD\f\u001d:\r"
+      },
+      {
+        "offset": "0x19847c0",
+        "context": "this special portal...\u000f\u001fD\f\u001d:\r\u001c\u0003\u001a\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fA door has been set into this special portal...\u000f\u001f7\fWhen"
+      },
+      {
+        "offset": "0x1984805",
+        "context": "nto this special portal...\u000f\u001f7\fWhen you touch the door, the tablet vibrates slightly...\u000f\f\u001d:\rHey, the "
+      },
+      {
+        "offset": "0x1984868",
+        "context": "e tablet seems to have vibrated...\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fA door has been set into this special portal...\u000f\u001fD\f\u001d:"
+      },
+      {
+        "offset": "0x19848b0",
+        "context": "this special portal...\u000f\u001fD\f\u001d:\r\u001c\u0003\u001a\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fA door has been set into this special portal...\u000f\u001f7\fWhen"
+      },
+      {
+        "offset": "0x19848f5",
+        "context": "nto this special portal...\u000f\u001f7\fWhen you touch the door, the tablet suddenly glows!\u000f\n\"\u0000\u0000\u0000\u0000\b\u0000\u001f*\fA door "
+      },
+      {
+        "offset": "0x1984924",
+        "context": "he door, the tablet suddenly glows!\u000f\n\"\u0000\u0000\u0000\u0000\b\u0000\u001f*\fA door has been set into this special portal...\u000f\u001f7\fWh"
+      },
+      {
+        "offset": "0x198d58b",
+        "context": "D'S TOWER 6F\u0000\u0000\u0000\b\u0000\u001fD\fThere is a depression on the door in which a sigil could be set...\u000f\f\u001d:\r\u001c\u0003z\u0000\u000f\b\u0001\u0000\u0000"
+      },
+      {
+        "offset": "0x1993d87",
+        "context": "Something is written on the board...\u000f\nN\u0000\u001f^\fThis door connects to the crystal maze. The portal at the"
+      },
+      {
+        "offset": "0x19972c8",
+        "context": "7\fWhen you set the \u0014\u0006Dark Elven Sigil \u0014\u0007in, the door opens!\u000f\b\u0001\u0000\u0000\u0007\u0003\u0002\u0011\u0000\u0000\u0000\u0000\b\u0000\u001f*\fDark Wizard:\rAaaaaaaaaa"
+      },
+      {
+        "offset": "0x199d59b",
+        "context": "Something is written on the board...\u000f\nM\u0000\u001f^\fThis door connects to the crystal maze. The portal at the"
+      },
+      {
+        "offset": "0x1dd9ede",
+        "context": "lever...\u000f\u001f*\fPull it\rLeave it\r\t\u0000\nW\u0000\b\u0001\u0000\u0000\b\u0000\u001f*\fThe door lock springs open!\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fA special lock has"
+      },
+      {
+        "offset": "0x1dd9f28",
+        "context": "\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fA special lock has been placed on the door...\u000f\u001fD\f\u001d:\r\u001c\u0003-\u0000\u000f\f\u001d:\r\u001c\u0003=\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001fD\f\u001d:\r\u001c\u0003M\u0000\u000f\b\u0001\u0000"
+      },
+      {
+        "offset": "0x1dda0f4",
+        "context": "*\fIf the \u0014\u0003Strike\u0014\u0007 Button isn't held down, the door will close.\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\u001fQ\b\u0000\f - The Labyrinth of the"
+      },
+      {
+        "offset": "0x1ddaff1",
+        "context": "\u0000I won't give up. What do I need for this?\u0000\u0000\u0000This door doesn't look like it would open at all...\u0000Thi"
+      },
+      {
+        "offset": "0x1ddb025",
+        "context": "or doesn't look like it would open at all...\u0000This door doesn't look like it would open at all...\u0000I w"
+      },
+      {
+        "offset": "0x1de0450",
+        "context": "mechanism somewhere.\u0000It just will not open! This door...\u0000It just will not open! This door...\u0000It won'"
+      },
+      {
+        "offset": "0x1de0474",
+        "context": "ot open! This door...\u0000It just will not open! This door...\u0000It won't open! Is there any mechanism?\u0000\u0000It"
+      },
+      {
+        "offset": "0x1de451a",
+        "context": "\b\u0001\u0000\u0000\b\u0000\u001f*\fThe door doesn't yield...\u000f\b\u0001\u0000\u0000\b\u0000\u001f\u001d\fThe door opens!\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fSomething is written on the b"
+      },
+      {
+        "offset": "0x1de9fdc",
+        "context": "floor\rContinue the expedition\r\t\u0000\b\u0001\n4\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fA door with some sort of sigil...\u000f\u001fD\f\u001d:\r\u001c\u0003'\u0000\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\f"
+      },
+      {
+        "offset": "0x1dea014",
+        "context": "ith some sort of sigil...\u000f\u001fD\f\u001d:\r\u001c\u0003'\u0000\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fA door with some sort of sigil...\u000f\u001f7\fWhen you touch th"
+      },
+      {
+        "offset": "0x1dea04b",
+        "context": "with some sort of sigil...\u000f\u001f7\fWhen you touch the door, the tablet shivers lightly...\u000f\u001f7\f\u001d:\rIt looked"
+      },
+      {
+        "offset": "0x1dea0b0",
+        "context": "d like the tablet just vibrated...\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fA door with some sort of sigil...\u000f\u001fD\f\u001d:\r\u001c\u0003'\u0000\u000f\b\u0001\u0000\u0000\b\u0000\u001f*"
+      },
+      {
+        "offset": "0x1dea0e8",
+        "context": "ith some sort of sigil...\u000f\u001fD\f\u001d:\r\u001c\u0003'\u0000\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fA door with some sort of sigil...\u000f\u001fD\fWhen you touch th"
+      },
+      {
+        "offset": "0x1dea11f",
+        "context": "with some sort of sigil...\u000f\u001fD\fWhen you touch the door the tablet begins to glow...\u000f\n.\u0000\u0000\u0000\u0000\u0000Curse it, "
+      },
+      {
+        "offset": "0x1df0ff0",
+        "context": "mechanism somewhere.\u0000It just will not open! This door...\u0000It just will not open! This door...\u0000It won'"
+      },
+      {
+        "offset": "0x1df1014",
+        "context": "ot open! This door...\u0000It just will not open! This door...\u0000It won't open! Is there any mechanism?\u0000\u0000It"
+      },
+      {
+        "offset": "0x1df17f0",
+        "context": "mechanism somewhere.\u0000It just will not open! This door...\u0000It just \u0000\u0001\u0000\u0000\u0004\u0000\u0000,\u0000\u0000\u0000\u0000\u0000\u0000\u0002\u0000\u0000<\u0003\u0000\u0000L\u0003\u0000\u0000|\u0003\u0000\u0000\u0003\u0000\u0000\u0003\u0000\u0000"
+      },
+      {
+        "offset": "0x1dfb7dc",
+        "context": "at won't work, there is a powerful seal upon this door.\u0000\u0000\u0000That won't work, a powerful seal is affixe"
+      },
+      {
+        "offset": "0x1dfb81a",
+        "context": "won't work, a powerful seal is affixed upon this door.\u0000Blast, this door is barred by a powerful seal"
+      },
+      {
+        "offset": "0x1dfb82c",
+        "context": "erful seal is affixed upon this door.\u0000Blast, this door is barred by a powerful seal.\u0000\u0000A sad fall, eh"
+      },
+      {
+        "offset": "0x1dfb865",
+        "context": "barred by a powerful seal.\u0000\u0000A sad fall, eh? This door is tightly closed by a powerful seal.\u0000Curse it"
+      },
+      {
+        "offset": "0x1dfb8aa",
+        "context": "sed by a powerful seal.\u0000Curse it, what a stubborn door...\u0000\u0000\u0000Blast it, this door is very stubborn...\u0000"
+      },
+      {
+        "offset": "0x1dfb8c3",
+        "context": "urse it, what a stubborn door...\u0000\u0000\u0000Blast it, this door is very stubborn...\u0000Oh curse it! There is a p"
+      },
+      {
+        "offset": "0x1dfb90c",
+        "context": ".\u0000Oh curse it! There is a powerful seal upon this door.\u0000\u0000\u0000Blast! This door is closed with a very pow"
+      },
+      {
+        "offset": "0x1dfb920",
+        "context": "is a powerful seal upon this door.\u0000\u0000\u0000Blast! This door is closed with a very powerful seal!\u0000\u0000\u0000...a po"
+      },
+      {
+        "offset": "0x1dfb974",
+        "context": "l seal!\u0000\u0000\u0000...a powerful seal has been put on this door.\u0000\u0000\u0000...obviously there is a powerful seal on t"
+      },
+      {
+        "offset": "0x1dfb9aa",
+        "context": ".\u0000\u0000\u0000...obviously there is a powerful seal on this door.\u0000Whew... that is a rather strong seal.\u0000\u0000\u0000Hmmm"
+      },
+      {
+        "offset": "0x2403333",
+        "context": "n you put the \u0014\u0006Black Crucifix \u0014\u0007in the niche the door opens!\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f*\fYou have the \u0014\u0004Black Crucifi"
+      },
+      {
+        "offset": "0x24037b3",
+        "context": "\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThere is a small purple niche in the door...\u000f\u001fQ\f\u001d:\r\u001c\u0003>\u0000\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f7\fWhen you place the \u0014\u0006p"
+      },
+      {
+        "offset": "0x2403806",
+        "context": "en you place the \u0014\u0006purple gem \u0014\u0007in the niche, the door opens...\u000f\b\u0001\u0000\u0000\b\u0000\u001f7\fThere is a bat shaped niche"
+      },
+      {
+        "offset": "0x240384c",
+        "context": "7\fThere is a bat shaped niche engraved into the door...\u000f\u001fQ\f\u001d:\r\u001c\u0003>\u0000\u000f\b\u0001\u0000\u0000\b\u0000\u001f7\fWhen you place the \u0014\u0006bat"
+      },
+      {
+        "offset": "0x24038a1",
+        "context": "you place the \u0014\u0006bat medallion \u0014\u0007in the niche, the door opens...\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f\u001d\fFresh water...\u000f\u001fD\f\u001d:\r\u001c\u0003\u0000\u000f\u001f"
+      },
+      {
+        "offset": "0x240411b",
+        "context": "powerful seal.\u0000Blast... undoubtedly a very stable door...\u0000\u0000Blast... undoubtedly a very stable door.."
+      },
+      {
+        "offset": "0x2404147",
+        "context": "table door...\u0000\u0000Blast... undoubtedly a very stable door...\u0000\u0000Curse it! There seems to be a strong seal"
+      },
+      {
+        "offset": "0x240baeb",
+        "context": "powerful seal.\u0000Blast... undoubtedly a very stable door...\u0000\u0000Blast... undoubtedly a very stable door.."
+      },
+      {
+        "offset": "0x240bb17",
+        "context": "table door...\u0000\u0000Blast... undoubtedly a very stable door...\u0000\u0000Curse it! There seems to be a strong seal"
+      },
+      {
+        "offset": "0x24120b1",
+        "context": "\u0003u\u0000\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fThere is a tiger engraved into the door...\u000f\b\u0000\u001fD\f\u001d:\r\u001c\u0003U\u0000\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f7\fYou place the \u0014\u0006tiger"
+      },
+      {
+        "offset": "0x241210a",
+        "context": "ace the \u0014\u0006tiger medallion \u0014\u0007in the niche, and the door opens!\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThere is something on the s"
+      },
+      {
+        "offset": "0x24123cd",
+        "context": "*\fSomething is written on the sign...\u000f\nt\u0000\u001f7\fThe door controls can be found in the rooms above.\u000f\nu\u0000\b\u0001"
+      },
+      {
+        "offset": "0x2412439",
+        "context": "*\fSomething is written on the sign...\u000f\nt\u0000\u001f7\fThe door controls can be found in the rooms above.\u000f\nu\u0000\b\u0001"
+      },
+      {
+        "offset": "0x24125d5",
+        "context": "complete...\u000f\b\u0001\u0000\u0000\b\u0000\u001f7\fThe statue is blocking the door...\u000f\u001fD\f\u001d:\r\u001c\u0003%\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fGargoyle A:\rWaaaagh!!"
+      },
+      {
+        "offset": "0x2413430",
+        "context": "here's a mechanism somewhere.\u0000It won't open? This door...\u0000It won't open? This door...\u0000It won't open!"
+      },
+      {
+        "offset": "0x241344c",
+        "context": ".\u0000It won't open? This door...\u0000It won't open? This door...\u0000It won't open! Is there any mechanism?\u0000\u0000It"
+      },
+      {
+        "offset": "0x2416f99",
+        "context": "\u0000\b\u0000\u001f7\fThere's a wolf shaped engraving set in the door...\u000f\u001fD\f\u001d:\r\u001c\u0003\t\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f7\fWhen you place the \u0014"
+      },
+      {
+        "offset": "0x2416fec",
+        "context": "When you place the \u0014\u0006wolf medallion \u0014\u0007within, the door opens!\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fCrystal clear water flows for"
+      },
+      {
+        "offset": "0x241728c",
+        "context": "here's a mechanism somewhere.\u0000It won't open? This door...\u0000It won't open? This door...\u0000It won't open!"
+      },
+      {
+        "offset": "0x24172a8",
+        "context": ".\u0000It won't open? This door...\u0000It won't open? This door...\u0000It won't open! Is there any mechanism?\u0000\u0000It"
+      },
+      {
+        "offset": "0x2417799",
+        "context": "\u0000\b\u0000\u001f7\fThere's a wolf shaped engraving set in the door...\u000f\u001fD\f\u001d:\r\u001c\u0003\t\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f7\fWhen you place the \u0014"
+      },
+      {
+        "offset": "0x24177ec",
+        "context": "When you place the \u0014\u0006wolf medallion \u0014\u0007within, the door opens!\u000f\b\u0001\u0000\u0000\b\u0000\u001f\u0000\u0001\u0000\u0000\u0006\u0000\u0000%\u0000\u0000\u0000\u0000\u0000\u00004\u0003\u0000\u0000\u0003\u0000\u0000\u0003\u0000\u0000\u0003\u0000\u0000\u0003\u0000\u0000\u0004"
+      },
+      {
+        "offset": "0x241902a",
+        "context": "Sagestone lights up suddenly...\u000f\n$\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fThe door won't open!\u000f\b\u0001\u0000\u0000\u0000Watch out or you'll become my "
+      },
+      {
+        "offset": "0x241ec45",
+        "context": "\u0000\b\u0000\u001fD\f\u001d:\rIt won't open\u001c\u0003\u001f\u0000\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f*\fYou hear a door open nearby...\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001fD\f\u001d:\r\u001c\u0003/\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fA"
+      },
+      {
+        "offset": "0x241f147",
+        "context": "the board...\u000f\n\u0000\u001fD\fThe lever which operates the door to the animal experimentation room is in the eas"
+      },
+      {
+        "offset": "0x241f22a",
+        "context": "gn...\u000f\n\u0000\fPlease don't forget to lock up the cell doors!\u000f\n\u0000\b\u0001\u0000\u0000\b\u0000\u000b\u0001%\u0001\t\u0000\b\u0001\n\u0000\u0000\u0000\u0000! Is there some kind of"
+      },
+      {
+        "offset": "0x241f33b",
+        "context": "\u0000\u0000\u0000! Maybe there's a mechanism somewhere.\u0000\u0000? This door...\u0000\u0000? This door...\u0000\u0000! Is there any mechanism?"
+      },
+      {
+        "offset": "0x241f34b",
+        "context": "'s a mechanism somewhere.\u0000\u0000? This door...\u0000\u0000? This door...\u0000\u0000! Is there any mechanism?\u0000\u0000\u0000! Is there an"
+      },
+      {
+        "offset": "0x241f81f",
+        "context": ".\u0000\u0000There's no doubt that this thing opens up some door!\u0000\u0000\u0000\u0000That must be there to open up some door!\u0000"
+      },
+      {
+        "offset": "0x241f84b",
+        "context": "some door!\u0000\u0000\u0000\u0000That must be there to open up some door!\u0000\u0000\u0000\u0000A lever?\u0000\u0000\u0000\u0000A lever, right...\u0000\u0000\u0000That might"
+      },
+      {
+        "offset": "0x2432295",
+        "context": "m\u0014\u0007!\n\u0000\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f*\fThere is a bat engraved in the door...\u000f\u001fD\f\u001d:\r\u001c\u0003\f\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe door opens with t"
+      },
+      {
+        "offset": "0x24322ba",
+        "context": "raved in the door...\u000f\u001fD\f\u001d:\r\u001c\u0003\f\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe door opens with the \u0014\u0006bat gem\u0014\u0007!\u000f\b\u0001\u0000\u0000\u0000\u001f*\b\u0000\f - The Pa"
+      },
+      {
+        "offset": "0x2432748",
+        "context": "here's a mechanism somewhere.\u0000It won't open? This door...\u0000It won't open? This door...\u0000It won't open!"
+      },
+      {
+        "offset": "0x2432764",
+        "context": ".\u0000It won't open? This door...\u0000It won't open? This door...\u0000It won't open! Is there any mechanism?\u0000\u0000It"
+      },
+      {
+        "offset": "0x2bf3dcd",
+        "context": "m?\u0000\u0000\u0000Maybe there's some kind of mechanism?\u0000\u0000\u0000This door...\u0000\u0000\u0000\u0000This door...\u0000\u0000\u0000\u0000Is there a mechanism?\u0000\u0000"
+      },
+      {
+        "offset": "0x2bf3ddd",
+        "context": "'s some kind of mechanism?\u0000\u0000\u0000This door...\u0000\u0000\u0000\u0000This door...\u0000\u0000\u0000\u0000Is there a mechanism?\u0000\u0000\u0000Is there a mech"
+      },
+      {
+        "offset": "0x2bf6644",
+        "context": "Maybe there's some kind of mechanism...\u0000\u0000\u0000!? This door...\u0000! This door...\u0000\u0000? Is there a mechanism?\u0000! "
+      },
+      {
+        "offset": "0x2bf6653",
+        "context": "ome kind of mechanism...\u0000\u0000\u0000!? This door...\u0000! This door...\u0000\u0000? Is there a mechanism?\u0000! Is there a mech"
+      },
+      {
+        "offset": "0x2bf6e44",
+        "context": "Maybe there's some kind of mechanism...\u0000\u0000\u0000!? This door...\u0000! This door...\u0000\u0000? Is there a mechanism?\u0000! "
+      },
+      {
+        "offset": "0x2bf6e53",
+        "context": "ome kind of mechanism...\u0000\u0000\u0000!? This door...\u0000! This door...\u0000\u0000? Is there a mechanism?\u0000! Is there a mech"
+      },
+      {
+        "offset": "0x2bfe3c3",
+        "context": "\u0000\u0000\u0000! Maybe there's a mechanism somewhere.\u0000\u0000? This door...\u0000\u0000? This door...\u0000\u0000! Is there any mechanism?"
+      },
+      {
+        "offset": "0x2bfe3d3",
+        "context": "'s a mechanism somewhere.\u0000\u0000? This door...\u0000\u0000? This door...\u0000\u0000! Is there any mechanism?\u0000\u0000\u0000! Is there an"
+      },
+      {
+        "offset": "0x2c05a75",
+        "context": "Is there a seal on it?\u0000\u0000\u0000Why won't it open?\u0000\u0000This door won't open...\u0000It won't open! Is there a seal "
+      }
+    ]
+  },
+  "gates": {
+    "gate_crystals": [
+      {
+        "offset": "0x7efc30",
+        "context": "es.\u0000\u0000\u0000Great Stone\u0000Heavy stone.\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000?\u0000\u0000\u0000\u0000\u0000\u0000\u0000?\u0000\u0000\u0000Gate Crystal\u0000\u0000\u0000\u0000Activates the gate to the summoned"
+      },
+      {
+        "offset": "0x7efc64",
+        "context": "te Crystal\u0000\u0000\u0000\u0000Activates the gate to the summoned.\u0000Gate Crystal\u0000\u0000\u0000\u0000Activates the gate to the summoned"
+      },
+      {
+        "offset": "0x7efc98",
+        "context": "te Crystal\u0000\u0000\u0000\u0000Activates the gate to the summoned.\u0000Gate Crystal\u0000\u0000\u0000\u0000Activates the gate to the summoned"
+      },
+      {
+        "offset": "0x7efccc",
+        "context": "te Crystal\u0000\u0000\u0000\u0000Activates the gate to the summoned.\u0000Gate Crystal\u0000\u0000\u0000\u0000Activates the gate to the summoned"
+      }
+    ],
+    "gates": [
+      {
+        "offset": "0x7ef2de",
+        "context": "oodcutter's cabin.\u0000\u0000Key to the Clearing\u0000Opens the gate to the woodcutter's workplace.\u0000\u0000\u0000Splendid Key"
+      },
+      {
+        "offset": "0x7efc4e",
+        "context": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000?\u0000\u0000\u0000\u0000\u0000\u0000\u0000?\u0000\u0000\u0000Gate Crystal\u0000\u0000\u0000\u0000Activates the gate to the summoned.\u0000Gate Crystal\u0000\u0000\u0000\u0000Activates th"
+      },
+      {
+        "offset": "0x7efc82",
+        "context": "te to the summoned.\u0000Gate Crystal\u0000\u0000\u0000\u0000Activates the gate to the summoned.\u0000Gate Crystal\u0000\u0000\u0000\u0000Activates th"
+      },
+      {
+        "offset": "0x7efcb6",
+        "context": "te to the summoned.\u0000Gate Crystal\u0000\u0000\u0000\u0000Activates the gate to the summoned.\u0000Gate Crystal\u0000\u0000\u0000\u0000Activates th"
+      },
+      {
+        "offset": "0x7efcea",
+        "context": "te to the summoned.\u0000Gate Crystal\u0000\u0000\u0000\u0000Activates the gate to the summoned.\u0000\u0000\u0000H\u0000\u0000\u0000\u0000H\u0000\u0000\u0000\u0000H\u0000\u0000\u0000\u0000H\u0000\u0000\u0000\u0000H\u0000\u0000\u0000\u0000H"
+      },
+      {
+        "offset": "0xb17ad3",
+        "context": "onger...\u000f\n\u0016\u0000\u0000\u0000\u0000\u001fQ\fThe skilled warrior:\rThere are gates in the ruins which are sealed by mysterious a"
+      },
+      {
+        "offset": "0xf83d86",
+        "context": "se at any moment!\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f7\fThere is an ancient gate here, blocked by a magical barrier...\u000f\u001fQ\f\u001d:\r\u001c\u0003"
+      },
+      {
+        "offset": "0xf83dde",
+        "context": "r...\u000f\u001fQ\f\u001d:\r\u001c\u0003T\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f7\fThere is an ancient gate here, blocked by a magical barrier...\u000f\fThe tabl"
+      },
+      {
+        "offset": "0xf83e65",
+        "context": "barrier...\u000f\u001f\u001d\fInscription?\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f7\fThere is a gate here, blocked by a magical barrier...\u000f\u001fD\f\u001d:\r\u001c\u0003d"
+      },
+      {
+        "offset": "0xf83eb1",
+        "context": "gical barrier...\u000f\u001fD\f\u001d:\r\u001c\u0003d\u0000\u000f\b\u0001\u0000\u0000\b\u0000\u001f7\fThere is a gate here, blocked by a magical barrier...\u000f\fA light "
+      },
+      {
+        "offset": "0xf88e29",
+        "context": "ned Mine -\r    - 5th Underlevel-\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fAn old gate, blocked by a magical barrier.\u000f\u001fQ\f\u001d:\r\u001c\u0003\u0000\u000f\b\u0001\u0000\u0000\u0000"
+      },
+      {
+        "offset": "0xf88e6d",
+        "context": "magical barrier.\u000f\u001fQ\f\u001d:\r\u001c\u0003\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fAn old gate, blocked by a magical barrier...\u000f\fWhen you touch "
+      },
+      {
+        "offset": "0xf88ef5",
+        "context": "tes lightly...\u000f\fThe tablet...\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fAn old gate, blocked by a magical barrier...\u000f\u001fD\f\u001d:\r\u001c\u0003\u0000\u000f\b\u0001\u0000"
+      },
+      {
+        "offset": "0xf88f39",
+        "context": "magical barrier...\u000f\u001fD\f\u001d:\r\u001c\u0003\u0000\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f*\fAn old gate, blocked by a magical barrier...\u000f\u001f7\fWhen you touc"
+      },
+      {
+        "offset": "0x148f399",
+        "context": "\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fA stone effigy stands on the sorcerous gate...\u000f\b\u0000\u001fQ\f\u001d:\r\u001c\u0003O\u0000\u000f\b\u0001\n'\u0000\u0000\u0000\u0000\u0000Demons... I have to p"
+      },
+      {
+        "offset": "0x148fab2",
+        "context": "sort of mechanism?\u0000\u0000There seems to be a sorcerous gate beneath it...\u0000\u0000\u0000\u0000There seems to be a sorcerou"
+      },
+      {
+        "offset": "0x148fae6",
+        "context": "te beneath it...\u0000\u0000\u0000\u0000There seems to be a sorcerous gate beneath it...\u0000\u0000\u0000\u0000Is it a defense to protect t"
+      },
+      {
+        "offset": "0x148fb25",
+        "context": "it...\u0000\u0000\u0000\u0000Is it a defense to protect the sorcerous gate?\u0000\u0000Looks to be some sort of cover for the sorc"
+      },
+      {
+        "offset": "0x148fb5d",
+        "context": "\u0000Looks to be some sort of cover for the sorcerous gate.\u0000\u0000Why would there be a statue in such a place"
+      },
+      {
+        "offset": "0x148fbe0",
+        "context": "e in such a place?\u0000\u0000\u0000\u0000Did someone bar a sorcerous gate with that thing?\u0000\u0000\u0000Is there a sorcerous gate "
+      },
+      {
+        "offset": "0x148fc0d",
+        "context": "rous gate with that thing?\u0000\u0000\u0000Is there a sorcerous gate hidden beneath that thing?\u0000\u0000\u0000\u0000This statue loo"
+      },
+      {
+        "offset": "0x148ff43",
+        "context": "e portal.\u0000\u0000Might one be able to use the sorcerous gate now...\u0000\u0000The portal can surely be used now...\u0000"
+      },
+      {
+        "offset": "0x1490743",
+        "context": "e portal.\u0000\u0000Might one be able to use the sorcerous gate now...\u0000\u0000The portal can surely be used now...\u0000"
+      },
+      {
+        "offset": "0x1493056",
+        "context": "ods to the north.\u000f\u001fQ\f\u001d:\r\u001c\u0003\u001a\u0000\u000f\n6\u0000\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fThe gate is locked...\u000f\n7\u0000\u001fD\f\u001d:\r\u001c\u0003*\u0000\u000f\n8\u0000\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001fD\fWe're "
+      },
+      {
+        "offset": "0x149314e",
+        "context": "ing is written on the board...\u000f\n4\u0000\u001fD\fTo open the gate please activate the switches on each side...\u000f\n"
+      },
+      {
+        "offset": "0x149369f",
+        "context": "of Ruins...\u0000\u0000\u0000\u0000We can't get the boat out with the gate closed.\u0000We can't get the boat out with the ga"
+      },
+      {
+        "offset": "0x14936cf",
+        "context": "e gate closed.\u0000We can't get the boat out with the gate closed.\u0000We need to open the gate first.\u0000We ne"
+      },
+      {
+        "offset": "0x14936f0",
+        "context": "oat out with the gate closed.\u0000We need to open the gate first.\u0000We need to open the gate first.\u0000That g"
+      },
+      {
+        "offset": "0x1493710",
+        "context": "need to open the gate first.\u0000We need to open the gate first.\u0000That gate must be opened first.\u0000That ga"
+      },
+      {
+        "offset": "0x1493721",
+        "context": "gate first.\u0000We need to open the gate first.\u0000That gate must be opened first.\u0000That gate must be opened"
+      },
+      {
+        "offset": "0x1493741",
+        "context": "gate first.\u0000That gate must be opened first.\u0000That gate must be opened first.\u0000Oh, the gate's still clo"
+      },
+      {
+        "offset": "0x1493764",
+        "context": "ed first.\u0000That gate must be opened first.\u0000Oh, the gate's still closed!\u0000\u0000\u0000\u0000Oh, the gate's still close"
+      },
+      {
+        "offset": "0x1493784",
+        "context": "ed first.\u0000Oh, the gate's still closed!\u0000\u0000\u0000\u0000Oh, the gate's still closed!\u0000\u0000\u0000\u0000Curse it! We have to open "
+      },
+      {
+        "offset": "0x14937ba",
+        "context": "'s still closed!\u0000\u0000\u0000\u0000Curse it! We have to open the gate first!\u0000\u0000\u0000Curse it! We have to open the gate f"
+      },
+      {
+        "offset": "0x14937e6",
+        "context": "n the gate first!\u0000\u0000\u0000Curse it! We have to open the gate first!\u0000\u0000\u0000First we have to open the gate.\u0000Firs"
+      },
+      {
+        "offset": "0x149380e",
+        "context": "open the gate first!\u0000\u0000\u0000First we have to open the gate.\u0000First we have to open the gate.\u0000Someone obvio"
+      },
+      {
+        "offset": "0x149382e",
+        "context": "have to open the gate.\u0000First we have to open the gate.\u0000Someone obviously closed that gate on purpose"
+      },
+      {
+        "offset": "0x1493852",
+        "context": "e to open the gate.\u0000Someone obviously closed that gate on purpose!\u0000\u0000Someone obviously closed that ga"
+      },
+      {
+        "offset": "0x1493882",
+        "context": "t gate on purpose!\u0000\u0000Someone obviously closed that gate on purpose!\u0000\u0000A gate...\u0000\u0000\u0000A gate...\u0000\u0000\u0000\u0000\u0000\u0003\u0000\bd\u0000@"
+      },
+      {
+        "offset": "0x1493896",
+        "context": "Someone obviously closed that gate on purpose!\u0000\u0000A gate...\u0000\u0000\u0000A gate...\u0000\u0000\u0000\u0000\u0000\u0003\u0000\bd\u0000@x\u0005\u0004 \u0003\u0000\u0002\u0004\u0000\bd\u0000@x\u0005\u0004 \u0003\u0000\u0000"
+      },
+      {
+        "offset": "0x14938a2",
+        "context": "ously closed that gate on purpose!\u0000\u0000A gate...\u0000\u0000\u0000A gate...\u0000\u0000\u0000\u0000\u0000\u0003\u0000\bd\u0000@x\u0005\u0004 \u0003\u0000\u0002\u0004\u0000\bd\u0000@x\u0005\u0004 \u0003\u0000\u00002\u0000d\u0000d\u0000d\u0000d\u0000\u0000\u0000"
+      },
+      {
+        "offset": "0x1493e9f",
+        "context": "\u0005\u0014\u0000\u001b\u0001\u0001\u0000s...\u0000\u0000\u0000\u0000We can't get the boat out with the gate closed.\u0000We can't get the boat out with the ga"
+      },
+      {
+        "offset": "0x1493ecf",
+        "context": "e gate closed.\u0000We can't get the boat out with the gate closed.\u0000We need to open the gate first.\u0000We ne"
+      },
+      {
+        "offset": "0x1493ef0",
+        "context": "oat out with the gate closed.\u0000We need to open the gate first.\u0000We need to open the gate first.\u0000That g"
+      },
+      {
+        "offset": "0x1493f10",
+        "context": "need to open the gate first.\u0000We need to open the gate first.\u0000That gate must be opened first.\u0000That ga"
+      },
+      {
+        "offset": "0x1493f21",
+        "context": "gate first.\u0000We need to open the gate first.\u0000That gate must be opened first.\u0000That gate must be opened"
+      },
+      {
+        "offset": "0x1493f41",
+        "context": "gate first.\u0000That gate must be opened first.\u0000That gate must be opened first.\u0000Oh, the gate's still clo"
+      },
+      {
+        "offset": "0x1493f64",
+        "context": "ed first.\u0000That gate must be opened first.\u0000Oh, the gate's still closed!\u0000\u0000\u0000\u0000Oh, the gate's still close"
+      },
+      {
+        "offset": "0x1493f84",
+        "context": "ed first.\u0000Oh, the gate's still closed!\u0000\u0000\u0000\u0000Oh, the gate's still closed!\u0000\u0000\u0000\u0000Curse it! We have to open "
+      },
+      {
+        "offset": "0x1493fba",
+        "context": "'s still closed!\u0000\u0000\u0000\u0000Curse it! We have to open the gate first!\u0000\u0000\u0000Curse it! We have to open the gate f"
+      }
+    ]
+  },
+  "portals": [
+    {
+      "offset": "0xf942c2",
+      "context": "Underlevel\rContinue Expedition\r\t\u0000\b\u0001\n\u0018\u0000\u0000\u0000With this portal one can return to the 1st Underlevel.\u0000\u0000With this portal one can",
+      "destination": "1st Underlevel"
+    },
+    {
+      "offset": "0xf942fa",
+      "context": "one can return to the 1st Underlevel.\u0000\u0000With this portal one can return to the 1st Underlevel.\u0000\u0000With this portal one can ",
+      "destination": "1st Underlevel"
+    },
+    {
+      "offset": "0xf94332",
+      "context": "one can return to the 1st Underlevel.\u0000\u0000With this portal one can return to the 1st Underlevel.\u0000\u0000Apparently this portal le",
+      "destination": "1st Underlevel"
+    },
+    {
+      "offset": "0xf94370",
+      "context": "an return to the 1st Underlevel.\u0000\u0000Apparently this portal leads back to the 1st Underlevel.\u0000\u0000\u0000\u0000This portal must lead back",
+      "destination": "1st Underlevel"
+    },
+    {
+      "offset": "0xf943a1",
+      "context": "portal leads back to the 1st Underlevel.\u0000\u0000\u0000\u0000This portal must lead back to the 1st Underlevel.\u0000\u0000\u0000One seems to be able to ",
+      "destination": "1st Underlevel"
+    },
+    {
+      "offset": "0xf94414",
+      "context": "le to get back to the 1st Underlevel through this portal.\u0000One seems to be able to get back to the 1st Underlevel through",
+      "destination": "1st Underlevel"
+    },
+    {
+      "offset": "0xf94460",
+      "context": "le to get back to the 1st Underlevel through this portal.\u0000One seems to be able to get back to the 1st Underlevel through",
+      "destination": "1st Underlevel"
+    },
+    {
+      "offset": "0xf944ac",
+      "context": "le to get back to the 1st Underlevel through this portal.\u0000One seems to be able to get back to the 1st Underlevel through",
+      "destination": "1st Underlevel"
+    },
+    {
+      "offset": "0xf944f8",
+      "context": "le to get back to the 1st Underlevel through this portal.\u0000One seems to be able to get back to the 1st Underlevel through",
+      "destination": "1st Underlevel"
+    },
+    {
+      "offset": "0xf94544",
+      "context": "le to get back to the 1st Underlevel through this portal.\u0000This portal leads back to the 1st Underlevel.\u0000\u0000\u0000One can get ba",
+      "destination": "1st Underlevel"
+    },
+    {
+      "offset": "0xf94551",
+      "context": "k to the 1st Underlevel through this portal.\u0000This portal leads back to the 1st Underlevel.\u0000\u0000\u0000One can get back to the 1st",
+      "destination": "1st Underlevel"
+    },
+    {
+      "offset": "0xf945b0",
+      "context": "e can get back to the 1st Underlevel through this portal.\u0000One can get back to the 1st Underlevel through this portal.\u0000Th",
+      "destination": "1st Underlevel"
+    },
+    {
+      "offset": "0xf945ec",
+      "context": "e can get back to the 1st Underlevel through this portal.\u0000This portal must lead back to the 1st Underlevel.\u0000\u0000\u0000This porta",
+      "destination": "1st Underlevel"
+    },
+    {
+      "offset": "0xf945f9",
+      "context": "k to the 1st Underlevel through this portal.\u0000This portal must lead back to the 1st Underlevel.\u0000\u0000\u0000This portal must lead b",
+      "destination": "1st Underlevel"
+    },
+    {
+      "offset": "0xf9462d",
+      "context": "rtal must lead back to the 1st Underlevel.\u0000\u0000\u0000This portal must lead back to the 1st Underlevel.\u0000\u0000\u0000This portal must lead b",
+      "destination": "1st Underlevel"
+    },
+    {
+      "offset": "0xf94661",
+      "context": "rtal must lead back to the 1st Underlevel.\u0000\u0000\u0000This portal must lead back to the 1st Underlevel.\u0000\u0000\u0000\u0000\u0002\u0007\u0000\u0010'\u0010'\u0010'\u0001\u0000\u0001\u0000\u0001\u0000\u0000\u0000\u0016\u0000p\tF",
+      "destination": "1st Underlevel"
+    },
+    {
+      "offset": "0xf94ac2",
+      "context": "Underlevel\rContinue Expedition\r\t\u0000\b\u0001\n\u0018\u0000\u0000\u0000With this portal one can return to the 1st Underlevel.\u0000\u0000With this portal one can",
+      "destination": "1st Underlevel"
+    },
+    {
+      "offset": "0xf94afa",
+      "context": "one can return to the 1st Underlevel.\u0000\u0000With this portal one can return to the 1st Underlevel.\u0000\u0000With this portal one can ",
+      "destination": "1st Underlevel"
+    },
+    {
+      "offset": "0xf94b32",
+      "context": "one can return to the 1st Underlevel.\u0000\u0000With this portal one can return to the 1st Underlevel.\u0000\u0000Apparently this portal le",
+      "destination": "1st Underlevel"
+    },
+    {
+      "offset": "0xf94b70",
+      "context": "an return to the 1st Underlevel.\u0000\u0000Apparently this portal leads back to the 1st Underlevel.\u0000\u0000\u0000\u0000This portal must lead back",
+      "destination": "1st Underlevel"
+    },
+    {
+      "offset": "0xf94ba1",
+      "context": "portal leads back to the 1st Underlevel.\u0000\u0000\u0000\u0000This portal must lead back to the 1st Underlevel.\u0000\u0000\u0000One seems to be able to ",
+      "destination": "1st Underlevel"
+    },
+    {
+      "offset": "0xf94c14",
+      "context": "le to get back to the 1st Underlevel through this portal.\u0000One seems to be able to get back to the 1st Underlevel through",
+      "destination": "1st Underlevel"
+    },
+    {
+      "offset": "0xf94c60",
+      "context": "le to get back to the 1st Underlevel through this portal.\u0000One seems to be able to get back to the 1st Underlevel through",
+      "destination": "1st Underlevel"
+    },
+    {
+      "offset": "0xf94cac",
+      "context": "le to get back to the 1st Underlevel through this portal.\u0000One seems to be able to get back to the 1st Underlevel through",
+      "destination": "1st Underlevel"
+    },
+    {
+      "offset": "0xf94cf8",
+      "context": "le to get back to the 1st Underlevel through this portal.\u0000One seems to be able to get back to the 1st Underlevel through",
+      "destination": "1st Underlevel"
+    },
+    {
+      "offset": "0xf94d44",
+      "context": "le to get back to the 1st Underlevel through this portal.\u0000This portal leads back to the 1st Underlevel.\u0000\u0000\u0000One can get ba",
+      "destination": "1st Underlevel"
+    },
+    {
+      "offset": "0xf94d51",
+      "context": "k to the 1st Underlevel through this portal.\u0000This portal leads back to the 1st Underlevel.\u0000\u0000\u0000One can get back to the 1st",
+      "destination": "1st Underlevel"
+    },
+    {
+      "offset": "0xf94db0",
+      "context": "e can get back to the 1st Underlevel through this portal.\u0000One can get back to the 1st Underlevel through this portal.\u0000Th",
+      "destination": "1st Underlevel"
+    },
+    {
+      "offset": "0xf94dec",
+      "context": "e can get back to the 1st Underlevel through this portal.\u0000This portal must lead back to the 1st Underlevel.\u0000\u0000\u0000This porta",
+      "destination": "1st Underlevel"
+    },
+    {
+      "offset": "0xf94df9",
+      "context": "k to the 1st Underlevel through this portal.\u0000This portal must lead back to the 1st Underlevel.\u0000\u0000\u0000This portal must lead b",
+      "destination": "1st Underlevel"
+    },
+    {
+      "offset": "0xf94e2d",
+      "context": "rtal must lead back to the 1st Underlevel.\u0000\u0000\u0000This portal must lead back to the 1st Underlevel.\u0000\u0000\u0000This portal must lead b",
+      "destination": "1st Underlevel"
+    },
+    {
+      "offset": "0xf94e61",
+      "context": "rtal must lead back to the 1st Underlevel.\u0000\u0000\u0000This portal must lead back to the 1st Underlevel.\u0000\u0000\u0000\u0000\u0002\u0007\u0000\u0010'\u0010'\u0010'\u0001\u0000\u0001\u0000\u0001\u0000\u0000\u0000\u0016\u0000p\tF",
+      "destination": "1st Underlevel"
+    },
+    {
+      "offset": "0x148fd80",
+      "context": "atue, it may just be something...\u0000I wonder if the portal even functions...\u0000\u0000\u0000\u0000I wonder if the portal even functions...\u0000\u0000",
+      "destination": null
+    },
+    {
+      "offset": "0x148fdac",
+      "context": "f the portal even functions...\u0000\u0000\u0000\u0000I wonder if the portal even functions...\u0000\u0000\u0000\u0000The portal must actually be useable now.\u0000\u0000",
+      "destination": null
+    },
+    {
+      "offset": "0x148fdcc",
+      "context": "\u0000\u0000I wonder if the portal even functions...\u0000\u0000\u0000\u0000The portal must actually be useable now.\u0000\u0000\u0000\u0000The portal must actually be us",
+      "destination": null
+    },
+    {
+      "offset": "0x148fdf8",
+      "context": "\u0000\u0000The portal must actually be useable now.\u0000\u0000\u0000\u0000The portal must actually be useable now.\u0000\u0000\u0000\u0000Hmmm, looks like the portal ma",
+      "destination": null
+    },
+    {
+      "offset": "0x148fe35",
+      "context": "actually be useable now.\u0000\u0000\u0000\u0000Hmmm, looks like the portal may be useable now...\u0000\u0000\u0000Hmmm, looks like the portal may be useab",
+      "destination": null
+    },
+    {
+      "offset": "0x148fe69",
+      "context": "rtal may be useable now...\u0000\u0000\u0000Hmmm, looks like the portal may be useable now...\u0000\u0000\u0000Might the portal be useable now?\u0000\u0000\u0000\u0000Can",
+      "destination": null
+    },
+    {
+      "offset": "0x148fe92",
+      "context": "like the portal may be useable now...\u0000\u0000\u0000Might the portal be useable now?\u0000\u0000\u0000\u0000Can we use the portal now?\u0000\u0000It should be pos",
+      "destination": null
+    },
+    {
+      "offset": "0x148febb",
+      "context": "ight the portal be useable now?\u0000\u0000\u0000\u0000Can we use the portal now?\u0000\u0000It should be possible to use the portal now.\u0000\u0000\u0000\u0000Now one c",
+      "destination": null
+    },
+    {
+      "offset": "0x148fee9",
+      "context": "the portal now?\u0000\u0000It should be possible to use the portal now.\u0000\u0000\u0000\u0000Now one can surely use the portal.\u0000\u0000Might one be able t",
+      "destination": null
+    },
+    {
+      "offset": "0x148ff13",
+      "context": "use the portal now.\u0000\u0000\u0000\u0000Now one can surely use the portal.\u0000\u0000Might one be able to use the sorcerous gate now...\u0000\u0000The porta",
+      "destination": null
+    },
+    {
+      "offset": "0x148ff54",
+      "context": "one be able to use the sorcerous gate now...\u0000\u0000The portal can surely be used now...\u0000\u0000\u0000\u0000Hmmm, looks like one may be able t",
+      "destination": null
+    },
+    {
+      "offset": "0x148ffa4",
+      "context": "..\u0000\u0000\u0000\u0000Hmmm, looks like one may be able to use the portal now...\u0000\u0000\u0000Apparently one can use the portal now...\u0000\u0000\u0000\u0000...looks g",
+      "destination": null
+    },
+    {
+      "offset": "0x148ffcf",
+      "context": "se the portal now...\u0000\u0000\u0000Apparently one can use the portal now...\u0000\u0000\u0000\u0000...looks good...\u0000\u0000\u0000\u0000...looks good...\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0000P\u0000\u0000\b\u0004\n\u0000\u0002\u0002",
+      "destination": null
+    },
+    {
+      "offset": "0x1490580",
+      "context": "\u0001\u0000\u0001\u0013\u0000\u0000d\u0000\u0003\u0005\u0005\u0002&\u0000\u0000\u001b\u0001\u0001\u0000\u0000\u0000omething...\u0000I wonder if the portal even functions...\u0000\u0000\u0000\u0000I wonder if the portal even functions...\u0000\u0000\u0000",
+      "destination": null
+    },
+    {
+      "offset": "0x14905ac",
+      "context": "f the portal even functions...\u0000\u0000\u0000\u0000I wonder if the portal even functions...\u0000\u0000\u0000\u0000The portal must actually be useable now.\u0000\u0000",
+      "destination": null
+    },
+    {
+      "offset": "0x14905cc",
+      "context": "\u0000\u0000I wonder if the portal even functions...\u0000\u0000\u0000\u0000The portal must actually be useable now.\u0000\u0000\u0000\u0000The portal must actually be us",
+      "destination": null
+    },
+    {
+      "offset": "0x14905f8",
+      "context": "\u0000\u0000The portal must actually be useable now.\u0000\u0000\u0000\u0000The portal must actually be useable now.\u0000\u0000\u0000\u0000Hmmm, looks like the portal ma",
+      "destination": null
+    },
+    {
+      "offset": "0x1490635",
+      "context": "actually be useable now.\u0000\u0000\u0000\u0000Hmmm, looks like the portal may be useable now...\u0000\u0000\u0000Hmmm, looks like the portal may be useab",
+      "destination": null
+    }
+  ],
+  "keys": [
+    {
+      "offset": "0xf83ca5",
+      "name": "\u00034\u0000\u000f\u001f\u001d\fYou hold the \u0014\u0004black key\u0014\u0007.",
+      "description": "\u0000\u000f\b\u0001\u0000\u0000\u0000\u001f*\b\u0000\f - The Abandoned Mine -\r   - 3rd Underlevel -\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fThe \u0014\u0006black key \u0014\u0007opened the lock",
+      "full_context": "\u001c\u00034\u0000\u000f\u001f\u001d\fYou hold the \u0014\u0004black key\u0014\u0007.\n\u001e\u0000\u000f\b\u0001\u0000\u0000\u0000\u001f*\b\u0000\f - The Abandoned Mine -\r   - 3rd Underlevel -\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fThe \u0014\u0006black key \u0014\u0007opened the lock!\u000f\n\u0015\u0000\b\u0001\u0000\u0000\b\u0000\u001fD"
+    },
+    {
+      "offset": "0x102f5c5",
+      "name": "led!\u000f\u001f \fYou got \u0014\u0004the dragon key\u0014\u0007!",
+      "description": "$\u0000\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f \fThe\u0014\u0004 dragon key \u0014\u0007opens the treasure chest!\u000f",
+      "full_context": "led!\u000f\u001f \fYou got \u0014\u0004the dragon key\u0014\u0007!\n$\u0000\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f \fThe\u0014\u0004 dragon key \u0014\u0007opens the treasure chest!\u000f\n!\u0000\u0000\u0000\b\u0000\u001f \fThe treasure chest won't open.\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\u001fk\b\u0000\f - "
+    },
+    {
+      "offset": "0x149f464",
+      "name": "*\fYou've found the \u0014\u0004cellar key\u0014\u0007.",
+      "description": "I\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fYou've found the \u0014\u0004key to the clearing\u0014\u0007!",
+      "full_context": "\u001f*\fYou've found the \u0014\u0004cellar key\u0014\u0007.\nI\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fYou've found the \u0014\u0004key to the clearing\u0014\u0007!\nI\u0000\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f\u001d\fThe doorbell rings...\u000f\u001f7\f\u001d:\r\u001c\u0003 \u0000\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fSom"
+    },
+    {
+      "offset": "0x149f8d9",
+      "name": "the door with the\r\u0014\u0006 splendid key\u0014\u0007!\u000f",
+      "description": null,
+      "full_context": "the door with the\r\u0014\u0006 splendid key\u0014\u0007!\u000f\n&\u0000\u0000\u0000\u0000\u0000\u0000\u001f\u001d\b\u0000\fWhere do you stab?\u000f\u001f^\fthe first hole\rthe second hole\rthe third hole\rthe fourth hole\rthe fifth hole\rt"
+    },
+    {
+      "offset": "0x149fbc0",
+      "name": "ve found the \u0014\u0004test founder's key\u0014\u0007!",
+      "description": "I\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001fD\fYou were able to open the treasure chest with the test founder's key!\u000f",
+      "full_context": "ve found the \u0014\u0004test founder's key\u0014\u0007!\nI\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001fD\fYou were able to open the treasure chest with the test founder's key!\u000f\n?\u0000\u0000\u0000\u0000\u0000\u0000\b\u0000\u001fD\fThe portrait of "
+    },
+    {
+      "offset": "0x197f784",
+      "name": "B\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fYou get the \u0014\u0004blue key\u0014\u0007!",
+      "description": null,
+      "full_context": " B1\u0000\u0000\u0000\b\u0000\u001f\u001d\fYou get the \u0014\u0004red key\u0014\u0007!\nB\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fYou get the \u0014\u0004blue key\u0014\u0007!\nB\u0000\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f*\fThere is a red crystal on the door...\u000f\u001f7\f\u001d:\r\u001c\u0003\u0014\u0000\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fYou"
+    },
+    {
+      "offset": "0x197f7ad",
+      "name": "\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fYou get the \u0014\u0004blue key\u0014\u0007!",
+      "description": "B\u0000\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f*\fThere is a red crystal on the door...\u000f\u001f7\f\u001d:\r\u001c\u0003\u0014\u0000\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fYou open the door with the \u0014\u0006",
+      "full_context": "\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fYou get the \u0014\u0004blue key\u0014\u0007!\nB\u0000\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f*\fThere is a red crystal on the door...\u000f\u001f7\f\u001d:\r\u001c\u0003\u0014\u0000\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fYou open the door with the \u0014\u0006red key\u0014\u0007...\u000f\b"
+    },
+    {
+      "offset": "0x198d634",
+      "name": "discovered the \u0014\u0004black quarz key\u0014\u0007!",
+      "description": "N\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fYou have the key!\u000f\b\u0001\u0000\u0000\b\u0000\u001f\u001d\fThe door is locked...\u000f\u001c\u0002@\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fThe seal dissipates!\u000f\b\u0001\u0000",
+      "full_context": " discovered the \u0014\u0004black quarz key\u0014\u0007!\nN\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fYou have the key!\u000f\b\u0001\u0000\u0000\b\u0000\u001f\u001d\fThe door is locked...\u000f\u001c\u0002@\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fThe seal dissipates!\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f7\fI can "
+    },
+    {
+      "offset": "0x1df0c64",
+      "name": "\u0000\u0000\b\u0000\u001f*\fYou have the \u0014\u0004golden key\u0014\u0007!",
+      "description": "'\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe door is closed tight...\u000f\u001fD\f\u001d:\r\u001c\u0003\u001c\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe\u0014\u0006 golden key\u0014\u0007 opens the door!\u000f\b",
+      "full_context": "\u0000\u0000\b\u0000\u001f*\fYou have the \u0014\u0004golden key\u0014\u0007!\n'\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe door is closed tight...\u000f\u001fD\f\u001d:\r\u001c\u0003\u001c\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe\u0014\u0006 golden key\u0014\u0007 opens the door!\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fSom"
+    },
+    {
+      "offset": "0x240b5e6",
+      "name": "\u0000\u000f\b\u0001\u0000\u0000\b\u0000\u001f\u001d\fYou have the \u0014\u0004moon key\u0014\u0007!",
+      "description": null,
+      "full_context": "\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fYou have the \u0014\u0004star key\u0014\u0007!\n\u0000\u000f\b\u0001\u0000\u0000\b\u0000\u001f\u001d\fYou have the \u0014\u0004moon key\u0014\u0007!\n\u0000\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fThe seal is broken!\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001fD\fYou sense a sorcerous energy about"
+    },
+    {
+      "offset": "0x240b60e",
+      "name": "\b\u0001\u0000\u0000\b\u0000\u001f\u001d\fYou have the \u0014\u0004moon key\u0014\u0007!",
+      "description": null,
+      "full_context": "\b\u0001\u0000\u0000\b\u0000\u001f\u001d\fYou have the \u0014\u0004moon key\u0014\u0007!\n\u0000\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fThe seal is broken!\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001fD\fYou sense a sorcerous energy about the door\r...it seems to be sealed.\u000f\u001c\u0002"
+    },
+    {
+      "offset": "0x241edac",
+      "name": "\u0003O\u0000\u000f\u001f\u001d\fYou have the \u0014\u0004cell key\u0014\u0007!",
+      "description": "~\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fThere's nothing here.\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fYou open the door with the \u0014\u0006cell key\u0014\u0007!\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f*\f\"Cel",
+      "full_context": "\r\u001c\u0003O\u0000\u000f\u001f\u001d\fYou have the \u0014\u0004cell key\u0014\u0007!\n~\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fThere's nothing here.\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fYou open the door with the \u0014\u0006cell key\u0014\u0007!\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f*\f\"Cell\" is written "
+    },
+    {
+      "offset": "0x242478a",
+      "name": "*\fYou have the \u0014\u0004black dragon key\u0014\u0007!",
+      "description": null,
+      "full_context": "*\fYou have the \u0014\u0004black dragon key\u0014\u0007!\n[\u0000\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fThere's nothing more down there.\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f7\fThe sigil of the white dragon is engraved in the door...\u000f\u001f"
+    },
+    {
+      "offset": "0x24248d0",
+      "name": "d\u0000\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fYou have the \u0014\u0004blue dragon key\u0014\u0007!",
+      "description": "door with the \u0014\u0006black dragon key\u0014\u0007.\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f7\fOnly a martyr shall gain the prize...",
+      "full_context": " door with the \u0014\u0006black dragon key\u0014\u0007.\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f7\fOnly a martyr shall gain the prize...\nc\u0000\u000f\nd\u0000\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fYou have the \u0014\u0004blue dragon key\u0014\u0007!\n[\u0000\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f7\fT"
+    },
+    {
+      "offset": "0x2424935",
+      "name": "*\fYou have the \u0014\u0004blue dragon key\u0014\u0007!",
+      "description": "[\u0000\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f7\fThe sigil of the blue dragon is engraved in the door...\u000f\u001fD\f\u001d:\r\u001c\u0003N\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fYou open ",
+      "full_context": "*\fYou have the \u0014\u0004blue dragon key\u0014\u0007!\n[\u0000\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f7\fThe sigil of the blue dragon is engraved in the door...\u000f\u001fD\f\u001d:\r\u001c\u0003N\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fYou open the door with "
+    },
+    {
+      "offset": "0x24249c3",
+      "name": "d\u0000\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fYou have the \u0014\u0004red dragon key\u0014\u0007!",
+      "description": "e door with the \u0014\u0006blue dragon key\u0014\u0007!\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fTake care that you don't fall in!",
+      "full_context": "e door with the \u0014\u0006blue dragon key\u0014\u0007!\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fTake care that you don't fall in!\nc\u0000\u000f\nd\u0000\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fYou have the \u0014\u0004red dragon key\u0014\u0007!\n[\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f7\fThe "
+    },
+    {
+      "offset": "0x2424a24",
+      "name": "*\fYou have the \u0014\u0004red dragon key\u0014\u0007!",
+      "description": "[\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f7\fThe sigil of the red dragon is engraved in the door...\u000f\u001fD\f\u001d:\r\u001c\u0003N\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fYou open",
+      "full_context": "\u001f*\fYou have the \u0014\u0004red dragon key\u0014\u0007!\n[\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f7\fThe sigil of the red dragon is engraved in the door...\u000f\u001fD\f\u001d:\r\u001c\u0003N\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fYou open the door with"
+    },
+    {
+      "offset": "0x2bf3714",
+      "name": "\u0000\u0000\b\u0000\u001f*\fYou get the \u0014\u0004antique key\u0014\u0007!",
+      "description": null,
+      "full_context": "\u0000\u0000\b\u0000\u001f*\fYou get the \u0014\u0004antique key\u0014\u0007!\nH\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe door has a special lock on it...\u000f\u001fD\f\u001d:\r\u001c\u0003\r\u0000\u000f\f\u001d:\r\u001c\u0003\u001d\u0000\u000f\b\u0001\u0000\u0000\b\u0000\u001f \fThe door has a special lock on it."
+    },
+    {
+      "offset": "0x2bfdd56",
+      "name": "\u0001\u0000\u0000\u0000\b\u0000\u001f\u001d\fYou get the \u0014\u0004magic key\u0014\u0007!",
+      "description": null,
+      "full_context": "\u0001\u0000\u0000\u0000\b\u0000\u001f\u001d\fYou get the \u0014\u0004magic key\u0014\u0007!\n@\u0000\u000f\b\u0001\u0000\u0000\u001f7\fWhen you step on the switch you can hear a rumbling noise in the distance...\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f7\f\u001d:\r\u001c\u0003 \u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b"
+    }
+  ],
+  "door_structures": [
+    {
+      "offset": "0x100000",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0x0",
+      "type_description": "Unlocked",
+      "raw_hex": "00000000000000000000000000000000"
+    },
+    {
+      "offset": "0x100004",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0xff",
+      "type_description": "Unlocked",
+      "raw_hex": "000000000000000000000000ff000000"
+    },
+    {
+      "offset": "0x10000c",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 255
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0x0",
+      "type_description": "Unlocked",
+      "raw_hex": "00000000ff0000000000000000000000"
+    },
+    {
+      "offset": "0x1000f8",
+      "position": {
+        "x": 255,
+        "y": 0,
+        "z": 0
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0x0",
+      "type_description": "Unlocked",
+      "raw_hex": "ff000000000000000000000000000000"
+    },
+    {
+      "offset": "0x1000fc",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0x0",
+      "type_description": "Unlocked",
+      "raw_hex": "00000000000000000000000000000000"
+    },
+    {
+      "offset": "0x100100",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0x0",
+      "type_description": "Unlocked",
+      "raw_hex": "00000000000000000000000000000000"
+    },
+    {
+      "offset": "0x100104",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0xff",
+      "type_description": "Unlocked",
+      "raw_hex": "000000000000000000000000ff000000"
+    },
+    {
+      "offset": "0x10010c",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 255
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0x0",
+      "type_description": "Unlocked",
+      "raw_hex": "00000000ff0000000000000000000000"
+    },
+    {
+      "offset": "0x1001f8",
+      "position": {
+        "x": 255,
+        "y": 0,
+        "z": 0
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0x0",
+      "type_description": "Unlocked",
+      "raw_hex": "ff000000000000000000000000000000"
+    },
+    {
+      "offset": "0x1001fc",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0x0",
+      "type_description": "Unlocked",
+      "raw_hex": "00000000000000000000000000000000"
+    },
+    {
+      "offset": "0x100200",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0x0",
+      "type_description": "Unlocked",
+      "raw_hex": "00000000000000000000000000000000"
+    },
+    {
+      "offset": "0x100204",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0xff",
+      "type_description": "Unlocked",
+      "raw_hex": "000000000000000000000000ff000000"
+    },
+    {
+      "offset": "0x10020c",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 255
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0x0",
+      "type_description": "Unlocked",
+      "raw_hex": "00000000ff0000000000000000000000"
+    },
+    {
+      "offset": "0x100210",
+      "position": {
+        "x": 255,
+        "y": 0,
+        "z": 0
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0x0",
+      "type_description": "Unlocked",
+      "raw_hex": "ff000000000000000000000000000000"
+    },
+    {
+      "offset": "0x100214",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0xffff",
+      "type_description": "Unlocked",
+      "raw_hex": "000000000000000000000000ffffffff"
+    },
+    {
+      "offset": "0x10031c",
+      "position": {
+        "x": -1,
+        "y": -1,
+        "z": 255
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0x0",
+      "type_description": "Unlocked",
+      "raw_hex": "ffffffffff0000000000000000000000"
+    },
+    {
+      "offset": "0x100320",
+      "position": {
+        "x": 255,
+        "y": 0,
+        "z": 0
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0x0",
+      "type_description": "Unlocked",
+      "raw_hex": "ff000000000000000000000000000000"
+    },
+    {
+      "offset": "0x100324",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0x0",
+      "type_description": "Unlocked",
+      "raw_hex": "00000000000000000000000000000000"
+    },
+    {
+      "offset": "0x100328",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0x0",
+      "type_description": "Unlocked",
+      "raw_hex": "00000000000000000000000000000000"
+    },
+    {
+      "offset": "0x10032c",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0xff",
+      "type_description": "Unlocked",
+      "raw_hex": "000000000000000000000000ff000000"
+    },
+    {
+      "offset": "0x100334",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 255
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0x0",
+      "type_description": "Unlocked",
+      "raw_hex": "00000000ff0000000000000000000000"
+    },
+    {
+      "offset": "0x100338",
+      "position": {
+        "x": 255,
+        "y": 0,
+        "z": 0
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0x0",
+      "type_description": "Unlocked",
+      "raw_hex": "ff000000000000000000000000000000"
+    },
+    {
+      "offset": "0x10033c",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0x0",
+      "type_description": "Unlocked",
+      "raw_hex": "00000000000000000000000000000000"
+    },
+    {
+      "offset": "0x100380",
+      "position": {
+        "x": 255,
+        "y": 0,
+        "z": 0
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0x0",
+      "type_description": "Unlocked",
+      "raw_hex": "ff000000000000000000000000000000"
+    },
+    {
+      "offset": "0x100384",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0x0",
+      "type_description": "Unlocked",
+      "raw_hex": "00000000000000000000000000000000"
+    },
+    {
+      "offset": "0x100388",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0x0",
+      "type_description": "Unlocked",
+      "raw_hex": "00000000000000000000000000000000"
+    },
+    {
+      "offset": "0x10038c",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0xff",
+      "type_description": "Unlocked",
+      "raw_hex": "000000000000000000000000ff000000"
+    },
+    {
+      "offset": "0x100394",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 255
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0x0",
+      "type_description": "Unlocked",
+      "raw_hex": "00000000ff0000000000000000000000"
+    },
+    {
+      "offset": "0x100398",
+      "position": {
+        "x": 255,
+        "y": 0,
+        "z": 0
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0x0",
+      "type_description": "Unlocked",
+      "raw_hex": "ff000000000000000000000000000000"
+    },
+    {
+      "offset": "0x10039c",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0x0",
+      "type_description": "Unlocked",
+      "raw_hex": "00000000000000000000000000000000"
+    },
+    {
+      "offset": "0x1003a0",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0x0",
+      "type_description": "Unlocked",
+      "raw_hex": "00000000000000000000000000000000"
+    },
+    {
+      "offset": "0x1003a4",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0xff",
+      "type_description": "Unlocked",
+      "raw_hex": "000000000000000000000000ff000000"
+    },
+    {
+      "offset": "0x1003ac",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 255
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0x0",
+      "type_description": "Unlocked",
+      "raw_hex": "00000000ff0000000000000000000000"
+    },
+    {
+      "offset": "0x1003b0",
+      "position": {
+        "x": 255,
+        "y": 0,
+        "z": 0
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0x0",
+      "type_description": "Unlocked",
+      "raw_hex": "ff000000000000000000000000000000"
+    },
+    {
+      "offset": "0x1003b4",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0x0",
+      "type_description": "Unlocked",
+      "raw_hex": "00000000000000000000000000000000"
+    },
+    {
+      "offset": "0x1003b8",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0x0",
+      "type_description": "Unlocked",
+      "raw_hex": "00000000000000000000000000000000"
+    },
+    {
+      "offset": "0x1003bc",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0xff",
+      "type_description": "Unlocked",
+      "raw_hex": "000000000000000000000000ff000000"
+    },
+    {
+      "offset": "0x1003c4",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 255
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0x0",
+      "type_description": "Unlocked",
+      "raw_hex": "00000000ff0000000000000000000000"
+    },
+    {
+      "offset": "0x1003c8",
+      "position": {
+        "x": 255,
+        "y": 0,
+        "z": 0
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0x0",
+      "type_description": "Unlocked",
+      "raw_hex": "ff000000000000000000000000000000"
+    },
+    {
+      "offset": "0x1003cc",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0x0",
+      "type_description": "Unlocked",
+      "raw_hex": "00000000000000000000000000000000"
+    },
+    {
+      "offset": "0x1003d0",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0x0",
+      "type_description": "Unlocked",
+      "raw_hex": "00000000000000000000000000000000"
+    },
+    {
+      "offset": "0x1003d4",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0xff",
+      "type_description": "Unlocked",
+      "raw_hex": "000000000000000000000000ff000000"
+    },
+    {
+      "offset": "0x1003dc",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 255
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0x0",
+      "type_description": "Unlocked",
+      "raw_hex": "00000000ff0000000000000000000000"
+    },
+    {
+      "offset": "0x1003e0",
+      "position": {
+        "x": 255,
+        "y": 0,
+        "z": 0
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0x0",
+      "type_description": "Unlocked",
+      "raw_hex": "ff000000000000000000000000000000"
+    },
+    {
+      "offset": "0x1003e4",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0x0",
+      "type_description": "Unlocked",
+      "raw_hex": "00000000000000000000000000000000"
+    },
+    {
+      "offset": "0x1003e8",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0x0",
+      "type_description": "Unlocked",
+      "raw_hex": "00000000000000000000000000000000"
+    },
+    {
+      "offset": "0x1003ec",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0xff",
+      "type_description": "Unlocked",
+      "raw_hex": "000000000000000000000000ff000000"
+    },
+    {
+      "offset": "0x1003f4",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 255
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0x0",
+      "type_description": "Unlocked",
+      "raw_hex": "00000000ff0000000000000000000000"
+    },
+    {
+      "offset": "0x1003f8",
+      "position": {
+        "x": 255,
+        "y": 0,
+        "z": 0
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0x0",
+      "type_description": "Unlocked",
+      "raw_hex": "ff000000000000000000000000000000"
+    },
+    {
+      "offset": "0x1003fc",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "type": 0,
+      "key_id": 0,
+      "destination_id": 0,
+      "flags": "0x0",
+      "type_description": "Unlocked",
+      "raw_hex": "00000000000000000000000000000000"
+    }
+  ],
+  "summary": {
+    "total_door_refs": 335,
+    "total_gates": 50,
+    "total_gate_crystals": 4,
+    "total_portals": 100,
+    "total_keys": 19,
+    "total_door_structures": 50
+  }
+}

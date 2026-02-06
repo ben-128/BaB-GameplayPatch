@@ -1,0 +1,24 @@
+{
+  "_readme": "Spawn groups for Ancient Ruins",
+  "_usage": "Edit monster names, then run: py -3 patch_spawn_groups.py",
+  "level_name": "Ancient Ruins",
+  "groups": [
+    {
+      "name": "Area 1",
+      "offset": "0x2514984",
+      "monsters": [
+        "Gargoyle",
+        "Metal-Ball",
+        "Wolf"
+      ]
+    },
+    {
+      "name": "Area 2",
+      "offset": "0x2517158",
+      "monsters": [
+        "Chimera",
+        "Metal-Slime"
+      ]
+    }
+  ]
+}
