@@ -256,6 +256,119 @@ After **18 tests** covering every identified per-area data structure, the AI/beh
 
 ---
 
+## PSX Executable Analysis (SLES_008.45)
+
+RAM dump analysis with active monsters (Cavern F1 savestate) to understand the combat system.
+
+### Memory Map
+
+```
+Region              RAM address          Size     Contents
+--------------------------------------------------------------------
+PSX exe code        0x80010000-0x8003F000  ~192KB   Game engine code
+PSX exe data        0x8003F000-0x80060000  ~132KB   Static tables, strings
+Player entities     0x80054698             624B     4 player structs (stride 0x9C = 156 bytes)
+Dungeon overlay     0x800A0000+            varies   Per-dungeon code + data from BLAZE.ALL
+Monster spawn list  0x800B9268             4992B    Monster metadata (stride 0x28 = 40 bytes)
+Entity mgmt region  0x800B4000-0x800BC000  ~32KB    Entity management structs + battle slots
+Entity visual data  0x800F0000+            8KB/ent  Sprite/texture data per entity index
+```
+
+### Combat Action Table (55 entries at 0x8003C1B0)
+
+55 function pointers to combat action handlers at 0x800270B8-0x80029E80.
+- These are the ONLY location of combat handler addresses in all of RAM
+- NOT stored in entity structs - dispatch uses an index into this table
+- All handlers use standard MIPS prologue (save ra/s-regs, call subroutines)
+- Handlers 2-6 call entity validation function 0x80026840 (player vs monster check)
+
+### Entity Struct Layout
+
+**Player entity** (stride 0x9C = 156 bytes, 4 players at 0x80054698):
+```
++0x00: flags/type
++0x04: index/subtype
++0x18: model_id
++0x1C-0x24: position (x, y, z) as fixed-point
++0x28-0x2C: scale
++0x30: VRAM texture offset
++0x38: color/tint
++0x70: data pointer -> overlay entity config (NOT code)
++0x7C: data pointer -> overlay render data
++0x80: state/flags
++0x84-0x8C: 0xA0000000 pattern (GPU/DMA related)
+```
+
+**Monster spawn metadata** (stride 0x28 = 40 bytes, 6 entries at 0x800B9268):
+```
++0x00-0x0C: position data (3x int32 + count/flags)
++0x10-0x20: zeros
++0x24: type_info (high byte = model_type, low byte = slot_index)
+```
+
+Cavern F1 monster types in metadata: 0x07 (Goblin), 0x07, 0x07, 0x03 (Shaman?), 0x07, 0x04 (Bat?)
+
+### Key Finding: "Entity Code" Pointers are DATA, not CODE
+
+The pointers at player struct +0x70 (0x800A91E8, 0x800A9320, 0x800A93BC) and similar monster pointers (0x800AA708, 0x800AA728, 0x800AB0C8, 0x800AADBC) all point to **data structures** in the dungeon overlay region, NOT to executable code. Disassembly confirms they contain non-MIPS data (configuration/stats loaded from BLAZE.ALL).
+
+Unique data pointers per entity type:
+- Players: 0x800A91E8, 0x800A9320, 0x800A93BC (3 variants for 4 players)
+- Monsters: 0x800AA708, 0x800AA728, 0x800AB0C8, 0x800AADBC (4 variants for 6 monster slots)
+
+These likely contain per-entity configuration that the engine code reads to determine behavior.
+
+### Entity Management Region (0x800B4000-0x800BC000)
+
+Two sub-regions identified:
+
+**Region 1** (0x800B4000-0x800B5B00, ~7KB): Main entity table with all entities (players + monsters). Contains:
+- Entity data pointers (to overlay config data)
+- Entity visual data pointers (0x800Exxxx range)
+- Player entity cross-references
+- Animation index tables (32-byte sequences of byte indices)
+
+**Region 2** (0x800BB93C-0x800BBFF0, stride 0x9C, 12 entries): Battle slot table. Each entry:
+```
++0x00: player entity pointer (which player this slot tracks)
++0x04: entity data pointer (overlay config)
++0x10: render data pointer
++0x14: state/ID
++0x18-0x20: 0xA0000000 pattern (GPU/DMA)
++0x28: combat flags
++0x2C: VRAM texture offset
++0x38: slot_index
++0x44: type_info (matches monster metadata format)
++0x48: type_info_2
++0x4C-0x54: position (x, y, z)
++0x58-0x5C: scale
++0x60: VRAM offset
++0x68: color/tint (0x00808080 = default)
+```
+
+### Dispatch Mechanism
+
+Found a function dispatcher at 0x80017F2C that uses a **32-entry jump table** at 0x8003B324:
+```mips
+beq  r2, r0, +18       ; skip if action = 0
+sll  r2, r16, 2        ; index * 4
+lui  r1, 0x8004
+addu r1, r1, r2        ; base + index*4
+lw   r2, -0x4CDC(r1)   ; load handler from table at 0x8003B324
+jalr r2                 ; call handler
+```
+
+This table contains 32 handlers (0x80018xxx range) - a **higher-level action dispatcher** separate from the 55-entry combat table. This is likely the entity state machine that handles movement, idle, attack, cast, etc.
+
+### Open Questions
+
+- **What determines which combat action index a monster uses?** The 55-entry table dispatch mechanism hasn't been fully traced yet.
+- **Where is the AI decision logic?** The overlay data config pointed to by entity +0x70 might contain AI profile data that the engine reads.
+- **creature_type link**: creature_type from 96-byte stats is copied to runtime struct +0x68. This value might index into an AI profile table in the exe.
+- A RAM dump during active combat would help trace the actual combat dispatch path.
+
+---
+
 ## Technical Reference
 
 ### File Locations
