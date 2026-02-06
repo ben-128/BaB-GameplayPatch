@@ -1,0 +1,4 @@
+{
+    "chest_despawn_seconds": 60,
+    "_comment": "Temps en secondes avant disparition des coffres laches par les monstres. Original: 20s (1000 frames @ 50fps PAL). Max: 655s."
+}

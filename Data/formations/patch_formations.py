@@ -30,10 +30,16 @@ FORMATIONS_DIR = SCRIPT_DIR
 RECORD_SIZE = 32
 
 
-def build_record(slot_index, is_formation_start, area_id_bytes):
-    """Build a 32-byte formation template record."""
+def build_record(slot_index, is_formation_start, area_id_bytes,
+                  prefix=b'\x00\x00\x00\x00'):
+    """Build a 32-byte formation template record.
+
+    prefix: byte[0:4] — type value of the PREVIOUS monster slot.
+            Always 00000000 for the first record in a formation.
+    """
     rec = bytearray(RECORD_SIZE)
-    # byte[0:4] = flags (zeros)
+    # byte[0:4] = type value of previous monster (00000000 for first record)
+    rec[0:4] = prefix
     # byte[4:8] = FFFFFFFF for formation start, 00000000 for continuation
     if is_formation_start:
         rec[4:8] = b'\xff\xff\xff\xff'
@@ -58,6 +64,15 @@ def build_formation_area(area):
     area_id = bytes.fromhex(area["area_id"])
     formations = area["formations"]
 
+    # slot_types: per-slot type value used in byte[0:4] and suffix.
+    # Each entry is a 4-byte hex string (e.g. "00000a00" for flying).
+    # If not provided, all slots default to "00000000".
+    slot_types_hex = area.get("slot_types", [])
+    slot_types = {}
+    for si, st in enumerate(slot_types_hex):
+        slot_types[si] = bytes.fromhex(st)
+    default_type = b'\x00\x00\x00\x00'
+
     binary = bytearray()
 
     for fidx, formation in enumerate(formations):
@@ -79,16 +94,18 @@ def build_formation_area(area):
         # Build records for this formation
         for ridx, slot in enumerate(slots):
             is_first = (ridx == 0)
-            rec = build_record(slot, is_first, area_id)
+            # byte[0:4] = type of PREVIOUS slot (00000000 for first record)
+            if is_first:
+                prefix = default_type
+            else:
+                prev_slot = slots[ridx - 1]
+                prefix = slot_types.get(prev_slot, default_type)
+            rec = build_record(slot, is_first, area_id, prefix)
             binary.extend(rec)
 
-        # Write 4-byte suffix
-        suffix_hex = formation.get("suffix", "00000000")
-        suffix_bytes = bytes.fromhex(suffix_hex)
-        if len(suffix_bytes) != 4:
-            print("    [ERROR] F{:02d}: suffix must be 4 bytes, "
-                  "got {}".format(fidx, len(suffix_bytes)))
-            return None
+        # Suffix = type value of the LAST monster in the formation
+        last_slot = slots[-1]
+        suffix_bytes = slot_types.get(last_slot, default_type)
         binary.extend(suffix_bytes)
 
     return bytes(binary)
@@ -195,20 +212,30 @@ def patch_area(data, area):
     if new_binary is None:
         return False, True
 
-    # Fill remaining space with 1-slot filler formations instead of null
-    # bytes.  Null padding can be misread as monster records by the engine.
-    FILLER_SIZE = RECORD_SIZE + 4          # 32-byte record + 4-byte suffix
-    area_id = bytes.fromhex(area["area_id"])
+    # The engine parses the ENTIRE formation area as formation data.
+    # Formations must exactly fill the budget: 32*slots + 4*formations = area_bytes.
+    # Synthetic filler formations cause invisible monsters — use original
+    # formations as padding instead (keep them in the JSON alongside custom ones).
     remaining = area_bytes - len(new_binary)
-    filler = bytearray()
-    while remaining >= FILLER_SIZE:
-        filler.extend(build_record(0, True, area_id))   # 1-slot formation
-        filler.extend(b'\x00\x00\x00\x00')              # suffix
-        remaining -= FILLER_SIZE
-    # Any leftover (< 36 bytes) can't form a valid 32-byte record;
-    # fill with FF so byte[8]=0xFF = invalid slot if partially parsed
-    filler.extend(b'\xff' * remaining)
-    new_binary_padded = new_binary + bytes(filler)
+
+    if remaining > 0:
+        print("    [ERROR] Formations use {} bytes but area budget "
+              "is {} bytes ({} remaining)".format(
+                  len(new_binary), area_bytes, remaining))
+        print("    The engine reads the ENTIRE area — all space must "
+              "be filled with valid formations.")
+        print("    Add more formations from the original game to fill "
+              "the gap.")
+        # Show valid (slots, formations) combinations
+        print("    Valid combinations for {} bytes:".format(area_bytes))
+        for f_count in range(1, 33):
+            s_count = (area_bytes - f_count * 4) / RECORD_SIZE
+            if s_count == int(s_count) and s_count >= f_count:
+                print("      {} formations, {} total slots".format(
+                    f_count, int(s_count)))
+        return False, True
+
+    new_binary_padded = new_binary
 
     # Compare with existing data
     old_data = bytes(data[area_start:area_start + area_bytes])

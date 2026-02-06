@@ -2,144 +2,319 @@
 
 Research on modifying monster spawn groups in **Blaze & Blade: Eternal Quest** (PSX).
 
-Status: **Work In Progress** - visual/AI/spell swapping not yet achieved.
+Status: **Work In Progress** - AI/spell control mechanism not yet found.
 
 ---
 
-## What Works
+## Per-Monster Data Structures (Cavern F1 Area1 as reference)
 
-### Monster Name + Stats Patching
-The current `patch_spawn_groups.py` system successfully patches:
-- **Monster name** (16-byte ASCII string) - confirmed in-game via identify items
-- **Combat stats** (80 bytes = 40 x uint16 LE) - confirmed in-game (HP changes visible)
+Each area has multiple per-monster data structures stacked around a "group" of 96-byte entries.
 
-Each monster in BLAZE.ALL is a **96-byte entry**: 16 bytes name + 80 bytes stats.
-When the JSON says to replace monster A with monster B, the script copies B's full 96-byte entry over A's slot.
-
-### BIN Injection
-`patch_blaze_all.py` correctly injects the patched BLAZE.ALL at both LBA locations (163167 and 185765) in the game BIN. Both copies are verified identical. RAW sector format: 2352 bytes/sector, 24-byte header, 2048 bytes user data.
-
----
-
-## What Does NOT Work
-
-### Visual Model / AI Behavior / Spells
-Changing monster names+stats does **not** change:
-- **3D model / sprite** - the original monster's visual remains
-- **AI behavior** - movement patterns, attack patterns unchanged
-- **Spell assignments** - the original monster's spells are used
-- **Loot tables** - drops remain those of the original monster
-
-**Example test:** Changed Cavern of Death Floor 1 from `[Lv20.Goblin, Goblin-Shaman, Giant-Bat]` to `[Kobold, Giant-Beetle, Giant-Ant]` (Forest enemies).
-- Result: Monsters LOOK like Cavern enemies (Goblin visual, Bat visual...)
-- Using an identify item shows Forest enemy NAMES (Kobold, Giant-Beetle...)
-- HP matches the Forest enemy stats (patched correctly)
-- But behavior, spells, visual model, and loot are all still Cavern enemies
-
-### Conclusion
-The 96-byte monster entries only define the **identity card** (name + stats) of each monster slot. The actual monster **type** (which controls model, AI, spells, loot) is defined elsewhere in the room/level data structure.
-
----
-
-## Monster Entry Format (96 bytes)
+### Overview (bottom-up in memory)
 
 ```
-Offset  Size    Description
-0x00    16      ASCII name (null-padded)
-0x10    2       Stat 0 (uint16 LE)
-0x12    2       Stat 1
-...
-0x5E    2       Stat 39
+Address       Structure                  Controls
+─────────────────────────────────────────────────────────────────
+0xF7A904      Animation table header     [00000000 04000000]
+0xF7A90C      Animation table            Animation frame indices (8 bytes/slot)
+0xF7A934      8-byte records             Anim offset + texture ref (8 bytes/slot)
+0xF7A94C      Zero terminator + offsets  Structural
+0xF7A964      Assignment entries (L/R)   L=3D model, R=unknown (8 bytes/slot)
+0xF7A97C      96-byte entries (GROUP)    Name (16b) + Stats (80b) per monster
+0xF7AA9C      Script area                Type entries, spawn commands, entity data, room scripts
 ```
 
-Total: 16 + (40 x 2) = 96 bytes per monster.
-
-Monsters are stored consecutively in groups of 2-6 entries per area.
-
 ---
 
-## Pre-Group Structure (~176 bytes before each group)
+## Detailed Structure Descriptions
 
-Each monster group is preceded by a header structure containing:
+### 1. Assignment Entries - L and R (flag 0x00 / flag 0x40)
 
-| Relative Offset | Content | Description |
-|-----------------|---------|-------------|
-| -512 to -400 | Variable | Room script data or text strings |
-| -400 to -256 | uint32 LE[] | Pointer/offset table |
-| -224 to -176 | zeros | Padding |
-| -160 to -128 | bytes | Sequential index table (00 01 02 03...) |
-| -96 to -80 | uint32[] | Descriptor entries (8-byte records) |
-| -48 to 0 | 8-byte records | Formation pairs with 0x40 flag |
+Location: immediately before the 96-byte group. `group_offset - num_monsters * 8`
 
-### Formation Pairs (8 bytes each)
+**8 bytes per monster** = 2 x 4-byte entries:
+
 ```
-[slot_index, param_L, 0x00, 0x00] [slot_index, param_R, 0x00, 0x40]
+[slot, L_val, 00, 00]  <- L entry (flag 0x00)
+[slot, R_val, 00, 40]  <- R entry (flag 0x40)
 ```
-- `slot_index`: increments (01, 02, 03...) per monster in group
-- `param_L` and `param_R`: vary per group, NOT global monster IDs
-- `0x40` flag: always present in second half of pair
 
-**Important:** param_L/param_R are NOT monster type IDs. The same monster (e.g. Cave-Bear) has different param values in different groups.
+**Cavern F1 Area1 (0xF7A964):**
+```
+Slot 0 (Goblin):  L=[00,00,00,00] L=0  | R=[00,02,00,40] R=2
+Slot 1 (Shaman):  L=[01,01,00,00] L=1  | R=[01,03,00,40] R=3
+Slot 2 (Bat):     L=[02,03,00,00] L=3  | R=[02,04,00,40] R=4
+```
+
+**L and R values are NOT global monster IDs.** They are local per-area indices. The same monster has different L/R values in different areas.
+
+### 2. 8-Byte Records (animation offset + texture ref)
+
+Location: before the assignment entries, after the animation table.
+
+**8 bytes per monster:**
+```
+[uint32 anim_offset] [uint32 texture_ref]
+```
+
+**Cavern F1 Area1 (0xF7A934):**
+```
+Slot 0 (Goblin): anim_off=0x000C texref=0x00000300
+Slot 1 (Shaman): anim_off=0x0014 texref=0x00400400
+Slot 2 (Bat):    anim_off=0x001C texref=0x00800500
+```
+
+- `anim_offset` points into the animation table (relative to table start)
+- `texture_ref` = VRAM texture offset
+
+### 3. Animation Table
+
+Location: starts at `section_start + 8` (after the `[00000000 04000000]` header).
+
+**8 bytes per slot** containing animation frame indices:
+```
+Slot 0 (Goblin): [04 04 05 05 06 06 07 07]  at 0xF7A910
+Slot 1 (Shaman): [08 09 0A 0B 0C 0C 0D 0E]  at 0xF7A918
+Slot 2 (Bat):    [0F 0F 10 10 11 12 13 14]  at 0xF7A920
+```
+
+### 4. 96-Byte Entries (The "Group")
+
+**96 bytes per monster:** 16 bytes name + 40 x uint16 stats.
+
+```
+Offset  Size  Description
+0x00    16    ASCII name (null-padded)
+0x10    2     stat[0]  exp
+0x12    2     stat[1]  level
+0x14    2     stat[2]  hp
+0x16    2     stat[3]  magic
+0x18    2     stat[4]  randomness
+0x1A    2     stat[5]  collider_type
+0x1C    2     stat[6]  death_fx_size
+0x1E    2     stat[7]  hit_fx_id
+0x20    2     stat[8]  collider_size
+0x22    2     stat[9]  drop_rate
+0x24    2     stat[10] creature_type
+0x26    2     stat[11] armor_type
+0x28    2     stat[12] elem_fire_ice
+0x2A    2     stat[13] elem_poison_air
+0x2C    2     stat[14] elem_light_night
+0x2E    2     stat[15] elem_divine_malefic
+0x30    2     stat[16] dmg
+0x32    2     stat[17] armor
+0x34-0x5F     stat[18]-stat[39] (unknown, mostly zero)
+```
+
+### 5. Type-07 Entries (Script Area)
+
+Location: in the script area after the 96-byte entries. Found by scanning for entries with type byte = `0x07`.
+
+**8 bytes per entry:**
+```
+[uint32 offset] [type=07, idx, slot, 00]
+```
+
+**Cavern F1 Area1:**
+```
+0xF7ABE4: [off=0x0580] [07, 10, 00, 00]  <- Goblin (slot 0), idx=0x10
+0xF7ABEC: [off=0x0588] [07, 11, 01, 00]  <- Shaman (slot 1), idx=0x11
+0xF7ABF4: [off=0x0590] [07, 12, 02, 00]  <- Bat    (slot 2), idx=0x12
+```
+
+Other type entries in the same region (types 01, 02, 04, 05, 06, 08, 0E) are fixed overhead, not per-monster.
+
+### 6. Script Area Map (Cavern F1 Area1)
+
+The script area is ~13.4KB and divided into distinct regions:
+
+```
+Region                         Offset range         Size     Contents
+─────────────────────────────────────────────────────────────────────────────
+Script header                  +0x000 to +0x030     48b      Initial header data
+Padding (zeros)                +0x030 to +0x040     16b      Zeros
+Initial spawn records          +0x040 to +0x106     198b     Blocks 0-3 (one per slot+1)
+Resource binding table         +0x106 to +0x41C     790b     Block 4 (type entries, offsets)
+Early spawn commands           +0x420 to +0x564     324b     Blocks 5-15 (per-formation spawns)
+Type-7 target data             +0x564 to +0x600+    ~160b    Interleaved texture/variant data
+Padding (zeros)                variable
+Deep entity region             +0x900 to +0x1DC0    5312b    Entity placement/patrol data
+Type-8 target data (bytecode)  +0x1DC0 to +0x2100+  ~800b    Room scripts (has dialogue text)
+Remaining bytecode             +0x2100 to +0x348C   ~5KB     More room logic
+```
 
 ---
 
-## Monster IDs (_index.json)
+## Swap Test Results
 
-124 monsters with IDs 0-123 (gaps at 85, 87, 89). IDs 0-22 are bosses.
+All tests performed on **Cavern of Death, Floor 1, Area 1** (3 monsters: Goblin, Shaman, Bat).
 
-Key IDs for tested monsters:
-| Monster | ID | Hex |
-|---------|-----|------|
-| Giant-Ant | 48 | 0x30 |
-| Giant-Bat | 49 | 0x31 |
-| Giant-Beetle | 50 | 0x32 |
-| Goblin-Leader | 58 | 0x3A |
-| Goblin-Shaman | 59 | 0x3B |
-| Kobold | 79 | 0x4F |
-| Lv20.Goblin | 84 | 0x54 |
+### What controls the 3D MODEL
 
-These IDs were **NOT found** as simple uint8 values in the 512-byte pre-group region.
+| Test | What was swapped | Visual result | Stable? |
+|------|-----------------|---------------|---------|
+| L = Ogre (cross-floor) | L only, value from different floor | Mesh unchanged / crash | No (model not loaded) |
+| L swap local (same floor) | L only, between same-floor monsters | **Model swapped** | Crash in some cases (anim mismatch) |
+| **L + anim table swap** | **L + 8 bytes of anim table per slot** | **Model swapped** | **Stable** |
 
----
+**Conclusion: L + anim table swap = full model swap** (mesh + animations + textures). Must be between monsters whose models are loaded on the same floor. L alone crashes because animations don't match the new model.
 
-## Where Monster Type ID Might Be
+### What controls TEXTURE VARIANTS
 
-Possible locations still to investigate:
+| Test | What was swapped | Result |
+|------|-----------------|--------|
+| Type-7 offset swap | uint32 offset in type-07 entries | **Texture color variant changes** |
+| Type-7 idx swap | idx byte only | No effect |
 
-1. **Room script bytecode** (5-18KB gaps between groups) - contains opcodes (0x2C, 0x2D, 0x0D, 0x04, 0xFF delimiters), text strings, 3D coordinates. May reference monster type during room init.
+**Conclusion: Type-07 offset controls texture color variant** (e.g. green goblin -> red goblin). Useful for creating visual variants. The idx byte has no effect.
 
-2. **Pointer table in pre-group header** - the uint32 offset values may point to model/AI data elsewhere in BLAZE.ALL.
+### What does NOT control AI/behavior
 
-3. **LEVELS.DAT** - 46,278,656 bytes (71,680 bytes larger than BLAZE.ALL). Contains German monster names but different data layout. Could contain separate encounter definitions. Not currently used.
+| Test | What was swapped | AI result |
+|------|-----------------|-----------|
+| L swap (local) | L value only | AI stays on slot |
+| L + anim swap | L + anim table | AI stays on slot |
+| R swap (Goblin <-> Bat) | R value only | No change |
+| R = same for all | All R set to same value | No change |
+| 96-byte entry swap | Full name + stats | AI stays on slot (only name/stats change) |
+| Type-7 idx swap | idx byte only | No change |
+| Spawn cmd slot bytes | uint16 after FFFFFFFFFFFF (blocks 5-15) | No change |
+| Spawn cmd XX prefix | XX in [XX 0B YY 00] (blocks 5-15) | No change |
+| Spawn cmd YY prefix | YY in [XX 0B YY 00] (blocks 5-15) | No change |
+| Deep region slot markers | [XX FF 00 00] in script+0x900 to +0x1DC0 | **Dark entities appear**, AI unchanged |
+| Deep region cmd headers | 4-byte headers before slot markers | **More dark entities**, AI unchanged |
+| Global monster table search | Searched all BLAZE.ALL for monster names | No separate AI table found |
 
-4. **Wider search** - Monster type IDs might be stored as uint16 LE (e.g., 0x0054 for Lv20.Goblin) or uint32 LE in a different region entirely, possibly a master room definition table.
-
----
-
-## Spawn Group JSON Files
-
-Located in `WIP/level_design/spawn_groups/`:
-
-| File | Level | Groups |
-|------|-------|--------|
-| cavern_of_death.json | Cavern of Death | 10 |
-| castle_of_vamp.json | Castle of Vamp | 12 |
-| forest.json | The Forest | 9 |
-| undersea.json | Undersea / Lake | 2 |
-| hall_of_demons.json | Hall of Demons | 11 |
-
-Each JSON defines monster **names** per group. The patching script replaces name+stats but this is insufficient for full monster swapping.
+**Pipeline verified:** L+anim swap (known visual change) confirmed patching works correctly.
 
 ---
 
-## Next Steps
+## Summary: What Controls What
 
-1. **Search wider binary area** for monster type IDs as uint16/uint32 LE values
-2. **Analyze room script bytecode** for monster spawn opcodes
-3. **Cross-reference pointer tables** in pre-group headers to find model/AI references
-4. **Investigate LEVELS.DAT** structure for encounter definitions
-5. **Update patch_spawn_groups.py** once the type ID location is found, to also patch the visual/AI/spell/loot reference
+| Element | Controls | Confirmed |
+|---------|----------|-----------|
+| **L + anim table** | **3D model complete** (mesh, animations, textures) | YES |
+| **Type-07 offset** | **Texture color variant** | YES |
+| **R** (flag 0x40) | Nothing | YES (tested, no effect) |
+| **Type-07 idx** | Nothing | YES (tested, no effect) |
+| **96-byte entries** | **Name + combat stats only** | YES |
+| **Spawn cmd slots/XX/YY** (early region) | Nothing visible | YES (tested, no effect) |
+| **Deep region slot markers** [XX FF 00 00] | **Entity placement** (dark entities when wrong) | YES |
+| **Deep region cmd headers** | **Entity rendering** (dark entities when wrong) | YES |
+| **??? UNKNOWN** | **AI behavior + spells + loot** | NOT FOUND |
 
 ---
 
-*Last updated: 2026-02-05*
+## AI / Spell Control: Investigation Status
+
+The AI/behavior/spell controller has **not been found**. All per-monster structures and script area fields tested so far only control visuals, stats, or entity placement. AI always stays attached to the slot position.
+
+### Eliminated candidates (per-monster fields)
+- L value -> model only
+- R value -> no effect
+- 96-byte entries -> name + stats only
+- Type-7 idx -> no effect
+- Type-7 offset -> texture variant only
+
+### Eliminated candidates (script area - early region, script+0x080 to +0x600)
+- Spawn command slot bytes (uint16 after FFFFFFFFFFFF terminators) -> no effect
+- Spawn command XX byte in [XX 0B YY 00] prefixes -> no effect
+- Spawn command YY byte in [XX 0B YY 00] prefixes -> no effect
+
+### Eliminated candidates (script area - deep region, script+0x900 to +0x1DC0)
+- [XX FF 00 00] slot markers -> controls entity placement, NOT AI
+- 4-byte command headers before slot markers -> controls entity rendering, NOT AI
+
+### Eliminated candidates (global)
+- Searched ALL of BLAZE.ALL for monster names outside area data -> no master AI table found
+- All name occurrences outside known areas are in OTHER area data sections
+
+### Remaining candidates
+1. **Room bytecode (type-8 targets)** at script+0x1DC0 and +0x1FC4 - the deepest part of the script area. Contains dialogue text ("Do you want to take the elevator?") confirming it's a script interpreter. AI behavior may be scripted here per encounter group, making it very difficult to modify without understanding the bytecode instruction set.
+2. **PSX executable code** - AI routines may be compiled into the game executable, with behavior selected by slot index or creature_type at runtime.
+3. **Undiscovered structure** - some data between the mapped regions that we haven't identified yet.
+
+### Key observations
+- **AI is strictly positional**: it ALWAYS stays on the slot index regardless of what per-slot data is changed.
+- **Deep region entities**: swapping slot markers or headers creates visible "dark entities" with colliders, proving these records define physical entities in the level. But their behavior doesn't change.
+- **No global AI table**: monster names only appear in per-area 96-byte entries, not in a separate master database.
+
+---
+
+## Technical Reference
+
+### File Locations
+- BLAZE.ALL source: `Blaze  Blade - Eternal Quest (Europe)/extract/BLAZE.ALL`
+- Output: `output/BLAZE.ALL`
+- Test scripts: `WIP/level_design/spawns/scripts/test_*.py`
+- Analysis scripts: `WIP/level_design/spawns/scripts/_*.py`
+
+### Test Scripts Index
+
+| Script | Tests what | Result |
+|--------|-----------|--------|
+| `test_visual_link.py` | L=14 (Ogre, cross-floor) | Crash |
+| `test_L_swap_local.py` | L swap local, 3-way | Model swap, unstable |
+| `test_L_only_2way.py` | L swap 2-way | Model swap, unstable |
+| `test_L_plus_anim.py` | L + anim table swap | **Model swap, stable** |
+| `test_visual_R.py` | R = same for all | No visual change |
+| `test_R_swap.py` | R swap Goblin <-> Bat | No behavior change |
+| `test_8byte_records.py` | texture_ref = same for all | ? |
+| `test_type7_entries.py` | Type-7 idx = same for all | No effect |
+| `test_type7_swap.py` | Type-7 idx swap | No effect |
+| `test_type7_offset_swap.py` | Type-7 offset swap | **Texture variant change** |
+| `test_96byte_swap.py` | 96-byte entry swap | Stats only, AI stays |
+| `test_full_swap.py` | L+R+8byte+type7 swap | ? |
+| `test_spawn_cmd_slot_swap.py` | Slot bytes after FFFFFFFFFFFF (early region) | No effect |
+| `test_spawn_cmd_prefix_swap.py` | XX byte in [XX 0B YY 00] (early region) | No effect |
+| `test_deep_slot_swap.py` | [XX FF 00 00] slot markers (deep region) | **Dark entities**, no AI change |
+| `test_deep_header_swap.py` | 4-byte cmd headers (deep region) | **More dark entities**, no AI change |
+
+### Analysis Scripts Index
+
+| Script | Purpose |
+|--------|---------|
+| `find_ai_controller.py` | Comprehensive per-slot data dump for 3 areas |
+| `analyze_script_area.py` | Script area block structure analysis |
+| `analyze_spawn_cmds_detail.py` | Detailed spawn command analysis |
+| `_deep_script_analysis.py` | Byte frequency, FF values, triplets, spell search |
+| `_temp_analyze.py` | Type entry targets, spawn blocks for 4 areas |
+| `_analyze_full_script_map.py` | Full script area map with all regions |
+| `_search_global_monster_table.py` | Global monster name search in BLAZE.ALL |
+| `_compare_areas_script.py` | Cross-area comparison (WIP) |
+
+### Key Offsets (Cavern F1 Area1)
+```
+Section start:        0xF7A904
+Animation table:      0xF7A90C (after 8-byte header)
+8-byte records:       0xF7A934
+Assignment entries:    0xF7A964
+96-byte group:        0xF7A97C
+Script area:          0xF7AA9C (= group + 3*96)
+  Type entries:       0xF7ABE4 (type-07 at script+0x148)
+  Early spawn cmds:   0xF7AEBC (script+0x420)
+  Deep entity region: 0xF7B39C (script+0x900)
+  Type-8 targets:     0xF7C85C (script+0x1DC0), 0xF7CA60 (script+0x1FC4)
+  Room script text:   0xF7CA60+ ("Do you want to take the elevator?")
+```
+
+### Deep Entity Region Record Format (script+0x900 to +0x1DC0)
+
+32-byte records with slot markers:
+```
+[FFFFFFFFFFFF or FFFFFFFFFFFFFFFF] [00 00 00 00] [cmd_header 4b] [XX FF 00 00]
+[x int16] [y int16] [z int16] [00 00] [extra uint32] [val uint16] [FFFFFFFFFFFF]
+```
+
+Slot marker format: `XX FF 00 00` where:
+- `XX & 0x1F` = slot index (0=Goblin, 1=Shaman, 2=Bat)
+- `XX & 0xE0` = flags (0x00=plain, 0x80, 0xC0, 0xE0 = behavior flags?)
+
+Command headers vary by slot:
+- Slot 0: `00 2B 07 00` (22x), `06 00 01 00` (1x)
+- Slot 1: `XX 0A 0B 00` family (various), `17 29 0B 00`, `18 29 09 00`
+- Slot 2: `00 00 04 00` (21x), `05 00 02 00` (21x), `16 00 08 00` (20x), `06 00 01 00` (19x)
+
+---
+
+*Last updated: 2026-02-06*
