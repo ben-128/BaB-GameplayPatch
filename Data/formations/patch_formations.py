@@ -2,12 +2,19 @@
 # -*- coding: cp1252 -*-
 """
 patch_formations.py
-Patches formation template slot indices (byte[8]) in BLAZE.ALL.
+Rewrites formation templates in BLAZE.ALL from edited JSONs.
+
+Supports:
+  - Changing slot indices (monster types)
+  - Merging formations (combine slots, remove the absorbed formation)
+  - Resizing formations (redistribute records between formations)
+
+The patcher rewrites the entire formation area in-place. Total bytes
+must not exceed formation_area_bytes. Unused space is null-padded.
 
 Edit the "slots" arrays in the formation JSONs, then run this script.
-Only byte[8] (monster slot index) is patched - record count stays the same.
+To merge: combine slots arrays and delete the absorbed formation entry.
 
-Reads from: Data/formations/<level>/<area>.json
 Usage: py -3 Data/formations/patch_formations.py
 """
 
@@ -20,86 +27,116 @@ PROJECT_ROOT = SCRIPT_DIR.parent.parent
 BLAZE_ALL = PROJECT_ROOT / "output" / "BLAZE.ALL"
 FORMATIONS_DIR = SCRIPT_DIR
 
-# Formation record: 32 bytes
-# byte[8] = monster slot index (the field we patch)
-# byte[9] = 0xFF (template marker)
-# bytes[12:18] = coords (0,0,0 for templates)
-# bytes[26:32] = FF FF FF FF FF FF (terminator)
 RECORD_SIZE = 32
-SLOT_BYTE_OFFSET = 8
-MARKER_BYTE_OFFSET = 9
-MARKER_VALUE = 0xFF
 
 
-def verify_record(data, offset):
-    """Verify that a valid formation template record exists at offset."""
-    if offset + RECORD_SIZE > len(data):
-        return False, "offset out of bounds"
-
-    rec = data[offset:offset + RECORD_SIZE]
-
-    # Check template marker
-    if rec[MARKER_BYTE_OFFSET] != MARKER_VALUE:
-        return False, "byte[9] != 0xFF (got 0x{:02X})".format(rec[MARKER_BYTE_OFFSET])
-
-    # Check coords are (0,0,0)
-    coord = struct.unpack_from('<hhh', rec, 12)
-    if coord != (0, 0, 0):
-        return False, "coords != (0,0,0): {}".format(coord)
-
-    # Check terminator
-    if rec[26:32] != b'\xff\xff\xff\xff\xff\xff':
-        return False, "missing FF terminator"
-
-    return True, "ok"
+def build_record(slot_index, is_formation_start, area_id_bytes):
+    """Build a 32-byte formation template record."""
+    rec = bytearray(RECORD_SIZE)
+    # byte[0:4] = flags (zeros)
+    # byte[4:8] = FFFFFFFF for formation start, 00000000 for continuation
+    if is_formation_start:
+        rec[4:8] = b'\xff\xff\xff\xff'
+    # byte[8] = slot index
+    rec[8] = slot_index
+    # byte[9] = 0xFF (template marker)
+    rec[9] = 0xFF
+    # byte[10:12] = padding (zeros)
+    # byte[12:18] = coords (0,0,0)
+    # byte[18:24] = additional params (zeros)
+    # byte[24:26] = area identifier
+    rec[24:26] = area_id_bytes
+    # byte[26:32] = terminator
+    rec[26:32] = b'\xff\xff\xff\xff\xff\xff'
+    return bytes(rec)
 
 
-def patch_area_formations(data, area):
-    """Patch all formations for one area. Returns (patched_count, error_count)."""
+def build_formation_area(area):
+    """Build the complete binary for a formation area from JSON."""
     monsters = area["monsters"]
     num_slots = len(monsters)
-    patched = 0
-    errors = 0
+    area_id = bytes.fromhex(area["area_id"])
+    formations = area["formations"]
 
-    for fidx, formation in enumerate(area["formations"]):
-        base_offset = int(formation["offset"], 16)
+    binary = bytearray()
+
+    for fidx, formation in enumerate(formations):
         slots = formation["slots"]
 
-        for ridx, slot_value in enumerate(slots):
-            # Within a formation, records are contiguous (32 bytes apart)
-            rec_offset = base_offset + ridx * RECORD_SIZE
+        if not slots:
+            print("    [ERROR] F{:02d}: empty formation (0 slots)".format(fidx))
+            return None
 
-            # Validate slot value
-            if slot_value < 0 or slot_value >= num_slots:
-                print("    [ERROR] F{:02d}[{}]: slot {} invalid (area has {} monsters: {})".format(
-                    fidx, ridx, slot_value, num_slots,
-                    ", ".join(monsters)))
-                errors += 1
-                continue
+        # Validate all slot indices
+        for ridx, slot in enumerate(slots):
+            if slot < 0 or slot >= num_slots:
+                print("    [ERROR] F{:02d}[{}]: slot {} invalid "
+                      "(area has {} monsters: {})".format(
+                          fidx, ridx, slot, num_slots,
+                          ", ".join(monsters)))
+                return None
 
-            # Verify record exists at expected location
-            ok, msg = verify_record(data, rec_offset)
-            if not ok:
-                print("    [ERROR] F{:02d}[{}] at 0x{:X}: {}".format(
-                    fidx, ridx, rec_offset, msg))
-                errors += 1
-                continue
+        # Build records for this formation
+        for ridx, slot in enumerate(slots):
+            is_first = (ridx == 0)
+            rec = build_record(slot, is_first, area_id)
+            binary.extend(rec)
 
-            # Read current value
-            old_value = data[rec_offset + SLOT_BYTE_OFFSET]
+        # Write 4-byte suffix
+        suffix_hex = formation.get("suffix", "00000000")
+        suffix_bytes = bytes.fromhex(suffix_hex)
+        if len(suffix_bytes) != 4:
+            print("    [ERROR] F{:02d}: suffix must be 4 bytes, "
+                  "got {}".format(fidx, len(suffix_bytes)))
+            return None
+        binary.extend(suffix_bytes)
 
-            # Patch byte[8]
-            data[rec_offset + SLOT_BYTE_OFFSET] = slot_value
+    return bytes(binary)
 
-            if old_value != slot_value:
-                old_name = monsters[old_value] if old_value < num_slots else "?{}".format(old_value)
-                new_name = monsters[slot_value]
-                print("    F{:02d}[{}] at 0x{:X}: slot {} ({}) -> {} ({})".format(
-                    fidx, ridx, rec_offset, old_value, old_name,
-                    slot_value, new_name))
-                patched += 1
 
-    return patched, errors
+def patch_area(data, area):
+    """Rewrite the formation area for one area. Returns (changed, error)."""
+    formations = area.get("formations", [])
+    area_start_hex = area.get("formation_area_start")
+    area_bytes = area.get("formation_area_bytes", 0)
+
+    if not formations or not area_start_hex or area_bytes == 0:
+        return False, False
+
+    area_start = int(area_start_hex, 16)
+
+    # Calculate new size
+    new_total_slots = sum(len(f["slots"]) for f in formations)
+    new_num_formations = len(formations)
+    new_needed = new_total_slots * RECORD_SIZE + new_num_formations * 4
+
+    if new_needed > area_bytes:
+        print("    [ERROR] New formations need {} bytes but area budget "
+              "is {} bytes ({} slots in {} formations)".format(
+                  new_needed, area_bytes, new_total_slots, new_num_formations))
+        print("    Reduce slots or formations to fit. "
+              "Max slots with {} formations: {}".format(
+                  new_num_formations,
+                  (area_bytes - new_num_formations * 4) // RECORD_SIZE))
+        return False, True
+
+    # Build the new binary
+    new_binary = build_formation_area(area)
+    if new_binary is None:
+        return False, True
+
+    # Pad with null bytes to fill the area
+    padding_needed = area_bytes - len(new_binary)
+    new_binary_padded = new_binary + b'\x00' * padding_needed
+
+    # Compare with existing data
+    old_data = bytes(data[area_start:area_start + area_bytes])
+    if new_binary_padded == old_data:
+        return False, False
+
+    # Write the new data
+    data[area_start:area_start + area_bytes] = new_binary_padded
+    return True, False
 
 
 def find_area_jsons():
@@ -115,7 +152,7 @@ def find_area_jsons():
 
 def main():
     print("=" * 60)
-    print("  Formation Template Patcher")
+    print("  Formation Rewrite Patcher")
     print("=" * 60)
     print()
 
@@ -129,7 +166,6 @@ def main():
     print("  Size: {:,} bytes".format(len(data)))
     print()
 
-    # Find all area JSONs in level subdirectories
     json_files = find_area_jsons()
     if not json_files:
         print("No formation JSON files found in {}".format(FORMATIONS_DIR))
@@ -138,19 +174,26 @@ def main():
     print("Found {} area files".format(len(json_files)))
     print()
 
-    total_patched = 0
+    total_changed = 0
     total_errors = 0
-    total_formations = 0
+    total_areas = 0
     current_level = None
 
     for json_file in json_files:
         with open(json_file, 'r', encoding='utf-8') as f:
             area = json.load(f)
 
-        level_name = area.get("level_name", json_file.parent.name)
         formations = area.get("formations", [])
         if not formations:
             continue
+
+        area_start = area.get("formation_area_start")
+        area_bytes = area.get("formation_area_bytes", 0)
+        if not area_start or area_bytes == 0:
+            continue
+
+        total_areas += 1
+        level_name = area.get("level_name", json_file.parent.name)
 
         # Print level header when it changes
         if level_name != current_level:
@@ -160,18 +203,39 @@ def main():
             current_level = level_name
 
         area_name = area["name"]
-        total_formations += len(formations)
+        new_total = sum(len(f["slots"]) for f in formations)
+        orig_total = area.get("original_total_slots", new_total)
+        num_f = len(formations)
+        orig_count = area.get("formation_count", num_f)
 
-        patched, errors = patch_area_formations(data, area)
-        total_patched += patched
-        total_errors += errors
+        changed, error = patch_area(data, area)
 
-        if patched == 0 and errors == 0:
+        if error:
+            total_errors += 1
+            print("  {}: ERRORS".format(area_name))
+        elif changed:
+            total_changed += 1
+            detail = ""
+            if num_f != orig_count:
+                detail += " ({}->{}F)".format(orig_count, num_f)
+            if new_total != orig_total:
+                detail += " ({}->{}slots)".format(orig_total, new_total)
+            print("  {}: REWRITTEN{}".format(area_name, detail))
+            # Show new formations
+            monsters = area["monsters"]
+            for fidx, f in enumerate(formations):
+                parts = []
+                slot_counts = {}
+                for s in f["slots"]:
+                    slot_counts[s] = slot_counts.get(s, 0) + 1
+                for s in sorted(slot_counts.keys()):
+                    name = monsters[s] if s < len(monsters) else "?{}".format(s)
+                    parts.append("{}x{}".format(slot_counts[s], name))
+                print("    F{:02d}: [{}] {}".format(fidx, len(f["slots"]),
+                                                     " + ".join(parts)))
+        else:
             print("  {}: {} formations (no changes)".format(
-                area_name, len(formations)))
-        elif errors > 0:
-            print("  {}: {} patched, {} ERRORS".format(
-                area_name, patched, errors))
+                area_name, num_f))
 
     print()
 
@@ -183,17 +247,16 @@ def main():
         print("!" * 60)
         return 1
 
-    if total_patched > 0:
+    if total_changed > 0:
         BLAZE_ALL.write_bytes(data)
         print("=" * 60)
-        print("  {} slot(s) patched across {} formations".format(
-            total_patched, total_formations))
+        print("  {} area(s) rewritten out of {} total".format(
+            total_changed, total_areas))
         print("  BLAZE.ALL saved")
         print("=" * 60)
     else:
         print("=" * 60)
-        print("  No changes needed ({} formations verified)".format(
-            total_formations))
+        print("  No changes needed ({} areas verified)".format(total_areas))
         print("=" * 60)
 
     return 0

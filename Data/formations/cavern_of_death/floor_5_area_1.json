@@ -8,6 +8,10 @@
     "Cave-Scissors",
     "Spirit-Ball"
   ],
+  "formation_area_start": "0xF8D138",
+  "formation_area_bytes": 596,
+  "original_total_slots": 18,
+  "area_id": "1200",
   "formation_count": 5,
   "formations": [
     {
@@ -23,6 +27,7 @@
         0,
         0
       ],
+      "suffix": "00000000",
       "offset": "0xF8D138"
     },
     {
@@ -38,6 +43,7 @@
         1,
         1
       ],
+      "suffix": "00000000",
       "offset": "0xF8D17C"
     },
     {
@@ -53,6 +59,7 @@
         2,
         2
       ],
+      "suffix": "00000000",
       "offset": "0xF8D1C0"
     },
     {
@@ -72,6 +79,7 @@
         3,
         3
       ],
+      "suffix": "00000a00",
       "offset": "0xF8D204"
     },
     {
@@ -101,6 +109,7 @@
         3,
         3
       ],
+      "suffix": "00000a00",
       "offset": "0xF8D2C8"
     }
   ]

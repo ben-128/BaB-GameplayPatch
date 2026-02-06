@@ -6,6 +6,10 @@
     "Gremlin",
     "Succubus"
   ],
+  "formation_area_start": "0x2BFF768",
+  "formation_area_bytes": 2184,
+  "original_total_slots": 8,
+  "area_id": "2800",
   "formation_count": 4,
   "formations": [
     {
@@ -22,6 +26,7 @@
         0,
         0
       ],
+      "suffix": "00000a00",
       "offset": "0x2BFF768"
     },
     {
@@ -36,6 +41,7 @@
       "slots": [
         1
       ],
+      "suffix": "00000000",
       "offset": "0x2BFF7CC"
     },
     {
@@ -52,6 +58,7 @@
         0,
         0
       ],
+      "suffix": "00000a00",
       "offset": "0x2BFFF68"
     },
     {
@@ -66,6 +73,7 @@
       "slots": [
         1
       ],
+      "suffix": "00000000",
       "offset": "0x2BFFFCC"
     }
   ]

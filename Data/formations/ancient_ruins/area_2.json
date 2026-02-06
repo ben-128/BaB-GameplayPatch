@@ -6,6 +6,10 @@
     "Chimera",
     "Metal-Slime"
   ],
+  "formation_area_start": "0x2517590",
+  "formation_area_bytes": 136,
+  "original_total_slots": 4,
+  "area_id": "3500",
   "formation_count": 2,
   "formations": [
     {
@@ -21,6 +25,7 @@
         0,
         0
       ],
+      "suffix": "00000000",
       "offset": "0x2517590"
     },
     {
@@ -36,6 +41,7 @@
         1,
         1
       ],
+      "suffix": "00000000",
       "offset": "0x25175D4"
     }
   ]

@@ -8,6 +8,10 @@
     "Spirit-Ball",
     "Ogre"
   ],
+  "formation_area_start": "0xF91910",
+  "formation_area_bytes": 692,
+  "original_total_slots": 21,
+  "area_id": "1f05",
   "formation_count": 5,
   "formations": [
     {
@@ -30,6 +34,7 @@
         2,
         2
       ],
+      "suffix": "00000a00",
       "offset": "0xF91910"
     },
     {
@@ -47,6 +52,7 @@
         1,
         1
       ],
+      "suffix": "00000000",
       "offset": "0xF91994"
     },
     {
@@ -64,6 +70,7 @@
         2,
         2
       ],
+      "suffix": "00000000",
       "offset": "0xF91A18"
     },
     {
@@ -88,6 +95,7 @@
         2,
         2
       ],
+      "suffix": "00000a00",
       "offset": "0xF91A9C"
     },
     {
@@ -104,6 +112,7 @@
         3,
         3
       ],
+      "suffix": "00000000",
       "offset": "0xF91B60"
     }
   ]

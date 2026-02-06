@@ -9,6 +9,10 @@
     "Living-Armor",
     "Evil-Crystal"
   ],
+  "formation_area_start": "0x199C000",
+  "formation_area_bytes": 300,
+  "original_total_slots": 7,
+  "area_id": "dc00",
   "formation_count": 2,
   "formations": [
     {
@@ -30,6 +34,7 @@
         2,
         2
       ],
+      "suffix": "00000000",
       "offset": "0x199C000"
     },
     {
@@ -47,6 +52,7 @@
         0,
         0
       ],
+      "suffix": "00000100",
       "offset": "0x199C0A8"
     }
   ]

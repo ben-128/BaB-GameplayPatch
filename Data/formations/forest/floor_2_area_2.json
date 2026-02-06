@@ -9,6 +9,10 @@
     "Black-Lizard",
     "Will-O-The-Wisp"
   ],
+  "formation_area_start": "0x14AACF4",
+  "formation_area_bytes": 664,
+  "original_total_slots": 20,
+  "area_id": "2e00",
   "formation_count": 6,
   "formations": [
     {
@@ -31,6 +35,7 @@
         0,
         1
       ],
+      "suffix": "00000000",
       "offset": "0x14AACF4"
     },
     {
@@ -52,6 +57,7 @@
         2,
         2
       ],
+      "suffix": "00000000",
       "offset": "0x14AAD78"
     },
     {
@@ -68,6 +74,7 @@
         2,
         2
       ],
+      "suffix": "00000000",
       "offset": "0x14AADDC"
     },
     {
@@ -96,6 +103,7 @@
         2,
         2
       ],
+      "suffix": "00000000",
       "offset": "0x14AAE40"
     },
     {
@@ -110,6 +118,7 @@
       "slots": [
         3
       ],
+      "suffix": "00000100",
       "offset": "0x14AAEE4"
     },
     {
@@ -127,6 +136,7 @@
         4,
         4
       ],
+      "suffix": "00000000",
       "offset": "0x14AAF08"
     }
   ]

@@ -8,6 +8,10 @@
     "Green-Slime",
     "Guard-Golem"
   ],
+  "formation_area_start": "0x196EC0C",
+  "formation_area_bytes": 304,
+  "original_total_slots": 9,
+  "area_id": "5d03",
   "formation_count": 4,
   "formations": [
     {
@@ -23,6 +27,7 @@
         0,
         0
       ],
+      "suffix": "00000000",
       "offset": "0x196EC0C"
     },
     {
@@ -38,6 +43,7 @@
         1,
         1
       ],
+      "suffix": "03000000",
       "offset": "0x196EC50"
     },
     {
@@ -53,6 +59,7 @@
         2,
         2
       ],
+      "suffix": "00000000",
       "offset": "0x196EC94"
     },
     {
@@ -74,6 +81,7 @@
         0,
         1
       ],
+      "suffix": "03000000",
       "offset": "0x196ECD8"
     }
   ]

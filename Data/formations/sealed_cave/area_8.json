@@ -7,6 +7,10 @@
     "Revenant",
     "Shadow"
   ],
+  "formation_area_start": "0x1DF262C",
+  "formation_area_bytes": 532,
+  "original_total_slots": 16,
+  "area_id": "9303",
   "formation_count": 5,
   "formations": [
     {
@@ -23,6 +27,7 @@
         0,
         0
       ],
+      "suffix": "00000000",
       "offset": "0x1DF262C"
     },
     {
@@ -44,6 +49,7 @@
         1,
         2
       ],
+      "suffix": "00000000",
       "offset": "0x1DF2690"
     },
     {
@@ -61,6 +67,7 @@
         2,
         2
       ],
+      "suffix": "00000a00",
       "offset": "0x1DF26F4"
     },
     {
@@ -82,6 +89,7 @@
         0,
         0
       ],
+      "suffix": "00000000",
       "offset": "0x1DF2778"
     },
     {
@@ -103,6 +111,7 @@
         2,
         2
       ],
+      "suffix": "00000a00",
       "offset": "0x1DF27DC"
     }
   ]

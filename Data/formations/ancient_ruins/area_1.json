@@ -7,6 +7,10 @@
     "Metal-Ball",
     "Wolf"
   ],
+  "formation_area_start": "0x25150E0",
+  "formation_area_bytes": 68,
+  "original_total_slots": 2,
+  "area_id": "a202",
   "formation_count": 1,
   "formations": [
     {
@@ -22,6 +26,7 @@
         0,
         0
       ],
+      "suffix": "00000a00",
       "offset": "0x25150E0"
     }
   ]

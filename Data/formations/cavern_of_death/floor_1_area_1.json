@@ -7,6 +7,10 @@
     "Goblin-Shaman",
     "Giant-Bat"
   ],
+  "formation_area_start": "0xF7AFFC",
+  "formation_area_bytes": 896,
+  "original_total_slots": 27,
+  "area_id": "dc01",
   "formation_count": 8,
   "formations": [
     {
@@ -23,6 +27,7 @@
         0,
         0
       ],
+      "suffix": "00000000",
       "offset": "0xF7AFFC"
     },
     {
@@ -44,6 +49,7 @@
         0,
         1
       ],
+      "suffix": "02000000",
       "offset": "0xF7B060"
     },
     {
@@ -59,6 +65,7 @@
         1,
         1
       ],
+      "suffix": "02000000",
       "offset": "0xF7B0C4"
     },
     {
@@ -76,6 +83,7 @@
         2,
         2
       ],
+      "suffix": "00000a00",
       "offset": "0xF7B108"
     },
     {
@@ -98,6 +106,7 @@
         2,
         2
       ],
+      "suffix": "00000a00",
       "offset": "0xF7B18C"
     },
     {
@@ -114,6 +123,7 @@
         1,
         1
       ],
+      "suffix": "02000000",
       "offset": "0xF7B210"
     },
     {
@@ -136,6 +146,7 @@
         1,
         1
       ],
+      "suffix": "02000000",
       "offset": "0xF7B274"
     },
     {
@@ -163,6 +174,7 @@
         1,
         2
       ],
+      "suffix": "00000a00",
       "offset": "0xF7B2F8"
     }
   ]

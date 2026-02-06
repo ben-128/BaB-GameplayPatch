@@ -8,6 +8,10 @@
     "Big-Viper",
     "Goblin-Leader"
   ],
+  "formation_area_start": "0xF82340",
+  "formation_area_bytes": 496,
+  "original_total_slots": 15,
+  "area_id": "1102",
   "formation_count": 4,
   "formations": [
     {
@@ -25,6 +29,7 @@
         1,
         1
       ],
+      "suffix": "00000a00",
       "offset": "0xF82340"
     },
     {
@@ -41,6 +46,7 @@
         2,
         2
       ],
+      "suffix": "00000100",
       "offset": "0xF823C4"
     },
     {
@@ -63,6 +69,7 @@
         1,
         2
       ],
+      "suffix": "00000100",
       "offset": "0xF82428"
     },
     {
@@ -85,6 +92,7 @@
         0,
         0
       ],
+      "suffix": "02000000",
       "offset": "0xF824AC"
     }
   ]

@@ -8,6 +8,10 @@
     "Spirit-Ball",
     "Blue-Slime"
   ],
+  "formation_area_start": "0xF8B7B4",
+  "formation_area_bytes": 368,
+  "original_total_slots": 11,
+  "area_id": "f601",
   "formation_count": 4,
   "formations": [
     {
@@ -24,6 +28,7 @@
         0,
         0
       ],
+      "suffix": "00000000",
       "offset": "0xF8B7B4"
     },
     {
@@ -40,6 +45,7 @@
         1,
         1
       ],
+      "suffix": "00000a00",
       "offset": "0xF8B818"
     },
     {
@@ -57,6 +63,7 @@
         2,
         2
       ],
+      "suffix": "00000a00",
       "offset": "0xF8B87C"
     },
     {
@@ -71,6 +78,7 @@
       "slots": [
         3
       ],
+      "suffix": "00000100",
       "offset": "0xF8B900"
     }
   ]

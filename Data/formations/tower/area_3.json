@@ -6,6 +6,10 @@
     "Crimson-Lizard",
     "Gargoyle"
   ],
+  "formation_area_start": "0x19737A4",
+  "formation_area_bytes": 240,
+  "original_total_slots": 7,
+  "area_id": "8200",
   "formation_count": 4,
   "formations": [
     {
@@ -20,6 +24,7 @@
       "slots": [
         0
       ],
+      "suffix": "00000000",
       "offset": "0x19737A4"
     },
     {
@@ -34,6 +39,7 @@
       "slots": [
         1
       ],
+      "suffix": "00000000",
       "offset": "0x19737C8"
     },
     {
@@ -49,6 +55,7 @@
         0,
         0
       ],
+      "suffix": "00000000",
       "offset": "0x19737EC"
     },
     {
@@ -70,6 +77,7 @@
         1,
         1
       ],
+      "suffix": "00000000",
       "offset": "0x1973830"
     }
   ]

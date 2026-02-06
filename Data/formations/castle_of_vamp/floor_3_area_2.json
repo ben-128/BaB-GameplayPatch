@@ -8,6 +8,10 @@
     "Blood-Skeleton",
     "Silver-Wolf"
   ],
+  "formation_area_start": "0x24167AC",
+  "formation_area_bytes": 500,
+  "original_total_slots": 15,
+  "area_id": "0801",
   "formation_count": 5,
   "formations": [
     {
@@ -23,6 +27,7 @@
         0,
         0
       ],
+      "suffix": "00000a00",
       "offset": "0x24167AC"
     },
     {
@@ -39,6 +44,7 @@
         1,
         1
       ],
+      "suffix": "00000000",
       "offset": "0x24167F0"
     },
     {
@@ -55,6 +61,7 @@
         2,
         2
       ],
+      "suffix": "00000100",
       "offset": "0x2416854"
     },
     {
@@ -71,6 +78,7 @@
         3,
         3
       ],
+      "suffix": "00000100",
       "offset": "0x24168B8"
     },
     {
@@ -103,6 +111,7 @@
         2,
         3
       ],
+      "suffix": "00000100",
       "offset": "0x241691C"
     }
   ]

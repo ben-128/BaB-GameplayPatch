@@ -6,6 +6,10 @@
     "Red-Dragon",
     "Salamander"
   ],
+  "formation_area_start": "0x102E804",
+  "formation_area_bytes": 100,
+  "original_total_slots": 3,
+  "area_id": "d101",
   "formation_count": 1,
   "formations": [
     {
@@ -22,6 +26,7 @@
         1,
         1
       ],
+      "suffix": "00000000",
       "offset": "0x102E804"
     }
   ]

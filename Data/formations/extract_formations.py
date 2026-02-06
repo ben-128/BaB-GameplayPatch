@@ -107,6 +107,7 @@ def extract_formations(blaze_data, group_offset, num_monsters, scan_end):
             'abs_offset': script_start + rec_start,
             'byte0': rec[0],
             'byte8': rec[8],
+            'area_id': rec[24:26],
             'is_group_start': has_inner_ff,
         })
 
@@ -133,7 +134,14 @@ def extract_formations(blaze_data, group_offset, num_monsters, scan_end):
     return formations
 
 
-def format_formation(formation, slot_names):
+def compute_suffix(blaze_data, formation):
+    """Read the 4-byte suffix after a formation's last record."""
+    last_rec = formation[-1]
+    suffix_offset = last_rec['abs_offset'] + 32
+    return blaze_data[suffix_offset:suffix_offset + 4]
+
+
+def format_formation(formation, slot_names, suffix_bytes):
     """Format a single formation into a readable dict."""
     slot_counts = {}
     for rec in formation:
@@ -154,6 +162,7 @@ def format_formation(formation, slot_names):
         "total": len(formation),
         "composition": composition,
         "slots": [rec['byte8'] for rec in formation],
+        "suffix": suffix_bytes.hex(),
         "offset": "0x{:X}".format(formation[0]['abs_offset']),
     }
 
@@ -194,18 +203,38 @@ def main():
 
             formations = extract_formations(blaze_data, offset, num_monsters, scan_end)
 
+            # Compute formation area metadata
+            if formations:
+                first_offset = formations[0][0]['abs_offset']
+                last_f = formations[-1]
+                last_end = last_f[-1]['abs_offset'] + 32  # end of last record
+                formation_area_bytes = last_end + 4 - first_offset  # +4 for last suffix
+                total_slots = sum(len(f) for f in formations)
+                # Read area_id from first record
+                area_id = formations[0][0]['area_id'].hex()
+            else:
+                first_offset = 0
+                formation_area_bytes = 0
+                total_slots = 0
+                area_id = "0000"
+
             area_data = {
                 "level_name": level_name,
                 "name": group['name'],
                 "group_offset": "0x{:X}".format(offset),
                 "monsters": group['monsters'],
+                "formation_area_start": "0x{:X}".format(first_offset) if formations else None,
+                "formation_area_bytes": formation_area_bytes,
+                "original_total_slots": total_slots,
+                "area_id": area_id,
                 "formation_count": len(formations),
                 "formations": [],
             }
 
             for fidx, formation in enumerate(formations):
+                suffix = compute_suffix(blaze_data, formation)
                 area_data["formations"].append(
-                    format_formation(formation, slot_names)
+                    format_formation(formation, slot_names, suffix)
                 )
 
             # Write area JSON
@@ -217,13 +246,19 @@ def main():
 
             # Print summary
             total_f = len(formations)
-            print("  {} - {} formations -> {}/{}".format(
-                group['name'], total_f, level_key, out_path.name))
+            if formations:
+                print("  {} - {} formations, {} slots, {}B -> {}/{}".format(
+                    group['name'], total_f, total_slots,
+                    formation_area_bytes, level_key, out_path.name))
+            else:
+                print("  {} - 0 formations -> {}/{}".format(
+                    group['name'], level_key, out_path.name))
             for fidx, f in enumerate(area_data["formations"]):
                 parts = []
                 for c in f["composition"]:
                     parts.append("{}x{}".format(c["count"], c["monster"]))
-                print("    F{:02d}: [{}] {}".format(fidx, f["total"], " + ".join(parts)))
+                print("    F{:02d}: [{}] {} (suf:{})".format(
+                    fidx, f["total"], " + ".join(parts), f["suffix"]))
 
         print()
 

@@ -8,6 +8,10 @@
     "Giant-Bat",
     "Goblin-Leader"
   ],
+  "formation_area_start": "0xF7E9F0",
+  "formation_area_bytes": 864,
+  "original_total_slots": 26,
+  "area_id": "0d02",
   "formation_count": 8,
   "formations": [
     {
@@ -24,6 +28,7 @@
         0,
         0
       ],
+      "suffix": "00000000",
       "offset": "0xF7E9F0"
     },
     {
@@ -40,6 +45,7 @@
         1,
         1
       ],
+      "suffix": "02000000",
       "offset": "0xF7EA54"
     },
     {
@@ -57,6 +63,7 @@
         2,
         2
       ],
+      "suffix": "00000000",
       "offset": "0xF7EAB8"
     },
     {
@@ -78,6 +85,7 @@
         1,
         1
       ],
+      "suffix": "02000000",
       "offset": "0xF7EB3C"
     },
     {
@@ -99,6 +107,7 @@
         0,
         1
       ],
+      "suffix": "02000000",
       "offset": "0xF7EBA0"
     },
     {
@@ -120,6 +129,7 @@
         1,
         2
       ],
+      "suffix": "00000000",
       "offset": "0xF7EC04"
     },
     {
@@ -141,6 +151,7 @@
         2,
         2
       ],
+      "suffix": "00000000",
       "offset": "0xF7EC68"
     },
     {
@@ -168,6 +179,7 @@
         0,
         1
       ],
+      "suffix": "02000000",
       "offset": "0xF7ECCC"
     }
   ]

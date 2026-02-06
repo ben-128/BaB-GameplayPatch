@@ -7,6 +7,10 @@
     "Dark-Elf",
     "Wyvern"
   ],
+  "formation_area_start": "0x198B79C",
+  "formation_area_bytes": 100,
+  "original_total_slots": 3,
+  "area_id": "9f02",
   "formation_count": 1,
   "formations": [
     {
@@ -23,6 +27,7 @@
         0,
         0
       ],
+      "suffix": "00000a00",
       "offset": "0x198B79C"
     }
   ]

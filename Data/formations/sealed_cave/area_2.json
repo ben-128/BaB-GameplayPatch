@@ -7,6 +7,10 @@
     "Zombie",
     "Ghoul"
   ],
+  "formation_area_start": "0x1DDD84C",
+  "formation_area_bytes": 304,
+  "original_total_slots": 9,
+  "area_id": "6b00",
   "formation_count": 4,
   "formations": [
     {
@@ -22,6 +26,7 @@
         0,
         0
       ],
+      "suffix": "00000000",
       "offset": "0x1DDD84C"
     },
     {
@@ -37,6 +42,7 @@
         1,
         1
       ],
+      "suffix": "00000000",
       "offset": "0x1DDD890"
     },
     {
@@ -58,6 +64,7 @@
         1,
         1
       ],
+      "suffix": "00000000",
       "offset": "0x1DDD8D4"
     },
     {
@@ -73,6 +80,7 @@
         2,
         2
       ],
+      "suffix": "00000000",
       "offset": "0x1DDD938"
     }
   ]

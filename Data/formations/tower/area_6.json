@@ -8,6 +8,10 @@
     "Stalker",
     "Black-Knight"
   ],
+  "formation_area_start": "0x19821E4",
+  "formation_area_bytes": 336,
+  "original_total_slots": 10,
+  "area_id": "8403",
   "formation_count": 4,
   "formations": [
     {
@@ -23,6 +27,7 @@
         0,
         0
       ],
+      "suffix": "00000000",
       "offset": "0x19821E4"
     },
     {
@@ -38,6 +43,7 @@
         1,
         1
       ],
+      "suffix": "00000a00",
       "offset": "0x1982228"
     },
     {
@@ -59,6 +65,7 @@
         1,
         2
       ],
+      "suffix": "00000000",
       "offset": "0x198226C"
     },
     {
@@ -80,6 +87,7 @@
         3,
         0
       ],
+      "suffix": "00000000",
       "offset": "0x19822D0"
     }
   ]

@@ -9,6 +9,10 @@
     "Kraken-Foot",
     "Kraken"
   ],
+  "formation_area_start": "0x269EAC4",
+  "formation_area_bytes": 100,
+  "original_total_slots": 3,
+  "area_id": "2101",
   "formation_count": 1,
   "formations": [
     {
@@ -25,6 +29,7 @@
         1,
         1
       ],
+      "suffix": "00000000",
       "offset": "0x269EAC4"
     }
   ]

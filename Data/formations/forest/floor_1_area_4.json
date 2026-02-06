@@ -10,6 +10,10 @@
     "Giant-Club",
     "Wing-Fish"
   ],
+  "formation_area_start": "0x1498CB8",
+  "formation_area_bytes": 400,
+  "original_total_slots": 12,
+  "area_id": "6b02",
   "formation_count": 4,
   "formations": [
     {
@@ -25,6 +29,7 @@
         3,
         3
       ],
+      "suffix": "00000000",
       "offset": "0x1498CB8"
     },
     {
@@ -40,6 +45,7 @@
         4,
         4
       ],
+      "suffix": "00000000",
       "offset": "0x1498CFC"
     },
     {
@@ -62,6 +68,7 @@
         4,
         4
       ],
+      "suffix": "00000000",
       "offset": "0x1498D40"
     },
     {
@@ -79,6 +86,7 @@
         4,
         4
       ],
+      "suffix": "00000000",
       "offset": "0x1498DC4"
     }
   ]

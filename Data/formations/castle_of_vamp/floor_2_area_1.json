@@ -9,6 +9,10 @@
     "Blood-Skeleton",
     "Marble-Gargoyle"
   ],
+  "formation_area_start": "0x240E46C",
+  "formation_area_bytes": 336,
+  "original_total_slots": 10,
+  "area_id": "3c02",
   "formation_count": 4,
   "formations": [
     {
@@ -25,6 +29,7 @@
         0,
         0
       ],
+      "suffix": "00000000",
       "offset": "0x240E46C"
     },
     {
@@ -40,6 +45,7 @@
         1,
         1
       ],
+      "suffix": "00000000",
       "offset": "0x240E4D0"
     },
     {
@@ -56,6 +62,7 @@
         2,
         2
       ],
+      "suffix": "00000000",
       "offset": "0x240E514"
     },
     {
@@ -71,6 +78,7 @@
         3,
         3
       ],
+      "suffix": "00000100",
       "offset": "0x240E578"
     }
   ]

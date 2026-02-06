@@ -8,6 +8,10 @@
     "Killer-Bear",
     "Killer-Bear"
   ],
+  "formation_area_start": "0x14A2A4C",
+  "formation_area_bytes": 232,
+  "original_total_slots": 7,
+  "area_id": "2e02",
   "formation_count": 2,
   "formations": [
     {
@@ -23,6 +27,7 @@
         2,
         2
       ],
+      "suffix": "00000000",
       "offset": "0x14A2A4C"
     },
     {
@@ -41,6 +46,7 @@
         1,
         1
       ],
+      "suffix": "00000000",
       "offset": "0x14A2A90"
     }
   ]

@@ -7,6 +7,10 @@
     "Hell-Ogre",
     "Succubus"
   ],
+  "formation_area_start": "0x2C09848",
+  "formation_area_bytes": 336,
+  "original_total_slots": 10,
+  "area_id": "c501",
   "formation_count": 4,
   "formations": [
     {
@@ -23,6 +27,7 @@
         0,
         0
       ],
+      "suffix": "00000100",
       "offset": "0x2C09848"
     },
     {
@@ -38,6 +43,7 @@
         1,
         1
       ],
+      "suffix": "00000100",
       "offset": "0x2C098AC"
     },
     {
@@ -53,6 +59,7 @@
         2,
         2
       ],
+      "suffix": "00000000",
       "offset": "0x2C098F0"
     },
     {
@@ -79,6 +86,7 @@
         1,
         2
       ],
+      "suffix": "00000000",
       "offset": "0x2C09934"
     }
   ]

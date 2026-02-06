@@ -7,6 +7,10 @@
     "Wraith",
     "Blood-Skeleton"
   ],
+  "formation_area_start": "0x1DE6148",
+  "formation_area_bytes": 400,
+  "original_total_slots": 12,
+  "area_id": "e300",
   "formation_count": 4,
   "formations": [
     {
@@ -24,6 +28,7 @@
         0,
         0
       ],
+      "suffix": "00000000",
       "offset": "0x1DE6148"
     },
     {
@@ -39,6 +44,7 @@
         1,
         1
       ],
+      "suffix": "00000a00",
       "offset": "0x1DE61CC"
     },
     {
@@ -55,6 +61,7 @@
         2,
         2
       ],
+      "suffix": "00000000",
       "offset": "0x1DE6210"
     },
     {
@@ -71,6 +78,7 @@
         1,
         1
       ],
+      "suffix": "00000a00",
       "offset": "0x1DE6274"
     }
   ]

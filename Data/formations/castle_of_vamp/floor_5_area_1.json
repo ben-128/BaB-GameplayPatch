@@ -7,6 +7,10 @@
     "Red-Knight",
     "Lesser-Vampire"
   ],
+  "formation_area_start": "0x2422058",
+  "formation_area_bytes": 332,
+  "original_total_slots": 10,
+  "area_id": "8002",
   "formation_count": 3,
   "formations": [
     {
@@ -28,6 +32,7 @@
         1,
         2
       ],
+      "suffix": "00000000",
       "offset": "0x2422058"
     },
     {
@@ -50,6 +55,7 @@
         2,
         2
       ],
+      "suffix": "00000000",
       "offset": "0x24220BC"
     },
     {
@@ -66,6 +72,7 @@
         2,
         2
       ],
+      "suffix": "00000000",
       "offset": "0x2422140"
     }
   ]

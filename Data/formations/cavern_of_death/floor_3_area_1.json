@@ -8,6 +8,10 @@
     "Big-Viper",
     "Giant-Spider"
   ],
+  "formation_area_start": "0xF86750",
+  "formation_area_bytes": 596,
+  "original_total_slots": 18,
+  "area_id": "6703",
   "formation_count": 5,
   "formations": [
     {
@@ -25,6 +29,7 @@
         0,
         0
       ],
+      "suffix": "00000a00",
       "offset": "0xF86750"
     },
     {
@@ -41,6 +46,7 @@
         1,
         1
       ],
+      "suffix": "00000100",
       "offset": "0xF867D4"
     },
     {
@@ -57,6 +63,7 @@
         2,
         2
       ],
+      "suffix": "00000000",
       "offset": "0xF86838"
     },
     {
@@ -73,6 +80,7 @@
         3,
         3
       ],
+      "suffix": "00000000",
       "offset": "0xF8689C"
     },
     {
@@ -106,6 +114,7 @@
         2,
         3
       ],
+      "suffix": "00000000",
       "offset": "0xF86900"
     }
   ]

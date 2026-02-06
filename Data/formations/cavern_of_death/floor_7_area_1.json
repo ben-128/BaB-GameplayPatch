@@ -8,6 +8,10 @@
     "Spirit-Ball",
     "Ogre"
   ],
+  "formation_area_start": null,
+  "formation_area_bytes": 0,
+  "original_total_slots": 0,
+  "area_id": "0000",
   "formation_count": 0,
   "formations": []
 }

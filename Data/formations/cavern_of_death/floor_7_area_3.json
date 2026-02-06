@@ -8,6 +8,10 @@
     "Ogre",
     "Troll"
   ],
+  "formation_area_start": "0xF9376C",
+  "formation_area_bytes": 592,
+  "original_total_slots": 18,
+  "area_id": "c800",
   "formation_count": 4,
   "formations": [
     {
@@ -24,6 +28,7 @@
         1,
         1
       ],
+      "suffix": "00000000",
       "offset": "0xF9376C"
     },
     {
@@ -45,6 +50,7 @@
         1,
         1
       ],
+      "suffix": "00000000",
       "offset": "0xF937D0"
     },
     {
@@ -61,6 +67,7 @@
         2,
         2
       ],
+      "suffix": "00000000",
       "offset": "0xF938D4"
     },
     {
@@ -88,6 +95,7 @@
         2,
         2
       ],
+      "suffix": "00000000",
       "offset": "0xF93938"
     }
   ]
