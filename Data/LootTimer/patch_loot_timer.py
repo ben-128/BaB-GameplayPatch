@@ -2,13 +2,15 @@
 """
 Patch the chest despawn timer in BLAZE.ALL.
 
-Searches for MIPS instruction patterns that initialize the chest timer:
-  addiu $v0, $zero, 1000  followed by  sh $v0, 0x0012($reg)
-and patches the value 1000 to the desired frame count.
+Searches for the countdown pattern in per-dungeon overlays:
+  lhu   $v0, 0x0014($base)   ; load timer
+  ...                         ; (nop or delay slot fill)
+  addiu $v0, $v0, -1          ; decrement
+  sh    $v0, 0x0014($base)   ; store back
 
-Also patches the slti guard instructions that cap the timer at 1000/1001.
+Replaces the decrement with addiu $v0, $v0, 0 (freeze timer = chests stay).
 
-Original: 1000 frames @ 50fps PAL = 20 seconds.
+This is a TEST patch to confirm the mechanism. 41 instances across BLAZE.ALL.
 """
 
 import json
@@ -16,32 +18,15 @@ import os
 import struct
 import sys
 
-ORIGINAL_FRAMES = 1000
-PAL_FPS = 50
+# MIPS instruction constants
+ADDIU_V0_V0_MINUS1 = 0x2442FFFF  # addiu $v0, $v0, -1
+ADDIU_V0_V0_ZERO = 0x24420000    # addiu $v0, $v0, 0 (NOP the decrement)
 
-# MIPS opcodes
-OP_ADDIU = 0x09
-OP_SLTI = 0x0A
+OP_LHU = 0x25
+OP_LH = 0x21
 OP_SH = 0x29
-
-# Register: $v0 = 2, $zero = 0
 REG_V0 = 2
-REG_ZERO = 0
-
-# Entity field offset for the timer
-TIMER_FIELD_OFFSET = 0x0012
-
-
-def find_all(data, pattern):
-    results = []
-    start = 0
-    while True:
-        pos = data.find(pattern, start)
-        if pos == -1:
-            break
-        results.append(pos)
-        start = pos + 1
-    return results
+FIELD_OFFSET = 0x0014
 
 
 def decode_mips(word):
@@ -52,32 +37,13 @@ def decode_mips(word):
     return opcode, rs, rt, imm
 
 
-def encode_instruction(opcode, rs, rt, imm):
-    return struct.pack('<I', (opcode << 26) | (rs << 21) | (rt << 16) | (imm & 0xFFFF))
-
-
 def main():
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    config_path = os.path.join(script_dir, 'loot_timer.json')
     project_dir = os.path.dirname(os.path.dirname(script_dir))
     blaze_path = os.path.join(project_dir, 'output', 'BLAZE.ALL')
 
-    if not os.path.exists(config_path):
-        print(f"[ERROR] Config not found: {config_path}")
-        sys.exit(1)
-
-    with open(config_path, 'r') as f:
-        config = json.load(f)
-
-    seconds = config.get('chest_despawn_seconds', 20)
-    new_frames = seconds * PAL_FPS
-
-    if new_frames > 32767:
-        print(f"[ERROR] {seconds}s * {PAL_FPS}fps = {new_frames} frames exceeds signed 16-bit max (32767)")
-        print(f"        Maximum supported: {32767 // PAL_FPS}s = {32767 // PAL_FPS * PAL_FPS} frames")
-        sys.exit(1)
-
-    print(f"Loot Timer: {seconds}s = {new_frames} frames @ {PAL_FPS}fps (original: {ORIGINAL_FRAMES} frames = {ORIGINAL_FRAMES // PAL_FPS}s)")
+    print("Loot Timer: patching countdown decrement (addiu $v0,$v0,-1 -> 0)")
+    print("            Target: entity field +0x14 in per-dungeon overlays")
 
     if not os.path.exists(blaze_path):
         print(f"[ERROR] BLAZE.ALL not found: {blaze_path}")
@@ -86,58 +52,70 @@ def main():
     with open(blaze_path, 'rb') as f:
         data = bytearray(f.read())
 
-    # Pattern: addiu $v0, $zero, 1000 = 0x240203E8
-    addiu_pattern = encode_instruction(OP_ADDIU, REG_ZERO, REG_V0, ORIGINAL_FRAMES)
-    addiu_hits = find_all(data, addiu_pattern)
+    # Find all addiu $v0, $v0, -1
+    target = struct.pack('<I', ADDIU_V0_V0_MINUS1)
+    replacement = struct.pack('<I', ADDIU_V0_V0_ZERO)
+    patched = 0
+    pos = 0
 
-    patched_addiu = 0
-    patched_slti = 0
+    reg_names = {
+        0: 'zero', 2: 'v0', 3: 'v1', 4: 'a0', 5: 'a1', 6: 'a2', 7: 'a3',
+        16: 's0', 17: 's1', 18: 's2', 19: 's3', 20: 's4',
+    }
 
-    for pos in addiu_hits:
+    while True:
+        pos = data.find(target, pos)
+        if pos == -1:
+            break
+
+        if pos % 4 != 0:
+            pos += 1
+            continue
+
+        # Check sh $v0, 0x0014($base) after the addiu
         if pos + 8 > len(data):
+            pos += 4
             continue
 
-        # Check next instruction: sh $v0, 0x0012($reg)?
-        next_word = struct.unpack_from('<I', data, pos + 4)[0]
-        opcode, base_reg, rt, offset = decode_mips(next_word)
+        sh_word = struct.unpack_from('<I', data, pos + 4)[0]
+        sh_op, sh_base, sh_rt, sh_off = decode_mips(sh_word)
 
-        if not (opcode == OP_SH and rt == REG_V0 and offset == TIMER_FIELD_OFFSET):
+        if not (sh_op == OP_SH and sh_rt == REG_V0 and sh_off == FIELD_OFFSET):
+            pos += 4
             continue
 
-        reg_names = {16: 's0', 17: 's1', 6: 'a2', 5: 'a1', 4: 'a0'}
-        base_name = reg_names.get(base_reg, f'r{base_reg}')
-        print(f"  PATCH 0x{pos:08X}: addiu $v0,$zero,{ORIGINAL_FRAMES} + sh $v0,0x12(${base_name})")
-
-        # Patch addiu value
-        data[pos:pos + 4] = encode_instruction(OP_ADDIU, REG_ZERO, REG_V0, new_frames)
-        patched_addiu += 1
-
-        # Look backwards for slti guard (within 5 instructions = 20 bytes)
+        # Check lhu/lh $v0, 0x0014($base) before (within 5 instructions)
+        found_load = False
         for back in range(4, 24, 4):
             if pos - back < 0:
                 break
-            prev_word = struct.unpack_from('<I', data, pos - back)[0]
-            prev_op, prev_rs, prev_rt, prev_imm = decode_mips(prev_word)
+            ld_word = struct.unpack_from('<I', data, pos - back)[0]
+            ld_op, ld_base, ld_rt, ld_off = decode_mips(ld_word)
 
-            if prev_op == OP_SLTI and prev_imm in (ORIGINAL_FRAMES, ORIGINAL_FRAMES + 1):
-                new_slti_val = new_frames if prev_imm == ORIGINAL_FRAMES else new_frames + 1
-                data[pos - back:pos - back + 4] = encode_instruction(
-                    OP_SLTI, prev_rs, prev_rt, new_slti_val
-                )
-                patched_slti += 1
-                print(f"    + slti guard at 0x{pos - back:08X}: {prev_imm} -> {new_slti_val}")
-                break
+            if ld_op in (OP_LHU, OP_LH) and ld_rt == REG_V0 and ld_off == FIELD_OFFSET:
+                if ld_base == sh_base:
+                    found_load = True
+                    break
 
-    if patched_addiu == 0:
-        print("[WARNING] No timer patterns found in BLAZE.ALL!")
-        print("          The file may already be patched or is not a clean copy.")
+        if not found_load:
+            pos += 4
+            continue
+
+        base_name = reg_names.get(sh_base, f'r{sh_base}')
+        print(f"  PATCH 0x{pos:08X}: addiu $v0,$v0,-1 -> 0  (base=${base_name})")
+
+        data[pos:pos + 4] = replacement
+        patched += 1
+        pos += 4
+
+    if patched == 0:
+        print("[WARNING] No countdown patterns found!")
         sys.exit(1)
 
     with open(blaze_path, 'wb') as f:
         f.write(data)
 
-    print(f"\nPatched {patched_addiu} timer values + {patched_slti} slti guards")
-    print(f"Chest despawn: {ORIGINAL_FRAMES} frames ({ORIGINAL_FRAMES // PAL_FPS}s) -> {new_frames} frames ({seconds}s)")
+    print(f"\nPatched {patched} countdown decrements (chests should stay permanently)")
 
 
 if __name__ == '__main__':

@@ -2,7 +2,7 @@
 
 Research on modifying monster spawn groups in **Blaze & Blade: Eternal Quest** (PSX).
 
-Status: **Work In Progress** - AI/spell control mechanism not yet found.
+Status: **CONCLUDED** - AI is in the PSX executable, not in area data. See "Final Conclusion" section.
 
 ---
 
@@ -229,15 +229,30 @@ The AI/behavior/spell controller has **not been found**. All per-monster structu
 - Searched ALL of BLAZE.ALL for monster names outside area data -> no master AI table found
 - All name occurrences outside known areas are in OTHER area data sections
 
-### Remaining candidates
-1. **Room bytecode (type-8 targets)** at script+0x1DC0 and +0x1FC4 - the deepest part of the script area. Contains dialogue text ("Do you want to take the elevator?") confirming it's a script interpreter. AI behavior may be scripted here per encounter group, making it very difficult to modify without understanding the bytecode instruction set.
-2. **PSX executable code** - AI routines may be compiled into the game executable, with behavior selected by slot index or creature_type at runtime.
-3. **Undiscovered structure** - some data between the mapped regions that we haven't identified yet.
+### Eliminated candidates (type-8 bytecode, script+0x1DC0 to end)
+- Type-8 offset swap (entry 1 ↔ entry 2) -> no effect (interchangeable)
+- Type-8 target 1 zeroed (256 bytes at script+0x1DC0) -> no effect
+- ALL bytecode zeroed (5.8KB from script+0x1DC0 to end) -> **CRASH** (room scripts broken, not AI)
 
-### Key observations
-- **AI is strictly positional**: it ALWAYS stays on the slot index regardless of what per-slot data is changed.
-- **Deep region entities**: swapping slot markers or headers creates visible "dark entities" with colliders, proving these records define physical entities in the level. But their behavior doesn't change.
-- **No global AI table**: monster names only appear in per-area 96-byte entries, not in a separate master database.
+**Conclusion:** type-8 bytecode = room management scripts (elevators, doors, dialogue). Critical for room loading but NOT related to combat AI.
+
+---
+
+## Final Conclusion: AI is in the PSX Executable
+
+After **18 tests** covering every identified per-area data structure, the AI/behavior/spell system has **not been found in area data**. It is in the PSX executable code.
+
+### Evidence
+1. **18 swap/zero tests** on all per-area fields - AI never changes
+2. **AI is strictly positional** - always follows slot index, regardless of all data changes
+3. **No global AI table** in BLAZE.ALL - monster names only appear in per-area 96-byte entries
+4. **Room bytecode (type-8)** confirmed as room scripts (elevator/doors), not AI - zeroing crashes room loading but 256-byte partial zero has no AI effect
+5. **Every per-area structure now mapped** and tested: assignment entries, animation tables, 8-byte records, 96-byte stats, type-7 entries, spawn commands, deep entity region, type-8 bytecode
+
+### What this means for modding
+- **Can change:** 3D models (L+anim), texture variants (type-7 offset), stats/name (96-byte entries), formations (formation templates)
+- **Cannot change via area data:** AI behavior, spell lists, loot tables - these are hardcoded in the executable per slot index or creature_type
+- To change AI, one would need to reverse-engineer the PSX executable (MIPS assembly) to find the AI dispatch routine
 
 ---
 
@@ -269,6 +284,9 @@ The AI/behavior/spell controller has **not been found**. All per-monster structu
 | `test_spawn_cmd_prefix_swap.py` | XX byte in [XX 0B YY 00] (early region) | No effect |
 | `test_deep_slot_swap.py` | [XX FF 00 00] slot markers (deep region) | **Dark entities**, no AI change |
 | `test_deep_header_swap.py` | 4-byte cmd headers (deep region) | **More dark entities**, no AI change |
+| `test_type8_offset_swap.py` | Type-8 entry offset swap (0x1DC0 ↔ 0x1FC4) | No effect |
+| `test_type8_zero.py` | Zero 256 bytes at type-8 target 1 | No effect |
+| `test_type8_zero_all.py` | Zero ALL bytecode from script+0x1DC0 to end (~5.8KB) | **Crash** (room scripts broken) |
 
 ### Analysis Scripts Index
 
