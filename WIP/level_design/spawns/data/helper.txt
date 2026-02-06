@@ -1,0 +1,109 @@
+
+● Prêt ! Cette fois on a swappé tout entre Goblin et Bat :
+
+  - L (AI+modèle) : Goblin→3, Bat→0
+  - R : Goblin→4, Bat→2
+  - 8-byte records : anim offset + texture ref swappés
+  - Type-7 index : 0x10↔0x12
+
+  Le Shaman (slot 1) est inchangé.
+
+  Attendu sans crash : slot 0 = une Bat nommée "Lv20.Goblin", slot 2 = un Goblin nommé "Giant-Bat".
+
+✻ Baked for 1m 18s
+
+> crash direct
+  ⎿  Interrupted · What should Claude do instead?
+
+> premier spawn
+
+● Crash direct — les offsets dans les 8-byte records (0x0C, 0x14, 0x1C) sont probablement positionnels (liés au slot,
+  pas au monstre). En les swappant on casse la structure.
+
+  Nouvelle approche : swapper seulement L + les bytes de la table d'animation (pas les offsets). Les offsets restent
+  liés à leur slot, mais les données d'animation à chaque position sont swappées.
+
+● Write(WIP\level_design\spawns\scripts\test_L_plus_anim.py)
+  ⎿  Wrote 1 lines to WIP\level_design\spawns\scripts\test_L_plus_anim.py
+       1 #!/usr/bin/env python3
+       2 """
+       3 TEST: Swap L values + animation table data (but NOT 8-byte record offsets).
+       4
+       5 Previous tests:
+       6   - L-only swap: models swap but crash (animation mismatch)
+       7   - Full swap (including 8-byte records): instant crash (offsets are positional)
+       8
+       9 This test: swap L values AND the animation table bytes at each slot's position.
+      10   Keep 8-byte record offsets unchanged (0x0C, 0x14, 0x1C stay in place).
+
+> les Shaman spawn sans crash
+
+● Bash(cd "C:/Perso/BabLangue/Blaze  Blade  Eternal Quest (US)-1644762377/GameplayPatch" && py -3
+      WIP/level_design/spawns/scripts/test_L_plus_anim.py)
+  ⎿  ======================================================================
+       TEST: Swap L + animation data (Goblin <-> Bat)
+       Keep: 8-byte record offsets, type-7, R values, texrefs
+     … +29 lines (ctrl+o to expand)
+
+● Bash(cp "C:/Perso/BabLangue/Blaze  Blade  Eternal Quest (US)-1644762377/GameplayPatch/Blaze  Blade - Eternal Quest
+      (Europe)/Blaze & Blade - Eternal Quest (Europe).bi…)
+  ⎿  ==================================================
+       BLAZE.ALL Patcher
+     ==================================================
+     … +19 lines (ctrl+o to expand)
+
+● Bon, les Shaman spawn OK (logique — on ne les a pas touchés dans le full swap). Ça veut dire que c'est le swap
+  Goblin↔Bat qui crash, pas la structure elle-même.
+
+  Ce nouveau test swap seulement L + les bytes d'animation en gardant les 8-byte records/type-7/R intacts. Teste Cavern
+  Floor 1 !
+
+✻ Crunched for 1m 35s
+
+> ok j'ai bien des modeles de chauve souris qui s ecomporte comme goblin et inversement, sans crash
+
+● Ca marche sans crash ! On a trouvé la recette du swap local :
+
+  1. Swapper L (flag 0x00) → change le modèle 3D + AI + sorts + loot
+  2. Swapper les bytes d'animation dans la table → évite le crash d'animation
+
+  Pas besoin de toucher les 8-byte records, type-7, ni R.
+
+  Juste pour clarifier : l'AI a aussi swappé ? (les Bats-qui-ressemblent-à-Goblin marchent au sol et tapent ? les
+  Goblins-qui-ressemblent-à-Bat volent ?)
+
+● Wrote 1 memory (ctrl+o to expand)
+
+● Doc mise à jour. On a maintenant un système fonctionnel de swap local ! La prochaine grosse étape serait de trouver
+  comment charger un modèle étranger dans une area pour pouvoir mettre n'importe quel monstre n'importe où.
+
+✻ Churned for 44s
+
+> visuallement ya des chauve souris au sol qui lance des fleches, et des goblin qui volent
+
+● Excellent, ça clarifie énormément ! Donc :
+
+  - L contrôle le MODÈLE 3D + animations (visuellement c'est une Bat/Goblin)
+  - L ne contrôle PAS l'AI/comportement — les Bats restent au sol et tirent des flèches (comportement Goblin du slot 0),
+   les Goblins volent (comportement Bat du slot 2)
+
+  Le comportement reste lié au slot original. L'AI est contrôlée par autre chose qu'on n'a pas encore swappé.
+
+  Tableau corrigé :
+  ┌────────────────────────────┬────────────────────────────┬─────────────┐
+  │         Structure          │          Contrôle          │  Confirmé   │
+  ├────────────────────────────┼────────────────────────────┼─────────────┤
+  │ L (flag 0x00) + anim bytes │ Modèle 3D + animations     │ OUI         │
+  ├────────────────────────────┼────────────────────────────┼─────────────┤
+  │ R (flag 0x40)              │ ??? (pas visuel, pas AI)   │ Testé, rien │
+  ├────────────────────────────┼────────────────────────────┼─────────────┤
+  │ 8-byte model_ref           │ Texture VRAM offset        │ OUI         │
+  ├────────────────────────────┼────────────────────────────┼─────────────┤
+  │ Type-7 index               │ Texture + type d'animation │ OUI         │
+  ├────────────────────────────┼────────────────────────────┼─────────────┤
+  │ 96-byte entries            │ Nom + stats                │ OUI         │
+  ├────────────────────────────┼────────────────────────────┼─────────────┤
+  │ ???                        │ AI / comportement / sorts  │ Inconnu     │
+  └────────────────────────────┴────────────────────────────┴─────────────┘
+  L'AI pourrait être dans les spawn command records (les blocs de 32 bytes avec terminateurs FF dans le script area), ou
+   dans les stats des 96-byte entries elles-mêmes. Tu veux que je continue à chercher le contrôle de l'AI ?
