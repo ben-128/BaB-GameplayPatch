@@ -155,7 +155,7 @@ REM ========================================================================
 call :log "[6/9] Patching monster spawn groups in BLAZE.ALL..."
 call :log ""
 
-py -3 WIP\level_design\patch_spawn_groups.py >> "%LOGFILE%" 2>&1
+py -3 WIP\level_design\spawns\scripts\patch_spawn_groups.py >> "%LOGFILE%" 2>&1
 if errorlevel 1 (
     call :log ""
     call :log "[ERROR] Monster spawn groups patch failed!"
