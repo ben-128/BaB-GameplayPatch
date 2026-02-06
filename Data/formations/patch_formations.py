@@ -195,9 +195,20 @@ def patch_area(data, area):
     if new_binary is None:
         return False, True
 
-    # Pad with null bytes to fill the area
-    padding_needed = area_bytes - len(new_binary)
-    new_binary_padded = new_binary + b'\x00' * padding_needed
+    # Fill remaining space with 1-slot filler formations instead of null
+    # bytes.  Null padding can be misread as monster records by the engine.
+    FILLER_SIZE = RECORD_SIZE + 4          # 32-byte record + 4-byte suffix
+    area_id = bytes.fromhex(area["area_id"])
+    remaining = area_bytes - len(new_binary)
+    filler = bytearray()
+    while remaining >= FILLER_SIZE:
+        filler.extend(build_record(0, True, area_id))   # 1-slot formation
+        filler.extend(b'\x00\x00\x00\x00')              # suffix
+        remaining -= FILLER_SIZE
+    # Any leftover (< 36 bytes) can't form a valid 32-byte record;
+    # fill with FF so byte[8]=0xFF = invalid slot if partially parsed
+    filler.extend(b'\xff' * remaining)
+    new_binary_padded = new_binary + bytes(filler)
 
     # Compare with existing data
     old_data = bytes(data[area_start:area_start + area_bytes])
