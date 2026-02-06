@@ -12,5 +12,130 @@
   "original_total_slots": 0,
   "area_id": "0000",
   "formation_count": 0,
-  "formations": []
+  "formations": [],
+  "_placed_spawns": "--- placed spawns (per-record offsets) ---",
+  "spawn_points_area_start": "0x2C07670",
+  "spawn_points_area_bytes": 232,
+  "original_total_spawn_slots": 3,
+  "spawn_point_count": 2,
+  "spawn_points": [
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 0,
+          "monster": "Carberos"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": -200,
+          "y": 800,
+          "z": 3850,
+          "byte0": 0,
+          "byte10_11": "0600",
+          "area_id": "7800",
+          "offset": "0x2C07670"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2C07670"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 2,
+          "monster": "Gorgon"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -500,
+          "y": 0,
+          "z": 2400,
+          "byte0": 0,
+          "byte10_11": "0500",
+          "area_id": "5500",
+          "offset": "0x2C07714"
+        },
+        {
+          "slot": 2,
+          "x": 100,
+          "y": 0,
+          "z": 2400,
+          "byte0": 0,
+          "byte10_11": "0500",
+          "area_id": "5500",
+          "offset": "0x2C07734"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2C07714"
+    }
+  ],
+  "zone_spawns_area_start": "0x2C07690",
+  "zone_spawns_area_bytes": 132,
+  "original_total_zone_spawn_slots": 4,
+  "zone_spawn_count": 1,
+  "zone_spawns": [
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 1,
+          "monster": "Hell-Hound"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": -300,
+          "y": 800,
+          "z": 3100,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7400",
+          "offset": "0x2C07690"
+        },
+        {
+          "slot": 1,
+          "x": -100,
+          "y": 800,
+          "z": 3100,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7400",
+          "offset": "0x2C076B0"
+        },
+        {
+          "slot": 1,
+          "x": -300,
+          "y": 800,
+          "z": 3700,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7800",
+          "offset": "0x2C076D0"
+        },
+        {
+          "slot": 1,
+          "x": -100,
+          "y": 800,
+          "z": 3700,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7800",
+          "offset": "0x2C076F0"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2C07690"
+    }
+  ]
 }

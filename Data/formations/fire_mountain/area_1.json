@@ -29,5 +29,41 @@
       "suffix": "00000000",
       "offset": "0x102E804"
     }
-  ]
+  ],
+  "_placed_spawns": "--- placed spawns (per-record offsets) ---",
+  "spawn_points_area_start": "0x102E7A0",
+  "spawn_points_area_bytes": 36,
+  "original_total_spawn_slots": 1,
+  "spawn_point_count": 1,
+  "spawn_points": [
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 0,
+          "monster": "Red-Dragon"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": -200,
+          "y": 0,
+          "z": 550,
+          "byte0": 2,
+          "byte10_11": "0300",
+          "area_id": "a200",
+          "offset": "0x102E7A0"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x102E7A0"
+    }
+  ],
+  "zone_spawns_area_start": null,
+  "zone_spawns_area_bytes": 0,
+  "original_total_zone_spawn_slots": 0,
+  "zone_spawn_count": 0,
+  "zone_spawns": []
 }

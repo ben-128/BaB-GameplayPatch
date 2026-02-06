@@ -81,5 +81,371 @@
       "suffix": "00000a00",
       "offset": "0x1DE6274"
     }
-  ]
+  ],
+  "_placed_spawns": "--- placed spawns (per-record offsets) ---",
+  "spawn_points_area_start": "0x1DE5E14",
+  "spawn_points_area_bytes": 820,
+  "original_total_spawn_slots": 24,
+  "spawn_point_count": 6,
+  "spawn_points": [
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 0,
+          "monster": "Red-Slime"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": 1800,
+          "y": 0,
+          "z": 2000,
+          "byte0": 7,
+          "byte10_11": "1f00",
+          "area_id": "5301",
+          "offset": "0x1DE5E14"
+        },
+        {
+          "slot": 0,
+          "x": -500,
+          "y": 400,
+          "z": -1500,
+          "byte0": 0,
+          "byte10_11": "1f00",
+          "area_id": "6501",
+          "offset": "0x1DE5E34"
+        },
+        {
+          "slot": 0,
+          "x": 2100,
+          "y": 400,
+          "z": 1300,
+          "byte0": 0,
+          "byte10_11": "1f00",
+          "area_id": "2700",
+          "offset": "0x1DE5E54"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x1DE5E14"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 0,
+          "monster": "Red-Slime"
+        },
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Wraith"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": -400,
+          "y": 400,
+          "z": -1400,
+          "byte0": 0,
+          "byte10_11": "1f00",
+          "area_id": "6501",
+          "offset": "0x1DE5E94"
+        },
+        {
+          "slot": 1,
+          "x": -500,
+          "y": 400,
+          "z": -1500,
+          "byte0": 0,
+          "byte10_11": "1f00",
+          "area_id": "6501",
+          "offset": "0x1DE5EB4"
+        },
+        {
+          "slot": 1,
+          "x": 2100,
+          "y": 400,
+          "z": 1300,
+          "byte0": 0,
+          "byte10_11": "1f00",
+          "area_id": "2700",
+          "offset": "0x1DE5ED4"
+        }
+      ],
+      "suffix": "00000a00",
+      "offset": "0x1DE5E94"
+    },
+    {
+      "total": 5,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 0,
+          "monster": "Red-Slime"
+        },
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Wraith"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": 1000,
+          "y": 400,
+          "z": 4500,
+          "byte0": 0,
+          "byte10_11": "2000",
+          "area_id": "c400",
+          "offset": "0x1DE5EF8"
+        },
+        {
+          "slot": 0,
+          "x": 1600,
+          "y": 400,
+          "z": 4300,
+          "byte0": 0,
+          "byte10_11": "2000",
+          "area_id": "9900",
+          "offset": "0x1DE5F18"
+        },
+        {
+          "slot": 0,
+          "x": 1500,
+          "y": 400,
+          "z": 3400,
+          "byte0": 0,
+          "byte10_11": "2000",
+          "area_id": "bc00",
+          "offset": "0x1DE5F38"
+        },
+        {
+          "slot": 1,
+          "x": 1400,
+          "y": 400,
+          "z": 3300,
+          "byte0": 0,
+          "byte10_11": "2000",
+          "area_id": "bc00",
+          "offset": "0x1DE5F58"
+        },
+        {
+          "slot": 1,
+          "x": 1200,
+          "y": 400,
+          "z": 4500,
+          "byte0": 0,
+          "byte10_11": "2000",
+          "area_id": "e400",
+          "offset": "0x1DE5F78"
+        }
+      ],
+      "suffix": "00000a00",
+      "offset": "0x1DE5EF8"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Red-Slime"
+        },
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Wraith"
+        },
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Blood-Skeleton"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": -700,
+          "y": 600,
+          "z": 3400,
+          "byte0": 0,
+          "byte10_11": "2100",
+          "area_id": "db00",
+          "offset": "0x1DE5F9C"
+        },
+        {
+          "slot": 0,
+          "x": -1000,
+          "y": 600,
+          "z": 2800,
+          "byte0": 0,
+          "byte10_11": "2100",
+          "area_id": "d000",
+          "offset": "0x1DE5FBC"
+        },
+        {
+          "slot": 1,
+          "x": -500,
+          "y": 600,
+          "z": 2800,
+          "byte0": 0,
+          "byte10_11": "2100",
+          "area_id": "d300",
+          "offset": "0x1DE5FDC"
+        },
+        {
+          "slot": 2,
+          "x": -700,
+          "y": 600,
+          "z": 3200,
+          "byte0": 0,
+          "byte10_11": "2100",
+          "area_id": "db00",
+          "offset": "0x1DE5FFC"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x1DE5F9C"
+    },
+    {
+      "total": 5,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 0,
+          "monster": "Red-Slime"
+        },
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Wraith"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": -2700,
+          "y": 400,
+          "z": -400,
+          "byte0": 0,
+          "byte10_11": "2200",
+          "area_id": "b300",
+          "offset": "0x1DE6020"
+        },
+        {
+          "slot": 0,
+          "x": -2600,
+          "y": 400,
+          "z": -800,
+          "byte0": 0,
+          "byte10_11": "2200",
+          "area_id": "b400",
+          "offset": "0x1DE6040"
+        },
+        {
+          "slot": 0,
+          "x": -2400,
+          "y": 400,
+          "z": -1100,
+          "byte0": 0,
+          "byte10_11": "2200",
+          "area_id": "b600",
+          "offset": "0x1DE6060"
+        },
+        {
+          "slot": 1,
+          "x": -1900,
+          "y": 400,
+          "z": -1100,
+          "byte0": 0,
+          "byte10_11": "2200",
+          "area_id": "b800",
+          "offset": "0x1DE6080"
+        },
+        {
+          "slot": 1,
+          "x": -1800,
+          "y": 400,
+          "z": -1000,
+          "byte0": 0,
+          "byte10_11": "2200",
+          "area_id": "7f00",
+          "offset": "0x1DE60A0"
+        }
+      ],
+      "suffix": "00000a00",
+      "offset": "0x1DE6020"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Red-Slime"
+        },
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Wraith"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": 300,
+          "y": 400,
+          "z": -1300,
+          "byte0": 0,
+          "byte10_11": "2300",
+          "area_id": "eb00",
+          "offset": "0x1DE60C4"
+        },
+        {
+          "slot": 0,
+          "x": 200,
+          "y": 400,
+          "z": -1200,
+          "byte0": 0,
+          "byte10_11": "2300",
+          "area_id": "eb00",
+          "offset": "0x1DE60E4"
+        },
+        {
+          "slot": 1,
+          "x": 1100,
+          "y": 400,
+          "z": -2000,
+          "byte0": 0,
+          "byte10_11": "2300",
+          "area_id": "1100",
+          "offset": "0x1DE6104"
+        },
+        {
+          "slot": 1,
+          "x": 1400,
+          "y": 400,
+          "z": -2000,
+          "byte0": 0,
+          "byte10_11": "2300",
+          "area_id": "1000",
+          "offset": "0x1DE6124"
+        }
+      ],
+      "suffix": "00000a00",
+      "offset": "0x1DE60C4"
+    }
+  ],
+  "zone_spawns_area_start": null,
+  "zone_spawns_area_bytes": 0,
+  "original_total_zone_spawn_slots": 0,
+  "zone_spawn_count": 0,
+  "zone_spawns": []
 }

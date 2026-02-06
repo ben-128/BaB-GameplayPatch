@@ -83,5 +83,16 @@
       "suffix": "00000000",
       "offset": "0x25D0E54"
     }
-  ]
+  ],
+  "_placed_spawns": "--- placed spawns (per-record offsets) ---",
+  "spawn_points_area_start": null,
+  "spawn_points_area_bytes": 0,
+  "original_total_spawn_slots": 0,
+  "spawn_point_count": 0,
+  "spawn_points": [],
+  "zone_spawns_area_start": null,
+  "zone_spawns_area_bytes": 0,
+  "original_total_zone_spawn_slots": 0,
+  "zone_spawn_count": 0,
+  "zone_spawns": []
 }

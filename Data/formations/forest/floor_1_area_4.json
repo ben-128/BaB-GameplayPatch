@@ -89,5 +89,527 @@
       "suffix": "00000000",
       "offset": "0x1498DC4"
     }
+  ],
+  "_placed_spawns": "--- placed spawns (per-record offsets) ---",
+  "spawn_points_area_start": "0x1498854",
+  "spawn_points_area_bytes": 1124,
+  "original_total_spawn_slots": 32,
+  "spawn_point_count": 10,
+  "spawn_points": [
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Goblin-Shaman"
+        },
+        {
+          "count": 1,
+          "slot": 3,
+          "monster": "Lizard-Man"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -3200,
+          "y": 5,
+          "z": 4200,
+          "byte0": 12,
+          "byte10_11": "1000",
+          "area_id": "3e00",
+          "offset": "0x1498854"
+        },
+        {
+          "slot": 3,
+          "x": -3100,
+          "y": 5,
+          "z": 3800,
+          "byte0": 0,
+          "byte10_11": "1000",
+          "area_id": "2602",
+          "offset": "0x1498874"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x1498854"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 4,
+          "monster": "Giant-Club"
+        }
+      ],
+      "records": [
+        {
+          "slot": 4,
+          "x": -3100,
+          "y": 5,
+          "z": 2500,
+          "byte0": 0,
+          "byte10_11": "1000",
+          "area_id": "2300",
+          "offset": "0x14988B4"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x14988B4"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 3,
+          "monster": "Lizard-Man"
+        },
+        {
+          "count": 2,
+          "slot": 4,
+          "monster": "Giant-Club"
+        }
+      ],
+      "records": [
+        {
+          "slot": 3,
+          "x": -1100,
+          "y": 5,
+          "z": 2000,
+          "byte0": 0,
+          "byte10_11": "1100",
+          "area_id": "2700",
+          "offset": "0x14988D8"
+        },
+        {
+          "slot": 3,
+          "x": -1400,
+          "y": 5,
+          "z": 1800,
+          "byte0": 0,
+          "byte10_11": "1100",
+          "area_id": "da01",
+          "offset": "0x14988F8"
+        },
+        {
+          "slot": 4,
+          "x": -1600,
+          "y": 5,
+          "z": 1400,
+          "byte0": 0,
+          "byte10_11": "1100",
+          "area_id": "6e02",
+          "offset": "0x1498918"
+        },
+        {
+          "slot": 4,
+          "x": -1100,
+          "y": 5,
+          "z": 1500,
+          "byte0": 0,
+          "byte10_11": "1100",
+          "area_id": "d901",
+          "offset": "0x1498938"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x14988D8"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Goblin-Shaman"
+        },
+        {
+          "count": 3,
+          "slot": 3,
+          "monster": "Lizard-Man"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 3500,
+          "y": 5,
+          "z": 400,
+          "byte0": 0,
+          "byte10_11": "1200",
+          "area_id": "ad01",
+          "offset": "0x149895C"
+        },
+        {
+          "slot": 3,
+          "x": 3300,
+          "y": 5,
+          "z": -100,
+          "byte0": 0,
+          "byte10_11": "1200",
+          "area_id": "6302",
+          "offset": "0x149897C"
+        },
+        {
+          "slot": 3,
+          "x": 3200,
+          "y": 5,
+          "z": 1000,
+          "byte0": 0,
+          "byte10_11": "1200",
+          "area_id": "4f00",
+          "offset": "0x149899C"
+        },
+        {
+          "slot": 3,
+          "x": 3000,
+          "y": 5,
+          "z": 1700,
+          "byte0": 0,
+          "byte10_11": "1200",
+          "area_id": "6602",
+          "offset": "0x14989BC"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x149895C"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 2,
+          "monster": "Goblin-Shaman"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -1100,
+          "y": 5,
+          "z": 0,
+          "byte0": 0,
+          "byte10_11": "1300",
+          "area_id": "6c02",
+          "offset": "0x1498A00"
+        },
+        {
+          "slot": 2,
+          "x": -600,
+          "y": 5,
+          "z": 0,
+          "byte0": 0,
+          "byte10_11": "1300",
+          "area_id": "1202",
+          "offset": "0x1498A20"
+        },
+        {
+          "slot": 2,
+          "x": -200,
+          "y": 5,
+          "z": 0,
+          "byte0": 0,
+          "byte10_11": "1300",
+          "area_id": "1002",
+          "offset": "0x1498A40"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x1498A00"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 4,
+          "monster": "Giant-Club"
+        }
+      ],
+      "records": [
+        {
+          "slot": 4,
+          "x": -3100,
+          "y": 5,
+          "z": -100,
+          "byte0": 0,
+          "byte10_11": "1500",
+          "area_id": "4b02",
+          "offset": "0x1498A64"
+        },
+        {
+          "slot": 4,
+          "x": -2800,
+          "y": 5,
+          "z": 600,
+          "byte0": 0,
+          "byte10_11": "1500",
+          "area_id": "3401",
+          "offset": "0x1498A84"
+        },
+        {
+          "slot": 4,
+          "x": -3800,
+          "y": 5,
+          "z": 600,
+          "byte0": 0,
+          "byte10_11": "1500",
+          "area_id": "4802",
+          "offset": "0x1498AA4"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x1498A64"
+    },
+    {
+      "total": 5,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 3,
+          "monster": "Lizard-Man"
+        },
+        {
+          "count": 2,
+          "slot": 4,
+          "monster": "Giant-Club"
+        }
+      ],
+      "records": [
+        {
+          "slot": 3,
+          "x": -3300,
+          "y": 5,
+          "z": -3000,
+          "byte0": 0,
+          "byte10_11": "1600",
+          "area_id": "4e02",
+          "offset": "0x1498AC8"
+        },
+        {
+          "slot": 3,
+          "x": -2300,
+          "y": 5,
+          "z": -4000,
+          "byte0": 0,
+          "byte10_11": "1600",
+          "area_id": "4b00",
+          "offset": "0x1498AE8"
+        },
+        {
+          "slot": 3,
+          "x": -1100,
+          "y": 5,
+          "z": -400,
+          "byte0": 0,
+          "byte10_11": "1600",
+          "area_id": "6c02",
+          "offset": "0x1498B08"
+        },
+        {
+          "slot": 4,
+          "x": -3100,
+          "y": 5,
+          "z": -1900,
+          "byte0": 0,
+          "byte10_11": "1600",
+          "area_id": "4d02",
+          "offset": "0x1498B28"
+        },
+        {
+          "slot": 4,
+          "x": -600,
+          "y": 5,
+          "z": -3800,
+          "byte0": 0,
+          "byte10_11": "1600",
+          "area_id": "0b00",
+          "offset": "0x1498B48"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x1498AC8"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 4,
+          "monster": "Giant-Club"
+        }
+      ],
+      "records": [
+        {
+          "slot": 4,
+          "x": 1600,
+          "y": 5,
+          "z": -3700,
+          "byte0": 0,
+          "byte10_11": "1700",
+          "area_id": "5a02",
+          "offset": "0x1498B6C"
+        },
+        {
+          "slot": 4,
+          "x": 1500,
+          "y": 5,
+          "z": -4800,
+          "byte0": 0,
+          "byte10_11": "1700",
+          "area_id": "5c02",
+          "offset": "0x1498B8C"
+        },
+        {
+          "slot": 4,
+          "x": 1700,
+          "y": 5,
+          "z": -5000,
+          "byte0": 0,
+          "byte10_11": "1700",
+          "area_id": "5d02",
+          "offset": "0x1498BAC"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x1498B6C"
+    },
+    {
+      "total": 6,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 0,
+          "monster": "Barricade"
+        },
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Goblin"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": 3600,
+          "y": 5,
+          "z": -3000,
+          "byte0": 0,
+          "byte10_11": "1800",
+          "area_id": "3202",
+          "offset": "0x1498BD0"
+        },
+        {
+          "slot": 0,
+          "x": 3500,
+          "y": 5,
+          "z": -3700,
+          "byte0": 0,
+          "byte10_11": "1800",
+          "area_id": "3102",
+          "offset": "0x1498BF0"
+        },
+        {
+          "slot": 0,
+          "x": 3100,
+          "y": 5,
+          "z": -5000,
+          "byte0": 0,
+          "byte10_11": "1800",
+          "area_id": "2f02",
+          "offset": "0x1498C10"
+        },
+        {
+          "slot": 0,
+          "x": 3300,
+          "y": 5,
+          "z": -4400,
+          "byte0": 0,
+          "byte10_11": "1800",
+          "area_id": "3002",
+          "offset": "0x1498C30"
+        },
+        {
+          "slot": 1,
+          "x": 3100,
+          "y": 5,
+          "z": -3700,
+          "byte0": 0,
+          "byte10_11": "1800",
+          "area_id": "3102",
+          "offset": "0x1498C50"
+        },
+        {
+          "slot": 1,
+          "x": 3100,
+          "y": 5,
+          "z": -4400,
+          "byte0": 0,
+          "byte10_11": "1800",
+          "area_id": "3002",
+          "offset": "0x1498C70"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x1498BD0"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 5,
+          "monster": "Wing-Fish"
+        }
+      ],
+      "records": [
+        {
+          "slot": 5,
+          "x": 3400,
+          "y": 0,
+          "z": -4050,
+          "byte0": 0,
+          "byte10_11": "2100",
+          "area_id": "2303",
+          "offset": "0x1498C94"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x1498C94"
+    }
+  ],
+  "zone_spawns_area_start": "0x14990F8",
+  "zone_spawns_area_bytes": 36,
+  "original_total_zone_spawn_slots": 1,
+  "zone_spawn_count": 1,
+  "zone_spawns": [
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Goblin-Shaman"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -3100,
+          "y": 100,
+          "z": 1200,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "0b03",
+          "offset": "0x14990F8"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x14990F8"
+    }
   ]
 }

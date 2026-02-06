@@ -98,5 +98,3494 @@
       "suffix": "00000a00",
       "offset": "0x242FC90"
     }
+  ],
+  "_placed_spawns": "--- placed spawns (per-record offsets) ---",
+  "spawn_points_area_start": "0x242DBB0",
+  "spawn_points_area_bytes": 8084,
+  "original_total_spawn_slots": 153,
+  "spawn_point_count": 41,
+  "spawn_points": [
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 0,
+          "monster": "Red-Knight"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": -1100,
+          "y": 0,
+          "z": 3300,
+          "byte0": 64,
+          "byte10_11": "5000",
+          "area_id": "3c02",
+          "offset": "0x242DBB0"
+        },
+        {
+          "slot": 0,
+          "x": -1500,
+          "y": 0,
+          "z": 3700,
+          "byte0": 0,
+          "byte10_11": "5000",
+          "area_id": "4f02",
+          "offset": "0x242DBD0"
+        },
+        {
+          "slot": 0,
+          "x": -1900,
+          "y": 0,
+          "z": 3300,
+          "byte0": 0,
+          "byte10_11": "5000",
+          "area_id": "4202",
+          "offset": "0x242DBF0"
+        },
+        {
+          "slot": 0,
+          "x": -1500,
+          "y": 0,
+          "z": 2900,
+          "byte0": 0,
+          "byte10_11": "5000",
+          "area_id": "4b02",
+          "offset": "0x242DC10"
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x242DBB0"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Vampire"
+        },
+        {
+          "count": 2,
+          "slot": 3,
+          "monster": "Lesser-Vampire"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": -1100,
+          "y": 0,
+          "z": 3300,
+          "byte0": 0,
+          "byte10_11": "5000",
+          "area_id": "3c02",
+          "offset": "0x242DC34"
+        },
+        {
+          "slot": 1,
+          "x": -1500,
+          "y": 0,
+          "z": 3700,
+          "byte0": 0,
+          "byte10_11": "5000",
+          "area_id": "4f02",
+          "offset": "0x242DC54"
+        },
+        {
+          "slot": 3,
+          "x": -1900,
+          "y": 0,
+          "z": 3300,
+          "byte0": 0,
+          "byte10_11": "5000",
+          "area_id": "4202",
+          "offset": "0x242DC74"
+        },
+        {
+          "slot": 3,
+          "x": -1500,
+          "y": 0,
+          "z": 2900,
+          "byte0": 0,
+          "byte10_11": "5000",
+          "area_id": "4b02",
+          "offset": "0x242DC94"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x242DC34"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 2,
+          "monster": "Shadow"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -1100,
+          "y": 0,
+          "z": 3300,
+          "byte0": 0,
+          "byte10_11": "5000",
+          "area_id": "3c02",
+          "offset": "0x242DCB8"
+        },
+        {
+          "slot": 2,
+          "x": -1500,
+          "y": 0,
+          "z": 3700,
+          "byte0": 0,
+          "byte10_11": "5000",
+          "area_id": "4f02",
+          "offset": "0x242DCD8"
+        },
+        {
+          "slot": 2,
+          "x": -1900,
+          "y": 0,
+          "z": 3300,
+          "byte0": 0,
+          "byte10_11": "5000",
+          "area_id": "4202",
+          "offset": "0x242DCF8"
+        },
+        {
+          "slot": 2,
+          "x": -1500,
+          "y": 0,
+          "z": 2900,
+          "byte0": 0,
+          "byte10_11": "5000",
+          "area_id": "4b02",
+          "offset": "0x242DD18"
+        }
+      ],
+      "suffix": "00000a00",
+      "offset": "0x242DCB8"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Red-Knight"
+        },
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Vampire"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": -1100,
+          "y": 0,
+          "z": 3300,
+          "byte0": 0,
+          "byte10_11": "5000",
+          "area_id": "3c02",
+          "offset": "0x242DD3C"
+        },
+        {
+          "slot": 0,
+          "x": -1500,
+          "y": 0,
+          "z": 3700,
+          "byte0": 0,
+          "byte10_11": "5000",
+          "area_id": "4f02",
+          "offset": "0x242DD5C"
+        },
+        {
+          "slot": 1,
+          "x": -1900,
+          "y": 0,
+          "z": 3300,
+          "byte0": 0,
+          "byte10_11": "5000",
+          "area_id": "4202",
+          "offset": "0x242DD7C"
+        },
+        {
+          "slot": 1,
+          "x": -1500,
+          "y": 0,
+          "z": 2900,
+          "byte0": 0,
+          "byte10_11": "5000",
+          "area_id": "4b02",
+          "offset": "0x242DD9C"
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x242DD3C"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Vampire"
+        },
+        {
+          "count": 2,
+          "slot": 2,
+          "monster": "Shadow"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": -1100,
+          "y": 0,
+          "z": 3300,
+          "byte0": 0,
+          "byte10_11": "5000",
+          "area_id": "3c02",
+          "offset": "0x242DDC0"
+        },
+        {
+          "slot": 1,
+          "x": -1500,
+          "y": 0,
+          "z": 3700,
+          "byte0": 0,
+          "byte10_11": "5000",
+          "area_id": "4f02",
+          "offset": "0x242DDE0"
+        },
+        {
+          "slot": 2,
+          "x": -1900,
+          "y": 0,
+          "z": 3300,
+          "byte0": 0,
+          "byte10_11": "5000",
+          "area_id": "4202",
+          "offset": "0x242DE00"
+        },
+        {
+          "slot": 2,
+          "x": -1500,
+          "y": 0,
+          "z": 2900,
+          "byte0": 0,
+          "byte10_11": "5000",
+          "area_id": "4b02",
+          "offset": "0x242DE20"
+        }
+      ],
+      "suffix": "00000a00",
+      "offset": "0x242DDC0"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 0,
+          "monster": "Red-Knight"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": 1000,
+          "y": 0,
+          "z": 3000,
+          "byte0": 0,
+          "byte10_11": "5100",
+          "area_id": "e102",
+          "offset": "0x242DE44"
+        },
+        {
+          "slot": 0,
+          "x": 1200,
+          "y": 0,
+          "z": 3150,
+          "byte0": 0,
+          "byte10_11": "5100",
+          "area_id": "e302",
+          "offset": "0x242DE64"
+        },
+        {
+          "slot": 0,
+          "x": 1200,
+          "y": 0,
+          "z": 3450,
+          "byte0": 0,
+          "byte10_11": "5100",
+          "area_id": "4903",
+          "offset": "0x242DE84"
+        },
+        {
+          "slot": 0,
+          "x": 1000,
+          "y": 0,
+          "z": 3600,
+          "byte0": 0,
+          "byte10_11": "5100",
+          "area_id": "f102",
+          "offset": "0x242DEA4"
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x242DE44"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Vampire"
+        },
+        {
+          "count": 2,
+          "slot": 3,
+          "monster": "Lesser-Vampire"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 1000,
+          "y": 0,
+          "z": 3000,
+          "byte0": 0,
+          "byte10_11": "5100",
+          "area_id": "e102",
+          "offset": "0x242DEC8"
+        },
+        {
+          "slot": 1,
+          "x": 1200,
+          "y": 0,
+          "z": 3150,
+          "byte0": 0,
+          "byte10_11": "5100",
+          "area_id": "e302",
+          "offset": "0x242DEE8"
+        },
+        {
+          "slot": 3,
+          "x": 1200,
+          "y": 0,
+          "z": 3450,
+          "byte0": 0,
+          "byte10_11": "5100",
+          "area_id": "4903",
+          "offset": "0x242DF08"
+        },
+        {
+          "slot": 3,
+          "x": 1000,
+          "y": 0,
+          "z": 3600,
+          "byte0": 0,
+          "byte10_11": "5100",
+          "area_id": "f102",
+          "offset": "0x242DF28"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x242DEC8"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 2,
+          "monster": "Shadow"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 1000,
+          "y": 0,
+          "z": 3000,
+          "byte0": 0,
+          "byte10_11": "5100",
+          "area_id": "e102",
+          "offset": "0x242DF4C"
+        },
+        {
+          "slot": 2,
+          "x": 1200,
+          "y": 0,
+          "z": 3150,
+          "byte0": 0,
+          "byte10_11": "5100",
+          "area_id": "e302",
+          "offset": "0x242DF6C"
+        },
+        {
+          "slot": 2,
+          "x": 1200,
+          "y": 0,
+          "z": 3450,
+          "byte0": 0,
+          "byte10_11": "5100",
+          "area_id": "4903",
+          "offset": "0x242DF8C"
+        },
+        {
+          "slot": 2,
+          "x": 1000,
+          "y": 0,
+          "z": 3600,
+          "byte0": 0,
+          "byte10_11": "5100",
+          "area_id": "f102",
+          "offset": "0x242DFAC"
+        }
+      ],
+      "suffix": "00000a00",
+      "offset": "0x242DF4C"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Red-Knight"
+        },
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Vampire"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": 1200,
+          "y": 0,
+          "z": 3150,
+          "byte0": 0,
+          "byte10_11": "5100",
+          "area_id": "e302",
+          "offset": "0x242DFD0"
+        },
+        {
+          "slot": 0,
+          "x": 1200,
+          "y": 0,
+          "z": 3450,
+          "byte0": 0,
+          "byte10_11": "5100",
+          "area_id": "4903",
+          "offset": "0x242DFF0"
+        },
+        {
+          "slot": 1,
+          "x": 1000,
+          "y": 0,
+          "z": 3000,
+          "byte0": 0,
+          "byte10_11": "5100",
+          "area_id": "e102",
+          "offset": "0x242E010"
+        },
+        {
+          "slot": 1,
+          "x": 1000,
+          "y": 0,
+          "z": 3600,
+          "byte0": 0,
+          "byte10_11": "5100",
+          "area_id": "f102",
+          "offset": "0x242E030"
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x242DFD0"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Vampire"
+        },
+        {
+          "count": 2,
+          "slot": 2,
+          "monster": "Shadow"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 1200,
+          "y": 0,
+          "z": 3150,
+          "byte0": 0,
+          "byte10_11": "5100",
+          "area_id": "e302",
+          "offset": "0x242E054"
+        },
+        {
+          "slot": 1,
+          "x": 1200,
+          "y": 0,
+          "z": 3450,
+          "byte0": 0,
+          "byte10_11": "5100",
+          "area_id": "4903",
+          "offset": "0x242E074"
+        },
+        {
+          "slot": 2,
+          "x": 1000,
+          "y": 0,
+          "z": 3000,
+          "byte0": 0,
+          "byte10_11": "5100",
+          "area_id": "e102",
+          "offset": "0x242E094"
+        },
+        {
+          "slot": 2,
+          "x": 1000,
+          "y": 0,
+          "z": 3600,
+          "byte0": 0,
+          "byte10_11": "5100",
+          "area_id": "f102",
+          "offset": "0x242E0B4"
+        }
+      ],
+      "suffix": "00000a00",
+      "offset": "0x242E054"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Red-Knight"
+        },
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Vampire"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": -1100,
+          "y": 0,
+          "z": -600,
+          "byte0": 0,
+          "byte10_11": "5200",
+          "area_id": "0303",
+          "offset": "0x242E0D8"
+        },
+        {
+          "slot": 0,
+          "x": 600,
+          "y": 0,
+          "z": -500,
+          "byte0": 0,
+          "byte10_11": "5200",
+          "area_id": "0703",
+          "offset": "0x242E0F8"
+        },
+        {
+          "slot": 1,
+          "x": -1500,
+          "y": 0,
+          "z": -200,
+          "byte0": 0,
+          "byte10_11": "5200",
+          "area_id": "0203",
+          "offset": "0x242E118"
+        },
+        {
+          "slot": 1,
+          "x": 900,
+          "y": 0,
+          "z": -200,
+          "byte0": 0,
+          "byte10_11": "5200",
+          "area_id": "0703",
+          "offset": "0x242E138"
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x242E0D8"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 0,
+          "monster": "Red-Knight"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": -2100,
+          "y": 0,
+          "z": 1100,
+          "byte0": 0,
+          "byte10_11": "5300",
+          "area_id": "cd02",
+          "offset": "0x242E15C"
+        },
+        {
+          "slot": 0,
+          "x": -2100,
+          "y": 0,
+          "z": 700,
+          "byte0": 0,
+          "byte10_11": "5300",
+          "area_id": "d502",
+          "offset": "0x242E17C"
+        },
+        {
+          "slot": 0,
+          "x": -1100,
+          "y": 0,
+          "z": 700,
+          "byte0": 0,
+          "byte10_11": "5300",
+          "area_id": "6e00",
+          "offset": "0x242E19C"
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x242E15C"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Vampire"
+        },
+        {
+          "count": 2,
+          "slot": 3,
+          "monster": "Lesser-Vampire"
+        }
+      ],
+      "records": [
+        {
+          "slot": 3,
+          "x": -2100,
+          "y": 0,
+          "z": 1100,
+          "byte0": 0,
+          "byte10_11": "5300",
+          "area_id": "cd02",
+          "offset": "0x242E1C0"
+        },
+        {
+          "slot": 3,
+          "x": -2100,
+          "y": 0,
+          "z": 700,
+          "byte0": 0,
+          "byte10_11": "5300",
+          "area_id": "d502",
+          "offset": "0x242E1E0"
+        },
+        {
+          "slot": 1,
+          "x": -1100,
+          "y": 0,
+          "z": 700,
+          "byte0": 0,
+          "byte10_11": "5300",
+          "area_id": "6e00",
+          "offset": "0x242E200"
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x242E1C0"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 2,
+          "monster": "Shadow"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -2100,
+          "y": 0,
+          "z": 1100,
+          "byte0": 0,
+          "byte10_11": "5300",
+          "area_id": "cd02",
+          "offset": "0x242E224"
+        },
+        {
+          "slot": 2,
+          "x": -2100,
+          "y": 0,
+          "z": 700,
+          "byte0": 0,
+          "byte10_11": "5300",
+          "area_id": "d502",
+          "offset": "0x242E244"
+        },
+        {
+          "slot": 2,
+          "x": -1100,
+          "y": 0,
+          "z": 700,
+          "byte0": 0,
+          "byte10_11": "5300",
+          "area_id": "6e00",
+          "offset": "0x242E264"
+        }
+      ],
+      "suffix": "00000a00",
+      "offset": "0x242E224"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 0,
+          "monster": "Red-Knight"
+        },
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Vampire"
+        },
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Shadow"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": -2100,
+          "y": 0,
+          "z": 700,
+          "byte0": 0,
+          "byte10_11": "5300",
+          "area_id": "d502",
+          "offset": "0x242E288"
+        },
+        {
+          "slot": 1,
+          "x": -1100,
+          "y": 0,
+          "z": 700,
+          "byte0": 0,
+          "byte10_11": "5300",
+          "area_id": "6e00",
+          "offset": "0x242E2A8"
+        },
+        {
+          "slot": 2,
+          "x": -2100,
+          "y": 0,
+          "z": 1100,
+          "byte0": 0,
+          "byte10_11": "5300",
+          "area_id": "cd02",
+          "offset": "0x242E2C8"
+        }
+      ],
+      "suffix": "00000a00",
+      "offset": "0x242E288"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 0,
+          "monster": "Red-Knight"
+        },
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Vampire"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": -1100,
+          "y": 0,
+          "z": 700,
+          "byte0": 0,
+          "byte10_11": "5300",
+          "area_id": "6e00",
+          "offset": "0x242E2EC"
+        },
+        {
+          "slot": 1,
+          "x": -2100,
+          "y": 0,
+          "z": 1100,
+          "byte0": 0,
+          "byte10_11": "5300",
+          "area_id": "cd02",
+          "offset": "0x242E30C"
+        },
+        {
+          "slot": 1,
+          "x": -2100,
+          "y": 0,
+          "z": 700,
+          "byte0": 0,
+          "byte10_11": "5300",
+          "area_id": "d502",
+          "offset": "0x242E32C"
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x242E2EC"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Vampire"
+        },
+        {
+          "count": 2,
+          "slot": 3,
+          "monster": "Lesser-Vampire"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": -2900,
+          "y": 1400,
+          "z": 900,
+          "byte0": 0,
+          "byte10_11": "5400",
+          "area_id": "8802",
+          "offset": "0x242E350"
+        },
+        {
+          "slot": 1,
+          "x": -2700,
+          "y": 1400,
+          "z": 1000,
+          "byte0": 0,
+          "byte10_11": "5400",
+          "area_id": "8a02",
+          "offset": "0x242E370"
+        },
+        {
+          "slot": 3,
+          "x": -2500,
+          "y": 1400,
+          "z": 1100,
+          "byte0": 0,
+          "byte10_11": "5400",
+          "area_id": "8b02",
+          "offset": "0x242E390"
+        },
+        {
+          "slot": 3,
+          "x": -2700,
+          "y": 1400,
+          "z": 800,
+          "byte0": 0,
+          "byte10_11": "5400",
+          "area_id": "9102",
+          "offset": "0x242E3B0"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x242E350"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Vampire"
+        },
+        {
+          "count": 2,
+          "slot": 3,
+          "monster": "Lesser-Vampire"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 2100,
+          "y": 1400,
+          "z": 1100,
+          "byte0": 0,
+          "byte10_11": "5500",
+          "area_id": "9d02",
+          "offset": "0x242E3D4"
+        },
+        {
+          "slot": 1,
+          "x": 2050,
+          "y": 1400,
+          "z": 750,
+          "byte0": 0,
+          "byte10_11": "5500",
+          "area_id": "9902",
+          "offset": "0x242E3F4"
+        },
+        {
+          "slot": 3,
+          "x": 2150,
+          "y": 1400,
+          "z": 750,
+          "byte0": 0,
+          "byte10_11": "5500",
+          "area_id": "9902",
+          "offset": "0x242E414"
+        },
+        {
+          "slot": 3,
+          "x": 1900,
+          "y": 1400,
+          "z": 1050,
+          "byte0": 0,
+          "byte10_11": "5500",
+          "area_id": "9c02",
+          "offset": "0x242E434"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x242E3D4"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Vampire"
+        },
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Shadow"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 1000,
+          "y": 0,
+          "z": 2300,
+          "byte0": 0,
+          "byte10_11": "5800",
+          "area_id": "6e01",
+          "offset": "0x242E878"
+        },
+        {
+          "slot": 1,
+          "x": 1000,
+          "y": 0,
+          "z": 2100,
+          "byte0": 0,
+          "byte10_11": "5800",
+          "area_id": "1100",
+          "offset": "0x242E898"
+        },
+        {
+          "slot": 2,
+          "x": 1250,
+          "y": 0,
+          "z": 2200,
+          "byte0": 0,
+          "byte10_11": "5800",
+          "area_id": "6d01",
+          "offset": "0x242E8B8"
+        }
+      ],
+      "suffix": "00000a00",
+      "offset": "0x242E878"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 2,
+          "monster": "Shadow"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 1000,
+          "y": 0,
+          "z": 2300,
+          "byte0": 0,
+          "byte10_11": "5800",
+          "area_id": "6e01",
+          "offset": "0x242E8DC"
+        },
+        {
+          "slot": 2,
+          "x": 1000,
+          "y": 0,
+          "z": 2100,
+          "byte0": 0,
+          "byte10_11": "5800",
+          "area_id": "1100",
+          "offset": "0x242E8FC"
+        },
+        {
+          "slot": 2,
+          "x": 1250,
+          "y": 0,
+          "z": 2200,
+          "byte0": 0,
+          "byte10_11": "5800",
+          "area_id": "6d01",
+          "offset": "0x242E91C"
+        }
+      ],
+      "suffix": "00000a00",
+      "offset": "0x242E8DC"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 1,
+          "monster": "Vampire"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 1000,
+          "y": 0,
+          "z": 2300,
+          "byte0": 0,
+          "byte10_11": "5800",
+          "area_id": "6e01",
+          "offset": "0x242E940"
+        },
+        {
+          "slot": 1,
+          "x": 1000,
+          "y": 0,
+          "z": 2100,
+          "byte0": 0,
+          "byte10_11": "5800",
+          "area_id": "1100",
+          "offset": "0x242E960"
+        },
+        {
+          "slot": 1,
+          "x": 1250,
+          "y": 0,
+          "z": 2200,
+          "byte0": 0,
+          "byte10_11": "5800",
+          "area_id": "6d01",
+          "offset": "0x242E980"
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x242E940"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Vampire"
+        },
+        {
+          "count": 2,
+          "slot": 3,
+          "monster": "Lesser-Vampire"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": -300,
+          "y": 0,
+          "z": 450,
+          "byte0": 0,
+          "byte10_11": "5900",
+          "area_id": "1200",
+          "offset": "0x242E9A4"
+        },
+        {
+          "slot": 1,
+          "x": -150,
+          "y": 0,
+          "z": 550,
+          "byte0": 0,
+          "byte10_11": "5900",
+          "area_id": "7301",
+          "offset": "0x242E9C4"
+        },
+        {
+          "slot": 3,
+          "x": -50,
+          "y": 0,
+          "z": 900,
+          "byte0": 0,
+          "byte10_11": "5900",
+          "area_id": "7401",
+          "offset": "0x242E9E4"
+        },
+        {
+          "slot": 3,
+          "x": -150,
+          "y": 0,
+          "z": 1100,
+          "byte0": 0,
+          "byte10_11": "5900",
+          "area_id": "7401",
+          "offset": "0x242EA04"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x242E9A4"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 2,
+          "monster": "Shadow"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -300,
+          "y": 0,
+          "z": 450,
+          "byte0": 0,
+          "byte10_11": "5900",
+          "area_id": "1200",
+          "offset": "0x242EA28"
+        },
+        {
+          "slot": 2,
+          "x": -150,
+          "y": 0,
+          "z": 550,
+          "byte0": 0,
+          "byte10_11": "5900",
+          "area_id": "7301",
+          "offset": "0x242EA48"
+        },
+        {
+          "slot": 2,
+          "x": -50,
+          "y": 0,
+          "z": 900,
+          "byte0": 0,
+          "byte10_11": "5900",
+          "area_id": "7401",
+          "offset": "0x242EA68"
+        },
+        {
+          "slot": 2,
+          "x": -150,
+          "y": 0,
+          "z": 1100,
+          "byte0": 0,
+          "byte10_11": "5900",
+          "area_id": "7401",
+          "offset": "0x242EA88"
+        }
+      ],
+      "suffix": "00000a00",
+      "offset": "0x242EA28"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Red-Knight"
+        },
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Vampire"
+        },
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Shadow"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": -300,
+          "y": 0,
+          "z": 450,
+          "byte0": 0,
+          "byte10_11": "5900",
+          "area_id": "1200",
+          "offset": "0x242EAAC"
+        },
+        {
+          "slot": 0,
+          "x": -150,
+          "y": 0,
+          "z": 550,
+          "byte0": 0,
+          "byte10_11": "5900",
+          "area_id": "7301",
+          "offset": "0x242EACC"
+        },
+        {
+          "slot": 1,
+          "x": -50,
+          "y": 0,
+          "z": 900,
+          "byte0": 0,
+          "byte10_11": "5900",
+          "area_id": "7401",
+          "offset": "0x242EAEC"
+        },
+        {
+          "slot": 2,
+          "x": -150,
+          "y": 0,
+          "z": 1100,
+          "byte0": 0,
+          "byte10_11": "5900",
+          "area_id": "7401",
+          "offset": "0x242EB0C"
+        }
+      ],
+      "suffix": "00000a00",
+      "offset": "0x242EAAC"
+    },
+    {
+      "total": 5,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 1,
+          "monster": "Vampire"
+        },
+        {
+          "count": 2,
+          "slot": 2,
+          "monster": "Shadow"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": -1700,
+          "y": 0,
+          "z": 2300,
+          "byte0": 0,
+          "byte10_11": "5a00",
+          "area_id": "8801",
+          "offset": "0x242EB30"
+        },
+        {
+          "slot": 1,
+          "x": -1700,
+          "y": 0,
+          "z": 1900,
+          "byte0": 0,
+          "byte10_11": "5a00",
+          "area_id": "8601",
+          "offset": "0x242EB50"
+        },
+        {
+          "slot": 1,
+          "x": -1300,
+          "y": 0,
+          "z": 2200,
+          "byte0": 0,
+          "byte10_11": "5a00",
+          "area_id": "8401",
+          "offset": "0x242EB70"
+        },
+        {
+          "slot": 2,
+          "x": -100,
+          "y": 0,
+          "z": 3500,
+          "byte0": 0,
+          "byte10_11": "5a00",
+          "area_id": "7f01",
+          "offset": "0x242EB90"
+        },
+        {
+          "slot": 2,
+          "x": -500,
+          "y": 0,
+          "z": 3500,
+          "byte0": 0,
+          "byte10_11": "5a00",
+          "area_id": "7d01",
+          "offset": "0x242EBB0"
+        }
+      ],
+      "suffix": "00000a00",
+      "offset": "0x242EB30"
+    },
+    {
+      "total": 5,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 0,
+          "monster": "Red-Knight"
+        },
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Vampire"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": -1700,
+          "y": 0,
+          "z": 2300,
+          "byte0": 0,
+          "byte10_11": "5a00",
+          "area_id": "8801",
+          "offset": "0x242EBD4"
+        },
+        {
+          "slot": 0,
+          "x": -1700,
+          "y": 0,
+          "z": 1900,
+          "byte0": 0,
+          "byte10_11": "5a00",
+          "area_id": "8601",
+          "offset": "0x242EBF4"
+        },
+        {
+          "slot": 0,
+          "x": -1300,
+          "y": 0,
+          "z": 2200,
+          "byte0": 0,
+          "byte10_11": "5a00",
+          "area_id": "8401",
+          "offset": "0x242EC14"
+        },
+        {
+          "slot": 1,
+          "x": -100,
+          "y": 0,
+          "z": 3500,
+          "byte0": 0,
+          "byte10_11": "5a00",
+          "area_id": "7f01",
+          "offset": "0x242EC34"
+        },
+        {
+          "slot": 1,
+          "x": -500,
+          "y": 0,
+          "z": 3500,
+          "byte0": 0,
+          "byte10_11": "5a00",
+          "area_id": "7d01",
+          "offset": "0x242EC54"
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x242EBD4"
+    },
+    {
+      "total": 5,
+      "composition": [
+        {
+          "count": 5,
+          "slot": 2,
+          "monster": "Shadow"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -1700,
+          "y": 0,
+          "z": 2300,
+          "byte0": 0,
+          "byte10_11": "5a00",
+          "area_id": "8801",
+          "offset": "0x242EC78"
+        },
+        {
+          "slot": 2,
+          "x": -1700,
+          "y": 0,
+          "z": 1900,
+          "byte0": 0,
+          "byte10_11": "5a00",
+          "area_id": "8601",
+          "offset": "0x242EC98"
+        },
+        {
+          "slot": 2,
+          "x": -1300,
+          "y": 0,
+          "z": 2200,
+          "byte0": 0,
+          "byte10_11": "5a00",
+          "area_id": "8401",
+          "offset": "0x242ECB8"
+        },
+        {
+          "slot": 2,
+          "x": -100,
+          "y": 0,
+          "z": 3500,
+          "byte0": 0,
+          "byte10_11": "5a00",
+          "area_id": "7f01",
+          "offset": "0x242ECD8"
+        },
+        {
+          "slot": 2,
+          "x": -500,
+          "y": 0,
+          "z": 3500,
+          "byte0": 0,
+          "byte10_11": "5a00",
+          "area_id": "7d01",
+          "offset": "0x242ECF8"
+        }
+      ],
+      "suffix": "00000a00",
+      "offset": "0x242EC78"
+    },
+    {
+      "total": 5,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 0,
+          "monster": "Red-Knight"
+        },
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Vampire"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": -800,
+          "y": 1400,
+          "z": -150,
+          "byte0": 0,
+          "byte10_11": "5b00",
+          "area_id": "6803",
+          "offset": "0x242ED1C"
+        },
+        {
+          "slot": 0,
+          "x": -450,
+          "y": 1550,
+          "z": 100,
+          "byte0": 0,
+          "byte10_11": "5b00",
+          "area_id": "6a03",
+          "offset": "0x242ED3C"
+        },
+        {
+          "slot": 0,
+          "x": -150,
+          "y": 1550,
+          "z": 100,
+          "byte0": 0,
+          "byte10_11": "5b00",
+          "area_id": "6c03",
+          "offset": "0x242ED5C"
+        },
+        {
+          "slot": 0,
+          "x": 200,
+          "y": 1400,
+          "z": -150,
+          "byte0": 0,
+          "byte10_11": "5b00",
+          "area_id": "6603",
+          "offset": "0x242ED7C"
+        },
+        {
+          "slot": 1,
+          "x": -300,
+          "y": 1600,
+          "z": 100,
+          "byte0": 0,
+          "byte10_11": "5b00",
+          "area_id": "6d03",
+          "offset": "0x242ED9C"
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x242ED1C"
+    },
+    {
+      "total": 5,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Red-Knight"
+        },
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Vampire"
+        },
+        {
+          "count": 2,
+          "slot": 2,
+          "monster": "Shadow"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -800,
+          "y": 1400,
+          "z": -150,
+          "byte0": 0,
+          "byte10_11": "5b00",
+          "area_id": "6803",
+          "offset": "0x242EDC0"
+        },
+        {
+          "slot": 2,
+          "x": 200,
+          "y": 1400,
+          "z": -150,
+          "byte0": 0,
+          "byte10_11": "5b00",
+          "area_id": "6603",
+          "offset": "0x242EDE0"
+        },
+        {
+          "slot": 0,
+          "x": -450,
+          "y": 1550,
+          "z": 100,
+          "byte0": 0,
+          "byte10_11": "5b00",
+          "area_id": "6a03",
+          "offset": "0x242EE00"
+        },
+        {
+          "slot": 0,
+          "x": -150,
+          "y": 1550,
+          "z": 100,
+          "byte0": 0,
+          "byte10_11": "5b00",
+          "area_id": "6c03",
+          "offset": "0x242EE20"
+        },
+        {
+          "slot": 1,
+          "x": -300,
+          "y": 1600,
+          "z": 100,
+          "byte0": 0,
+          "byte10_11": "5b00",
+          "area_id": "6d03",
+          "offset": "0x242EE40"
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x242EDC0"
+    },
+    {
+      "total": 5,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Red-Knight"
+        },
+        {
+          "count": 3,
+          "slot": 1,
+          "monster": "Vampire"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": -450,
+          "y": 1550,
+          "z": 100,
+          "byte0": 0,
+          "byte10_11": "5b00",
+          "area_id": "6a03",
+          "offset": "0x242EE64"
+        },
+        {
+          "slot": 0,
+          "x": -150,
+          "y": 1550,
+          "z": 100,
+          "byte0": 0,
+          "byte10_11": "5b00",
+          "area_id": "6c03",
+          "offset": "0x242EE84"
+        },
+        {
+          "slot": 1,
+          "x": -800,
+          "y": 1400,
+          "z": -150,
+          "byte0": 0,
+          "byte10_11": "5b00",
+          "area_id": "6803",
+          "offset": "0x242EEA4"
+        },
+        {
+          "slot": 1,
+          "x": 200,
+          "y": 1400,
+          "z": -150,
+          "byte0": 0,
+          "byte10_11": "5b00",
+          "area_id": "6603",
+          "offset": "0x242EEC4"
+        },
+        {
+          "slot": 1,
+          "x": -300,
+          "y": 1600,
+          "z": 100,
+          "byte0": 0,
+          "byte10_11": "5b00",
+          "area_id": "6d03",
+          "offset": "0x242EEE4"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x242EE64"
+    },
+    {
+      "total": 5,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 0,
+          "monster": "Red-Knight"
+        },
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Vampire"
+        },
+        {
+          "count": 2,
+          "slot": 2,
+          "monster": "Shadow"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": -450,
+          "y": 1550,
+          "z": 100,
+          "byte0": 0,
+          "byte10_11": "5b00",
+          "area_id": "6a03",
+          "offset": "0x242EF08"
+        },
+        {
+          "slot": 1,
+          "x": -150,
+          "y": 1550,
+          "z": 100,
+          "byte0": 0,
+          "byte10_11": "5b00",
+          "area_id": "6c03",
+          "offset": "0x242EF28"
+        },
+        {
+          "slot": 2,
+          "x": -800,
+          "y": 1400,
+          "z": -150,
+          "byte0": 0,
+          "byte10_11": "5b00",
+          "area_id": "6803",
+          "offset": "0x242EF48"
+        },
+        {
+          "slot": 2,
+          "x": 200,
+          "y": 1400,
+          "z": -150,
+          "byte0": 0,
+          "byte10_11": "5b00",
+          "area_id": "6603",
+          "offset": "0x242EF68"
+        },
+        {
+          "slot": 0,
+          "x": -300,
+          "y": 1600,
+          "z": 100,
+          "byte0": 0,
+          "byte10_11": "5b00",
+          "area_id": "6d03",
+          "offset": "0x242EF88"
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x242EF08"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 0,
+          "monster": "Red-Knight"
+        },
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Vampire"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": 1950,
+          "y": 1400,
+          "z": 50,
+          "byte0": 0,
+          "byte10_11": "5d00",
+          "area_id": "5403",
+          "offset": "0x242F23C"
+        },
+        {
+          "slot": 1,
+          "x": 1650,
+          "y": 1400,
+          "z": -250,
+          "byte0": 0,
+          "byte10_11": "5d00",
+          "area_id": "5403",
+          "offset": "0x242F25C"
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x242F23C"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 2,
+          "monster": "Shadow"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 1950,
+          "y": 1400,
+          "z": 50,
+          "byte0": 0,
+          "byte10_11": "5d00",
+          "area_id": "5403",
+          "offset": "0x242F280"
+        },
+        {
+          "slot": 2,
+          "x": 1800,
+          "y": 1400,
+          "z": -100,
+          "byte0": 0,
+          "byte10_11": "5d00",
+          "area_id": "5403",
+          "offset": "0x242F2A0"
+        },
+        {
+          "slot": 2,
+          "x": 1650,
+          "y": 1400,
+          "z": -250,
+          "byte0": 0,
+          "byte10_11": "5d00",
+          "area_id": "5403",
+          "offset": "0x242F2C0"
+        }
+      ],
+      "suffix": "00000a00",
+      "offset": "0x242F280"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 0,
+          "monster": "Red-Knight"
+        },
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Vampire"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": -2550,
+          "y": 1400,
+          "z": 50,
+          "byte0": 0,
+          "byte10_11": "5e00",
+          "area_id": "5703",
+          "offset": "0x242F2E4"
+        },
+        {
+          "slot": 1,
+          "x": -2150,
+          "y": 1400,
+          "z": -350,
+          "byte0": 0,
+          "byte10_11": "5e00",
+          "area_id": "5703",
+          "offset": "0x242F304"
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x242F2E4"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 2,
+          "monster": "Shadow"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -2150,
+          "y": 1400,
+          "z": -350,
+          "byte0": 0,
+          "byte10_11": "5e00",
+          "area_id": "5703",
+          "offset": "0x242F328"
+        },
+        {
+          "slot": 2,
+          "x": -2550,
+          "y": 1400,
+          "z": 50,
+          "byte0": 0,
+          "byte10_11": "5e00",
+          "area_id": "5703",
+          "offset": "0x242F348"
+        },
+        {
+          "slot": 2,
+          "x": -2400,
+          "y": 1400,
+          "z": -100,
+          "byte0": 0,
+          "byte10_11": "5e00",
+          "area_id": "5703",
+          "offset": "0x242F368"
+        }
+      ],
+      "suffix": "00000a00",
+      "offset": "0x242F328"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 0,
+          "monster": "Red-Knight"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": 500,
+          "y": 0,
+          "z": 500,
+          "byte0": 0,
+          "byte10_11": "5f00",
+          "area_id": "9400",
+          "offset": "0x242F38C"
+        },
+        {
+          "slot": 0,
+          "x": 1500,
+          "y": 0,
+          "z": 700,
+          "byte0": 0,
+          "byte10_11": "5f00",
+          "area_id": "9e03",
+          "offset": "0x242F3AC"
+        },
+        {
+          "slot": 0,
+          "x": 1500,
+          "y": 0,
+          "z": 1100,
+          "byte0": 0,
+          "byte10_11": "5f00",
+          "area_id": "9603",
+          "offset": "0x242F3CC"
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x242F38C"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 1,
+          "monster": "Vampire"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 500,
+          "y": 0,
+          "z": 500,
+          "byte0": 0,
+          "byte10_11": "5f00",
+          "area_id": "9400",
+          "offset": "0x242F3F0"
+        },
+        {
+          "slot": 1,
+          "x": 1500,
+          "y": 0,
+          "z": 700,
+          "byte0": 0,
+          "byte10_11": "5f00",
+          "area_id": "9e03",
+          "offset": "0x242F410"
+        },
+        {
+          "slot": 1,
+          "x": 1500,
+          "y": 0,
+          "z": 1100,
+          "byte0": 0,
+          "byte10_11": "5f00",
+          "area_id": "9603",
+          "offset": "0x242F430"
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x242F3F0"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 2,
+          "monster": "Shadow"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 500,
+          "y": 0,
+          "z": 500,
+          "byte0": 0,
+          "byte10_11": "5f00",
+          "area_id": "9400",
+          "offset": "0x242F454"
+        },
+        {
+          "slot": 2,
+          "x": 1500,
+          "y": 0,
+          "z": 700,
+          "byte0": 0,
+          "byte10_11": "5f00",
+          "area_id": "9e03",
+          "offset": "0x242F474"
+        },
+        {
+          "slot": 2,
+          "x": 1500,
+          "y": 0,
+          "z": 1100,
+          "byte0": 0,
+          "byte10_11": "5f00",
+          "area_id": "9603",
+          "offset": "0x242F494"
+        }
+      ],
+      "suffix": "00000a00",
+      "offset": "0x242F454"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Red-Knight"
+        },
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Vampire"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": 1500,
+          "y": 0,
+          "z": 700,
+          "byte0": 0,
+          "byte10_11": "5f00",
+          "area_id": "9e03",
+          "offset": "0x242F4B8"
+        },
+        {
+          "slot": 0,
+          "x": 1500,
+          "y": 0,
+          "z": 1100,
+          "byte0": 0,
+          "byte10_11": "5f00",
+          "area_id": "9603",
+          "offset": "0x242F4D8"
+        },
+        {
+          "slot": 1,
+          "x": 500,
+          "y": 0,
+          "z": 500,
+          "byte0": 0,
+          "byte10_11": "5f00",
+          "area_id": "9400",
+          "offset": "0x242F4F8"
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x242F4B8"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Vampire"
+        },
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Shadow"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 1500,
+          "y": 0,
+          "z": 700,
+          "byte0": 0,
+          "byte10_11": "5f00",
+          "area_id": "9e03",
+          "offset": "0x242F51C"
+        },
+        {
+          "slot": 1,
+          "x": 1500,
+          "y": 0,
+          "z": 1100,
+          "byte0": 0,
+          "byte10_11": "5f00",
+          "area_id": "9603",
+          "offset": "0x242F53C"
+        },
+        {
+          "slot": 2,
+          "x": 500,
+          "y": 0,
+          "z": 500,
+          "byte0": 0,
+          "byte10_11": "5f00",
+          "area_id": "9400",
+          "offset": "0x242F55C"
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x242F51C"
+    },
+    {
+      "total": 5,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 0,
+          "monster": "Red-Knight"
+        },
+        {
+          "count": 2,
+          "slot": 2,
+          "monster": "Shadow"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": 3300,
+          "y": 400,
+          "z": -3900,
+          "byte0": 0,
+          "byte10_11": "6200",
+          "area_id": "a700",
+          "offset": "0x242FAA0"
+        },
+        {
+          "slot": 0,
+          "x": 3700,
+          "y": 400,
+          "z": -3900,
+          "byte0": 0,
+          "byte10_11": "6200",
+          "area_id": "9004",
+          "offset": "0x242FAC0"
+        },
+        {
+          "slot": 0,
+          "x": 4100,
+          "y": 400,
+          "z": -3900,
+          "byte0": 0,
+          "byte10_11": "6200",
+          "area_id": "a600",
+          "offset": "0x242FAE0"
+        },
+        {
+          "slot": 2,
+          "x": 4100,
+          "y": 0,
+          "z": -4400,
+          "byte0": 0,
+          "byte10_11": "6200",
+          "area_id": "7302",
+          "offset": "0x242FB00"
+        },
+        {
+          "slot": 2,
+          "x": 3300,
+          "y": 0,
+          "z": -4400,
+          "byte0": 0,
+          "byte10_11": "6200",
+          "area_id": "7102",
+          "offset": "0x242FB20"
+        }
+      ],
+      "suffix": "00000a00",
+      "offset": "0x242FAA0"
+    }
+  ],
+  "zone_spawns_area_start": "0x242FFA0",
+  "zone_spawns_area_bytes": 8164,
+  "original_total_zone_spawn_slots": 95,
+  "zone_spawn_count": 18,
+  "zone_spawns": [
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Vampire"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 3700,
+          "y": 5,
+          "z": -5700,
+          "byte0": 128,
+          "byte10_11": "0000",
+          "area_id": "3502",
+          "offset": "0x242FFA0"
+        },
+        {
+          "slot": 1,
+          "x": 100,
+          "y": 5,
+          "z": 5100,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "1e02",
+          "offset": "0x242FFC0"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x242FFA0"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 2,
+          "monster": "Shadow"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 2100,
+          "y": 0,
+          "z": 900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2c04",
+          "offset": "0x24301E0"
+        },
+        {
+          "slot": 2,
+          "x": -2700,
+          "y": 0,
+          "z": 900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2a04",
+          "offset": "0x2430200"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x24301E0"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Vampire"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": -1500,
+          "y": 5,
+          "z": 3300,
+          "byte0": 15,
+          "byte10_11": "0000",
+          "area_id": "3f02",
+          "offset": "0x2430224"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2430224"
+    },
+    {
+      "total": 28,
+      "composition": [
+        {
+          "count": 14,
+          "slot": 0,
+          "monster": "Red-Knight"
+        },
+        {
+          "count": 14,
+          "slot": 2,
+          "monster": "Shadow"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -1700,
+          "y": 0,
+          "z": 3900,
+          "byte0": 200,
+          "byte10_11": "0000",
+          "area_id": "2f04",
+          "offset": "0x24302C4"
+        },
+        {
+          "slot": 2,
+          "x": -1300,
+          "y": 0,
+          "z": 3900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2e04",
+          "offset": "0x24302E4"
+        },
+        {
+          "slot": 2,
+          "x": -900,
+          "y": 0,
+          "z": 3500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3504",
+          "offset": "0x2430304"
+        },
+        {
+          "slot": 2,
+          "x": -900,
+          "y": 0,
+          "z": 3100,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3404",
+          "offset": "0x2430324"
+        },
+        {
+          "slot": 2,
+          "x": -1300,
+          "y": 0,
+          "z": 2700,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3304",
+          "offset": "0x2430344"
+        },
+        {
+          "slot": 2,
+          "x": -1700,
+          "y": 0,
+          "z": 2700,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3204",
+          "offset": "0x2430364"
+        },
+        {
+          "slot": 2,
+          "x": -2100,
+          "y": 0,
+          "z": 3100,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3104",
+          "offset": "0x2430384"
+        },
+        {
+          "slot": 2,
+          "x": -2100,
+          "y": 0,
+          "z": 3500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3004",
+          "offset": "0x24303A4"
+        },
+        {
+          "slot": 0,
+          "x": -1700,
+          "y": 200,
+          "z": 3900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2f04",
+          "offset": "0x24303C4"
+        },
+        {
+          "slot": 0,
+          "x": -1300,
+          "y": 200,
+          "z": 3900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2e04",
+          "offset": "0x24303E4"
+        },
+        {
+          "slot": 0,
+          "x": -900,
+          "y": 200,
+          "z": 3500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3504",
+          "offset": "0x2430404"
+        },
+        {
+          "slot": 0,
+          "x": -900,
+          "y": 200,
+          "z": 3100,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3404",
+          "offset": "0x2430424"
+        },
+        {
+          "slot": 0,
+          "x": -1300,
+          "y": 200,
+          "z": 2700,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3304",
+          "offset": "0x2430444"
+        },
+        {
+          "slot": 0,
+          "x": -1700,
+          "y": 200,
+          "z": 2700,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3204",
+          "offset": "0x2430464"
+        },
+        {
+          "slot": 0,
+          "x": -2100,
+          "y": 200,
+          "z": 3100,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3104",
+          "offset": "0x2430484"
+        },
+        {
+          "slot": 0,
+          "x": -2100,
+          "y": 200,
+          "z": 3500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3004",
+          "offset": "0x24304A4"
+        },
+        {
+          "slot": 2,
+          "x": 3220,
+          "y": 400,
+          "z": -3840,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a700",
+          "offset": "0x24304C4"
+        },
+        {
+          "slot": 2,
+          "x": 4180,
+          "y": 400,
+          "z": -3840,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a600",
+          "offset": "0x24304E4"
+        },
+        {
+          "slot": 2,
+          "x": 3560,
+          "y": 220,
+          "z": -4980,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6a02",
+          "offset": "0x2430504"
+        },
+        {
+          "slot": 2,
+          "x": 3820,
+          "y": 0,
+          "z": -5160,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7c02",
+          "offset": "0x2430524"
+        },
+        {
+          "slot": 2,
+          "x": 3580,
+          "y": 0,
+          "z": -5160,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7002",
+          "offset": "0x2430544"
+        },
+        {
+          "slot": 2,
+          "x": 3840,
+          "y": 220,
+          "z": -4980,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7d02",
+          "offset": "0x2430564"
+        },
+        {
+          "slot": 0,
+          "x": 3220,
+          "y": 580,
+          "z": -3860,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a700",
+          "offset": "0x2430584"
+        },
+        {
+          "slot": 0,
+          "x": 4180,
+          "y": 580,
+          "z": -3860,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a600",
+          "offset": "0x24305A4"
+        },
+        {
+          "slot": 0,
+          "x": 3540,
+          "y": 400,
+          "z": -4980,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6a02",
+          "offset": "0x24305C4"
+        },
+        {
+          "slot": 0,
+          "x": 3820,
+          "y": 180,
+          "z": -5140,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7c02",
+          "offset": "0x24305E4"
+        },
+        {
+          "slot": 0,
+          "x": 3580,
+          "y": 180,
+          "z": -5140,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7002",
+          "offset": "0x2430604"
+        },
+        {
+          "slot": 0,
+          "x": 3860,
+          "y": 400,
+          "z": -4980,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7d02",
+          "offset": "0x2430624"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x24302C4"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 2,
+          "monster": "Shadow"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -1300,
+          "y": 0,
+          "z": 3500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3604",
+          "offset": "0x24306E4"
+        },
+        {
+          "slot": 2,
+          "x": -1300,
+          "y": 0,
+          "z": 3100,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3904",
+          "offset": "0x2430704"
+        },
+        {
+          "slot": 2,
+          "x": -1700,
+          "y": 0,
+          "z": 3100,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3804",
+          "offset": "0x2430724"
+        },
+        {
+          "slot": 2,
+          "x": -1700,
+          "y": 0,
+          "z": 3500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3704",
+          "offset": "0x2430744"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x24306E4"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 1,
+          "monster": "Vampire"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": -300,
+          "y": 5,
+          "z": -100,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "0a03",
+          "offset": "0x24307A8"
+        },
+        {
+          "slot": 1,
+          "x": 3100,
+          "y": 405,
+          "z": -3300,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "fd02",
+          "offset": "0x24307C8"
+        },
+        {
+          "slot": 1,
+          "x": 900,
+          "y": 5,
+          "z": 3300,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "f702",
+          "offset": "0x24307E8"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x24307A8"
+    },
+    {
+      "total": 16,
+      "composition": [
+        {
+          "count": 8,
+          "slot": 0,
+          "monster": "Red-Knight"
+        },
+        {
+          "count": 8,
+          "slot": 2,
+          "monster": "Shadow"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 700,
+          "y": 0,
+          "z": 3900,
+          "byte0": 200,
+          "byte10_11": "0000",
+          "area_id": "4304",
+          "offset": "0x2430888"
+        },
+        {
+          "slot": 2,
+          "x": 1100,
+          "y": 0,
+          "z": 3900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "4204",
+          "offset": "0x24308A8"
+        },
+        {
+          "slot": 2,
+          "x": 1500,
+          "y": 0,
+          "z": 3500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "4904",
+          "offset": "0x24308C8"
+        },
+        {
+          "slot": 2,
+          "x": 1500,
+          "y": 0,
+          "z": 3100,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "4804",
+          "offset": "0x24308E8"
+        },
+        {
+          "slot": 2,
+          "x": 1100,
+          "y": 0,
+          "z": 2700,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "4704",
+          "offset": "0x2430908"
+        },
+        {
+          "slot": 2,
+          "x": 700,
+          "y": 0,
+          "z": 2700,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "4604",
+          "offset": "0x2430928"
+        },
+        {
+          "slot": 2,
+          "x": 300,
+          "y": 0,
+          "z": 3100,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "4504",
+          "offset": "0x2430948"
+        },
+        {
+          "slot": 2,
+          "x": 300,
+          "y": 0,
+          "z": 3500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "4404",
+          "offset": "0x2430968"
+        },
+        {
+          "slot": 0,
+          "x": 700,
+          "y": 200,
+          "z": 3900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "4304",
+          "offset": "0x2430988"
+        },
+        {
+          "slot": 0,
+          "x": 1100,
+          "y": 200,
+          "z": 3900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "4204",
+          "offset": "0x24309A8"
+        },
+        {
+          "slot": 0,
+          "x": 1500,
+          "y": 200,
+          "z": 3500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "4904",
+          "offset": "0x24309C8"
+        },
+        {
+          "slot": 0,
+          "x": 1500,
+          "y": 200,
+          "z": 3100,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "4804",
+          "offset": "0x24309E8"
+        },
+        {
+          "slot": 0,
+          "x": 1100,
+          "y": 200,
+          "z": 2700,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "4704",
+          "offset": "0x2430A08"
+        },
+        {
+          "slot": 0,
+          "x": 700,
+          "y": 200,
+          "z": 2700,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "4604",
+          "offset": "0x2430A28"
+        },
+        {
+          "slot": 0,
+          "x": 300,
+          "y": 200,
+          "z": 3100,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "4504",
+          "offset": "0x2430A48"
+        },
+        {
+          "slot": 0,
+          "x": 300,
+          "y": 200,
+          "z": 3500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "4404",
+          "offset": "0x2430A68"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2430888"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 2,
+          "monster": "Shadow"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 900,
+          "y": 0,
+          "z": 3500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3e04",
+          "offset": "0x2430AC8"
+        },
+        {
+          "slot": 2,
+          "x": 700,
+          "y": 0,
+          "z": 3300,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "4004",
+          "offset": "0x2430AE8"
+        },
+        {
+          "slot": 2,
+          "x": 1100,
+          "y": 0,
+          "z": 3300,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3f04",
+          "offset": "0x2430B08"
+        },
+        {
+          "slot": 2,
+          "x": 900,
+          "y": 0,
+          "z": 3100,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "4104",
+          "offset": "0x2430B28"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2430AC8"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Vampire"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 4300,
+          "y": 405,
+          "z": -3300,
+          "byte0": 16,
+          "byte10_11": "0000",
+          "area_id": "db02",
+          "offset": "0x2430B4C"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2430B4C"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 2,
+          "monster": "Shadow"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -2500,
+          "y": 1400,
+          "z": 1180,
+          "byte0": 32,
+          "byte10_11": "0000",
+          "area_id": "6100",
+          "offset": "0x2430D10"
+        },
+        {
+          "slot": 2,
+          "x": 1900,
+          "y": 1400,
+          "z": 1180,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6900",
+          "offset": "0x2430D30"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2430D10"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Vampire"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 2100,
+          "y": 1605,
+          "z": 3300,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a302",
+          "offset": "0x2430DB0"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2430DB0"
+    },
+    {
+      "total": 14,
+      "composition": [
+        {
+          "count": 6,
+          "slot": 0,
+          "monster": "Red-Knight"
+        },
+        {
+          "count": 8,
+          "slot": 2,
+          "monster": "Shadow"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 2100,
+          "y": 1400,
+          "z": 1150,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "4300",
+          "offset": "0x2430EB0"
+        },
+        {
+          "slot": 2,
+          "x": -2700,
+          "y": 1400,
+          "z": 1150,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3400",
+          "offset": "0x2430ED0"
+        },
+        {
+          "slot": 0,
+          "x": 2100,
+          "y": 1400,
+          "z": 1130,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "4300",
+          "offset": "0x2430EF0"
+        },
+        {
+          "slot": 0,
+          "x": -2700,
+          "y": 1400,
+          "z": 1130,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3400",
+          "offset": "0x2430F10"
+        },
+        {
+          "slot": 2,
+          "x": 2100,
+          "y": 1400,
+          "z": 900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2c04",
+          "offset": "0x2430F30"
+        },
+        {
+          "slot": 2,
+          "x": -2700,
+          "y": 1400,
+          "z": 900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2a04",
+          "offset": "0x2430F50"
+        },
+        {
+          "slot": 2,
+          "x": 2020,
+          "y": 1480,
+          "z": 900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7e02",
+          "offset": "0x2430F70"
+        },
+        {
+          "slot": 2,
+          "x": 2180,
+          "y": 1480,
+          "z": 900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7e02",
+          "offset": "0x2430F90"
+        },
+        {
+          "slot": 2,
+          "x": -2780,
+          "y": 1480,
+          "z": 900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "8302",
+          "offset": "0x2430FB0"
+        },
+        {
+          "slot": 2,
+          "x": -2620,
+          "y": 1480,
+          "z": 900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "8302",
+          "offset": "0x2430FD0"
+        },
+        {
+          "slot": 0,
+          "x": 2020,
+          "y": 1510,
+          "z": 900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7e02",
+          "offset": "0x2430FF0"
+        },
+        {
+          "slot": 0,
+          "x": 2180,
+          "y": 1510,
+          "z": 900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7e02",
+          "offset": "0x2431010"
+        },
+        {
+          "slot": 0,
+          "x": -2780,
+          "y": 1510,
+          "z": 900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "8302",
+          "offset": "0x2431030"
+        },
+        {
+          "slot": 0,
+          "x": -2620,
+          "y": 1510,
+          "z": 900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "8302",
+          "offset": "0x2431050"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2430EB0"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 2,
+          "monster": "Shadow"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -100,
+          "y": 0,
+          "z": 700,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7301",
+          "offset": "0x2431594"
+        },
+        {
+          "slot": 2,
+          "x": 1100,
+          "y": 40,
+          "z": 2300,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6f01",
+          "offset": "0x24315B4"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2431594"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 2,
+          "monster": "Shadow"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -100,
+          "y": 0,
+          "z": 700,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7301",
+          "offset": "0x24319B8"
+        },
+        {
+          "slot": 2,
+          "x": 1100,
+          "y": 40,
+          "z": 2300,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6f01",
+          "offset": "0x24319D8"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x24319B8"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Shadow"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -100,
+          "y": 0,
+          "z": 700,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7301",
+          "offset": "0x2431BBC"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2431BBC"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 1,
+          "monster": "Vampire"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 100,
+          "y": 605,
+          "z": -1500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a604",
+          "offset": "0x2431D60"
+        },
+        {
+          "slot": 1,
+          "x": -300,
+          "y": 605,
+          "z": -1500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a604",
+          "offset": "0x2431D80"
+        },
+        {
+          "slot": 1,
+          "x": -700,
+          "y": 605,
+          "z": -1500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a604",
+          "offset": "0x2431DA0"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2431D60"
+    },
+    {
+      "total": 8,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 0,
+          "monster": "Red-Knight"
+        },
+        {
+          "count": 4,
+          "slot": 2,
+          "monster": "Shadow"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -420,
+          "y": 1600,
+          "z": 160,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6a03",
+          "offset": "0x2431E40"
+        },
+        {
+          "slot": 2,
+          "x": -180,
+          "y": 1600,
+          "z": 160,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6c03",
+          "offset": "0x2431E60"
+        },
+        {
+          "slot": 2,
+          "x": 560,
+          "y": 1400,
+          "z": -380,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6603",
+          "offset": "0x2431E80"
+        },
+        {
+          "slot": 2,
+          "x": -1160,
+          "y": 1400,
+          "z": -380,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6903",
+          "offset": "0x2431EA0"
+        },
+        {
+          "slot": 0,
+          "x": -420,
+          "y": 1780,
+          "z": 140,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6a03",
+          "offset": "0x2431EC0"
+        },
+        {
+          "slot": 0,
+          "x": -180,
+          "y": 1780,
+          "z": 140,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6c03",
+          "offset": "0x2431EE0"
+        },
+        {
+          "slot": 0,
+          "x": 540,
+          "y": 1580,
+          "z": -380,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6603",
+          "offset": "0x2431F00"
+        },
+        {
+          "slot": 0,
+          "x": -1140,
+          "y": 1580,
+          "z": -380,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6903",
+          "offset": "0x2431F20"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2431E40"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Shadow"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -180,
+          "y": 1600,
+          "z": 160,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6c03",
+          "offset": "0x2431F60"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2431F60"
+    }
   ]
 }

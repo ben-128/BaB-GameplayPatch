@@ -14,5 +14,199 @@
   "original_total_slots": 0,
   "area_id": "0000",
   "formation_count": 0,
-  "formations": []
+  "formations": [],
+  "_placed_spawns": "--- placed spawns (per-record offsets) ---",
+  "spawn_points_area_start": "0xF88310",
+  "spawn_points_area_bytes": 140,
+  "original_total_spawn_slots": 4,
+  "spawn_point_count": 3,
+  "spawn_points": [
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Dragon-Puppy"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 450,
+          "y": 0,
+          "z": 1100,
+          "byte0": 6,
+          "byte10_11": "1f00",
+          "area_id": "3201",
+          "offset": "0xF88310"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0xF88310"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Giant-Centipede"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": -637,
+          "y": 0,
+          "z": -1983,
+          "byte0": 0,
+          "byte10_11": "2000",
+          "area_id": "e800",
+          "offset": "0xF88334"
+        },
+        {
+          "slot": 1,
+          "x": -376,
+          "y": 0,
+          "z": -1854,
+          "byte0": 0,
+          "byte10_11": "2000",
+          "area_id": "ea00",
+          "offset": "0xF88354"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0xF88334"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 4,
+          "monster": "Cave-Bear"
+        }
+      ],
+      "records": [
+        {
+          "slot": 4,
+          "x": 1086,
+          "y": 0,
+          "z": 2444,
+          "byte0": 0,
+          "byte10_11": "2100",
+          "area_id": "2101",
+          "offset": "0xF88378"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0xF88378"
+    }
+  ],
+  "zone_spawns_area_start": "0xF887B4",
+  "zone_spawns_area_bytes": 260,
+  "original_total_zone_spawn_slots": 8,
+  "zone_spawn_count": 1,
+  "zone_spawns": [
+    {
+      "total": 8,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 0,
+          "monster": "Giant-Scorpion"
+        },
+        {
+          "count": 4,
+          "slot": 2,
+          "monster": "Dragon-Puppy"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -4514,
+          "y": 100,
+          "z": 5200,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6d00",
+          "offset": "0xF887B4"
+        },
+        {
+          "slot": 2,
+          "x": -4352,
+          "y": 100,
+          "z": 5200,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "0500",
+          "offset": "0xF887D4"
+        },
+        {
+          "slot": 2,
+          "x": 1210,
+          "y": 100,
+          "z": 3580,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6900",
+          "offset": "0xF887F4"
+        },
+        {
+          "slot": 2,
+          "x": 1060,
+          "y": 100,
+          "z": 3580,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6a00",
+          "offset": "0xF88814"
+        },
+        {
+          "slot": 0,
+          "x": -4524,
+          "y": 145,
+          "z": 5180,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6e00",
+          "offset": "0xF88834"
+        },
+        {
+          "slot": 0,
+          "x": -4377,
+          "y": 145,
+          "z": 5180,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "0400",
+          "offset": "0xF88854"
+        },
+        {
+          "slot": 0,
+          "x": 1185,
+          "y": 145,
+          "z": 3560,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "0000",
+          "offset": "0xF88874"
+        },
+        {
+          "slot": 0,
+          "x": 1035,
+          "y": 145,
+          "z": 3560,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "0300",
+          "offset": "0xF88894"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0xF887B4"
+    }
+  ]
 }

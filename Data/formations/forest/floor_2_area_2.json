@@ -139,5 +139,713 @@
       "suffix": "00000000",
       "offset": "0x14AAF08"
     }
+  ],
+  "_placed_spawns": "--- placed spawns (per-record offsets) ---",
+  "spawn_points_area_start": "0x14AA8E4",
+  "spawn_points_area_bytes": 1040,
+  "original_total_spawn_slots": 31,
+  "spawn_point_count": 12,
+  "spawn_points": [
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Poison-Flower"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 1700,
+          "y": 5,
+          "z": 1200,
+          "byte0": 17,
+          "byte10_11": "1900",
+          "area_id": "e000",
+          "offset": "0x14AA8E4"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x14AA8E4"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Trent"
+        },
+        {
+          "count": 3,
+          "slot": 4,
+          "monster": "Will-O-The-Wisp"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 100,
+          "y": 5,
+          "z": 2000,
+          "byte0": 0,
+          "byte10_11": "1a00",
+          "area_id": "9001",
+          "offset": "0x14AA908"
+        },
+        {
+          "slot": 4,
+          "x": 100,
+          "y": 5,
+          "z": 2300,
+          "byte0": 0,
+          "byte10_11": "1a00",
+          "area_id": "c200",
+          "offset": "0x14AA928"
+        },
+        {
+          "slot": 4,
+          "x": 150,
+          "y": 5,
+          "z": 2200,
+          "byte0": 0,
+          "byte10_11": "1a00",
+          "area_id": "c200",
+          "offset": "0x14AA948"
+        },
+        {
+          "slot": 4,
+          "x": 50,
+          "y": 5,
+          "z": 2200,
+          "byte0": 0,
+          "byte10_11": "1a00",
+          "area_id": "c200",
+          "offset": "0x14AA968"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x14AA908"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 0,
+          "monster": "Lizard-Man"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": -2700,
+          "y": 5,
+          "z": 1800,
+          "byte0": 0,
+          "byte10_11": "1b00",
+          "area_id": "0401",
+          "offset": "0x14AA98C"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x14AA98C"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 0,
+          "monster": "Lizard-Man"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": 1000,
+          "y": 5,
+          "z": -1500,
+          "byte0": 0,
+          "byte10_11": "1c00",
+          "area_id": "e400",
+          "offset": "0x14AA9B0"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x14AA9B0"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Trent"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": -300,
+          "y": 5,
+          "z": -1600,
+          "byte0": 0,
+          "byte10_11": "1d00",
+          "area_id": "e600",
+          "offset": "0x14AA9D4"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x14AA9D4"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 0,
+          "monster": "Lizard-Man"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": 500,
+          "y": 5,
+          "z": -3200,
+          "byte0": 0,
+          "byte10_11": "1e00",
+          "area_id": "4901",
+          "offset": "0x14AA9F8"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x14AA9F8"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Lizard-Man"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": -1300,
+          "y": 5,
+          "z": -3200,
+          "byte0": 0,
+          "byte10_11": "1f00",
+          "area_id": "4a01",
+          "offset": "0x14AAA1C"
+        },
+        {
+          "slot": 0,
+          "x": -1000,
+          "y": 5,
+          "z": -3300,
+          "byte0": 0,
+          "byte10_11": "1f00",
+          "area_id": "4b01",
+          "offset": "0x14AAA3C"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x14AAA1C"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Lizard-Man"
+        },
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Trent"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 2900,
+          "y": 105,
+          "z": -4700,
+          "byte0": 0,
+          "byte10_11": "2000",
+          "area_id": "3101",
+          "offset": "0x14AAA60"
+        },
+        {
+          "slot": 1,
+          "x": 2500,
+          "y": 5,
+          "z": -4500,
+          "byte0": 0,
+          "byte10_11": "2000",
+          "area_id": "3a00",
+          "offset": "0x14AAA80"
+        },
+        {
+          "slot": 0,
+          "x": 2500,
+          "y": 5,
+          "z": -3900,
+          "byte0": 0,
+          "byte10_11": "2000",
+          "area_id": "3a01",
+          "offset": "0x14AAAA0"
+        },
+        {
+          "slot": 0,
+          "x": 2500,
+          "y": 5,
+          "z": -5000,
+          "byte0": 0,
+          "byte10_11": "2000",
+          "area_id": "3f01",
+          "offset": "0x14AAAC0"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x14AAA60"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 3,
+          "monster": "Black-Lizard"
+        }
+      ],
+      "records": [
+        {
+          "slot": 3,
+          "x": 3600,
+          "y": 105,
+          "z": -3000,
+          "byte0": 0,
+          "byte10_11": "2100",
+          "area_id": "1f01",
+          "offset": "0x14AAAE4"
+        },
+        {
+          "slot": 3,
+          "x": 3540,
+          "y": 105,
+          "z": -3100,
+          "byte0": 0,
+          "byte10_11": "2100",
+          "area_id": "2001",
+          "offset": "0x14AAB04"
+        },
+        {
+          "slot": 3,
+          "x": 4100,
+          "y": 5,
+          "z": -3000,
+          "byte0": 0,
+          "byte10_11": "2100",
+          "area_id": "2d01",
+          "offset": "0x14AAB24"
+        },
+        {
+          "slot": 3,
+          "x": 3300,
+          "y": 5,
+          "z": -2800,
+          "byte0": 0,
+          "byte10_11": "2100",
+          "area_id": "3001",
+          "offset": "0x14AAB44"
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x14AAAE4"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Trent"
+        },
+        {
+          "count": 2,
+          "slot": 2,
+          "monster": "Poison-Flower"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": -3300,
+          "y": 105,
+          "z": 3700,
+          "byte0": 0,
+          "byte10_11": "2200",
+          "area_id": "ed00",
+          "offset": "0x14AAB68"
+        },
+        {
+          "slot": 1,
+          "x": -3700,
+          "y": 5,
+          "z": 3000,
+          "byte0": 0,
+          "byte10_11": "2200",
+          "area_id": "fc00",
+          "offset": "0x14AAB88"
+        },
+        {
+          "slot": 2,
+          "x": -4000,
+          "y": 5,
+          "z": 3700,
+          "byte0": 0,
+          "byte10_11": "2200",
+          "area_id": "ff00",
+          "offset": "0x14AABA8"
+        },
+        {
+          "slot": 2,
+          "x": -2700,
+          "y": 5,
+          "z": 3600,
+          "byte0": 0,
+          "byte10_11": "2200",
+          "area_id": "f600",
+          "offset": "0x14AABC8"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x14AAB68"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Lizard-Man"
+        },
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Trent"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 3600,
+          "y": 5,
+          "z": 3300,
+          "byte0": 0,
+          "byte10_11": "2300",
+          "area_id": "1601",
+          "offset": "0x14AABEC"
+        },
+        {
+          "slot": 1,
+          "x": 2600,
+          "y": 5,
+          "z": 4200,
+          "byte0": 0,
+          "byte10_11": "2300",
+          "area_id": "1b01",
+          "offset": "0x14AAC0C"
+        },
+        {
+          "slot": 0,
+          "x": 3200,
+          "y": 5,
+          "z": 3200,
+          "byte0": 0,
+          "byte10_11": "2300",
+          "area_id": "1201",
+          "offset": "0x14AAC2C"
+        },
+        {
+          "slot": 0,
+          "x": 3200,
+          "y": 105,
+          "z": 4000,
+          "byte0": 0,
+          "byte10_11": "2300",
+          "area_id": "0901",
+          "offset": "0x14AAC4C"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x14AABEC"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Lizard-Man"
+        },
+        {
+          "count": 2,
+          "slot": 2,
+          "monster": "Poison-Flower"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -2600,
+          "y": 5,
+          "z": -4400,
+          "byte0": 0,
+          "byte10_11": "2400",
+          "area_id": "8501",
+          "offset": "0x14AAC70"
+        },
+        {
+          "slot": 2,
+          "x": -2600,
+          "y": 5,
+          "z": -3800,
+          "byte0": 0,
+          "byte10_11": "2400",
+          "area_id": "8201",
+          "offset": "0x14AAC90"
+        },
+        {
+          "slot": 0,
+          "x": -2900,
+          "y": 105,
+          "z": -4600,
+          "byte0": 0,
+          "byte10_11": "2400",
+          "area_id": "7501",
+          "offset": "0x14AACB0"
+        },
+        {
+          "slot": 0,
+          "x": -3200,
+          "y": 105,
+          "z": -4500,
+          "byte0": 0,
+          "byte10_11": "2400",
+          "area_id": "7501",
+          "offset": "0x14AACD0"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x14AAC70"
+    }
+  ],
+  "zone_spawns_area_start": "0x14AB424",
+  "zone_spawns_area_bytes": 9272,
+  "original_total_zone_spawn_slots": 8,
+  "zone_spawn_count": 8,
+  "zone_spawns": [
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Trent"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 3200,
+          "y": 150,
+          "z": 1400,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "5100",
+          "offset": "0x14AB424"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x14AB424"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Trent"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 3400,
+          "y": 150,
+          "z": -700,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6900",
+          "offset": "0x14AB4E4"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x14AB4E4"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Poison-Flower"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 100,
+          "y": 0,
+          "z": 1398,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "d400",
+          "offset": "0x14ABD04"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x14ABD04"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Poison-Flower"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 100,
+          "y": 105,
+          "z": -300,
+          "byte0": 11,
+          "byte10_11": "0000",
+          "area_id": "c700",
+          "offset": "0x14ABD28"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x14ABD28"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Poison-Flower"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 100,
+          "y": 0,
+          "z": 1700,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "d100",
+          "offset": "0x14ABDC8"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x14ABDC8"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Poison-Flower"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 100,
+          "y": 0,
+          "z": 1398,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "d400",
+          "offset": "0x14ABE28"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x14ABE28"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Trent"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 3200,
+          "y": 150,
+          "z": 1400,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "5100",
+          "offset": "0x14ACCF4"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x14ACCF4"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Trent"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 3400,
+          "y": 150,
+          "z": -700,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6900",
+          "offset": "0x14AD838"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x14AD838"
+    }
   ]
 }

@@ -89,5 +89,2263 @@
       "suffix": "00000000",
       "offset": "0x2C09934"
     }
+  ],
+  "_placed_spawns": "--- placed spawns (per-record offsets) ---",
+  "spawn_points_area_start": "0x2C08D9C",
+  "spawn_points_area_bytes": 24636,
+  "original_total_spawn_slots": 86,
+  "spawn_point_count": 22,
+  "spawn_points": [
+    {
+      "total": 5,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Gray-Arm"
+        },
+        {
+          "count": 3,
+          "slot": 2,
+          "monster": "Succubus"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 3254,
+          "y": 12,
+          "z": 1913,
+          "byte0": 19,
+          "byte10_11": "1700",
+          "area_id": "4402",
+          "offset": "0x2C08D9C"
+        },
+        {
+          "slot": 2,
+          "x": 2654,
+          "y": 12,
+          "z": 1857,
+          "byte0": 0,
+          "byte10_11": "1700",
+          "area_id": "af02",
+          "offset": "0x2C08DBC"
+        },
+        {
+          "slot": 2,
+          "x": 2078,
+          "y": 12,
+          "z": 1417,
+          "byte0": 0,
+          "byte10_11": "1700",
+          "area_id": "4602",
+          "offset": "0x2C08DDC"
+        },
+        {
+          "slot": 0,
+          "x": 3710,
+          "y": 12,
+          "z": 1017,
+          "byte0": 0,
+          "byte10_11": "1700",
+          "area_id": "3f02",
+          "offset": "0x2C08DFC"
+        },
+        {
+          "slot": 0,
+          "x": 1990,
+          "y": 12,
+          "z": 577,
+          "byte0": 0,
+          "byte10_11": "1700",
+          "area_id": "8402",
+          "offset": "0x2C08E1C"
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x2C08D9C"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 0,
+          "monster": "Gray-Arm"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": 8,
+          "y": 248,
+          "z": 1518,
+          "byte0": 0,
+          "byte10_11": "1800",
+          "area_id": "0703",
+          "offset": "0x2C08E40"
+        },
+        {
+          "slot": 0,
+          "x": -280,
+          "y": 248,
+          "z": 2278,
+          "byte0": 0,
+          "byte10_11": "1800",
+          "area_id": "4f02",
+          "offset": "0x2C08E60"
+        },
+        {
+          "slot": 0,
+          "x": 0,
+          "y": 248,
+          "z": 2182,
+          "byte0": 0,
+          "byte10_11": "1800",
+          "area_id": "4f02",
+          "offset": "0x2C08E80"
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x2C08E40"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 0,
+          "monster": "Gray-Arm"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": -40,
+          "y": 248,
+          "z": 1470,
+          "byte0": 0,
+          "byte10_11": "1800",
+          "area_id": "0703",
+          "offset": "0x2C08EA4"
+        },
+        {
+          "slot": 0,
+          "x": 168,
+          "y": 248,
+          "z": 2622,
+          "byte0": 0,
+          "byte10_11": "1800",
+          "area_id": "5102",
+          "offset": "0x2C08EC4"
+        },
+        {
+          "slot": 0,
+          "x": 200,
+          "y": 248,
+          "z": 2038,
+          "byte0": 0,
+          "byte10_11": "1800",
+          "area_id": "6900",
+          "offset": "0x2C08EE4"
+        },
+        {
+          "slot": 0,
+          "x": -184,
+          "y": 248,
+          "z": 2030,
+          "byte0": 0,
+          "byte10_11": "1800",
+          "area_id": "4f02",
+          "offset": "0x2C08F04"
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x2C08EA4"
+    },
+    {
+      "total": 5,
+      "composition": [
+        {
+          "count": 5,
+          "slot": 0,
+          "monster": "Gray-Arm"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": 96,
+          "y": 248,
+          "z": 2446,
+          "byte0": 0,
+          "byte10_11": "1800",
+          "area_id": "5002",
+          "offset": "0x2C08F28"
+        },
+        {
+          "slot": 0,
+          "x": -368,
+          "y": 248,
+          "z": 2558,
+          "byte0": 0,
+          "byte10_11": "1800",
+          "area_id": "7e00",
+          "offset": "0x2C08F48"
+        },
+        {
+          "slot": 0,
+          "x": -272,
+          "y": 248,
+          "z": 2230,
+          "byte0": 0,
+          "byte10_11": "1800",
+          "area_id": "4f02",
+          "offset": "0x2C08F68"
+        },
+        {
+          "slot": 0,
+          "x": 384,
+          "y": 248,
+          "z": 2246,
+          "byte0": 0,
+          "byte10_11": "1800",
+          "area_id": "6700",
+          "offset": "0x2C08F88"
+        },
+        {
+          "slot": 0,
+          "x": -8,
+          "y": 248,
+          "z": 1710,
+          "byte0": 0,
+          "byte10_11": "1800",
+          "area_id": "0803",
+          "offset": "0x2C08FA8"
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x2C08F28"
+    },
+    {
+      "total": 6,
+      "composition": [
+        {
+          "count": 6,
+          "slot": 0,
+          "monster": "Gray-Arm"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": 408,
+          "y": 248,
+          "z": 2270,
+          "byte0": 0,
+          "byte10_11": "1800",
+          "area_id": "0403",
+          "offset": "0x2C08FCC"
+        },
+        {
+          "slot": 0,
+          "x": 176,
+          "y": 248,
+          "z": 1966,
+          "byte0": 0,
+          "byte10_11": "1800",
+          "area_id": "0503",
+          "offset": "0x2C08FEC"
+        },
+        {
+          "slot": 0,
+          "x": -40,
+          "y": 248,
+          "z": 1198,
+          "byte0": 0,
+          "byte10_11": "1800",
+          "area_id": "0603",
+          "offset": "0x2C0900C"
+        },
+        {
+          "slot": 0,
+          "x": 72,
+          "y": 248,
+          "z": 1526,
+          "byte0": 0,
+          "byte10_11": "1800",
+          "area_id": "0703",
+          "offset": "0x2C0902C"
+        },
+        {
+          "slot": 0,
+          "x": 104,
+          "y": 248,
+          "z": 2894,
+          "byte0": 0,
+          "byte10_11": "1800",
+          "area_id": "0103",
+          "offset": "0x2C0904C"
+        },
+        {
+          "slot": 0,
+          "x": -256,
+          "y": 248,
+          "z": 2662,
+          "byte0": 0,
+          "byte10_11": "1800",
+          "area_id": "8000",
+          "offset": "0x2C0906C"
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x2C08FCC"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 2,
+          "monster": "Succubus"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -72,
+          "y": 248,
+          "z": 1198,
+          "byte0": 0,
+          "byte10_11": "1800",
+          "area_id": "0603",
+          "offset": "0x2C09090"
+        },
+        {
+          "slot": 2,
+          "x": 40,
+          "y": 248,
+          "z": 1534,
+          "byte0": 0,
+          "byte10_11": "1800",
+          "area_id": "0703",
+          "offset": "0x2C090B0"
+        },
+        {
+          "slot": 2,
+          "x": 104,
+          "y": 248,
+          "z": 2438,
+          "byte0": 0,
+          "byte10_11": "1800",
+          "area_id": "5002",
+          "offset": "0x2C090D0"
+        },
+        {
+          "slot": 2,
+          "x": -168,
+          "y": 248,
+          "z": 2262,
+          "byte0": 0,
+          "byte10_11": "1800",
+          "area_id": "4f02",
+          "offset": "0x2C090F0"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2C09090"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 2,
+          "monster": "Succubus"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 160,
+          "y": 248,
+          "z": 2382,
+          "byte0": 0,
+          "byte10_11": "1800",
+          "area_id": "5002",
+          "offset": "0x2C09114"
+        },
+        {
+          "slot": 2,
+          "x": -128,
+          "y": 248,
+          "z": 2198,
+          "byte0": 0,
+          "byte10_11": "1800",
+          "area_id": "4f02",
+          "offset": "0x2C09134"
+        },
+        {
+          "slot": 2,
+          "x": 80,
+          "y": 248,
+          "z": 1462,
+          "byte0": 0,
+          "byte10_11": "1800",
+          "area_id": "0703",
+          "offset": "0x2C09154"
+        },
+        {
+          "slot": 2,
+          "x": -128,
+          "y": 248,
+          "z": 1198,
+          "byte0": 0,
+          "byte10_11": "1800",
+          "area_id": "0603",
+          "offset": "0x2C09174"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2C09114"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 0,
+          "monster": "Gray-Arm"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": -2080,
+          "y": 248,
+          "z": 1830,
+          "byte0": 0,
+          "byte10_11": "1900",
+          "area_id": "1003",
+          "offset": "0x2C09198"
+        },
+        {
+          "slot": 0,
+          "x": -1664,
+          "y": 248,
+          "z": 2182,
+          "byte0": 0,
+          "byte10_11": "1900",
+          "area_id": "1b03",
+          "offset": "0x2C091B8"
+        },
+        {
+          "slot": 0,
+          "x": -1256,
+          "y": 248,
+          "z": 2278,
+          "byte0": 0,
+          "byte10_11": "1900",
+          "area_id": "9200",
+          "offset": "0x2C091D8"
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x2C09198"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 0,
+          "monster": "Gray-Arm"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": -2104,
+          "y": 248,
+          "z": 1798,
+          "byte0": 0,
+          "byte10_11": "1900",
+          "area_id": "0f03",
+          "offset": "0x2C091FC"
+        },
+        {
+          "slot": 0,
+          "x": -1864,
+          "y": 248,
+          "z": 2110,
+          "byte0": 0,
+          "byte10_11": "1900",
+          "area_id": "1903",
+          "offset": "0x2C0921C"
+        },
+        {
+          "slot": 0,
+          "x": -1560,
+          "y": 248,
+          "z": 2302,
+          "byte0": 0,
+          "byte10_11": "1900",
+          "area_id": "1a03",
+          "offset": "0x2C0923C"
+        },
+        {
+          "slot": 0,
+          "x": -1256,
+          "y": 248,
+          "z": 2350,
+          "byte0": 0,
+          "byte10_11": "1900",
+          "area_id": "9200",
+          "offset": "0x2C0925C"
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x2C091FC"
+    },
+    {
+      "total": 5,
+      "composition": [
+        {
+          "count": 5,
+          "slot": 0,
+          "monster": "Gray-Arm"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": -2128,
+          "y": 248,
+          "z": 1806,
+          "byte0": 0,
+          "byte10_11": "1900",
+          "area_id": "1003",
+          "offset": "0x2C09280"
+        },
+        {
+          "slot": 0,
+          "x": -1920,
+          "y": 248,
+          "z": 2086,
+          "byte0": 0,
+          "byte10_11": "1900",
+          "area_id": "1903",
+          "offset": "0x2C092A0"
+        },
+        {
+          "slot": 0,
+          "x": -1656,
+          "y": 248,
+          "z": 2222,
+          "byte0": 0,
+          "byte10_11": "1900",
+          "area_id": "1a03",
+          "offset": "0x2C092C0"
+        },
+        {
+          "slot": 0,
+          "x": -1376,
+          "y": 248,
+          "z": 2286,
+          "byte0": 0,
+          "byte10_11": "1900",
+          "area_id": "9100",
+          "offset": "0x2C092E0"
+        },
+        {
+          "slot": 0,
+          "x": -1728,
+          "y": 248,
+          "z": 1942,
+          "byte0": 0,
+          "byte10_11": "1900",
+          "area_id": "1003",
+          "offset": "0x2C09300"
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x2C09280"
+    },
+    {
+      "total": 6,
+      "composition": [
+        {
+          "count": 6,
+          "slot": 0,
+          "monster": "Gray-Arm"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": -2104,
+          "y": 248,
+          "z": 1774,
+          "byte0": 0,
+          "byte10_11": "1900",
+          "area_id": "0f03",
+          "offset": "0x2C09324"
+        },
+        {
+          "slot": 0,
+          "x": -2144,
+          "y": 248,
+          "z": 2054,
+          "byte0": 0,
+          "byte10_11": "1900",
+          "area_id": "8a00",
+          "offset": "0x2C09344"
+        },
+        {
+          "slot": 0,
+          "x": -1880,
+          "y": 248,
+          "z": 2070,
+          "byte0": 0,
+          "byte10_11": "1900",
+          "area_id": "1903",
+          "offset": "0x2C09364"
+        },
+        {
+          "slot": 0,
+          "x": -672,
+          "y": 248,
+          "z": 2390,
+          "byte0": 0,
+          "byte10_11": "1900",
+          "area_id": "1303",
+          "offset": "0x2C09384"
+        },
+        {
+          "slot": 0,
+          "x": -896,
+          "y": 248,
+          "z": 2606,
+          "byte0": 0,
+          "byte10_11": "1900",
+          "area_id": "9800",
+          "offset": "0x2C093A4"
+        },
+        {
+          "slot": 0,
+          "x": -472,
+          "y": 248,
+          "z": 2662,
+          "byte0": 0,
+          "byte10_11": "1900",
+          "area_id": "1e03",
+          "offset": "0x2C093C4"
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x2C09324"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 2,
+          "monster": "Succubus"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -2056,
+          "y": 248,
+          "z": 1758,
+          "byte0": 0,
+          "byte10_11": "1900",
+          "area_id": "0f03",
+          "offset": "0x2C093E8"
+        },
+        {
+          "slot": 2,
+          "x": -1848,
+          "y": 248,
+          "z": 2054,
+          "byte0": 0,
+          "byte10_11": "1900",
+          "area_id": "1903",
+          "offset": "0x2C09408"
+        },
+        {
+          "slot": 2,
+          "x": -1392,
+          "y": 248,
+          "z": 2238,
+          "byte0": 0,
+          "byte10_11": "1900",
+          "area_id": "9100",
+          "offset": "0x2C09428"
+        },
+        {
+          "slot": 2,
+          "x": -1136,
+          "y": 248,
+          "z": 2310,
+          "byte0": 0,
+          "byte10_11": "1900",
+          "area_id": "9300",
+          "offset": "0x2C09448"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2C093E8"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 2,
+          "monster": "Succubus"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -1904,
+          "y": 248,
+          "z": 1982,
+          "byte0": 0,
+          "byte10_11": "1900",
+          "area_id": "1003",
+          "offset": "0x2C0946C"
+        },
+        {
+          "slot": 2,
+          "x": -2072,
+          "y": 248,
+          "z": 1630,
+          "byte0": 0,
+          "byte10_11": "1900",
+          "area_id": "0f03",
+          "offset": "0x2C0948C"
+        },
+        {
+          "slot": 2,
+          "x": -880,
+          "y": 248,
+          "z": 2302,
+          "byte0": 0,
+          "byte10_11": "1900",
+          "area_id": "1203",
+          "offset": "0x2C094AC"
+        },
+        {
+          "slot": 2,
+          "x": -648,
+          "y": 248,
+          "z": 2526,
+          "byte0": 0,
+          "byte10_11": "1900",
+          "area_id": "1d03",
+          "offset": "0x2C094CC"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2C0946C"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 0,
+          "monster": "Gray-Arm"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": -1248,
+          "y": 0,
+          "z": 4715,
+          "byte0": 0,
+          "byte10_11": "1a00",
+          "area_id": "2a02",
+          "offset": "0x2C094F0"
+        },
+        {
+          "slot": 0,
+          "x": -1184,
+          "y": 0,
+          "z": 3947,
+          "byte0": 0,
+          "byte10_11": "1a00",
+          "area_id": "2702",
+          "offset": "0x2C09510"
+        },
+        {
+          "slot": 0,
+          "x": 368,
+          "y": 0,
+          "z": 3659,
+          "byte0": 0,
+          "byte10_11": "1a00",
+          "area_id": "2c02",
+          "offset": "0x2C09530"
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x2C094F0"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 0,
+          "monster": "Gray-Arm"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": -1296,
+          "y": 0,
+          "z": 4009,
+          "byte0": 0,
+          "byte10_11": "1a00",
+          "area_id": "2702",
+          "offset": "0x2C09554"
+        },
+        {
+          "slot": 0,
+          "x": -1176,
+          "y": 0,
+          "z": 4865,
+          "byte0": 0,
+          "byte10_11": "1a00",
+          "area_id": "2a02",
+          "offset": "0x2C09574"
+        },
+        {
+          "slot": 0,
+          "x": -1184,
+          "y": 0,
+          "z": 4553,
+          "byte0": 0,
+          "byte10_11": "1a00",
+          "area_id": "2a02",
+          "offset": "0x2C09594"
+        },
+        {
+          "slot": 0,
+          "x": -1216,
+          "y": 0,
+          "z": 3721,
+          "byte0": 0,
+          "byte10_11": "1a00",
+          "area_id": "2702",
+          "offset": "0x2C095B4"
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x2C09554"
+    },
+    {
+      "total": 5,
+      "composition": [
+        {
+          "count": 5,
+          "slot": 0,
+          "monster": "Gray-Arm"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": 992,
+          "y": 0,
+          "z": 3513,
+          "byte0": 0,
+          "byte10_11": "1a00",
+          "area_id": "2402",
+          "offset": "0x2C095D8"
+        },
+        {
+          "slot": 0,
+          "x": 1280,
+          "y": 0,
+          "z": 3329,
+          "byte0": 0,
+          "byte10_11": "1a00",
+          "area_id": "2302",
+          "offset": "0x2C095F8"
+        },
+        {
+          "slot": 0,
+          "x": -1200,
+          "y": 0,
+          "z": 4033,
+          "byte0": 0,
+          "byte10_11": "1a00",
+          "area_id": "2702",
+          "offset": "0x2C09618"
+        },
+        {
+          "slot": 0,
+          "x": -1288,
+          "y": 0,
+          "z": 3777,
+          "byte0": 0,
+          "byte10_11": "1a00",
+          "area_id": "2702",
+          "offset": "0x2C09638"
+        },
+        {
+          "slot": 0,
+          "x": -1032,
+          "y": 0,
+          "z": 3817,
+          "byte0": 0,
+          "byte10_11": "1a00",
+          "area_id": "2602",
+          "offset": "0x2C09658"
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x2C095D8"
+    },
+    {
+      "total": 6,
+      "composition": [
+        {
+          "count": 6,
+          "slot": 0,
+          "monster": "Gray-Arm"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": -720,
+          "y": 0,
+          "z": 3881,
+          "byte0": 0,
+          "byte10_11": "1a00",
+          "area_id": "1a02",
+          "offset": "0x2C0967C"
+        },
+        {
+          "slot": 0,
+          "x": -1000,
+          "y": 0,
+          "z": 3881,
+          "byte0": 0,
+          "byte10_11": "1a00",
+          "area_id": "2602",
+          "offset": "0x2C0969C"
+        },
+        {
+          "slot": 0,
+          "x": 104,
+          "y": 0,
+          "z": 3897,
+          "byte0": 0,
+          "byte10_11": "1a00",
+          "area_id": "2d02",
+          "offset": "0x2C096BC"
+        },
+        {
+          "slot": 0,
+          "x": -1072,
+          "y": 0,
+          "z": 4681,
+          "byte0": 0,
+          "byte10_11": "1a00",
+          "area_id": "2b02",
+          "offset": "0x2C096DC"
+        },
+        {
+          "slot": 0,
+          "x": -1224,
+          "y": 0,
+          "z": 4889,
+          "byte0": 0,
+          "byte10_11": "1a00",
+          "area_id": "2a02",
+          "offset": "0x2C096FC"
+        },
+        {
+          "slot": 0,
+          "x": -1240,
+          "y": 0,
+          "z": 4505,
+          "byte0": 0,
+          "byte10_11": "1a00",
+          "area_id": "2a02",
+          "offset": "0x2C0971C"
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x2C0967C"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 2,
+          "monster": "Succubus"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -768,
+          "y": 0,
+          "z": 3913,
+          "byte0": 0,
+          "byte10_11": "1a00",
+          "area_id": "1a02",
+          "offset": "0x2C09740"
+        },
+        {
+          "slot": 2,
+          "x": -1184,
+          "y": 0,
+          "z": 3721,
+          "byte0": 0,
+          "byte10_11": "1a00",
+          "area_id": "2702",
+          "offset": "0x2C09760"
+        },
+        {
+          "slot": 2,
+          "x": -1208,
+          "y": 0,
+          "z": 4073,
+          "byte0": 0,
+          "byte10_11": "1a00",
+          "area_id": "2702",
+          "offset": "0x2C09780"
+        },
+        {
+          "slot": 2,
+          "x": -1208,
+          "y": 0,
+          "z": 4593,
+          "byte0": 0,
+          "byte10_11": "1a00",
+          "area_id": "2a02",
+          "offset": "0x2C097A0"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2C09740"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 2,
+          "monster": "Succubus"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -992,
+          "y": 0,
+          "z": 3873,
+          "byte0": 0,
+          "byte10_11": "1a00",
+          "area_id": "2602",
+          "offset": "0x2C097C4"
+        },
+        {
+          "slot": 2,
+          "x": -1376,
+          "y": 0,
+          "z": 3889,
+          "byte0": 0,
+          "byte10_11": "1a00",
+          "area_id": "2802",
+          "offset": "0x2C097E4"
+        },
+        {
+          "slot": 2,
+          "x": -1024,
+          "y": 0,
+          "z": 4673,
+          "byte0": 0,
+          "byte10_11": "1a00",
+          "area_id": "2b02",
+          "offset": "0x2C09804"
+        },
+        {
+          "slot": 2,
+          "x": -1400,
+          "y": 0,
+          "z": 4729,
+          "byte0": 0,
+          "byte10_11": "1a00",
+          "area_id": "2902",
+          "offset": "0x2C09824"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2C097C4"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 0,
+          "monster": "Gray-Arm"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": 0,
+          "y": 0,
+          "z": 200,
+          "byte0": 0,
+          "byte10_11": "0500",
+          "area_id": "1800",
+          "offset": "0x2C0CC74"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2C0CC74"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 0,
+          "monster": "Gray-Arm"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": 0,
+          "y": 0,
+          "z": 200,
+          "byte0": 0,
+          "byte10_11": "0500",
+          "area_id": "1800",
+          "offset": "0x2C0D474"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2C0D474"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 0,
+          "monster": "Gray-Arm"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": 0,
+          "y": 10,
+          "z": -50,
+          "byte0": 0,
+          "byte10_11": "1100",
+          "area_id": "1800",
+          "offset": "0x2C0EDB4"
+        }
+      ],
+      "suffix": "ffff0000",
+      "offset": "0x2C0EDB4"
+    }
+  ],
+  "zone_spawns_area_start": "0x2C09E50",
+  "zone_spawns_area_bytes": 20744,
+  "original_total_zone_spawn_slots": 68,
+  "zone_spawn_count": 28,
+  "zone_spawns": [
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 1,
+          "monster": "Hell-Ogre"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 0,
+          "y": 5,
+          "z": -5100,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7303",
+          "offset": "0x2C09E50"
+        },
+        {
+          "slot": 1,
+          "x": -700,
+          "y": 205,
+          "z": 5700,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ea04",
+          "offset": "0x2C09E70"
+        },
+        {
+          "slot": 1,
+          "x": 800,
+          "y": -195,
+          "z": -700,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "eb02",
+          "offset": "0x2C09E90"
+        },
+        {
+          "slot": 1,
+          "x": 2300,
+          "y": 10,
+          "z": 5100,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "4d02",
+          "offset": "0x2C09EB0"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2C09E50"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 2,
+          "monster": "Succubus"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 1620,
+          "y": 100,
+          "z": -700,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "e804",
+          "offset": "0x2C09F10"
+        },
+        {
+          "slot": 2,
+          "x": -420,
+          "y": 200,
+          "z": 5700,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "e904",
+          "offset": "0x2C09F30"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2C09F10"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Hell-Ogre"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 4100,
+          "y": 200,
+          "z": 500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7900",
+          "offset": "0x2C0AC88"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2C0AC88"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Hell-Ogre"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 0,
+          "y": 5,
+          "z": 0,
+          "byte0": 72,
+          "byte10_11": "0000",
+          "area_id": "1800",
+          "offset": "0x2C0AD5C"
+        }
+      ],
+      "suffix": "15000000",
+      "offset": "0x2C0AD5C"
+    },
+    {
+      "total": 5,
+      "composition": [
+        {
+          "count": 5,
+          "slot": 2,
+          "monster": "Succubus"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 3600,
+          "y": 10,
+          "z": -900,
+          "byte0": 4,
+          "byte10_11": "0000",
+          "area_id": "2e00",
+          "offset": "0x2C0AD80"
+        },
+        {
+          "slot": 2,
+          "x": 3600,
+          "y": 10,
+          "z": -500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3100",
+          "offset": "0x2C0ADA0"
+        },
+        {
+          "slot": 2,
+          "x": 4600,
+          "y": 10,
+          "z": -900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2900",
+          "offset": "0x2C0ADC0"
+        },
+        {
+          "slot": 2,
+          "x": 4600,
+          "y": 10,
+          "z": -500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2c00",
+          "offset": "0x2C0ADE0"
+        },
+        {
+          "slot": 2,
+          "x": 4100,
+          "y": 205,
+          "z": 800,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7900",
+          "offset": "0x2C0AE00"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2C0AD80"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Hell-Ogre"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 4100,
+          "y": 200,
+          "z": 500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7900",
+          "offset": "0x2C0B488"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2C0B488"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Hell-Ogre"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 0,
+          "y": 5,
+          "z": 0,
+          "byte0": 72,
+          "byte10_11": "0000",
+          "area_id": "1800",
+          "offset": "0x2C0B55C"
+        }
+      ],
+      "suffix": "15000000",
+      "offset": "0x2C0B55C"
+    },
+    {
+      "total": 5,
+      "composition": [
+        {
+          "count": 5,
+          "slot": 2,
+          "monster": "Succubus"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 3600,
+          "y": 10,
+          "z": -900,
+          "byte0": 4,
+          "byte10_11": "0000",
+          "area_id": "2e00",
+          "offset": "0x2C0B580"
+        },
+        {
+          "slot": 2,
+          "x": 3600,
+          "y": 10,
+          "z": -500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3100",
+          "offset": "0x2C0B5A0"
+        },
+        {
+          "slot": 2,
+          "x": 4600,
+          "y": 10,
+          "z": -900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2900",
+          "offset": "0x2C0B5C0"
+        },
+        {
+          "slot": 2,
+          "x": 4600,
+          "y": 10,
+          "z": -500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2c00",
+          "offset": "0x2C0B5E0"
+        },
+        {
+          "slot": 2,
+          "x": 4100,
+          "y": 205,
+          "z": 800,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7900",
+          "offset": "0x2C0B600"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2C0B580"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Hell-Ogre"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 4100,
+          "y": 200,
+          "z": 500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ba00",
+          "offset": "0x2C0BC98"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2C0BC98"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Hell-Ogre"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 1000,
+          "y": -328,
+          "z": 0,
+          "byte0": 124,
+          "byte10_11": "0000",
+          "area_id": "2a00",
+          "offset": "0x2C0BD7C"
+        }
+      ],
+      "suffix": "15000000",
+      "offset": "0x2C0BD7C"
+    },
+    {
+      "total": 5,
+      "composition": [
+        {
+          "count": 5,
+          "slot": 2,
+          "monster": "Succubus"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 3600,
+          "y": 10,
+          "z": -900,
+          "byte0": 4,
+          "byte10_11": "0000",
+          "area_id": "3800",
+          "offset": "0x2C0BDA0"
+        },
+        {
+          "slot": 2,
+          "x": 3600,
+          "y": 10,
+          "z": -500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3b00",
+          "offset": "0x2C0BDC0"
+        },
+        {
+          "slot": 2,
+          "x": 4600,
+          "y": 10,
+          "z": -900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3300",
+          "offset": "0x2C0BDE0"
+        },
+        {
+          "slot": 2,
+          "x": 4600,
+          "y": 10,
+          "z": -500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3600",
+          "offset": "0x2C0BE00"
+        },
+        {
+          "slot": 2,
+          "x": 4100,
+          "y": 205,
+          "z": 800,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ba00",
+          "offset": "0x2C0BE20"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2C0BDA0"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Hell-Ogre"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 4100,
+          "y": 200,
+          "z": 500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ba00",
+          "offset": "0x2C0C498"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2C0C498"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Hell-Ogre"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 1000,
+          "y": -328,
+          "z": 0,
+          "byte0": 124,
+          "byte10_11": "0000",
+          "area_id": "2a00",
+          "offset": "0x2C0C57C"
+        }
+      ],
+      "suffix": "15000000",
+      "offset": "0x2C0C57C"
+    },
+    {
+      "total": 5,
+      "composition": [
+        {
+          "count": 5,
+          "slot": 2,
+          "monster": "Succubus"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 3600,
+          "y": 10,
+          "z": -900,
+          "byte0": 4,
+          "byte10_11": "0000",
+          "area_id": "3800",
+          "offset": "0x2C0C5A0"
+        },
+        {
+          "slot": 2,
+          "x": 3600,
+          "y": 10,
+          "z": -500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3b00",
+          "offset": "0x2C0C5C0"
+        },
+        {
+          "slot": 2,
+          "x": 4600,
+          "y": 10,
+          "z": -900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3300",
+          "offset": "0x2C0C5E0"
+        },
+        {
+          "slot": 2,
+          "x": 4600,
+          "y": 10,
+          "z": -500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3600",
+          "offset": "0x2C0C600"
+        },
+        {
+          "slot": 2,
+          "x": 4100,
+          "y": 205,
+          "z": 800,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ba00",
+          "offset": "0x2C0C620"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2C0C5A0"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Hell-Ogre"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 4100,
+          "y": 200,
+          "z": 500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7900",
+          "offset": "0x2C0CC98"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2C0CC98"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Hell-Ogre"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 0,
+          "y": 5,
+          "z": 0,
+          "byte0": 124,
+          "byte10_11": "0000",
+          "area_id": "1800",
+          "offset": "0x2C0CD74"
+        }
+      ],
+      "suffix": "15000000",
+      "offset": "0x2C0CD74"
+    },
+    {
+      "total": 5,
+      "composition": [
+        {
+          "count": 5,
+          "slot": 2,
+          "monster": "Succubus"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 3600,
+          "y": 10,
+          "z": -900,
+          "byte0": 4,
+          "byte10_11": "0000",
+          "area_id": "2e00",
+          "offset": "0x2C0CD98"
+        },
+        {
+          "slot": 2,
+          "x": 3600,
+          "y": 10,
+          "z": -500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3100",
+          "offset": "0x2C0CDB8"
+        },
+        {
+          "slot": 2,
+          "x": 4600,
+          "y": 10,
+          "z": -900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2900",
+          "offset": "0x2C0CDD8"
+        },
+        {
+          "slot": 2,
+          "x": 4600,
+          "y": 10,
+          "z": -500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2c00",
+          "offset": "0x2C0CDF8"
+        },
+        {
+          "slot": 2,
+          "x": 4100,
+          "y": 205,
+          "z": 800,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7900",
+          "offset": "0x2C0CE18"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2C0CD98"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Hell-Ogre"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 4100,
+          "y": 200,
+          "z": 500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7900",
+          "offset": "0x2C0D498"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2C0D498"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Hell-Ogre"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 0,
+          "y": 5,
+          "z": 0,
+          "byte0": 124,
+          "byte10_11": "0000",
+          "area_id": "1800",
+          "offset": "0x2C0D574"
+        }
+      ],
+      "suffix": "15000000",
+      "offset": "0x2C0D574"
+    },
+    {
+      "total": 5,
+      "composition": [
+        {
+          "count": 5,
+          "slot": 2,
+          "monster": "Succubus"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 3600,
+          "y": 10,
+          "z": -900,
+          "byte0": 4,
+          "byte10_11": "0000",
+          "area_id": "2e00",
+          "offset": "0x2C0D598"
+        },
+        {
+          "slot": 2,
+          "x": 3600,
+          "y": 10,
+          "z": -500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3100",
+          "offset": "0x2C0D5B8"
+        },
+        {
+          "slot": 2,
+          "x": 4600,
+          "y": 10,
+          "z": -900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2900",
+          "offset": "0x2C0D5D8"
+        },
+        {
+          "slot": 2,
+          "x": 4600,
+          "y": 10,
+          "z": -500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2c00",
+          "offset": "0x2C0D5F8"
+        },
+        {
+          "slot": 2,
+          "x": 4100,
+          "y": 205,
+          "z": 800,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7900",
+          "offset": "0x2C0D618"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2C0D598"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Hell-Ogre"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 4100,
+          "y": 200,
+          "z": 500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ba00",
+          "offset": "0x2C0DC98"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2C0DC98"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Hell-Ogre"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 1000,
+          "y": -328,
+          "z": 0,
+          "byte0": 124,
+          "byte10_11": "0000",
+          "area_id": "2a00",
+          "offset": "0x2C0DD7C"
+        }
+      ],
+      "suffix": "15000000",
+      "offset": "0x2C0DD7C"
+    },
+    {
+      "total": 5,
+      "composition": [
+        {
+          "count": 5,
+          "slot": 2,
+          "monster": "Succubus"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 3600,
+          "y": 10,
+          "z": -900,
+          "byte0": 4,
+          "byte10_11": "0000",
+          "area_id": "3800",
+          "offset": "0x2C0DDA0"
+        },
+        {
+          "slot": 2,
+          "x": 3600,
+          "y": 10,
+          "z": -500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3b00",
+          "offset": "0x2C0DDC0"
+        },
+        {
+          "slot": 2,
+          "x": 4600,
+          "y": 10,
+          "z": -900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3300",
+          "offset": "0x2C0DDE0"
+        },
+        {
+          "slot": 2,
+          "x": 4600,
+          "y": 10,
+          "z": -500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3600",
+          "offset": "0x2C0DE00"
+        },
+        {
+          "slot": 2,
+          "x": 4100,
+          "y": 205,
+          "z": 800,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ba00",
+          "offset": "0x2C0DE20"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2C0DDA0"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Hell-Ogre"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 4100,
+          "y": 200,
+          "z": 500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ba00",
+          "offset": "0x2C0E498"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2C0E498"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Hell-Ogre"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 1000,
+          "y": -328,
+          "z": 0,
+          "byte0": 124,
+          "byte10_11": "0000",
+          "area_id": "2a00",
+          "offset": "0x2C0E57C"
+        }
+      ],
+      "suffix": "15000000",
+      "offset": "0x2C0E57C"
+    },
+    {
+      "total": 5,
+      "composition": [
+        {
+          "count": 5,
+          "slot": 2,
+          "monster": "Succubus"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 3600,
+          "y": 10,
+          "z": -900,
+          "byte0": 4,
+          "byte10_11": "0000",
+          "area_id": "3800",
+          "offset": "0x2C0E5A0"
+        },
+        {
+          "slot": 2,
+          "x": 3600,
+          "y": 10,
+          "z": -500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3b00",
+          "offset": "0x2C0E5C0"
+        },
+        {
+          "slot": 2,
+          "x": 4600,
+          "y": 10,
+          "z": -900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3300",
+          "offset": "0x2C0E5E0"
+        },
+        {
+          "slot": 2,
+          "x": 4600,
+          "y": 10,
+          "z": -500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3600",
+          "offset": "0x2C0E600"
+        },
+        {
+          "slot": 2,
+          "x": 4100,
+          "y": 205,
+          "z": 800,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ba00",
+          "offset": "0x2C0E620"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2C0E5A0"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Hell-Ogre"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 4100,
+          "y": 200,
+          "z": 500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7900",
+          "offset": "0x2C0EDD8"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2C0EDD8"
+    },
+    {
+      "total": 5,
+      "composition": [
+        {
+          "count": 5,
+          "slot": 2,
+          "monster": "Succubus"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 3600,
+          "y": 10,
+          "z": -900,
+          "byte0": 255,
+          "byte10_11": "0000",
+          "area_id": "2e00",
+          "offset": "0x2C0EEB4"
+        },
+        {
+          "slot": 2,
+          "x": 3600,
+          "y": 10,
+          "z": -500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3100",
+          "offset": "0x2C0EED4"
+        },
+        {
+          "slot": 2,
+          "x": 4600,
+          "y": 10,
+          "z": -900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2900",
+          "offset": "0x2C0EEF4"
+        },
+        {
+          "slot": 2,
+          "x": 4600,
+          "y": 10,
+          "z": -500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2c00",
+          "offset": "0x2C0EF14"
+        },
+        {
+          "slot": 2,
+          "x": 4100,
+          "y": 205,
+          "z": 800,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7900",
+          "offset": "0x2C0EF34"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2C0EEB4"
+    }
   ]
 }

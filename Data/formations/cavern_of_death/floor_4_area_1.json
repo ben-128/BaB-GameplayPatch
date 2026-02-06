@@ -81,5 +81,833 @@
       "suffix": "00000100",
       "offset": "0xF8B900"
     }
+  ],
+  "_placed_spawns": "--- placed spawns (per-record offsets) ---",
+  "spawn_points_area_start": "0xF8B568",
+  "spawn_points_area_bytes": 588,
+  "original_total_spawn_slots": 18,
+  "spawn_point_count": 3,
+  "spawn_points": [
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 1,
+          "monster": "Killer-Fish"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 2136,
+          "y": 400,
+          "z": 3419,
+          "byte0": 6,
+          "byte10_11": "0600",
+          "area_id": "7d01",
+          "offset": "0xF8B568"
+        },
+        {
+          "slot": 1,
+          "x": 2493,
+          "y": 400,
+          "z": 3584,
+          "byte0": 0,
+          "byte10_11": "0600",
+          "area_id": "7f01",
+          "offset": "0xF8B588"
+        },
+        {
+          "slot": 1,
+          "x": 2717,
+          "y": 400,
+          "z": 3475,
+          "byte0": 0,
+          "byte10_11": "0600",
+          "area_id": "8001",
+          "offset": "0xF8B5A8"
+        },
+        {
+          "slot": 1,
+          "x": 3044,
+          "y": 400,
+          "z": 3329,
+          "byte0": 0,
+          "byte10_11": "0600",
+          "area_id": "8201",
+          "offset": "0xF8B5C8"
+        }
+      ],
+      "suffix": "00000a00",
+      "offset": "0xF8B568"
+    },
+    {
+      "total": 7,
+      "composition": [
+        {
+          "count": 7,
+          "slot": 2,
+          "monster": "Spirit-Ball"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -4522,
+          "y": 50,
+          "z": -778,
+          "byte0": 0,
+          "byte10_11": "0700",
+          "area_id": "1801",
+          "offset": "0xF8B5EC"
+        },
+        {
+          "slot": 2,
+          "x": -4042,
+          "y": 50,
+          "z": -536,
+          "byte0": 0,
+          "byte10_11": "0700",
+          "area_id": "1901",
+          "offset": "0xF8B60C"
+        },
+        {
+          "slot": 2,
+          "x": -3586,
+          "y": 50,
+          "z": -184,
+          "byte0": 0,
+          "byte10_11": "0700",
+          "area_id": "1b01",
+          "offset": "0xF8B62C"
+        },
+        {
+          "slot": 2,
+          "x": -2985,
+          "y": 150,
+          "z": 257,
+          "byte0": 0,
+          "byte10_11": "0700",
+          "area_id": "1f01",
+          "offset": "0xF8B64C"
+        },
+        {
+          "slot": 2,
+          "x": -2502,
+          "y": 150,
+          "z": 853,
+          "byte0": 0,
+          "byte10_11": "0700",
+          "area_id": "2301",
+          "offset": "0xF8B66C"
+        },
+        {
+          "slot": 2,
+          "x": -2213,
+          "y": 50,
+          "z": 1340,
+          "byte0": 0,
+          "byte10_11": "0700",
+          "area_id": "2501",
+          "offset": "0xF8B68C"
+        },
+        {
+          "slot": 2,
+          "x": -1940,
+          "y": 50,
+          "z": 1505,
+          "byte0": 0,
+          "byte10_11": "0700",
+          "area_id": "2601",
+          "offset": "0xF8B6AC"
+        }
+      ],
+      "suffix": "00000a00",
+      "offset": "0xF8B5EC"
+    },
+    {
+      "total": 7,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 0,
+          "monster": "Cave-Scissors"
+        },
+        {
+          "count": 3,
+          "slot": 1,
+          "monster": "Killer-Fish"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": 505,
+          "y": 0,
+          "z": -508,
+          "byte0": 0,
+          "byte10_11": "0800",
+          "area_id": "f201",
+          "offset": "0xF8B6D0"
+        },
+        {
+          "slot": 0,
+          "x": -373,
+          "y": 0,
+          "z": -648,
+          "byte0": 0,
+          "byte10_11": "0800",
+          "area_id": "f701",
+          "offset": "0xF8B6F0"
+        },
+        {
+          "slot": 0,
+          "x": 1673,
+          "y": 0,
+          "z": -1519,
+          "byte0": 0,
+          "byte10_11": "0800",
+          "area_id": "e701",
+          "offset": "0xF8B710"
+        },
+        {
+          "slot": 0,
+          "x": 1929,
+          "y": 0,
+          "z": -994,
+          "byte0": 0,
+          "byte10_11": "0800",
+          "area_id": "e401",
+          "offset": "0xF8B730"
+        },
+        {
+          "slot": 1,
+          "x": -25,
+          "y": -100,
+          "z": -840,
+          "byte0": 0,
+          "byte10_11": "0600",
+          "area_id": "d001",
+          "offset": "0xF8B750"
+        },
+        {
+          "slot": 1,
+          "x": 980,
+          "y": -100,
+          "z": -470,
+          "byte0": 0,
+          "byte10_11": "0600",
+          "area_id": "c301",
+          "offset": "0xF8B770"
+        },
+        {
+          "slot": 1,
+          "x": 1200,
+          "y": -100,
+          "z": -1810,
+          "byte0": 0,
+          "byte10_11": "0600",
+          "area_id": "ae01",
+          "offset": "0xF8B790"
+        }
+      ],
+      "suffix": "00000a00",
+      "offset": "0xF8B6D0"
+    }
+  ],
+  "zone_spawns_area_start": "0xF8BC98",
+  "zone_spawns_area_bytes": 2916,
+  "original_total_zone_spawn_slots": 55,
+  "zone_spawn_count": 2,
+  "zone_spawns": [
+    {
+      "total": 28,
+      "composition": [
+        {
+          "count": 14,
+          "slot": 0,
+          "monster": "Cave-Scissors"
+        },
+        {
+          "count": 14,
+          "slot": 2,
+          "monster": "Spirit-Ball"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -2960,
+          "y": 168,
+          "z": -4232,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6b03",
+          "offset": "0xF8BC98"
+        },
+        {
+          "slot": 2,
+          "x": 2616,
+          "y": 184,
+          "z": -3280,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7503",
+          "offset": "0xF8BCB8"
+        },
+        {
+          "slot": 2,
+          "x": 1408,
+          "y": 184,
+          "z": -3320,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2502",
+          "offset": "0xF8BCD8"
+        },
+        {
+          "slot": 2,
+          "x": -2488,
+          "y": 184,
+          "z": -1424,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3a01",
+          "offset": "0xF8BCF8"
+        },
+        {
+          "slot": 2,
+          "x": 632,
+          "y": 180,
+          "z": 1928,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3100",
+          "offset": "0xF8BD18"
+        },
+        {
+          "slot": 2,
+          "x": 1576,
+          "y": 212,
+          "z": 4136,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2b02",
+          "offset": "0xF8BD38"
+        },
+        {
+          "slot": 2,
+          "x": -1272,
+          "y": 184,
+          "z": -1752,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "9f00",
+          "offset": "0xF8BD58"
+        },
+        {
+          "slot": 2,
+          "x": -2480,
+          "y": 168,
+          "z": -2440,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3401",
+          "offset": "0xF8BD78"
+        },
+        {
+          "slot": 2,
+          "x": -1168,
+          "y": 192,
+          "z": -624,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2902",
+          "offset": "0xF8BD98"
+        },
+        {
+          "slot": 2,
+          "x": 488,
+          "y": 196,
+          "z": -328,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7403",
+          "offset": "0xF8BDB8"
+        },
+        {
+          "slot": 2,
+          "x": 1728,
+          "y": 196,
+          "z": 3032,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "4302",
+          "offset": "0xF8BDD8"
+        },
+        {
+          "slot": 2,
+          "x": 1232,
+          "y": 184,
+          "z": -3328,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2502",
+          "offset": "0xF8BDF8"
+        },
+        {
+          "slot": 2,
+          "x": 2608,
+          "y": 160,
+          "z": -4160,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7801",
+          "offset": "0xF8BE18"
+        },
+        {
+          "slot": 2,
+          "x": -1992,
+          "y": 184,
+          "z": -3200,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6f03",
+          "offset": "0xF8BE38"
+        },
+        {
+          "slot": 0,
+          "x": -2960,
+          "y": 183,
+          "z": -4232,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6b03",
+          "offset": "0xF8BE58"
+        },
+        {
+          "slot": 0,
+          "x": 2616,
+          "y": 199,
+          "z": -3280,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7503",
+          "offset": "0xF8BE78"
+        },
+        {
+          "slot": 0,
+          "x": 1408,
+          "y": 199,
+          "z": -3320,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2502",
+          "offset": "0xF8BE98"
+        },
+        {
+          "slot": 0,
+          "x": -2488,
+          "y": 199,
+          "z": -1424,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3a01",
+          "offset": "0xF8BEB8"
+        },
+        {
+          "slot": 0,
+          "x": 632,
+          "y": 195,
+          "z": 1928,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3100",
+          "offset": "0xF8BED8"
+        },
+        {
+          "slot": 0,
+          "x": 1576,
+          "y": 227,
+          "z": 4136,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2b02",
+          "offset": "0xF8BEF8"
+        },
+        {
+          "slot": 0,
+          "x": -1272,
+          "y": 199,
+          "z": -1752,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "9f00",
+          "offset": "0xF8BF18"
+        },
+        {
+          "slot": 0,
+          "x": -2480,
+          "y": 183,
+          "z": -2440,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3401",
+          "offset": "0xF8BF38"
+        },
+        {
+          "slot": 0,
+          "x": -1168,
+          "y": 207,
+          "z": -624,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2902",
+          "offset": "0xF8BF58"
+        },
+        {
+          "slot": 0,
+          "x": 488,
+          "y": 211,
+          "z": -328,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7403",
+          "offset": "0xF8BF78"
+        },
+        {
+          "slot": 0,
+          "x": 1728,
+          "y": 211,
+          "z": 3032,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "4302",
+          "offset": "0xF8BF98"
+        },
+        {
+          "slot": 0,
+          "x": 1232,
+          "y": 199,
+          "z": -3328,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2502",
+          "offset": "0xF8BFB8"
+        },
+        {
+          "slot": 0,
+          "x": 2608,
+          "y": 175,
+          "z": -4160,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7801",
+          "offset": "0xF8BFD8"
+        },
+        {
+          "slot": 0,
+          "x": -1992,
+          "y": 199,
+          "z": -3200,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6f03",
+          "offset": "0xF8BFF8"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0xF8BC98"
+    },
+    {
+      "total": 27,
+      "composition": [
+        {
+          "count": 13,
+          "slot": 0,
+          "monster": "Cave-Scissors"
+        },
+        {
+          "count": 14,
+          "slot": 2,
+          "monster": "Spirit-Ball"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -2960,
+          "y": 168,
+          "z": -4232,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6b03",
+          "offset": "0xF8C498"
+        },
+        {
+          "slot": 2,
+          "x": 2616,
+          "y": 184,
+          "z": -3280,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7503",
+          "offset": "0xF8C4B8"
+        },
+        {
+          "slot": 2,
+          "x": 1408,
+          "y": 184,
+          "z": -3320,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2502",
+          "offset": "0xF8C4D8"
+        },
+        {
+          "slot": 2,
+          "x": -2488,
+          "y": 184,
+          "z": -1424,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3a01",
+          "offset": "0xF8C4F8"
+        },
+        {
+          "slot": 2,
+          "x": 632,
+          "y": 180,
+          "z": 1928,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3100",
+          "offset": "0xF8C518"
+        },
+        {
+          "slot": 2,
+          "x": 1576,
+          "y": 212,
+          "z": 4136,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2b02",
+          "offset": "0xF8C538"
+        },
+        {
+          "slot": 2,
+          "x": -1272,
+          "y": 184,
+          "z": -1752,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "9f00",
+          "offset": "0xF8C558"
+        },
+        {
+          "slot": 2,
+          "x": -2480,
+          "y": 168,
+          "z": -2440,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3401",
+          "offset": "0xF8C578"
+        },
+        {
+          "slot": 2,
+          "x": -1168,
+          "y": 192,
+          "z": -624,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2902",
+          "offset": "0xF8C598"
+        },
+        {
+          "slot": 2,
+          "x": 488,
+          "y": 196,
+          "z": -328,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7403",
+          "offset": "0xF8C5B8"
+        },
+        {
+          "slot": 2,
+          "x": 1728,
+          "y": 196,
+          "z": 3032,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "4302",
+          "offset": "0xF8C5D8"
+        },
+        {
+          "slot": 2,
+          "x": 1232,
+          "y": 184,
+          "z": -3328,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2502",
+          "offset": "0xF8C5F8"
+        },
+        {
+          "slot": 2,
+          "x": 2608,
+          "y": 160,
+          "z": -4160,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7801",
+          "offset": "0xF8C618"
+        },
+        {
+          "slot": 2,
+          "x": -1992,
+          "y": 184,
+          "z": -3200,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6f03",
+          "offset": "0xF8C638"
+        },
+        {
+          "slot": 0,
+          "x": -2960,
+          "y": 183,
+          "z": -4232,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6b03",
+          "offset": "0xF8C658"
+        },
+        {
+          "slot": 0,
+          "x": 2616,
+          "y": 199,
+          "z": -3280,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7503",
+          "offset": "0xF8C678"
+        },
+        {
+          "slot": 0,
+          "x": 1408,
+          "y": 199,
+          "z": -3320,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2502",
+          "offset": "0xF8C698"
+        },
+        {
+          "slot": 0,
+          "x": -2488,
+          "y": 199,
+          "z": -1424,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3a01",
+          "offset": "0xF8C6B8"
+        },
+        {
+          "slot": 0,
+          "x": 632,
+          "y": 195,
+          "z": 1928,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3100",
+          "offset": "0xF8C6D8"
+        },
+        {
+          "slot": 0,
+          "x": 1576,
+          "y": 227,
+          "z": 4136,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2b02",
+          "offset": "0xF8C6F8"
+        },
+        {
+          "slot": 0,
+          "x": -1272,
+          "y": 199,
+          "z": -1752,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "9f00",
+          "offset": "0xF8C718"
+        },
+        {
+          "slot": 0,
+          "x": -2480,
+          "y": 183,
+          "z": -2440,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3401",
+          "offset": "0xF8C738"
+        },
+        {
+          "slot": 0,
+          "x": -1168,
+          "y": 207,
+          "z": -624,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2902",
+          "offset": "0xF8C758"
+        },
+        {
+          "slot": 0,
+          "x": 488,
+          "y": 211,
+          "z": -328,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7403",
+          "offset": "0xF8C778"
+        },
+        {
+          "slot": 0,
+          "x": 1728,
+          "y": 211,
+          "z": 3032,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "4302",
+          "offset": "0xF8C798"
+        },
+        {
+          "slot": 0,
+          "x": 1232,
+          "y": 199,
+          "z": -3328,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2502",
+          "offset": "0xF8C7B8"
+        },
+        {
+          "slot": 0,
+          "x": 2608,
+          "y": 175,
+          "z": -4160,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7801",
+          "offset": "0xF8C7D8"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0xF8C498"
+    }
   ]
 }

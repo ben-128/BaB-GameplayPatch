@@ -11,5 +11,76 @@
   "original_total_slots": 0,
   "area_id": "0000",
   "formation_count": 0,
-  "formations": []
+  "formations": [],
+  "_placed_spawns": "--- placed spawns (per-record offsets) ---",
+  "spawn_points_area_start": "0x25D2D4C",
+  "spawn_points_area_bytes": 36,
+  "original_total_spawn_slots": 1,
+  "spawn_point_count": 1,
+  "spawn_points": [
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Griffin"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": -1500,
+          "y": 500,
+          "z": -700,
+          "byte0": 120,
+          "byte10_11": "0500",
+          "area_id": "0f00",
+          "offset": "0x25D2D4C"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x25D2D4C"
+    }
+  ],
+  "zone_spawns_area_start": "0x25D2D6C",
+  "zone_spawns_area_bytes": 68,
+  "original_total_zone_spawn_slots": 2,
+  "zone_spawn_count": 1,
+  "zone_spawns": [
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Hippogriff"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": -1500,
+          "y": 500,
+          "z": -800,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "9100",
+          "offset": "0x25D2D6C"
+        },
+        {
+          "slot": 0,
+          "x": -1500,
+          "y": 500,
+          "z": -600,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "9200",
+          "offset": "0x25D2D8C"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x25D2D6C"
+    }
+  ]
 }

@@ -117,5 +117,285 @@
       "suffix": "00000000",
       "offset": "0xF86900"
     }
+  ],
+  "_placed_spawns": "--- placed spawns (per-record offsets) ---",
+  "spawn_points_area_start": null,
+  "spawn_points_area_bytes": 0,
+  "original_total_spawn_slots": 0,
+  "spawn_point_count": 0,
+  "spawn_points": [],
+  "zone_spawns_area_start": "0xF86D74",
+  "zone_spawns_area_bytes": 2436,
+  "original_total_zone_spawn_slots": 24,
+  "zone_spawn_count": 2,
+  "zone_spawns": [
+    {
+      "total": 12,
+      "composition": [
+        {
+          "count": 12,
+          "slot": 2,
+          "monster": "Big-Viper"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -1192,
+          "y": -1820,
+          "z": -3372,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6503",
+          "offset": "0xF86D74"
+        },
+        {
+          "slot": 2,
+          "x": 288,
+          "y": -836,
+          "z": -2932,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6503",
+          "offset": "0xF86D94"
+        },
+        {
+          "slot": 2,
+          "x": 1600,
+          "y": 10,
+          "z": -3300,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6503",
+          "offset": "0xF86DB4"
+        },
+        {
+          "slot": 2,
+          "x": 2480,
+          "y": 524,
+          "z": -4620,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6503",
+          "offset": "0xF86DD4"
+        },
+        {
+          "slot": 2,
+          "x": 208,
+          "y": -836,
+          "z": -4508,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6503",
+          "offset": "0xF86DF4"
+        },
+        {
+          "slot": 2,
+          "x": -96,
+          "y": -1012,
+          "z": -3364,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6503",
+          "offset": "0xF86E14"
+        },
+        {
+          "slot": 2,
+          "x": -1064,
+          "y": -1700,
+          "z": -4620,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6503",
+          "offset": "0xF86E34"
+        },
+        {
+          "slot": 2,
+          "x": 1576,
+          "y": -4,
+          "z": -4532,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6503",
+          "offset": "0xF86E54"
+        },
+        {
+          "slot": 2,
+          "x": 920,
+          "y": -372,
+          "z": -3268,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6503",
+          "offset": "0xF86E74"
+        },
+        {
+          "slot": 2,
+          "x": 1272,
+          "y": -212,
+          "z": -2996,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6503",
+          "offset": "0xF86E94"
+        },
+        {
+          "slot": 2,
+          "x": 1284,
+          "y": -212,
+          "z": -4812,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6503",
+          "offset": "0xF86EB4"
+        },
+        {
+          "slot": 2,
+          "x": -656,
+          "y": -1436,
+          "z": -4592,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6503",
+          "offset": "0xF86ED4"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0xF86D74"
+    },
+    {
+      "total": 12,
+      "composition": [
+        {
+          "count": 12,
+          "slot": 2,
+          "monster": "Big-Viper"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -1192,
+          "y": -1820,
+          "z": -3372,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6503",
+          "offset": "0xF87574"
+        },
+        {
+          "slot": 2,
+          "x": 288,
+          "y": -836,
+          "z": -2932,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6503",
+          "offset": "0xF87594"
+        },
+        {
+          "slot": 2,
+          "x": 1600,
+          "y": 10,
+          "z": -3300,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6503",
+          "offset": "0xF875B4"
+        },
+        {
+          "slot": 2,
+          "x": 2480,
+          "y": 524,
+          "z": -4620,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6503",
+          "offset": "0xF875D4"
+        },
+        {
+          "slot": 2,
+          "x": 208,
+          "y": -836,
+          "z": -4508,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6503",
+          "offset": "0xF875F4"
+        },
+        {
+          "slot": 2,
+          "x": -96,
+          "y": -1012,
+          "z": -3364,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6503",
+          "offset": "0xF87614"
+        },
+        {
+          "slot": 2,
+          "x": -1064,
+          "y": -1700,
+          "z": -4620,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6503",
+          "offset": "0xF87634"
+        },
+        {
+          "slot": 2,
+          "x": 1576,
+          "y": -4,
+          "z": -4532,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6503",
+          "offset": "0xF87654"
+        },
+        {
+          "slot": 2,
+          "x": 920,
+          "y": -372,
+          "z": -3268,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6503",
+          "offset": "0xF87674"
+        },
+        {
+          "slot": 2,
+          "x": 1272,
+          "y": -212,
+          "z": -2996,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6503",
+          "offset": "0xF87694"
+        },
+        {
+          "slot": 2,
+          "x": 1284,
+          "y": -212,
+          "z": -4812,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6503",
+          "offset": "0xF876B4"
+        },
+        {
+          "slot": 2,
+          "x": -656,
+          "y": -1436,
+          "z": -4592,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6503",
+          "offset": "0xF876D4"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0xF87574"
+    }
   ]
 }

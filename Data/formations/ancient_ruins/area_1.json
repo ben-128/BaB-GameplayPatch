@@ -29,5 +29,220 @@
       "suffix": "00000a00",
       "offset": "0x25150E0"
     }
+  ],
+  "_placed_spawns": "--- placed spawns (per-record offsets) ---",
+  "spawn_points_area_start": "0x2514EF4",
+  "spawn_points_area_bytes": 488,
+  "original_total_spawn_slots": 15,
+  "spawn_point_count": 2,
+  "spawn_points": [
+    {
+      "total": 7,
+      "composition": [
+        {
+          "count": 7,
+          "slot": 1,
+          "monster": "Metal-Ball"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 2200,
+          "y": -500,
+          "z": 1400,
+          "byte0": 4,
+          "byte10_11": "0400",
+          "area_id": "ed00",
+          "offset": "0x2514EF4"
+        },
+        {
+          "slot": 1,
+          "x": 2200,
+          "y": -500,
+          "z": 1400,
+          "byte0": 0,
+          "byte10_11": "0400",
+          "area_id": "ed00",
+          "offset": "0x2514F14"
+        },
+        {
+          "slot": 1,
+          "x": 2200,
+          "y": -500,
+          "z": 1400,
+          "byte0": 0,
+          "byte10_11": "0400",
+          "area_id": "ed00",
+          "offset": "0x2514F34"
+        },
+        {
+          "slot": 1,
+          "x": 2200,
+          "y": -500,
+          "z": 1400,
+          "byte0": 0,
+          "byte10_11": "0400",
+          "area_id": "ed00",
+          "offset": "0x2514F54"
+        },
+        {
+          "slot": 1,
+          "x": 2200,
+          "y": -500,
+          "z": 1400,
+          "byte0": 0,
+          "byte10_11": "0400",
+          "area_id": "ed00",
+          "offset": "0x2514F74"
+        },
+        {
+          "slot": 1,
+          "x": 2200,
+          "y": -500,
+          "z": 1400,
+          "byte0": 0,
+          "byte10_11": "0400",
+          "area_id": "ed00",
+          "offset": "0x2514F94"
+        },
+        {
+          "slot": 1,
+          "x": 2200,
+          "y": -500,
+          "z": 1400,
+          "byte0": 0,
+          "byte10_11": "0400",
+          "area_id": "ed00",
+          "offset": "0x2514FB4"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2514EF4"
+    },
+    {
+      "total": 8,
+      "composition": [
+        {
+          "count": 8,
+          "slot": 1,
+          "monster": "Metal-Ball"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": -1800,
+          "y": -500,
+          "z": 1600,
+          "byte0": 0,
+          "byte10_11": "0500",
+          "area_id": "d800",
+          "offset": "0x2514FD8"
+        },
+        {
+          "slot": 1,
+          "x": -1800,
+          "y": -500,
+          "z": 1600,
+          "byte0": 0,
+          "byte10_11": "0500",
+          "area_id": "d800",
+          "offset": "0x2514FF8"
+        },
+        {
+          "slot": 1,
+          "x": -1800,
+          "y": -500,
+          "z": 1600,
+          "byte0": 0,
+          "byte10_11": "0500",
+          "area_id": "d800",
+          "offset": "0x2515018"
+        },
+        {
+          "slot": 1,
+          "x": -1800,
+          "y": -500,
+          "z": 1600,
+          "byte0": 0,
+          "byte10_11": "0500",
+          "area_id": "d800",
+          "offset": "0x2515038"
+        },
+        {
+          "slot": 1,
+          "x": -1800,
+          "y": -500,
+          "z": 1600,
+          "byte0": 0,
+          "byte10_11": "0500",
+          "area_id": "d800",
+          "offset": "0x2515058"
+        },
+        {
+          "slot": 1,
+          "x": -1800,
+          "y": -500,
+          "z": 1600,
+          "byte0": 0,
+          "byte10_11": "0500",
+          "area_id": "d800",
+          "offset": "0x2515078"
+        },
+        {
+          "slot": 1,
+          "x": -1800,
+          "y": -500,
+          "z": 1600,
+          "byte0": 0,
+          "byte10_11": "0500",
+          "area_id": "d800",
+          "offset": "0x2515098"
+        },
+        {
+          "slot": 1,
+          "x": -1800,
+          "y": -500,
+          "z": 1600,
+          "byte0": 0,
+          "byte10_11": "0500",
+          "area_id": "d800",
+          "offset": "0x25150B8"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2514FD8"
+    }
+  ],
+  "zone_spawns_area_start": "0x2515364",
+  "zone_spawns_area_bytes": 36,
+  "original_total_zone_spawn_slots": 1,
+  "zone_spawn_count": 1,
+  "zone_spawns": [
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Wolf"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 50,
+          "y": -100,
+          "z": 1900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "1502",
+          "offset": "0x2515364"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2515364"
+    }
   ]
 }

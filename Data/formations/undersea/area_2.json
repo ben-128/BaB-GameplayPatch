@@ -32,5 +32,110 @@
       "suffix": "00000000",
       "offset": "0x269EAC4"
     }
+  ],
+  "_placed_spawns": "--- placed spawns (per-record offsets) ---",
+  "spawn_points_area_start": "0x269E8D8",
+  "spawn_points_area_bytes": 136,
+  "original_total_spawn_slots": 4,
+  "spawn_point_count": 2,
+  "spawn_points": [
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Black-Lizard"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": -150,
+          "y": 200,
+          "z": 400,
+          "byte0": 3,
+          "byte10_11": "0700",
+          "area_id": "3b02",
+          "offset": "0x269E8D8"
+        },
+        {
+          "slot": 0,
+          "x": 150,
+          "y": 200,
+          "z": 400,
+          "byte0": 0,
+          "byte10_11": "0700",
+          "area_id": "3b02",
+          "offset": "0x269E8F8"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x269E8D8"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Black-Lizard"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": -150,
+          "y": 200,
+          "z": -2420,
+          "byte0": 0,
+          "byte10_11": "0800",
+          "area_id": "d401",
+          "offset": "0x269E91C"
+        },
+        {
+          "slot": 0,
+          "x": 150,
+          "y": 200,
+          "z": -2420,
+          "byte0": 0,
+          "byte10_11": "0800",
+          "area_id": "d401",
+          "offset": "0x269E93C"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x269E91C"
+    }
+  ],
+  "zone_spawns_area_start": "0x269EC74",
+  "zone_spawns_area_bytes": 36,
+  "original_total_zone_spawn_slots": 1,
+  "zone_spawn_count": 1,
+  "zone_spawns": [
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Kraken-Hand"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 1566,
+          "y": 500,
+          "z": 2700,
+          "byte0": 184,
+          "byte10_11": "0000",
+          "area_id": "1203",
+          "offset": "0x269EC74"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x269EC74"
+    }
   ]
 }

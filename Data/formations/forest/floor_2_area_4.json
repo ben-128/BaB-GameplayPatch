@@ -12,5 +12,495 @@
   "original_total_slots": 0,
   "area_id": "0000",
   "formation_count": 0,
-  "formations": []
+  "formations": [],
+  "_placed_spawns": "--- placed spawns (per-record offsets) ---",
+  "spawn_points_area_start": "0x14B3910",
+  "spawn_points_area_bytes": 19372,
+  "original_total_spawn_slots": 19,
+  "spawn_point_count": 7,
+  "spawn_points": [
+    {
+      "total": 5,
+      "composition": [
+        {
+          "count": 5,
+          "slot": 0,
+          "monster": "Desert-Lizard"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": -3886,
+          "y": 5,
+          "z": 4634,
+          "byte0": 6,
+          "byte10_11": "0a00",
+          "area_id": "9b01",
+          "offset": "0x14B3910"
+        },
+        {
+          "slot": 0,
+          "x": -3582,
+          "y": 5,
+          "z": 1810,
+          "byte0": 0,
+          "byte10_11": "0a00",
+          "area_id": "a701",
+          "offset": "0x14B3930"
+        },
+        {
+          "slot": 0,
+          "x": -3910,
+          "y": 5,
+          "z": 3218,
+          "byte0": 0,
+          "byte10_11": "0a00",
+          "area_id": "a101",
+          "offset": "0x14B3950"
+        },
+        {
+          "slot": 0,
+          "x": -3568,
+          "y": 5,
+          "z": 32,
+          "byte0": 0,
+          "byte10_11": "0a00",
+          "area_id": "ae01",
+          "offset": "0x14B3970"
+        },
+        {
+          "slot": 0,
+          "x": -3664,
+          "y": 5,
+          "z": -1100,
+          "byte0": 0,
+          "byte10_11": "0a00",
+          "area_id": "b301",
+          "offset": "0x14B3990"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x14B3910"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Desert-Lizard"
+        },
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Wyrm"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": -2470,
+          "y": 5,
+          "z": -1532,
+          "byte0": 0,
+          "byte10_11": "0b00",
+          "area_id": "8502",
+          "offset": "0x14B39B4"
+        },
+        {
+          "slot": 0,
+          "x": -1966,
+          "y": 5,
+          "z": -2544,
+          "byte0": 0,
+          "byte10_11": "0b00",
+          "area_id": "7a02",
+          "offset": "0x14B39D4"
+        },
+        {
+          "slot": 1,
+          "x": -758,
+          "y": 5,
+          "z": -2132,
+          "byte0": 0,
+          "byte10_11": "0b00",
+          "area_id": "7102",
+          "offset": "0x14B39F4"
+        },
+        {
+          "slot": 1,
+          "x": -1207,
+          "y": 5,
+          "z": -3152,
+          "byte0": 0,
+          "byte10_11": "0b00",
+          "area_id": "7c02",
+          "offset": "0x14B3A14"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x14B39B4"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 0,
+          "monster": "Desert-Lizard"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": 1785,
+          "y": 105,
+          "z": -4196,
+          "byte0": 0,
+          "byte10_11": "0c00",
+          "area_id": "2b02",
+          "offset": "0x14B3A38"
+        },
+        {
+          "slot": 0,
+          "x": -303,
+          "y": 105,
+          "z": -3244,
+          "byte0": 0,
+          "byte10_11": "0c00",
+          "area_id": "4102",
+          "offset": "0x14B3A58"
+        },
+        {
+          "slot": 0,
+          "x": 1092,
+          "y": 105,
+          "z": -3801,
+          "byte0": 0,
+          "byte10_11": "0c00",
+          "area_id": "3402",
+          "offset": "0x14B3A78"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x14B3A38"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 2,
+          "monster": "Giant"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 1570,
+          "y": 325,
+          "z": 348,
+          "byte0": 0,
+          "byte10_11": "0d00",
+          "area_id": "0000",
+          "offset": "0x14B3A9C"
+        },
+        {
+          "slot": 2,
+          "x": 2240,
+          "y": 325,
+          "z": 344,
+          "byte0": 0,
+          "byte10_11": "0d00",
+          "area_id": "0100",
+          "offset": "0x14B3ABC"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x14B3A9C"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 2,
+          "monster": "Giant"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 958,
+          "y": 325,
+          "z": 1868,
+          "byte0": 0,
+          "byte10_11": "0e00",
+          "area_id": "1b01",
+          "offset": "0x14B3AE0"
+        },
+        {
+          "slot": 2,
+          "x": 3495,
+          "y": 325,
+          "z": 4236,
+          "byte0": 0,
+          "byte10_11": "0e00",
+          "area_id": "4b01",
+          "offset": "0x14B3B00"
+        },
+        {
+          "slot": 2,
+          "x": 2835,
+          "y": 325,
+          "z": 1607,
+          "byte0": 0,
+          "byte10_11": "0e00",
+          "area_id": "1601",
+          "offset": "0x14B3B20"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x14B3AE0"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 0,
+          "monster": "Desert-Lizard"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": 0,
+          "y": 205,
+          "z": -400,
+          "byte0": 0,
+          "byte10_11": "0400",
+          "area_id": "0100",
+          "offset": "0x14B7C98"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x14B7C98"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 0,
+          "monster": "Desert-Lizard"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": 0,
+          "y": 205,
+          "z": -400,
+          "byte0": 0,
+          "byte10_11": "0400",
+          "area_id": "0100",
+          "offset": "0x14B8498"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x14B8498"
+    }
+  ],
+  "zone_spawns_area_start": "0x14B3B40",
+  "zone_spawns_area_bytes": 19064,
+  "original_total_zone_spawn_slots": 10,
+  "zone_spawn_count": 6,
+  "zone_spawns": [
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Wyrm"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 2155,
+          "y": 325,
+          "z": 4711,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "4901",
+          "offset": "0x14B3B40"
+        },
+        {
+          "slot": 1,
+          "x": 339,
+          "y": 325,
+          "z": 4607,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "4601",
+          "offset": "0x14B3B60"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x14B3B40"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Giant"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -3900,
+          "y": 85,
+          "z": -4100,
+          "byte0": 7,
+          "byte10_11": "0000",
+          "area_id": "6101",
+          "offset": "0x14B3FE0"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x14B3FE0"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Giant"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 1900,
+          "y": 725,
+          "z": 3100,
+          "byte0": 10,
+          "byte10_11": "0000",
+          "area_id": "f200",
+          "offset": "0x14B4224"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x14B4224"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 0,
+          "monster": "Desert-Lizard"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": 1300,
+          "y": 270,
+          "z": 6700,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ca02",
+          "offset": "0x14B4728"
+        },
+        {
+          "slot": 0,
+          "x": 2500,
+          "y": 270,
+          "z": 6700,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "cc02",
+          "offset": "0x14B4748"
+        },
+        {
+          "slot": 0,
+          "x": 1500,
+          "y": 440,
+          "z": 7100,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "dd02",
+          "offset": "0x14B4768"
+        },
+        {
+          "slot": 0,
+          "x": 2300,
+          "y": 440,
+          "z": 7100,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "e002",
+          "offset": "0x14B4788"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x14B4728"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Giant"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 0,
+          "y": 285,
+          "z": 1000,
+          "byte0": 104,
+          "byte10_11": "0000",
+          "area_id": "7700",
+          "offset": "0x14B7D94"
+        }
+      ],
+      "suffix": "0a000000",
+      "offset": "0x14B7D94"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Giant"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 0,
+          "y": 285,
+          "z": 1000,
+          "byte0": 104,
+          "byte10_11": "0000",
+          "area_id": "7700",
+          "offset": "0x14B8594"
+        }
+      ],
+      "suffix": "0a000000",
+      "offset": "0x14B8594"
+    }
+  ]
 }

@@ -13,5 +13,184 @@
   "original_total_slots": 0,
   "area_id": "0000",
   "formation_count": 0,
-  "formations": []
+  "formations": [],
+  "_placed_spawns": "--- placed spawns (per-record offsets) ---",
+  "spawn_points_area_start": "0x1DE88C4",
+  "spawn_points_area_bytes": 36,
+  "original_total_spawn_slots": 1,
+  "spawn_point_count": 1,
+  "spawn_points": [
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Durahan"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 1899,
+          "y": -395,
+          "z": 1855,
+          "byte0": 4,
+          "byte10_11": "0f00",
+          "area_id": "8c00",
+          "offset": "0x1DE88C4"
+        }
+      ],
+      "suffix": "36000000",
+      "offset": "0x1DE88C4"
+    }
+  ],
+  "zone_spawns_area_start": "0x1DE88E4",
+  "zone_spawns_area_bytes": 332,
+  "original_total_zone_spawn_slots": 10,
+  "zone_spawn_count": 3,
+  "zone_spawns": [
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 3,
+          "monster": "Blood-Skeleton"
+        }
+      ],
+      "records": [
+        {
+          "slot": 3,
+          "x": 1600,
+          "y": -395,
+          "z": 2200,
+          "byte0": 54,
+          "byte10_11": "0000",
+          "area_id": "8f00",
+          "offset": "0x1DE88E4"
+        },
+        {
+          "slot": 3,
+          "x": 1600,
+          "y": -395,
+          "z": 1600,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "8d00",
+          "offset": "0x1DE8904"
+        },
+        {
+          "slot": 3,
+          "x": 2100,
+          "y": -395,
+          "z": 1900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "9200",
+          "offset": "0x1DE8924"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x1DE88E4"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 0,
+          "monster": "Wight"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": -1893,
+          "y": 205,
+          "z": 5230,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "4500",
+          "offset": "0x1DE8948"
+        },
+        {
+          "slot": 0,
+          "x": -2434,
+          "y": 205,
+          "z": 6113,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3100",
+          "offset": "0x1DE8968"
+        },
+        {
+          "slot": 0,
+          "x": -1702,
+          "y": 205,
+          "z": 4887,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "4900",
+          "offset": "0x1DE8988"
+        },
+        {
+          "slot": 0,
+          "x": -2713,
+          "y": 205,
+          "z": 6431,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3700",
+          "offset": "0x1DE89A8"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x1DE8948"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 0,
+          "monster": "Wight"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": -3322,
+          "y": 205,
+          "z": 6126,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3c00",
+          "offset": "0x1DE89CC"
+        },
+        {
+          "slot": 0,
+          "x": -3681,
+          "y": 205,
+          "z": 5935,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3a00",
+          "offset": "0x1DE89EC"
+        },
+        {
+          "slot": 0,
+          "x": -3852,
+          "y": 205,
+          "z": 6338,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3800",
+          "offset": "0x1DE8A0C"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x1DE89CC"
+    }
+  ]
 }

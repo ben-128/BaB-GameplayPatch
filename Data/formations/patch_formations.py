@@ -2,18 +2,18 @@
 # -*- coding: cp1252 -*-
 """
 patch_formations.py
-Rewrites formation templates in BLAZE.ALL from edited JSONs.
+Rewrites formation templates and spawn points in BLAZE.ALL from edited JSONs.
 
 Supports:
   - Changing slot indices (monster types)
   - Merging formations (combine slots, remove the absorbed formation)
   - Resizing formations (redistribute records between formations)
+  - In-place patching of spawn point records (slot, coords, byte0, etc.)
 
-The patcher rewrites the entire formation area in-place. Total bytes
-must not exceed formation_area_bytes. Unused space is null-padded.
+Formation templates: area-rewrite approach (total bytes must not exceed budget).
+Spawn points: in-place per-record patching (safe for interleaved areas).
 
-Edit the "slots" arrays in the formation JSONs, then run this script.
-To merge: combine slots arrays and delete the absorbed formation entry.
+Edit the "slots" arrays or spawn point records, then run this script.
 
 Usage: py -3 Data/formations/patch_formations.py
 """
@@ -94,6 +94,76 @@ def build_formation_area(area):
     return bytes(binary)
 
 
+def patch_placed_records(data, area, section_key="spawn_points"):
+    """In-place patch placed records (spawn_points or zone_spawns).
+
+    Returns (changed_count, error).
+    """
+    spawn_points = area.get(section_key, [])
+    if not spawn_points:
+        return 0, False
+
+    monsters = area["monsters"]
+    num_slots = len(monsters)
+    changed = 0
+
+    for spidx, sp_group in enumerate(spawn_points):
+        records = sp_group.get("records", [])
+        for ridx, rec in enumerate(records):
+            offset_hex = rec.get("offset")
+            if not offset_hex:
+                print("    [ERROR] SP{:02d}[{}]: missing offset".format(
+                    spidx, ridx))
+                return changed, True
+
+            offset = int(offset_hex, 16)
+            slot = rec["slot"]
+
+            if slot < 0 or slot >= num_slots:
+                print("    [ERROR] SP{:02d}[{}]: slot {} invalid "
+                      "(area has {} monsters)".format(
+                          spidx, ridx, slot, num_slots))
+                return changed, True
+
+            # Build the expected record bytes for comparison
+            old_byte8 = data[offset + 8]
+            old_coord = struct.unpack_from('<hhh', data, offset + 12)
+            old_byte0 = data[offset]
+            old_byte10_11 = data[offset + 10:offset + 12]
+            old_area_id = data[offset + 24:offset + 26]
+
+            new_x = rec["x"]
+            new_y = rec["y"]
+            new_z = rec["z"]
+            new_byte0 = rec["byte0"]
+            new_byte10_11 = bytes.fromhex(rec["byte10_11"])
+            new_area_id = bytes.fromhex(rec["area_id"])
+
+            rec_changed = False
+
+            if old_byte8 != slot:
+                data[offset + 8] = slot
+                rec_changed = True
+            if old_coord != (new_x, new_y, new_z):
+                struct.pack_into('<hhh', data, offset + 12,
+                                 new_x, new_y, new_z)
+                rec_changed = True
+            if old_byte0 != new_byte0:
+                data[offset] = new_byte0
+                rec_changed = True
+            if old_byte10_11 != new_byte10_11:
+                data[offset + 10:offset + 12] = new_byte10_11
+                rec_changed = True
+            if old_area_id != new_area_id:
+                data[offset + 24:offset + 26] = new_area_id
+                rec_changed = True
+
+            if rec_changed:
+                changed += 1
+
+    return changed, False
+
+
 def patch_area(data, area):
     """Rewrite the formation area for one area. Returns (changed, error)."""
     formations = area.get("formations", [])
@@ -152,7 +222,7 @@ def find_area_jsons():
 
 def main():
     print("=" * 60)
-    print("  Formation Rewrite Patcher")
+    print("  Formation & Spawn Point Patcher")
     print("=" * 60)
     print()
 
@@ -168,13 +238,15 @@ def main():
 
     json_files = find_area_jsons()
     if not json_files:
-        print("No formation JSON files found in {}".format(FORMATIONS_DIR))
+        print("No area JSON files found in {}".format(FORMATIONS_DIR))
         return 1
 
     print("Found {} area files".format(len(json_files)))
     print()
 
-    total_changed = 0
+    total_formation_changed = 0
+    total_sp_records_changed = 0
+    total_sp_areas_changed = 0
     total_errors = 0
     total_areas = 0
     current_level = None
@@ -184,12 +256,15 @@ def main():
             area = json.load(f)
 
         formations = area.get("formations", [])
-        if not formations:
-            continue
+        spawn_points = area.get("spawn_points", [])
+        zone_spawns = area.get("zone_spawns", [])
+        has_formations = (formations
+                          and area.get("formation_area_start")
+                          and area.get("formation_area_bytes", 0) > 0)
+        has_spawn_points = bool(spawn_points)
+        has_zone_spawns = bool(zone_spawns)
 
-        area_start = area.get("formation_area_start")
-        area_bytes = area.get("formation_area_bytes", 0)
-        if not area_start or area_bytes == 0:
+        if not has_formations and not has_spawn_points and not has_zone_spawns:
             continue
 
         total_areas += 1
@@ -203,39 +278,92 @@ def main():
             current_level = level_name
 
         area_name = area["name"]
-        new_total = sum(len(f["slots"]) for f in formations)
-        orig_total = area.get("original_total_slots", new_total)
-        num_f = len(formations)
-        orig_count = area.get("formation_count", num_f)
+        status_parts = []
 
-        changed, error = patch_area(data, area)
+        # Patch formations (area-rewrite)
+        if has_formations:
+            new_total = sum(len(f["slots"]) for f in formations)
+            orig_total = area.get("original_total_slots", new_total)
+            num_f = len(formations)
+            orig_count = area.get("formation_count", num_f)
 
-        if error:
-            total_errors += 1
-            print("  {}: ERRORS".format(area_name))
-        elif changed:
-            total_changed += 1
-            detail = ""
-            if num_f != orig_count:
-                detail += " ({}->{}F)".format(orig_count, num_f)
-            if new_total != orig_total:
-                detail += " ({}->{}slots)".format(orig_total, new_total)
-            print("  {}: REWRITTEN{}".format(area_name, detail))
-            # Show new formations
-            monsters = area["monsters"]
-            for fidx, f in enumerate(formations):
-                parts = []
-                slot_counts = {}
-                for s in f["slots"]:
-                    slot_counts[s] = slot_counts.get(s, 0) + 1
-                for s in sorted(slot_counts.keys()):
-                    name = monsters[s] if s < len(monsters) else "?{}".format(s)
-                    parts.append("{}x{}".format(slot_counts[s], name))
-                print("    F{:02d}: [{}] {}".format(fidx, len(f["slots"]),
-                                                     " + ".join(parts)))
-        else:
-            print("  {}: {} formations (no changes)".format(
-                area_name, num_f))
+            f_changed, f_error = patch_area(data, area)
+
+            if f_error:
+                total_errors += 1
+                status_parts.append("formations:ERROR")
+            elif f_changed:
+                total_formation_changed += 1
+                detail = ""
+                if num_f != orig_count:
+                    detail += " {}->{}F".format(orig_count, num_f)
+                if new_total != orig_total:
+                    detail += " {}->{}slots".format(orig_total, new_total)
+                status_parts.append("formations:REWRITTEN{}".format(detail))
+                monsters = area["monsters"]
+                for fidx, f in enumerate(formations):
+                    parts = []
+                    slot_counts = {}
+                    for s in f["slots"]:
+                        slot_counts[s] = slot_counts.get(s, 0) + 1
+                    for s in sorted(slot_counts.keys()):
+                        name = monsters[s] if s < len(monsters) else "?{}".format(s)
+                        parts.append("{}x{}".format(slot_counts[s], name))
+                    status_parts.append("    F{:02d}: [{}] {}".format(
+                        fidx, len(f["slots"]), " + ".join(parts)))
+            else:
+                status_parts.append("formations:ok({})".format(
+                    len(formations)))
+
+        # Patch spawn points (in-place per-record)
+        if has_spawn_points:
+            sp_changed, sp_error = patch_placed_records(
+                data, area, "spawn_points")
+
+            if sp_error:
+                total_errors += 1
+                status_parts.append("spawn_points:ERROR")
+            elif sp_changed > 0:
+                total_sp_records_changed += sp_changed
+                total_sp_areas_changed += 1
+                status_parts.append(
+                    "spawn_points:{} records patched".format(sp_changed))
+            else:
+                total_recs = sum(len(sp.get("records", []))
+                                 for sp in spawn_points)
+                status_parts.append("spawn_points:ok({} recs)".format(
+                    total_recs))
+
+        # Patch zone spawns (in-place per-record)
+        if has_zone_spawns:
+            zs_changed, zs_error = patch_placed_records(
+                data, area, "zone_spawns")
+
+            if zs_error:
+                total_errors += 1
+                status_parts.append("zone_spawns:ERROR")
+            elif zs_changed > 0:
+                total_sp_records_changed += zs_changed
+                total_sp_areas_changed += 1
+                status_parts.append(
+                    "zone_spawns:{} records patched".format(zs_changed))
+            else:
+                total_recs = sum(len(zs.get("records", []))
+                                 for zs in zone_spawns)
+                status_parts.append("zone_spawns:ok({} recs)".format(
+                    total_recs))
+
+        # Print status
+        first = True
+        for part in status_parts:
+            if first:
+                print("  {}: {}".format(area_name, part))
+                first = False
+            else:
+                if part.startswith("    "):
+                    print(part)
+                else:
+                    print("    {}".format(part))
 
     print()
 
@@ -247,11 +375,19 @@ def main():
         print("!" * 60)
         return 1
 
+    total_changed = total_formation_changed + total_sp_areas_changed
     if total_changed > 0:
         BLAZE_ALL.write_bytes(data)
         print("=" * 60)
-        print("  {} area(s) rewritten out of {} total".format(
-            total_changed, total_areas))
+        parts = []
+        if total_formation_changed > 0:
+            parts.append("{} formation area(s) rewritten".format(
+                total_formation_changed))
+        if total_sp_areas_changed > 0:
+            parts.append("{} spawn point records patched in {} area(s)".format(
+                total_sp_records_changed, total_sp_areas_changed))
+        print("  {}".format(", ".join(parts)))
+        print("  ({} areas total)".format(total_areas))
         print("  BLAZE.ALL saved")
         print("=" * 60)
     else:
