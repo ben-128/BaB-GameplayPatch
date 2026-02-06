@@ -82,9 +82,20 @@ button:disabled { opacity: 0.4; cursor: default; }
 
 <h1>Formation Editor</h1>
 
-<div class="header">
+<div class="header" id="headerLocal">
   <label>Load area JSON:</label>
   <input type="file" id="fileInput" accept=".json">
+</div>
+<div class="header" id="headerServer" style="display:none">
+  <label>Level:</label>
+  <select id="levelSelect" style="background:#16213e;color:#e0e0e0;border:1px solid #0f3460;padding:6px 10px;border-radius:4px;min-width:200px;font-size:0.95em;">
+    <option value="">-- select level --</option>
+  </select>
+  <label>Area:</label>
+  <select id="areaSelect" style="background:#16213e;color:#e0e0e0;border:1px solid #0f3460;padding:6px 10px;border-radius:4px;min-width:200px;font-size:0.95em;" disabled>
+    <option value="">-- select area --</option>
+  </select>
+  <span id="serverBadge" style="background:#0f3460;color:#53a8b6;padding:3px 10px;border-radius:10px;font-size:0.8em;font-weight:600;">SERVER MODE</span>
 </div>
 
 <div id="areaInfo" style="display:none">
@@ -135,6 +146,8 @@ let spawnPoints = [];
 let zoneSpawns = [];
 let undoStack = [];
 let loadedFileName = '';
+let serverMode = false;
+let serverPath = '';
 
 const $ = id => document.getElementById(id);
 
@@ -568,15 +581,40 @@ function saveJSON() {
   }
 
   const out = buildOutputJSON();
-  const json = JSON.stringify(out, null, 2);
-  const blob = new Blob([json], { type: 'application/json' });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = loadedFileName || 'area.json';
-  a.click();
-  URL.revokeObjectURL(url);
-  showStatus('Saved ' + a.download, true);
+
+  if (serverMode && serverPath) {
+    // Server mode: POST to save endpoint
+    $('btnSave').disabled = true;
+    fetch('/api/save/' + serverPath, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(out, null, 2)
+    })
+    .then(r => r.json().then(data => ({ ok: r.ok, data })))
+    .then(({ ok, data }) => {
+      $('btnSave').disabled = false;
+      if (ok) {
+        showStatus('Saved ' + serverPath, true);
+      } else {
+        showStatus('Save failed: ' + (data.error || 'unknown error'), false);
+      }
+    })
+    .catch(err => {
+      $('btnSave').disabled = false;
+      showStatus('Save failed: ' + err.message, false);
+    });
+  } else {
+    // Local mode: download file
+    const json = JSON.stringify(out, null, 2);
+    const blob = new Blob([json], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = loadedFileName || 'area.json';
+    a.click();
+    URL.revokeObjectURL(url);
+    showStatus('Saved ' + a.download, true);
+  }
 }
 
 // --- Load ---
@@ -681,6 +719,86 @@ document.body.addEventListener('drop', e => {
     reader.readAsText(file);
   }
 });
+
+// --- Server mode detection ---
+let allFiles = [];
+
+function prettify(name) {
+  return name.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+}
+
+function loadSelectedArea(path) {
+  serverPath = path;
+  fetch('/api/load/' + path)
+    .then(r => { if (!r.ok) throw new Error('Load failed'); return r.json(); })
+    .then(data => {
+      if (!data.formations || !data.monsters) {
+        showStatus('Invalid area JSON: missing "formations" or "monsters"', false);
+        return;
+      }
+      loadArea(data, path.split('/').pop());
+      showStatus('Loaded ' + path, true);
+    })
+    .catch(err => showStatus('Load error: ' + err.message, false));
+}
+
+fetch('/api/files')
+  .then(r => { if (!r.ok) throw new Error('not served'); return r.json(); })
+  .then(files => {
+    serverMode = true;
+    allFiles = files;
+    $('headerLocal').style.display = 'none';
+    $('headerServer').style.display = 'flex';
+
+    // Build level list from unique directory prefixes
+    const levels = [];
+    const seen = {};
+    for (const f of files) {
+      const level = f.path.split('/')[0];
+      if (!seen[level]) {
+        seen[level] = true;
+        levels.push(level);
+      }
+    }
+
+    const levelSel = $('levelSelect');
+    const areaSel = $('areaSelect');
+    for (const lv of levels) {
+      const opt = document.createElement('option');
+      opt.value = lv;
+      opt.textContent = prettify(lv);
+      levelSel.appendChild(opt);
+    }
+
+    levelSel.addEventListener('change', () => {
+      const lv = levelSel.value;
+      areaSel.innerHTML = '<option value="">-- select area --</option>';
+      areaSel.disabled = !lv;
+      if (!lv) return;
+      const matching = allFiles.filter(f => f.path.split('/')[0] === lv);
+      for (const f of matching) {
+        const opt = document.createElement('option');
+        opt.value = f.path;
+        const areaName = f.path.split('/').slice(1).join('/').replace('.json', '');
+        opt.textContent = prettify(areaName);
+        areaSel.appendChild(opt);
+      }
+      // Auto-load if only one area
+      if (matching.length === 1) {
+        areaSel.value = matching[0].path;
+        loadSelectedArea(matching[0].path);
+      }
+    });
+
+    areaSel.addEventListener('change', () => {
+      const path = areaSel.value;
+      if (!path) return;
+      loadSelectedArea(path);
+    });
+  })
+  .catch(() => {
+    // Not running from server - keep local file mode
+  });
 </script>
 </body>
 </html>
