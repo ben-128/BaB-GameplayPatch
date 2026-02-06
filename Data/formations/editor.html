@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Formation Editor</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #1a1a2e; color: #e0e0e0; padding: 20px; }
+h1 { color: #e94560; margin-bottom: 10px; font-size: 1.4em; }
+h2 { color: #16213e; font-size: 1.1em; }
+
+.header { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; flex-wrap: wrap; }
+.header label { font-weight: 600; }
+#fileInput { background: #16213e; color: #e0e0e0; border: 1px solid #0f3460; padding: 6px 10px; border-radius: 4px; }
+#areaInfo { background: #16213e; padding: 12px 16px; border-radius: 6px; margin-bottom: 16px; border-left: 4px solid #e94560; }
+#areaInfo .title { font-size: 1.2em; font-weight: 700; color: #e94560; }
+#areaInfo .subtitle { color: #a0a0b0; margin-top: 4px; }
+
+.palette { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
+.palette-chip { padding: 4px 10px; border-radius: 12px; font-size: 0.85em; font-weight: 600; color: #000; }
+
+.budget-bar { background: #16213e; border-radius: 6px; padding: 12px 16px; margin-bottom: 16px; }
+.budget-label { font-weight: 600; margin-bottom: 6px; }
+.budget-track { background: #0a0a1a; border-radius: 4px; height: 22px; position: relative; overflow: hidden; }
+.budget-fill { height: 100%; border-radius: 4px; transition: width 0.3s; }
+.budget-fill.ok { background: linear-gradient(90deg, #0f3460, #53a8b6); }
+.budget-fill.warn { background: linear-gradient(90deg, #e94560, #ff6b6b); }
+.budget-text { position: absolute; top: 0; left: 0; right: 0; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 0.8em; font-weight: 600; color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,0.5); }
+
+.toolbar { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+button { background: #0f3460; color: #e0e0e0; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: 600; font-size: 0.9em; }
+button:hover { background: #1a508b; }
+button.danger { background: #a01030; }
+button.danger:hover { background: #c01040; }
+button.primary { background: #e94560; color: #fff; }
+button.primary:hover { background: #ff6b80; }
+button:disabled { opacity: 0.4; cursor: default; }
+
+.formations { display: flex; flex-direction: column; gap: 12px; }
+.formation-card { background: #16213e; border-radius: 8px; padding: 14px; border: 2px solid transparent; transition: border-color 0.2s; }
+.formation-card.selected { border-color: #e94560; }
+.formation-card-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.formation-card-header .f-label { font-weight: 700; font-size: 0.95em; color: #53a8b6; min-width: 28px; }
+.formation-card-header .f-total { color: #808090; font-size: 0.85em; }
+.formation-card-header .f-suffix { color: #505060; font-size: 0.75em; font-family: monospace; margin-left: auto; }
+.formation-card-header input[type="checkbox"] { accent-color: #e94560; width: 16px; height: 16px; cursor: pointer; }
+
+.pills { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 10px; }
+.pill { padding: 3px 8px; border-radius: 10px; font-size: 0.8em; font-weight: 600; color: #000; }
+
+.slot-controls { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+.slot-control { display: flex; align-items: center; gap: 4px; background: #0a0a1a; border-radius: 6px; padding: 4px 8px; }
+.slot-control .name { font-size: 0.85em; font-weight: 600; min-width: 80px; }
+.slot-control button { padding: 2px 8px; font-size: 0.85em; min-width: 24px; }
+.slot-control .count { font-size: 0.9em; font-weight: 700; min-width: 18px; text-align: center; }
+
+.card-actions { display: flex; gap: 6px; margin-top: 10px; }
+
+.summary { background: #16213e; border-radius: 6px; padding: 12px 16px; margin-top: 16px; }
+.summary h3 { color: #53a8b6; margin-bottom: 6px; font-size: 0.95em; }
+.summary .row { color: #808090; font-size: 0.85em; padding: 2px 0; }
+
+#status { margin-top: 12px; padding: 8px 12px; border-radius: 4px; display: none; font-weight: 600; }
+#status.ok { display: block; background: #0f3460; color: #53a8b6; }
+#status.err { display: block; background: #500020; color: #ff6b6b; }
+
+.empty { color: #606070; font-style: italic; padding: 20px; text-align: center; }
+</style>
+</head>
+<body>
+
+<h1>Formation Editor</h1>
+
+<div class="header">
+  <label>Load area JSON:</label>
+  <input type="file" id="fileInput" accept=".json">
+</div>
+
+<div id="areaInfo" style="display:none">
+  <div class="title" id="areaTitle"></div>
+  <div class="subtitle" id="areaSubtitle"></div>
+  <div class="palette" id="palette"></div>
+</div>
+
+<div id="budgetBar" class="budget-bar" style="display:none">
+  <div class="budget-label">Formation Budget</div>
+  <div class="budget-track">
+    <div class="budget-fill ok" id="budgetFill"></div>
+    <div class="budget-text" id="budgetText"></div>
+  </div>
+</div>
+
+<div id="toolbarArea" class="toolbar" style="display:none">
+  <button id="btnMerge" disabled>Merge Selected</button>
+  <button id="btnAdd">+ Add Formation</button>
+  <button id="btnSave" class="primary">Save JSON</button>
+  <button id="btnUndo">Undo</button>
+</div>
+
+<div id="formationsArea" class="formations"></div>
+
+<div id="spawnSummary" class="summary" style="display:none">
+  <h3>Spawn Points (read-only)</h3>
+  <div id="spawnRows"></div>
+</div>
+<div id="zoneSummary" class="summary" style="display:none">
+  <h3>Zone Spawns (read-only)</h3>
+  <div id="zoneRows"></div>
+</div>
+
+<div id="status"></div>
+
+<script>
+const SLOT_COLORS = [
+  '#4fc3f7', '#81c784', '#ffb74d', '#e57373',
+  '#ba68c8', '#4db6ac', '#fff176', '#f06292',
+  '#90a4ae', '#aed581', '#64b5f6', '#ff8a65'
+];
+
+let areaData = null;
+let formations = [];
+let undoStack = [];
+let loadedFileName = '';
+
+const $ = id => document.getElementById(id);
+
+function slotColor(idx) { return SLOT_COLORS[idx % SLOT_COLORS.length]; }
+
+function pushUndo() {
+  undoStack.push(JSON.stringify(formations));
+  if (undoStack.length > 50) undoStack.shift();
+}
+
+function showStatus(msg, ok) {
+  const el = $('status');
+  el.textContent = msg;
+  el.className = ok ? 'ok' : 'err';
+  if (ok) setTimeout(() => { el.style.display = 'none'; }, 3000);
+}
+
+function computeBudget() {
+  const totalSlots = formations.reduce((s, f) => s + f.slots.length, 0);
+  const numFormations = formations.length;
+  const used = totalSlots * 32 + numFormations * 4;
+  const budget = areaData.formation_area_bytes;
+  const maxSlots = Math.floor((budget - numFormations * 4) / 32);
+  return { used, budget, totalSlots, numFormations, maxSlots };
+}
+
+function updateBudget() {
+  const b = computeBudget();
+  const pct = Math.min(100, (b.used / b.budget) * 100);
+  $('budgetFill').style.width = pct + '%';
+  $('budgetFill').className = 'budget-fill ' + (b.used > b.budget ? 'warn' : 'ok');
+  $('budgetText').textContent = b.used + ' / ' + b.budget + ' bytes  (' + b.totalSlots + ' slots in ' + b.numFormations + ' formations, max ' + b.maxSlots + ' slots)';
+}
+
+function compositionFromSlots(slots, monsters) {
+  const counts = {};
+  const order = [];
+  for (const s of slots) {
+    if (!(s in counts)) order.push(s);
+    counts[s] = (counts[s] || 0) + 1;
+  }
+  return order.map(s => ({
+    count: counts[s],
+    slot: s,
+    monster: monsters[s] || '?slot' + s
+  }));
+}
+
+function renderFormations() {
+  const area = $('formationsArea');
+  area.innerHTML = '';
+  const monsters = areaData.monsters;
+
+  if (formations.length === 0) {
+    area.innerHTML = '<div class="empty">No formations. Click "+ Add Formation" to create one.</div>';
+    updateBudget();
+    updateMergeBtn();
+    return;
+  }
+
+  formations.forEach((f, fidx) => {
+    const card = document.createElement('div');
+    card.className = 'formation-card' + (f._selected ? ' selected' : '');
+
+    // Header
+    const hdr = document.createElement('div');
+    hdr.className = 'formation-card-header';
+
+    const cb = document.createElement('input');
+    cb.type = 'checkbox';
+    cb.checked = !!f._selected;
+    cb.title = 'Select for merge';
+    cb.addEventListener('change', () => { f._selected = cb.checked; card.className = 'formation-card' + (f._selected ? ' selected' : ''); updateMergeBtn(); });
+
+    const lbl = document.createElement('span');
+    lbl.className = 'f-label';
+    lbl.textContent = 'F' + String(fidx).padStart(2, '0');
+
+    const tot = document.createElement('span');
+    tot.className = 'f-total';
+    tot.textContent = f.slots.length + ' slot' + (f.slots.length !== 1 ? 's' : '');
+
+    const suf = document.createElement('span');
+    suf.className = 'f-suffix';
+    suf.textContent = 'suffix: ' + f.suffix;
+
+    hdr.appendChild(cb);
+    hdr.appendChild(lbl);
+    hdr.appendChild(tot);
+    hdr.appendChild(suf);
+    card.appendChild(hdr);
+
+    // Pills
+    const pills = document.createElement('div');
+    pills.className = 'pills';
+    const comp = compositionFromSlots(f.slots, monsters);
+    for (const c of comp) {
+      const pill = document.createElement('span');
+      pill.className = 'pill';
+      pill.style.background = slotColor(c.slot);
+      pill.textContent = c.count + 'x ' + c.monster;
+      pills.appendChild(pill);
+    }
+    card.appendChild(pills);
+
+    // Slot controls
+    const controls = document.createElement('div');
+    controls.className = 'slot-controls';
+    for (let si = 0; si < monsters.length; si++) {
+      const cnt = f.slots.filter(s => s === si).length;
+      const ctrl = document.createElement('div');
+      ctrl.className = 'slot-control';
+
+      const nm = document.createElement('span');
+      nm.className = 'name';
+      nm.style.color = slotColor(si);
+      nm.textContent = monsters[si];
+
+      const minus = document.createElement('button');
+      minus.textContent = '-';
+      minus.disabled = cnt === 0;
+      minus.addEventListener('click', () => { pushUndo(); removeSlot(fidx, si); });
+
+      const cntSpan = document.createElement('span');
+      cntSpan.className = 'count';
+      cntSpan.textContent = cnt;
+
+      const plus = document.createElement('button');
+      plus.textContent = '+';
+      plus.addEventListener('click', () => { pushUndo(); addSlot(fidx, si); });
+
+      ctrl.appendChild(nm);
+      ctrl.appendChild(minus);
+      ctrl.appendChild(cntSpan);
+      ctrl.appendChild(plus);
+      controls.appendChild(ctrl);
+    }
+    card.appendChild(controls);
+
+    // Actions
+    const actions = document.createElement('div');
+    actions.className = 'card-actions';
+
+    const delBtn = document.createElement('button');
+    delBtn.className = 'danger';
+    delBtn.textContent = 'Delete';
+    delBtn.addEventListener('click', () => { pushUndo(); formations.splice(fidx, 1); renderFormations(); });
+
+    const dupBtn = document.createElement('button');
+    dupBtn.textContent = 'Duplicate';
+    dupBtn.addEventListener('click', () => { pushUndo(); formations.splice(fidx + 1, 0, JSON.parse(JSON.stringify(f))); formations[fidx + 1]._selected = false; renderFormations(); });
+
+    const upBtn = document.createElement('button');
+    upBtn.textContent = '\u2191';
+    upBtn.title = 'Move up';
+    upBtn.disabled = fidx === 0;
+    upBtn.addEventListener('click', () => { pushUndo(); [formations[fidx-1], formations[fidx]] = [formations[fidx], formations[fidx-1]]; renderFormations(); });
+
+    const dnBtn = document.createElement('button');
+    dnBtn.textContent = '\u2193';
+    dnBtn.title = 'Move down';
+    dnBtn.disabled = fidx === formations.length - 1;
+    dnBtn.addEventListener('click', () => { pushUndo(); [formations[fidx], formations[fidx+1]] = [formations[fidx+1], formations[fidx]]; renderFormations(); });
+
+    actions.appendChild(upBtn);
+    actions.appendChild(dnBtn);
+    actions.appendChild(dupBtn);
+    actions.appendChild(delBtn);
+    card.appendChild(actions);
+
+    area.appendChild(card);
+  });
+
+  updateBudget();
+  updateMergeBtn();
+}
+
+function addSlot(fidx, slotIdx) {
+  formations[fidx].slots.push(slotIdx);
+  formations[fidx].slots.sort((a, b) => a - b);
+  renderFormations();
+}
+
+function removeSlot(fidx, slotIdx) {
+  const idx = formations[fidx].slots.indexOf(slotIdx);
+  if (idx >= 0) {
+    formations[fidx].slots.splice(idx, 1);
+    if (formations[fidx].slots.length === 0) {
+      formations.splice(fidx, 1);
+    }
+    renderFormations();
+  }
+}
+
+function updateMergeBtn() {
+  const sel = formations.filter(f => f._selected);
+  $('btnMerge').disabled = sel.length < 2;
+}
+
+function mergeSelected() {
+  const selIdx = [];
+  formations.forEach((f, i) => { if (f._selected) selIdx.push(i); });
+  if (selIdx.length < 2) return;
+
+  pushUndo();
+
+  // Merge all into the first selected
+  const target = formations[selIdx[0]];
+  for (let i = 1; i < selIdx.length; i++) {
+    target.slots = target.slots.concat(formations[selIdx[i]].slots);
+  }
+  target.slots.sort((a, b) => a - b);
+  target._selected = false;
+
+  // Remove merged formations (reverse order to keep indices valid)
+  for (let i = selIdx.length - 1; i >= 1; i--) {
+    formations.splice(selIdx[i], 1);
+  }
+
+  renderFormations();
+  showStatus('Merged ' + selIdx.length + ' formations', true);
+}
+
+function addFormation() {
+  pushUndo();
+  formations.push({
+    slots: [0],
+    suffix: '00000000',
+    _selected: false
+  });
+  renderFormations();
+}
+
+function undo() {
+  if (undoStack.length === 0) return;
+  formations = JSON.parse(undoStack.pop());
+  renderFormations();
+  showStatus('Undo', true);
+}
+
+function buildOutputJSON() {
+  // Deep clone original
+  const out = JSON.parse(JSON.stringify(areaData));
+  const monsters = out.monsters;
+
+  // Rebuild formations
+  out.formations = formations.map((f, fidx) => {
+    const slots = f.slots.slice();
+    const comp = compositionFromSlots(slots, monsters);
+    const obj = {
+      total: slots.length,
+      composition: comp,
+      slots: slots,
+      suffix: f.suffix || '00000000'
+    };
+    // Preserve original offset if it existed
+    if (f.offset) obj.offset = f.offset;
+    return obj;
+  });
+
+  out.formation_count = out.formations.length;
+  out.original_total_slots = formations.reduce((s, f) => s + f.slots.length, 0);
+
+  return out;
+}
+
+function saveJSON() {
+  const b = computeBudget();
+  if (b.used > b.budget) {
+    showStatus('Cannot save: over budget by ' + (b.used - b.budget) + ' bytes!', false);
+    return;
+  }
+
+  // Validate no empty formations
+  for (let i = 0; i < formations.length; i++) {
+    if (formations[i].slots.length === 0) {
+      showStatus('Cannot save: formation F' + String(i).padStart(2, '0') + ' is empty', false);
+      return;
+    }
+  }
+
+  const out = buildOutputJSON();
+  const json = JSON.stringify(out, null, 2);
+  const blob = new Blob([json], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = loadedFileName || 'area.json';
+  a.click();
+  URL.revokeObjectURL(url);
+  showStatus('Saved ' + a.download, true);
+}
+
+function renderSpawnSummary(items, containerId) {
+  const el = $(containerId);
+  el.innerHTML = '';
+  if (!items || items.length === 0) {
+    el.innerHTML = '<div class="row">None</div>';
+    return;
+  }
+  const monsters = areaData.monsters;
+  items.forEach((sp, i) => {
+    const comp = sp.composition || [];
+    const parts = comp.map(c => c.count + 'x ' + (c.monster || monsters[c.slot] || '?'));
+    const row = document.createElement('div');
+    row.className = 'row';
+    row.textContent = 'Group ' + i + ': [' + sp.total + '] ' + parts.join(' + ') + '  (suffix: ' + (sp.suffix || '00000000') + ')';
+    el.appendChild(row);
+  });
+}
+
+function loadArea(data, fileName) {
+  areaData = data;
+  loadedFileName = fileName;
+
+  // Display area info
+  $('areaInfo').style.display = 'block';
+  $('areaTitle').textContent = (data.level_name || '?') + ' - ' + (data.name || '?');
+  $('areaSubtitle').textContent = 'Area ID: ' + (data.area_id || '?') + '  |  Budget: ' + data.formation_area_bytes + ' bytes';
+
+  // Palette
+  const pal = $('palette');
+  pal.innerHTML = '';
+  (data.monsters || []).forEach((m, i) => {
+    const chip = document.createElement('span');
+    chip.className = 'palette-chip';
+    chip.style.background = slotColor(i);
+    chip.textContent = 'Slot ' + i + ': ' + m;
+    pal.appendChild(chip);
+  });
+
+  // Load formations
+  formations = (data.formations || []).map(f => ({
+    slots: (f.slots || []).slice(),
+    suffix: f.suffix || '00000000',
+    offset: f.offset || null,
+    _selected: false
+  }));
+  undoStack = [];
+
+  $('budgetBar').style.display = 'block';
+  $('toolbarArea').style.display = 'flex';
+
+  renderFormations();
+
+  // Spawn summaries
+  if (data.spawn_points && data.spawn_points.length > 0) {
+    $('spawnSummary').style.display = 'block';
+    renderSpawnSummary(data.spawn_points, 'spawnRows');
+  } else {
+    $('spawnSummary').style.display = 'none';
+  }
+  if (data.zone_spawns && data.zone_spawns.length > 0) {
+    $('zoneSummary').style.display = 'block';
+    renderSpawnSummary(data.zone_spawns, 'zoneRows');
+  } else {
+    $('zoneSummary').style.display = 'none';
+  }
+}
+
+// Event listeners
+$('fileInput').addEventListener('change', e => {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = ev => {
+    try {
+      const data = JSON.parse(ev.target.result);
+      if (!data.formations || !data.monsters) {
+        showStatus('Invalid area JSON: missing "formations" or "monsters"', false);
+        return;
+      }
+      loadArea(data, file.name);
+      showStatus('Loaded ' + file.name, true);
+    } catch (err) {
+      showStatus('Parse error: ' + err.message, false);
+    }
+  };
+  reader.readAsText(file);
+});
+
+$('btnMerge').addEventListener('click', mergeSelected);
+$('btnAdd').addEventListener('click', addFormation);
+$('btnSave').addEventListener('click', saveJSON);
+$('btnUndo').addEventListener('click', undo);
+
+// Drag & drop support
+document.body.addEventListener('dragover', e => { e.preventDefault(); e.dataTransfer.dropEffect = 'copy'; });
+document.body.addEventListener('drop', e => {
+  e.preventDefault();
+  const file = e.dataTransfer.files[0];
+  if (file && file.name.endsWith('.json')) {
+    const reader = new FileReader();
+    reader.onload = ev => {
+      try {
+        const data = JSON.parse(ev.target.result);
+        if (!data.formations || !data.monsters) {
+          showStatus('Invalid area JSON', false);
+          return;
+        }
+        loadArea(data, file.name);
+        showStatus('Loaded ' + file.name, true);
+      } catch (err) {
+        showStatus('Parse error: ' + err.message, false);
+      }
+    };
+    reader.readAsText(file);
+  }
+});
+</script>
+</body>
+</html>
