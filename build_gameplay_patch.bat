@@ -167,6 +167,23 @@ call :log "[OK] Monster spawn groups patched in BLAZE.ALL"
 call :log ""
 
 REM ========================================================================
+REM Step 6b: Patch formation templates in BLAZE.ALL
+REM ========================================================================
+call :log "[6b/9] Patching formation templates in BLAZE.ALL..."
+call :log ""
+
+py -3 Data\formations\patch_formations.py >> "%LOGFILE%" 2>&1
+if errorlevel 1 (
+    call :log ""
+    call :log "[ERROR] Formation templates patch failed!"
+    goto :error
+)
+
+call :log ""
+call :log "[OK] Formation templates patched in BLAZE.ALL"
+call :log ""
+
+REM ========================================================================
 REM Step 7: Create fresh patched BIN from clean original
 REM ========================================================================
 call :log "[7/9] Creating fresh patched BIN from clean original..."

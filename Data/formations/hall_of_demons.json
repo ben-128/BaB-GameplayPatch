@@ -423,17 +423,15 @@
           "offset": "0x2C00F40"
         },
         {
-          "total": 6,
+          "total": 4,
           "composition": [
             {
-              "count": 6,
+              "count": 4,
               "slot": 0,
               "monster": "Salamander"
             }
           ],
           "slots": [
-            0,
-            0,
             0,
             0,
             0,
