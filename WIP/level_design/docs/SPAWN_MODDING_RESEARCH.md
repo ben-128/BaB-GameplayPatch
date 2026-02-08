@@ -2,7 +2,7 @@
 
 Research on modifying monster spawn groups in **Blaze & Blade: Eternal Quest** (PSX).
 
-Status: **CONCLUDED** - AI is in the PSX executable, not in area data. See "Final Conclusion" section.
+Status: **COMBAT SYSTEM FULLY DECODED** - AI, spells, and loot architecture mapped. See "Combat Action System" and "Loot System" sections.
 
 ---
 
@@ -83,18 +83,18 @@ Slot 2 (Bat):    [0F 0F 10 10 11 12 13 14]  at 0xF7A920
 **96 bytes per monster:** 16 bytes name + 40 x uint16 stats.
 
 ```
-Offset  Size  Description
+Offset  Size  Description                              Runtime Use
 0x00    16    ASCII name (null-padded)
 0x10    2     stat[0]  exp
 0x12    2     stat[1]  level
-0x14    2     stat[2]  hp
-0x16    2     stat[3]  magic
-0x18    2     stat[4]  randomness
-0x1A    2     stat[5]  collider_type
-0x1C    2     stat[6]  death_fx_size
-0x1E    2     stat[7]  hit_fx_id
-0x20    2     stat[8]  collider_size
-0x22    2     stat[9]  drop_rate
+0x14    2     stat[2]  → ent+0x70 = BEF0 drop table index 1  (range 32-8000)
+0x16    2     stat[3]  → ent+0x68 = BEEC name table index 1
+0x18    2     stat[4]  → ent+0x72 = BEF0 drop table index 2
+0x1A    2     stat[5]  → ent+0x6A = BEEC name table index 2  (range 0-4)
+0x1C    2     stat[6]  → ent+0x74 = BEF0 drop table index 3
+0x1E    2     stat[7]  → ent+0x6C = BEEC name table index 3
+0x20    2     stat[8]  → ent+0x76 = BEF0 drop table index 4
+0x22    2     stat[9]  → ent+0x6E = BEEC name table index 4  ("drop_rate")
 0x24    2     stat[10] creature_type
 0x26    2     stat[11] armor_type
 0x28    2     stat[12] elem_fire_ice
@@ -105,6 +105,8 @@ Offset  Size  Description
 0x32    2     stat[17] armor
 0x34-0x5F     stat[18]-stat[39] (unknown, mostly zero)
 ```
+
+**Note:** stat[2]-stat[9] ARE combat stats (HP, collider, etc. — confirmed by gameplay testing). The init at 0x80039358 ALSO copies these values to entity loot index fields (+0x68-+0x76). Dual purpose: same value serves as a combat stat AND a loot table index.
 
 ### 5. Type-07 Entries (Script Area)
 
@@ -201,7 +203,8 @@ All tests performed on **Cavern of Death, Floor 1, Area 1** (3 monsters: Goblin,
 | **Spawn cmd slots/XX/YY** (early region) | Nothing visible | YES (tested, no effect) |
 | **Deep region slot markers** [XX FF 00 00] | **Entity placement** (dark entities when wrong) | YES |
 | **Deep region cmd headers** | **Entity rendering** (dark entities when wrong) | YES |
-| **??? UNKNOWN** | **AI behavior + spells + loot** | NOT FOUND |
+| **EXE 55 handlers + BLAZE.ALL 48-byte entries** | **AI behavior + spells** | YES (see Combat Action System) |
+| **BLAZE.ALL BEEC/BEF0 tables + 96-byte stat[2-9]** | **Loot drops (24 values/entity)** | YES (see Loot System) |
 
 ---
 
@@ -238,9 +241,9 @@ The AI/behavior/spell controller has **not been found**. All per-monster structu
 
 ---
 
-## Final Conclusion: AI is in the PSX Executable
+## Final Conclusion: AI is in the DUNGEON OVERLAY, not area data
 
-After **18 tests** covering every identified per-area data structure, the AI/behavior/spell system has **not been found in area data**. It is in the PSX executable code.
+After **18 tests** covering every identified per-area data structure, the AI/behavior/spell system has **not been found in area data**. Further executable analysis (2026-02-08) revealed the AI config is in the **dungeon overlay** loaded separately from area data.
 
 ### Evidence
 1. **18 swap/zero tests** on all per-area fields - AI never changes
@@ -250,9 +253,105 @@ After **18 tests** covering every identified per-area data structure, the AI/beh
 5. **Every per-area structure now mapped** and tested: assignment entries, animation tables, 8-byte records, 96-byte stats, type-7 entries, spawn commands, deep entity region, type-8 bytecode
 
 ### What this means for modding
-- **Can change:** 3D models (L+anim), texture variants (type-7 offset), stats/name (96-byte entries), formations (formation templates)
-- **Cannot change via area data:** AI behavior, spell lists, loot tables - these are hardcoded in the executable per slot index or creature_type
-- To change AI, one would need to reverse-engineer the PSX executable (MIPS assembly) to find the AI dispatch routine
+- **Can change via area data:** 3D models (L+anim), texture variants (type-7 offset), stats/name (96-byte entries), formations (formation templates)
+- **Can change via BLAZE.ALL overlay:** 48-byte action entries (spell/ability assignments per creature), loot tables (item drops per creature)
+- **Can change via EXE:** 55 handler function pointers at 0x8003C1B0, 5-byte tier table at 0x8003C020 (action count per level range), damage formula
+- **Overlay config blocks** = 3D model/hitbox data (modifiable in BLAZE.ALL for visual changes)
+- **creature_type** = sequential per-area index, used to select action entry set + loot tables
+
+---
+
+## Executable Deep Analysis (2026-02-08)
+
+### CORRECTION: Table at 0x02BDE0 is bytecode opcodes, NOT creature_type
+
+The jump table previously identified as "creature_type → AI handler" is actually the **room script bytecode opcode dispatch table** (39 opcodes, 0x00-0x26). All handlers read operands from a bytecode stream, not from entity structs.
+
+### Entity +0x44 is ACTION STATE, not type_info
+
+Entity struct offset +0x44 was previously thought to be `type_info` (creature_type). Analysis shows it's actually a **transient combat action state**:
+- Gets saved before combat actions and restored after (`lw s0, 68(s1)` → do action → `sw s0, 68(s1)`)
+- Loaded from bytecode streams during combat sequences
+- Used as a modifier in damage calculations (armor subtraction)
+- NOT a persistent creature identifier
+
+### Entity validation uses ADDRESS RANGES, not type fields
+
+Function at 0x80026840 distinguishes players from monsters by checking memory address ranges:
+- **Players:** 0x80054698 - 0x8005486C (4 slots × ~0x9C bytes each)
+- **Monsters:** 0x800A91E8 - 0x800AA568 (overlay region)
+- No type field is checked - purely spatial identification
+
+### Per-Entity Overlay Config: THE KEY TO AI
+
+**Array at 0x800AA740:** table of pointers, one per entity slot. Each pointer leads to a config block in the dungeon overlay (0x800A0000+) containing:
+
+```
+Config block offsets (discovered):
++0x00: word[0] flags (low 16 bits = count, high 16 bits = parameter)
++0x0E: AI mode flags (bit 0x80 checked for conditional behavior)
++0x24: secondary data pointer
++0x28: animation parameter
++0x30: texture/VRAM data
++0x38: render parameters
++0x40: AI behavior data pointer (most accessed field - 7 references)
++0x48: array of position/geometry data
+```
+
+This overlay config is:
+- Loaded from BLAZE.ALL dungeon data (NOT from per-area data)
+- Indexed by entity slot number
+- Contains AI behavior pointers that the engine follows
+- **Per-dungeon, not per-area** - explains why AI stays with slot position
+
+### Updated Dispatch Tables
+
+| Table | Address | Entries | Purpose |
+|-------|---------|---------|---------|
+| Bytecode opcodes | 0x8003CDE0 (file 0x02BDE0) | 39 | Room script interpreter opcodes |
+| State machine | 0x8003B324 | 32 | Entity state machine (idle/move/attack/cast) |
+| Entity actions | 0x8003B468 | 32 | Combat action handlers |
+| Combat actions | 0x8003C1B0 | 55 | Specific combat action implementations |
+| Bytecode interpreter | 0x8003BE84 | 188 | Full bytecode interpreter dispatch |
+| Visual slot | 0x8003B560 | 24×64b | Visual effect slot allocation (wraps at 24) |
+| Bitmask LUT | 0x8003B500 | 24 | Powers of 2 (bitmask lookup table) |
+
+### Overlay Config Blocks: RESOLVED (2026-02-08)
+
+**The overlay config blocks at 0x800AA740 are MONSTER 3D MODEL DATA, not AI.**
+
+Found 33 config blocks across all of BLAZE.ALL by scanning for the format signature:
+- 5 Cavern blocks: 0x00A16800, 0x00A34800, 0x00A50800, 0x00A7B000, 0x00A9A800
+- 12 blocks share common template (+0x28=0x1680, val08=640)
+- All blocks validated against the 0x8001EB70 init function format
+
+**Config block structure (raw decode of 0x00A16800):**
+```
+Header: 15 ascending offset fields (+0x00 through +0x3C) pointing to data sections
+Section sizes: 936, 1064, 248, 248, 584, 600, 536, 424, 2416, 248, 144, 392, 444 bytes
+All sections: 16-byte polygon/face records [4b entity_group][8b UV_or_coords][4b vertex_indices]
++0x30 "pointer table" (144 bytes, 19 entries): s16 coordinate pairs, NOT relocatable pointers
++0x34 "1024-entry table": only 392 bytes (model vertex data)
++0x38 "behavior list" (290 entries): same 16-byte face record format
+```
+
+This is PSX GPU polygon data — mesh geometry, animation frames, hitbox vertices, texture coordinates.
+
+**AI dispatch is in the PSX executable:**
+- 55 combat action handlers at 0x8003C1B0 (implementations at 0x800270B8-0x80029E80)
+- 32-entry state machine at 0x8003B324 (idle/move/attack/cast)
+- Entity type index → action handler index mapping lives in EXE
+- AI is determined by entity type, not by per-entity overlay config data
+
+**CD sector mapping (for locating blocks on disc):**
+- CD_base = 0x26DCE (CdSearchFile("\\BLAZE.ALL;1") return value)
+- BLAZE.ALL starts at disc sector 0x27D5F
+- Slight alignment drift at large offsets (~2047.2 effective bytes/sector vs 2048)
+
+### What's Still Unknown
+- Exact mapping from creature_type byte to specific action handler index (within the 48-byte entries)
+- Full item ID list (names only in BLAZE.ALL, not EXE)
+- Whether the 28-byte on-disc loot records can be located by fixed BLAZE.ALL offset
 
 ---
 
@@ -360,12 +459,234 @@ jalr r2                 ; call handler
 
 This table contains 32 handlers (0x80018xxx range) - a **higher-level action dispatcher** separate from the 55-entry combat table. This is likely the entity state machine that handles movement, idle, attack, cast, etc.
 
-### Open Questions
+### Open Questions (Updated 2026-02-08)
 
-- **What determines which combat action index a monster uses?** The 55-entry table dispatch mechanism hasn't been fully traced yet.
-- **Where is the AI decision logic?** The overlay data config pointed to by entity +0x70 might contain AI profile data that the engine reads.
-- **creature_type link**: creature_type from 96-byte stats is copied to runtime struct +0x68. This value might index into an AI profile table in the exe.
-- A RAM dump during active combat would help trace the actual combat dispatch path.
+- **Full item ID list**: Item names are only in BLAZE.ALL, not the EXE. Need to decode the BEEC table entries.
+- **28-byte loot records on disc**: Need to find their exact BLAZE.ALL offset (loaded via CD state machine).
+- **Overlay stub patching mechanism**: The 3 NOP stubs at 0x80073xxx are filled at runtime but not via sw instructions. Likely DMA/memcpy from overlay data.
+
+---
+
+## Combat Action System (FULLY DECODED 2026-02-08)
+
+### Architecture Overview
+
+```
+creature_type (entity+0x2B5, sequential per-area index)
+      |
+      v
+Global ptr *(0x8005490C) + 0x9C → per-type pointer array (loaded from BLAZE.ALL)
+      |
+      v
+ptr_array[creature_type] → base of 48-byte ACTION ENTRIES (in BLAZE.ALL overlay)
+      |
+      v
+5-byte TIER TABLE at 0x8003C020 → action_count for current player level tier
+      |
+      v
+Loop 0..action_count-1, stride 48 bytes:
+  - entry+0x1D = probability threshold (random roll check)
+  - entry+0x06 = action_index, entry+0x07 = creature_type
+  - Selected action → 55-entry HANDLER TABLE at 0x8003C1B0 → jalr to handler code
+```
+
+### 5-Byte Tier Table (0x8003C020, 80 entries)
+
+Each creature type has 5 bytes controlling how many actions it can use at each player level range:
+
+| Tier | Level Range | Description |
+|------|------------|-------------|
+| 0 | < 20 | Early game |
+| 1 | 20-49 | Mid game |
+| 2 | 50-79 | Late game |
+| 3 | 80-109 | End game |
+| 4 | 110+ | Post game |
+
+**Example values:**
+```
+creature_type 0 (Goblin):   5, 10, 15, 20, 26
+creature_type 1 (Shaman):   5, 11, 16, 19, 22
+creature_type 2 (Bat):      3,  7,  9, 12, 16
+```
+
+Higher tiers unlock more actions. The table ends exactly at 0x8003C1B0 (80 × 5 = 400 bytes).
+
+### 48-Byte Action Entry Format
+
+Found in BLAZE.ALL at ~0x00909310 (overlay data region). Format:
+
+```
+Offset  Size  Description
++0x00   8     Header/flags
++0x06   1     action_index (selects action within creature's entry set)
++0x07   1     creature_type (owner)
++0x08   16    Spell/ability name (ASCII, null-terminated)
++0x18   1     Spell ID
++0x19   1     Flags
++0x1A   1     Element type (0=none, 1=water, 2=fire, 3=water, 4=stone, 5=wind)
++0x1B   1     Sub-type
++0x1C   2     Range/power
++0x1D   1     Probability threshold (compared against random roll; 0 = skip)
++0x1E   2     Flags
++0x20   16    Parameters (damage, MP cost, targeting)
+```
+
+**Spell names found:**
+- Player spells: Teleport, Chaos Flare, Meteor Smash, Fusion, Turn Undead, Healing, Haste, Enchant Fire/Earth/Wind/Water, Charm
+- Monster abilities: Paralyze Eye, Confusion Eye, Sleep Eye, Fire Breath, Cold Breath, Thunder Breath, Stone Breath, Throw Rock, Wave, Sonic Boom, Gas Bullet, Power Wave
+
+### 55 Combat Action Handlers (0x8003C1B0)
+
+All 55 function pointers span 0x800270B8-0x80029E80 (~11.5 KB). Called exclusively via `jalr` (indirect).
+
+**11 unique subroutines used across handlers:**
+
+| Function | Called by | Role |
+|----------|----------|------|
+| 0x80023698 | 45 handlers | Core combat resolution (links attacker/target) |
+| 0x80073F9C | 28 handlers | Play Sound/VFX (overlay stub, NOP in EXE) |
+| 0x80073B2C | 16 handlers | Set Animation/State (overlay stub) |
+| 0x80026840 | 9 handlers | Entity validation (player vs monster) |
+| 0x80026650 | 9 handlers | Damage application (with randomization) |
+| 0x80026460 | 8 handlers | Damage calculation (4 × rand()) |
+| 0x800739D8 | 4 handlers | Play Animation (overlay stub) |
+| 0x800235B0 | 4 calls | Stat lookup (monster entities, bit 0x80) |
+| 0x80023630 | 4 calls | Stat lookup (player entities) |
+
+**Damage formula:** `stat/2 + rand() % (stat/2 + 1)` applied 4 times (attack × 2, defense × 2).
+
+**Handler types by size:**
+- Small (84-96 bytes): Handlers 41-49, 52 — simple single actions
+- Medium (300-348 bytes): Handlers 14-21, 27, 37-39 — attack/spell handlers
+- Large (752 bytes): Handler 51 — AoE heal (loops through entity array)
+
+### 3 Overlay Stubs (NOP in EXE, loaded from BLAZE.ALL at runtime)
+
+| Stub | Address | Combat Calls | Arguments |
+|------|---------|-------------|-----------|
+| Play Animation | 0x800739D8 | 4 | entity+0x1C, entity_ptr, flag |
+| Set Anim/State | 0x80073B2C | 16 | entity, anim_id, flag, flag |
+| Play Sound/VFX | 0x80073F9C | 28 | entity, entity+0x1C, descriptor_ptr, effect_id |
+
+Anim IDs used: 0xBC, 0x59, 0x50, 0xBF, 0x3A, 0x46, 0x47.
+VFX descriptors: 8-byte entries at 0x80057C1C-0x80057D0C (one per handler, also overlay data).
+
+### Dispatch Code (0x80024E14-0x80024EF8)
+
+```mips
+; Load creature_type
+lbu   $a1, 693($s3)           ; entity+0x2B5 = creature_type
+; Load global struct
+lui   $v0, 0x8005
+lw    $v0, 0x490C($v0)        ; global = *(0x8005490C)
+; Get per-type pointer array
+lw    $v1, 0x9C($v0)          ; ptr_array = global+0x9C
+; Index by creature_type
+sll   $v0, $a0, 2             ; creature_type * 4
+addu  $v1, $v0, $v1
+lw    $s5, 0($v1)             ; action_entries_base = ptr_array[creature_type]
+; Get tier from 5-byte table
+lui   $v1, 0x8004
+addiu $v1, $v1, -16352        ; $v1 = 0x8003C020
+addu  $v0, $v0, $a0           ; creature_type*5
+addu  $v0, $v0, $v1
+addu  $v0, $v0, $s0           ; + tier (0-4)
+lbu   $s2, 0($v0)             ; action_count = table[creature_type][tier]
+```
+
+Tier computed from player level: <20→0, 20-49→1, 50-79→2, 80-109→3, 110+→4.
+
+---
+
+## Loot System (FULLY DECODED 2026-02-08)
+
+### Architecture Overview
+
+```
+96-byte stat entries (8 index fields at stat+0x14 through stat+0x22)
+      |
+      v (init at 0x80039358)
+Entity runtime struct:
+  +0x68, +0x6A, +0x6C, +0x6E → BEEC table indices (names/items)
+  +0x70, +0x72, +0x74, +0x76 → BEF0 table indices (drops)
+      |
+      v (resolution at 0x80038178)
+TWO tables loaded from BLAZE.ALL via CD read (0x800355F4):
+  BEEC ptr (0x8004BEEC) → name/item table (8-byte entries, 3 halfwords)
+  BEF0 ptr (0x8004BEF0) → drop table (8-byte entries, 3 halfwords)
+      |
+      v
+24 output values per entity:
+  ent+0x20..0x3C ← BEEC lookups (4 indices × 3 halfwords)
+  ent+0x40..0x5C ← BEF0 lookups (4 indices × 3 halfwords)
+```
+
+### Stat → Entity Field Mapping (init at 0x80039358)
+
+| Stat Offset | Stat Index | Entity Offset | Table | Combat Role |
+|-------------|-----------|---------------|-------|-------------|
+| +0x16 | stat[3] | +0x68 | BEEC idx 1 | magic (confirmed) |
+| +0x1A | stat[5] | +0x6A | BEEC idx 2 | collider_type (confirmed) |
+| +0x1E | stat[7] | +0x6C | BEEC idx 3 | hit_fx_id |
+| +0x22 | stat[9] | +0x6E | BEEC idx 4 | drop_rate |
+| +0x14 | stat[2] | +0x70 | BEF0 idx 1 | hp (confirmed) |
+| +0x18 | stat[4] | +0x72 | BEF0 idx 2 | randomness |
+| +0x1C | stat[6] | +0x74 | BEF0 idx 3 | death_fx_size |
+| +0x20 | stat[8] | +0x76 | BEF0 idx 4 | collider_size |
+
+**DUAL PURPOSE:** These values ARE combat stats (HP, collider, etc. — confirmed by gameplay testing). The init function at 0x80039358 also copies them to entity fields used as loot table indices. Same numeric value serves both combat and loot systems.
+
+### Table Entry Format
+
+Each table entry is 8 bytes with 3 useful halfwords:
+```
++0x00: u16 value_1 (item ID or name reference)
++0x02: u16 value_2 (quantity or probability)
++0x04: u16 value_3 (variant or secondary ID)
++0x06: u16 padding
+```
+
+### On-Disc Format
+
+Tables loaded from BLAZE.ALL by parser at 0x80038544:
+```
+12-byte header: [word0] [word1] [word2]
+28-byte records (per area):
+  +0x00: u32 name_table_offset    (relative to header+12)
+  +0x04: u32 debug/size
+  +0x08: u32 drop_table_offset    (relative to header+12)
+  +0x0C: u32 debug/size
+  +0x10: u32 third_table_offset   (relative to header+12)
+  +0x14: u32 debug/size
+  +0x18: u32 extra
+```
+
+### Loot Resolution (0x80038178)
+
+1. Calls `0x800386DC(BEF4, entity)` — binary search tree with packed magic constants (creature type + area identifiers). Zeroes 120 bytes of entity struct first.
+2. Loads BEEC and BEF0 table base pointers.
+3. For each of 4 BEF0 indices (ent+0x70/72/74/76): `entry = BEF0_base + index * 8`, reads 3 halfwords → stores to ent+0x40..0x5C.
+4. For each of 4 BEEC indices (ent+0x68/6A/6C/6E): `entry = BEEC_base + index * 8`, reads 3 halfwords → stores to ent+0x20..0x3C.
+
+### Key Runtime Pointers
+
+| Address | Set by | Purpose |
+|---------|--------|---------|
+| 0x8004BEEC | 0x80038544 (CD read) | BEEC name/item table base |
+| 0x8004BEF0 | 0x80038544 (CD read) | BEF0 drop table base |
+| 0x8004BEF4 | 0x80038544 (CD read) | Creature type dispatch table |
+| 0x8004BEF8 | 0x80038544 return | Parser status |
+| 0x8005490C | Overlay init (not EXE) | Master game state struct |
+
+### Example Stat Index Values
+
+| Monster | stat+0x14 (BEF0) | stat+0x1A (BEEC) | stat+0x22 (drop_rate) |
+|---------|-------------------|-------------------|----------------------|
+| Goblin | 38 | 0 | 74 |
+| Shaman | 35 | 0 | 66 |
+| Bat | 36 | 2 | 66 |
+| Ogre | 315 | — | 40 |
+| Red Dragon | 8000 | — | 500 |
 
 ---
 
@@ -413,6 +734,15 @@ This table contains 32 handlers (0x80018xxx range) - a **higher-level action dis
 | `_analyze_full_script_map.py` | Full script area map with all regions |
 | `_search_global_monster_table.py` | Global monster name search in BLAZE.ALL |
 | `_compare_areas_script.py` | Cross-area comparison (WIP) |
+| `analyze_combat_handlers.py` | 55 handler table + state machine + dispatch tracing |
+| `search_loot_spells.py` | Loot table search + spell references + handler analysis |
+| `decode_action_entries.py` | 48-byte action entry format + dispatch loop decode |
+| `find_loot_tables.py` | Loot table parser + resolution function + stat indices |
+| `analyze_creature_dispatch.py` | 5-byte tier table + creature_type dispatch chain |
+| `trace_overlay_dispatch.py` | Overlay stubs + drop_rate table + global pointer tracing |
+| `find_all_config_blocks.py` | 33 config blocks found across BLAZE.ALL |
+| `raw_config_decode.py` | Config block = 3D model data (polygon records) |
+| `decode_cavern_config.py` | Cavern config block detail decode |
 
 ### Key Offsets (Cavern F1 Area1)
 ```
@@ -448,4 +778,4 @@ Command headers vary by slot:
 
 ---
 
-*Last updated: 2026-02-06*
+*Last updated: 2026-02-08 (combat + loot system fully decoded)*

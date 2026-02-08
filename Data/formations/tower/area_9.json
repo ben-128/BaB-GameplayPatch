@@ -10,10 +10,10 @@
     "Evil-Crystal"
   ],
   "formation_area_start": "0x1992818",
-  "formation_area_bytes": 136,
-  "original_total_slots": 4,
+  "formation_area_bytes": 172,
+  "original_total_slots": 5,
   "area_id": "dc00",
-  "formation_count": 2,
+  "formation_count": 3,
   "formations": [
     {
       "total": 3,
@@ -34,7 +34,7 @@
         2,
         2
       ],
-      "suffix": "00000a00",
+      "suffix": "00000000",
       "offset": "0x1992818"
     },
     {
@@ -49,8 +49,23 @@
       "slots": [
         1
       ],
-      "suffix": "00000b00",
+      "suffix": "00000000",
       "offset": "0x199287C"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Hard-Born"
+        }
+      ],
+      "slots": [
+        1
+      ],
+      "suffix": "00000000",
+      "offset": "0x19928A0"
     }
   ],
   "_placed_spawns": "--- placed spawns (per-record offsets) ---",
@@ -1205,12 +1220,5 @@
       "suffix": "00000000",
       "offset": "0x1993AAC"
     }
-  ],
-  "slot_types": [
-    "00000000",
-    "00000b00",
-    "00000a00",
-    "00000000",
-    "00000000"
   ]
 }

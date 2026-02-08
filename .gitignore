@@ -12,6 +12,9 @@ BLAZE.ALL
 .DS_Store
 Thumbs.db
 
+# Claude Code
+.claude/
+
 # Dossiers locaux
 Blaze  Blade - Eternal Quest (Europe)/
 extract/

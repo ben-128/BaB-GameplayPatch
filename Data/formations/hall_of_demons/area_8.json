@@ -8,8 +8,8 @@
     "Hell-Ogre"
   ],
   "formation_area_start": "0x2C00EDC",
-  "formation_area_bytes": 368,
-  "original_total_slots": 11,
+  "formation_area_bytes": 400,
+  "original_total_slots": 12,
   "area_id": "0e00",
   "formation_count": 4,
   "formations": [
@@ -43,7 +43,7 @@
         2,
         2
       ],
-      "suffix": "00000100",
+      "suffix": "00000000",
       "offset": "0x2C00F40"
     },
     {
@@ -61,23 +61,24 @@
         0,
         0
       ],
-      "suffix": "00000a00",
+      "suffix": "00000000",
       "offset": "0x2C00F84"
     },
     {
-      "total": 2,
+      "total": 3,
       "composition": [
         {
-          "count": 2,
+          "count": 3,
           "slot": 0,
           "monster": "Salamander"
         }
       ],
       "slots": [
         0,
+        0,
         0
       ],
-      "suffix": "00000a00",
+      "suffix": "00000000",
       "offset": "0x2C01008"
     }
   ],
@@ -259,10 +260,5 @@
       "suffix": "01000000",
       "offset": "0x2C0140C"
     }
-  ],
-  "slot_types": [
-    "00000a00",
-    "00000000",
-    "00000100"
   ]
 }

@@ -168,18 +168,32 @@ function showStatus(msg, ok) {
 function computeBudget() {
   const totalSlots = formations.reduce((s, f) => s + f.slots.length, 0);
   const numFormations = formations.length;
-  const used = totalSlots * 32 + numFormations * 4;
+  // Budget uses original table entry count (patcher pads with filler formations)
+  const origCount = areaData.formation_count || numFormations;
   const budget = areaData.formation_area_bytes;
-  const maxSlots = Math.floor((budget - numFormations * 4) / 32);
-  return { used, budget, totalSlots, numFormations, maxSlots };
+  const origTotalSlots = areaData.original_total_slots || Math.floor((budget - origCount * 4) / 32);
+  const maxSlots = numFormations + origTotalSlots - origCount;
+  const paddingCount = Math.max(0, origCount - numFormations);
+  return { totalSlots, numFormations, origCount, budget, maxSlots, paddingCount };
 }
 
 function updateBudget() {
   const b = computeBudget();
-  const pct = Math.min(100, (b.used / b.budget) * 100);
+  const pct = b.maxSlots > 0 ? Math.min(100, (b.totalSlots / b.maxSlots) * 100) : 100;
   $('budgetFill').style.width = pct + '%';
-  $('budgetFill').className = 'budget-fill ' + (b.used > b.budget ? 'warn' : 'ok');
-  $('budgetText').textContent = b.used + ' / ' + b.budget + ' bytes  (' + b.totalSlots + ' slots in ' + b.numFormations + ' formations, max ' + b.maxSlots + ' slots)';
+  let budgetStr = b.totalSlots + ' / ' + b.maxSlots + ' slots  (' + b.numFormations + ' formations';
+  if (b.paddingCount > 0) {
+    budgetStr += ' + ' + b.paddingCount + ' duplicate' + (b.paddingCount > 1 ? 's' : '');
+  }
+  budgetStr += ')';
+  const freeSlots = b.maxSlots - b.totalSlots;
+  if (freeSlots > 0) budgetStr += ' \u2014 ' + freeSlots + ' slots free';
+  const isOver = b.totalSlots > b.maxSlots;
+  const tooMany = b.numFormations > b.origCount;
+  if (isOver) budgetStr += ' \u2014 OVER BUDGET';
+  if (tooMany) budgetStr += ' \u2014 EXCEEDS TABLE CAPACITY (' + b.origCount + ' max)';
+  $('budgetFill').className = 'budget-fill ' + (isOver || tooMany ? 'warn' : 'ok');
+  $('budgetText').textContent = budgetStr;
 }
 
 function compositionFromSlots(slots, monsters) {
@@ -526,8 +540,16 @@ function buildOutputJSON() {
     return obj;
   });
 
-  out.formation_count = out.formations.length;
-  out.original_total_slots = formations.reduce((s, f) => s + f.slots.length, 0);
+  // Preserve formation_count from loaded data (= original table entry count).
+  // The patcher uses this to know how many FM entries the offset table has.
+  // Do NOT overwrite with formations.length (which may be fewer after merging).
+  if (!areaData.formation_count) {
+    out.formation_count = out.formations.length;
+  }
+  // Preserve original_total_slots from the loaded data (for patcher delta messages).
+  if (!areaData.original_total_slots) {
+    out.original_total_slots = formations.reduce((s, f) => s + f.slots.length, 0);
+  }
 
   // Rebuild spawn points from edited records
   if (spawnPoints.length > 0) {

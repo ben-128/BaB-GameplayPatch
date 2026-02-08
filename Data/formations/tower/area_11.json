@@ -10,10 +10,10 @@
     "Evil-Crystal"
   ],
   "formation_area_start": "0x199C000",
-  "formation_area_bytes": 232,
-  "original_total_slots": 7,
+  "formation_area_bytes": 300,
+  "original_total_slots": 9,
   "area_id": "dc00",
-  "formation_count": 2,
+  "formation_count": 3,
   "formations": [
     {
       "total": 3,
@@ -52,8 +52,24 @@
         0,
         0
       ],
-      "suffix": "00000100",
+      "suffix": "00000000",
       "offset": "0x199C064"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Arch-Magi"
+        }
+      ],
+      "slots": [
+        0,
+        0
+      ],
+      "suffix": "00000000",
+      "offset": "0x199C0E8"
     }
   ],
   "_placed_spawns": "--- placed spawns (per-record offsets) ---",
@@ -1208,12 +1224,5 @@
       "suffix": "00000000",
       "offset": "0x199D2C0"
     }
-  ],
-  "slot_types": [
-    "00000000",
-    "00000100",
-    "00000000",
-    "00000000",
-    "00000000"
   ]
 }

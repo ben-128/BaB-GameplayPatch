@@ -185,20 +185,9 @@ call :log "[OK] Formation templates patched in BLAZE.ALL"
 call :log ""
 
 REM ========================================================================
-REM Step 7: Patch loot chest despawn timer
+REM Step 7: (Loot timer - moved to step 9b, patches BIN not BLAZE.ALL)
 REM ========================================================================
-call :log "[7/10] Patching loot chest despawn timer..."
-call :log ""
-
-py -3 Data\LootTimer\patch_loot_timer.py >> "%LOGFILE%" 2>&1
-if errorlevel 1 (
-    call :log ""
-    call :log "[ERROR] Loot timer patch failed!"
-    goto :error
-)
-
-call :log ""
-call :log "[OK] Loot chest despawn timer patched"
+call :log "[7/10] Loot timer: will patch SLES in BIN at step 9b"
 call :log ""
 
 REM ========================================================================
@@ -242,6 +231,23 @@ if errorlevel 1 (
 
 call :log ""
 call :log "[OK] BLAZE.ALL injected into BIN"
+call :log ""
+
+REM ========================================================================
+REM Step 9b: Patch chest despawn timer in SLES (within BIN)
+REM ========================================================================
+call :log "[9b/10] Patching chest despawn timer in SLES executable..."
+call :log ""
+
+py -3 Data\LootTimer\patch_loot_timer.py >> "%LOGFILE%" 2>&1
+if errorlevel 1 (
+    call :log ""
+    call :log "[ERROR] Loot timer patch failed!"
+    goto :error
+)
+
+call :log ""
+call :log "[OK] Chest despawn timer patched (chests no longer despawn)"
 call :log ""
 
 REM ========================================================================

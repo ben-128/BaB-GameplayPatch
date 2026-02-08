@@ -44,7 +44,7 @@
         1,
         1
       ],
-      "suffix": "00000a00",
+      "suffix": "00000000",
       "offset": "0x1DE61CC"
     },
     {
@@ -78,7 +78,7 @@
         1,
         1
       ],
-      "suffix": "00000a00",
+      "suffix": "00000000",
       "offset": "0x1DE6274"
     }
   ],
@@ -447,10 +447,5 @@
   "zone_spawns_area_bytes": 0,
   "original_total_zone_spawn_slots": 0,
   "zone_spawn_count": 0,
-  "zone_spawns": [],
-  "slot_types": [
-    "00000000",
-    "00000a00",
-    "00000000"
-  ]
+  "zone_spawns": []
 }

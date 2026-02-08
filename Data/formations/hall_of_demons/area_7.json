@@ -7,10 +7,10 @@
     "Succubus"
   ],
   "formation_area_start": "0x2BFF768",
-  "formation_area_bytes": 272,
-  "original_total_slots": 8,
+  "formation_area_bytes": 408,
+  "original_total_slots": 12,
   "area_id": "2800",
-  "formation_count": 4,
+  "formation_count": 6,
   "formations": [
     {
       "total": 3,
@@ -26,7 +26,7 @@
         0,
         0
       ],
-      "suffix": "00000a00",
+      "suffix": "00000000",
       "offset": "0x2BFF768"
     },
     {
@@ -58,7 +58,7 @@
         0,
         0
       ],
-      "suffix": "00000a00",
+      "suffix": "00000000",
       "offset": "0x2BFF7F0"
     },
     {
@@ -75,6 +75,38 @@
       ],
       "suffix": "00000000",
       "offset": "0x2BFF854"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 0,
+          "monster": "Gremlin"
+        }
+      ],
+      "slots": [
+        0,
+        0,
+        0
+      ],
+      "suffix": "00000000",
+      "offset": "0x2BFF878"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Succubus"
+        }
+      ],
+      "slots": [
+        1
+      ],
+      "suffix": "00000000",
+      "offset": "0x2BFF8DC"
     }
   ],
   "_placed_spawns": "--- placed spawns (per-record offsets) ---",
@@ -210,9 +242,5 @@
   "zone_spawns_area_bytes": 0,
   "original_total_zone_spawn_slots": 0,
   "zone_spawn_count": 0,
-  "zone_spawns": [],
-  "slot_types": [
-    "00000a00",
-    "00000000"
-  ]
+  "zone_spawns": []
 }

@@ -11,139 +11,58 @@
   "formation_area_bytes": 896,
   "original_total_slots": 27,
   "area_id": "dc01",
-  "slot_types": [
-    "00000000",
-    "02000000",
-    "00000a00"
-  ],
   "formation_count": 8,
   "formations": [
     {
-      "total": 3,
-      "slots": [
-        0,
-        1,
-        2
-      ],
-      "suffix": "00000a00",
+      "total": 7,
       "composition": [
         {
-          "count": 1,
-          "slot": 0,
-          "monster": "Lv20.Goblin"
-        },
-        {
-          "count": 1,
-          "slot": 1,
-          "monster": "Goblin-Shaman"
-        },
-        {
-          "count": 1,
-          "slot": 2,
-          "monster": "Giant-Bat"
-        }
-      ]
-    },
-    {
-      "total": 3,
-      "slots": [
-        0,
-        0,
-        1
-      ],
-      "suffix": "02000000",
-      "composition": [
-        {
-          "count": 2,
-          "slot": 0,
-          "monster": "Lv20.Goblin"
-        },
-        {
-          "count": 1,
-          "slot": 1,
-          "monster": "Goblin-Shaman"
-        }
-      ]
-    },
-    {
-      "total": 2,
-      "slots": [
-        1,
-        1
-      ],
-      "suffix": "02000000",
-      "composition": [
-        {
-          "count": 2,
-          "slot": 1,
-          "monster": "Goblin-Shaman"
-        }
-      ]
-    },
-    {
-      "total": 4,
-      "slots": [
-        2,
-        2,
-        2,
-        2
-      ],
-      "suffix": "00000a00",
-      "composition": [
-        {
-          "count": 4,
-          "slot": 2,
-          "monster": "Giant-Bat"
-        }
-      ]
-    },
-    {
-      "total": 4,
-      "slots": [
-        0,
-        0,
-        2,
-        2
-      ],
-      "suffix": "00000a00",
-      "composition": [
-        {
-          "count": 2,
+          "count": 5,
           "slot": 0,
           "monster": "Lv20.Goblin"
         },
         {
           "count": 2,
-          "slot": 2,
-          "monster": "Giant-Bat"
-        }
-      ]
-    },
-    {
-      "total": 3,
-      "slots": [
-        1,
-        1,
-        1
-      ],
-      "suffix": "02000000",
-      "composition": [
-        {
-          "count": 3,
           "slot": 1,
           "monster": "Goblin-Shaman"
         }
-      ]
-    },
-    {
-      "total": 4,
+      ],
       "slots": [
+        0,
+        0,
+        0,
         0,
         0,
         1,
         1
       ],
-      "suffix": "02000000",
+      "suffix": "00000000",
+      "offset": "0xF7B0C0"
+    },
+    {
+      "total": 8,
+      "composition": [
+        {
+          "count": 8,
+          "slot": 2,
+          "monster": "Giant-Bat"
+        }
+      ],
+      "slots": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "suffix": "00000000",
+      "offset": "0xF7B1C4"
+    },
+    {
+      "total": 7,
       "composition": [
         {
           "count": 2,
@@ -151,38 +70,22 @@
           "monster": "Lv20.Goblin"
         },
         {
-          "count": 2,
+          "count": 5,
           "slot": 1,
           "monster": "Goblin-Shaman"
         }
-      ]
-    },
-    {
-      "total": 4,
+      ],
       "slots": [
         0,
         0,
         1,
-        2
+        1,
+        1,
+        1,
+        1
       ],
-      "suffix": "00000a00",
-      "composition": [
-        {
-          "count": 2,
-          "slot": 0,
-          "monster": "Lv20.Goblin"
-        },
-        {
-          "count": 1,
-          "slot": 1,
-          "monster": "Goblin-Shaman"
-        },
-        {
-          "count": 1,
-          "slot": 2,
-          "monster": "Giant-Bat"
-        }
-      ]
+      "suffix": "00000000",
+      "offset": "0xF7B2C8"
     }
   ],
   "_placed_spawns": "--- placed spawns (per-record offsets) ---",
