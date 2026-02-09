@@ -1,0 +1,45 @@
+{
+    "_doc": "Monster spell assignments - patched into SLES_008.45 inside the game BIN",
+    "_doc2": "Set enabled=true to apply the patch. Set spell_index to the desired entry (0-15).",
+    "_doc3": "Odd entries (1,3,5,7) are reversed versions of even entries (0,2,4,6).",
+    "_doc4": "Structure: bytes[2-9]=offensive (direct spell IDs), bytes[0-1,10-15]=support (unknown encoding).",
+    "_doc5": "Support encoding: 0xA0=Sleep(confirmed), 0x1F=Healing(likely). Not standard spell IDs.",
+
+    "goblin_shaman": {
+        "enabled": true,
+        "spell_index": 8,
+        "opcode": "0x18",
+        "_comment": "Goblin-Shaman spell-casting opcode. Default index=6.",
+        "_options": {
+            "0":  "ATK: Fire Bullet, Spark Bullet, Water Bullet, Stone Bullet | SUP: 0xA0=Sleep?, 0x1F=Heal? (Low)",
+            "2":  "ATK: Striking, Lightbolt, Stone Bullet, Water Bullet | SUP: 0xBF, 0x1F, 0xB0 (Low)",
+            "4":  "ATK: Dark Wave, Smash, Stone Bullet, Spark Bullet | SUP: 0xBF, 0x1F, 0xAF, 0xB0 (Low)",
+            "6":  "ATK: Magic Missile, Enchant Weapon, Stone Bullet | SUP: 0xA0=Sleep, 0x1F=Heal, 0xAF, 0xB0 (Low) (ORIGINAL)",
+            "8":  "ATK: Blaze, Lightningbolt, Blizzard, Poison Cloud | SUP: 0xDF, 0x20, 0xC0, 0x2F, 0xB0 (Mid)",
+            "9":  "ATK: Blizzard, Extend Spell, Magic Ray, Poison Cloud | SUP: 0xDF, 0x2F, 0xC0, 0x20 (Mid)",
+            "10": "ATK: Poison Cloud, Magic Ray, Shining, Dark Breath | SUP: 0xC0, 0x3F, 0xDF, 0x30, 0x20 (High)",
+            "11": "ATK: Extend Spell, Magic Ray, Shining, Dispell Magic | SUP: 0xC0, 0x3F, 0xDF, 0x30 (High)",
+            "12": "ATK: Blizzard, Extend Spell, Petrifaction, Dispell Magic | SUP: 0xC0, 0x3F, 0xDF, 0x30 (High)",
+            "13": "ATK: Lightningbolt, Blizzard, Explosion, Petrifaction | SUP: 0xC0, 0x3F, 0xDF, 0x30 (High)",
+            "14": "ATK: Blaze, Lightningbolt, Thunderbolt, Explosion | SUP: 0xC0, 0x3F, 0xDF, 0x30 (High)",
+            "15": "ATK: Blaze, Poison Cloud, Dark Breath, Thunderbolt | SUP: 0xC0, 0x3F, 0xDF, 0x30 (High)"
+        }
+    },
+
+    "type_0x12_caster": {
+        "enabled": false,
+        "spell_index": 4,
+        "opcode": "0x12",
+        "_comment": "Second spell-caster opcode (unknown monster). Default index=4.",
+        "_options": "Same table as goblin_shaman above"
+    },
+
+    "_spell_table_doc": "Overrides spell table entries directly in BLAZE.ALL at 0x9E8D8E (16 entries x 16 bytes). Use copy_from to clone another entry, or bytes for custom hex. This works independently of the EXE spell_index patch above.",
+    "spell_table_overrides": {
+        "6": {
+            "enabled": true,
+            "copy_from": 8,
+            "_comment": "Replace default Shaman entry #6 (Magic Missile, Enchant Weapon, Stone Bullet) with entry #8 (Blaze, Lightningbolt, Blizzard, Poison Cloud). Tests if spell table content matters when L=NULL."
+        }
+    }
+}

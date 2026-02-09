@@ -126,5 +126,56 @@
     "Snow-Bear": "0x0230",
     "Winter-Wolf": "0x0238",
     "Hippogriff": "0x0240"
-  }
+  },
+  "assignment_entries": [
+    {
+      "slot": 0,
+      "L": 1,
+      "R": 0,
+      "offset": "0x25D0954"
+    },
+    {
+      "slot": 1,
+      "L": 0,
+      "R": 1,
+      "offset": "0x25D095C"
+    },
+    {
+      "slot": 2,
+      "L": 2,
+      "R": 2,
+      "offset": "0x25D0964"
+    }
+  ],
+  "animation_table": [
+    {
+      "bytes": "0000010202030301",
+      "offset": "0x25D090C"
+    },
+    {
+      "bytes": "0404010505000001",
+      "offset": "0x25D0914"
+    },
+    {
+      "bytes": "0607080906070809",
+      "offset": "0x25D091C"
+    }
+  ],
+  "records_8byte": [
+    {
+      "anim_offset": "0x001C",
+      "texture_ref": "0x00068000",
+      "offset": "0x25D0934"
+    },
+    {
+      "anim_offset": "0x0000",
+      "texture_ref": "0x00000000",
+      "offset": "0x25D093C"
+    },
+    {
+      "anim_offset": "0x0024",
+      "texture_ref": "0x0000002C",
+      "offset": "0x25D0944"
+    }
+  ]
 }

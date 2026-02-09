@@ -469,5 +469,56 @@
   ],
   "monster_vram_ref": {
     "Vampire-Lord": "0x0270"
-  }
+  },
+  "assignment_entries": [
+    {
+      "slot": 0,
+      "L": 14,
+      "R": 0,
+      "offset": "0x243394C"
+    },
+    {
+      "slot": 1,
+      "L": 14,
+      "R": 0,
+      "offset": "0x2433954"
+    },
+    {
+      "slot": 2,
+      "L": 13,
+      "R": 1,
+      "offset": "0x243395C"
+    }
+  ],
+  "animation_table": [
+    {
+      "bytes": "0001020304050607",
+      "offset": "0x243390C"
+    },
+    {
+      "bytes": "08090a0b0c0d0e0e",
+      "offset": "0x2433914"
+    },
+    {
+      "bytes": "0c00000000000700",
+      "offset": "0x243391C"
+    }
+  ],
+  "records_8byte": [
+    {
+      "anim_offset": "0x0000",
+      "texture_ref": "0x00000000",
+      "offset": "0x2433934"
+    },
+    {
+      "anim_offset": "0x0024",
+      "texture_ref": "0x0000002C",
+      "offset": "0x243393C"
+    },
+    {
+      "anim_offset": "0x0034",
+      "texture_ref": "0x00000000",
+      "offset": "0x2433944"
+    }
+  ]
 }

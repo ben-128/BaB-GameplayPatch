@@ -1089,16 +1089,72 @@
     "Lv20.Goblin"
   ],
   "monster_overrides": [
+    {
+      "elite": true,
+      "texture_ref": "0x00058000",
+      "type07_idx": 18,
+      "type07_vram": "0x0590"
+    },
     null,
     {
       "elite": true,
-      "type07_vram": "0x0588"
-    },
-    null
+      "type07_vram": "0x0590"
+    }
   ],
   "monster_vram_ref": {
     "Lv20.Goblin": "0x0580",
     "Goblin-Shaman": "0x0588",
     "Giant-Bat": "0x0590"
-  }
+  },
+  "assignment_entries": [
+    {
+      "slot": 0,
+      "L": 0,
+      "R": 2,
+      "offset": "0xF7A964"
+    },
+    {
+      "slot": 1,
+      "L": 1,
+      "R": 3,
+      "offset": "0xF7A96C"
+    },
+    {
+      "slot": 2,
+      "L": 3,
+      "R": 4,
+      "offset": "0xF7A974"
+    }
+  ],
+  "animation_table": [
+    {
+      "bytes": "0001020304040505",
+      "offset": "0xF7A90C"
+    },
+    {
+      "bytes": "0606070708090a0b",
+      "offset": "0xF7A914"
+    },
+    {
+      "bytes": "0c0c0d0e0f0f1010",
+      "offset": "0xF7A91C"
+    }
+  ],
+  "records_8byte": [
+    {
+      "anim_offset": "0x000C",
+      "texture_ref": "0x00030000",
+      "offset": "0xF7A934"
+    },
+    {
+      "anim_offset": "0x0014",
+      "texture_ref": "0x00044000",
+      "offset": "0xF7A93C"
+    },
+    {
+      "anim_offset": "0x001C",
+      "texture_ref": "0x00058000",
+      "offset": "0xF7A944"
+    }
+  ]
 }

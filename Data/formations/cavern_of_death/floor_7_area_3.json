@@ -510,5 +510,71 @@
     "Spirit-Ball": "0x0440",
     "Ogre": "0x0448",
     "Troll": "0x0450"
-  }
+  },
+  "assignment_entries": [
+    {
+      "slot": 0,
+      "L": 15,
+      "R": 2,
+      "offset": "0xF93178"
+    },
+    {
+      "slot": 1,
+      "L": 8,
+      "R": 3,
+      "offset": "0xF93180"
+    },
+    {
+      "slot": 2,
+      "L": 14,
+      "R": 4,
+      "offset": "0xF93188"
+    },
+    {
+      "slot": 3,
+      "L": 16,
+      "R": 5,
+      "offset": "0xF93190"
+    }
+  ],
+  "animation_table": [
+    {
+      "bytes": "0001020303040404",
+      "offset": "0xF9310C"
+    },
+    {
+      "bytes": "0505060607070808",
+      "offset": "0xF93114"
+    },
+    {
+      "bytes": "090a0b0c0d0e0d0f",
+      "offset": "0xF9311C"
+    },
+    {
+      "bytes": "0910091010091009",
+      "offset": "0xF93124"
+    }
+  ],
+  "records_8byte": [
+    {
+      "anim_offset": "0x1716160B",
+      "texture_ref": "0x19181717",
+      "offset": "0xF93134"
+    },
+    {
+      "anim_offset": "0x000C",
+      "texture_ref": "0x00020000",
+      "offset": "0xF9313C"
+    },
+    {
+      "anim_offset": "0x0014",
+      "texture_ref": "0x00034000",
+      "offset": "0xF93144"
+    },
+    {
+      "anim_offset": "0x001C",
+      "texture_ref": "0x00048000",
+      "offset": "0xF9314C"
+    }
+  ]
 }

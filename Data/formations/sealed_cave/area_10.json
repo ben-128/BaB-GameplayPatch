@@ -607,5 +607,71 @@
   "monster_vram_ref": {
     "Black-Durahan": "0x027C",
     "Revenant": "0x0000"
-  }
+  },
+  "assignment_entries": [
+    {
+      "slot": 0,
+      "L": 7,
+      "R": 0,
+      "offset": "0x1DF9968"
+    },
+    {
+      "slot": 1,
+      "L": 12,
+      "R": 1,
+      "offset": "0x1DF9970"
+    },
+    {
+      "slot": 2,
+      "L": 11,
+      "R": 2,
+      "offset": "0x1DF9978"
+    },
+    {
+      "slot": 3,
+      "L": 9,
+      "R": 3,
+      "offset": "0x1DF9980"
+    }
+  ],
+  "animation_table": [
+    {
+      "bytes": "0000010101020202",
+      "offset": "0x1DF990C"
+    },
+    {
+      "bytes": "0304040506060507",
+      "offset": "0x1DF9914"
+    },
+    {
+      "bytes": "08090a090b0c0c0b",
+      "offset": "0x1DF991C"
+    },
+    {
+      "bytes": "010d0e0f10101010",
+      "offset": "0x1DF9924"
+    }
+  ],
+  "records_8byte": [
+    {
+      "anim_offset": "0x0014",
+      "texture_ref": "0x00054000",
+      "offset": "0x1DF9934"
+    },
+    {
+      "anim_offset": "0x001C",
+      "texture_ref": "0x00068000",
+      "offset": "0x1DF993C"
+    },
+    {
+      "anim_offset": "0x0024",
+      "texture_ref": "0x0007C000",
+      "offset": "0x1DF9944"
+    },
+    {
+      "anim_offset": "0x0000",
+      "texture_ref": "0x00000000",
+      "offset": "0x1DF994C"
+    }
+  ]
 }

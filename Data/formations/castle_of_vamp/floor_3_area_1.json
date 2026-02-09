@@ -346,5 +346,56 @@
   ],
   "monster_vram_ref": {
     "Ghost": "0x03A0"
-  }
+  },
+  "assignment_entries": [
+    {
+      "slot": 0,
+      "L": 1,
+      "R": 1,
+      "offset": "0x241495C"
+    },
+    {
+      "slot": 1,
+      "L": 3,
+      "R": 2,
+      "offset": "0x2414964"
+    },
+    {
+      "slot": 2,
+      "L": 0,
+      "R": 3,
+      "offset": "0x241496C"
+    }
+  ],
+  "animation_table": [
+    {
+      "bytes": "0001020303020100",
+      "offset": "0x241490C"
+    },
+    {
+      "bytes": "0404040405050606",
+      "offset": "0x2414914"
+    },
+    {
+      "bytes": "0708090a0b0c0d0d",
+      "offset": "0x241491C"
+    }
+  ],
+  "records_8byte": [
+    {
+      "anim_offset": "0x0014",
+      "texture_ref": "0x00064000",
+      "offset": "0x2414934"
+    },
+    {
+      "anim_offset": "0x001C",
+      "texture_ref": "0x00078000",
+      "offset": "0x241493C"
+    },
+    {
+      "anim_offset": "0x0000",
+      "texture_ref": "0x00000000",
+      "offset": "0x2414944"
+    }
+  ]
 }

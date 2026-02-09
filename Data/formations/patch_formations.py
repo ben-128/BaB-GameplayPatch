@@ -622,13 +622,22 @@ def load_monster_stats():
 
 
 def patch_monster_overrides(data, area, monster_db):
-    """Apply per-slot monster overrides (elite, stats, name, Type-07, swap).
+    """Apply per-slot monster overrides (elite, stats, name, Type-07, L, visual swap).
 
     Reads 'monster_overrides' from the area JSON. Each entry (per slot) can be:
       - null: no change
       - {"elite": true, "type07_vram": "0x0598"}: elite multipliers + texture
+      - {"elite": true, "L": 14}: elite with model override (cross-floor)
       - {"replace_with": "Goblin-Leader"}: full swap from monster_db
       - {"name": "Elite Bat", "stats": {"dmg": 80}, "type07_vram": "0x0590"}
+      - Visual swap (animation + textures, keeps AI):
+        {
+          "elite": true,
+          "animation_table": "0c0c0d0e0f0f1010",
+          "anim_offset": "0x001C",
+          "texture_ref": "0x00058000",
+          "type07_vram": "0x0590"
+        }
 
     Elite multipliers (applied from monster_db original stats):
       HP x2, magic x2, armor x2, dmg x1.5
@@ -724,10 +733,12 @@ def patch_monster_overrides(data, area, monster_db):
                         changes.append("type={}".format(
                             floor_data["slot_type"]))
 
-            # Write Type-07 VRAM offset
+            # Write Type-07 VRAM offset and idx
             if "type07_vram" in floor_data:
                 _patch_type07(data, area, slot_idx,
-                              floor_data["type07_vram"], changes)
+                              floor_data["type07_vram"],
+                              floor_data.get("type07_idx"),
+                              changes)
 
         # --- Elite flag: multiply stats from monster_stats JSON values ---
         if override.get("elite"):
@@ -811,10 +822,35 @@ def patch_monster_overrides(data, area, monster_db):
                 data[stat_offset:stat_offset + 16] = name_padded
                 changes.append("name='{}'".format(new_name))
 
-        # --- Type-07 VRAM offset (standalone) ---
+        # --- Type-07 VRAM offset and idx (standalone) ---
         type07_vram = override.get("type07_vram")
-        if type07_vram and not replace_with:
-            _patch_type07(data, area, slot_idx, type07_vram, changes)
+        type07_idx = override.get("type07_idx")
+        if (type07_vram or type07_idx is not None) and not replace_with:
+            _patch_type07(data, area, slot_idx, type07_vram, type07_idx, changes)
+
+        # --- L value override (standalone) ---
+        override_L = override.get("L")
+        if override_L is not None and not replace_with:
+            assign_off = _find_assign_entry_offset(
+                data, group_offset, num_monsters, slot_idx)
+            if assign_off is not None:
+                new_L = int(override_L)
+                old_L = data[assign_off + 1]
+                if old_L != new_L:
+                    data[assign_off + 1] = new_L
+                    changes.append("L={}".format(new_L))
+
+        # --- Animation table override (standalone) ---
+        anim_table_hex = override.get("animation_table")
+        if anim_table_hex and not replace_with:
+            _patch_animation_table(data, area, slot_idx, anim_table_hex, changes)
+
+        # --- 8-byte record overrides (anim_offset + texture_ref) ---
+        anim_offset_hex = override.get("anim_offset")
+        texture_ref_hex = override.get("texture_ref")
+        if (anim_offset_hex or texture_ref_hex) and not replace_with:
+            _patch_8byte_record(data, area, slot_idx, anim_offset_hex,
+                               texture_ref_hex, changes)
 
         if changes:
             changed += 1
@@ -843,17 +879,70 @@ def _find_assign_entry_offset(data, group_offset, num_monsters, slot_idx):
     return None
 
 
-def _patch_type07(data, area, slot_idx, vram_hex, changes):
-    """Patch a Type-07 entry's VRAM offset for a given slot."""
+def _patch_type07(data, area, slot_idx, vram_hex, idx_val, changes):
+    """Patch a Type-07 entry's VRAM offset and idx for a given slot."""
     type07_entries = area.get("type07_entries", [])
     if slot_idx < len(type07_entries) and type07_entries[slot_idx]:
         entry = type07_entries[slot_idx]
         entry_off = int(entry["offset"], 16)
-        new_vram = int(vram_hex, 16)
-        old_vram = struct.unpack_from('<I', data, entry_off)[0]
-        if old_vram != new_vram:
-            struct.pack_into('<I', data, entry_off, new_vram)
-            changes.append("vram=0x{:04X}".format(new_vram))
+
+        # Patch VRAM offset (first 4 bytes)
+        if vram_hex:
+            new_vram = int(vram_hex, 16)
+            old_vram = struct.unpack_from('<I', data, entry_off)[0]
+            if old_vram != new_vram:
+                struct.pack_into('<I', data, entry_off, new_vram)
+                changes.append("vram=0x{:04X}".format(new_vram))
+
+        # Patch idx (byte 5)
+        if idx_val is not None:
+            old_idx = data[entry_off + 5]
+            if old_idx != idx_val:
+                data[entry_off + 5] = idx_val
+                changes.append("idx={}".format(idx_val))
+
+
+def _patch_animation_table(data, area, slot_idx, anim_hex, changes):
+    """Patch animation table entry (8 bytes) for a given slot."""
+    anim_table = area.get("animation_table", [])
+    if slot_idx < len(anim_table):
+        entry = anim_table[slot_idx]
+        entry_off = int(entry["offset"], 16)
+        try:
+            new_bytes = bytes.fromhex(anim_hex)
+            if len(new_bytes) != 8:
+                print("    [ERROR] animation_table must be 8 bytes (got {})".format(len(new_bytes)))
+                return
+            old_bytes = bytes(data[entry_off:entry_off+8])
+            if old_bytes != new_bytes:
+                data[entry_off:entry_off+8] = new_bytes
+                changes.append("anim_table={}".format(anim_hex[:16]))
+        except ValueError as e:
+            print("    [ERROR] invalid animation_table hex: {}".format(e))
+
+
+def _patch_8byte_record(data, area, slot_idx, anim_off_hex, tex_ref_hex, changes):
+    """Patch 8-byte record (anim_offset + texture_ref) for a given slot."""
+    records = area.get("records_8byte", [])
+    if slot_idx < len(records):
+        entry = records[slot_idx]
+        entry_off = int(entry["offset"], 16)
+
+        # Patch anim_offset (first 4 bytes)
+        if anim_off_hex:
+            new_anim_off = int(anim_off_hex, 16)
+            old_anim_off = struct.unpack_from('<I', data, entry_off)[0]
+            if old_anim_off != new_anim_off:
+                struct.pack_into('<I', data, entry_off, new_anim_off)
+                changes.append("anim_off={}".format(anim_off_hex))
+
+        # Patch texture_ref (next 4 bytes)
+        if tex_ref_hex:
+            new_tex_ref = int(tex_ref_hex, 16)
+            old_tex_ref = struct.unpack_from('<I', data, entry_off + 4)[0]
+            if old_tex_ref != new_tex_ref:
+                struct.pack_into('<I', data, entry_off + 4, new_tex_ref)
+                changes.append("tex_ref={}".format(tex_ref_hex))
 
 
 def find_area_jsons():

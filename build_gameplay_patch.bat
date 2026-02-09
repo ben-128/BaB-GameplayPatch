@@ -212,6 +212,23 @@ if "%PATCH_LOOT_TIMER%"=="1" (
 )
 
 REM ========================================================================
+REM Step 7b: Patch spell table entries in BLAZE.ALL
+REM ========================================================================
+call :log "[7b/10] Patching spell table entries in BLAZE.ALL..."
+call :log ""
+
+py -3 Data\monster_stats\patch_spell_table.py >> "%LOGFILE%" 2>&1
+if errorlevel 1 (
+    call :log ""
+    call :log "[ERROR] Spell table patch failed!"
+    goto :error
+)
+
+call :log ""
+call :log "[OK] Spell table entries processed"
+call :log ""
+
+REM ========================================================================
 REM Step 8: Create fresh patched BIN from clean original
 REM ========================================================================
 call :log "[8/10] Creating fresh patched BIN from clean original..."
@@ -262,6 +279,23 @@ if "%PATCH_LOOT_TIMER%"=="1" (
 ) else (
     call :log "[9b/10] Loot timer: skipped"
 )
+call :log ""
+
+REM ========================================================================
+REM Step 9c: Patch monster spell assignments in SLES (EXE inside BIN)
+REM ========================================================================
+call :log "[9c/10] Patching monster spell assignments in EXE..."
+call :log ""
+
+py -3 Data\monster_stats\patch_monster_spells.py >> "%LOGFILE%" 2>&1
+if errorlevel 1 (
+    call :log ""
+    call :log "[ERROR] Monster spell assignment patch failed!"
+    goto :error
+)
+
+call :log ""
+call :log "[OK] Monster spell assignments processed"
 call :log ""
 
 REM ========================================================================

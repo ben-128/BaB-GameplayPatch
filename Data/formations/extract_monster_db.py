@@ -24,10 +24,12 @@ from pathlib import Path
 SCRIPT_DIR = Path(__file__).parent
 PROJECT_ROOT = SCRIPT_DIR.parent.parent
 
-BLAZE_ALL = PROJECT_ROOT / "output" / "BLAZE.ALL"
+# Always read from SOURCE (unpatched) to get original values
+BLAZE_ALL = (PROJECT_ROOT / "Blaze  Blade - Eternal Quest (Europe)"
+             / "extract" / "BLAZE.ALL")
 if not BLAZE_ALL.exists():
-    BLAZE_ALL = (PROJECT_ROOT / "Blaze  Blade - Eternal Quest (Europe)"
-                 / "extract" / "BLAZE.ALL")
+    # Fallback to output if source doesn't exist
+    BLAZE_ALL = PROJECT_ROOT / "output" / "BLAZE.ALL"
 
 FORMATIONS_DIR = SCRIPT_DIR
 MONSTER_STATS_DIR = SCRIPT_DIR.parent / "monster_stats"
@@ -96,6 +98,67 @@ def find_assignment_entries(data, group_offset, num_monsters):
         })
 
     return entries
+
+
+def find_animation_tables(data, group_offset, num_monsters):
+    """Find animation table and 8-byte records before group_offset.
+
+    Structure (reading backwards from group_offset):
+    - group_offset: 96-byte entries start
+    - group_offset - n*8: Assignment entries (L/R)
+    - Before that: Zero terminator + offsets
+    - Before that: 8-byte records [uint32 anim_offset][uint32 texture_ref]
+    - Before that: Animation table (8 bytes per monster, animation frame indices)
+    - Before that: Animation table header [00 00 00 00 04 00 00 00]
+
+    Returns tuple (anim_table, records_8byte) or (None, None) on failure.
+    """
+    # Search backwards for animation table header [04 00 00 00 00 00 00 00]
+    search_start = max(0, group_offset - 512)
+    search_end = group_offset
+
+    header_offset = None
+    for off in range(search_end - 8, search_start, -1):
+        if off < 0:
+            break
+        # Check for header pattern: [04 00 00 00] followed by zeros
+        if data[off:off+4] == b'\x04\x00\x00\x00':
+            # Verify rest is zeros
+            if data[off+4:off+8] == b'\x00\x00\x00\x00':
+                header_offset = off
+                break
+
+    if header_offset is None:
+        return None, None
+
+    # Animation table starts 8 bytes after header start
+    anim_table_offset = header_offset + 8
+    anim_table = []
+    for i in range(num_monsters):
+        off = anim_table_offset + i * 8
+        anim_bytes = data[off:off+8]
+        anim_table.append({
+            "bytes": anim_bytes.hex(),
+            "offset": "0x{:X}".format(off)
+        })
+
+    # 8-byte records start at fixed offset from header (0x30 = 48 bytes)
+    # Structure: header (8) + animation data block (~40) = 48 bytes
+    records_offset = header_offset + 0x30
+    records_8byte = []
+    for i in range(num_monsters):
+        off = records_offset + i * 8
+        if off + 8 > len(data):
+            break
+        anim_off = struct.unpack_from('<I', data, off)[0]
+        texture_ref = struct.unpack_from('<I', data, off + 4)[0]
+        records_8byte.append({
+            "anim_offset": "0x{:04X}".format(anim_off),
+            "texture_ref": "0x{:08X}".format(texture_ref),
+            "offset": "0x{:X}".format(off)
+        })
+
+    return anim_table, records_8byte
 
 
 def find_type07_entries(data, script_start, num_monsters, max_scan=2048):
@@ -279,14 +342,18 @@ def main():
         assign_entries = find_assignment_entries(
             blaze_data, group_offset, num_monsters)
 
-        # 2. Extract Type-07 entries
+        # 2. Extract animation tables and 8-byte records
+        anim_table, records_8byte = find_animation_tables(
+            blaze_data, group_offset, num_monsters)
+
+        # 3. Extract Type-07 entries
         type07 = find_type07_entries(
             blaze_data, script_start, num_monsters)
 
-        # 3. Extract slot_types from formation suffixes
+        # 4. Extract slot_types from formation suffixes
         slot_types = extract_slot_types(blaze_data, area)
 
-        # 4. Read 96-byte stat entries
+        # 5. Read 96-byte stat entries
         stat_entries = []
         for i in range(num_monsters):
             entry = read_stat_entry(blaze_data, group_offset, i)
@@ -324,6 +391,18 @@ def main():
         # Enrich the area JSON
         area["slot_types"] = slot_types
 
+        # Add assignment entries
+        if assign_entries:
+            area["assignment_entries"] = assign_entries
+
+        # Add animation table
+        if anim_table:
+            area["animation_table"] = anim_table
+
+        # Add 8-byte records
+        if records_8byte:
+            area["records_8byte"] = records_8byte
+
         type07_list = []
         for i in range(num_monsters):
             if i in type07:
@@ -345,6 +424,14 @@ def main():
         else:
             assign_str = " L=?"
 
+        anim_str = ""
+        if anim_table:
+            anim_str = " anim=OK"
+
+        rec8_str = ""
+        if records_8byte:
+            rec8_str = " rec8=OK"
+
         type07_str = ""
         if type07:
             vrams = [type07[i]["vram_offset"] if i in type07 else "?"
@@ -355,10 +442,10 @@ def main():
         if any(s != "00000000" for s in slot_types):
             st_str = " types=[{}]".format(",".join(slot_types))
 
-        print("  {}: {}{}{}{}".format(
+        print("  {}: {}{}{}{}{}{}".format(
             area_name,
             ", ".join(monsters),
-            assign_str, type07_str, st_str))
+            assign_str, anim_str, rec8_str, type07_str, st_str))
 
     # Second pass: add available_monsters to each area JSON
     print()

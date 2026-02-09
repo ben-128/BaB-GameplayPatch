@@ -2156,5 +2156,86 @@
     "Wraith": "0x0588",
     "Red-Slime": "0x0580",
     "Undead-Knight": "0x068C"
-  }
+  },
+  "assignment_entries": [
+    {
+      "slot": 0,
+      "L": 10,
+      "R": 4,
+      "offset": "0x1DEB190"
+    },
+    {
+      "slot": 1,
+      "L": 4,
+      "R": 6,
+      "offset": "0x1DEB198"
+    },
+    {
+      "slot": 2,
+      "L": 5,
+      "R": 7,
+      "offset": "0x1DEB1A0"
+    },
+    {
+      "slot": 3,
+      "L": 8,
+      "R": 8,
+      "offset": "0x1DEB1A8"
+    },
+    {
+      "slot": 4,
+      "L": 10,
+      "R": 5,
+      "offset": "0x1DEB1B0"
+    }
+  ],
+  "animation_table": [
+    {
+      "bytes": "0001020303020100",
+      "offset": "0x1DEB10C"
+    },
+    {
+      "bytes": "0404040404040404",
+      "offset": "0x1DEB114"
+    },
+    {
+      "bytes": "0505050606060606",
+      "offset": "0x1DEB11C"
+    },
+    {
+      "bytes": "0505070707080808",
+      "offset": "0x1DEB124"
+    },
+    {
+      "bytes": "090a0b0c0c0d0d0e",
+      "offset": "0x1DEB12C"
+    }
+  ],
+  "records_8byte": [
+    {
+      "anim_offset": "0x100B0A0F",
+      "texture_ref": "0x0E0D0D10",
+      "offset": "0x1DEB134"
+    },
+    {
+      "anim_offset": "0x11111111",
+      "texture_ref": "0x13131212",
+      "offset": "0x1DEB13C"
+    },
+    {
+      "anim_offset": "0x14141414",
+      "texture_ref": "0x15150505",
+      "offset": "0x1DEB144"
+    },
+    {
+      "anim_offset": "0x19181716",
+      "texture_ref": "0x1B1B1A1A",
+      "offset": "0x1DEB14C"
+    },
+    {
+      "anim_offset": "0x000C",
+      "texture_ref": "0x00050000",
+      "offset": "0x1DEB154"
+    }
+  ]
 }

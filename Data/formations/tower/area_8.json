@@ -1543,5 +1543,56 @@
     "Shadow-Demon",
     "Stalker",
     "Wyvern"
+  ],
+  "assignment_entries": [
+    {
+      "slot": 0,
+      "L": 4,
+      "R": 3,
+      "offset": "0x198A96C"
+    },
+    {
+      "slot": 1,
+      "L": 8,
+      "R": 4,
+      "offset": "0x198A974"
+    },
+    {
+      "slot": 2,
+      "L": 14,
+      "R": 5,
+      "offset": "0x198A97C"
+    }
+  ],
+  "animation_table": [
+    {
+      "bytes": "0001020304050607",
+      "offset": "0x198A90C"
+    },
+    {
+      "bytes": "0809090808090908",
+      "offset": "0x198A914"
+    },
+    {
+      "bytes": "0a0a0b0b0a0a0c0c",
+      "offset": "0x198A91C"
+    }
+  ],
+  "records_8byte": [
+    {
+      "anim_offset": "0x19191817",
+      "texture_ref": "0x1A1A1A1A",
+      "offset": "0x198A934"
+    },
+    {
+      "anim_offset": "0x000C",
+      "texture_ref": "0x00030000",
+      "offset": "0x198A93C"
+    },
+    {
+      "anim_offset": "0x0014",
+      "texture_ref": "0x00044000",
+      "offset": "0x198A944"
+    }
   ]
 }

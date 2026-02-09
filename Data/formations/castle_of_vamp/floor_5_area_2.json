@@ -1487,5 +1487,71 @@
   ],
   "monster_vram_ref": {
     "Chimera": "0x33F6"
-  }
+  },
+  "assignment_entries": [
+    {
+      "slot": 0,
+      "L": 12,
+      "R": 3,
+      "offset": "0x2426950"
+    },
+    {
+      "slot": 1,
+      "L": 8,
+      "R": 2,
+      "offset": "0x2426958"
+    },
+    {
+      "slot": 2,
+      "L": 12,
+      "R": 3,
+      "offset": "0x2426960"
+    },
+    {
+      "slot": 3,
+      "L": 8,
+      "R": 2,
+      "offset": "0x2426968"
+    }
+  ],
+  "animation_table": [
+    {
+      "bytes": "0000000001010101",
+      "offset": "0x242690C"
+    },
+    {
+      "bytes": "0203040505040302",
+      "offset": "0x2426914"
+    },
+    {
+      "bytes": "060708090a0b0b0a",
+      "offset": "0x242691C"
+    },
+    {
+      "bytes": "0c0d0e0e0f10100f",
+      "offset": "0x2426924"
+    }
+  ],
+  "records_8byte": [
+    {
+      "anim_offset": "0x0014",
+      "texture_ref": "0x00064000",
+      "offset": "0x2426934"
+    },
+    {
+      "anim_offset": "0x0000",
+      "texture_ref": "0x00000000",
+      "offset": "0x242693C"
+    },
+    {
+      "anim_offset": "0x001C",
+      "texture_ref": "0x00000024",
+      "offset": "0x2426944"
+    },
+    {
+      "anim_offset": "0x0000",
+      "texture_ref": "0x00000C00",
+      "offset": "0x242694C"
+    }
+  ]
 }

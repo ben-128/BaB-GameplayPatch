@@ -1214,5 +1214,71 @@
     "Goblin-Shaman": "0x0588",
     "Giant-Bat": "0x0590",
     "Goblin-Leader": "0x0634"
-  }
+  },
+  "assignment_entries": [
+    {
+      "slot": 0,
+      "L": 0,
+      "R": 4,
+      "offset": "0xF7E188"
+    },
+    {
+      "slot": 1,
+      "L": 1,
+      "R": 5,
+      "offset": "0xF7E190"
+    },
+    {
+      "slot": 2,
+      "L": 3,
+      "R": 6,
+      "offset": "0xF7E198"
+    },
+    {
+      "slot": 3,
+      "L": 2,
+      "R": 7,
+      "offset": "0xF7E1A0"
+    }
+  ],
+  "animation_table": [
+    {
+      "bytes": "0000010203030404",
+      "offset": "0xF7E10C"
+    },
+    {
+      "bytes": "0505050606070707",
+      "offset": "0xF7E114"
+    },
+    {
+      "bytes": "08080909090a0a0a",
+      "offset": "0xF7E11C"
+    },
+    {
+      "bytes": "0b0b0b0b0b0b0b0b",
+      "offset": "0xF7E124"
+    }
+  ],
+  "records_8byte": [
+    {
+      "anim_offset": "0x13121105",
+      "texture_ref": "0x160E1514",
+      "offset": "0xF7E134"
+    },
+    {
+      "anim_offset": "0x0000",
+      "texture_ref": "0x17171700",
+      "offset": "0xF7E13C"
+    },
+    {
+      "anim_offset": "0x1A1A1918",
+      "texture_ref": "0x1C1C1B1B",
+      "offset": "0xF7E144"
+    },
+    {
+      "anim_offset": "0x000C",
+      "texture_ref": "0x00030000",
+      "offset": "0xF7E14C"
+    }
+  ]
 }

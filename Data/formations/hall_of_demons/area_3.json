@@ -1589,5 +1589,63 @@
     "Blood-Shadow": "0x0D2C",
     "Spirit-Ball": "0x0D34",
     "Gray-Arm": "0x30EE"
-  }
+  },
+  "animation_table": [
+    {
+      "bytes": "0001020304050607",
+      "offset": "0x2BF190C"
+    },
+    {
+      "bytes": "08090a0b0b0c0c0c",
+      "offset": "0x2BF1914"
+    },
+    {
+      "bytes": "0d0e0f101011120d",
+      "offset": "0x2BF191C"
+    },
+    {
+      "bytes": "0c0b131415151515",
+      "offset": "0x2BF1924"
+    },
+    {
+      "bytes": "1617181818191a1b",
+      "offset": "0x2BF192C"
+    },
+    {
+      "bytes": "1c1d1e1f0d0d0d20",
+      "offset": "0x2BF1934"
+    }
+  ],
+  "records_8byte": [
+    {
+      "anim_offset": "0x1F1E1D1C",
+      "texture_ref": "0x200D0D0D",
+      "offset": "0x2BF1934"
+    },
+    {
+      "anim_offset": "0x000C",
+      "texture_ref": "0x00030000",
+      "offset": "0x2BF193C"
+    },
+    {
+      "anim_offset": "0x0014",
+      "texture_ref": "0x00044000",
+      "offset": "0x2BF1944"
+    },
+    {
+      "anim_offset": "0x001C",
+      "texture_ref": "0x00058000",
+      "offset": "0x2BF194C"
+    },
+    {
+      "anim_offset": "0x0024",
+      "texture_ref": "0x0006C000",
+      "offset": "0x2BF1954"
+    },
+    {
+      "anim_offset": "0x002C",
+      "texture_ref": "0x00070000",
+      "offset": "0x2BF195C"
+    }
+  ]
 }

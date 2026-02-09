@@ -872,5 +872,71 @@
     "Black-Lizard": "0x07F0",
     "Will-O-The-Wisp": "0x07F8",
     "Poison-Flower": "0x0800"
-  }
+  },
+  "assignment_entries": [
+    {
+      "slot": 0,
+      "L": 10,
+      "R": 0,
+      "offset": "0x14AF968"
+    },
+    {
+      "slot": 1,
+      "L": 7,
+      "R": 1,
+      "offset": "0x14AF970"
+    },
+    {
+      "slot": 2,
+      "L": 15,
+      "R": 2,
+      "offset": "0x14AF978"
+    },
+    {
+      "slot": 3,
+      "L": 11,
+      "R": 3,
+      "offset": "0x14AF980"
+    }
+  ],
+  "animation_table": [
+    {
+      "bytes": "0001020304050504",
+      "offset": "0x14AF90C"
+    },
+    {
+      "bytes": "06070308090a0a0a",
+      "offset": "0x14AF914"
+    },
+    {
+      "bytes": "0b0c0b0d0d0b0c0b",
+      "offset": "0x14AF91C"
+    },
+    {
+      "bytes": "0e0f101112121313",
+      "offset": "0x14AF924"
+    }
+  ],
+  "records_8byte": [
+    {
+      "anim_offset": "0x0014",
+      "texture_ref": "0x00054000",
+      "offset": "0x14AF934"
+    },
+    {
+      "anim_offset": "0x001C",
+      "texture_ref": "0x00068000",
+      "offset": "0x14AF93C"
+    },
+    {
+      "anim_offset": "0x0024",
+      "texture_ref": "0x0007C000",
+      "offset": "0x14AF944"
+    },
+    {
+      "anim_offset": "0x0000",
+      "texture_ref": "0x00000000",
+      "offset": "0x14AF94C"
+    }
+  ]
 }

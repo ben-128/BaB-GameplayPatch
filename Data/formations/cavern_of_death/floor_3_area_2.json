@@ -253,5 +253,86 @@
     "Giant-Centipede": "0x03D8",
     "Dragon-Puppy": "0x03E0",
     "Giant-Spider": "0x03E8"
-  }
+  },
+  "assignment_entries": [
+    {
+      "slot": 0,
+      "L": 5,
+      "R": 9,
+      "offset": "0xF879C4"
+    },
+    {
+      "slot": 1,
+      "L": 4,
+      "R": 10,
+      "offset": "0xF879CC"
+    },
+    {
+      "slot": 2,
+      "L": 13,
+      "R": 11,
+      "offset": "0xF879D4"
+    },
+    {
+      "slot": 3,
+      "L": 17,
+      "R": 12,
+      "offset": "0xF879DC"
+    },
+    {
+      "slot": 4,
+      "L": 11,
+      "R": 13,
+      "offset": "0xF879E4"
+    }
+  ],
+  "animation_table": [
+    {
+      "bytes": "0001020203040404",
+      "offset": "0xF8790C"
+    },
+    {
+      "bytes": "0505050505050505",
+      "offset": "0xF87914"
+    },
+    {
+      "bytes": "0606060606060606",
+      "offset": "0xF8791C"
+    },
+    {
+      "bytes": "0707070707070707",
+      "offset": "0xF87924"
+    },
+    {
+      "bytes": "0808080808080808",
+      "offset": "0xF8792C"
+    }
+  ],
+  "records_8byte": [
+    {
+      "anim_offset": "0x9090909",
+      "texture_ref": "0x09090909",
+      "offset": "0xF87934"
+    },
+    {
+      "anim_offset": "0xA0A0A0A",
+      "texture_ref": "0x0A0A0A0A",
+      "offset": "0xF8793C"
+    },
+    {
+      "anim_offset": "0x5050505",
+      "texture_ref": "0x05050505",
+      "offset": "0xF87944"
+    },
+    {
+      "anim_offset": "0x6080806",
+      "texture_ref": "0x06080806",
+      "offset": "0xF8794C"
+    },
+    {
+      "anim_offset": "0xB0B0C0B",
+      "texture_ref": "0x0B0B0B0B",
+      "offset": "0xF87954"
+    }
+  ]
 }

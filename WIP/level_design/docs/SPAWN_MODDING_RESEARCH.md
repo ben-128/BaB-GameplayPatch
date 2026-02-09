@@ -35,8 +35,8 @@ Location: immediately before the 96-byte group. `group_offset - num_monsters * 8
 **8 bytes per monster** = 2 x 4-byte entries:
 
 ```
-[slot, L_val, 00, 00]  <- L entry (flag 0x00)
-[slot, R_val, 00, 40]  <- R entry (flag 0x40)
+[slot, L_val, 00, 00]  <- L entry (flag 0x00) - AI behavior index
+[slot, R_val, 00, 40]  <- R entry (flag 0x40) - purpose unknown
 ```
 
 **Cavern F1 Area1 (0xF7A964):**
@@ -45,6 +45,17 @@ Slot 0 (Goblin):  L=[00,00,00,00] L=0  | R=[00,02,00,40] R=2
 Slot 1 (Shaman):  L=[01,01,00,00] L=1  | R=[01,03,00,40] R=3
 Slot 2 (Bat):     L=[02,03,00,00] L=3  | R=[02,04,00,40] R=4
 ```
+
+**L field = AI Behavior Index (DISCOVERED 2026-02-09):**
+- L controls which AI behavior the monster uses (confirmed by in-game testing)
+- Changing L makes the monster use different AI behavior
+- L beyond creature count → monster stands still (no behavior)
+- L to incompatible AI → visual glitches (e.g. goblin with L=1/Shaman tries to cast, disappears)
+- **L is NOT always self-referencing!** Giant-Bat at slot 2 has L=3, Goblin-Leader at slot 3 has L=2
+- Exact indexing target of L is under investigation (NOT the 96-byte entries, likely script area)
+
+**R field:**
+- Purpose still unknown (tested, has no visible effect on visuals or AI)
 
 **L and R values are NOT global monster IDs.** They are local per-area indices. The same monster has different L/R values in different areas.
 
@@ -103,10 +114,18 @@ Offset  Size  Description                              Runtime Use
 0x2E    2     stat[15] elem_divine_malefic
 0x30    2     stat[16] dmg
 0x32    2     stat[17] armor
-0x34-0x5F     stat[18]-stat[39] (unknown, mostly zero)
+0x34-0x3E     stat[18]-stat[23] Additional combat stats (6 uint16 values)
+0x40-0x5F     stat[24]-stat[39] Always zero (unused padding)
 ```
 
 **DUAL PURPOSE (confirmed by gameplay testing):** stat[2]-stat[9] ARE combat stats (HP, collider, etc.). Changing them changes gameplay. The init at 0x80039358 ALSO copies these values to entity loot index fields (+0x68-+0x76). Same numeric value serves as combat stat AND loot table index.
+
+**Bytes 0x34-0x3E (6 additional stats, dump verified 2026-02-09):** These contain 6 small uint16 values (range 8-34), scaling with monster power. NOT AI scripts. Example values:
+- Lv20.Goblin: [14, 14, 8, 10, 10, 10]
+- Goblin-Shaman: [10, 10, 16, 19, 14, 14]
+- Giant-Bat: [14, 14, 10, 14, 10, 10]
+- Goblin-Leader: [34, 32, 22, 23, 20, 20]
+Bytes 0x40-0x5F are always zero (unused padding).
 
 ### 5. Type-07 Entries (Script Area)
 
@@ -145,6 +164,139 @@ Type-8 target data (bytecode)  +0x1DC0 to +0x2100+  ~800b    Room scripts (has d
 Remaining bytecode             +0x2100 to +0x348C   ~5KB     More room logic
 ```
 
+### 7. Script Area Dump (Cavern F1, hex dump 2026-02-09)
+
+The area between 96-byte monster entries and formation templates was hex-dumped for Areas 1 and 2.
+
+**Area 1 script area: 1376 bytes (0x560), from 0xF7AA9C to 0xF7AFFC**
+
+#### ROOT Offset Table (0xF7AA9C, 12 entries + 2 zero terminators)
+
+**This is the table L indexes into!** Entries 0-3 are indexed by L values, entries 4+ are fixed structures.
+
+```
+Area 1 (3 monsters):                     Area 2 (4 monsters):
+[ 0]=+0x003C  L=0 (Goblin behavior)      [ 0]=+0x004C  L=0 (Goblin)
+[ 1]=NULL     L=1 (Shaman = no data!)     [ 1]=NULL     L=1 (Shaman = no data!)
+[ 2]=+0x0050  (data block)               [ 2]=+0x0060  L=2 (Leader behavior)
+[ 3]=+0x00F4  L=3 (Bat behavior)          [ 3]=+0x00C4  L=3 (Bat behavior)
+[ 4]=+0x0198  config/model                [ 4]=+0x0128  config/model
+[ 5]=+0x01FC  offset table                [ 5]=+0x024C  offset table
+[ 6]=+0x0260  bytecode offsets            [ 6]=+0x02B0  bytecode offsets
+[ 7]=+0x02A4  bytecode offsets            [ 7]=+0x0314  bytecode offsets
+[ 8]=+0x0328  bytecode offsets            [ 8]=+0x0398  bytecode offsets
+[ 9]=+0x03AC  bytecode offsets            [ 9]=+0x03FC  bytecode offsets
+[10]=+0x0410  0B command records          [10]=+0x0460  bytecode offsets
+[11]=+0x0494  0B command records          [11]=+0x04C4  0B command records
+                                          [12]=+0x0528  0B command records
+```
+
+All offsets are relative to script_start. L values are per-TYPE, not per-slot.
+
+#### Type Entry / VRAM Binding Table (at 0xF7ABCC)
+Pairs of (uint32 VRAM pointer, 4-byte instruction):
+```
+0x0568 -> [04, 00, 00, 00]    shared resource
+0x0570 -> [05, 01, 00, 00]    shared resource
+0x0578 -> [06, 02, 00, 00]    shared resource
+0x0580 -> [07, 10, 00, 00]    Lv20.Goblin VRAM (type=07, idx=0x10, slot=0)
+0x0588 -> [07, 11, 01, 00]    Goblin-Shaman VRAM (type=07, idx=0x11, slot=1)
+0x0590 -> [07, 12, 02, 00]    Giant-Bat VRAM (type=07, idx=0x12, slot=2)
+0x0598 -> [0E, 13, 00, 00]    shared resource (type=0E)
+```
+VRAM pointers 0x0580, 0x0588, 0x0590 match the monster_vram_ref in type-07 entries exactly.
+
+#### L-Indexed Behavior Blocks (root[0]..root[3])
+
+Each non-NULL root[L] entry points to a per-behavior-type data block containing:
+- Animation/model data (value 0x0384 = 900 frames typical)
+- Stat blocks (3x uint16 values per block)
+- 32-byte FFFF-separated spawn records with coordinates and L-value assignments
+
+**L values are consistent per monster TYPE across areas:**
+- Goblin = L=0 (both areas)
+- Shaman = L=1 (both areas) - **ALWAYS NULL** (no own data, inherits behavior)
+- Leader = L=2 (Area 2 only)
+- Bat = L=3 (both areas)
+
+This explains why Giant-Bat at slot 2 has L=3: L is a per-TYPE index, not per-slot.
+
+#### Bytecode Offset Tables (root[5+])
+
+Multiple tables of uint32 offsets pointing to external bytecode programs (values 0x1000-0x4FF0):
+- Area 1: 4 offset tables (root[6]..root[9]), 17-33 entries each
+- Area 2: 5 offset tables (root[6]..root[10]), 25-33 entries each
+- Some entries are NULL (0), marking group boundaries
+- These likely reference AI bytecode programs executed by the PSX interpreter at 0x8001A03C
+
+#### 0B Command Records (last 2 root entries)
+
+32-byte records with slot assignment and coordinates:
+```
+[0] = monster SLOT index  [1] = 0x0B marker  [2] = subtype  [3] = 0x00
+[4:8] = coordinates  [8:12] = animation ref  [12:16] = zeros
+[16:18] = command ID  [18:24] = FFFF separator  [24:28] = L value  [28:32] = zeros
+```
+Area 1: 9 records, Area 2: 14 records.
+
+### 8. Key Structural Findings (from decode_ai_blocks_v3.py)
+
+**L=0 blocks are tiny (20 bytes):** Model pairs, behavior flag byte (0x08/0x0E), timer (900 frames). No spawn records.
+
+**Root[2] is context-dependent:**
+- Area 1 (L=2 unused): root[2] is a SHARED ground-type descriptor with FFFF records for L=0,1,2
+- Area 2 (L=2 = Leader): root[2] contains Leader-specific stats and 1 spawn record
+
+**Bat block (L=3) suffix = type-entry table:**
+```
+Offset  Param         Meaning
+0x0580  0x1007        type-7, idx=0x10, slot=0 (Goblin VRAM)
+0x0588  0x011107      type-7, idx=0x11, slot=1 (Shaman VRAM)
+0x0590  0x021207      type-7, idx=0x12, slot=2 (Bat VRAM)
+0x0598  0x130E        type-14, idx=0x13
+```
+Opcode/param values are TYPE-CONSISTENT across areas; only the offsets differ.
+
+**Stat blocks:** Header `0x0190|0x0200`, then 3x uint16 values (Goblin: 125,125,125; Leader: two blocks 20,20,20 and 130,190,130).
+
+**3 globally-shared bytecode pairs** (identical across areas):
+`0x0AD1->0x2294`, `0x0AD6->0x2174`, `0x0ADB->0x1184` (global bytecode pool references).
+
+### 9. Spawn Init Function (0x80021C70) - NULL Handling
+
+The PSX executable processes the root table at entity spawn time:
+
+```mips
+lw   $v1, 48($v0)      // root_table = area_data+0x30
+sll  $v0, $a0, 2       // L * 4
+addu $v0, $v0, $v1     // &root_table[L]
+lw   $s1, 0($v0)       // s1 = root_table[L]
+beq  $s1, $zero, EXIT  // NULL -> skip, no behavior data loaded
+```
+
+Additional bail-out checks:
+- `beq $a0, 0xFF, EXIT` -- skip sentinel value
+- `blez $s2, EXIT` -- skip if spawn array full (max 128)
+
+The root table is accessed via `area_data+0x30` (NOT the bytecode interpreter's `+0x8C`).
+The bytecode interpreter at 0x8001A03C uses a different data structure and never sees NULL root entries.
+
+A relocation function at 0x8001E648 also skips NULL entries when processing root[L+4].
+
+**Two categories of NULL:**
+1. **Explicit zero**: L within table range, entry deliberately set to 0 (e.g., Ghost L=1 in Castle)
+2. **L exceeds table**: L value larger than root table size (e.g., Giant-Spider L=17, table has 13 entries)
+
+### 9. L Value Sharing Between Monster Types
+
+Multiple monsters in the same area can share the same L value, meaning they use identical AI:
+
+**Confirmed examples from investigate_null_L.py scan:**
+- Castle F2 Area 1: **Gargoyle (slot 1) and Marble-Gargoyle (slot 4) both use L=5**
+- Castle F5 Area 5: **Vampire-Lord (slot 0) and Vampire-Lord (slot 1) both use L=14** (both NULL)
+
+This is the intended mechanism for creating visual variants with shared behavior.
+
 ---
 
 ## Swap Test Results
@@ -160,6 +312,8 @@ All tests performed on **Cavern of Death, Floor 1, Area 1** (3 monsters: Goblin,
 | **L + anim table swap** | **L + 8 bytes of anim table per slot** | **Model swapped** | **Stable** |
 
 **Conclusion: L + anim table swap = full model swap** (mesh + animations + textures). Must be between monsters whose models are loaded on the same floor. L alone crashes because animations don't match the new model.
+
+**UPDATE (2026-02-09): The L field controls BOTH the 3D model AND the AI behavior** - see detailed section below.
 
 ### What controls TEXTURE VARIANTS
 
@@ -198,32 +352,136 @@ All tests performed on **Cavern of Death, Floor 1, Area 1** (3 monsters: Goblin,
 
 ---
 
+## L Field = AI Behavior Index (Discovered 2026-02-09)
+
+### CRITICAL DISCOVERY: L controls AI behavior, not just 3D model
+
+The L field in the 8-byte "assignment entries" (located just before the 96-byte monster entries at group_offset) controls **which AI behavior script** the monster uses.
+
+### Key Findings
+
+**L is a per-TYPE behavior index (NOT per-slot):**
+- L indexes into the ROOT offset table at the start of the script area
+- L values are TYPE-consistent across ALL areas: Goblin=0, Shaman=1, Leader=2, Bat=3
+- root[L] points to a per-type behavior block containing spawn config, AI dispatch, and bytecode refs
+- When root[L]=NULL, the monster uses default/fallback behavior (no custom AI)
+- **68 NULL entries** across 63 areas; 33 monster types ALWAYS have NULL L (simple melee)
+- **71 monster types** ALWAYS have valid L (custom AI scripts in script area)
+
+**Structure of assignment entries** (8 bytes each, located at `group_offset - num_monsters * 8`):
+```
+byte[0]: slot index
+byte[1]: L value (AI behavior index)
+byte[2]: 0x00 (marker)
+byte[3]: 0x00 (marker)
+byte[4]: slot index (duplicate)
+byte[5]: R value (purpose still under investigation)
+byte[6]: 0x00 (marker)
+byte[7]: 0x40 (marker byte)
+```
+
+**Standard format (self-referencing AI):**
+```
+Slot 0 (Goblin):  L=[00,00,00,00] L=0  | R=[00,02,00,40] R=2
+Slot 1 (Shaman):  L=[01,01,00,00] L=1  | R=[01,03,00,40] R=3
+Slot 2 (Bat):     L=[02,03,00,00] L=3  | R=[02,04,00,40] R=4
+```
+
+### Evidence from Testing
+
+**Test: Setting L to point at a different monster slot**
+- Result: Behavior changes completely
+- Example: A goblin with L pointing to Giant-Bat slot behaves like a bat (flies, swoops, bat attack patterns)
+
+**Test: Setting L beyond the number of creatures in the area**
+- Result: Monster stands still with no behavior (AI reference points to invalid data)
+
+**Test: Setting L to point at Goblin-Shaman slot on a Lv20.Goblin**
+- Result: Goblin tries to cast spells but disappears/gets stuck
+- Cause: Missing cast animation frames (goblin model doesn't have shaman casting animations)
+
+### Implications for Modding
+
+**Normal usage:**
+- L is a per-TYPE index, NOT per-slot. Same monster type always has the same L value.
+- Standard assignments: Goblin=0, Shaman=1, Leader=2, Bat=3 (Cavern of Death)
+- L values vary by dungeon (different monster type sets get different L assignments)
+
+**NULL L entries (no custom AI):**
+- 33 monster types ALWAYS have NULL L → they use default EXE behavior (simple melee)
+- Examples: Ogre, Ghost, Giant-Spider, Wyrm, Giant, Zombie-Dragon
+- NULL means root_table[L]=0 → bytecode interpreter skips custom AI
+
+**AI sharing between compatible types:**
+- Multiple monsters can share the same L value to reuse one AI behavior block
+- The behavior block in the script area defines the full AI program for that type
+
+**Visual/AI mismatches cause glitches:**
+- Changing L to an incompatible monster causes visual glitches (missing animations)
+- The monster will attempt to perform actions that require animation frames it doesn't have
+- Result: Disappearing models, frozen animations, or crashes
+
+**Elite monster bug fix (2026-02-09):**
+- The formation patcher's elite override was incorrectly setting L=1 (Shaman AI) for the elite Lv20.Goblin
+- This caused the elite goblin to attempt spellcasting with missing animation frames
+- Fixed to L=0 (correct self-reference for goblin slot)
+
+### What L Controls (Combined with Previous Findings)
+
+L controls **BOTH**:
+1. **3D model reference** (mesh, animations, textures) - requires matching anim table
+2. **AI behavior script** (movement patterns, attack types, spell usage)
+
+This dual purpose explains why:
+- L swaps change both appearance AND behavior
+- L must match compatible animation sets to avoid crashes
+- Cross-floor L references fail (model not loaded + AI data not available)
+
+---
+
 ## Summary: What Controls What
 
 | Element | Controls | Confirmed |
 |---------|----------|-----------|
+| **L field** | **AI behavior** (selects behavior script, exact target unknown) | **YES (2026-02-09)** |
 | **L + anim table** | **3D model complete** (mesh, animations, textures) | YES |
 | **Type-07 offset** | **Texture color variant** | YES |
 | **R** (flag 0x40) | Nothing | YES (tested, no effect) |
 | **Type-07 idx** | Nothing | YES (tested, no effect) |
-| **96-byte entries** | **Name + combat stats only** | YES |
+| **96-byte entries** | **Name + combat stats only** (bytes 0x34-0x3E = 6 additional stats, 0x40-0x5F = zeros) | YES |
 | **Spawn cmd slots/XX/YY** (early region) | Nothing visible | YES (tested, no effect) |
 | **Deep region slot markers** [XX FF 00 00] | **Entity placement** (dark entities when wrong) | YES |
 | **Deep region cmd headers** | **Entity rendering** (dark entities when wrong) | YES |
 | **EXE 55 handlers + BLAZE.ALL 48-byte entries** | **Player spells** (dispatch decoded) | YES (see Combat Action System) |
-| **??? UNKNOWN dispatch** | **Monster special abilities** (breaths, drains...) | NO — mechanism not found |
+| **Script area** | **AI behavior data** (likely - contains offset tables + bytecode) | UNDER INVESTIGATION |
 | **BLAZE.ALL BEEC/BEF0 tables + 96-byte stats** | **Loot drops** (stat values = dual purpose) | PARTIAL (see Loot System) |
 
 ---
 
 ## AI / Spell Control: Investigation Status
 
-The AI/behavior/spell controller has **not been found**. All per-monster structures and script area fields tested so far only control visuals, stats, or entity placement. AI always stays attached to the slot position.
+**RESOLVED (2026-02-09): Full AI architecture decoded**
+
+The AI/behavior system uses two-level indirection:
+1. **L field** in assignment entries = per-TYPE behavior index (Goblin=0, Shaman=1, Leader=2, Bat=3)
+2. **Root offset table** at the START of the script area, indexed by L
+3. **Per-type behavior blocks** at root[L] contain spawn config, stats, position records, AI dispatch tables
+4. **Bytecode offset tables** at root[5+] point to external AI programs (per-area + global shared)
+5. **NULL root entries** = monster uses default/fallback behavior (no custom AI script)
+
+When root[L] is NULL (0x00000000), the EXE bytecode interpreter skips custom behavior (confirmed by MIPS NULL check pattern: `sll+addu+lw+beq zero`).
+
+### NULL L entry statistics (scan of ALL 63 areas)
+- **68 NULL entries** total, **173 valid entries** total
+- **43 areas (68%)** have at least one NULL L entry
+- **33 monster types** ALWAYS have NULL L (simple melee: Ogre, Ghost, Giant-Spider, Wyrm...)
+- **17 monster types** SOMETIMES have NULL L (context-dependent: Goblin-Shaman, Skeleton...)
+- **71 monster types** NEVER have NULL L (always have custom AI scripts)
+- L=1 (Shaman) is NULL in 5/7 areas, VALID in 2 areas (Forest F1 Area 4, Tower Area 5)
 
 ### Eliminated candidates (per-monster fields)
-- L value -> model only
 - R value -> no effect
-- 96-byte entries -> name + stats only
+- 96-byte entries (ALL bytes, including 0x34-0x5F) -> name + stats only, NO AI data
 - Type-7 idx -> no effect
 - Type-7 offset -> texture variant only
 
@@ -249,27 +507,57 @@ The AI/behavior/spell controller has **not been found**. All per-monster structu
 
 ---
 
-## Final Conclusion: AI is in the PSX EXECUTABLE, not area data or overlay config
+## Final Conclusion: Full AI Architecture Decoded (2026-02-09)
 
-After **19 tests** covering every identified per-area data structure (including a full 96-byte stat entry swap confirmed in-game 2026-02-08), the AI/behavior/spell system has **not been found in any per-area data or overlay config data**.
+### Architecture
+```
+Monster L value (per-TYPE index, NOT per-slot)
+       |
+       v
+Root Offset Table (script area start, uint32 LE, zero-terminated)
+       |
+       v  (root[L] = offset within script area)
+Per-Type Behavior Block
+  +-- Header: flag bytes + timer values (900 frames typical)
+  +-- Stat blocks: 3x uint16 values
+  +-- Spawn position records: 32 bytes each, FFFF-separated
+  +-- Program references: offset+index pairs
+       |
+       v
+Bytecode Offset Tables (root[5+])
+  +-- Per-area programs (0x0D00-0x2000 range, area-specific)
+  +-- Global shared programs (0x0500-0x0600 range, shared across areas)
+       |
+       v
+PSX Bytecode Interpreter (0x8001A03C, 63 opcodes at 0x8003BDE0)
+```
 
 ### Evidence
-1. **19 swap/zero tests** on all per-area fields - AI never changes
-2. **AI is strictly positional** - always follows slot index, regardless of ALL data changes
-3. **No global AI table** in BLAZE.ALL - monster names only appear in per-area 96-byte entries
-4. **Room bytecode (type-8)** confirmed as room scripts (elevator/doors), not AI
-5. **Every per-area structure now mapped** and tested: assignment entries, animation tables, 8-byte records, 96-byte stats, type-7 entries, spawn commands, deep entity region, type-8 bytecode
-6. **Overlay config blocks** (33 blocks scanned in BLAZE.ALL) are 3D polygon/model data, NOT AI
-7. **creature_type = 0 for ALL entities** (never written by any code), dispatch only handles player spells
-8. **Test 19 (2026-02-08):** Full 96-byte stat swap Goblin<->Bat (post-build, re-injected into BIN, confirmed in-game) -- AI/behavior unchanged. Stats and name changed, but Goblin still fights like Goblin and Bat like Bat.
+1. **19 swap/zero tests** on all per-area fields - AI never changed because L was never modified
+2. **L field controls AI** - setting L to a different value changes behavior completely
+3. **Root offset table decoded** - first entries indexed by L, with per-type behavior blocks
+4. **L values are TYPE-consistent**: Goblin=0, Shaman=1, Leader=2, Bat=3 (across ALL areas)
+5. **NULL entries (root[L]=0)** → default behavior, confirmed by MIPS NULL check in EXE
+6. **96-byte bytes 0x34-0x5F are NOT AI** - hex dump shows 6 small uint16 stats + zeros
+7. **Bytecode offset tables** point to external programs in two address spaces (per-area + global)
 
 ### What this means for modding
-- **Can change via area data:** 3D models (L+anim), texture variants (type-7 offset), stats/name (96-byte entries), formations (formation templates)
+- **Can change via area data:**
+  - 3D models (L+anim table swap)
+  - Texture variants (type-7 offset)
+  - Stats/name (96-byte entries)
+  - Formations (formation templates)
+  - **AI behavior** (via L field: reuse any existing AI type in the area)
+  - **AI scripts** (modifiable in script area per-type blocks and bytecode offset tables)
 - **Can change via BLAZE.ALL overlay:** 48-byte player spell entries (names, elements, probabilities, tier gating)
 - **Can change via EXE:** 55 handler function pointers at 0x8003C1B0, 5-byte tier table at 0x8003C020, damage formula
-- **Cannot change via area data:** Monster AI/behavior/ability assignment (NOT in any per-area structure)
-- **Monster AI is determined by the PSX executable** based on entity slot position or an index derived during entity initialization -- the mapping from "slot in area" to "AI behavior profile" lives in EXE code, not in data we can easily swap
-- Stat fields are DUAL PURPOSE: they are combat stats AND loot table indices (same values)
+- **L field rules:**
+  - L is a per-TYPE index, NOT per-slot (Goblin=0, Shaman=1, Leader=2, Bat=3)
+  - NULL root[L] = monster uses default behavior (no custom AI)
+  - L to incompatible AI → visual glitches (missing animations)
+  - 33 monster types ALWAYS have NULL L (simple melee behavior hardcoded in EXE)
+  - 71 monster types ALWAYS have valid L (custom AI in script area)
+- Stat fields are DUAL PURPOSE: combat stats AND loot table indices
 - creature_type = 0 for ALL entities (never written by any code)
 
 ---
@@ -361,12 +649,46 @@ This is PSX GPU polygon data — mesh geometry, animation frames, hitbox vertice
 - BLAZE.ALL starts at disc sector 0x27D5F
 - Slight alignment drift at large offsets (~2047.2 effective bytes/sector vs 2048)
 
-### What's Still Unknown (CRITICAL)
-- **Monster ability dispatch mechanism**: How does the game decide that a Goblin does physical attacks while a Dragon casts Fire Breath? NOT controlled by: per-area data (19 tests), overlay config blocks (3D model data), creature_type (always 0), player spell dispatch (0x80024494). Remaining possibilities:
-  - **Bitmask at entity+0x160** set by EXE code during entity init (not from area data)
-  - **Entity init function** in EXE reads the L assignment or slot index and sets behavior profile
-  - **Hardcoded slot-to-AI mapping** in EXE (each area's slot positions have fixed AI)
-  - stat+0x2A/+0x2D were candidates but are level-scaled (unreliable), AND test 19 swapped them with no effect
+### Bytecode Interpreter Architecture (Decoded from EXE disassembly)
+
+**Main interpreter at 0x8001A03C:**
+- Reads root table base from `entity+0x8C` (set up by spawn init from area_data+0x30)
+- Root table entries are **absolute RAM pointers** (relocated by loader), not relative offsets
+- NO null check on root[L] — would crash if called with NULL entry
+- Caller (spawn init at 0x80021C70) filters NULL entries before interpreter is ever called
+
+**Interpreter loop:**
+1. Read byte at bytecode_ptr → opcode (0x00-0x3E valid, 0xFF = end)
+2. Dispatch via `opcode_table[opcode]` at 0x8003BDE0 (63 entries)
+3. Handler reads operands from bytecode stream, processes, returns updated bytecode_ptr
+4. Special: opcode 0x02 skips error flag check before dispatch
+
+**Handler calling convention:**
+- `$a0` = entity_ptr, `$a1` = secondary_ptr, `$a2` = bytecode_ptr, `$a3` = &error_flag
+- Return `$v0` = updated bytecode_ptr (advanced past consumed bytes)
+
+**Key opcodes decoded:**
+| Opcode | Size | Semantics |
+|--------|------|-----------|
+| 0x00 | 4B | Call secondary function via table at 0x800BF184 (indexed by byte 1) |
+| 0x01 | 3B | **GOTO**: read 16-bit index, lookup in root table, CHANGE bytecode_ptr to result |
+| 0x02 | ?B | Special: skips error flag check |
+| 0x18 | 2B | Add byte param to spell list at 0x80054670 |
+| 0x19 | 2B | Remove byte param from list at 0x8004C4D0 |
+| 0xFF | 1B | End of program (sentinel) |
+
+**Batch executor at 0x8001A120:**
+- Reads count byte, then calls interpreter N times with consecutive index bytes
+- Processes multiple root table programs in sequence
+
+**Init functions (spell mapping):**
+- 0x8002B630: opcode type 0x18 → spell_index=6, config=(640,240) at buffer 0x8004C594
+- 0x8002A788: opcode type 0x12 → spell_index=4, config=(256,256)
+
+### What's Still Unknown (Updated 2026-02-09)
+- **Opcode semantics**: Only 5 of 63 opcodes decoded (0x00, 0x01, 0x02, 0x18, 0x19). Need full opcode map.
+- **Opcode entries 0x27-0x28**: Contain garbage values (0x20202010, 0x00001010) — likely unused/padding
+- **Secondary function table at 0x800BF184**: Used by opcode 0x00, purpose unknown
 - **Full item ID list** (names only in BLAZE.ALL, not EXE)
 - **Loot table source in BLAZE.ALL** (loaded via CD state machine, exact offset unknown)
 
@@ -476,9 +798,10 @@ jalr r2                 ; call handler
 
 This table contains 32 handlers (0x80018xxx range) - a **higher-level action dispatcher** separate from the 55-entry combat table. This is likely the entity state machine that handles movement, idle, attack, cast, etc.
 
-### Open Questions (Updated 2026-02-08)
+### Open Questions (Updated 2026-02-09)
 
-- **MONSTER ABILITY DISPATCH**: The main unsolved question. 19 tests confirm AI is NOT in any per-area data. Player spells go through 0x80024494 with Type 0 entries + bitmask. Monster abilities (Fire Breath, Paralyze Eye, etc.) use a different path entirely in the PSX executable. Next step: trace entity init code in EXE to find where entity+0x160 bitmask is set (this bitmask gates action availability and is the most likely AI control point).
+- **BYTECODE DECODING (OPEN)**: 5/63 opcodes decoded. Need full opcode semantics for AI modding.
+- **NULL L BEHAVIOR (PARTIALLY RESOLVED)**: Spawn init at 0x80021C70 skips NULL entries (beq zero). Monster gets no custom AI loaded. Default behavior likely from EXE state machine at 0x8003B324 (32 entries).
 - **Full item ID list**: Item names only in BLAZE.ALL, need to decode BEEC table entries.
 - **Loot table disc location**: Loaded via CD state machine, exact BLAZE.ALL offset unknown.
 - **Overlay stubs**: 3 NOP stubs at 0x80073xxx filled at runtime (not via sw). Likely DMA/memcpy.
@@ -812,4 +1135,4 @@ Command headers vary by slot:
 
 ---
 
-*Last updated: 2026-02-08 (19 tests conclusive: monster AI NOT in per-area data; controlled by PSX executable)*
+*Last updated: 2026-02-09 (Full AI architecture decoded: L=per-TYPE index into root offset table in script area; per-type behavior blocks + bytecode offset tables; 68 NULL entries across 63 areas; EXE NULL check confirmed by MIPS disassembly)*

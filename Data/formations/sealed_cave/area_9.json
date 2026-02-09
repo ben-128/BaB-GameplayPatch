@@ -1399,5 +1399,116 @@
     "Undead-Knight": "0x068C",
     "Mummy": "0x0958",
     "Revenant": "0x0000"
-  }
+  },
+  "assignment_entries": [
+    {
+      "slot": 0,
+      "L": 8,
+      "R": 4,
+      "offset": "0x1DF51AC"
+    },
+    {
+      "slot": 1,
+      "L": 10,
+      "R": 5,
+      "offset": "0x1DF51B4"
+    },
+    {
+      "slot": 2,
+      "L": 9,
+      "R": 6,
+      "offset": "0x1DF51BC"
+    },
+    {
+      "slot": 3,
+      "L": 11,
+      "R": 7,
+      "offset": "0x1DF51C4"
+    },
+    {
+      "slot": 4,
+      "L": 5,
+      "R": 8,
+      "offset": "0x1DF51CC"
+    },
+    {
+      "slot": 5,
+      "L": 10,
+      "R": 5,
+      "offset": "0x1DF51D4"
+    },
+    {
+      "slot": 6,
+      "L": 10,
+      "R": 5,
+      "offset": "0x1DF51DC"
+    }
+  ],
+  "animation_table": [
+    {
+      "bytes": "0000000000000000",
+      "offset": "0x1DF510C"
+    },
+    {
+      "bytes": "0102010202010201",
+      "offset": "0x1DF5114"
+    },
+    {
+      "bytes": "0304040303040403",
+      "offset": "0x1DF511C"
+    },
+    {
+      "bytes": "0505050500000000",
+      "offset": "0x1DF5124"
+    },
+    {
+      "bytes": "060708090a0a0b0b",
+      "offset": "0x1DF512C"
+    },
+    {
+      "bytes": "0c0d0e0f0f101011",
+      "offset": "0x1DF5134"
+    },
+    {
+      "bytes": "1213141516161616",
+      "offset": "0x1DF513C"
+    }
+  ],
+  "records_8byte": [
+    {
+      "anim_offset": "0xF0E0D0C",
+      "texture_ref": "0x1110100F",
+      "offset": "0x1DF5134"
+    },
+    {
+      "anim_offset": "0x15141312",
+      "texture_ref": "0x16161616",
+      "offset": "0x1DF513C"
+    },
+    {
+      "anim_offset": "0x7180717",
+      "texture_ref": "0x191A1A19",
+      "offset": "0x1DF5144"
+    },
+    {
+      "anim_offset": "0x1C1C1B1B",
+      "texture_ref": "0x1C1C1C1C",
+      "offset": "0x1DF514C"
+    },
+    {
+      "anim_offset": "0xF0E0D1D",
+      "texture_ref": "0x1110100F",
+      "offset": "0x1DF5154"
+    },
+    {
+      "anim_offset": "0xF0E0D1E",
+      "texture_ref": "0x1110100F",
+      "offset": "0x1DF515C"
+    },
+    {
+      "anim_offset": "0x000C",
+      "texture_ref": "0x00050000",
+      "offset": "0x1DF5164"
+    }
+  ]
 }

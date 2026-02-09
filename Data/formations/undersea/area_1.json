@@ -140,5 +140,86 @@
   ],
   "monster_vram_ref": {
     "Black-Lizard": "0x0420"
-  }
+  },
+  "assignment_entries": [
+    {
+      "slot": 0,
+      "L": 0,
+      "R": 0,
+      "offset": "0x269B17C"
+    },
+    {
+      "slot": 1,
+      "L": 1,
+      "R": 1,
+      "offset": "0x269B184"
+    },
+    {
+      "slot": 2,
+      "L": 2,
+      "R": 2,
+      "offset": "0x269B18C"
+    },
+    {
+      "slot": 3,
+      "L": 3,
+      "R": 3,
+      "offset": "0x269B194"
+    },
+    {
+      "slot": 4,
+      "L": 4,
+      "R": 4,
+      "offset": "0x269B19C"
+    }
+  ],
+  "animation_table": [
+    {
+      "bytes": "0001020304050505",
+      "offset": "0x269B10C"
+    },
+    {
+      "bytes": "060607070708090a",
+      "offset": "0x269B114"
+    },
+    {
+      "bytes": "0b0c0d0e0e0f1011",
+      "offset": "0x269B11C"
+    },
+    {
+      "bytes": "0b0c0d0e0e0b0b0b",
+      "offset": "0x269B124"
+    },
+    {
+      "bytes": "0b0b0b0b0b0b0b0b",
+      "offset": "0x269B12C"
+    }
+  ],
+  "records_8byte": [
+    {
+      "anim_offset": "0x000C",
+      "texture_ref": "0x00060000",
+      "offset": "0x269B134"
+    },
+    {
+      "anim_offset": "0x0014",
+      "texture_ref": "0x00074000",
+      "offset": "0x269B13C"
+    },
+    {
+      "anim_offset": "0x001C",
+      "texture_ref": "0x00088000",
+      "offset": "0x269B144"
+    },
+    {
+      "anim_offset": "0x0024",
+      "texture_ref": "0x0009C000",
+      "offset": "0x269B14C"
+    },
+    {
+      "anim_offset": "0x002C",
+      "texture_ref": "0x000A0000",
+      "offset": "0x269B154"
+    }
+  ]
 }
