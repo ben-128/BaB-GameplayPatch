@@ -22,7 +22,16 @@ SCRIPT_DIR = Path(__file__).parent
 CONFIG_FILE = SCRIPT_DIR / "monster_spells_config.json"
 BLAZE_ALL = SCRIPT_DIR.parent.parent / "output" / "BLAZE.ALL"
 
-SPELL_TABLE_OFFSET = 0x9E8D8E
+# There are 6 identical copies of the spell table in BLAZE.ALL.
+# All must be patched, as the game may load any of them depending on context.
+SPELL_TABLE_OFFSETS = [
+    0x009E8D8E,  # Copy 1 (originally identified)
+    0x00A1755E,  # Copy 2
+    0x00A3555E,  # Copy 3
+    0x00A5155E,  # Copy 4
+    0x00A7BD66,  # Copy 5
+    0x00A9B55E,  # Copy 6
+]
 ENTRY_SIZE = 16
 NUM_ENTRIES = 16
 
@@ -62,34 +71,37 @@ def main():
         source_idx = override.get("copy_from")
         custom_bytes = override.get("bytes")
 
-        target_off = SPELL_TABLE_OFFSET + target_idx * ENTRY_SIZE
-
         if source_idx is not None:
-            # Copy from another entry
             if source_idx < 0 or source_idx >= NUM_ENTRIES:
                 print(f"  [ERROR] Source index {source_idx} out of range")
                 sys.exit(1)
-            source_off = SPELL_TABLE_OFFSET + source_idx * ENTRY_SIZE
-            source_data = data[source_off:source_off + ENTRY_SIZE]
-            old_data = data[target_off:target_off + ENTRY_SIZE]
-            data[target_off:target_off + ENTRY_SIZE] = source_data
-            print(f"  [PATCH] Entry #{target_idx}: copied from entry #{source_idx}")
-            print(f"    Old: {old_data.hex(' ')}")
-            print(f"    New: {source_data.hex(' ')}")
-            patched += 1
+            # Read source from first copy (clean reference)
+            source_off = SPELL_TABLE_OFFSETS[0] + source_idx * ENTRY_SIZE
+            new_data = bytes(data[source_off:source_off + ENTRY_SIZE])
+            desc = f"copied from entry #{source_idx}"
 
         elif custom_bytes is not None:
-            # Write custom bytes
             new_data = bytes.fromhex(custom_bytes.replace(" ", ""))
             if len(new_data) != ENTRY_SIZE:
                 print(f"  [ERROR] Entry #{target_idx}: expected {ENTRY_SIZE} bytes, got {len(new_data)}")
                 sys.exit(1)
-            old_data = data[target_off:target_off + ENTRY_SIZE]
+            desc = "custom bytes"
+
+        else:
+            continue
+
+        # Patch ALL 6 copies of the spell table
+        old_data = data[SPELL_TABLE_OFFSETS[0] + target_idx * ENTRY_SIZE:
+                        SPELL_TABLE_OFFSETS[0] + target_idx * ENTRY_SIZE + ENTRY_SIZE]
+        print(f"  [PATCH] Entry #{target_idx}: {desc} (x{len(SPELL_TABLE_OFFSETS)} copies)")
+        print(f"    Old: {old_data.hex(' ')}")
+        print(f"    New: {new_data.hex(' ')}")
+
+        for table_off in SPELL_TABLE_OFFSETS:
+            target_off = table_off + target_idx * ENTRY_SIZE
             data[target_off:target_off + ENTRY_SIZE] = new_data
-            print(f"  [PATCH] Entry #{target_idx}: custom bytes")
-            print(f"    Old: {old_data.hex(' ')}")
-            print(f"    New: {new_data.hex(' ')}")
-            patched += 1
+
+        patched += 1
 
     if patched > 0:
         BLAZE_ALL.write_bytes(data)
