@@ -4,10 +4,60 @@
 Modifier la duree avant disparition des coffres laches par les monstres.
 Duree originale : 20 secondes (1000 frames @ 50fps PAL).
 
-## Statut : v4 - ALL REGISTERS OVERLAY PATCH
+## Statut : v5 - COMPREHENSIVE DECREMENT DETECTION (2026-02-09)
+
+**PROBLEME RESOLU** : v4 ne trouvait que 35 patterns sur 68 au total.
+
+### Pourquoi v4 echouait
+
+v4 cherchait seulement le pattern exact:
+```
+lhu $v0, 0x14(base)
+nop
+addiu $v0, $v0, -1      <- SEULEMENT cette variante specifique
+sh $v0, 0x14(base)
+```
+
+Mais le code overlay utilise BEAUCOUP de variantes:
+- `addiu $v0, $v1, -1`   (decrement depuis $v1 au lieu de $v0)
+- `addiu $v0, $a2, -1`   (decrement depuis $a2)
+- `addiu $a3, $zero, -1` (load -1 dans $a3)
+- `addiu $s0, $zero, -1` (load -1 dans $s0)
+- etc. (au moins 15 combinaisons differentes de registres)
+
+v4 ne matchait que `addiu $v0, $v0, -1`, donc **33 patterns sur 68 etaient ignores**.
+
+### Solution v5 : detection generique
+
+Au lieu de chercher un pattern exact, v5 trouve TOUS les patterns:
+```
+addiu <any_reg>, <any_reg>, -1
+... (0-1 instructions)
+sh <any_reg>, 0x14(<any_base>)
+```
+
+**68 patterns trouves et patches** (vs 35 dans v4).
+
+Patch applique au step 7 du build (patche output/BLAZE.ALL avant injection BIN).
+
+Script: `patch_loot_timer_v5.py`
+
+### Prochaine etape : timer configurable
+
+Actuellement v5 NOP tous les decrements (timer infini, coffres permanents).
+Pour implementer un timer configurable (ex: 60s au lieu de 20s), il faudra:
+1. Trouver ou le timer entity+0x14 est INITIALISE (probablement lors de la transition state 1->2)
+2. Modifier la valeur initiale (ex: 3000 frames au lieu de 1000 pour 60s)
+
+---
+
+## Statut PRECEDENT : v4 - ALL REGISTERS OVERLAY PATCH (INCOMPLET)
 
 Le vrai code de despawn est dans le **dungeon overlay** charge depuis BLAZE.ALL,
 PAS dans le SLES executable. Les patches SLES (v1/v2) etaient inefficaces.
+
+NOTE: v4 trouvait 35 patterns mais en manquait 33, donc les coffres continuaient
+de despawn a 20s. Voir v5 ci-dessus pour la vraie solution.
 
 ---
 

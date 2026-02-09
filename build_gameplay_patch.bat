@@ -6,7 +6,7 @@ REM chcp 65001 >NUL
 REM ========================================================================
 REM Optional patches (set to 1 to enable)
 REM ========================================================================
-set PATCH_LOOT_TIMER=0
+set PATCH_LOOT_TIMER=1
 
 REM ========================================================================
 REM Initialize logging
@@ -226,6 +226,23 @@ if errorlevel 1 (
 
 call :log ""
 call :log "[OK] Spell table entries processed"
+call :log ""
+
+REM ========================================================================
+REM Step 7c: Patch AI behavior blocks in BLAZE.ALL
+REM ========================================================================
+call :log "[7c/10] Patching AI behavior blocks in BLAZE.ALL..."
+call :log ""
+
+py -3 Data\ai_behavior\patch_ai_behavior.py >> "%LOGFILE%" 2>&1
+if errorlevel 1 (
+    call :log ""
+    call :log "[ERROR] AI behavior patch failed!"
+    goto :error
+)
+
+call :log ""
+call :log "[OK] AI behavior blocks processed"
 call :log ""
 
 REM ========================================================================
