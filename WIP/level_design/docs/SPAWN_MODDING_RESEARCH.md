@@ -172,20 +172,27 @@ All tests performed on **Cavern of Death, Floor 1, Area 1** (3 monsters: Goblin,
 
 ### What does NOT control AI/behavior
 
-| Test | What was swapped | AI result |
-|------|-----------------|-----------|
-| L swap (local) | L value only | AI stays on slot |
-| L + anim swap | L + anim table | AI stays on slot |
-| R swap (Goblin <-> Bat) | R value only | No change |
-| R = same for all | All R set to same value | No change |
-| 96-byte entry swap | Full name + stats | AI stays on slot (only name/stats change) |
-| Type-7 idx swap | idx byte only | No change |
-| Spawn cmd slot bytes | uint16 after FFFFFFFFFFFF (blocks 5-15) | No change |
-| Spawn cmd XX prefix | XX in [XX 0B YY 00] (blocks 5-15) | No change |
-| Spawn cmd YY prefix | YY in [XX 0B YY 00] (blocks 5-15) | No change |
-| Deep region slot markers | [XX FF 00 00] in script+0x900 to +0x1DC0 | **Dark entities appear**, AI unchanged |
-| Deep region cmd headers | 4-byte headers before slot markers | **More dark entities**, AI unchanged |
-| Global monster table search | Searched all BLAZE.ALL for monster names | No separate AI table found |
+| # | Test | What was swapped | AI result |
+|---|------|-----------------|-----------|
+| 1 | L swap (local) | L value only | AI stays on slot |
+| 2 | L + anim swap | L + anim table | AI stays on slot |
+| 3 | R swap (Goblin <-> Bat) | R value only | No change |
+| 4 | R = same for all | All R set to same value | No change |
+| 5 | 96-byte entry swap | Full name + stats | AI stays on slot (only name/stats change) |
+| 6 | Type-7 idx swap | idx byte only | No change |
+| 7 | Spawn cmd slot bytes | uint16 after FFFFFFFFFFFF (blocks 5-15) | No change |
+| 8 | Spawn cmd XX prefix | XX in [XX 0B YY 00] (blocks 5-15) | No change |
+| 9 | Spawn cmd YY prefix | YY in [XX 0B YY 00] (blocks 5-15) | No change |
+| 10 | Deep region slot markers | [XX FF 00 00] in script+0x900 to +0x1DC0 | **Dark entities appear**, AI unchanged |
+| 11 | Deep region cmd headers | 4-byte headers before slot markers | **More dark entities**, AI unchanged |
+| 12 | Global monster table search | Searched all BLAZE.ALL for monster names | No separate AI table found |
+| 13 | Type-8 offset swap | Type-8 entry 1 <-> entry 2 | No change |
+| 14 | Type-8 target 1 zeroed | 256 bytes at script+0x1DC0 | No change |
+| 15 | Type-8 ALL bytecode zeroed | 5.8KB from script+0x1DC0 to end | **CRASH** (room scripts, not AI) |
+| 16 | Overlay config blocks | 33 blocks analyzed across BLAZE.ALL | 3D model data (polygon records) |
+| 17 | creature_type field | entity+0x2B5 checked in RAM dump | Always 0 (never written by any code) |
+| 18 | Player spell dispatch | 0x80024494 fully decoded | Player spells only, not monster AI |
+| **19** | **96-byte FULL swap (post-build)** | **All 96 bytes Goblin<->Bat via test_ai_swap.py** | **NO AI CHANGE** (confirmed in-game 2026-02-08) |
 
 **Pipeline verified:** L+anim swap (known visual change) confirmed patching works correctly.
 
@@ -242,22 +249,26 @@ The AI/behavior/spell controller has **not been found**. All per-monster structu
 
 ---
 
-## Final Conclusion: AI is in the DUNGEON OVERLAY, not area data
+## Final Conclusion: AI is in the PSX EXECUTABLE, not area data or overlay config
 
-After **18 tests** covering every identified per-area data structure, the AI/behavior/spell system has **not been found in area data**. Further executable analysis (2026-02-08) revealed the AI config is in the **dungeon overlay** loaded separately from area data.
+After **19 tests** covering every identified per-area data structure (including a full 96-byte stat entry swap confirmed in-game 2026-02-08), the AI/behavior/spell system has **not been found in any per-area data or overlay config data**.
 
 ### Evidence
-1. **18 swap/zero tests** on all per-area fields - AI never changes
-2. **AI is strictly positional** - always follows slot index, regardless of all data changes
+1. **19 swap/zero tests** on all per-area fields - AI never changes
+2. **AI is strictly positional** - always follows slot index, regardless of ALL data changes
 3. **No global AI table** in BLAZE.ALL - monster names only appear in per-area 96-byte entries
-4. **Room bytecode (type-8)** confirmed as room scripts (elevator/doors), not AI - zeroing crashes room loading but 256-byte partial zero has no AI effect
+4. **Room bytecode (type-8)** confirmed as room scripts (elevator/doors), not AI
 5. **Every per-area structure now mapped** and tested: assignment entries, animation tables, 8-byte records, 96-byte stats, type-7 entries, spawn commands, deep entity region, type-8 bytecode
+6. **Overlay config blocks** (33 blocks scanned in BLAZE.ALL) are 3D polygon/model data, NOT AI
+7. **creature_type = 0 for ALL entities** (never written by any code), dispatch only handles player spells
+8. **Test 19 (2026-02-08):** Full 96-byte stat swap Goblin<->Bat (post-build, re-injected into BIN, confirmed in-game) -- AI/behavior unchanged. Stats and name changed, but Goblin still fights like Goblin and Bat like Bat.
 
 ### What this means for modding
 - **Can change via area data:** 3D models (L+anim), texture variants (type-7 offset), stats/name (96-byte entries), formations (formation templates)
 - **Can change via BLAZE.ALL overlay:** 48-byte player spell entries (names, elements, probabilities, tier gating)
 - **Can change via EXE:** 55 handler function pointers at 0x8003C1B0, 5-byte tier table at 0x8003C020, damage formula
-- **Cannot change yet:** Monster special ability assignment (dispatch mechanism unknown)
+- **Cannot change via area data:** Monster AI/behavior/ability assignment (NOT in any per-area structure)
+- **Monster AI is determined by the PSX executable** based on entity slot position or an index derived during entity initialization -- the mapping from "slot in area" to "AI behavior profile" lives in EXE code, not in data we can easily swap
 - Stat fields are DUAL PURPOSE: they are combat stats AND loot table indices (same values)
 - creature_type = 0 for ALL entities (never written by any code)
 
@@ -351,10 +362,11 @@ This is PSX GPU polygon data — mesh geometry, animation frames, hitbox vertice
 - Slight alignment drift at large offsets (~2047.2 effective bytes/sector vs 2048)
 
 ### What's Still Unknown (CRITICAL)
-- **Monster ability dispatch mechanism**: How does the game decide that a Goblin does physical attacks while a Dragon casts Fire Breath? The player spell dispatch (0x80024494) does NOT handle this. A separate mechanism exists, possibly:
-  - Bitmask at entity+0x160 enabling different entries per entity
-  - A second dispatch function not yet found (overlay code?)
-  - The 96-byte stat fields +0x2A/+0x2D (Goblin=6/3, Bat=0/4) encoding ability indices
+- **Monster ability dispatch mechanism**: How does the game decide that a Goblin does physical attacks while a Dragon casts Fire Breath? NOT controlled by: per-area data (19 tests), overlay config blocks (3D model data), creature_type (always 0), player spell dispatch (0x80024494). Remaining possibilities:
+  - **Bitmask at entity+0x160** set by EXE code during entity init (not from area data)
+  - **Entity init function** in EXE reads the L assignment or slot index and sets behavior profile
+  - **Hardcoded slot-to-AI mapping** in EXE (each area's slot positions have fixed AI)
+  - stat+0x2A/+0x2D were candidates but are level-scaled (unreliable), AND test 19 swapped them with no effect
 - **Full item ID list** (names only in BLAZE.ALL, not EXE)
 - **Loot table source in BLAZE.ALL** (loaded via CD state machine, exact offset unknown)
 
@@ -466,11 +478,7 @@ This table contains 32 handlers (0x80018xxx range) - a **higher-level action dis
 
 ### Open Questions (Updated 2026-02-08)
 
-- **MONSTER ABILITY DISPATCH**: The main unsolved question. Player spells go through 0x80024494 with Type 0 entries + bitmask. Monster abilities (Fire Breath, Paralyze Eye, etc.) use a different path. Candidates:
-  - Entity bitmask at +0x160 might enable entries from Types 6-7 for monsters
-  - A second dispatch function in overlay code
-  - 96-byte stat fields +0x2A/+0x2D as ability selectors
-  - The bytecode interpreter (0x80017B6C) may trigger monster actions via opcodes
+- **MONSTER ABILITY DISPATCH**: The main unsolved question. 19 tests confirm AI is NOT in any per-area data. Player spells go through 0x80024494 with Type 0 entries + bitmask. Monster abilities (Fire Breath, Paralyze Eye, etc.) use a different path entirely in the PSX executable. Next step: trace entity init code in EXE to find where entity+0x160 bitmask is set (this bitmask gates action availability and is the most likely AI control point).
 - **Full item ID list**: Item names only in BLAZE.ALL, need to decode BEEC table entries.
 - **Loot table disc location**: Loaded via CD state machine, exact BLAZE.ALL offset unknown.
 - **Overlay stubs**: 3 NOP stubs at 0x80073xxx filled at runtime (not via sw). Likely DMA/memcpy.
@@ -742,6 +750,7 @@ Tables loaded from BLAZE.ALL by parser at 0x80038544:
 | `test_type8_offset_swap.py` | Type-8 entry offset swap (0x1DC0 ↔ 0x1FC4) | No effect |
 | `test_type8_zero.py` | Zero 256 bytes at type-8 target 1 | No effect |
 | `test_type8_zero_all.py` | Zero ALL bytecode from script+0x1DC0 to end (~5.8KB) | **Crash** (room scripts broken) |
+| `test_ai_swap.py 1` | Full 96-byte stat swap Goblin<->Bat (post-build + BIN re-inject) | **NO AI CHANGE** (confirmed in-game) |
 
 ### Analysis Scripts Index
 
@@ -803,4 +812,4 @@ Command headers vary by slot:
 
 ---
 
-*Last updated: 2026-02-08 (player spell dispatch decoded; monster ability dispatch still unknown)*
+*Last updated: 2026-02-08 (19 tests conclusive: monster AI NOT in per-area data; controlled by PSX executable)*
