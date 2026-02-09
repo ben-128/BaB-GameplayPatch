@@ -4,6 +4,11 @@ cd /d "%~dp0"
 REM chcp 65001 >NUL
 
 REM ========================================================================
+REM Optional patches (set to 1 to enable)
+REM ========================================================================
+set PATCH_LOOT_TIMER=0
+
+REM ========================================================================
 REM Initialize logging
 REM ========================================================================
 
@@ -36,7 +41,7 @@ echo   3. Patcher les descriptions d'items dans BLAZE.ALL
 echo   4. Patcher les prix d'enchere - base a 0 - dans BLAZE.ALL
 echo   5. Patcher les stats des monstres dans BLAZE.ALL
 echo   6. Patcher les spawns de monstres dans BLAZE.ALL
-echo   7. Patcher le timer de disparition des coffres dans BLAZE.ALL
+echo   7. Patcher le timer de disparition des coffres dans BLAZE.ALL (optionnel, desactive)
 echo   8. Creer le BIN patche a partir du BIN clean original
 echo   9. Injecter BLAZE.ALL dans le BIN (2 emplacements)
 echo  10. Mettre a jour la documentation
@@ -185,10 +190,26 @@ call :log "[OK] Formation templates patched in BLAZE.ALL"
 call :log ""
 
 REM ========================================================================
-REM Step 7: (Loot timer - moved to step 9b, patches BIN not BLAZE.ALL)
+REM Step 7: Patch chest despawn timer in BLAZE.ALL overlay code (OPTIONAL)
 REM ========================================================================
-call :log "[7/10] Loot timer: will patch SLES in BIN at step 9b"
-call :log ""
+if "%PATCH_LOOT_TIMER%"=="1" (
+    call :log "[7/10] Patching chest despawn timer in overlay code..."
+    call :log ""
+
+    py -3 Data\LootTimer\patch_loot_timer.py >> "%LOGFILE%" 2>&1
+    if errorlevel 1 (
+        call :log ""
+        call :log "[ERROR] Loot timer overlay patch failed!"
+        goto :error
+    )
+
+    call :log ""
+    call :log "[OK] Chest despawn timer patched in overlay code"
+    call :log ""
+) else (
+    call :log "[7/10] Chest despawn timer patch SKIPPED (set PATCH_LOOT_TIMER=1 to enable)"
+    call :log ""
+)
 
 REM ========================================================================
 REM Step 8: Create fresh patched BIN from clean original
@@ -234,20 +255,13 @@ call :log "[OK] BLAZE.ALL injected into BIN"
 call :log ""
 
 REM ========================================================================
-REM Step 9b: Patch chest despawn timer in SLES (within BIN)
+REM Step 9b: (Loot timer now patches BLAZE.ALL at step 7)
 REM ========================================================================
-call :log "[9b/10] Patching chest despawn timer in SLES executable..."
-call :log ""
-
-py -3 Data\LootTimer\patch_loot_timer.py >> "%LOGFILE%" 2>&1
-if errorlevel 1 (
-    call :log ""
-    call :log "[ERROR] Loot timer patch failed!"
-    goto :error
+if "%PATCH_LOOT_TIMER%"=="1" (
+    call :log "[9b/10] Loot timer: already patched in BLAZE.ALL at step 7"
+) else (
+    call :log "[9b/10] Loot timer: skipped"
 )
-
-call :log ""
-call :log "[OK] Chest despawn timer patched (chests no longer despawn)"
 call :log ""
 
 REM ========================================================================
