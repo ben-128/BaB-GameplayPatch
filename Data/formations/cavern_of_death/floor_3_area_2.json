@@ -208,5 +208,50 @@
       "suffix": "00000000",
       "offset": "0xF887B4"
     }
-  ]
+  ],
+  "slot_types": [
+    "00000000",
+    "00000000",
+    "00000000",
+    "00000000",
+    "00000000"
+  ],
+  "type07_entries": [
+    {
+      "vram_offset": "0x2AF9",
+      "idx": 43,
+      "offset": "0xF8817C"
+    },
+    {
+      "vram_offset": "0x03D8",
+      "idx": 19,
+      "offset": "0xF87CF4"
+    },
+    {
+      "vram_offset": "0x03E0",
+      "idx": 20,
+      "offset": "0xF87CFC"
+    },
+    {
+      "vram_offset": "0x03E8",
+      "idx": 21,
+      "offset": "0xF87D04"
+    },
+    null
+  ],
+  "available_monsters": [
+    "Big-Viper",
+    "Cave-Bear",
+    "Dragon-Puppy",
+    "Giant-Bat",
+    "Giant-Centipede",
+    "Giant-Scorpion",
+    "Giant-Spider"
+  ],
+  "monster_vram_ref": {
+    "Giant-Scorpion": "0x2AF9",
+    "Giant-Centipede": "0x03D8",
+    "Dragon-Puppy": "0x03E0",
+    "Giant-Spider": "0x03E8"
+  }
 }

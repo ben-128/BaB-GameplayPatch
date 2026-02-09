@@ -321,5 +321,30 @@
       "suffix": "00000000",
       "offset": "0x2415238"
     }
-  ]
+  ],
+  "slot_types": [
+    "00000000",
+    "00000000",
+    "00000000"
+  ],
+  "type07_entries": [
+    {
+      "vram_offset": "0x03A0",
+      "idx": 3,
+      "offset": "0x2414B5C"
+    },
+    null,
+    null
+  ],
+  "available_monsters": [
+    "Blood-Skeleton",
+    "Ghost",
+    "Harpy",
+    "Silver-Wolf",
+    "Weretiger",
+    "Werewolf"
+  ],
+  "monster_vram_ref": {
+    "Ghost": "0x03A0"
+  }
 }

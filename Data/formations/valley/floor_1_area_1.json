@@ -94,5 +94,37 @@
   "zone_spawns_area_bytes": 0,
   "original_total_zone_spawn_slots": 0,
   "zone_spawn_count": 0,
-  "zone_spawns": []
+  "zone_spawns": [],
+  "slot_types": [
+    "00000000",
+    "00000000",
+    "00000000"
+  ],
+  "type07_entries": [
+    {
+      "vram_offset": "0x0230",
+      "idx": 16,
+      "offset": "0x25D0BBC"
+    },
+    {
+      "vram_offset": "0x0238",
+      "idx": 17,
+      "offset": "0x25D0BC4"
+    },
+    {
+      "vram_offset": "0x0240",
+      "idx": 18,
+      "offset": "0x25D0BCC"
+    }
+  ],
+  "available_monsters": [
+    "Hippogriff",
+    "Snow-Bear",
+    "Winter-Wolf"
+  ],
+  "monster_vram_ref": {
+    "Snow-Bear": "0x0230",
+    "Winter-Wolf": "0x0238",
+    "Hippogriff": "0x0240"
+  }
 }

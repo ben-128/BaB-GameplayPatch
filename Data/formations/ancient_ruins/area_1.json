@@ -244,5 +244,29 @@
       "suffix": "00000000",
       "offset": "0x2515364"
     }
-  ]
+  ],
+  "slot_types": [
+    "00000000",
+    "00000000",
+    "00000000"
+  ],
+  "type07_entries": [
+    {
+      "vram_offset": "0x379C",
+      "idx": 73,
+      "offset": "0x251523C"
+    },
+    null,
+    null
+  ],
+  "available_monsters": [
+    "Chimera",
+    "Gargoyle",
+    "Metal-Ball",
+    "Metal-Slime",
+    "Wolf"
+  ],
+  "monster_vram_ref": {
+    "Gargoyle": "0x379C"
+  }
 }

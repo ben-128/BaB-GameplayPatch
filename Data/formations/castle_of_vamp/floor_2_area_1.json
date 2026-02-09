@@ -2331,5 +2331,33 @@
       "suffix": "00000000",
       "offset": "0x241163C"
     }
-  ]
+  ],
+  "slot_types": [
+    "00000000",
+    "00000000",
+    "00000000",
+    "00000000",
+    "00000000"
+  ],
+  "type07_entries": [
+    {
+      "vram_offset": "0x60F5",
+      "idx": 97,
+      "offset": "0x240E164"
+    },
+    null,
+    null,
+    null,
+    null
+  ],
+  "available_monsters": [
+    "Blood-Skeleton",
+    "Gargoyle",
+    "Ghost",
+    "Marble-Gargoyle",
+    "Zombie"
+  ],
+  "monster_vram_ref": {
+    "Zombie": "0x60F5"
+  }
 }

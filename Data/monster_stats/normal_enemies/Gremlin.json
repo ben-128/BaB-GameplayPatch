@@ -53,5 +53,12 @@
     "stat16_elem_divine_malefic": 4096,
     "_stat16_elem_divine_malefic_comment": "[Défaut: 4096] Dégâts élémentaires: Divin/Maléfique"
   },
-  "id": 66
+  "id": 66,
+  "floors": {
+    "Hall of Demons/Floor 1": {
+      "L": 4,
+      "R": 4,
+      "slot_type": "00000000"
+    }
+  }
 }

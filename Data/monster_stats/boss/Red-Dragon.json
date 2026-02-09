@@ -61,5 +61,11 @@
     "stat16_elem_divine_malefic": 0,
     "_stat16_elem_divine_malefic_comment": "[Défaut: 0] Dégâts élémentaires: Divin/Maléfique"
   },
-  "id": 16
+  "id": 16,
+  "floors": {
+    "Fire Mountain/Floor 1": {
+      "slot_type": "00000000",
+      "type07_vram": "0x02AC"
+    }
+  }
 }

@@ -397,5 +397,30 @@
       "suffix": "00000000",
       "offset": "0xF87574"
     }
-  ]
+  ],
+  "slot_types": [
+    "00000000",
+    "00000000",
+    "00000000",
+    "00000000"
+  ],
+  "type07_entries": [
+    null,
+    null,
+    null,
+    null
+  ],
+  "available_monsters": [
+    "Big-Viper",
+    "Cave-Bear",
+    "Dragon-Puppy",
+    "Giant-Bat",
+    "Giant-Centipede",
+    "Giant-Scorpion",
+    "Giant-Spider"
+  ],
+  "monster_vram_ref": {
+    "Giant-Scorpion": "0x2AF9",
+    "Giant-Spider": "0x03E8"
+  }
 }

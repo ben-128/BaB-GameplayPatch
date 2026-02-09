@@ -242,5 +242,33 @@
   "zone_spawns_area_bytes": 0,
   "original_total_zone_spawn_slots": 0,
   "zone_spawn_count": 0,
-  "zone_spawns": []
+  "zone_spawns": [],
+  "slot_types": [
+    "00000000",
+    "00000000"
+  ],
+  "type07_entries": [
+    null,
+    null
+  ],
+  "available_monsters": [
+    "Basirisk",
+    "Blood-Shadow",
+    "Carberos",
+    "Dark-Goblin",
+    "Death-Knight",
+    "Evil-Ball",
+    "Evil-Stalker",
+    "Goblin-Wizard",
+    "Gorgon",
+    "Gray-Arm",
+    "Gremlin",
+    "Hell-Harpy",
+    "Hell-Hound",
+    "Hell-Ogre",
+    "Salamander",
+    "Spirit-Ball",
+    "Succubus",
+    "Zombie-Dragon"
+  ]
 }

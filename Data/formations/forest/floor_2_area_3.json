@@ -825,5 +825,52 @@
       "suffix": "00000000",
       "offset": "0x14B20F0"
     }
-  ]
+  ],
+  "slot_types": [
+    "00000000",
+    "00000000",
+    "00000000",
+    "00000000"
+  ],
+  "type07_entries": [
+    {
+      "vram_offset": "0x07E8",
+      "idx": 16,
+      "offset": "0x14AFC14"
+    },
+    {
+      "vram_offset": "0x07F0",
+      "idx": 17,
+      "offset": "0x14AFC1C"
+    },
+    {
+      "vram_offset": "0x07F8",
+      "idx": 18,
+      "offset": "0x14AFC24"
+    },
+    {
+      "vram_offset": "0x0800",
+      "idx": 19,
+      "offset": "0x14AFC2C"
+    }
+  ],
+  "available_monsters": [
+    "Black-Lizard",
+    "Desert-Lizard",
+    "Giant",
+    "Killer-Bear",
+    "Killer-Bee",
+    "Lizard-Man",
+    "OwlBear",
+    "Poison-Flower",
+    "Trent",
+    "Will-O-The-Wisp",
+    "Wyrm"
+  ],
+  "monster_vram_ref": {
+    "Trent": "0x07E8",
+    "Black-Lizard": "0x07F0",
+    "Will-O-The-Wisp": "0x07F8",
+    "Poison-Flower": "0x0800"
+  }
 }

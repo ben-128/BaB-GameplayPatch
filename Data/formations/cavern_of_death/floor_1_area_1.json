@@ -1059,5 +1059,46 @@
       "suffix": "00000000",
       "offset": "0xF7C904"
     }
-  ]
+  ],
+  "slot_types": [
+    "00000000",
+    "00000000",
+    "00000000"
+  ],
+  "type07_entries": [
+    {
+      "vram_offset": "0x0580",
+      "idx": 16,
+      "offset": "0xF7ABE4"
+    },
+    {
+      "vram_offset": "0x0588",
+      "idx": 17,
+      "offset": "0xF7ABEC"
+    },
+    {
+      "vram_offset": "0x0590",
+      "idx": 18,
+      "offset": "0xF7ABF4"
+    }
+  ],
+  "available_monsters": [
+    "Giant-Bat",
+    "Goblin-Leader",
+    "Goblin-Shaman",
+    "Lv20.Goblin"
+  ],
+  "monster_overrides": [
+    null,
+    {
+      "elite": true,
+      "type07_vram": "0x0438"
+    },
+    null
+  ],
+  "monster_vram_ref": {
+    "Lv20.Goblin": "0x0580",
+    "Goblin-Shaman": "0x0588",
+    "Giant-Bat": "0x0590"
+  }
 }

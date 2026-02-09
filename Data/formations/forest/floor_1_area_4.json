@@ -611,5 +611,44 @@
       "suffix": "00000000",
       "offset": "0x14990F8"
     }
-  ]
+  ],
+  "slot_types": [
+    "00000000",
+    "00000000",
+    "00000000",
+    "00000000",
+    "00000000",
+    "00000000"
+  ],
+  "type07_entries": [
+    {
+      "vram_offset": "0x0708",
+      "idx": 3,
+      "offset": "0x1498508"
+    },
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "available_monsters": [
+    "Barricade",
+    "Giant-Ant",
+    "Giant-Beetle",
+    "Giant-Club",
+    "Giant-Snake",
+    "Goblin",
+    "Goblin-Shaman",
+    "Killer-Bear",
+    "Killer-Bee",
+    "Kobold",
+    "Lizard-Man",
+    "Lv6.Kobold",
+    "Wing-Fish"
+  ],
+  "monster_vram_ref": {
+    "Barricade": "0x0708",
+    "Lizard-Man": "0x4674"
+  }
 }

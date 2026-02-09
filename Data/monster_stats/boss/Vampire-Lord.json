@@ -57,5 +57,13 @@
     "stat16_elem_divine_malefic": 5120,
     "_stat16_elem_divine_malefic_comment": "[Défaut: 5120] Dégâts élémentaires: Divin/Maléfique"
   },
-  "id": 19
+  "id": 19,
+  "floors": {
+    "Castle of Vamp/Floor 5": {
+      "L": 14,
+      "R": 0,
+      "slot_type": "00000000",
+      "type07_vram": "0x0270"
+    }
+  }
 }

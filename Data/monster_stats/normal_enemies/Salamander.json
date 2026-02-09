@@ -57,5 +57,13 @@
     "stat16_elem_divine_malefic": 96,
     "_stat16_elem_divine_malefic_comment": "[Défaut: 96] Dégâts élémentaires: Divin/Maléfique"
   },
-  "id": 101
+  "id": 101,
+  "floors": {
+    "Fire Mountain/Floor 1": {
+      "slot_type": "00000000"
+    },
+    "Hall of Demons/Floor 1": {
+      "slot_type": "00000000"
+    }
+  }
 }

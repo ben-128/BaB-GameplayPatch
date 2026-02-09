@@ -53,5 +53,12 @@
     "stat16_elem_divine_malefic": 2560,
     "_stat16_elem_divine_malefic_comment": "[Défaut: 2560] Dégâts élémentaires: Divin/Maléfique"
   },
-  "id": 20
+  "id": 20,
+  "floors": {
+    "Castle of Vamp/Floor 3": {
+      "L": 7,
+      "R": 3,
+      "slot_type": "00000000"
+    }
+  }
 }

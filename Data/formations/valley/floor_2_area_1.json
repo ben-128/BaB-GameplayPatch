@@ -82,5 +82,29 @@
       "suffix": "00000000",
       "offset": "0x25D2D6C"
     }
-  ]
+  ],
+  "slot_types": [
+    "00000000",
+    "00000000"
+  ],
+  "type07_entries": [
+    {
+      "vram_offset": "0x00F8",
+      "idx": 16,
+      "offset": "0x25D2AE4"
+    },
+    {
+      "vram_offset": "0x0100",
+      "idx": 17,
+      "offset": "0x25D2AEC"
+    }
+  ],
+  "available_monsters": [
+    "Griffin",
+    "Hippogriff"
+  ],
+  "monster_vram_ref": {
+    "Hippogriff": "0x00F8",
+    "Griffin": "0x0100"
+  }
 }

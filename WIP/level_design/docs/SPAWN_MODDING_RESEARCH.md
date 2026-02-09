@@ -2,7 +2,7 @@
 
 Research on modifying monster spawn groups in **Blaze & Blade: Eternal Quest** (PSX).
 
-Status: **COMBAT SYSTEM FULLY DECODED** - AI, spells, and loot architecture mapped. See "Combat Action System" and "Loot System" sections.
+Status: **PLAYER SPELL SYSTEM DECODED** - Monster ability dispatch still unknown. See "Combat Action System" and "Loot System" sections.
 
 ---
 
@@ -106,7 +106,7 @@ Offset  Size  Description                              Runtime Use
 0x34-0x5F     stat[18]-stat[39] (unknown, mostly zero)
 ```
 
-**Note:** stat[2]-stat[9] ARE combat stats (HP, collider, etc. — confirmed by gameplay testing). The init at 0x80039358 ALSO copies these values to entity loot index fields (+0x68-+0x76). Dual purpose: same value serves as a combat stat AND a loot table index.
+**DUAL PURPOSE (confirmed by gameplay testing):** stat[2]-stat[9] ARE combat stats (HP, collider, etc.). Changing them changes gameplay. The init at 0x80039358 ALSO copies these values to entity loot index fields (+0x68-+0x76). Same numeric value serves as combat stat AND loot table index.
 
 ### 5. Type-07 Entries (Script Area)
 
@@ -203,8 +203,9 @@ All tests performed on **Cavern of Death, Floor 1, Area 1** (3 monsters: Goblin,
 | **Spawn cmd slots/XX/YY** (early region) | Nothing visible | YES (tested, no effect) |
 | **Deep region slot markers** [XX FF 00 00] | **Entity placement** (dark entities when wrong) | YES |
 | **Deep region cmd headers** | **Entity rendering** (dark entities when wrong) | YES |
-| **EXE 55 handlers + BLAZE.ALL 48-byte entries** | **AI behavior + spells** | YES (see Combat Action System) |
-| **BLAZE.ALL BEEC/BEF0 tables + 96-byte stat[2-9]** | **Loot drops (24 values/entity)** | YES (see Loot System) |
+| **EXE 55 handlers + BLAZE.ALL 48-byte entries** | **Player spells** (dispatch decoded) | YES (see Combat Action System) |
+| **??? UNKNOWN dispatch** | **Monster special abilities** (breaths, drains...) | NO — mechanism not found |
+| **BLAZE.ALL BEEC/BEF0 tables + 96-byte stats** | **Loot drops** (stat values = dual purpose) | PARTIAL (see Loot System) |
 
 ---
 
@@ -254,10 +255,11 @@ After **18 tests** covering every identified per-area data structure, the AI/beh
 
 ### What this means for modding
 - **Can change via area data:** 3D models (L+anim), texture variants (type-7 offset), stats/name (96-byte entries), formations (formation templates)
-- **Can change via BLAZE.ALL overlay:** 48-byte action entries (spell/ability assignments per creature), loot tables (item drops per creature)
-- **Can change via EXE:** 55 handler function pointers at 0x8003C1B0, 5-byte tier table at 0x8003C020 (action count per level range), damage formula
-- **Overlay config blocks** = 3D model/hitbox data (modifiable in BLAZE.ALL for visual changes)
-- **creature_type** = sequential per-area index, used to select action entry set + loot tables
+- **Can change via BLAZE.ALL overlay:** 48-byte player spell entries (names, elements, probabilities, tier gating)
+- **Can change via EXE:** 55 handler function pointers at 0x8003C1B0, 5-byte tier table at 0x8003C020, damage formula
+- **Cannot change yet:** Monster special ability assignment (dispatch mechanism unknown)
+- Stat fields are DUAL PURPOSE: they are combat stats AND loot table indices (same values)
+- creature_type = 0 for ALL entities (never written by any code)
 
 ---
 
@@ -348,10 +350,13 @@ This is PSX GPU polygon data — mesh geometry, animation frames, hitbox vertice
 - BLAZE.ALL starts at disc sector 0x27D5F
 - Slight alignment drift at large offsets (~2047.2 effective bytes/sector vs 2048)
 
-### What's Still Unknown
-- Exact mapping from creature_type byte to specific action handler index (within the 48-byte entries)
-- Full item ID list (names only in BLAZE.ALL, not EXE)
-- Whether the 28-byte on-disc loot records can be located by fixed BLAZE.ALL offset
+### What's Still Unknown (CRITICAL)
+- **Monster ability dispatch mechanism**: How does the game decide that a Goblin does physical attacks while a Dragon casts Fire Breath? The player spell dispatch (0x80024494) does NOT handle this. A separate mechanism exists, possibly:
+  - Bitmask at entity+0x160 enabling different entries per entity
+  - A second dispatch function not yet found (overlay code?)
+  - The 96-byte stat fields +0x2A/+0x2D (Goblin=6/3, Bat=0/4) encoding ability indices
+- **Full item ID list** (names only in BLAZE.ALL, not EXE)
+- **Loot table source in BLAZE.ALL** (loaded via CD state machine, exact offset unknown)
 
 ---
 
@@ -461,33 +466,49 @@ This table contains 32 handlers (0x80018xxx range) - a **higher-level action dis
 
 ### Open Questions (Updated 2026-02-08)
 
-- **Full item ID list**: Item names are only in BLAZE.ALL, not the EXE. Need to decode the BEEC table entries.
-- **28-byte loot records on disc**: Need to find their exact BLAZE.ALL offset (loaded via CD state machine).
-- **Overlay stub patching mechanism**: The 3 NOP stubs at 0x80073xxx are filled at runtime but not via sw instructions. Likely DMA/memcpy from overlay data.
+- **MONSTER ABILITY DISPATCH**: The main unsolved question. Player spells go through 0x80024494 with Type 0 entries + bitmask. Monster abilities (Fire Breath, Paralyze Eye, etc.) use a different path. Candidates:
+  - Entity bitmask at +0x160 might enable entries from Types 6-7 for monsters
+  - A second dispatch function in overlay code
+  - 96-byte stat fields +0x2A/+0x2D as ability selectors
+  - The bytecode interpreter (0x80017B6C) may trigger monster actions via opcodes
+- **Full item ID list**: Item names only in BLAZE.ALL, need to decode BEEC table entries.
+- **Loot table disc location**: Loaded via CD state machine, exact BLAZE.ALL offset unknown.
+- **Overlay stubs**: 3 NOP stubs at 0x80073xxx filled at runtime (not via sw). Likely DMA/memcpy.
 
 ---
 
-## Combat Action System (FULLY DECODED 2026-02-08)
+## Combat Action System (2026-02-08)
 
-### Architecture Overview
+### CRITICAL CORRECTION: This is the PLAYER SPELL system
+
+The dispatch at 0x80024494 is for **player spells**, NOT monster AI.
+- `creature_type` at entity+0x2B5 = **ALWAYS 0** for ALL entities (no code writes to it)
+- ALL entities share Type 0 = Mage spell catalog (28 entries)
+- **Bitmask** at entity+0x160 gates which actions each entity can use
+- Monster special abilities (Types 6-7) have tier=[0,0,0,0,0] = NEVER selected
+- **Monster ability dispatch uses a DIFFERENT mechanism** (still unknown)
+
+### Player Spell Dispatch Architecture
 
 ```
-creature_type (entity+0x2B5, sequential per-area index)
+creature_type = entity+0x2B5 (ALWAYS 0, never written)
       |
       v
-Global ptr *(0x8005490C) + 0x9C → per-type pointer array (loaded from BLAZE.ALL)
+Global ptr *(0x8005490C) + 0x9C → per-type pointer array (80 entries)
       |
       v
-ptr_array[creature_type] → base of 48-byte ACTION ENTRIES (in BLAZE.ALL overlay)
+ptr_array[0] → Type 0 = 28 Mage spells (Fire, Spark... Chaos Flare, Meteor Smash)
       |
       v
-5-byte TIER TABLE at 0x8003C020 → action_count for current player level tier
+5-byte TIER TABLE at 0x8003C020 → max entries for current level tier
       |
       v
-Loop 0..action_count-1, stride 48 bytes:
-  - entry+0x1D = probability threshold (random roll check)
-  - entry+0x06 = action_index, entry+0x07 = creature_type
-  - Selected action → 55-entry HANDLER TABLE at 0x8003C1B0 → jalr to handler code
+BITMASK at entity+0x160 → filters which actions this entity can use
+      |
+      v
+Loop 0..max-1, stride 48 bytes:
+  - Check bitmask, check probability at entry+0x1D
+  - Selected → handler via 55-entry table at 0x8003C1B0
 ```
 
 ### 5-Byte Tier Table (0x8003C020, 80 entries)
@@ -743,6 +764,10 @@ Tables loaded from BLAZE.ALL by parser at 0x80038544:
 | `find_all_config_blocks.py` | 33 config blocks found across BLAZE.ALL |
 | `raw_config_decode.py` | Config block = 3D model data (polygon records) |
 | `decode_cavern_config.py` | Cavern config block detail decode |
+| `extract_combat_data.py` | RAM savestate extraction + pointer array + spell catalog |
+| `find_monster_ctype.py` | Monster entity struct analysis (creature_type=0 finding) |
+| `find_monster_dispatch.py` | Search for monster ability dispatch (jalr, state machine) |
+| `dump_action_entries.py` | Full 48-byte entry dump with spell names |
 
 ### Key Offsets (Cavern F1 Area1)
 ```
@@ -778,4 +803,4 @@ Command headers vary by slot:
 
 ---
 
-*Last updated: 2026-02-08 (combat + loot system fully decoded)*
+*Last updated: 2026-02-08 (player spell dispatch decoded; monster ability dispatch still unknown)*

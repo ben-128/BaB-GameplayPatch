@@ -76,6 +76,24 @@ button:disabled { opacity: 0.4; cursor: default; }
 #status.err { display: block; background: #500020; color: #ff6b6b; }
 
 .empty { color: #606070; font-style: italic; padding: 20px; text-align: center; }
+
+/* Monster overrides */
+.overrides-section { margin-bottom: 16px; }
+.overrides-toggle { cursor: pointer; user-select: none; }
+.overrides-toggle:hover { color: #e94560; }
+.override-card { background: #16213e; border-radius: 8px; padding: 10px 14px; margin-bottom: 6px; }
+.override-card.active { border-left: 3px solid #e94560; }
+.override-header { display: flex; align-items: center; gap: 10px; }
+.override-header .slot-chip { padding: 3px 10px; border-radius: 10px; font-size: 0.85em; font-weight: 600; color: #000; }
+.override-header .slot-name { font-weight: 600; font-size: 0.9em; }
+.override-header .ov-toggle { margin-left: auto; cursor: pointer; font-size: 0.85em; color: #53a8b6; }
+.override-header .ov-toggle:hover { color: #e94560; }
+.override-body { margin-top: 8px; display: flex; flex-direction: column; gap: 6px; }
+.override-row { display: flex; align-items: center; gap: 8px; font-size: 0.85em; }
+.override-row label { min-width: 90px; color: #a0a0b0; font-weight: 600; }
+.override-row input, .override-row select { background: #0a0a1a; color: #e0e0e0; border: 1px solid #2a2a4e; padding: 4px 8px; border-radius: 4px; font-size: 0.9em; }
+.override-row input { width: 160px; }
+.override-row select { min-width: 160px; }
 </style>
 </head>
 <body>
@@ -102,6 +120,11 @@ button:disabled { opacity: 0.4; cursor: default; }
   <div class="title" id="areaTitle"></div>
   <div class="subtitle" id="areaSubtitle"></div>
   <div class="palette" id="palette"></div>
+</div>
+
+<div id="overridesSection" class="overrides-section" style="display:none">
+  <div class="section-title overrides-toggle" id="overridesToggle">Monster Overrides <span id="overridesArrow">&#9654;</span></div>
+  <div id="overridesBody" style="display:none"></div>
 </div>
 
 <div id="budgetBar" class="budget-bar" style="display:none">
@@ -154,7 +177,7 @@ const $ = id => document.getElementById(id);
 function slotColor(idx) { return SLOT_COLORS[idx % SLOT_COLORS.length]; }
 
 function pushUndo() {
-  undoStack.push(JSON.stringify({ formations, spawnPoints, zoneSpawns }));
+  undoStack.push(JSON.stringify({ formations, spawnPoints, zoneSpawns, monsterOverrides }));
   if (undoStack.length > 50) undoStack.shift();
 }
 
@@ -414,7 +437,9 @@ function undo() {
   formations = state.formations;
   spawnPoints = state.spawnPoints;
   zoneSpawns = state.zoneSpawns;
+  monsterOverrides = state.monsterOverrides || [];
   renderFormations();
+  renderOverrides();
   renderSpawnSection(spawnPoints, 'spawnSection', 'spawnCards');
   renderSpawnSection(zoneSpawns, 'zoneSection', 'zoneCards');
   showStatus('Undo', true);
@@ -520,11 +545,164 @@ function renderSpawnSection(groups, sectionId, containerId) {
   });
 }
 
+// --- Monster overrides (Elite system) ---
+
+let monsterOverrides = []; // per-slot: null or {elite: true, type07_vram: "0x..."}
+
+function initOverrides() {
+  const monsters = areaData.monsters || [];
+  const existing = areaData.monster_overrides || [];
+  monsterOverrides = [];
+  for (let i = 0; i < monsters.length; i++) {
+    monsterOverrides.push(existing[i] || null);
+  }
+}
+
+function getSlotVram(si) {
+  // Direct: type07_entries from this area's binary
+  const entries = areaData.type07_entries || [];
+  if (si < entries.length && entries[si]) return entries[si].vram_offset || '';
+  // Fallback: monster_vram_ref from monster_db (another area on same floor)
+  const ref = areaData.monster_vram_ref || {};
+  const monsters = areaData.monsters || [];
+  if (si < monsters.length && ref[monsters[si]]) return ref[monsters[si]];
+  return '';
+}
+
+function renderOverrides() {
+  const section = $('overridesSection');
+  const body = $('overridesBody');
+  if (!areaData || !areaData.monsters) {
+    section.style.display = 'none';
+    return;
+  }
+  section.style.display = 'block';
+  body.innerHTML = '';
+
+  const monsters = areaData.monsters;
+
+  for (let si = 0; si < monsters.length; si++) {
+    const ov = monsterOverrides[si];
+    const isElite = ov && ov.elite;
+
+    const card = document.createElement('div');
+    card.className = 'override-card' + (isElite ? ' active' : '');
+
+    const hdr = document.createElement('div');
+    hdr.className = 'override-header';
+
+    const chip = document.createElement('span');
+    chip.className = 'slot-chip';
+    chip.style.background = slotColor(si);
+    chip.textContent = si;
+
+    const name = document.createElement('span');
+    name.className = 'slot-name';
+    name.textContent = monsters[si];
+
+    // Elite checkbox
+    const eliteLbl = document.createElement('label');
+    eliteLbl.style.cssText = 'margin-left:auto;display:flex;align-items:center;gap:5px;cursor:pointer;font-size:0.85em;color:#e94560;font-weight:700;';
+    const eliteCb = document.createElement('input');
+    eliteCb.type = 'checkbox';
+    eliteCb.checked = isElite;
+    eliteCb.style.accentColor = '#e94560';
+    eliteCb.addEventListener('change', () => {
+      if (eliteCb.checked) {
+        monsterOverrides[si] = { elite: true, type07_vram: getSlotVram(si) };
+      } else {
+        monsterOverrides[si] = null;
+      }
+      renderOverrides();
+    });
+    eliteLbl.appendChild(eliteCb);
+    eliteLbl.appendChild(document.createTextNode('ELITE'));
+
+    hdr.appendChild(chip);
+    hdr.appendChild(name);
+    hdr.appendChild(eliteLbl);
+    card.appendChild(hdr);
+
+    // Elite details row
+    if (isElite) {
+      const details = document.createElement('div');
+      details.className = 'override-body';
+
+      // Stats summary
+      const statsInfo = document.createElement('div');
+      statsInfo.style.cssText = 'font-size:0.8em;color:#53a8b6;';
+      statsInfo.textContent = 'E-name, HP x2, Magic x2, Armor x2, Dmg x1.5, armor_type=boss';
+      details.appendChild(statsInfo);
+
+      // VRAM offset
+      const vramRow = document.createElement('div');
+      vramRow.className = 'override-row';
+      const vramLbl = document.createElement('label');
+      vramLbl.textContent = 'VRAM offset';
+      const vramInp = document.createElement('input');
+      vramInp.type = 'text';
+      vramInp.placeholder = getSlotVram(si) || '0x0000';
+      vramInp.value = ov.type07_vram || '';
+      vramInp.addEventListener('input', () => {
+        ov.type07_vram = vramInp.value || undefined;
+      });
+      vramRow.appendChild(vramLbl);
+      vramRow.appendChild(vramInp);
+      // Show original VRAM hint (from this area or reference from same floor)
+      const t07 = (areaData.type07_entries || [])[si];
+      const directVram = t07 ? (t07.vram_offset || '') : '';
+      const refVram = (areaData.monster_vram_ref || {})[monsters[si]] || '';
+      if (directVram) {
+        const origSpan = document.createElement('span');
+        origSpan.style.cssText = 'font-size:0.8em;color:#606070;';
+        origSpan.textContent = '(original: ' + directVram + ')';
+        vramRow.appendChild(origSpan);
+      } else if (refVram) {
+        const origSpan = document.createElement('span');
+        origSpan.style.cssText = 'font-size:0.8em;color:#505060;font-style:italic;';
+        origSpan.textContent = '(ref: ' + refVram + ')';
+        vramRow.appendChild(origSpan);
+      }
+      details.appendChild(vramRow);
+
+      card.appendChild(details);
+    }
+
+    body.appendChild(card);
+  }
+}
+
+// Toggle overrides section
+$('overridesToggle').addEventListener('click', () => {
+  const body = $('overridesBody');
+  const arrow = $('overridesArrow');
+  if (body.style.display === 'none') {
+    body.style.display = 'block';
+    arrow.innerHTML = '&#9660;';
+  } else {
+    body.style.display = 'none';
+    arrow.innerHTML = '&#9654;';
+  }
+});
+
 // --- Build output ---
 
 function buildOutputJSON() {
   const out = JSON.parse(JSON.stringify(areaData));
   const monsters = out.monsters;
+
+  // Monster overrides (Elite flags)
+  const hasAnyOverride = monsterOverrides.some(o => o !== null && o.elite);
+  if (hasAnyOverride) {
+    out.monster_overrides = monsterOverrides.map(o => {
+      if (!o || !o.elite) return null;
+      const clean = { elite: true };
+      if (o.type07_vram) clean.type07_vram = o.type07_vram;
+      return clean;
+    });
+  } else {
+    delete out.monster_overrides;
+  }
 
   // Rebuild formations
   out.formations = formations.map((f) => {
@@ -684,10 +862,14 @@ function loadArea(data, fileName) {
 
   undoStack = [];
 
+  // Init monster overrides
+  initOverrides();
+
   $('budgetBar').style.display = 'block';
   $('toolbarArea').style.display = 'flex';
 
   renderFormations();
+  renderOverrides();
   renderSpawnSection(spawnPoints, 'spawnSection', 'spawnCards');
   renderSpawnSection(zoneSpawns, 'zoneSection', 'zoneCards');
 }

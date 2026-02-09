@@ -53,5 +53,24 @@
     "stat16_elem_divine_malefic": 0,
     "_stat16_elem_divine_malefic_comment": "[Défaut: 0] Dégâts élémentaires: Divin/Maléfique"
   },
-  "id": 123
+  "id": 123,
+  "floors": {
+    "Castle of Vamp/Floor 1": {
+      "L": 2,
+      "R": 9,
+      "slot_type": "00000000",
+      "type07_vram": "0x0D80"
+    },
+    "Castle of Vamp/Floor 2": {
+      "L": 2,
+      "R": 5,
+      "slot_type": "00000000",
+      "type07_vram": "0x60F5"
+    },
+    "The Sealed Cave/Floor 1": {
+      "L": 1,
+      "R": 4,
+      "slot_type": "00000000"
+    }
+  }
 }

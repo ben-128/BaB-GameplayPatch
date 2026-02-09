@@ -53,5 +53,19 @@
     "stat16_elem_divine_malefic": 0,
     "_stat16_elem_divine_malefic_comment": "[Défaut: 0] Dégâts élémentaires: Divin/Maléfique"
   },
-  "id": 73
+  "id": 73,
+  "floors": {
+    "Valley of White Wind/Floor 1": {
+      "L": 2,
+      "R": 2,
+      "slot_type": "00000000",
+      "type07_vram": "0x0240"
+    },
+    "Valley of White Wind/Floor 2": {
+      "L": 2,
+      "R": 1,
+      "slot_type": "00000000",
+      "type07_vram": "0x00F8"
+    }
+  }
 }

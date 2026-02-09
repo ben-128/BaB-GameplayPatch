@@ -909,5 +909,45 @@
       "suffix": "00000000",
       "offset": "0xF8C498"
     }
-  ]
+  ],
+  "slot_types": [
+    "00000000",
+    "00000000",
+    "00000000",
+    "00000000"
+  ],
+  "type07_entries": [
+    {
+      "vram_offset": "0x0474",
+      "idx": 16,
+      "offset": "0xF8B400"
+    },
+    {
+      "vram_offset": "0x047C",
+      "idx": 17,
+      "offset": "0xF8B408"
+    },
+    {
+      "vram_offset": "0x0000",
+      "idx": 15,
+      "offset": "0xF8B93C"
+    },
+    {
+      "vram_offset": "0x048C",
+      "idx": 19,
+      "offset": "0xF8B418"
+    }
+  ],
+  "available_monsters": [
+    "Blue-Slime",
+    "Cave-Scissors",
+    "Killer-Fish",
+    "Spirit-Ball"
+  ],
+  "monster_vram_ref": {
+    "Cave-Scissors": "0x0474",
+    "Killer-Fish": "0x047C",
+    "Spirit-Ball": "0x0000",
+    "Blue-Slime": "0x048C"
+  }
 }

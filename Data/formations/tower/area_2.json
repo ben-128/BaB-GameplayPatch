@@ -1381,5 +1381,48 @@
       "suffix": "00000000",
       "offset": "0x1971170"
     }
-  ]
+  ],
+  "slot_types": [
+    "00000000",
+    "00000000",
+    "00000000",
+    "00000000"
+  ],
+  "type07_entries": [
+    {
+      "vram_offset": "0x3FFE",
+      "idx": 64,
+      "offset": "0x196E798"
+    },
+    null,
+    null,
+    null
+  ],
+  "available_monsters": [
+    "Arch-Magi",
+    "Black-Knight",
+    "Born-Golem",
+    "Crimson-Lizard",
+    "Dark-Elf",
+    "Dark-Magi",
+    "Dark-Wizard",
+    "Evil-Crystal",
+    "Gargoyle",
+    "Goblin-Fly",
+    "Goblin-Shaman",
+    "Green-Slime",
+    "Guard-Golem",
+    "Hard-Born",
+    "Living-Armor",
+    "Living-Sword",
+    "Lizard-Man",
+    "Lv30.Goblin",
+    "Platinum-Knight",
+    "Shadow-Demon",
+    "Stalker",
+    "Wyvern"
+  ],
+  "monster_vram_ref": {
+    "Lv30.Goblin": "0x3FFE"
+  }
 }

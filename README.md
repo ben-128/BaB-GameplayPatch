@@ -163,18 +163,28 @@ Cette analyse est fournie "as-is" a des fins de recherche et de preservation du 
 
 *Blaze & Blade: Eternal Quest (c) 1998 T&E Soft*
 
+
+
+
+
+
+
+
+
+
+
+
 ## Last Patch Build
 
-**Date:** 2026-02-08 23:28:38
+**Date:** 2026-02-09 01:19:22
 
 **Patches Applied:**
 - Fate Coin Shop prices adjusted
 - Items descriptions updated (376 items)
 - Auction base prices set to 0
 - Monster stats balanced
-- Formation templates patched (69 areas)
-- Loot chest timer disabled
 - BLAZE.ALL integrated
 
 **Source:** Blaze & Blade - Eternal Quest (Europe).bin
 **Output:** output/Blaze & Blade - Patched.bin
+

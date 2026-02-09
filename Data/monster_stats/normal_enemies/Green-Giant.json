@@ -53,5 +53,13 @@
     "stat16_elem_divine_malefic": 0,
     "_stat16_elem_divine_malefic_comment": "[Défaut: 0] Dégâts élémentaires: Divin/Maléfique"
   },
-  "id": 64
+  "id": 64,
+  "floors": {
+    "Cavern of Death/Floor 7": {
+      "L": 15,
+      "R": 2,
+      "slot_type": "00000000",
+      "type07_vram": "0x0438"
+    }
+  }
 }

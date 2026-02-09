@@ -53,5 +53,21 @@
     "stat16_elem_divine_malefic": 0,
     "_stat16_elem_divine_malefic_comment": "[Défaut: 0] Dégâts élémentaires: Divin/Maléfique"
   },
-  "id": 45
+  "id": 45,
+  "floors": {
+    "Ancient Ruins/Floor 1": {
+      "slot_type": "00000000",
+      "type07_vram": "0x379C"
+    },
+    "Castle of Vamp/Floor 2": {
+      "L": 5,
+      "R": 3,
+      "slot_type": "00000000"
+    },
+    "The Tower (Old Palace)/Floor 1": {
+      "L": 6,
+      "R": 2,
+      "slot_type": "00000000"
+    }
+  }
 }

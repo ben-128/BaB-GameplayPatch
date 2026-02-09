@@ -137,5 +137,33 @@
       "suffix": "00000000",
       "offset": "0x269EC74"
     }
-  ]
+  ],
+  "slot_types": [
+    "00000000",
+    "00000000",
+    "00000000",
+    "00000000",
+    "00000000"
+  ],
+  "type07_entries": [
+    {
+      "vram_offset": "0x0368",
+      "idx": 3,
+      "offset": "0x269E49C"
+    },
+    null,
+    null,
+    null,
+    null
+  ],
+  "available_monsters": [
+    "Black-Lizard",
+    "Kraken",
+    "Kraken-Foot",
+    "Kraken-Hand",
+    "Wyrm"
+  ],
+  "monster_vram_ref": {
+    "Black-Lizard": "0x0420"
+  }
 }

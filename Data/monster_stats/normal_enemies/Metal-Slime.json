@@ -53,5 +53,12 @@
     "stat16_elem_divine_malefic": 0,
     "_stat16_elem_divine_malefic_comment": "[Défaut: 0] Dégâts élémentaires: Divin/Maléfique"
   },
-  "id": 92
+  "id": 92,
+  "floors": {
+    "Ancient Ruins/Floor 1": {
+      "L": 4,
+      "R": 1,
+      "slot_type": "00000000"
+    }
+  }
 }

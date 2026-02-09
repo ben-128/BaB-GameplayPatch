@@ -53,5 +53,13 @@
     "stat24": 1,
     "_stat24_comment": "[Défaut: 3] Résistance aux altérations d'état"
   },
-  "id": 79
+  "id": 79,
+  "floors": {
+    "The Forest/Floor 1": {
+      "L": 2,
+      "R": 0,
+      "slot_type": "00000000",
+      "type07_vram": "0x0854"
+    }
+  }
 }

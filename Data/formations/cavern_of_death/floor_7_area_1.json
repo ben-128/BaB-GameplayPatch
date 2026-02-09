@@ -24,5 +24,29 @@
   "zone_spawns_area_bytes": 0,
   "original_total_zone_spawn_slots": 0,
   "zone_spawn_count": 0,
-  "zone_spawns": []
+  "zone_spawns": [],
+  "slot_types": [
+    "00000000",
+    "00000000",
+    "00000000",
+    "00000000"
+  ],
+  "type07_entries": [
+    null,
+    null,
+    null,
+    null
+  ],
+  "available_monsters": [
+    "Blue-Slime",
+    "Cave-Bear",
+    "Green-Giant",
+    "Ogre",
+    "Spirit-Ball",
+    "Troll"
+  ],
+  "monster_vram_ref": {
+    "Spirit-Ball": "0x0440",
+    "Ogre": "0x0448"
+  }
 }

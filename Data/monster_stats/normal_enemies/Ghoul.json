@@ -53,5 +53,12 @@
     "stat16_elem_divine_malefic": 3072,
     "_stat16_elem_divine_malefic_comment": "[Défaut: 3072] Dégâts élémentaires: Divin/Maléfique"
   },
-  "id": 47
+  "id": 47,
+  "floors": {
+    "The Sealed Cave/Floor 1": {
+      "L": 2,
+      "R": 5,
+      "slot_type": "00000000"
+    }
+  }
 }

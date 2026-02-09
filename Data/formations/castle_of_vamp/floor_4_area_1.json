@@ -2249,5 +2249,30 @@
       "suffix": "00000000",
       "offset": "0x241EA44"
     }
-  ]
+  ],
+  "slot_types": [
+    "00000000",
+    "00000000",
+    "00000000",
+    "00000000"
+  ],
+  "type07_entries": [
+    {
+      "vram_offset": "0x108C",
+      "idx": 3,
+      "offset": "0x241AD54"
+    },
+    null,
+    null,
+    null
+  ],
+  "available_monsters": [
+    "Lesser-Vampire",
+    "Marble-Gargoyle",
+    "Shadow",
+    "Vampire-Bat"
+  ],
+  "monster_vram_ref": {
+    "Lesser-Vampire": "0x108C"
+  }
 }

@@ -1224,5 +1224,43 @@
       "suffix": "00000000",
       "offset": "0x199D2C0"
     }
+  ],
+  "slot_types": [
+    "00000000",
+    "00000000",
+    "00000000",
+    "00000000",
+    "00000000"
+  ],
+  "type07_entries": [
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "available_monsters": [
+    "Arch-Magi",
+    "Black-Knight",
+    "Born-Golem",
+    "Crimson-Lizard",
+    "Dark-Elf",
+    "Dark-Magi",
+    "Dark-Wizard",
+    "Evil-Crystal",
+    "Gargoyle",
+    "Goblin-Fly",
+    "Goblin-Shaman",
+    "Green-Slime",
+    "Guard-Golem",
+    "Hard-Born",
+    "Living-Armor",
+    "Living-Sword",
+    "Lizard-Man",
+    "Lv30.Goblin",
+    "Platinum-Knight",
+    "Shadow-Demon",
+    "Stalker",
+    "Wyvern"
   ]
 }

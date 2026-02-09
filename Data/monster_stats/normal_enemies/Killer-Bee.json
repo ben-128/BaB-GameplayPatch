@@ -53,5 +53,15 @@
     "stat16_elem_divine_malefic": 0,
     "_stat16_elem_divine_malefic_comment": "[Défaut: 0] Dégâts élémentaires: Divin/Maléfique"
   },
-  "id": 76
+  "id": 76,
+  "floors": {
+    "The Forest/Floor 1": {
+      "L": 3,
+      "R": 4,
+      "slot_type": "00000000"
+    },
+    "The Forest/Floor 2": {
+      "slot_type": "00000000"
+    }
+  }
 }

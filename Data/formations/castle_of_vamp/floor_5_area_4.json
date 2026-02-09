@@ -3587,5 +3587,34 @@
       "suffix": "00000000",
       "offset": "0x2431F60"
     }
-  ]
+  ],
+  "slot_types": [
+    "00000000",
+    "00000000",
+    "00000000",
+    "00000000"
+  ],
+  "type07_entries": [
+    {
+      "vram_offset": "0x54F2",
+      "idx": 85,
+      "offset": "0x242D9A4"
+    },
+    null,
+    null,
+    null
+  ],
+  "available_monsters": [
+    "Chimera",
+    "Lesser-Vampire",
+    "Marble-Gargoyle",
+    "Red-Knight",
+    "Shadow",
+    "Succubus",
+    "Vampire",
+    "Vampire-Lord"
+  ],
+  "monster_vram_ref": {
+    "Red-Knight": "0x54F2"
+  }
 }

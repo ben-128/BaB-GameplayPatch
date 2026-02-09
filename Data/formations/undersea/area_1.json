@@ -112,5 +112,33 @@
   "zone_spawns_area_bytes": 0,
   "original_total_zone_spawn_slots": 0,
   "zone_spawn_count": 0,
-  "zone_spawns": []
+  "zone_spawns": [],
+  "slot_types": [
+    "00000000",
+    "00000000",
+    "00000000",
+    "00000000",
+    "00000000"
+  ],
+  "type07_entries": [
+    {
+      "vram_offset": "0x0420",
+      "idx": 3,
+      "offset": "0x269B48C"
+    },
+    null,
+    null,
+    null,
+    null
+  ],
+  "available_monsters": [
+    "Black-Lizard",
+    "Kraken",
+    "Kraken-Foot",
+    "Kraken-Hand",
+    "Wyrm"
+  ],
+  "monster_vram_ref": {
+    "Black-Lizard": "0x0420"
+  }
 }

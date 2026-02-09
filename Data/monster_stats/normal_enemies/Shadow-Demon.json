@@ -59,5 +59,12 @@
     "stat16_elem_divine_malefic": 7680,
     "_stat16_elem_divine_malefic_comment": "[Défaut: 7680] Dégâts élémentaires: Divin/Maléfique"
   },
-  "id": 102
+  "id": 102,
+  "floors": {
+    "The Tower (Old Palace)/Floor 1": {
+      "L": 13,
+      "R": 3,
+      "slot_type": "00000000"
+    }
+  }
 }

@@ -53,5 +53,19 @@
     "stat16_elem_divine_malefic": 0,
     "_stat16_elem_divine_malefic_comment": "[Défaut: 0] Dégâts élémentaires: Divin/Maléfique"
   },
-  "id": 28
+  "id": 28,
+  "floors": {
+    "The Forest/Floor 2": {
+      "L": 7,
+      "R": 2,
+      "slot_type": "00000000",
+      "type07_vram": "0x07F0"
+    },
+    "Undersea / Lake/Floor 1": {
+      "L": 0,
+      "R": 0,
+      "slot_type": "00000000",
+      "type07_vram": "0x0420"
+    }
+  }
 }

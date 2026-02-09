@@ -562,5 +562,50 @@
       "suffix": "00000000",
       "offset": "0x1DFAFB4"
     }
-  ]
+  ],
+  "slot_types": [
+    "00000000",
+    "00000000",
+    "00000000",
+    "00000000"
+  ],
+  "type07_entries": [
+    {
+      "vram_offset": "0x027C",
+      "idx": 3,
+      "offset": "0x1DF9BE0"
+    },
+    null,
+    {
+      "vram_offset": "0x0000",
+      "idx": 1,
+      "offset": "0x1DFA2E8"
+    },
+    null
+  ],
+  "available_monsters": [
+    "Black-Durahan",
+    "Blood-Mummy",
+    "Blood-Shadow",
+    "Blood-Skeleton",
+    "Durahan",
+    "Ghoul",
+    "King-Mummy",
+    "Mummy",
+    "Noble-Mummy",
+    "Red-Slime",
+    "Revenant",
+    "Shadow",
+    "Skeleton",
+    "Undead-Knight",
+    "Undead-Master",
+    "Wight",
+    "Wraith",
+    "Yellow-Slime",
+    "Zombie"
+  ],
+  "monster_vram_ref": {
+    "Black-Durahan": "0x027C",
+    "Revenant": "0x0000"
+  }
 }

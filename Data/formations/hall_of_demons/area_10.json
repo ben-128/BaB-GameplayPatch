@@ -137,5 +137,42 @@
       "suffix": "00000000",
       "offset": "0x2C07690"
     }
-  ]
+  ],
+  "slot_types": [
+    "00000000",
+    "00000000",
+    "00000000"
+  ],
+  "type07_entries": [
+    {
+      "vram_offset": "0x027C",
+      "idx": 3,
+      "offset": "0x2C073A8"
+    },
+    null,
+    null
+  ],
+  "available_monsters": [
+    "Basirisk",
+    "Blood-Shadow",
+    "Carberos",
+    "Dark-Goblin",
+    "Death-Knight",
+    "Evil-Ball",
+    "Evil-Stalker",
+    "Goblin-Wizard",
+    "Gorgon",
+    "Gray-Arm",
+    "Gremlin",
+    "Hell-Harpy",
+    "Hell-Hound",
+    "Hell-Ogre",
+    "Salamander",
+    "Spirit-Ball",
+    "Succubus",
+    "Zombie-Dragon"
+  ],
+  "monster_vram_ref": {
+    "Carberos": "0x027C"
+  }
 }

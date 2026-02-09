@@ -570,6 +570,292 @@ def patch_area(data, area):
     return True, False
 
 
+# ---------------------------------------------------------------------------
+# Monster overrides (Elite / stat mods / monster swap / Type-07 texture)
+# ---------------------------------------------------------------------------
+
+# Named stat fields -> offset within 96-byte entry (uint16 LE)
+STAT_NAME_TO_OFFSET = {
+    "exp": 0x10, "level": 0x12,
+    "hp": 0x14, "magic": 0x16,
+    "stat_18": 0x18, "stat_1a": 0x1A,
+    "stat_1c": 0x1C, "stat_1e": 0x1E,
+    "stat_20": 0x20, "drop_rate": 0x22,
+    "body_class": 0x24, "armor_type": 0x26,
+    "elem_fire_ice": 0x28, "elem_poison_air": 0x2A,
+    "elem_light_night": 0x2C, "elem_divine_malefic": 0x2E,
+    "dmg": 0x30, "armor": 0x32,
+}
+
+
+MONSTER_STATS_DIR = SCRIPT_DIR.parent / "monster_stats"
+
+
+def load_monster_stats():
+    """Load monster_stats files into a lookup dict.
+
+    Returns {monster_name: {"offset": int, "floors": {floor_label: {L, R, ...}}}}
+    or None if the directory doesn't exist.
+    """
+    if not MONSTER_STATS_DIR.exists():
+        return None
+
+    result = {}
+    for subdir in ("normal_enemies", "boss"):
+        d = MONSTER_STATS_DIR / subdir
+        if not d.exists():
+            continue
+        for fpath in d.glob("*.json"):
+            with open(fpath, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+            name = data.get("name", fpath.stem)
+            entry = {}
+            if "offset_hex" in data:
+                entry["offset"] = int(data["offset_hex"], 16)
+            if "floors" in data:
+                entry["floors"] = data["floors"]
+            if "stats" in data:
+                entry["stats"] = data["stats"]
+            result[name] = entry
+
+    return result if result else None
+
+
+def patch_monster_overrides(data, area, monster_db):
+    """Apply per-slot monster overrides (elite, stats, name, Type-07, swap).
+
+    Reads 'monster_overrides' from the area JSON. Each entry (per slot) can be:
+      - null: no change
+      - {"elite": true, "type07_vram": "0x0598"}: elite multipliers + texture
+      - {"replace_with": "Goblin-Leader"}: full swap from monster_db
+      - {"name": "Elite Bat", "stats": {"dmg": 80}, "type07_vram": "0x0590"}
+
+    Elite multipliers (applied from monster_db original stats):
+      HP x2, magic x2, armor x2, dmg x1.5
+
+    Returns (changed_count, error_flag).
+    """
+    overrides = area.get("monster_overrides")
+    if not overrides:
+        return 0, False
+
+    monsters = area.get("monsters", [])
+    group_offset_hex = area.get("group_offset")
+    level_name = area.get("level_name", "")
+    area_name = area.get("name", "")
+
+    if not group_offset_hex or not monsters:
+        return 0, False
+
+    group_offset = int(group_offset_hex, 16)
+    num_monsters = len(monsters)
+
+    # Parse floor key for monster_db lookup
+    parts = area_name.split(" - ")
+    if len(parts) >= 2 and "Floor" in parts[0]:
+        floor_key = parts[0].strip()
+    else:
+        floor_key = "Floor 1"
+
+    changed = 0
+
+    for slot_idx, override in enumerate(overrides):
+        if override is None:
+            continue
+        if slot_idx >= num_monsters:
+            print("    [ERROR] override for slot {} but area has {} monsters"
+                  .format(slot_idx, num_monsters))
+            return changed, True
+
+        slot_name = monsters[slot_idx]
+        stat_offset = group_offset + slot_idx * 96
+        changes = []
+
+        # --- Full monster swap from monster_stats ---
+        replace_with = override.get("replace_with")
+        if replace_with and monster_db:
+            source = monster_db.get(replace_with)
+            if not source:
+                print("    [ERROR] slot {}: '{}' not in monster_stats"
+                      .format(slot_idx, replace_with))
+                return changed, True
+
+            # Write full 96-byte stats (read from source's offset in binary)
+            if "offset" in source:
+                src_off = source["offset"]
+                new_stats = bytes(data[src_off:src_off + 96])
+                old_stats = bytes(data[stat_offset:stat_offset + 96])
+                if new_stats != old_stats:
+                    data[stat_offset:stat_offset + 96] = new_stats
+                    changes.append("stats<-{}".format(replace_with))
+
+            # Get per-floor binding data (L, R, slot_type, type07_vram)
+            floor_label = "{}/{}".format(level_name, floor_key)
+            floor_data = source.get("floors", {}).get(floor_label, {})
+
+            # Write L value in assignment entry
+            if "L" in floor_data:
+                new_L = floor_data["L"]
+                assign_off = _find_assign_entry_offset(
+                    data, group_offset, num_monsters, slot_idx)
+                if assign_off is not None:
+                    old_L = data[assign_off + 1]
+                    if old_L != new_L:
+                        data[assign_off + 1] = new_L
+                        changes.append("L={}".format(new_L))
+
+            # Write R value
+            if "R" in floor_data:
+                assign_off = _find_assign_entry_offset(
+                    data, group_offset, num_monsters, slot_idx)
+                if assign_off is not None:
+                    new_R = floor_data["R"]
+                    old_R = data[assign_off + 5]
+                    if old_R != new_R:
+                        data[assign_off + 5] = new_R
+                        changes.append("R={}".format(new_R))
+
+            # Write slot_type if different
+            if "slot_type" in floor_data:
+                slot_types = area.get("slot_types", [])
+                if slot_idx < len(slot_types):
+                    if slot_types[slot_idx] != floor_data["slot_type"]:
+                        slot_types[slot_idx] = floor_data["slot_type"]
+                        changes.append("type={}".format(
+                            floor_data["slot_type"]))
+
+            # Write Type-07 VRAM offset
+            if "type07_vram" in floor_data:
+                _patch_type07(data, area, slot_idx,
+                              floor_data["type07_vram"], changes)
+
+        # --- Elite flag: multiply stats from monster_stats JSON values ---
+        if override.get("elite"):
+            if not monster_db or slot_name not in monster_db:
+                print("    [ERROR] slot {}: '{}' not in monster_stats"
+                      .format(slot_idx, slot_name))
+                return changed, True
+
+            src_stats = monster_db[slot_name].get("stats", {})
+            # Map: (json_field, binary_offset, multiplier)
+            elite_mods = [
+                ("hp",           0x14, 2.0),
+                ("stat4_magic",  0x16, 2.0),
+                ("stat17_dmg",   0x30, 1.5),
+                ("stat18_armor", 0x32, 2.0),
+            ]
+            for json_key, field_off, mult in elite_mods:
+                base_val = src_stats.get(json_key, 0)
+                if base_val == 0:
+                    continue
+                new_val = min(int(base_val * mult), 65535)
+                abs_off = stat_offset + field_off
+                old_val = struct.unpack_from('<H', data, abs_off)[0]
+                if old_val != new_val:
+                    struct.pack_into('<H', data, abs_off, new_val)
+                    changes.append("{}:{}->{}(x{})".format(
+                        json_key, old_val, new_val, mult))
+
+            # Set stat12_armor_type to 32768 (boss flag)
+            abs_off = stat_offset + 0x26
+            old_at = struct.unpack_from('<H', data, abs_off)[0]
+            if old_at != 32768:
+                struct.pack_into('<H', data, abs_off, 32768)
+                changes.append("armor_type:{}->32768".format(old_at))
+
+            # Prepend "E-" to the 16-byte name field
+            old_name_raw = bytes(data[stat_offset:stat_offset + 16])
+            old_name = old_name_raw.split(b'\x00')[0].decode(
+                'ascii', errors='replace')
+            if not old_name.startswith("E-"):
+                elite_name = "E-" + old_name
+                name_bytes = elite_name.encode('ascii',
+                                               errors='replace')[:15]
+                written_name = name_bytes.decode('ascii')
+                name_padded = name_bytes + b'\x00' * (16 - len(name_bytes))
+                data[stat_offset:stat_offset + 16] = name_padded
+                changes.append("name='{}'".format(written_name))
+
+        # --- Selective stat modifications (on top of elite) ---
+        stat_mods = override.get("stats")
+        if stat_mods:
+            for field_name, value in stat_mods.items():
+                if field_name in STAT_NAME_TO_OFFSET:
+                    field_off = STAT_NAME_TO_OFFSET[field_name]
+                elif field_name.startswith("0x"):
+                    field_off = int(field_name, 16)
+                else:
+                    print("    [ERROR] slot {}: unknown stat '{}'"
+                          .format(slot_idx, field_name))
+                    return changed, True
+
+                abs_off = stat_offset + field_off
+                old_val = struct.unpack_from('<H', data, abs_off)[0]
+                new_val = int(value) & 0xFFFF
+                if old_val != new_val:
+                    struct.pack_into('<H', data, abs_off, new_val)
+                    disp = field_name
+                    for n, o in STAT_NAME_TO_OFFSET.items():
+                        if o == field_off:
+                            disp = n
+                            break
+                    changes.append("{}:{}->{}".format(disp, old_val, new_val))
+
+        # --- Name override ---
+        new_name = override.get("name")
+        if new_name:
+            name_bytes = new_name.encode('ascii', errors='replace')[:15]
+            name_padded = name_bytes + b'\x00' * (16 - len(name_bytes))
+            old_name = bytes(data[stat_offset:stat_offset + 16])
+            if name_padded != old_name:
+                data[stat_offset:stat_offset + 16] = name_padded
+                changes.append("name='{}'".format(new_name))
+
+        # --- Type-07 VRAM offset (standalone) ---
+        type07_vram = override.get("type07_vram")
+        if type07_vram and not replace_with:
+            _patch_type07(data, area, slot_idx, type07_vram, changes)
+
+        if changes:
+            changed += 1
+            prefix = "ELITE " if override.get("elite") else ""
+            print("    {}slot {} ({}): {}".format(
+                prefix, slot_idx, slot_name, ", ".join(changes)))
+
+    return changed, False
+
+
+def _find_assign_entry_offset(data, group_offset, num_monsters, slot_idx):
+    """Find the absolute offset of a slot's assignment entry.
+
+    Searches backwards from group_offset for the block of entries
+    with 0x40 flag at byte[7].
+    """
+    search_start = group_offset - num_monsters * 8 - 128
+    candidates = []
+    for off in range(group_offset - 8, max(search_start, 0), -8):
+        if data[off + 7] == 0x40 and data[off + 3] == 0x00:
+            candidates.insert(0, off)
+        elif candidates:
+            break
+    if len(candidates) == num_monsters and slot_idx < num_monsters:
+        return candidates[slot_idx]
+    return None
+
+
+def _patch_type07(data, area, slot_idx, vram_hex, changes):
+    """Patch a Type-07 entry's VRAM offset for a given slot."""
+    type07_entries = area.get("type07_entries", [])
+    if slot_idx < len(type07_entries) and type07_entries[slot_idx]:
+        entry = type07_entries[slot_idx]
+        entry_off = int(entry["offset"], 16)
+        new_vram = int(vram_hex, 16)
+        old_vram = struct.unpack_from('<I', data, entry_off)[0]
+        if old_vram != new_vram:
+            struct.pack_into('<I', data, entry_off, new_vram)
+            changes.append("vram=0x{:04X}".format(new_vram))
+
+
 def find_area_jsons():
     """Find all area JSONs in level subdirectories."""
     results = []
@@ -595,6 +881,11 @@ def main():
     print("Reading {}...".format(BLAZE_ALL))
     data = bytearray(BLAZE_ALL.read_bytes())
     print("  Size: {:,} bytes".format(len(data)))
+
+    # Load monster stats (for replace_with overrides)
+    monster_db = load_monster_stats()
+    if monster_db:
+        print("  monster_stats loaded ({} monsters)".format(len(monster_db)))
     print()
 
     json_files = find_area_jsons()
@@ -606,6 +897,7 @@ def main():
     print()
 
     total_formation_changed = 0
+    total_override_changed = 0
     total_sp_records_changed = 0
     total_sp_areas_changed = 0
     total_errors = 0
@@ -619,13 +911,16 @@ def main():
         formations = area.get("formations", [])
         spawn_points = area.get("spawn_points", [])
         zone_spawns = area.get("zone_spawns", [])
+        overrides = area.get("monster_overrides")
         has_formations = (formations
                           and area.get("formation_area_start")
                           and area.get("formation_area_bytes", 0) > 0)
         has_spawn_points = bool(spawn_points)
         has_zone_spawns = bool(zone_spawns)
+        has_overrides = bool(overrides)
 
-        if not has_formations and not has_spawn_points and not has_zone_spawns:
+        if (not has_formations and not has_spawn_points
+                and not has_zone_spawns and not has_overrides):
             continue
 
         total_areas += 1
@@ -640,6 +935,19 @@ def main():
 
         area_name = area["name"]
         status_parts = []
+
+        # Patch monster overrides (stats, name, Type-07, full swap)
+        # Must run BEFORE formation patching since it may update slot_types
+        if has_overrides:
+            ov_changed, ov_error = patch_monster_overrides(
+                data, area, monster_db)
+            if ov_error:
+                total_errors += 1
+                status_parts.append("overrides:ERROR")
+            elif ov_changed > 0:
+                total_override_changed += ov_changed
+                status_parts.append("overrides:{} slot(s) patched".format(
+                    ov_changed))
 
         # Patch formations (area-rewrite)
         if has_formations:
@@ -736,11 +1044,15 @@ def main():
         print("!" * 60)
         return 1
 
-    total_changed = total_formation_changed + total_sp_areas_changed
+    total_changed = (total_formation_changed + total_sp_areas_changed
+                      + total_override_changed)
     if total_changed > 0:
         BLAZE_ALL.write_bytes(data)
         print("=" * 60)
         parts = []
+        if total_override_changed > 0:
+            parts.append("{} monster override(s) applied".format(
+                total_override_changed))
         if total_formation_changed > 0:
             parts.append("{} formation area(s) rewritten".format(
                 total_formation_changed))

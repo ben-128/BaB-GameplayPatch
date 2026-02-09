@@ -53,5 +53,12 @@
     "stat16_elem_divine_malefic": 0,
     "_stat16_elem_divine_malefic_comment": "[Défaut: 0] Dégâts élémentaires: Divin/Maléfique"
   },
-  "id": 13
+  "id": 13,
+  "floors": {
+    "Undersea / Lake/Floor 1": {
+      "L": 3,
+      "R": 3,
+      "slot_type": "00000000"
+    }
+  }
 }

@@ -1481,5 +1481,43 @@
       "suffix": "02000000",
       "offset": "0x1DD8898"
     }
-  ]
+  ],
+  "slot_types": [
+    "00000000",
+    "00000000",
+    "00000000"
+  ],
+  "type07_entries": [
+    {
+      "vram_offset": "0x4E00",
+      "idx": 78,
+      "offset": "0x1DD71B8"
+    },
+    null,
+    null
+  ],
+  "available_monsters": [
+    "Black-Durahan",
+    "Blood-Mummy",
+    "Blood-Shadow",
+    "Blood-Skeleton",
+    "Durahan",
+    "Ghoul",
+    "King-Mummy",
+    "Mummy",
+    "Noble-Mummy",
+    "Red-Slime",
+    "Revenant",
+    "Shadow",
+    "Skeleton",
+    "Undead-Knight",
+    "Undead-Master",
+    "Wight",
+    "Wraith",
+    "Yellow-Slime",
+    "Zombie"
+  ],
+  "monster_vram_ref": {
+    "Skeleton": "0x4E00"
+  }
 }

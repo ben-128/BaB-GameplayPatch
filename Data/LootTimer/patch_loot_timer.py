@@ -1,136 +1,152 @@
 #!/usr/bin/env python3
 """
-Patch the chest despawn timer in the game BIN.
+Patch the chest despawn timer in BLAZE.ALL overlay code.
 
-The entity update function in SLES has a batch timer loop processing
-48 halfword timers at entity+0x80 through entity+0xDE. Each timer is
-associated with a flag bitmask in a handler table at RAM 0x8003C030.
-When a timer reaches 0, the corresponding flag is CLEARED from
-entity+0x40 via: entity+0x40 AND= ~handler_table[timer_index].
+The chest entity lifecycle is managed by a state machine in dungeon
+overlay code loaded from BLAZE.ALL at runtime:
+  State 1 (spawn):    entity+0x28 increases 200->1000 (fade-in)
+  State 2 (alive):    entity+0x14 decrements by 1/frame (countdown)
+  State 3 (despawn):  entity+0x28 decreases by 60/frame (fade-out)
+  Kill:               entity+0x00 bit 14 set when entity+0x28 < 0
 
-Timer[0] (entity+0x80) controls bit 27 (0x08000000) of entity+0x40.
-Chests use timer[0] with initial value ~1000 (20s at 50fps PAL).
-When bit 27 is cleared, the chest despawns.
+The countdown decrement in state 2 uses different base registers
+($s0, $s1, $s2, $v1) depending on the overlay handler function:
+  lhu  $v0, 0x14($base)   ; load timer
+  nop
+  addiu $v0, $v0, -1      ; DECREMENT  <-- NOP this
+  sh   $v0, 0x14($base)   ; store back
 
-Strategy:
-1. NOP the batch timer decrement (freeze all 48 timers)
-2. Zero handler table entry[0] so timer[0] expiry clears NO flag
-   (belt-and-suspenders: even if overlay code decrements entity+0x80,
-   the flag won't be cleared when it reaches 0)
+With 1000 initial value at 50fps PAL = 20 seconds before despawn.
+NOPping the decrement makes chests permanent.
 
-IMPORTANT: entity+0x4C is for combat HP/damage - do NOT touch it.
-The bgtz at 0x017794 is the general entity death mechanism.
+35 occurrences across all dungeon overlays (7 $s1 + 9 $s0 + 16 $s2 + 3 $v1).
+All must be patched — the chest entity may be processed by any handler.
 
-Must run AFTER the BIN has been created (after BLAZE.ALL injection).
+Runs at build step 7 (patches output/BLAZE.ALL before BIN injection).
 """
 
 import struct
 import sys
 from pathlib import Path
 
+REGS = ['$zero','$at','$v0','$v1','$a0','$a1','$a2','$a3',
+        '$t0','$t1','$t2','$t3','$t4','$t5','$t6','$t7',
+        '$s0','$s1','$s2','$s3','$s4','$s5','$s6','$s7',
+        '$t8','$t9','$k0','$k1','$gp','$sp','$fp','$ra']
 
-PATCHES = [
-    {
-        'name': 'entity+0x80 batch timer decrement',
-        'desc': 'addiu $v0,$v0,-1 -> nop (freeze all batch timers)',
-        # lhu $v0,0($a1) + nop + addiu $v0,$v0,-1 + sh $v0,0($a1)
-        'signature': [0x94A20000, 0x00000000, 0x2442FFFF, 0xA4A20000],
-        'patch_index': 2,
-        'verify': 0x2442FFFF,
-        'replacement': 0x00000000,  # nop
-    },
-    {
-        'name': 'timer[0] handler table entry (bit 27 mask)',
-        'desc': 'table[0] = 0 (timer[0] expiry clears no flag)',
-        # Handler table: entry[0]=0x08000000, entry[1]=0x02000000,
-        # entry[2]=0x04000000, entry[3]=0x00000000
-        'signature': [0x08000000, 0x02000000, 0x04000000, 0x00000000],
-        'patch_index': 0,
-        'verify': 0x08000000,
-        'replacement': 0x00000000,  # no bits = no flag cleared
-    },
-]
+# Masked matching for ANY base register:
+# w0: lhu $v0, 0x14(base) — (w0 & 0xFC1FFFFF) == 0x94020014
+# w1: nop — 0x00000000
+# w2: addiu $v0, $v0, -1 — 0x2442FFFF
+# w3: sh $v0, 0x14(base) — (w3 & 0xFC1FFFFF) == 0xA4020014
+# base register of w0 must equal base register of w3
+LHU_MASK  = 0xFC1FFFFF
+LHU_MATCH = 0x94020014
+SH_MASK   = 0xFC1FFFFF
+SH_MATCH  = 0xA4020014
+NOP_WORD  = 0x00000000
+ADDIU_WORD = 0x2442FFFF  # addiu $v0, $v0, -1
+
+EXPECTED_MIN_MATCHES = 30
+EXPECTED_MAX_MATCHES = 45
+
+
+def find_patterns(data):
+    """Find all lhu+nop+addiu(-1)+sh patterns with offset 0x14, any base register."""
+    original = []
+    patched = []
+
+    for i in range(0, len(data) - 16, 4):
+        w0 = struct.unpack_from('<I', data, i)[0]
+        w1 = struct.unpack_from('<I', data, i + 4)[0]
+        w2 = struct.unpack_from('<I', data, i + 8)[0]
+        w3 = struct.unpack_from('<I', data, i + 12)[0]
+
+        # w0: lhu $v0, 0x14(base)
+        if (w0 & LHU_MASK) != LHU_MATCH:
+            continue
+        base0 = (w0 >> 21) & 0x1F
+
+        # w1: nop
+        if w1 != NOP_WORD:
+            continue
+
+        # w3: sh $v0, 0x14(base) — same base register
+        if (w3 & SH_MASK) != SH_MATCH:
+            continue
+        base3 = (w3 >> 21) & 0x1F
+        if base0 != base3:
+            continue
+
+        # w2: addiu $v0, $v0, -1 (original) or nop (already patched)
+        if w2 == ADDIU_WORD:
+            original.append((i, base0))
+        elif w2 == NOP_WORD:
+            patched.append((i, base0))
+
+    return original, patched
 
 
 def main():
     script_dir = Path(__file__).parent
     project_dir = script_dir.parent.parent
-    bin_path = project_dir / 'output' / 'Blaze & Blade - Patched.bin'
+    blaze_path = project_dir / 'output' / 'BLAZE.ALL'
 
-    print("Loot Timer: patch chest despawn in SLES executable")
-    print(f"  Target: {bin_path}")
+    print("Loot Timer: patch chest despawn in dungeon overlay code")
+    print(f"  Target: {blaze_path}")
 
-    if not bin_path.exists():
-        print(f"[ERROR] BIN not found: {bin_path}")
+    if not blaze_path.exists():
+        print(f"[ERROR] BLAZE.ALL not found: {blaze_path}")
         sys.exit(1)
 
-    data = bytearray(bin_path.read_bytes())
-    print(f"  BIN size: {len(data):,} bytes")
+    data = bytearray(blaze_path.read_bytes())
+    print(f"  BLAZE.ALL size: {len(data):,} bytes")
 
-    total_patched = 0
+    original, patched = find_patterns(data)
+    total = len(original) + len(patched)
 
-    for patch in PATCHES:
-        print(f"\n  --- {patch['name']} ---")
+    print(f"\n  Matches: {len(original)} unpatched, "
+          f"{len(patched)} already patched ({total} total)")
 
-        # Build signature bytes
-        sig = b''.join(struct.pack('<I', w) for w in patch['signature'])
+    if total == 0:
+        print("[ERROR] No patterns found in BLAZE.ALL!")
+        sys.exit(1)
 
-        # Search
-        positions = []
-        pos = 0
-        while True:
-            pos = data.find(sig, pos)
-            if pos == -1:
-                break
-            positions.append(pos)
-            pos += 4
+    if total < EXPECTED_MIN_MATCHES:
+        print(f"[WARNING] Only {total} matches (expected >= {EXPECTED_MIN_MATCHES})")
 
-        if len(positions) == 0:
-            # Signature might already be patched - check with replacement
-            patched_sig = list(patch['signature'])
-            patched_sig[patch['patch_index']] = patch['replacement']
-            sig_patched = b''.join(struct.pack('<I', w) for w in patched_sig)
-            pos2 = data.find(sig_patched)
-            if pos2 >= 0:
-                print(f"  Already patched at BIN 0x{pos2:08X}")
-                total_patched += 1
-                continue
-            print(f"  [ERROR] Signature not found!")
-            print(f"  Expected: {' '.join(f'{w:08X}' for w in patch['signature'])}")
-            sys.exit(1)
+    if total > EXPECTED_MAX_MATCHES:
+        print(f"[ERROR] Too many matches ({total} > {EXPECTED_MAX_MATCHES}) - aborting")
+        sys.exit(1)
 
-        if len(positions) > 1:
-            print(f"  [WARNING] {len(positions)} occurrences found!")
-            # For data patches, only patch in the SLES region (high BIN offsets)
-            # SLES is near end of disc, BLAZE.ALL is near beginning
-            sles_region = [p for p in positions if p > 0x29000000]
-            if sles_region:
-                print(f"  Using SLES-region match(es): {len(sles_region)}")
-                positions = sles_region
-            else:
-                print(f"  [ERROR] No matches in SLES region!")
-                sys.exit(1)
+    # Apply patches
+    applied = 0
+    for sig_pos, base in original:
+        target_pos = sig_pos + 8  # word index 2 = addiu
+        old_word = struct.unpack_from('<I', data, target_pos)[0]
 
-        for sig_pos in positions:
-            target_pos = sig_pos + patch['patch_index'] * 4
-            old_word = struct.unpack_from('<I', data, target_pos)[0]
+        if old_word != ADDIU_WORD:
+            print(f"  [SKIP] 0x{target_pos:08X}: unexpected 0x{old_word:08X}")
+            continue
 
-            if old_word != patch['verify']:
-                print(f"  [SKIP] 0x{target_pos:08X}: unexpected 0x{old_word:08X}")
-                continue
+        data[target_pos:target_pos + 4] = struct.pack('<I', NOP_WORD)
+        print(f"  PATCH 0x{target_pos:08X}: addiu $v0,$v0,-1 -> nop  (base={REGS[base]})")
+        applied += 1
 
-            data[target_pos:target_pos + 4] = struct.pack('<I', patch['replacement'])
-            print(f"  PATCH BIN 0x{target_pos:08X}: {patch['desc']}")
-            total_patched += 1
+    for sig_pos, base in patched:
+        print(f"  SKIP  0x{sig_pos + 8:08X}: already patched  (base={REGS[base]})")
 
-    if total_patched == 0:
+    if applied == 0 and len(patched) == 0:
         print("\n[ERROR] No patches applied!")
         sys.exit(1)
 
-    bin_path.write_bytes(data)
+    if applied > 0:
+        blaze_path.write_bytes(data)
 
     print(f"\n{'='*60}")
-    print(f"  {total_patched} patch(es) applied - chests will no longer despawn")
+    print(f"  {applied} new + {len(patched)} existing = "
+          f"{applied + len(patched)} total overlay patches")
+    print(f"  Chest despawn timer frozen in all dungeon areas")
     print(f"{'='*60}")
 
 

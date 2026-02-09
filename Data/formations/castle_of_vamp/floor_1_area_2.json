@@ -2987,5 +2987,29 @@
       "suffix": "00000000",
       "offset": "0x240AAB0"
     }
-  ]
+  ],
+  "slot_types": [
+    "00000000",
+    "00000000",
+    "00000000"
+  ],
+  "type07_entries": [
+    {
+      "vram_offset": "0x50FA",
+      "idx": 81,
+      "offset": "0x2407894"
+    },
+    null,
+    null
+  ],
+  "available_monsters": [
+    "Blood-Skeleton",
+    "Ghost",
+    "Harpy",
+    "Wolf",
+    "Zombie"
+  ],
+  "monster_vram_ref": {
+    "Zombie": "0x0D80"
+  }
 }

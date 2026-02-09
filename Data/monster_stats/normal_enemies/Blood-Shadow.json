@@ -53,5 +53,18 @@
     "stat16_elem_divine_malefic": 7680,
     "_stat16_elem_divine_malefic_comment": "[Défaut: 7680] Dégâts élémentaires: Divin/Maléfique"
   },
-  "id": 30
+  "id": 30,
+  "floors": {
+    "Hall of Demons/Floor 1": {
+      "L": 2,
+      "R": 1,
+      "slot_type": "00000000",
+      "type07_vram": "0x0D2C"
+    },
+    "The Sealed Cave/Floor 1": {
+      "L": 9,
+      "R": 3,
+      "slot_type": "00000000"
+    }
+  }
 }
