@@ -1,25 +1,21 @@
 #!/usr/bin/env python3
 """
-Patch ALL chest despawn timer decrements in BLAZE.ALL overlay code (v5).
+Patch chest despawn timer decrements in BLAZE.ALL overlay code (v6).
 
-Previous versions missed many decrement patterns because they only looked
-for the specific sequence:
-  lhu $v0, 0x14(base)
-  nop
-  addiu $v0, $v0, -1    <- only this specific variant
-  sh $v0, 0x14(base)
+v5 was too broad: it matched ANY addiu -1 followed by sh 0x14, catching
+monster animation timers (e.g. Goblin Shaman spell animation freeze).
 
-But the actual code uses MANY variants:
-  addiu $v0, $v1, -1
-  addiu $v0, $a2, -1
-  addiu $v0, $zero, -1
-  etc.
+v6 requires the FULL chest timer pattern with context validation:
+  1. lhu <any>, 0x14(<base>)      -- load timer (within 4 instr before)
+  2. addiu <any>, <any>, -1       -- decrement
+  3. sh <any>, 0x14(<base>)       -- store timer (within 2 instr after addiu)
+  4. sll <any>, <any>, 16         -- sign-extend for underflow check (within 4 after sh)
 
-This version finds ALL patterns where:
-  1. addiu <any_reg>, <any_reg>, -1
-  2. Followed within 2 instructions by: sh <any_reg>, 0x14(<any_base>)
+This eliminates:
+  - Initialization patterns (addiu $reg, $zero, -1 with no preceding lhu)
+  - Monster animation/spell timers (no sll 16 sign-extension after)
 
-Total: ~68 patterns across all dungeon overlays (vs 35 in v4).
+Total: ~35 patterns (Europe), down from ~103 in v5.
 
 Runs at build step 7 (patches output/BLAZE.ALL before BIN injection).
 """
@@ -35,21 +31,48 @@ REGS = ['$zero','$at','$v0','$v1','$a0','$a1','$a2','$a3',
         '$t8','$t9','$k0','$k1','$gp','$sp','$fp','$ra']
 
 NOP_WORD = 0x00000000
-EXPECTED_MIN = 60
-EXPECTED_MAX = 120  # Europe version has ~103 patterns, US has ~68
+EXPECTED_MIN = 25
+EXPECTED_MAX = 60
+
+
+def has_lhu_before(data, addiu_pos):
+    """Check for lhu <any>, 0x14(<any>) within 4 instructions before addiu."""
+    for k in range(1, 5):
+        pos = addiu_pos - k * 4
+        if pos < 0:
+            break
+        w = struct.unpack_from('<I', data, pos)[0]
+        op = (w >> 26) & 0x3F
+        imm = w & 0xFFFF
+        if op == 0x25 and imm == 0x0014:  # lhu with offset 0x14
+            return True
+    return False
+
+
+def has_sll16_after(data, sh_pos):
+    """Check for sll <any>, <any>, 16 within 4 instructions after sh."""
+    for k in range(1, 5):
+        pos = sh_pos + k * 4
+        if pos + 4 > len(data):
+            break
+        w = struct.unpack_from('<I', data, pos)[0]
+        op = (w >> 26) & 0x3F
+        funct = w & 0x3F
+        shamt = (w >> 6) & 0x1F
+        if op == 0x00 and funct == 0x00 and shamt == 16 and w != 0:  # sll by 16
+            return True
+    return False
 
 
 def find_all_decrement_patterns(data):
     """
-    Find all patterns:
-      addiu rt, rs, -1  (opcode=0x09, imm=0xFFFF)
-      ... (0-1 instructions)
-      sh rt2, 0x14(base)  (opcode=0x29, imm=0x14)
+    Find chest timer decrement patterns with context validation:
+      lhu <any>, 0x14(<base>)       -- within 4 instructions before
+      addiu rt, rs, -1              -- the decrement
+      sh rt2, 0x14(base)            -- within 1-2 instructions after
+      sll <any>, <any>, 16          -- within 4 instructions after sh
 
-    Only searches in dungeon overlay regions (0x009xxxxx - 0x02Cxxxxx)
-    to avoid false positives in other data regions.
-
-    Returns list of (addiu_offset, sh_offset, register_info).
+    Only searches in dungeon overlay regions (0x009xxxxx - 0x02Cxxxxx).
     """
     matches = []
 
@@ -80,15 +103,19 @@ def find_all_decrement_patterns(data):
                     rt_sh = (w_sh >> 16) & 0x1F
                     rs_sh = (w_sh >> 21) & 0x1F  # base register
 
-                    matches.append({
-                        'addiu_pos': i,
-                        'sh_pos': i + j*4,
-                        'gap': j * 4,
-                        'addiu_dst': rt,
-                        'addiu_src': rs,
-                        'sh_src': rt_sh,
-                        'sh_base': rs_sh
-                    })
+                    sh_pos = i + j * 4
+
+                    # Context validation: require lhu 0x14 before AND sll 16 after
+                    if has_lhu_before(data, i) and has_sll16_after(data, sh_pos):
+                        matches.append({
+                            'addiu_pos': i,
+                            'sh_pos': sh_pos,
+                            'gap': j * 4,
+                            'addiu_dst': rt,
+                            'addiu_src': rs,
+                            'sh_src': rt_sh,
+                            'sh_base': rs_sh
+                        })
                     break
 
     return matches
@@ -144,7 +171,7 @@ def main():
     blaze_path = project_dir / 'output' / 'BLAZE.ALL'
     config_path = script_dir / 'loot_timer.json'
 
-    print("Loot Timer v5: patch ALL chest despawn decrements in overlay code")
+    print("Loot Timer v6: patch chest despawn decrements with context validation")
     print(f"  Target: {blaze_path}")
 
     if not blaze_path.exists():
@@ -165,7 +192,7 @@ def main():
 
     # Find all decrement patterns
     matches = find_all_decrement_patterns(data)
-    print(f"\n  Found {len(matches)} decrement patterns (addiu -1 -> sh 0x14)")
+    print(f"\n  Found {len(matches)} chest timer patterns (lhu 0x14 + addiu -1 + sh 0x14 + sll 16)")
 
     if len(matches) == 0:
         print("[ERROR] No patterns found in BLAZE.ALL!")
