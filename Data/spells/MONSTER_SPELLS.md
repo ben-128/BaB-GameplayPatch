@@ -37,7 +37,7 @@ The `overlay_bitfield_patches` replaces the init value (step 1). The level-up (s
 
 ## Quick Start - Which JSON to Edit
 
-**File: `Data/monster_stats/monster_spells_config.json`**
+**File: `Data/spells/spell_config.json`**
 
 This is the only file you need to edit. It has two sections:
 
@@ -219,7 +219,7 @@ Each bit enables one spell. Set `bitfield_value` as hex bitmask.
 
 ## How to Test
 
-1. Edit `Data/monster_stats/monster_spells_config.json`
+1. Edit `Data/spells/spell_config.json`
 2. Run `build_gameplay_patch.bat` (or manually: steps below)
 3. Load `output/Blaze & Blade - Patched.bin` in emulator
 4. Go to **Cavern of Death Floor 1** and fight monsters
@@ -231,10 +231,10 @@ REM Reset clean BLAZE.ALL
 copy /Y "Blaze  Blade - Eternal Quest (Europe)\extract\BLAZE.ALL" output\BLAZE.ALL
 
 REM Apply spell definition patches (step 7b)
-py -3 Data\monster_stats\patch_spell_table.py
+py -3 Data\spells\patch_spell_table.py
 
 REM Apply overlay bitfield patches (step 7e)
-py -3 Data\monster_stats\patch_monster_spells.py
+py -3 Data\spells\patch_monster_spells.py
 
 REM ... then run remaining build steps (8-9) to inject into BIN
 ```
@@ -301,7 +301,7 @@ Both run BEFORE BIN injection (step 8-9).
 
 | File | Purpose |
 |------|---------|
-| `monster_spells_config.json` | Configuration (the only file you edit) |
+| `spell_config.json` | Configuration (the only file you edit) |
 | `patch_spell_table.py` | Spell definition patcher (step 7b) |
 | `patch_monster_spells.py` | Overlay bitfield patcher (step 7e) |
 | `MONSTER_SPELLS.md` | This documentation |

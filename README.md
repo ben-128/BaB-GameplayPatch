@@ -35,7 +35,7 @@ GameplayPatch/
 │   │   ├── patch_monster_stats.py Patcher stats
 │   │   ├── patch_spell_table.py   Patcher sorts (step 7b)
 │   │   ├── patch_monster_spells.py  Patcher bitfield sorts (step 7e)
-│   │   ├── monster_spells_config.json  Config sorts (seul fichier a editer)
+│   │   ├── spell_config.json  Config sorts (seul fichier a editer)
 │   │   ├── MONSTER_SPELLS.md      Documentation systeme de sorts
 │   │   ├── normal_enemies/        101 monstres reguliers (.json)
 │   │   ├── boss/                  20 boss (.json)
@@ -101,7 +101,7 @@ Steps 1-7e patchent `output/BLAZE.ALL`. Steps 8-9 creent le BIN final.
 Systeme complet pour modifier les sorts et capacites des monstres.
 
 **Documentation** : `Data/monster_stats/MONSTER_SPELLS.md`
-**Config** : `Data/monster_stats/monster_spells_config.json` (seul fichier a editer)
+**Config** : `Data/spells/spell_config.json` (seul fichier a editer)
 
 Deux systemes distincts :
 - **Sorts offensifs** (FireBullet, Blaze, etc.) : controlables via `overlay_bitfield_patches` (zone-wide)

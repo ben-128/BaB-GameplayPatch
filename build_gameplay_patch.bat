@@ -217,7 +217,7 @@ REM ========================================================================
 call :log "[7b/10] Patching spell table entries in BLAZE.ALL..."
 call :log ""
 
-py -3 Data\monster_stats\patch_spell_table.py >> "%LOGFILE%" 2>&1
+py -3 Data\spells\patch_spell_table.py >> "%LOGFILE%" 2>&1
 if errorlevel 1 (
     call :log ""
     call :log "[ERROR] Spell table patch failed!"
@@ -268,7 +268,7 @@ REM ========================================================================
 call :log "[7e/10] Patching monster spell bitfield in overlay code..."
 call :log ""
 
-py -3 Data\monster_stats\patch_monster_spells.py >> "%LOGFILE%" 2>&1
+py -3 Data\spells\patch_monster_spells.py >> "%LOGFILE%" 2>&1
 if errorlevel 1 (
     call :log ""
     call :log "[ERROR] Monster spell bitfield patch failed!"

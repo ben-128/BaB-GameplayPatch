@@ -19,7 +19,7 @@ This patcher handles the "verbose" pattern found in zone overlays.
 NOTE: This replaces the old patcher which incorrectly patched EXE address
 0x8002BE38 (CD-ROM DMA code) instead of the actual spell assignment.
 
-Usage (standalone):  py -3 Data/monster_stats/patch_monster_spells.py
+Usage (standalone):  py -3 Data/spells/patch_monster_spells.py
 Usage (in build):    Called at step 9c (patches BLAZE.ALL, not BIN)
 """
 
@@ -29,7 +29,7 @@ import sys
 from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).parent
-CONFIG_FILE = SCRIPT_DIR / "monster_spells_config.json"
+CONFIG_FILE = SCRIPT_DIR / "spell_config.json"
 BLAZE_ALL = SCRIPT_DIR.parent.parent / "output" / "BLAZE.ALL"
 
 # MIPS instruction builders

@@ -11,7 +11,6 @@ v8 scans BOTH directions (forward and backward) within the same function:
   2. sh $rt, 0x14(<base>)       -- store timer (within 1-3 instr after)
   3. Access to +0x28 OR +0x2A   -- opacity fields UNIQUE to chest entities
      (scanned 80 instr forward AND backward, same base register)
-  4. Exclude fade-in patterns   -- state=2 write to +0x10 means fade-in
 
 Runs at build step 7 (patches output/BLAZE.ALL before BIN injection).
 """
@@ -36,38 +35,24 @@ def has_opacity_access(data, sh_pos, base_reg, scan_range=80):
     Check if code near sh 0x14 accesses opacity fields +0x28 or +0x2A
     on the same base register. Scans BOTH forward and backward within
     the same function. These fields are unique to chest entities.
-    Returns (has_opacity, is_fadein).
     """
-    has_028 = False
-    has_02A = False
-    is_fadein = False  # True if writes state=2 to +0x10 (fade-in, not despawn)
+    found = False
 
     def _check_word(pos):
-        nonlocal has_028, has_02A, is_fadein
+        nonlocal found
         w = struct.unpack_from('<I', data, pos)[0]
         op = (w >> 26) & 0x3F
         rs = (w >> 21) & 0x1F
         imm = w & 0xFFFF
-
         if rs != base_reg:
             return
-        # lhu/lh/sh with offset +0x28 or +0x2A
-        if imm == 0x0028 and op in (0x25, 0x21, 0x29):
-            has_028 = True
-        if imm == 0x002A and op in (0x25, 0x21, 0x29):
-            has_02A = True
-        # Check for fade-in: sh <reg>, 0x10(<base>) with value 2
-        if imm == 0x0010 and op == 0x29:
-            if pos >= 4:
-                pw = struct.unpack_from('<I', data, pos - 4)[0]
-                pop = (pw >> 26) & 0x3F
-                prs = (pw >> 21) & 0x1F
-                pimm = pw & 0xFFFF
-                if pop == 0x09 and prs == 0 and pimm == 2:
-                    is_fadein = True
+        if imm in (0x0028, 0x002A) and op in (0x25, 0x21, 0x29):
+            found = True
 
     # Scan FORWARD from sh 0x14
     for k in range(1, scan_range):
+        if found:
+            break
         pos = sh_pos + k * 4
         if pos + 4 > len(data):
             break
@@ -79,6 +64,8 @@ def has_opacity_access(data, sh_pos, base_reg, scan_range=80):
 
     # Scan BACKWARD from sh 0x14
     for k in range(1, scan_range):
+        if found:
+            break
         pos = sh_pos - k * 4
         if pos < 0:
             break
@@ -92,7 +79,7 @@ def has_opacity_access(data, sh_pos, base_reg, scan_range=80):
             break
         _check_word(pos)
 
-    return (has_028 or has_02A), is_fadein
+    return found
 
 
 def find_chest_patterns(data):
@@ -102,7 +89,6 @@ def find_chest_patterns(data):
     Step 1: Find self-decrement addiu $rt, $rt, -1 (not from $zero)
     Step 2: Find sh $rt, 0x14(<base>) within 1-3 instructions after
     Step 3: Verify +0x28 or +0x2A access on same base (chest opacity)
-    Step 4: Exclude fade-in patterns (state=2 write to +0x10)
     """
     matches = []
 
@@ -140,9 +126,7 @@ def find_chest_patterns(data):
                 base_reg = rs2
 
                 # Check for chest-specific opacity fields
-                has_opacity, is_fadein = has_opacity_access(data, pos, base_reg)
-
-                if has_opacity and not is_fadein:
+                if has_opacity_access(data, pos, base_reg):
                     matches.append({
                         'addiu_pos': i,
                         'sh_pos': pos,

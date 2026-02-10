@@ -12,7 +12,7 @@ This replaces the old patcher which targeted the spell SET table (6 copies at
 
 Supports modifying individual fields: damage, mp_cost, element, cast_prob, etc.
 
-Usage (standalone):  py -3 Data/monster_stats/patch_spell_table.py
+Usage (standalone):  py -3 Data/spells/patch_spell_table.py
 Usage (in build):    Called at step 7b
 """
 
@@ -22,7 +22,7 @@ import sys
 from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).parent
-CONFIG_FILE = SCRIPT_DIR / "monster_spells_config.json"
+CONFIG_FILE = SCRIPT_DIR / "spell_config.json"
 BLAZE_ALL = SCRIPT_DIR.parent.parent / "output" / "BLAZE.ALL"
 
 SPELL_TABLE_OFFSET = 0x908E68
