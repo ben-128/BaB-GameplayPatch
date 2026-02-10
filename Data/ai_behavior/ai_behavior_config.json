@@ -28,7 +28,7 @@
         },
         {
             "id": "test_C_aggressive_goblin",
-            "enabled": false,
+            "enabled": true,
             "_hypothesis": "offset 0x0A = roaming/idle timer? 634->0xFFFF (comme Wolf=65535). Si le Goblin arrete de se balader et attaque direct, c'est confirme.",
             "blaze_offset": "0xF7AAD8",
             "field_offset": "0x0A",

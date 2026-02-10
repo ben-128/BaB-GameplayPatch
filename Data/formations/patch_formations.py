@@ -822,12 +822,6 @@ def patch_monster_overrides(data, area, monster_db):
                 data[stat_offset:stat_offset + 16] = name_padded
                 changes.append("name='{}'".format(new_name))
 
-        # --- Type-07 VRAM offset and idx (standalone) ---
-        type07_vram = override.get("type07_vram")
-        type07_idx = override.get("type07_idx")
-        if (type07_vram or type07_idx is not None) and not replace_with:
-            _patch_type07(data, area, slot_idx, type07_vram, type07_idx, changes)
-
         # --- L value override (standalone) ---
         override_L = override.get("L")
         if override_L is not None and not replace_with:
@@ -840,17 +834,17 @@ def patch_monster_overrides(data, area, monster_db):
                     data[assign_off + 1] = new_L
                     changes.append("L={}".format(new_L))
 
-        # --- Animation table override (standalone) ---
-        anim_table_hex = override.get("animation_table")
-        if anim_table_hex and not replace_with:
-            _patch_animation_table(data, area, slot_idx, anim_table_hex, changes)
-
-        # --- 8-byte record overrides (anim_offset + texture_ref) ---
-        anim_offset_hex = override.get("anim_offset")
-        texture_ref_hex = override.get("texture_ref")
-        if (anim_offset_hex or texture_ref_hex) and not replace_with:
-            _patch_8byte_record(data, area, slot_idx, anim_offset_hex,
-                               texture_ref_hex, changes)
+        # --- Texture variant override (byte[2] of assignment entry) ---
+        tex_variant = override.get("tex_variant")
+        if tex_variant is not None and not replace_with:
+            assign_off = _find_assign_entry_offset(
+                data, group_offset, num_monsters, slot_idx)
+            if assign_off is not None:
+                new_tv = int(tex_variant)
+                old_tv = data[assign_off + 2]
+                if old_tv != new_tv:
+                    data[assign_off + 2] = new_tv
+                    changes.append("tex_variant={}".format(new_tv))
 
         if changes:
             changed += 1

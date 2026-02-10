@@ -671,120 +671,35 @@ function renderOverrides() {
       // Stats summary
       const statsInfo = document.createElement('div');
       statsInfo.style.cssText = 'font-size:0.8em;color:#53a8b6;margin-bottom:8px;';
-      statsInfo.innerHTML = '<strong>Texture Override:</strong> Use texture_ref + type07_vram from compatible monsters (same model type).<br><strong>Elite Stats:</strong> E-name prefix, HP x2, Magic x2, Armor x2, Dmg x1.5, armor_type=boss';
+      statsInfo.innerHTML = '<strong>Elite Stats:</strong> E-name prefix, HP x2, Magic x2, Armor x2, Dmg x1.5, armor_type=boss<br><strong>Tex Variant:</strong> 0=base, 1-5=alternate skin (same 3D model)';
       details.appendChild(statsInfo);
 
-      // Texture ref
-      const texRefRow = document.createElement('div');
-      texRefRow.className = 'override-row';
-      const texRefLbl = document.createElement('label');
-      texRefLbl.textContent = 'Texture ref';
-      const texRefInp = document.createElement('input');
-      texRefInp.type = 'text';
-      const origTexRef = getSlotTextureRef(si);
-      texRefInp.placeholder = origTexRef || '0x00000000';
-      texRefInp.value = ov.texture_ref || '';
-      texRefInp.addEventListener('input', () => {
-        ov.texture_ref = texRefInp.value || undefined;
-      });
-      texRefRow.appendChild(texRefLbl);
-      texRefRow.appendChild(texRefInp);
-      if (origTexRef) {
-        const origSpan = document.createElement('span');
-        origSpan.style.cssText = 'font-size:0.8em;color:#606070;';
-        origSpan.textContent = '(orig: ' + origTexRef + ')';
-        texRefRow.appendChild(origSpan);
-      }
-      details.appendChild(texRefRow);
-
-      // Type07 idx
-      const idxRow = document.createElement('div');
-      idxRow.className = 'override-row';
-      const idxLbl = document.createElement('label');
-      idxLbl.textContent = 'Type07 idx';
-      const idxInp = document.createElement('input');
-      idxInp.type = 'number';
-      idxInp.min = 0;
-      idxInp.max = 255;
-      const origIdx = getSlotType07Idx(si);
-      idxInp.placeholder = origIdx || '0';
-      idxInp.value = (ov.type07_idx !== undefined && ov.type07_idx !== null) ? ov.type07_idx : '';
-      idxInp.style.width = '70px';
-      idxInp.addEventListener('input', () => {
-        if (idxInp.value !== '') {
-          ov.type07_idx = parseInt(idxInp.value, 10);
+      // Texture variant (byte[2] of assignment entry)
+      const tvRow = document.createElement('div');
+      tvRow.className = 'override-row';
+      const tvLbl = document.createElement('label');
+      tvLbl.textContent = 'Tex variant';
+      const tvInp = document.createElement('input');
+      tvInp.type = 'number';
+      tvInp.min = 0;
+      tvInp.max = 255;
+      tvInp.placeholder = '0';
+      tvInp.value = (ov.tex_variant !== undefined && ov.tex_variant !== null) ? ov.tex_variant : '';
+      tvInp.style.width = '70px';
+      tvInp.addEventListener('input', () => {
+        if (tvInp.value !== '') {
+          ov.tex_variant = parseInt(tvInp.value, 10);
         } else {
-          delete ov.type07_idx;
+          delete ov.tex_variant;
         }
       });
-      idxRow.appendChild(idxLbl);
-      idxRow.appendChild(idxInp);
-      if (origIdx !== '') {
-        const origSpan = document.createElement('span');
-        origSpan.style.cssText = 'font-size:0.8em;color:#606070;';
-        origSpan.textContent = '(orig: ' + origIdx + ')';
-        idxRow.appendChild(origSpan);
-      }
-      details.appendChild(idxRow);
-
-      // VRAM offset (Type-07)
-      const vramRow = document.createElement('div');
-      vramRow.className = 'override-row';
-      const vramLbl = document.createElement('label');
-      vramLbl.textContent = 'Type07 VRAM';
-      const vramInp = document.createElement('input');
-      vramInp.type = 'text';
-      vramInp.placeholder = getSlotVram(si) || '0x0000';
-      vramInp.value = ov.type07_vram || '';
-      vramInp.style.width = '100px';
-      vramInp.addEventListener('input', () => {
-        ov.type07_vram = vramInp.value || undefined;
-      });
-      vramRow.appendChild(vramLbl);
-      vramRow.appendChild(vramInp);
-      // Show original VRAM hint (from this area or reference from same floor)
-      const t07 = (areaData.type07_entries || [])[si];
-      const directVram = t07 ? (t07.vram_offset || '') : '';
-      const refVram = (areaData.monster_vram_ref || {})[monsters[si]] || '';
-      if (directVram) {
-        const origSpan = document.createElement('span');
-        origSpan.style.cssText = 'font-size:0.8em;color:#606070;';
-        origSpan.textContent = '(orig: ' + directVram + ')';
-        vramRow.appendChild(origSpan);
-      } else if (refVram) {
-        const origSpan = document.createElement('span');
-        origSpan.style.cssText = 'font-size:0.8em;color:#505060;font-style:italic;';
-        origSpan.textContent = '(ref: ' + refVram + ')';
-        vramRow.appendChild(origSpan);
-      }
-      details.appendChild(vramRow);
-
-      // L value override
-      const lRow = document.createElement('div');
-      lRow.className = 'override-row';
-      const lLbl = document.createElement('label');
-      lLbl.textContent = 'L (model index)';
-      const lInp = document.createElement('input');
-      lInp.type = 'number';
-      lInp.min = 0;
-      lInp.max = 255;
-      lInp.placeholder = 'original';
-      lInp.value = (ov.L !== undefined && ov.L !== null) ? ov.L : '';
-      lInp.style.width = '70px';
-      lInp.addEventListener('input', () => {
-        if (lInp.value !== '') {
-          ov.L = parseInt(lInp.value, 10);
-        } else {
-          delete ov.L;
-        }
-      });
-      lRow.appendChild(lLbl);
-      lRow.appendChild(lInp);
-      const lHint = document.createElement('span');
-      lHint.style.cssText = 'font-size:0.75em;color:#606070;';
-      lHint.textContent = 'cross-floor L = texture glitch';
-      lRow.appendChild(lHint);
-      details.appendChild(lRow);
+      tvRow.appendChild(tvLbl);
+      tvRow.appendChild(tvInp);
+      const tvHint = document.createElement('span');
+      tvHint.style.cssText = 'font-size:0.75em;color:#606070;';
+      tvHint.textContent = '0=base, 1-5=reskin';
+      tvRow.appendChild(tvHint);
+      details.appendChild(tvRow);
 
       card.appendChild(details);
     }

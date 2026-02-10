@@ -1,22 +1,26 @@
 #!/usr/bin/env python3
 """
-Patch trap/environmental damage in BLAZE.ALL overlay code.
+Patch trap/environmental damage in BLAZE.ALL overlay code (v2).
 
-The game uses function 0x8008A3E4(entity, a1, a2, a3) in overlay code
-to apply stat modifications. Negative values = damage/debuff.
+The game uses function 0x80024F90 (in EXE) for percentage-based HP damage:
+  damage = (max_HP * damage_param) / 100
 
-This patcher finds all calls to 0x8008A3E4 with negative immediate args
-and applies a damage multiplier to increase (or decrease) trap damage.
+Overlay code calls this function with small hardcoded percentage values:
+  - 2% = falling rocks, environmental hits
+  - 5% = poison/periodic damage with timer
+
+This patcher finds all `jal 0x80024F90` callers in overlay code where $a1
+(the damage_param) is set to a small immediate value, and multiplies it.
+
+Data-driven callers (combat, using register values for $a1) are automatically
+skipped since they have no immediate value to patch.
 
 Configuration: trap_damage_config.json
   - enabled: true/false
-  - mode: "multiply" (scale damage) or "nop" (disable damage)
-  - damage_multiplier: float, e.g. 2.0 = double damage
+  - damage_multiplier: float, e.g. 5.0 = multiply trap percentages by 5
+  - max_original_param: int, only patch callers with param <= this (default 20)
 
 Runs at build step 7d (patches output/BLAZE.ALL before BIN injection).
-
-Usage (standalone):  py -3 Data/trap_damage/patch_trap_damage.py
-Usage (in build):    Called from build_gameplay_patch.bat
 """
 
 import struct
@@ -33,34 +37,45 @@ REGS = ['$zero','$at','$v0','$v1','$a0','$a1','$a2','$a3',
         '$s0','$s1','$s2','$s3','$s4','$s5','$s6','$s7',
         '$t8','$t9','$k0','$k1','$gp','$sp','$fp','$ra']
 
-NOP_WORD = 0x00000000
-
-# Stat modifier function: jal 0x8008A3E4
-STAT_MOD_RAM = 0x8008A3E4
-STAT_MOD_JAL = (0x03 << 26) | ((STAT_MOD_RAM >> 2) & 0x3FFFFFF)
+# Real damage function: 0x80024F90
+# Formula: damage = (max_HP * param%) / 100
+# JAL encoding: jal 0x80024F90 = 0x0C0093E4
+DAMAGE_FUNC_RAM = 0x80024F90
+DAMAGE_FUNC_JAL = (0x03 << 26) | ((DAMAGE_FUNC_RAM >> 2) & 0x3FFFFFF)
 
 # Search range in BLAZE.ALL overlay code
 OVERLAY_START = 0x00900000
 OVERLAY_END   = 0x02D00000
 
+# Sanity check bounds
+EXPECTED_MIN = 3
+EXPECTED_MAX = 300
 
-def find_all_damage_callers(data):
-    """Find all calls to 0x8008A3E4 with negative immediate args.
 
-    Returns list of {jal_offset, args: {idx: (value, instr_offset, type)}}.
+def find_trap_damage_callers(data, max_param=20):
+    """Find all calls to the damage function with small immediate $a1 values.
+
+    Searches for jal 0x80024F90 in overlay code, then checks if $a1 is set
+    to a small immediate value (1 to max_param) in the instructions before
+    the JAL or in its delay slot.
+
+    Data-driven callers (where $a1 comes from a register or memory) are
+    automatically skipped since no immediate value is found.
+
+    Returns list of {jal_offset, param_value, param_offset, param_type}.
     """
     callers = []
     end = min(OVERLAY_END, len(data) - 4)
 
     for i in range(OVERLAY_START, end, 4):
         word = struct.unpack_from('<I', data, i)[0]
-        if word != STAT_MOD_JAL:
+        if word != DAMAGE_FUNC_JAL:
             continue
 
-        # Found a JAL to stat_mod. Extract arg immediates.
-        args = {}
+        # Found a JAL to the damage function.
+        # Look for immediate $a1 ($5) setup within 10 instructions before.
+        a1_info = None
 
-        # Check 10 instructions before
         for j in range(1, 11):
             off = i - j * 4
             if off < OVERLAY_START:
@@ -72,60 +87,62 @@ def find_all_damage_callers(data):
             imm = w & 0xFFFF
             imms = imm if imm < 0x8000 else imm - 0x10000
 
-            if op == 0x09 and rs == 0 and 4 <= rt <= 7:  # addiu $aX, $zero, imm
-                idx = rt - 4
-                if idx not in args:
-                    args[idx] = (imms, off, 'addiu')
-            elif op == 0x0D and rs == 0 and 4 <= rt <= 7:  # ori $aX, $zero, imm
-                idx = rt - 4
-                if idx not in args:
-                    args[idx] = (imm, off, 'ori')
+            # addiu $a1, $zero, imm
+            if op == 0x09 and rs == 0 and rt == 5:
+                a1_info = (imms, off, 'addiu')
+                break
+            # ori $a1, $zero, imm
+            elif op == 0x0D and rs == 0 and rt == 5:
+                a1_info = (imm, off, 'ori')
+                break
+            # Stop at another JAL/JR (function boundary)
+            elif (w >> 26) == 0x03 or w == 0x03E00008:
+                break
+            # Stop if $a1 is set from a non-zero register (data-driven)
+            elif ((op == 0x09 or op == 0x0D) and rt == 5 and rs != 0):
+                break
+            # R-type writing to $a1 (move, addu, etc.)
+            elif op == 0x00 and ((w >> 11) & 0x1F) == 5:
+                break
 
-        # Check delay slot
-        ds_off = i + 4
-        if ds_off + 4 <= len(data):
-            w = struct.unpack_from('<I', data, ds_off)[0]
-            op = (w >> 26) & 0x3F
-            rs = (w >> 21) & 0x1F
-            rt = (w >> 16) & 0x1F
-            imm = w & 0xFFFF
-            imms = imm if imm < 0x8000 else imm - 0x10000
+        # Check delay slot if not found yet
+        if a1_info is None:
+            ds_off = i + 4
+            if ds_off + 4 <= len(data):
+                w = struct.unpack_from('<I', data, ds_off)[0]
+                op = (w >> 26) & 0x3F
+                rs = (w >> 21) & 0x1F
+                rt = (w >> 16) & 0x1F
+                imm = w & 0xFFFF
+                imms = imm if imm < 0x8000 else imm - 0x10000
 
-            if op == 0x09 and rs == 0 and 4 <= rt <= 7:
-                idx = rt - 4
-                if idx not in args:
-                    args[idx] = (imms, ds_off, 'addiu')
-            elif op == 0x0D and rs == 0 and 4 <= rt <= 7:
-                idx = rt - 4
-                if idx not in args:
-                    args[idx] = (imm, ds_off, 'ori')
+                if op == 0x09 and rs == 0 and rt == 5:
+                    a1_info = (imms, ds_off, 'addiu')
+                elif op == 0x0D and rs == 0 and rt == 5:
+                    a1_info = (imm, ds_off, 'ori')
 
-        # Check if any of $a1/$a2/$a3 are negative
-        has_neg = any(isinstance(args.get(idx, (None,))[0], int) and args.get(idx, (0,))[0] < 0
-                     for idx in [1, 2, 3])
+        if a1_info is None:
+            continue
 
-        if has_neg:
-            callers.append({
-                'jal_offset': i,
-                'args': args,
-            })
+        value, param_off, param_type = a1_info
+
+        # Filter: only small positive percentages (trap damage)
+        if value < 1 or value > max_param:
+            continue
+
+        callers.append({
+            'jal_offset': i,
+            'param_value': value,
+            'param_offset': param_off,
+            'param_type': param_type,
+        })
 
     return callers
 
 
-def make_li_instruction(reg_idx, value, use_addiu=True):
-    """Create addiu $aX, $zero, value."""
-    rt = reg_idx + 4  # $a0=4, $a1=5, etc.
-    if use_addiu:
-        imm = value & 0xFFFF
-        return (0x09 << 26) | (0 << 21) | (rt << 16) | imm
-    else:
-        return (0x0D << 26) | (0 << 21) | (rt << 16) | (value & 0xFFFF)
-
-
 def main():
-    print("  Trap Damage Patcher (BLAZE.ALL overlay code)")
-    print("  " + "-" * 45)
+    print("  Trap Damage Patcher v2 (real damage function)")
+    print("  " + "-" * 50)
 
     if not CONFIG_FILE.exists():
         print(f"  [SKIP] Config not found: {CONFIG_FILE.name}")
@@ -138,89 +155,96 @@ def main():
         print("  [SKIP] Trap damage patching disabled in config")
         return
 
-    mode = config.get("mode", "multiply")
-    multiplier = config.get("damage_multiplier", 2.0)
+    multiplier = config.get("damage_multiplier", 5.0)
+    max_param = config.get("max_original_param", 20)
 
-    print(f"  Mode: {mode}")
-    if mode == "multiply":
-        print(f"  Multiplier: {multiplier}x")
+    print(f"  Damage function: 0x{DAMAGE_FUNC_RAM:08X} (EXE)")
+    print(f"  JAL word: 0x{DAMAGE_FUNC_JAL:08X}")
+    print(f"  Multiplier: {multiplier}x")
+    print(f"  Max original param: {max_param}%")
 
     if not BLAZE_ALL.exists():
         print(f"  [ERROR] BLAZE.ALL not found: {BLAZE_ALL}")
         sys.exit(1)
 
     data = bytearray(BLAZE_ALL.read_bytes())
+    print(f"  BLAZE.ALL size: {len(data):,} bytes")
 
-    # Find all damage callers dynamically
-    callers = find_all_damage_callers(data)
-    print(f"  Found {len(callers)} damage calls to 0x{STAT_MOD_RAM:08X}")
+    # Count total JAL matches first (for diagnostics)
+    total_jals = 0
+    end = min(OVERLAY_END, len(data) - 4)
+    for i in range(OVERLAY_START, end, 4):
+        if struct.unpack_from('<I', data, i)[0] == DAMAGE_FUNC_JAL:
+            total_jals += 1
+    print(f"  Total jal 0x{DAMAGE_FUNC_RAM:08X} in overlays: {total_jals}")
+
+    # Find trap damage callers (with immediate $a1)
+    callers = find_trap_damage_callers(data, max_param)
+    print(f"  Trap callers (immediate $a1, param 1-{max_param}%): {len(callers)}")
 
     if not callers:
-        print("  [SKIP] No damage callers found (may already be patched)")
+        print("  [SKIP] No trap damage callers found")
         return
 
-    patched = 0
+    if len(callers) < EXPECTED_MIN:
+        print(f"  [WARNING] Only {len(callers)} callers (expected >= {EXPECTED_MIN})")
 
-    if mode == "nop":
-        # NOP all damage JAL calls
-        for caller in callers:
-            off = caller['jal_offset']
-            old_word = struct.unpack_from('<I', data, off)[0]
-
-            if old_word == NOP_WORD:
-                continue  # Already NOPed
-
-            if old_word != STAT_MOD_JAL:
-                print(f"  [WARN] 0x{off:08X}: expected JAL, got 0x{old_word:08X}")
-                continue
-
-            struct.pack_into('<I', data, off, NOP_WORD)
-
-            args_str = ', '.join(
-                f"$a{idx}={caller['args'][idx][0]}"
-                for idx in [1, 2, 3]
-                if idx in caller['args'] and isinstance(caller['args'][idx][0], int)
-            )
-            print(f"  [PATCH] NOP 0x{off:08X}: ({args_str})")
-            patched += 1
-
-    elif mode == "multiply":
-        # Multiply all negative arg values
-        for caller in callers:
-            for idx in [1, 2, 3]:
-                if idx not in caller['args']:
-                    continue
-                val, instr_off, instr_type = caller['args'][idx]
-                if not isinstance(val, int) or val >= 0:
-                    continue
-
-                new_val = int(val * multiplier)
-                new_val = max(-32768, min(-1, new_val))
-
-                # Verify the instruction is still what we expect
-                old_word = struct.unpack_from('<I', data, instr_off)[0]
-                old_op = (old_word >> 26) & 0x3F
-                old_rs = (old_word >> 21) & 0x1F
-                old_rt = (old_word >> 16) & 0x1F
-
-                if old_rs != 0 or old_rt != idx + 4:
-                    print(f"  [WARN] 0x{instr_off:08X}: instruction doesn't match expected pattern")
-                    continue
-
-                new_word = make_li_instruction(idx, new_val, use_addiu=(instr_type == 'addiu'))
-                struct.pack_into('<I', data, instr_off, new_word)
-                print(f"  [PATCH] 0x{instr_off:08X}: $a{idx} {val} -> {new_val}")
-                patched += 1
-
-    else:
-        print(f"  [ERROR] Unknown mode: {mode}")
+    if len(callers) > EXPECTED_MAX:
+        print(f"  [ERROR] Too many callers ({len(callers)} > {EXPECTED_MAX}) - aborting")
         sys.exit(1)
+
+    # Show summary by original value
+    by_value = {}
+    for c in callers:
+        v = c['param_value']
+        by_value[v] = by_value.get(v, 0) + 1
+
+    print()
+    for v in sorted(by_value):
+        new_v = min(99, int(v * multiplier))
+        print(f"    {by_value[v]:>3}x callers with param={v}% -> {new_v}%")
+
+    # Apply patches
+    patched = 0
+    print()
+
+    for c in callers:
+        old_val = c['param_value']
+        new_val = int(old_val * multiplier)
+        new_val = max(1, min(99, new_val))  # Clamp to valid percentage
+
+        param_off = c['param_offset']
+        param_type = c['param_type']
+
+        # Verify instruction is still what we expect
+        old_word = struct.unpack_from('<I', data, param_off)[0]
+        old_rs = (old_word >> 21) & 0x1F
+        old_rt = (old_word >> 16) & 0x1F
+
+        if old_rs != 0 or old_rt != 5:
+            print(f"  [WARN] 0x{param_off:08X}: unexpected registers "
+                  f"(rs={REGS[old_rs]}, rt={REGS[old_rt]})")
+            continue
+
+        # Build new instruction with updated immediate
+        if param_type == 'addiu':
+            new_word = (0x09 << 26) | (0 << 21) | (5 << 16) | (new_val & 0xFFFF)
+        else:  # ori
+            new_word = (0x0D << 26) | (0 << 21) | (5 << 16) | (new_val & 0xFFFF)
+
+        struct.pack_into('<I', data, param_off, new_word)
+        print(f"  [PATCH] 0x{param_off:08X}: $a1 = {old_val}% -> {new_val}% "
+              f"(jal at 0x{c['jal_offset']:08X})")
+        patched += 1
 
     if patched > 0:
         BLAZE_ALL.write_bytes(data)
-        print(f"  [OK] {patched} trap damage patch(es) applied to BLAZE.ALL")
-    else:
-        print("  [SKIP] No trap damage patches applied")
+
+    print()
+    print(f"  {'='*50}")
+    print(f"  {patched} trap damage patch(es) applied")
+    print(f"  Formula: damage = (maxHP * param%) / 100")
+    print(f"  {'='*50}")
 
 
 if __name__ == "__main__":

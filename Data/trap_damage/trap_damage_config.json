@@ -1,11 +1,12 @@
 {
   "_comment": [
-    "Trap/environmental damage modifier for BLAZE.ALL overlay code.",
-    "Targets all calls to stat modifier function 0x8008A3E4 with negative args.",
-    "These are believed to be trap damage effects (falling rocks, poison zones, etc.)",
-    "PENDING: In-game testing to confirm which callers are traps vs other effects."
+    "Patches trap/environmental damage callers in BLAZE.ALL overlay code.",
+    "Real damage function at EXE 0x80024F90: damage = (maxHP * param%) / 100.",
+    "Overlay callers with hardcoded percentages: 2% (falling rocks), 5% (poison/periodic).",
+    "Multiplier scales the percentage parameter. E.g. 5x: 2%->10%, 5%->25%.",
+    "max_original_param filters out large values (combat) - only patches param <= this."
   ],
   "enabled": true,
-  "mode": "multiply",
-  "damage_multiplier": 10.0
+  "damage_multiplier": 5.0,
+  "max_original_param": 20
 }
