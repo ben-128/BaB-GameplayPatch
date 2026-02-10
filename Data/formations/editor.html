@@ -547,7 +547,7 @@ function renderSpawnSection(groups, sectionId, containerId) {
 
 // --- Monster overrides (Elite system) ---
 
-let monsterOverrides = []; // per-slot: null or {elite: true, type07_vram: "0x...", L: 14}
+let monsterOverrides = []; // per-slot: null or {elite: true, tex_variant: 2, L: 14}
 
 function initOverrides() {
   const monsters = areaData.monsters || [];
@@ -733,9 +733,7 @@ function buildOutputJSON() {
     out.monster_overrides = monsterOverrides.map(o => {
       if (!o || !o.elite) return null;
       const clean = { elite: true };
-      if (o.texture_ref) clean.texture_ref = o.texture_ref;
-      if (o.type07_idx !== undefined && o.type07_idx !== null) clean.type07_idx = o.type07_idx;
-      if (o.type07_vram) clean.type07_vram = o.type07_vram;
+      if (o.tex_variant !== undefined && o.tex_variant !== null) clean.tex_variant = o.tex_variant;
       if (o.L !== undefined && o.L !== null) clean.L = o.L;
       return clean;
     });
