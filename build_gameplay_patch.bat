@@ -333,23 +333,6 @@ call :log "[OK] Monster spell assignments processed"
 call :log ""
 
 REM ========================================================================
-REM Step 9d: Patch trap damage global multiplier in EXE (inside BIN)
-REM ========================================================================
-call :log "[9d/10] Patching trap damage EXE global multiplier..."
-call :log ""
-
-py -3 Data\trap_damage\patch_trap_damage_exe.py >> "%LOGFILE%" 2>&1
-if errorlevel 1 (
-    call :log ""
-    call :log "[ERROR] Trap damage EXE patch failed!"
-    goto :error
-)
-
-call :log ""
-call :log "[OK] Trap damage EXE processed"
-call :log ""
-
-REM ========================================================================
 REM Step 10: Update documentation
 REM ========================================================================
 call :log "[10/10] Updating documentation..."

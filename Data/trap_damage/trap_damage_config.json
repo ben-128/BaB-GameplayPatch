@@ -1,10 +1,8 @@
 {
   "_comment": [
-    "overlay_patches: remplacement exact des callers hardcodes dans le code overlay.",
+    "overlay_patches: remplacement exact des callers hardcodes + GPE entity init.",
     "  Format: 'original%': patched%. Toute valeur non listee reste inchangee.",
-    "exe_global: modifie la division dans l'EXE pour affecter TOUS les callers (189),",
-    "  y compris les callers data-driven (cailloux). shift: 5=/100(normal), 4=/50(x2), 3=/25(x4).",
-    "  ATTENTION: les deux se cumulent. effective = overlay_value * exe_multiplier."
+    "  Pass 1: 15 jal callers directs. Pass 2: 95 GPE entity init (rochers, pieges)."
   ],
   "overlay_patches": {
     "enabled": true,
@@ -15,10 +13,5 @@
       "10": 40,
       "20": 60
     }
-  },
-  "exe_global": {
-    "enabled": false,
-    "shift": 5,
-    "_comment": "shift 5 = /100 (normal), shift 4 = /50 (x2 all damage), shift 3 = /25 (x4). DESACTIVE: affecte TOUS les degats y compris combat."
   }
 }
