@@ -57,5 +57,11 @@
     "stat16_elem_divine_malefic": 0,
     "_stat16_elem_divine_malefic_comment": "[Défaut: 0] Dégâts élémentaires: Divin/Maléfique"
   },
-  "id": 74
+  "id": 74,
+  "spell_info": {
+    "caster_type": "monster_abilities",
+    "spell_list": 7,
+    "_note": "Uses monster-only abilities (breaths, eyes, etc.), not offensive spell list",
+    "stat4_magic": 286
+  }
 }

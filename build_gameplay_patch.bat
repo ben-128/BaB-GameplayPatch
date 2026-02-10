@@ -263,6 +263,23 @@ call :log "[OK] Trap damage processed"
 call :log ""
 
 REM ========================================================================
+REM Step 7e: Patch monster spell bitfield in BLAZE.ALL overlay code
+REM ========================================================================
+call :log "[7e/10] Patching monster spell bitfield in overlay code..."
+call :log ""
+
+py -3 Data\monster_stats\patch_monster_spells.py >> "%LOGFILE%" 2>&1
+if errorlevel 1 (
+    call :log ""
+    call :log "[ERROR] Monster spell bitfield patch failed!"
+    goto :error
+)
+
+call :log ""
+call :log "[OK] Monster spell bitfield processed"
+call :log ""
+
+REM ========================================================================
 REM Step 8: Create fresh patched BIN from clean original
 REM ========================================================================
 call :log "[8/10] Creating fresh patched BIN from clean original..."
@@ -316,20 +333,9 @@ if "%PATCH_LOOT_TIMER%"=="1" (
 call :log ""
 
 REM ========================================================================
-REM Step 9c: Patch monster spell assignments in SLES (EXE inside BIN)
+REM Step 9c: (Moved to 7e - monster spell bitfield now patches BLAZE.ALL)
 REM ========================================================================
-call :log "[9c/10] Patching monster spell assignments in EXE..."
-call :log ""
-
-py -3 Data\monster_stats\patch_monster_spells.py >> "%LOGFILE%" 2>&1
-if errorlevel 1 (
-    call :log ""
-    call :log "[ERROR] Monster spell assignment patch failed!"
-    goto :error
-)
-
-call :log ""
-call :log "[OK] Monster spell assignments processed"
+call :log "[9c/10] Monster spell bitfield: already patched in BLAZE.ALL at step 7e"
 call :log ""
 
 REM ========================================================================

@@ -1060,6 +1060,12 @@
       "offset": "0xF7C904"
     }
   ],
+  "monster_overrides": [
+    null,
+    null,
+    null
+  ],
+  "_monster_overrides_doc": "slot 0=Lv20.Goblin, slot 1=Goblin-Shaman, slot 2=Giant-Bat. Set L to change AI behavior index, tex_variant for reskin (0-5), stats for stat mods.",
   "slot_types": [
     "00000000",
     "00000000",

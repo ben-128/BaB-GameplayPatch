@@ -1,128 +1,194 @@
 #!/usr/bin/env python3
+# -*- coding: cp1252 -*-
 """
-Patch monster spell assignments in the game BIN.
+Patch monster spell bitfield init in output/BLAZE.ALL overlay code.
 
-Reads config from monster_spells_config.json and patches the SLES_008.45
-executable inside the output BIN to change which spell table entries
-monsters use when casting spells.
+The overlay init code writes entity+0x160 (spell availability bitfield) during
+monster spawn. Original code sets byte 0 = 1 (only Fire Bullet) and clears
+bytes 1-3. The level-up simulation then adds more bits based on monster level.
 
-This modifies the initialization code that maps spell-casting bytecode
-opcodes to spell table entries loaded from BLAZE.ALL.
+This patcher modifies the init code to write a custom 4-byte value, giving ALL
+monsters in the zone the specified spell bitfield as a starting point.
 
-Usage (standalone):  py -3 patch_monster_spells.py
-Usage (in build):    Called as step 9c from build_gameplay_patch.bat
+There are two init patterns in BLAZE.ALL:
+  - "verbose": loads entity ptr from RAM each time (overlay-specific init)
+  - "compact": uses saved register $s5 (shared entity init)
+
+This patcher handles the "verbose" pattern found in zone overlays.
+
+NOTE: This replaces the old patcher which incorrectly patched EXE address
+0x8002BE38 (CD-ROM DMA code) instead of the actual spell assignment.
+
+Usage (standalone):  py -3 Data/monster_stats/patch_monster_spells.py
+Usage (in build):    Called at step 9c (patches BLAZE.ALL, not BIN)
 """
 
 import json
+import struct
 import sys
 from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).parent
 CONFIG_FILE = SCRIPT_DIR / "monster_spells_config.json"
-BIN_PATH = SCRIPT_DIR.parent.parent / "output" / "Blaze & Blade - Patched.bin"
+BLAZE_ALL = SCRIPT_DIR.parent.parent / "output" / "BLAZE.ALL"
 
-# Stable search patterns (bytes AFTER the spell index byte)
-# We search for the 11 stable bytes, then patch the byte right before them.
-#
-# Type 0x18 (Goblin-Shaman) at RAM 0x8002B638:
-#   [INDEX] 00 06 34  00 00 46 A4  18 00 05 34
-#   ori $a2,$zero,INDEX / sh $a2,0($v0) / ori $a1,$zero,0x18
-#
-# Type 0x12 at RAM 0x8002A790:
-#   [INDEX] 00 05 34  00 00 45 A4  12 00 04 34
-#   ori $a1,$zero,INDEX / sh $a1,0($v0) / ori $a0,$zero,0x12
+# MIPS instruction builders
+def mips_ori(rt, rs, imm):
+    """ori rt, rs, imm"""
+    return (0x0D << 26) | (rs << 21) | (rt << 16) | (imm & 0xFFFF)
 
-PATCHES = {
-    "goblin_shaman": {
-        "stable_suffix": bytes([0x00, 0x06, 0x34,
-                                0x00, 0x00, 0x46, 0xA4,
-                                0x18, 0x00, 0x05, 0x34]),
-        "default_index": 6,
-        "label": "Goblin-Shaman (opcode 0x18)",
-    },
-    "type_0x12_caster": {
-        "stable_suffix": bytes([0x00, 0x05, 0x34,
-                                0x00, 0x00, 0x45, 0xA4,
-                                0x12, 0x00, 0x04, 0x34]),
-        "default_index": 4,
-        "label": "Type 0x12 caster",
-    },
-}
+def mips_sb(rt, offset, base):
+    """sb rt, offset(base)"""
+    return (0x28 << 26) | (base << 21) | (rt << 16) | (offset & 0xFFFF)
+
+REG_ZERO = 0
+REG_V1 = 3
+
+
+def patch_verbose_site(data, offsets, bf_bytes):
+    """Patch a verbose init site (loads entity ptr from RAM each time).
+
+    The verbose pattern is:
+      ori $v1, $zero, 0x0001         @ byte0_ori
+      sb $v1, 0x0160($v0)            @ byte0_sb
+      ... (reload $v0) ...
+      nop                            @ byte1_nop
+      sb $zero, 0x0161($v0)          @ byte1_sb
+      ... (reload $v0) ...
+      nop                            @ byte2_nop
+      sb $zero, 0x0162($v0)          @ byte2_sb
+      ... (reload $v0) ...
+      nop                            @ byte3_nop
+      sb $zero, 0x0163($v0)          @ byte3_sb
+
+    We patch:
+      - byte0_ori: change immediate to bf_bytes[0]
+      - byte1_nop: change to ori $v1, $zero, bf_bytes[1]
+      - byte1_sb:  change rt from $zero to $v1
+      - byte2_nop: change to ori $v1, $zero, bf_bytes[2]
+      - byte2_sb:  change rt from $zero to $v1
+      - byte3_nop: change to ori $v1, $zero, bf_bytes[3]
+      - byte3_sb:  change rt from $zero to $v1
+    """
+    changes = []
+
+    # Patch byte 0: change ori immediate
+    off = int(offsets["byte0_ori"], 16)
+    old = struct.unpack_from('<I', data, off)[0]
+    new = mips_ori(REG_V1, REG_ZERO, bf_bytes[0])
+    if old != new:
+        if (old >> 26) != 0x0D:
+            return None, "byte0_ori at 0x{:X}: not an ori (got 0x{:08X})".format(off, old)
+        struct.pack_into('<I', data, off, new)
+        changes.append("byte0_ori: 0x{:02X}".format(bf_bytes[0]))
+
+    # Patch bytes 1-3
+    for i, suffix in enumerate(["1", "2", "3"]):
+        nop_key = "byte{}_nop".format(suffix)
+        sb_key = "byte{}_sb".format(suffix)
+
+        nop_off = int(offsets[nop_key], 16)
+        sb_off = int(offsets[sb_key], 16)
+
+        # Patch nop -> ori $v1, $zero, value
+        old_nop = struct.unpack_from('<I', data, nop_off)[0]
+        new_ori = mips_ori(REG_V1, REG_ZERO, bf_bytes[i + 1])
+        if old_nop != new_ori:
+            if old_nop != 0 and (old_nop >> 26) != 0x0D:
+                return None, "byte{}_nop at 0x{:X}: not nop/ori (got 0x{:08X})".format(
+                    suffix, nop_off, old_nop)
+            struct.pack_into('<I', data, nop_off, new_ori)
+            changes.append("byte{}_nop->ori 0x{:02X}".format(suffix, bf_bytes[i + 1]))
+
+        # Patch sb: change rt from $zero to $v1
+        old_sb = struct.unpack_from('<I', data, sb_off)[0]
+        if (old_sb >> 26) != 0x28:
+            return None, "byte{}_sb at 0x{:X}: not an sb (got 0x{:08X})".format(
+                suffix, sb_off, old_sb)
+
+        expected_offset = 0x0161 + i
+        sb_imm = old_sb & 0xFFFF
+        if sb_imm != expected_offset:
+            return None, "byte{}_sb: offset 0x{:04X} != expected 0x{:04X}".format(
+                suffix, sb_imm, expected_offset)
+
+        rs = (old_sb >> 21) & 0x1F
+        new_sb = mips_sb(REG_V1, expected_offset, rs)
+        if old_sb != new_sb:
+            struct.pack_into('<I', data, sb_off, new_sb)
+            changes.append("byte{}_sb: $zero->$v1".format(suffix))
+
+    return changes, None
 
 
 def main():
-    print("  Monster Spell Assignment Patcher")
-    print("  " + "-" * 40)
+    print("  Monster Spell Bitfield Patcher (BLAZE.ALL overlay)")
+    print("  " + "-" * 50)
 
-    # Load config
     if not CONFIG_FILE.exists():
-        print(f"  [SKIP] Config not found: {CONFIG_FILE.name}")
+        print("  [SKIP] Config not found: {}".format(CONFIG_FILE.name))
         return
 
     with open(CONFIG_FILE, "r", encoding="utf-8") as f:
         config = json.load(f)
 
-    # Check if anything is enabled
-    any_enabled = False
-    for key in PATCHES:
-        entry = config.get(key, {})
-        if entry.get("enabled", False):
-            any_enabled = True
-
-    if not any_enabled:
-        print("  [SKIP] No spell patches enabled in config")
-        print("  Edit monster_spells_config.json to enable patches")
+    section = config.get("overlay_bitfield_patches", {})
+    if not section.get("enabled", False):
+        print("  [SKIP] overlay_bitfield_patches not enabled")
         return
 
-    # Check BIN exists
-    if not BIN_PATH.exists():
-        print(f"  [ERROR] BIN not found: {BIN_PATH}")
+    patches = section.get("patches", [])
+    if not patches:
+        print("  [SKIP] No patches defined")
+        return
+
+    if not BLAZE_ALL.exists():
+        print("  [ERROR] BLAZE.ALL not found: {}".format(BLAZE_ALL))
         sys.exit(1)
 
-    # Read BIN
-    data = bytearray(BIN_PATH.read_bytes())
-    patched_count = 0
+    data = bytearray(BLAZE_ALL.read_bytes())
+    applied = 0
 
-    for key, patch_info in PATCHES.items():
-        entry = config.get(key, {})
-        if not entry.get("enabled", False):
+    for patch in patches:
+        if not patch.get("enabled", False):
             continue
 
-        new_index = entry.get("spell_index", patch_info["default_index"])
-        label = patch_info["label"]
-        suffix = patch_info["stable_suffix"]
+        zone = patch.get("zone", "unknown")
+        bf_hex = patch.get("bitfield_value", "0x00000001")
+        bf_value = int(bf_hex, 16)
+        bf_bytes = [
+            bf_value & 0xFF,
+            (bf_value >> 8) & 0xFF,
+            (bf_value >> 16) & 0xFF,
+            (bf_value >> 24) & 0xFF,
+        ]
 
-        if new_index < 0 or new_index > 15:
-            print(f"  [ERROR] {label}: index {new_index} out of range (0-15)")
+        # Offsets are in _internal_do_not_modify (new format) or offsets (old format)
+        internal = patch.get("_internal_do_not_modify", {})
+        offsets = patch.get("offsets", internal)
+        patch_type = offsets.get("type", patch.get("type", "verbose"))
+
+        if patch_type == "verbose":
+            changes, error = patch_verbose_site(data, offsets, bf_bytes)
+            if error:
+                print("  [ERROR] {}: {}".format(zone, error))
+                sys.exit(1)
+            if changes:
+                print("  [PATCH] {}: bitfield=0x{:08X}".format(zone, bf_value))
+                for c in changes:
+                    print("    {}".format(c))
+                applied += 1
+            else:
+                print("  [OK] {}: already patched to 0x{:08X}".format(zone, bf_value))
+        else:
+            print("  [ERROR] Unknown patch type '{}'".format(patch_type))
             sys.exit(1)
 
-        # Search for the stable suffix in the BIN
-        hits = []
-        pos = 0
-        while True:
-            found = data.find(suffix, pos)
-            if found == -1:
-                break
-            # The spell index byte is at found-1
-            if found >= 1:
-                hits.append(found - 1)
-            pos = found + 1
-
-        if not hits:
-            print(f"  [ERROR] {label}: pattern not found in BIN!")
-            sys.exit(1)
-
-        for hit in hits:
-            old_val = data[hit]
-            data[hit] = new_index
-            print(f"  [PATCH] {label}: index {old_val} -> {new_index} at BIN offset 0x{hit:08X}")
-            patched_count += 1
-
-    if patched_count > 0:
-        BIN_PATH.write_bytes(data)
-        print(f"  [OK] {patched_count} spell patch(es) applied to BIN")
+    if applied > 0:
+        BLAZE_ALL.write_bytes(data)
+        print("  [OK] {} overlay bitfield patch(es) applied".format(applied))
     else:
-        print("  [SKIP] No patches applied")
+        print("  [SKIP] No overlay bitfield patches applied")
 
 
 if __name__ == "__main__":

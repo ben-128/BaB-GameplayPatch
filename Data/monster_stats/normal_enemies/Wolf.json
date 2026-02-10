@@ -63,5 +63,10 @@
       "R": 11,
       "slot_type": "00000000"
     }
+  },
+  "spell_info": {
+    "caster_type": "melee_only",
+    "_note": "Does not cast spells (melee/physical only)",
+    "stat4_magic": 40
   }
 }

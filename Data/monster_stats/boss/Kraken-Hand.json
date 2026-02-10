@@ -60,5 +60,31 @@
       "R": 2,
       "slot_type": "00000000"
     }
+  },
+  "spell_info": {
+    "caster_type": "offensive_spells",
+    "spell_list": 0,
+    "_how_it_works": [
+      "1. Overlay init sets bitfield = 0x01 (FireBullet only) for ALL monsters in zone",
+      "2. Level-up simulation then ADDS more bits (tiers) based on monster level",
+      "3. Final runtime bitfield = init + level-up additions",
+      "4. Only monsters whose AI includes spell-casting actually use it"
+    ],
+    "_how_to_modify": [
+      "ZONE-WIDE (all monsters in zone get same spells):",
+      "  Edit: Data/monster_stats/monster_spells_config.json",
+      "  Section: overlay_bitfield_patches",
+      "  Set bitfield_value to choose which spells (see MONSTER_SPELLS.md for bit table)",
+      "",
+      "SPELL STATS (damage, mp, element - affects ALL casters):",
+      "  Edit: Data/monster_stats/monster_spells_config.json",
+      "  Section: spell_definition_overrides",
+      "",
+      "PER-MONSTER: NOT YET POSSIBLE",
+      "  The overlay init code has only 1 bitfield per zone.",
+      "  Giving Shaman different spells than Goblin requires decoding",
+      "  the level-up simulation (computed addresses, not yet reversed)."
+    ],
+    "stat4_magic": 650
   }
 }

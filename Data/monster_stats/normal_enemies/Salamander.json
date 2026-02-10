@@ -65,5 +65,11 @@
     "Hall of Demons/Floor 1": {
       "slot_type": "00000000"
     }
+  },
+  "spell_info": {
+    "caster_type": "monster_abilities",
+    "spell_list": 7,
+    "_note": "Uses monster-only abilities (breaths, eyes, etc.), not offensive spell list",
+    "stat4_magic": 0
   }
 }

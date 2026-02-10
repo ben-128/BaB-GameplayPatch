@@ -61,5 +61,10 @@
       "slot_type": "00000000",
       "type07_vram": "0x0230"
     }
+  },
+  "spell_info": {
+    "caster_type": "melee_only",
+    "_note": "Does not cast spells (melee/physical only)",
+    "stat4_magic": 24
   }
 }

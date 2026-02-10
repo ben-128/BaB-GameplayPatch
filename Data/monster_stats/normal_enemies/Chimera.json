@@ -75,5 +75,11 @@
       "slot_type": "00000000",
       "type07_vram": "0x33F6"
     }
+  },
+  "spell_info": {
+    "caster_type": "monster_abilities",
+    "spell_list": 7,
+    "_note": "Uses monster-only abilities (breaths, eyes, etc.), not offensive spell list",
+    "stat4_magic": 130
   }
 }
