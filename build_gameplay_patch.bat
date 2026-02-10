@@ -246,6 +246,23 @@ call :log "[OK] AI behavior blocks processed"
 call :log ""
 
 REM ========================================================================
+REM Step 7d: Patch trap/environmental damage in BLAZE.ALL
+REM ========================================================================
+call :log "[7d/10] Patching trap damage in BLAZE.ALL..."
+call :log ""
+
+py -3 Data\trap_damage\patch_trap_damage.py >> "%LOGFILE%" 2>&1
+if errorlevel 1 (
+    call :log ""
+    call :log "[ERROR] Trap damage patch failed!"
+    goto :error
+)
+
+call :log ""
+call :log "[OK] Trap damage processed"
+call :log ""
+
+REM ========================================================================
 REM Step 8: Create fresh patched BIN from clean original
 REM ========================================================================
 call :log "[8/10] Creating fresh patched BIN from clean original..."

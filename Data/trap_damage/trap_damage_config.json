@@ -1,0 +1,11 @@
+{
+  "_comment": [
+    "Trap/environmental damage modifier for BLAZE.ALL overlay code.",
+    "Targets all calls to stat modifier function 0x8008A3E4 with negative args.",
+    "These are believed to be trap damage effects (falling rocks, poison zones, etc.)",
+    "PENDING: In-game testing to confirm which callers are traps vs other effects."
+  ],
+  "enabled": true,
+  "mode": "multiply",
+  "damage_multiplier": 10.0
+}
