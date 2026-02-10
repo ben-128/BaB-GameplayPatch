@@ -90,33 +90,99 @@ This is a table of bytecode program offsets (NOT parameter values).
 Repeating 32-byte records with identical bytes 12-31 across rows.
 ```
 
+## Root[5+] Analysis (2026-02-10) - NOT Bytecode
+
+**UPDATE: root[5+] offset tables do NOT contain bytecode program references.**
+
+Dumped all root[5..11] entries for Cavern F1 Area1. Findings:
+
+### Offset Table Structure (root[5..9])
+- Format: uint32 LE arrays of script-relative offsets
+- root[5]: 25 entries (offsets 0x1D74-0x219C + 4 header values + NULLs)
+- root[6]: 17 entries (offsets 0x21D4-0x24D4, evenly spaced ~0x30-0x50 apart)
+- root[7]: 33 entries (offsets 0x24F8-0x2B30, evenly spaced)
+- root[8]: 33 entries (offsets 0x2B50-0x2E70)
+- root[9]: 25 entries (mixed: area-specific 0x2E8F-0x2EDD + global shared pairs + small offsets)
+
+### What root[5+] Actually Points To
+The offsets resolve to **32-byte entity/spawn placement records** with:
+- 3D coordinates (signed int16 LE: X, Y, Z)
+- Direction/facing values
+- FFFFFFFF group separators
+- 0B command markers
+- Reference indices
+
+**This is NOT bytecode.** The data contains byte values (0xB4, 0xFE, 0x63, etc.) that are
+far outside the valid opcode range (0x00-0x3E for 63 opcodes). The repeating 32-byte
+record structure with coordinate patterns confirms these are spatial/spawn data tables.
+
+### root[9] "Globally Shared Pairs" Explained
+Entries 12-17 of root[9] are paired offsets:
+```
+[12]=0x0AD1  [13]=0x2294  (pair 1)
+[14]=0x0AD6  [15]=0x2174  (pair 2)
+[16]=0x0ADB  [17]=0x1184  (pair 3)
+```
+Both members of each pair point to spawn placement records, not bytecode.
+
+### root[10..11] = 0B Command Records (confirmed)
+- Contain [XX 0B YY 00] headers + coordinates + FFFFFFFF separators
+- These are spawn/placement commands, same format as formation records
+
+## Corrected Script Area Map
+```
+Root entry   | Data type                    | Status
+-------------|------------------------------|--------
+root[0..3]   | Zone/camera config           | CONFIRMED (camera height at +0x06)
+root[4]      | Config/model table           | Identified
+root[5..9]   | Entity placement tables      | CONFIRMED (NOT bytecode)
+root[10..11] | 0B command records (spawns)   | CONFIRMED
+```
+
+**All root table entries are spatial/config data. None contain bytecode programs.**
+
 ## Where Is The Real Monster AI?
 
-### Candidates (from SPAWN_MODDING_RESEARCH.md):
+### Eliminated candidates:
+- ~~root[0..3] blocks~~ = zone/camera config (IN-GAME TESTED)
+- ~~root[5+] offset tables~~ = entity placement data (DUMP CONFIRMED 2026-02-10)
+- ~~96-byte entries~~ = name + stats only (19 swap tests)
+- ~~R field~~ = no effect (tested)
+- ~~Type-8 bytecode region~~ = room scripts, crashes when zeroed
 
-1. **EXE State Machine at 0x8003B324** (32 entries)
-   - Handles: idle, move, attack, cast states per frame
-   - Dispatched by function at 0x80017F2C
-   - This is likely where attack timing, detection range, etc. are coded
+### Remaining candidates:
+
+1. **EXE State Machine at 0x8003B324** (32 entries) - STRONGEST CANDIDATE
+   - Dispatched by function at 0x80017B6C (2304-byte stack frame)
+   - Entity struct fields: timer at $s2+0x8C6, flags at $s2+0x8C7
+   - State handlers control per-frame AI: idle/chase/attack/cast
+   - **AI timing/speed likely hardcoded in these EXE handlers**
 
 2. **EXE Combat Actions at 0x8003C1B0** (55 entries)
    - Specific combat action implementations (0x800270B8-0x80029E80)
    - Entity type -> action handler index mapping
 
-3. **Bytecode Programs at root[5+]** (per-area + global shared)
-   - Offset tables with values 0x1000-0x4FF0
-   - Interpreted by 0x8001A03C with 63 opcodes
-   - Only 5/63 opcodes decoded (0x00, 0x01, 0x02, 0x18, 0x19, 0xFF)
+3. **Bytecode Interpreter at 0x8001A03C** (63 opcodes at 0x8003BDE0)
+   - May run room scripts, NOT monster AI
+   - Opcodes: 0x00=call_secondary, 0x01=GOTO, 0x18=add_spell, 0x19=remove_spell
 
 4. **Secondary Function Table at 0x800BF184**
    - Called by opcode 0x00
    - Purpose unknown
 
+### Key insight: AI is likely in EXE code, NOT data
+The script area contains zone config, spawn placement, and room scripts.
+Monster AI behavior appears to be primarily controlled by **EXE state machine handlers**
+at 0x8003B324, with the L field determining which entity spawn config is loaded.
+AI parameters (attack speed, detection range, cooldowns) are likely hardcoded
+in the MIPS assembly of individual state handlers.
+
 ### What To Try Next
-- **Savestate approach**: Make 2 savestates (idle vs attacking), diff RAM to find AI state variables
-- **EXE state machine tracing**: Disassemble handlers at 0x8003B324 to find timer/speed logic
-- **Bytecode opcode decoding**: Decode more of the 63 opcodes to understand AI programs
-- **Memory watch**: Use ePSXe debugger to watch which RAM addresses change when Goblin attacks
+- **Disassemble EXE state handlers**: Focus on the 32 handlers at 0x8003B324 to find
+  timer/speed constants. These are the most likely location of AI behavior code.
+- **Savestate approach**: Compare savestates with monsters in different AI states
+  (idle vs chasing vs attacking) to identify entity struct AI fields
+- **Memory watch**: Use ePSXe debugger to watch entity struct changes during combat
 
 ## Tools
 

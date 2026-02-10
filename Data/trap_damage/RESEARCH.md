@@ -36,14 +36,11 @@ damage = (maxHP * damage_param) / 100
 
 ---
 
-## Callers in BLAZE.ALL Overlay Code
+## Two Types of Trap Damage Code
 
-### Statistics
-- **189 total** `jal 0x80024F90` across all overlay regions
-- **15 with hardcoded immediate $a1** (patchable by overlay patcher)
-- **174 with register-based $a1** (data-driven, NOT patchable by overlay patcher)
+### Type 1: Direct JAL callers (Pass 1)
 
-### Hardcoded Callers (overlay patcher patches these)
+Overlay code calls `jal 0x80024F90` with `$a1` set to an immediate value.
 
 | Count | Original % | Description |
 |-------|-----------|-------------|
@@ -53,88 +50,97 @@ damage = (maxHP * damage_param) / 100
 | 3 | 10% | Heavy traps |
 | 1 | 20% | Very heavy trap |
 
-Found across 7+ overlay regions:
-- 0x0093xxxx (Cavern of Death)
-- 0x0178xxxx, 0x0270xxxx, 0x0278xxxx
-- 0x027Fxxxx, 0x0289xxxx, 0x028Fxxxx
-- 0x0296xxxx, 0x02B7xxxx
-
-### Data-Driven Callers (NOT patched by overlay patcher)
-
-These load $a1 from a register ($s7, $s6, etc.), not from an immediate.
-The damage value comes from entity data loaded at runtime.
-
-**Example: Cavern of Death falling rocks (10%)**
-
+**15 total** across 7+ overlay regions. Pattern:
 ```
-Function at BLAZE+0x009ED00C:
-  0x009ED014: lhu  $s7, 72($sp)   ; damage_param from stack arg (= 10)
-  0x009ED01C: lhu  $s5, 76($sp)   ; damage_type from stack arg
-  0x009ED024: addu $s6, $a2, $zero ; another param from $a2
-  ...
-  0x009ED160: sll  $a1, $s7, 16   ; sign-extend $s7 -> $a1
-  0x009ED168: sra  $a1, $a1, 16
-  0x009ED16C: jal  0x80024F90     ; call damage function
+addiu/ori $a1, $zero, N    ; $a1 = damage%
+...
+jal   0x80024F90           ; call damage function
 ```
 
-The 10% value is passed as a **function argument** through the stack.
-It originates from higher-level code that reads entity/area data.
-Cannot be patched by simply changing an immediate value in overlay code.
+### Type 2: GPE Entity Init (Pass 2) - DECODED 2026-02-10
 
-#### Cavern Overlay - All 9 callers to 0x80024F90
+GPE entities (falling rocks, heavy traps) store damage% to **entity+0x14**
+during state transitions. The function at 0x009ED00C later reads entity+0x14
+and passes it to the damage function via register (data-driven caller).
 
-| # | BLAZE Offset | $a1 Source | Value | Type |
-|---|-------------|-----------|-------|------|
-| 1 | 0x00936E60 | immediate `ori $a1, $zero, N` | 2% (now 10%) | Hardcoded - PATCHED |
-| 2 | 0x00937C28 | immediate `ori $a1, $zero, N` | 2% (now 10%) | Hardcoded - PATCHED |
-| 3 | 0x0093C004 | immediate `ori $a1, $zero, N` | 5% (now 25%) | Hardcoded - PATCHED |
-| 4 | 0x009ED16C | register `sll/sra $a1, $s7` | 10%? | Data-driven (stack arg) |
-| 5 | 0x009ED748 | register `sll/sra $a1, $s6` | ?? | Data-driven (function arg) |
-| 6 | 0x009F3608 | register `sll/sra $a1, $s-reg` | ?? | Data-driven |
-| 7 | 0x009F3BE4 | register `sll/sra $a1, $s-reg` | ?? | Data-driven |
-| 8 | 0x009FBE8C | register `sll/sra $a1, $s-reg` | ?? | Data-driven |
-| 9 | 0x009FC468 | register `sll/sra $a1, $s-reg` | ?? | Data-driven |
+**Pattern:**
+```
+ori/addiu $v0, $zero, N     ; damage% (10 or 20)
+sh  $v0, 0x14($s5)          ; store to GPE entity field
+```
+
+**Entity structure for GPE traps:**
+- `entity+0x10` (uint16): State code (101 = damage phase)
+- `entity+0x12` (uint16): Timer/counter
+- `entity+0x14` (uint16): **Damage percentage** (10%, 20%)
+- `entity+0x16` (uint16): **Damage type** (1=physical, 0=other)
+
+**Cross-overlay scan results (all 28 dungeon overlays):**
+
+| Count | Value | Description |
+|-------|-------|-------------|
+| 11 | 2% | Light GPE entity damage |
+| 28 | 10% | Standard GPE damage (1 per overlay) |
+| 56 | 20% | Heavy GPE damage (2 per overlay) |
+
+**Key discriminator:** `$s5` register = GPE entity pointer. All GPE inits use `sh $v0, 0x14($s5)`.
+
+**Context signature (verified identical across all 28 overlays for val=10%):**
+```
+0x3C01800D       lui $at, 0x800D        ; global state address
+0xA022xxxx       sb $v0, xxxx($at)      ; store to global (varies per overlay)
+0x3402000A       ori $v0, $zero, 10     ; <-- DAMAGE %
+0xA6A20014       sh $v0, 0x14($s5)      ; store to entity+0x14
+0x34020001       ori $v0, $zero, 1      ; damage_type = 1
+```
+
+**Backward trace (how 10% reaches the damage function):**
+1. Entity init: `ori $v0, $zero, 10` + `sh $v0, 0x14($s5)` (PATCHED HERE)
+2. State handler reads entity+0x14, passes as stack arg to 0x009ED00C
+3. Function 0x009ED00C reads `lhu $s7, 72($sp)` (the damage%)
+4. Passes `$s7` as `$a1` to `jal 0x80024F90`
+5. Damage applied: `HP -= (maxHP * 10) / 100`
+
+The function at 0x009ED00C is called **indirectly** (via `jalr` / function pointer),
+which is why zero `jal` instructions target it directly.
+
+---
+
+## Patcher v4 (CURRENT - step 7d)
+
+**File:** `patch_trap_damage.py`
+**Config:** `trap_damage_config.json` (`overlay_patches.values`)
+**110 total patches** = 15 jal + 95 GPE entity init
+
+Both passes use the same per-value config:
+```json
+{"2": 10, "3": 15, "5": 25, "10": 40, "20": 60}
+```
+
+### Pass 1: JAL callers (15 sites)
+- Searches for `jal 0x80024F90` with immediate `$a1`
+- Same as patcher v3
+
+### Pass 2: GPE entity init (95 sites)
+- Searches for adjacent `li $v0, N` + `sh $v0, 0x14($s5)` (word 0xA6A20014)
+- Covers falling rocks, heavy traps, and light GPE entities
+- 28 overlays: 11x 2%, 28x 10%, 56x 20%
+
+---
+
+## EXE Division Shift (IMPLEMENTED but DISABLED)
+
+**File:** `patch_trap_damage_exe.py` (step 9d)
+- Modifies `sra $v1, $t0, 5` at EXE 0x80025004
+- **DISABLED**: Affects ALL 189 callers including **combat damage**
+- Only useful if you want to globally amplify ALL %-based HP damage
 
 ---
 
 ## Previous Wrong Lead: 0x8008A3E4
 
-Function 0x8008A3E4 is a **COLOR/TINT modifier**, NOT damage:
-- Reads 3 bytes at entity+0x38/0x39/0x3A (RGB)
-- Adds deltas from $a1/$a2/$a3
-- Clamps each to [0, 255]
-- Stores back
-
-Callers with negative args = visual darkening, NOT HP damage.
+Function 0x8008A3E4 is a **COLOR/TINT modifier**, NOT damage.
 In-game test confirmed: modifying these values has NO effect on damage.
-
----
-
-## Patching Options
-
-### Option A: Overlay Patcher (CURRENT - step 7d)
-- File: `patch_trap_damage.py`
-- Patches: Hardcoded immediate $a1 values near `jal 0x80024F90`
-- Scope: Only affects 15 callers with hardcoded percentages
-- Status: **WORKING** (confirmed 2% -> 10% in-game)
-- Limitation: Does NOT affect data-driven callers (falling rocks = 10%)
-
-### Option B: EXE Division Shift (IMPLEMENTED but DISABLED)
-- File: `patch_trap_damage_exe.py` (step 9d)
-- Modify `sra $v1, $t0, 5` at EXE 0x80025004
-- Change shift from 5 to 4 = divide by 50 instead of 100 = **2x ALL damage**
-- Change shift from 5 to 3 = divide by 25 = **4x ALL damage**
-- EXE offset: 0x15804 (0x800 header + 0x15004)
-- Instruction: 0x00081943 (sra 5) -> 0x00081903 (sra 4) for 2x
-- **DISABLED**: Affects ALL 189 callers including **combat damage** - not desirable
-- Only useful if you want to globally amplify ALL %-based HP damage
-- Stacks with overlay patches: effective = overlay_value * exe_multiplier
-
-### Option C: Trace Entity Data Source (NOT DONE)
-- Find where the 10% value is stored in BLAZE.ALL area data
-- Would require tracing function call chain backward from 0x009ED00C
-- The value passes through multiple function calls via stack arguments
-- Most targeted but most complex approach
 
 ---
 
@@ -143,7 +149,3 @@ In-game test confirmed: modifying these values has NO effect on damage.
 - Header: "ePSXe\x06\x00" + game ID (64 bytes)
 - PS1 RAM: decompressed offset **0x1BA**, size 2MB
 - Overlay mapping (Cavern): BLAZE_offset = RAM_offset + 0x008C68A8
-
-## Useful Tools
-- `WIP/TrapDamage/diff_savestates.py` - Compare two savestates (before/after hit)
-- `WIP/TrapDamage/prove_multi_dungeon_v3.py` - Function-agnostic damage caller search

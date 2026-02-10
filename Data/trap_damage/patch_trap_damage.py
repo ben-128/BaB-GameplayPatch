@@ -1,17 +1,20 @@
 #!/usr/bin/env python3
 """
-Patch trap/environmental damage in BLAZE.ALL overlay code (v3).
+Patch trap/environmental damage in BLAZE.ALL overlay code (v4).
 
-The game uses function 0x80024F90 (in EXE) for percentage-based HP damage:
-  damage = (max_HP * damage_param) / 100
+Two search passes:
 
-Overlay code calls this function with small hardcoded percentage values.
-This patcher finds all `jal 0x80024F90` callers where $a1 is set to an
-immediate value, and replaces it with the value from the config JSON.
+Pass 1 - Direct callers: Find `jal 0x80024F90` where $a1 is an immediate.
+  Catches: static traps (2%, 3%, 5%, 10%, 20%) that call damage function directly.
+
+Pass 2 - GPE entity init: Find `li $v0, N` + `sh $v0, 0x14($s5)` (adjacent).
+  Catches: falling rocks, heavy traps etc. that store damage% to entity+0x14
+  and later pass it to the damage function via register (data-driven callers).
+  $s5 = GPE entity pointer. 28 sites for 10%, 56 sites for 20% across all overlays.
 
 Config format (overlay_patches.values):
-  {"2": 10, "5": 25}  means: callers with original 2% -> 10%, 5% -> 25%
-  Any value not in the map stays unchanged.
+  {"2": 10, "5": 25, "10": 40, "20": 60}
+  means: original 2% -> 10%, original 5% -> 25%, etc.
 
 Runs at build step 7d (patches output/BLAZE.ALL before BIN injection).
 """
@@ -25,11 +28,6 @@ SCRIPT_DIR = Path(__file__).parent
 CONFIG_FILE = SCRIPT_DIR / "trap_damage_config.json"
 BLAZE_ALL = SCRIPT_DIR.parent.parent / "output" / "BLAZE.ALL"
 
-REGS = ['$zero','$at','$v0','$v1','$a0','$a1','$a2','$a3',
-        '$t0','$t1','$t2','$t3','$t4','$t5','$t6','$t7',
-        '$s0','$s1','$s2','$s3','$s4','$s5','$s6','$s7',
-        '$t8','$t9','$k0','$k1','$gp','$sp','$fp','$ra']
-
 # Real damage function: 0x80024F90
 DAMAGE_FUNC_RAM = 0x80024F90
 DAMAGE_FUNC_JAL = (0x03 << 26) | ((DAMAGE_FUNC_RAM >> 2) & 0x3FFFFFF)
@@ -38,12 +36,12 @@ DAMAGE_FUNC_JAL = (0x03 << 26) | ((DAMAGE_FUNC_RAM >> 2) & 0x3FFFFFF)
 OVERLAY_START = 0x00900000
 OVERLAY_END   = 0x02D00000
 
+# GPE entity init: sh $v0, 0x14($s5)
+SH_V0_014_S5 = 0xA6A20014
+
 
 def find_immediate_callers(data):
-    """Find all jal 0x80024F90 callers where $a1 is set via immediate.
-
-    Returns list of {jal_offset, param_value, param_offset, param_type}.
-    """
+    """Pass 1: jal 0x80024F90 callers where $a1 is set via immediate."""
     callers = []
     end = min(OVERLAY_END, len(data) - 4)
 
@@ -54,7 +52,6 @@ def find_immediate_callers(data):
 
         a1_info = None
 
-        # Check 10 instructions before
         for j in range(1, 11):
             off = i - j * 4
             if off < OVERLAY_START:
@@ -66,20 +63,19 @@ def find_immediate_callers(data):
             imm = w & 0xFFFF
             imms = imm if imm < 0x8000 else imm - 0x10000
 
-            if op == 0x09 and rs == 0 and rt == 5:  # addiu $a1, $zero, imm
+            if op == 0x09 and rs == 0 and rt == 5:
                 a1_info = (imms, off, 'addiu')
                 break
-            elif op == 0x0D and rs == 0 and rt == 5:  # ori $a1, $zero, imm
+            elif op == 0x0D and rs == 0 and rt == 5:
                 a1_info = (imm, off, 'ori')
                 break
-            elif (w >> 26) == 0x03 or w == 0x03E00008:  # JAL/JR boundary
+            elif (w >> 26) == 0x03 or w == 0x03E00008:
                 break
             elif ((op == 0x09 or op == 0x0D) and rt == 5 and rs != 0):
-                break  # $a1 set from register
+                break
             elif op == 0x00 and ((w >> 11) & 0x1F) == 5:
-                break  # R-type writing to $a1
+                break
 
-        # Check delay slot
         if a1_info is None:
             ds_off = i + 4
             if ds_off + 4 <= len(data):
@@ -102,17 +98,101 @@ def find_immediate_callers(data):
             continue
 
         callers.append({
-            'jal_offset': i,
             'param_value': value,
             'param_offset': param_off,
             'param_type': param_type,
+            'source': 'jal_caller',
         })
 
     return callers
 
 
+def find_gpe_entity_init(data):
+    """Pass 2: GPE entity damage init (li $v0, N + sh $v0, 0x14($s5), adjacent).
+
+    The GPE entity state handler stores damage% to entity+0x14 via $s5.
+    Pattern: ori/addiu $v0, $zero, N immediately followed by sh $v0, 0x14($s5).
+    28 overlays x 1-2 sites per value = consistent cross-dungeon coverage.
+    """
+    results = []
+    end = min(OVERLAY_END, len(data) - 8)
+
+    for i in range(OVERLAY_START, end, 4):
+        w1 = struct.unpack_from('<I', data, i)[0]
+        w2 = struct.unpack_from('<I', data, i + 4)[0]
+
+        # w2 must be sh $v0, 0x14($s5) = 0xA6A20014
+        if w2 != SH_V0_014_S5:
+            continue
+
+        # w1 must be ori $v0, $zero, N or addiu $v0, $zero, N
+        op = (w1 >> 26) & 0x3F
+        rs = (w1 >> 21) & 0x1F
+        rt = (w1 >> 16) & 0x1F
+        imm = w1 & 0xFFFF
+        imms = imm if imm < 0x8000 else imm - 0x10000
+
+        is_ori = (op == 0x0D and rs == 0 and rt == 2)
+        is_addiu = (op == 0x09 and rs == 0 and rt == 2)
+        if not (is_ori or is_addiu):
+            continue
+
+        val = imm if is_ori else imms
+        if val < 1 or val > 99:
+            continue
+
+        results.append({
+            'param_value': val,
+            'param_offset': i,
+            'param_type': 'ori' if is_ori else 'addiu',
+            'source': 'gpe_entity',
+        })
+
+    return results
+
+
+def apply_patches(data, entries, value_map, label):
+    """Apply value_map patches to a list of entries. Returns (patched, skipped)."""
+    patched = 0
+    skipped = 0
+
+    for c in entries:
+        old_val = c['param_value']
+        new_val = value_map.get(old_val)
+
+        if new_val is None or new_val == old_val:
+            skipped += 1
+            continue
+
+        new_val = max(1, min(99, new_val))
+        param_off = c['param_offset']
+        param_type = c['param_type']
+
+        old_word = struct.unpack_from('<I', data, param_off)[0]
+        old_rs = (old_word >> 21) & 0x1F
+        old_rt = (old_word >> 16) & 0x1F
+
+        # Verify source register is $zero
+        if old_rs != 0:
+            print(f"  [WARN] 0x{param_off:08X}: unexpected rs={old_rs}")
+            continue
+
+        # Build patched instruction (same opcode, new immediate)
+        target_rt = old_rt  # keep original target register ($a1 or $v0)
+        if param_type == 'addiu':
+            new_word = (0x09 << 26) | (0 << 21) | (target_rt << 16) | (new_val & 0xFFFF)
+        else:
+            new_word = (0x0D << 26) | (0 << 21) | (target_rt << 16) | (new_val & 0xFFFF)
+
+        struct.pack_into('<I', data, param_off, new_word)
+        print(f"  [{label}] 0x{param_off:08X}: {old_val}% -> {new_val}%")
+        patched += 1
+
+    return patched, skipped
+
+
 def main():
-    print("  Trap Damage Patcher v3 (overlay, per-value overrides)")
+    print("  Trap Damage Patcher v4 (jal callers + GPE entity init)")
     print("  " + "-" * 50)
 
     if not CONFIG_FILE.exists():
@@ -126,7 +206,6 @@ def main():
         print("  [SKIP] Overlay patches disabled in config")
         return
 
-    # Parse value map: {"2": 10, "5": 25} -> {2: 10, 5: 25}
     value_map = {}
     for k, v in overlay_cfg.get("values", {}).items():
         value_map[int(k)] = int(v)
@@ -144,66 +223,44 @@ def main():
 
     data = bytearray(BLAZE_ALL.read_bytes())
 
-    callers = find_immediate_callers(data)
-    print(f"  Found {len(callers)} immediate callers in overlay code")
+    # Pass 1: jal callers with immediate $a1
+    jal_callers = find_immediate_callers(data)
+    print(f"\n  Pass 1: {len(jal_callers)} jal callers with immediate $a1")
 
-    if not callers:
-        print("  [SKIP] No callers found")
-        return
-
-    # Show summary
     by_value = {}
-    for c in callers:
+    for c in jal_callers:
         v = c['param_value']
         by_value[v] = by_value.get(v, 0) + 1
-
     for v in sorted(by_value):
         new_v = value_map.get(v)
-        status = f"-> {new_v}%" if new_v is not None else "(no override)"
-        print(f"    {by_value[v]:>3}x param={v}% {status}")
+        status = f"-> {new_v}%" if new_v is not None else "(skip)"
+        print(f"    {by_value[v]:>3}x {v}% {status}")
 
-    # Apply patches
-    patched = 0
-    skipped = 0
+    p1, s1 = apply_patches(data, jal_callers, value_map, "JAL")
 
-    for c in callers:
-        old_val = c['param_value']
-        new_val = value_map.get(old_val)
+    # Pass 2: GPE entity init (li + sh 0x14($s5))
+    gpe_inits = find_gpe_entity_init(data)
+    print(f"\n  Pass 2: {len(gpe_inits)} GPE entity init sites (sh $v0, 0x14($s5))")
 
-        if new_val is None:
-            skipped += 1
-            continue
+    by_value = {}
+    for c in gpe_inits:
+        v = c['param_value']
+        by_value[v] = by_value.get(v, 0) + 1
+    for v in sorted(by_value):
+        new_v = value_map.get(v)
+        status = f"-> {new_v}%" if new_v is not None else "(skip)"
+        print(f"    {by_value[v]:>3}x {v}% {status}")
 
-        if new_val == old_val:
-            skipped += 1
-            continue
+    p2, s2 = apply_patches(data, gpe_inits, value_map, "GPE")
 
-        new_val = max(1, min(99, new_val))
-        param_off = c['param_offset']
-        param_type = c['param_type']
+    total_patched = p1 + p2
+    total_skipped = s1 + s2
 
-        # Verify instruction
-        old_word = struct.unpack_from('<I', data, param_off)[0]
-        old_rs = (old_word >> 21) & 0x1F
-        old_rt = (old_word >> 16) & 0x1F
-
-        if old_rs != 0 or old_rt != 5:
-            print(f"  [WARN] 0x{param_off:08X}: unexpected registers")
-            continue
-
-        if param_type == 'addiu':
-            new_word = (0x09 << 26) | (0 << 21) | (5 << 16) | (new_val & 0xFFFF)
-        else:
-            new_word = (0x0D << 26) | (0 << 21) | (5 << 16) | (new_val & 0xFFFF)
-
-        struct.pack_into('<I', data, param_off, new_word)
-        print(f"  [PATCH] 0x{param_off:08X}: $a1 = {old_val}% -> {new_val}%")
-        patched += 1
-
-    if patched > 0:
+    if total_patched > 0:
         BLAZE_ALL.write_bytes(data)
 
-    print(f"\n  {patched} patched, {skipped} unchanged")
+    print(f"\n  Total: {total_patched} patched ({p1} jal + {p2} gpe), "
+          f"{total_skipped} unchanged")
 
 
 if __name__ == "__main__":
