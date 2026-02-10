@@ -268,7 +268,7 @@ REM ========================================================================
 call :log "[7e/10] Patching monster spell bitfield in overlay code..."
 call :log ""
 
-py -3 Data\spells\patch_monster_spells.py >> "%LOGFILE%" 2>&1
+py -3 Data\ai_behavior\patch_monster_spells.py >> "%LOGFILE%" 2>&1
 if errorlevel 1 (
     call :log ""
     call :log "[ERROR] Monster spell bitfield patch failed!"

@@ -75,7 +75,7 @@
     ],
     "_how_to_modify": [
       "ZONE-WIDE (all monsters in zone get same spells):",
-      "  Edit: Data/spells/spell_config.json",
+      "  Edit: Data/ai_behavior/overlay_bitfield_config.json",
       "  Section: overlay_bitfield_patches",
       "  Set bitfield_value to choose which spells (see MONSTER_SPELLS.md for bit table)",
       "",

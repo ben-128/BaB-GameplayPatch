@@ -31,12 +31,13 @@ GameplayPatch/
 │   │   ├── hall_of_demons/
 │   │   └── ...
 │   │
+│   ├── spells/                    Systeme de sorts
+│   │   ├── spell_config.json      Config sorts (definitions)
+│   │   ├── patch_spell_table.py   Patcher sorts (step 7b)
+│   │   └── MONSTER_SPELLS.md      Documentation systeme de sorts
+│   │
 │   ├── monster_stats/             Statistiques des monstres (121)
 │   │   ├── patch_monster_stats.py Patcher stats
-│   │   ├── patch_spell_table.py   Patcher sorts (step 7b)
-│   │   ├── patch_monster_spells.py  Patcher bitfield sorts (step 7e)
-│   │   ├── spell_config.json  Config sorts (seul fichier a editer)
-│   │   ├── MONSTER_SPELLS.md      Documentation systeme de sorts
 │   │   ├── normal_enemies/        101 monstres reguliers (.json)
 │   │   ├── boss/                  20 boss (.json)
 │   │   └── scripts/               Outils (add_spell_info.py, etc.)
@@ -51,9 +52,11 @@ GameplayPatch/
 │   │   ├── trap_damage_config.json  Configuration (par valeur %)
 │   │   └── RESEARCH.md            Documentation technique
 │   │
-│   ├── ai_behavior/               Config AI (experimental, desactive)
-│   │   ├── patch_ai_behavior.py   Patcher comportement AI
-│   │   └── ai_behavior_config.json  Tests AI (tous desactives)
+│   ├── ai_behavior/               Config AI & overlay bitfield
+│   │   ├── patch_ai_behavior.py   Patcher comportement AI (experimental, desactive)
+│   │   ├── ai_behavior_config.json  Tests AI (tous desactives)
+│   │   ├── patch_monster_spells.py  Patcher bitfield sorts (step 7e)
+│   │   └── overlay_bitfield_config.json  Config quels sorts les monstres ont
 │   │
 │   ├── items/                     Base de donnees items (424)
 │   ├── fate_coin_shop/            Boutique Fate Coin (23 items)
@@ -85,7 +88,7 @@ Le script execute dans l'ordre :
 | 7b | `patch_spell_table.py` | Modifie les stats des sorts (degats, MP, element) |
 | 7c | `patch_ai_behavior.py` | Patch comportement AI (experimental) |
 | 7d | `patch_trap_damage.py` | Modifie les degats des pieges (110 sites) |
-| 7e | `patch_monster_spells.py` | Modifie quels sorts offensifs les monstres ont |
+| 7e | `patch_monster_spells.py` | Modifie quels sorts offensifs les monstres ont (ai_behavior/) |
 | 8 | (copy) | Copie le BIN clean vers output |
 | 9 | `patch_blaze_all.py` | Injecte BLAZE.ALL dans le BIN (2 emplacements) |
 | 10 | (inline) | Met a jour la documentation |
@@ -100,11 +103,12 @@ Steps 1-7e patchent `output/BLAZE.ALL`. Steps 8-9 creent le BIN final.
 
 Systeme complet pour modifier les sorts et capacites des monstres.
 
-**Documentation** : `Data/monster_stats/MONSTER_SPELLS.md`
-**Config** : `Data/spells/spell_config.json` (seul fichier a editer)
+**Documentation** : `Data/spells/MONSTER_SPELLS.md`
+**Config sorts** : `Data/spells/spell_config.json` (definitions: degats, MP, element, cast_time)
+**Config bitfield** : `Data/ai_behavior/overlay_bitfield_config.json` (quels sorts les monstres ont)
 
 Deux systemes distincts :
-- **Sorts offensifs** (FireBullet, Blaze, etc.) : controlables via `overlay_bitfield_patches` (zone-wide)
+- **Sorts offensifs** (FireBullet, Blaze, etc.) : controlables via `overlay_bitfield_config.json` (zone-wide)
 - **Capacites monstres** (Fire Breath, Drain, etc.) : stats modifiables, mais pas l'assignation par monstre
 
 Voir `MONSTER_SPELLS.md` pour la reference complete des 29 sorts + 30 capacites.
@@ -199,9 +203,11 @@ Cette analyse est fournie "as-is" a des fins de recherche et de preservation du 
 
 
 
+
+
 ## Last Patch Build
 
-**Date:** 2026-02-10 19:49:25
+**Date:** 2026-02-10 20:00:51
 
 **Patches Applied:**
 - Fate Coin Shop prices adjusted

@@ -1,0 +1,44 @@
+{
+    "_doc": [
+        "Overlay bitfield patches - controls which offensive spells monsters HAVE.",
+        "Applied to output/BLAZE.ALL overlay code before BIN injection.",
+        "",
+        "Each entry = one zone. Affects ALL floors and ALL monster types in that zone.",
+        "Only change enabled and bitfield_value. The offsets are internal MIPS",
+        "addresses found by reverse engineering - do NOT modify them.",
+        "",
+        "This is the INIT value. The level-up simulation may add more spells on top",
+        "based on monster level. Cannot give different spells to different monster types.",
+        "",
+        "Bitfield quick reference (see Data/spells/MONSTER_SPELLS.md for full table):",
+        "  0x00000001 = FireBullet only (vanilla)",
+        "  0x0000001F = Tier 1: FireBullet, SparkBullet, WaterBullet, StoneBullet, Striking",
+        "  0x000003FF = Tier 1+2: +Lightbolt, DarkWave, Smash, MagicMissile, EnchantWeapon",
+        "  0x00007FFF = Tier 1-3: +Blaze, Lightningbolt, Blizzard, PoisonCloud, ExtendSpell",
+        "  0x000FFFFF = Tier 1-4: +MagicRay, Shining, DarkBreath, DispellMagic, Petrifaction",
+        "  0x03FFFFFF = Tier 1-5: +Explosion, Thunderbolt, FreezeBeast, EarthJavelin, DeathSpell, Teleport",
+        "  0x1FFFFFFF = ALL 29 offensive spells"
+    ],
+    "overlay_bitfield_patches": {
+        "enabled": true,
+        "patches": [
+            {
+                "zone": "Cavern of Death",
+                "enabled": true,
+                "bitfield_value": "0x000003FF",
+                "_bitfield_doc": "bits 0-9 = Tier 1+2 (10 offensive spells)",
+                "_internal_do_not_modify": {
+                    "type": "verbose",
+                    "byte0_ori": "0x0098A69C",
+                    "byte0_sb": "0x0098A6A0",
+                    "byte1_nop": "0x0098A6AC",
+                    "byte1_sb": "0x0098A6B0",
+                    "byte2_nop": "0x0098A6BC",
+                    "byte2_sb": "0x0098A6C0",
+                    "byte3_nop": "0x0098A6CC",
+                    "byte3_sb": "0x0098A6D0"
+                }
+            }
+        ]
+    }
+}

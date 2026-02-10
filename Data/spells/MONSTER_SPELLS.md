@@ -37,11 +37,11 @@ The `overlay_bitfield_patches` replaces the init value (step 1). The level-up (s
 
 ## Quick Start - Which JSON to Edit
 
-**File: `Data/spells/spell_config.json`**
+Two config files:
 
-This is the only file you need to edit. It has two sections:
+### File 1: `Data/spells/spell_config.json` - Change what spells/abilities DO
 
-### Section 1: `spell_definition_overrides` - Change what spells/abilities DO
+Section: `spell_definition_overrides`
 
 Modify stats (damage, MP cost, element). Works for **both** offensive spells AND monster abilities.
 
@@ -79,7 +79,7 @@ Modify stats (damage, MP cost, element). Works for **both** offensive spells AND
 
 **`list` + `index`** identify which spell/ability. `name` is a safety check (patcher warns on mismatch).
 
-### Section 2: `overlay_bitfield_patches` - Change which offensive spells monsters HAVE
+### File 2: `Data/ai_behavior/overlay_bitfield_config.json` - Change which offensive spells monsters HAVE
 
 **Only works for offensive spells (list 0).** Does NOT affect monster abilities.
 
@@ -91,12 +91,10 @@ Sets the initial spell availability bitfield (entity+0x160) for ALL monsters in 
         "enabled": true,
         "patches": [
             {
-                "_comment": "Cavern of Death - give monsters 10 offensive spells",
-                "enabled": true,
                 "zone": "Cavern of Death",
+                "enabled": true,
                 "bitfield_value": "0x000003FF",
-                "type": "verbose",
-                "offsets": { "byte0_ori": "0x0098A69C", "..." : "..." }
+                "_internal_do_not_modify": { "type": "verbose", "..." : "..." }
             }
         ]
     }
@@ -234,7 +232,7 @@ REM Apply spell definition patches (step 7b)
 py -3 Data\spells\patch_spell_table.py
 
 REM Apply overlay bitfield patches (step 7e)
-py -3 Data\spells\patch_monster_spells.py
+py -3 Data\ai_behavior\patch_monster_spells.py
 
 REM ... then run remaining build steps (8-9) to inject into BIN
 ```
@@ -245,8 +243,8 @@ REM ... then run remaining build steps (8-9) to inject into BIN
 
 | Step | Script | What it patches |
 |------|--------|----------------|
-| 7b | `patch_spell_table.py` | Spell/ability definitions (damage, MP, element) at BLAZE.ALL 0x908E68 |
-| 7e | `patch_monster_spells.py` | Overlay init bitfield (entity+0x160) in BLAZE.ALL |
+| 7b | `Data/spells/patch_spell_table.py` | Spell/ability definitions (damage, MP, element) at BLAZE.ALL 0x908E68 |
+| 7e | `Data/ai_behavior/patch_monster_spells.py` | Overlay init bitfield (entity+0x160) in BLAZE.ALL |
 
 Both run BEFORE BIN injection (step 8-9).
 
@@ -275,7 +273,8 @@ Both run BEFORE BIN injection (step 8-9).
 |--------|------|-------|
 | +0x00 | 16 | Name (ASCII, null-padded, NO SPACES: "FireBullet" not "Fire Bullet") |
 | +0x10 | u8 | Spell ID |
-| +0x13 | u8 | MP cost |
+| +0x13 | u8 | Cast time (1=instant, 4=fast, 60+=slow) |
+| +0x14 | u8 | MP cost |
 | +0x16 | u8 | Element (0-9) |
 | +0x18 | u8 | Damage |
 | +0x1C | u8 | Target type (1=single) |
@@ -301,10 +300,11 @@ Both run BEFORE BIN injection (step 8-9).
 
 | File | Purpose |
 |------|---------|
-| `spell_config.json` | Configuration (the only file you edit) |
-| `patch_spell_table.py` | Spell definition patcher (step 7b) |
-| `patch_monster_spells.py` | Overlay bitfield patcher (step 7e) |
-| `MONSTER_SPELLS.md` | This documentation |
-| `scripts/add_spell_info.py` | Adds spell_info to monster JSONs |
+| `Data/spells/spell_config.json` | Spell definitions (damage, MP, element, cast_time) |
+| `Data/spells/patch_spell_table.py` | Spell definition patcher (step 7b) |
+| `Data/spells/MONSTER_SPELLS.md` | This documentation |
+| `Data/ai_behavior/overlay_bitfield_config.json` | Overlay bitfield config (which spells monsters have) |
+| `Data/ai_behavior/patch_monster_spells.py` | Overlay bitfield patcher (step 7e) |
+| `Data/monster_stats/scripts/add_spell_info.py` | Adds spell_info to monster JSONs |
 | `WIP/spells/MONSTER_SPELL_RESEARCH.md` | Full research notes |
 | `WIP/spells/verify_spell_table.py` | Dumps all spell table entries |
