@@ -1,9 +1,10 @@
 {
     "_doc": "AI behavior block patches - applied to output/BLAZE.ALL before BIN injection",
-    "_doc2": "Each test modifies ONE field to identify its purpose. Enable one at a time.",
-    "_doc3": "Target: Goblin (Cavern F1 Area1) - ground melee, easy to observe",
-    "_doc4": "Block at 0xF7AAD8 = 16 x uint16 LE values",
-    "_doc5": "Original: [0, 0, 468, 634, 420, 634, 0, 2048, 900, 0, 0, 2048, 900, 0, 0, 0]",
+    "_doc2": "STATUS: ALL PATCHES DISABLED. In-game testing (2026-02-10) proved these blocks",
+    "_doc3": "are ZONE/CAMERA parameters, NOT monster AI behavior. offset 0x06 = camera height.",
+    "_doc4": "The real monster AI mechanism is NOT yet decoded (likely in EXE state machine or overlay).",
+    "_doc5": "See Data/formations/AI_BEHAVIOR_RESEARCH.md for full test results.",
+    "_doc6": "Block at 0xF7AAD8 = 16 x uint16 LE values. Original: [0, 0, 468, 634, 420, 634, 0, 2048, 900, 0, 0, 2048, 900, 0, 0, 0]",
 
     "patches": [
         {

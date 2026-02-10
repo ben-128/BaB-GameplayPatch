@@ -17,33 +17,51 @@ Analyse complete et outils de modification pour **Blaze & Blade: Eternal Quest**
 
 ```
 GameplayPatch/
-├── build_gameplay_patch.bat       Script principal de build (10 steps)
+├── build_gameplay_patch.bat       Script principal de build
 ├── patch_blaze_all.py             Injection de BLAZE.ALL dans le BIN
 │
 ├── Data/
 │   ├── formations/                Formation templates & spawn points
 │   │   ├── editor.html            Editeur visuel (navigateur)
 │   │   ├── patch_formations.py    Patcher formations + spawns
-│   │   ├── FORMATION_CRASH_ANALYSIS.md
+│   │   ├── FORMATIONS.md          Documentation du systeme
+│   │   ├── AI_BEHAVIOR_RESEARCH.md   Notes de recherche AI
+│   │   ├── AI_SPELL_SYSTEM.md     Architecture AI + sorts
 │   │   ├── cavern_of_death/       JSON par zone (69 fichiers)
 │   │   ├── hall_of_demons/
 │   │   └── ...
 │   │
-│   ├── LootTimer/                 Patch timer coffres (SLES)
-│   │   ├── patch_loot_timer.py    Patcher (NOP 2 timers dans BIN)
+│   ├── monster_stats/             Statistiques des monstres (121)
+│   │   ├── patch_monster_stats.py Patcher stats
+│   │   ├── patch_spell_table.py   Patcher sorts (step 7b)
+│   │   ├── patch_monster_spells.py  Patcher bitfield sorts (step 7e)
+│   │   ├── monster_spells_config.json  Config sorts (seul fichier a editer)
+│   │   ├── MONSTER_SPELLS.md      Documentation systeme de sorts
+│   │   ├── normal_enemies/        101 monstres reguliers (.json)
+│   │   ├── boss/                  20 boss (.json)
+│   │   └── scripts/               Outils (add_spell_info.py, etc.)
+│   │
+│   ├── LootTimer/                 Patch timer coffres
+│   │   ├── patch_loot_timer.py    Patcher (NOP decrements dans overlay)
+│   │   ├── loot_timer.json        Configuration
 │   │   └── RESEARCH.md            Documentation technique
 │   │
-│   ├── monster_stats/             Statistiques des monstres (124)
+│   ├── trap_damage/               Patch degats pieges/environnement
+│   │   ├── patch_trap_damage.py   Patcher (110 sites dans overlay)
+│   │   ├── trap_damage_config.json  Configuration (par valeur %)
+│   │   └── RESEARCH.md            Documentation technique
+│   │
+│   ├── ai_behavior/               Config AI (experimental, desactive)
+│   │   ├── patch_ai_behavior.py   Patcher comportement AI
+│   │   └── ai_behavior_config.json  Tests AI (tous desactives)
+│   │
 │   ├── items/                     Base de donnees items (424)
 │   ├── fate_coin_shop/            Boutique Fate Coin (23 items)
-│   ├── auction_prices/            Prix d'encheres
-│   ├── spells/                    Sorts (90)
-│   └── character_classes/         Classes de personnages (8)
+│   └── auction_prices/            Prix d'encheres
 │
-└── WIP/level_design/              Level Design & Door Modding
-    ├── spawns/                    Spawn groups & analysis
-    ├── docs/                      Research documentation
-    └── ...
+└── WIP/                           Recherche en cours
+    ├── spells/                    Recherche systeme de sorts
+    └── level_design/              Level Design & Door Modding
 ```
 
 ---
@@ -53,58 +71,88 @@ GameplayPatch/
 Double-cliquez sur `build_gameplay_patch.bat`
 
 Le script execute dans l'ordre :
-1. Copie BLAZE.ALL clean depuis extract vers output
-2. Patch les prix Fate Coin Shop
-3. Patch les descriptions d'items (376 items)
-4. Met les prix d'encheres de base a 0
-5. Patch les stats des monstres
-6. Patch les spawn groups
-6b. Patch les formation templates (compositions, tailles, nombre)
-7. (reserve - loot timer patche au step 9b)
-8. Copie le BIN clean vers output
-9. Injecte BLAZE.ALL dans le BIN (2 emplacements)
-9b. Patch le timer de disparition des coffres (SLES dans le BIN)
-10. Met a jour la documentation
+
+| Step | Script | Description |
+|------|--------|-------------|
+| 1 | (copy) | Copie BLAZE.ALL clean depuis extract vers output |
+| 2 | `patch_fate_coin_shop.py` | Patch les prix Fate Coin Shop |
+| 3 | `patch_items_in_bin.py` | Patch les descriptions d'items (376 items) |
+| 4 | `patch_auction_base_prices.py` | Met les prix d'encheres de base a 0 |
+| 5 | `patch_monster_stats.py` | Patch les stats des monstres |
+| 6 | `patch_spawn_groups.py` | Patch les spawns de monstres |
+| 6b | `patch_formations.py` | Patch les formation templates |
+| 7 | `patch_loot_timer.py` | Gele le timer des coffres (optionnel) |
+| 7b | `patch_spell_table.py` | Modifie les stats des sorts (degats, MP, element) |
+| 7c | `patch_ai_behavior.py` | Patch comportement AI (experimental) |
+| 7d | `patch_trap_damage.py` | Modifie les degats des pieges (110 sites) |
+| 7e | `patch_monster_spells.py` | Modifie quels sorts offensifs les monstres ont |
+| 8 | (copy) | Copie le BIN clean vers output |
+| 9 | `patch_blaze_all.py` | Injecte BLAZE.ALL dans le BIN (2 emplacements) |
+| 10 | (inline) | Met a jour la documentation |
+
+Steps 1-7e patchent `output/BLAZE.ALL`. Steps 8-9 creent le BIN final.
 
 ---
 
 ## Modules
 
+### Monster Spells & Abilities
+
+Systeme complet pour modifier les sorts et capacites des monstres.
+
+**Documentation** : `Data/monster_stats/MONSTER_SPELLS.md`
+**Config** : `Data/monster_stats/monster_spells_config.json` (seul fichier a editer)
+
+Deux systemes distincts :
+- **Sorts offensifs** (FireBullet, Blaze, etc.) : controlables via `overlay_bitfield_patches` (zone-wide)
+- **Capacites monstres** (Fire Breath, Drain, etc.) : stats modifiables, mais pas l'assignation par monstre
+
+Voir `MONSTER_SPELLS.md` pour la reference complete des 29 sorts + 30 capacites.
+
 ### Formation Templates & Spawn Points
 
-Systeme complet d'edition des formations de monstres (groupes aleatoires) et des spawn points (positions fixes).
+Systeme complet d'edition des formations de monstres et des spawn points.
 
-**Editeur visuel** : `Data/formations/editor.html` — ouvrir dans un navigateur, charger un JSON, modifier, sauvegarder.
+**Editeur visuel** : `Data/formations/editor.html`
+**Patcher** : `Data/formations/patch_formations.py`
+**Documentation** : `Data/formations/FORMATIONS.md`
 
-**Patcher** : `py -3 Data\formations\patch_formations.py`
-
-**Fonctionnalites :**
-- Changer la composition des formations (quels monstres dans chaque slot)
-- Redimensionner les formations (redistribuer les records entre formations)
-- Reduire le nombre de formations (via duplicate offsets + filler barriers)
-- Patcher les spawn points en place (slot, coordonnees, byte0, area_id)
-- Patcher les zone spawns en place
-- Mise a jour automatique de la table d'offsets dans le script area
-
-**69 fichiers JSON** couvrant 41 areas dans 9 donjons.
-
-Voir `Data/formations/FORMATION_CRASH_ANALYSIS.md` pour les details techniques.
+69 fichiers JSON couvrant 41 areas dans 9 donjons.
 
 ### Loot Chest Despawn Timer
 
 Les coffres laches par les monstres ne disparaissent plus (duree originale : 20 secondes).
 
-Le code de decrement est dans le **SLES executable** (pas BLAZE.ALL). Deux mecanismes de timer independants sont patches (NOP) :
-1. Batch timer a entity+0x80 (48 halfword timers)
-2. Despawn timer a entity+0x4C (countdown → kill entity)
+**Config** : `Data/LootTimer/loot_timer.json`
+**Documentation** : `Data/LootTimer/RESEARCH.md`
 
-Voir `Data/LootTimer/RESEARCH.md` pour les details techniques.
+Le patcher detecte et NOP les 35 patterns de decrementation dans le code overlay
+(v6 avec validation de contexte pour eviter les faux positifs).
 
-### Monster Stats (124 monstres)
+### Trap/Environmental Damage
+
+Modifie les degats des pieges et effets environnementaux (chutes de pierres, pieges lourds).
+
+**Config** : `Data/trap_damage/trap_damage_config.json`
+**Documentation** : `Data/trap_damage/RESEARCH.md`
+
+110 sites patches (15 appels JAL directs + 95 initialisations GPE entity) dans 28 overlays.
+
+### AI Behavior (experimental)
+
+Tests de modification du comportement AI via les blocs de donnees du script area.
+
+**Status** : Tous les tests sont desactives. La recherche a montre que les blocs
+cibles sont en fait des parametres de zone/camera (pas du comportement AI).
+Le veritable mecanisme de comportement AI n'est pas encore decode.
+
+Voir `Data/formations/AI_BEHAVIOR_RESEARCH.md` pour les resultats de recherche.
+
+### Monster Stats (121 monstres)
 
 - `normal_enemies/` : 101 monstres reguliers
-- `boss/` : 23 boss
-- 40 statistiques par monstre (int16/uint16)
+- `boss/` : 20 boss
+- Chaque JSON contient les stats + `spell_info` (type de lanceur, sorts disponibles)
 - `patch_monster_stats.py` : patch directement BLAZE.ALL
 
 ### Items Database (424 items)
@@ -117,19 +165,6 @@ Base de donnees complete de tous les items extraits de BLAZE.ALL.
 
 - `fate_coin_shop.json` : Prix et items de la boutique
 - `patch_fate_coin_shop.py` : Script de modification
-
-### Spells (90 sorts)
-
-Base de donnees complete : cout MP, puissance, element, type d'effet, cible.
-
-### Level Design & Door Modding
-
-- 100 chests avec items et quantites
-- 150 enemy spawns avec randomness et zones
-- 50 doors avec types, cles, destinations
-- 2,500+ coordonnees 3D (5 zones)
-- Unity 3D visualization
-- Door modification system (presets)
 
 ---
 
@@ -144,16 +179,11 @@ Base de donnees complete : cout MP, puissance, element, type d'effet, cible.
 
 ## Historique
 
-- **2026-02-08** : Formation count decrease (duplicate offsets + filler barriers), loot chest timer patch, combat AI/loot system research
-- **2026-02-06** : Formation size resize (offset table auto-update), slot_types extraction, spawn point patching
-- **2026-02-04** : Level Design : 11 niveaux, 2500+ coordonnees 3D, 5 zones mappees
-- **2026-02-04** : Items : Extraction complete de 424 items
-- **2026-02-04** : Character classes : Zone memoire identifiee, 8 classes
-- **2026-02-04** : Decouverte table prix encheres (0x002EA500)
-- **2026-02-04** : Monster stats : 124 monstres organises
-- **2026-02-03** : Fate Coin Shop : modification fonctionnelle
-- **2026-02-03** : Extraction complete des 90 sorts
-- **2026-02-03** : Identification structure binaire BLAZE.ALL
+- **2026-02-10** : Systeme de sorts monstres (patchers, config, docs, spell_info 121 JSONs), degats pieges v4, loot timer v6, recherche AI
+- **2026-02-08** : Formation count decrease, loot chest timer patch, combat AI research
+- **2026-02-06** : Formation size resize, slot_types extraction, spawn point patching
+- **2026-02-04** : Level Design, Items extraction, Character classes, Monster stats
+- **2026-02-03** : Fate Coin Shop, Extraction des 90 sorts, Structure binaire BLAZE.ALL
 
 ---
 
@@ -162,71 +192,3 @@ Repository maintenu par Ben Maurin (ben.maurin@gmail.com)
 Cette analyse est fournie "as-is" a des fins de recherche et de preservation du patrimoine videoludique.
 
 *Blaze & Blade: Eternal Quest (c) 1998 T&E Soft*
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Last Patch Build
-
-**Date:** 2026-02-10 13:50:10
-
-**Patches Applied:**
-- Fate Coin Shop prices adjusted
-- Items descriptions updated (376 items)
-- Auction base prices set to 0
-- Monster stats balanced
-- BLAZE.ALL integrated
-
-**Source:** Blaze & Blade - Eternal Quest (Europe).bin
-**Output:** output/Blaze & Blade - Patched.bin
-

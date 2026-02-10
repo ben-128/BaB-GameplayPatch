@@ -35,11 +35,12 @@ Le jeu utilise un compteur (`entity+0x14`) qui décrémente de 1 par frame :
 - Original : 1000 frames / 50fps PAL = 20 secondes
 - Patch v5 : NOP tous les décrements → timer gelé → coffres permanents
 
-v5 détecte et patche **68 patterns de décrémentation** dans le code overlay,
-incluant toutes les variantes de registres (`$v0`, `$v1`, `$a2`, `$a3`, `$s0`, etc.)
+v6 détecte et patche **35 patterns de décrémentation** dans le code overlay,
+avec validation de contexte (4 instructions requises : load, decrement, store, sll16).
 
-v4 et versions précédentes ne trouvaient que 35 patterns, donc les coffres
-continuaient de disparaître.
+v5 trouvait 103 patterns mais était trop large : incluait des initialisations et
+des timers d'animation (causait le freeze de l'animation du Goblin Shaman).
+v6 élimine les faux positifs grâce à la validation contextuelle.
 
 ## Développement futur
 

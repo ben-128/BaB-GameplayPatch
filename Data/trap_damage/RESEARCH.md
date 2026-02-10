@@ -128,12 +128,11 @@ Both passes use the same per-value config:
 
 ---
 
-## EXE Division Shift (IMPLEMENTED but DISABLED)
+## EXE Division Shift (REMOVED)
 
-**File:** `patch_trap_damage_exe.py` (step 9d)
-- Modifies `sra $v1, $t0, 5` at EXE 0x80025004
-- **DISABLED**: Affects ALL 189 callers including **combat damage**
-- Only useful if you want to globally amplify ALL %-based HP damage
+Was `patch_trap_damage_exe.py` (step 9d) - modified the division shift in the damage
+function at EXE 0x80025004. **Removed** because it affects ALL 189 callers including
+combat damage, not just traps. The overlay patcher (v4) is the correct solution.
 
 ---
 
