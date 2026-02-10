@@ -192,3 +192,24 @@ Repository maintenu par Ben Maurin (ben.maurin@gmail.com)
 Cette analyse est fournie "as-is" a des fins de recherche et de preservation du patrimoine videoludique.
 
 *Blaze & Blade: Eternal Quest (c) 1998 T&E Soft*
+
+
+
+
+
+
+
+## Last Patch Build
+
+**Date:** 2026-02-10 19:49:25
+
+**Patches Applied:**
+- Fate Coin Shop prices adjusted
+- Items descriptions updated (376 items)
+- Auction base prices set to 0
+- Monster stats balanced
+- BLAZE.ALL integrated
+
+**Source:** Blaze & Blade - Eternal Quest (Europe).bin
+**Output:** output/Blaze & Blade - Patched.bin
+

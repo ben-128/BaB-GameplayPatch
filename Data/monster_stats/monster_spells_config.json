@@ -8,7 +8,12 @@
         "",
         "  2. overlay_bitfield_patches: Change which offensive spells monsters HAVE",
         "     Zone-wide: ALL monsters in the zone get the same spells (all floors).",
-        "     Only change 'bitfield_value'. Don't touch 'offsets' (internal addresses).",
+        "     Only change bitfield_value. Don't touch offsets (internal addresses).",
+        "",
+        "Field reference:",
+        "  damage   = damage/effect value (0-255)",
+        "  mp_cost  = mana cost (0-255, byte +0x14 in 48-byte entry)",
+        "  element  = 0=none 1=thunder 2=fire 3=water 4=earth 5=wind 6=light 7=dark 8=holy 9=evil",
         "",
         "Bitfield quick reference (see MONSTER_SPELLS.md for full table):",
         "  0x00000001 = FireBullet only (vanilla)",
@@ -19,39 +24,2161 @@
         "  0x03FFFFFF = Tier 1-5: +Explosion, Thunderbolt, FreezeBeast, EarthJavelin, DeathSpell, Teleport",
         "  0x1FFFFFFF = ALL 29 offensive spells"
     ],
-
     "spell_definition_overrides": {
         "enabled": true,
         "overrides": [
             {
-                "_comment": "TEST: Make Fire Bullet stronger (affects ALL casters)",
+                "_comment": "FireBullet (list 0 = Mage)",
                 "enabled": true,
                 "list": 0,
                 "index": 0,
                 "name": "FireBullet",
                 "fields": {
-                    "damage": 20,
+                    "damage": 10,
                     "mp_cost": 2
+                },
+                "_base": {
+                    "damage": 10,
+                    "mp_cost": 2,
+                    "element": 2,
+                    "cast_time": 4
                 }
             },
             {
-                "_comment": "TEST: Make Blaze do more damage",
-                "enabled": false,
+                "_comment": "SparkBullet (list 0 = Mage)",
+                "enabled": true,
+                "list": 0,
+                "index": 1,
+                "name": "SparkBullet",
+                "fields": {
+                    "damage": 8,
+                    "mp_cost": 4,
+                    "element": 5,
+                    "cast_time": 4
+                },
+                "_base": {
+                    "damage": 8,
+                    "mp_cost": 4,
+                    "element": 5,
+                    "cast_time": 4
+                }
+            },
+            {
+                "_comment": "WaterBullet (list 0 = Mage)",
+                "enabled": true,
+                "list": 0,
+                "index": 2,
+                "name": "WaterBullet",
+                "fields": {
+                    "damage": 6,
+                    "mp_cost": 3,
+                    "element": 3,
+                    "cast_time": 4
+                },
+                "_base": {
+                    "damage": 6,
+                    "mp_cost": 3,
+                    "element": 3,
+                    "cast_time": 4
+                }
+            },
+            {
+                "_comment": "StoneBullet (list 0 = Mage)",
+                "enabled": true,
+                "list": 0,
+                "index": 3,
+                "name": "StoneBullet",
+                "fields": {
+                    "damage": 11,
+                    "mp_cost": 6,
+                    "element": 4,
+                    "cast_time": 4
+                },
+                "_base": {
+                    "damage": 11,
+                    "mp_cost": 6,
+                    "element": 4,
+                    "cast_time": 4
+                }
+            },
+            {
+                "_comment": "Striking (list 0 = Mage)",
+                "enabled": true,
+                "list": 0,
+                "index": 4,
+                "name": "Striking",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 10,
+                    "element": 0,
+                    "cast_time": 20
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 10,
+                    "element": 0,
+                    "cast_time": 20
+                }
+            },
+            {
+                "_comment": "Lightbolt (list 0 = Mage)",
+                "enabled": true,
+                "list": 0,
+                "index": 5,
+                "name": "Lightbolt",
+                "fields": {
+                    "damage": 8,
+                    "mp_cost": 8,
+                    "element": 6,
+                    "cast_time": 8
+                },
+                "_base": {
+                    "damage": 8,
+                    "mp_cost": 8,
+                    "element": 6,
+                    "cast_time": 8
+                }
+            },
+            {
+                "_comment": "DarkWave (list 0 = Mage)",
+                "enabled": true,
+                "list": 0,
+                "index": 6,
+                "name": "DarkWave",
+                "fields": {
+                    "damage": 16,
+                    "mp_cost": 10,
+                    "element": 7,
+                    "cast_time": 8
+                },
+                "_base": {
+                    "damage": 16,
+                    "mp_cost": 10,
+                    "element": 7,
+                    "cast_time": 8
+                }
+            },
+            {
+                "_comment": "Smash (list 0 = Mage)",
+                "enabled": true,
+                "list": 0,
+                "index": 7,
+                "name": "Smash",
+                "fields": {
+                    "damage": 30,
+                    "mp_cost": 8,
+                    "element": 0,
+                    "cast_time": 4
+                },
+                "_base": {
+                    "damage": 24,
+                    "mp_cost": 8,
+                    "element": 0,
+                    "cast_time": 8
+                }
+            },
+            {
+                "_comment": "MagicMissile (list 0 = Mage)",
+                "enabled": true,
+                "list": 0,
+                "index": 8,
+                "name": "MagicMissile",
+                "fields": {
+                    "damage": 20,
+                    "mp_cost": 12,
+                    "element": 0,
+                    "cast_time": 8
+                },
+                "_base": {
+                    "damage": 20,
+                    "mp_cost": 12,
+                    "element": 0,
+                    "cast_time": 8
+                }
+            },
+            {
+                "_comment": "EnchantWeapon (list 0 = Mage)",
+                "enabled": true,
+                "list": 0,
+                "index": 9,
+                "name": "EnchantWeapon",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 15,
+                    "element": 0,
+                    "cast_time": 24
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 15,
+                    "element": 0,
+                    "cast_time": 24
+                }
+            },
+            {
+                "_comment": "Blaze (list 0 = Mage)",
+                "enabled": true,
                 "list": 0,
                 "index": 10,
                 "name": "Blaze",
                 "fields": {
-                    "damage": 40
+                    "damage": 30,
+                    "mp_cost": 16,
+                    "element": 2,
+                    "cast_time": 20
+                },
+                "_base": {
+                    "damage": 30,
+                    "mp_cost": 16,
+                    "element": 2,
+                    "cast_time": 20
+                }
+            },
+            {
+                "_comment": "Lightningbolt (list 0 = Mage)",
+                "enabled": true,
+                "list": 0,
+                "index": 11,
+                "name": "Lightningbolt",
+                "fields": {
+                    "damage": 30,
+                    "mp_cost": 16,
+                    "element": 5,
+                    "cast_time": 20
+                },
+                "_base": {
+                    "damage": 30,
+                    "mp_cost": 16,
+                    "element": 5,
+                    "cast_time": 20
+                }
+            },
+            {
+                "_comment": "Blizzard (list 0 = Mage)",
+                "enabled": true,
+                "list": 0,
+                "index": 12,
+                "name": "Blizzard",
+                "fields": {
+                    "damage": 16,
+                    "mp_cost": 16,
+                    "element": 3,
+                    "cast_time": 32
+                },
+                "_base": {
+                    "damage": 16,
+                    "mp_cost": 16,
+                    "element": 3,
+                    "cast_time": 32
+                }
+            },
+            {
+                "_comment": "PoisonCloud (list 0 = Mage)",
+                "enabled": true,
+                "list": 0,
+                "index": 13,
+                "name": "PoisonCloud",
+                "fields": {
+                    "damage": 4,
+                    "mp_cost": 20,
+                    "element": 4,
+                    "cast_time": 40
+                },
+                "_base": {
+                    "damage": 4,
+                    "mp_cost": 20,
+                    "element": 4,
+                    "cast_time": 40
+                }
+            },
+            {
+                "_comment": "ExtendSpell (list 0 = Mage)",
+                "enabled": true,
+                "list": 0,
+                "index": 14,
+                "name": "ExtendSpell",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 32,
+                    "element": 0,
+                    "cast_time": 40
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 32,
+                    "element": 0,
+                    "cast_time": 40
+                }
+            },
+            {
+                "_comment": "MagicRay (list 0 = Mage)",
+                "enabled": true,
+                "list": 0,
+                "index": 15,
+                "name": "MagicRay",
+                "fields": {
+                    "damage": 15,
+                    "mp_cost": 24,
+                    "element": 6,
+                    "cast_time": 60
+                },
+                "_base": {
+                    "damage": 15,
+                    "mp_cost": 24,
+                    "element": 6,
+                    "cast_time": 60
+                }
+            },
+            {
+                "_comment": "Shining (list 0 = Mage)",
+                "enabled": true,
+                "list": 0,
+                "index": 16,
+                "name": "Shining",
+                "fields": {
+                    "damage": 8,
+                    "mp_cost": 40,
+                    "element": 6,
+                    "cast_time": 6
+                },
+                "_base": {
+                    "damage": 8,
+                    "mp_cost": 40,
+                    "element": 6,
+                    "cast_time": 60
+                }
+            },
+            {
+                "_comment": "DarkBreath (list 0 = Mage)",
+                "enabled": true,
+                "list": 0,
+                "index": 17,
+                "name": "DarkBreath",
+                "fields": {
+                    "damage": 10,
+                    "mp_cost": 38,
+                    "element": 7,
+                    "cast_time": 60
+                },
+                "_base": {
+                    "damage": 10,
+                    "mp_cost": 38,
+                    "element": 7,
+                    "cast_time": 60
+                }
+            },
+            {
+                "_comment": "DispellMagic (list 0 = Mage)",
+                "enabled": true,
+                "list": 0,
+                "index": 18,
+                "name": "DispellMagic",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 40,
+                    "element": 0,
+                    "cast_time": 45
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 40,
+                    "element": 0,
+                    "cast_time": 45
+                }
+            },
+            {
+                "_comment": "Petrifaction (list 0 = Mage)",
+                "enabled": true,
+                "list": 0,
+                "index": 19,
+                "name": "Petrifaction",
+                "fields": {
+                    "damage": 50,
+                    "mp_cost": 38,
+                    "element": 4,
+                    "cast_time": 36
+                },
+                "_base": {
+                    "damage": 50,
+                    "mp_cost": 38,
+                    "element": 4,
+                    "cast_time": 36
+                }
+            },
+            {
+                "_comment": "Explosion (list 0 = Mage)",
+                "enabled": true,
+                "list": 0,
+                "index": 20,
+                "name": "Explosion",
+                "fields": {
+                    "damage": 70,
+                    "mp_cost": 45,
+                    "element": 2,
+                    "cast_time": 60
+                },
+                "_base": {
+                    "damage": 70,
+                    "mp_cost": 45,
+                    "element": 2,
+                    "cast_time": 60
+                }
+            },
+            {
+                "_comment": "Thunderbolt (list 0 = Mage)",
+                "enabled": true,
+                "list": 0,
+                "index": 21,
+                "name": "Thunderbolt",
+                "fields": {
+                    "damage": 70,
+                    "mp_cost": 45,
+                    "element": 5,
+                    "cast_time": 60
+                },
+                "_base": {
+                    "damage": 70,
+                    "mp_cost": 45,
+                    "element": 5,
+                    "cast_time": 60
+                }
+            },
+            {
+                "_comment": "FreezeBeast (list 0 = Mage)",
+                "enabled": true,
+                "list": 0,
+                "index": 22,
+                "name": "FreezeBeast",
+                "fields": {
+                    "damage": 8,
+                    "mp_cost": 30,
+                    "element": 3,
+                    "cast_time": 60
+                },
+                "_base": {
+                    "damage": 8,
+                    "mp_cost": 30,
+                    "element": 3,
+                    "cast_time": 60
+                }
+            },
+            {
+                "_comment": "EarthJavelin (list 0 = Mage)",
+                "enabled": true,
+                "list": 0,
+                "index": 23,
+                "name": "EarthJavelin",
+                "fields": {
+                    "damage": 8,
+                    "mp_cost": 45,
+                    "element": 4,
+                    "cast_time": 60
+                },
+                "_base": {
+                    "damage": 8,
+                    "mp_cost": 45,
+                    "element": 4,
+                    "cast_time": 60
+                }
+            },
+            {
+                "_comment": "DeathSpell (list 0 = Mage)",
+                "enabled": true,
+                "list": 0,
+                "index": 24,
+                "name": "DeathSpell",
+                "fields": {
+                    "damage": 3,
+                    "mp_cost": 60,
+                    "element": 9,
+                    "cast_time": 60
+                },
+                "_base": {
+                    "damage": 3,
+                    "mp_cost": 60,
+                    "element": 9,
+                    "cast_time": 60
+                }
+            },
+            {
+                "_comment": "Teleport (list 0 = Mage)",
+                "enabled": true,
+                "list": 0,
+                "index": 25,
+                "name": "Teleport",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 80,
+                    "element": 0,
+                    "cast_time": 120
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 80,
+                    "element": 0,
+                    "cast_time": 120
+                }
+            },
+            {
+                "_comment": "ChaosFlare (list 0 = Mage)",
+                "enabled": true,
+                "list": 0,
+                "index": 26,
+                "name": "ChaosFlare",
+                "fields": {
+                    "damage": 11,
+                    "mp_cost": 96,
+                    "element": 2,
+                    "cast_time": 132
+                },
+                "_base": {
+                    "damage": 11,
+                    "mp_cost": 96,
+                    "element": 2,
+                    "cast_time": 132
+                }
+            },
+            {
+                "_comment": "MeteorSmash (list 0 = Mage)",
+                "enabled": true,
+                "list": 0,
+                "index": 27,
+                "name": "MeteorSmash",
+                "fields": {
+                    "damage": 140,
+                    "mp_cost": 82,
+                    "element": 0,
+                    "cast_time": 96
+                },
+                "_base": {
+                    "damage": 140,
+                    "mp_cost": 82,
+                    "element": 0,
+                    "cast_time": 96
+                }
+            },
+            {
+                "_comment": "Fusion (list 0 = Mage)",
+                "enabled": true,
+                "list": 0,
+                "index": 28,
+                "name": "Fusion",
+                "fields": {
+                    "damage": 10,
+                    "mp_cost": 100,
+                    "element": 6,
+                    "cast_time": 120
+                },
+                "_base": {
+                    "damage": 10,
+                    "mp_cost": 100,
+                    "element": 6,
+                    "cast_time": 120
+                }
+            },
+            {
+                "_comment": "TurnUndead (list 1 = Priest)",
+                "enabled": true,
+                "list": 1,
+                "index": 0,
+                "name": "TurnUndead",
+                "fields": {
+                    "damage": 5,
+                    "mp_cost": 0,
+                    "element": 8,
+                    "cast_time": 20
+                },
+                "_base": {
+                    "damage": 5,
+                    "mp_cost": 0,
+                    "element": 8,
+                    "cast_time": 20
+                }
+            },
+            {
+                "_comment": "Healing (list 1 = Priest)",
+                "enabled": true,
+                "list": 1,
+                "index": 1,
+                "name": "Healing",
+                "fields": {
+                    "damage": 26,
+                    "mp_cost": 12,
+                    "element": 8,
+                    "cast_time": 12
+                },
+                "_base": {
+                    "damage": 26,
+                    "mp_cost": 12,
+                    "element": 8,
+                    "cast_time": 12
+                }
+            },
+            {
+                "_comment": "Protection (list 1 = Priest)",
+                "enabled": true,
+                "list": 1,
+                "index": 2,
+                "name": "Protection",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 8,
+                    "element": 8,
+                    "cast_time": 8
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 8,
+                    "element": 8,
+                    "cast_time": 8
+                }
+            },
+            {
+                "_comment": "Resist (list 1 = Priest)",
+                "enabled": true,
+                "list": 1,
+                "index": 3,
+                "name": "Resist",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 8,
+                    "element": 8,
+                    "cast_time": 8
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 8,
+                    "element": 8,
+                    "cast_time": 8
+                }
+            },
+            {
+                "_comment": "DetectAlign (list 1 = Priest)",
+                "enabled": true,
+                "list": 1,
+                "index": 4,
+                "name": "DetectAlign",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 2,
+                    "element": 0,
+                    "cast_time": 8
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 2,
+                    "element": 0,
+                    "cast_time": 8
+                }
+            },
+            {
+                "_comment": "Refresh (list 1 = Priest)",
+                "enabled": true,
+                "list": 1,
+                "index": 5,
+                "name": "Refresh",
+                "fields": {
+                    "damage": 160,
+                    "mp_cost": 42,
+                    "element": 8,
+                    "cast_time": 32
+                },
+                "_base": {
+                    "damage": 160,
+                    "mp_cost": 42,
+                    "element": 8,
+                    "cast_time": 32
+                }
+            },
+            {
+                "_comment": "DetectEnemies (list 1 = Priest)",
+                "enabled": true,
+                "list": 1,
+                "index": 6,
+                "name": "DetectEnemies",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 2,
+                    "element": 0,
+                    "cast_time": 16
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 2,
+                    "element": 0,
+                    "cast_time": 16
+                }
+            },
+            {
+                "_comment": "Anti-poison (list 1 = Priest)",
+                "enabled": true,
+                "list": 1,
+                "index": 7,
+                "name": "Anti-poison",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 16,
+                    "element": 8,
+                    "cast_time": 16
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 16,
+                    "element": 8,
+                    "cast_time": 16
+                }
+            },
+            {
+                "_comment": "Anti-paralysis (list 1 = Priest)",
+                "enabled": true,
+                "list": 1,
+                "index": 8,
+                "name": "Anti-paralysis",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 16,
+                    "element": 8,
+                    "cast_time": 16
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 16,
+                    "element": 8,
+                    "cast_time": 16
+                }
+            },
+            {
+                "_comment": "Anti-feeble (list 1 = Priest)",
+                "enabled": true,
+                "list": 1,
+                "index": 9,
+                "name": "Anti-feeble",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 16,
+                    "element": 8,
+                    "cast_time": 16
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 16,
+                    "element": 8,
+                    "cast_time": 16
+                }
+            },
+            {
+                "_comment": "Sanity (list 1 = Priest)",
+                "enabled": true,
+                "list": 1,
+                "index": 10,
+                "name": "Sanity",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 16,
+                    "element": 8,
+                    "cast_time": 16
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 16,
+                    "element": 8,
+                    "cast_time": 16
+                }
+            },
+            {
+                "_comment": "Restore (list 1 = Priest)",
+                "enabled": true,
+                "list": 1,
+                "index": 11,
+                "name": "Restore",
+                "fields": {
+                    "damage": 200,
+                    "mp_cost": 40,
+                    "element": 8,
+                    "cast_time": 36
+                },
+                "_base": {
+                    "damage": 200,
+                    "mp_cost": 40,
+                    "element": 8,
+                    "cast_time": 36
+                }
+            },
+            {
+                "_comment": "Barrier (list 1 = Priest)",
+                "enabled": true,
+                "list": 1,
+                "index": 12,
+                "name": "Barrier",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 22,
+                    "element": 8,
+                    "cast_time": 20
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 22,
+                    "element": 8,
+                    "cast_time": 20
+                }
+            },
+            {
+                "_comment": "ResistField (list 1 = Priest)",
+                "enabled": true,
+                "list": 1,
+                "index": 13,
+                "name": "ResistField",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 22,
+                    "element": 8,
+                    "cast_time": 20
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 22,
+                    "element": 8,
+                    "cast_time": 20
+                }
+            },
+            {
+                "_comment": "StoneFlesh (list 1 = Priest)",
+                "enabled": true,
+                "list": 1,
+                "index": 14,
+                "name": "StoneFlesh",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 26,
+                    "element": 8,
+                    "cast_time": 40
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 26,
+                    "element": 8,
+                    "cast_time": 40
+                }
+            },
+            {
+                "_comment": "Requiem (list 1 = Priest)",
+                "enabled": true,
+                "list": 1,
+                "index": 15,
+                "name": "Requiem",
+                "fields": {
+                    "damage": 30,
+                    "mp_cost": 10,
+                    "element": 8,
+                    "cast_time": 60
+                },
+                "_base": {
+                    "damage": 30,
+                    "mp_cost": 10,
+                    "element": 8,
+                    "cast_time": 60
+                }
+            },
+            {
+                "_comment": "HolyWord (list 1 = Priest)",
+                "enabled": true,
+                "list": 1,
+                "index": 16,
+                "name": "HolyWord",
+                "fields": {
+                    "damage": 70,
+                    "mp_cost": 60,
+                    "element": 8,
+                    "cast_time": 12
+                },
+                "_base": {
+                    "damage": 70,
+                    "mp_cost": 60,
+                    "element": 8,
+                    "cast_time": 12
+                }
+            },
+            {
+                "_comment": "RemoveCurse (list 1 = Priest)",
+                "enabled": true,
+                "list": 1,
+                "index": 17,
+                "name": "RemoveCurse",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 40,
+                    "element": 8,
+                    "cast_time": 36
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 40,
+                    "element": 8,
+                    "cast_time": 36
+                }
+            },
+            {
+                "_comment": "RemoveSilence (list 1 = Priest)",
+                "enabled": true,
+                "list": 1,
+                "index": 18,
+                "name": "RemoveSilence",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 40,
+                    "element": 8,
+                    "cast_time": 36
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 40,
+                    "element": 8,
+                    "cast_time": 36
+                }
+            },
+            {
+                "_comment": "Regeneration (list 1 = Priest)",
+                "enabled": true,
+                "list": 1,
+                "index": 19,
+                "name": "Regeneration",
+                "fields": {
+                    "damage": 4,
+                    "mp_cost": 86,
+                    "element": 8,
+                    "cast_time": 60
+                },
+                "_base": {
+                    "damage": 4,
+                    "mp_cost": 86,
+                    "element": 8,
+                    "cast_time": 60
+                }
+            },
+            {
+                "_comment": "Resurrection (list 1 = Priest)",
+                "enabled": true,
+                "list": 1,
+                "index": 20,
+                "name": "Resurrection",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 62,
+                    "element": 8,
+                    "cast_time": 60
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 62,
+                    "element": 8,
+                    "cast_time": 60
+                }
+            },
+            {
+                "_comment": "RecoverEnergy (list 1 = Priest)",
+                "enabled": true,
+                "list": 1,
+                "index": 21,
+                "name": "RecoverEnergy",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 39,
+                    "element": 8,
+                    "cast_time": 60
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 39,
+                    "element": 8,
+                    "cast_time": 60
+                }
+            },
+            {
+                "_comment": "Reincarnation (list 1 = Priest)",
+                "enabled": true,
+                "list": 1,
+                "index": 22,
+                "name": "Reincarnation",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 100,
+                    "element": 8,
+                    "cast_time": 40
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 100,
+                    "element": 8,
+                    "cast_time": 40
+                }
+            },
+            {
+                "_comment": "CallAngel (list 1 = Priest)",
+                "enabled": true,
+                "list": 1,
+                "index": 23,
+                "name": "CallAngel",
+                "fields": {
+                    "damage": 5,
+                    "mp_cost": 108,
+                    "element": 8,
+                    "cast_time": 120
+                },
+                "_base": {
+                    "damage": 5,
+                    "mp_cost": 108,
+                    "element": 8,
+                    "cast_time": 120
+                }
+            },
+            {
+                "_comment": "Sleep (list 2 = Sorcerer)",
+                "enabled": true,
+                "list": 2,
+                "index": 0,
+                "name": "Sleep",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 2,
+                    "element": 0,
+                    "cast_time": 8
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 2,
+                    "element": 0,
+                    "cast_time": 8
+                }
+            },
+            {
+                "_comment": "Slow (list 2 = Sorcerer)",
+                "enabled": true,
+                "list": 2,
+                "index": 1,
+                "name": "Slow",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 2,
+                    "element": 0,
+                    "cast_time": 8
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 2,
+                    "element": 0,
+                    "cast_time": 8
+                }
+            },
+            {
+                "_comment": "Haste (list 2 = Sorcerer)",
+                "enabled": true,
+                "list": 2,
+                "index": 2,
+                "name": "Haste",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 2,
+                    "element": 0,
+                    "cast_time": 8
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 2,
+                    "element": 0,
+                    "cast_time": 8
+                }
+            },
+            {
+                "_comment": "EnchantFire (list 2 = Sorcerer)",
+                "enabled": true,
+                "list": 2,
+                "index": 3,
+                "name": "EnchantFire",
+                "fields": {
+                    "damage": 5,
+                    "mp_cost": 16,
+                    "element": 2,
+                    "cast_time": 24
+                },
+                "_base": {
+                    "damage": 5,
+                    "mp_cost": 16,
+                    "element": 2,
+                    "cast_time": 24
+                }
+            },
+            {
+                "_comment": "EnchantEarth (list 2 = Sorcerer)",
+                "enabled": true,
+                "list": 2,
+                "index": 4,
+                "name": "EnchantEarth",
+                "fields": {
+                    "damage": 5,
+                    "mp_cost": 16,
+                    "element": 4,
+                    "cast_time": 24
+                },
+                "_base": {
+                    "damage": 5,
+                    "mp_cost": 16,
+                    "element": 4,
+                    "cast_time": 24
+                }
+            },
+            {
+                "_comment": "EnchantWind (list 2 = Sorcerer)",
+                "enabled": true,
+                "list": 2,
+                "index": 5,
+                "name": "EnchantWind",
+                "fields": {
+                    "damage": 5,
+                    "mp_cost": 16,
+                    "element": 5,
+                    "cast_time": 24
+                },
+                "_base": {
+                    "damage": 5,
+                    "mp_cost": 16,
+                    "element": 5,
+                    "cast_time": 24
+                }
+            },
+            {
+                "_comment": "EnchantWater (list 2 = Sorcerer)",
+                "enabled": true,
+                "list": 2,
+                "index": 6,
+                "name": "EnchantWater",
+                "fields": {
+                    "damage": 5,
+                    "mp_cost": 16,
+                    "element": 3,
+                    "cast_time": 24
+                },
+                "_base": {
+                    "damage": 5,
+                    "mp_cost": 16,
+                    "element": 3,
+                    "cast_time": 24
+                }
+            },
+            {
+                "_comment": "Charm (list 2 = Sorcerer)",
+                "enabled": true,
+                "list": 2,
+                "index": 7,
+                "name": "Charm",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 8,
+                    "element": 0,
+                    "cast_time": 8
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 8,
+                    "element": 0,
+                    "cast_time": 16
+                }
+            },
+            {
+                "_comment": "Silence (list 2 = Sorcerer)",
+                "enabled": true,
+                "list": 2,
+                "index": 8,
+                "name": "Silence",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 8,
+                    "element": 0,
+                    "cast_time": 8
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 8,
+                    "element": 0,
+                    "cast_time": 16
+                }
+            },
+            {
+                "_comment": "MagicShield (list 2 = Sorcerer)",
+                "enabled": true,
+                "list": 2,
+                "index": 9,
+                "name": "MagicShield",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 12,
+                    "element": 0,
+                    "cast_time": 16
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 12,
+                    "element": 0,
+                    "cast_time": 24
+                }
+            },
+            {
+                "_comment": "Levitate (list 2 = Sorcerer)",
+                "enabled": true,
+                "list": 2,
+                "index": 10,
+                "name": "Levitate",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 20,
+                    "element": 0,
+                    "cast_time": 16
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 30,
+                    "element": 0,
+                    "cast_time": 24
+                }
+            },
+            {
+                "_comment": "Shield (list 2 = Sorcerer)",
+                "enabled": true,
+                "list": 2,
+                "index": 11,
+                "name": "Shield",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 12,
+                    "element": 0,
+                    "cast_time": 16
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 12,
+                    "element": 0,
+                    "cast_time": 24
+                }
+            },
+            {
+                "_comment": "HeavySlow (list 2 = Sorcerer)",
+                "enabled": true,
+                "list": 2,
+                "index": 12,
+                "name": "HeavySlow",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 40,
+                    "element": 0,
+                    "cast_time": 32
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 40,
+                    "element": 0,
+                    "cast_time": 40
+                }
+            },
+            {
+                "_comment": "Quick (list 2 = Sorcerer)",
+                "enabled": true,
+                "list": 2,
+                "index": 13,
+                "name": "Quick",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 40,
+                    "element": 0,
+                    "cast_time": 32
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 40,
+                    "element": 0,
+                    "cast_time": 40
+                }
+            },
+            {
+                "_comment": "Invincible (list 2 = Sorcerer)",
+                "enabled": true,
+                "list": 2,
+                "index": 14,
+                "name": "Invincible",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 40,
+                    "element": 0,
+                    "cast_time": 40
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 60,
+                    "element": 0,
+                    "cast_time": 60
+                }
+            },
+            {
+                "_comment": "Anti-Circle (list 2 = Sorcerer)",
+                "enabled": true,
+                "list": 2,
+                "index": 15,
+                "name": "Anti-Circle",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 50,
+                    "element": 0,
+                    "cast_time": 20
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 80,
+                    "element": 0,
+                    "cast_time": 20
+                }
+            },
+            {
+                "_comment": "SummonWater (list 2 = Sorcerer)",
+                "enabled": true,
+                "list": 2,
+                "index": 16,
+                "name": "SummonWater",
+                "fields": {
+                    "damage": 30,
+                    "mp_cost": 10,
+                    "element": 3,
+                    "cast_time": 25
+                },
+                "_base": {
+                    "damage": 5,
+                    "mp_cost": 50,
+                    "element": 3,
+                    "cast_time": 70
+                }
+            },
+            {
+                "_comment": "SummonFire (list 2 = Sorcerer)",
+                "enabled": true,
+                "list": 2,
+                "index": 17,
+                "name": "SummonFire",
+                "fields": {
+                    "damage": 30,
+                    "mp_cost": 10,
+                    "element": 2,
+                    "cast_time": 25
+                },
+                "_base": {
+                    "damage": 5,
+                    "mp_cost": 50,
+                    "element": 2,
+                    "cast_time": 70
+                }
+            },
+            {
+                "_comment": "SummonWind (list 2 = Sorcerer)",
+                "enabled": true,
+                "list": 2,
+                "index": 18,
+                "name": "SummonWind",
+                "fields": {
+                    "damage": 30,
+                    "mp_cost": 10,
+                    "element": 5,
+                    "cast_time": 25
+                },
+                "_base": {
+                    "damage": 5,
+                    "mp_cost": 50,
+                    "element": 5,
+                    "cast_time": 70
+                }
+            },
+            {
+                "_comment": "SummonEarth (list 2 = Sorcerer)",
+                "enabled": true,
+                "list": 2,
+                "index": 19,
+                "name": "SummonEarth",
+                "fields": {
+                    "damage": 30,
+                    "mp_cost": 10,
+                    "element": 4,
+                    "cast_time": 25
+                },
+                "_base": {
+                    "damage": 5,
+                    "mp_cost": 50,
+                    "element": 4,
+                    "cast_time": 70
+                }
+            },
+            {
+                "_comment": "Lavender (list 3 = Consumable)",
+                "enabled": true,
+                "list": 3,
+                "index": 0,
+                "name": "Lavender",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 1,
+                    "element": 0,
+                    "cast_time": 0
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 1,
+                    "element": 0,
+                    "cast_time": 0
+                }
+            },
+            {
+                "_comment": "Sage (list 3 = Consumable)",
+                "enabled": true,
+                "list": 3,
+                "index": 1,
+                "name": "Sage",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 1,
+                    "element": 0,
+                    "cast_time": 0
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 1,
+                    "element": 0,
+                    "cast_time": 0
+                }
+            },
+            {
+                "_comment": "Vervain (list 3 = Consumable)",
+                "enabled": true,
+                "list": 3,
+                "index": 2,
+                "name": "Vervain",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 1,
+                    "element": 0,
+                    "cast_time": 0
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 1,
+                    "element": 0,
+                    "cast_time": 0
+                }
+            },
+            {
+                "_comment": "Savory (list 3 = Consumable)",
+                "enabled": true,
+                "list": 3,
+                "index": 3,
+                "name": "Savory",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 1,
+                    "element": 0,
+                    "cast_time": 0
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 1,
+                    "element": 0,
+                    "cast_time": 0
+                }
+            },
+            {
+                "_comment": "Rue (list 3 = Consumable)",
+                "enabled": true,
+                "list": 3,
+                "index": 4,
+                "name": "Rue",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 1,
+                    "element": 0,
+                    "cast_time": 0
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 1,
+                    "element": 0,
+                    "cast_time": 0
+                }
+            },
+            {
+                "_comment": "Hyssop (list 3 = Consumable)",
+                "enabled": true,
+                "list": 3,
+                "index": 5,
+                "name": "Hyssop",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 1,
+                    "element": 0,
+                    "cast_time": 0
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 1,
+                    "element": 0,
+                    "cast_time": 0
+                }
+            },
+            {
+                "_comment": "NightShade (list 3 = Consumable)",
+                "enabled": true,
+                "list": 3,
+                "index": 6,
+                "name": "NightShade",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 1,
+                    "element": 0,
+                    "cast_time": 0
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 1,
+                    "element": 0,
+                    "cast_time": 0
+                }
+            },
+            {
+                "_comment": "Wave (list 4 = Wave)",
+                "enabled": true,
+                "list": 4,
+                "index": 0,
+                "name": "Wave",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 0,
+                    "element": 0,
+                    "cast_time": 1
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 0,
+                    "element": 0,
+                    "cast_time": 1
+                }
+            },
+            {
+                "_comment": "Arrow (list 5 = Arrow)",
+                "enabled": true,
+                "list": 5,
+                "index": 0,
+                "name": "Arrow",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 0,
+                    "element": 0,
+                    "cast_time": 1
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 0,
+                    "element": 0,
+                    "cast_time": 1
+                }
+            },
+            {
+                "_comment": "Stardust (list 6 = Stardust)",
+                "enabled": true,
+                "list": 6,
+                "index": 0,
+                "name": "Stardust",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 0,
+                    "element": 0,
+                    "cast_time": 1
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 0,
+                    "element": 0,
+                    "cast_time": 1
+                }
+            },
+            {
+                "_comment": "PoisonTouch (list 7 = MonsterAbility)",
+                "enabled": true,
+                "list": 7,
+                "index": 0,
+                "name": "PoisonTouch",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 0,
+                    "element": 0,
+                    "cast_time": 1
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 0,
+                    "element": 0,
+                    "cast_time": 1
+                }
+            },
+            {
+                "_comment": "ParalyzeTouch (list 7 = MonsterAbility)",
+                "enabled": true,
+                "list": 7,
+                "index": 1,
+                "name": "ParalyzeTouch",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 0,
+                    "element": 0,
+                    "cast_time": 1
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 0,
+                    "element": 0,
+                    "cast_time": 1
+                }
+            },
+            {
+                "_comment": "ParalyzeEye (list 7 = MonsterAbility)",
+                "enabled": true,
+                "list": 7,
+                "index": 2,
+                "name": "ParalyzeEye",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 0,
+                    "element": 0,
+                    "cast_time": 1
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 0,
+                    "element": 0,
+                    "cast_time": 1
+                }
+            },
+            {
+                "_comment": "ConfusionEye (list 7 = MonsterAbility)",
+                "enabled": true,
+                "list": 7,
+                "index": 3,
+                "name": "ConfusionEye",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 0,
+                    "element": 0,
+                    "cast_time": 1
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 0,
+                    "element": 0,
+                    "cast_time": 1
+                }
+            },
+            {
+                "_comment": "SleepEye (list 7 = MonsterAbility)",
+                "enabled": true,
+                "list": 7,
+                "index": 4,
+                "name": "SleepEye",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 0,
+                    "element": 0,
+                    "cast_time": 1
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 0,
+                    "element": 0,
+                    "cast_time": 1
+                }
+            },
+            {
+                "_comment": "FireBreath (list 7 = MonsterAbility)",
+                "enabled": true,
+                "list": 7,
+                "index": 5,
+                "name": "FireBreath",
+                "fields": {
+                    "damage": 20,
+                    "mp_cost": 0,
+                    "element": 2,
+                    "cast_time": 1
+                },
+                "_base": {
+                    "damage": 20,
+                    "mp_cost": 0,
+                    "element": 2,
+                    "cast_time": 1
+                }
+            },
+            {
+                "_comment": "ColdBreath (list 7 = MonsterAbility)",
+                "enabled": true,
+                "list": 7,
+                "index": 6,
+                "name": "ColdBreath",
+                "fields": {
+                    "damage": 20,
+                    "mp_cost": 0,
+                    "element": 3,
+                    "cast_time": 1
+                },
+                "_base": {
+                    "damage": 20,
+                    "mp_cost": 0,
+                    "element": 3,
+                    "cast_time": 1
+                }
+            },
+            {
+                "_comment": "ThunderBreath (list 7 = MonsterAbility)",
+                "enabled": true,
+                "list": 7,
+                "index": 7,
+                "name": "ThunderBreath",
+                "fields": {
+                    "damage": 20,
+                    "mp_cost": 0,
+                    "element": 5,
+                    "cast_time": 1
+                },
+                "_base": {
+                    "damage": 20,
+                    "mp_cost": 0,
+                    "element": 5,
+                    "cast_time": 1
+                }
+            },
+            {
+                "_comment": "AcidBreath (list 7 = MonsterAbility)",
+                "enabled": true,
+                "list": 7,
+                "index": 8,
+                "name": "AcidBreath",
+                "fields": {
+                    "damage": 20,
+                    "mp_cost": 0,
+                    "element": 4,
+                    "cast_time": 1
+                },
+                "_base": {
+                    "damage": 20,
+                    "mp_cost": 0,
+                    "element": 4,
+                    "cast_time": 1
+                }
+            },
+            {
+                "_comment": "PoisonBreath (list 7 = MonsterAbility)",
+                "enabled": true,
+                "list": 7,
+                "index": 9,
+                "name": "PoisonBreath",
+                "fields": {
+                    "damage": 20,
+                    "mp_cost": 0,
+                    "element": 0,
+                    "cast_time": 1
+                },
+                "_base": {
+                    "damage": 20,
+                    "mp_cost": 0,
+                    "element": 0,
+                    "cast_time": 1
+                }
+            },
+            {
+                "_comment": "StunBreath (list 7 = MonsterAbility)",
+                "enabled": true,
+                "list": 7,
+                "index": 10,
+                "name": "StunBreath",
+                "fields": {
+                    "damage": 20,
+                    "mp_cost": 0,
+                    "element": 0,
+                    "cast_time": 1
+                },
+                "_base": {
+                    "damage": 20,
+                    "mp_cost": 0,
+                    "element": 0,
+                    "cast_time": 1
+                }
+            },
+            {
+                "_comment": "MadScream (list 7 = MonsterAbility)",
+                "enabled": true,
+                "list": 7,
+                "index": 11,
+                "name": "MadScream",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 0,
+                    "element": 0,
+                    "cast_time": 1
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 0,
+                    "element": 0,
+                    "cast_time": 1
+                }
+            },
+            {
+                "_comment": "Drain (list 7 = MonsterAbility)",
+                "enabled": true,
+                "list": 7,
+                "index": 12,
+                "name": "Drain",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 0,
+                    "element": 0,
+                    "cast_time": 1
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 0,
+                    "element": 0,
+                    "cast_time": 1
+                }
+            },
+            {
+                "_comment": "Howling (list 7 = MonsterAbility)",
+                "enabled": true,
+                "list": 7,
+                "index": 13,
+                "name": "Howling",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 0,
+                    "element": 0,
+                    "cast_time": 1
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 0,
+                    "element": 0,
+                    "cast_time": 1
+                }
+            },
+            {
+                "_comment": "Knockback (list 7 = MonsterAbility)",
+                "enabled": true,
+                "list": 7,
+                "index": 14,
+                "name": "Knockback",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 0,
+                    "element": 0,
+                    "cast_time": 1
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 0,
+                    "element": 0,
+                    "cast_time": 1
+                }
+            },
+            {
+                "_comment": "Stun (list 7 = MonsterAbility)",
+                "enabled": true,
+                "list": 7,
+                "index": 15,
+                "name": "Stun",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 0,
+                    "element": 0,
+                    "cast_time": 1
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 0,
+                    "element": 0,
+                    "cast_time": 1
+                }
+            },
+            {
+                "_comment": "SleepSong (list 7 = MonsterAbility)",
+                "enabled": true,
+                "list": 7,
+                "index": 16,
+                "name": "SleepSong",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 0,
+                    "element": 0,
+                    "cast_time": 1
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 0,
+                    "element": 0,
+                    "cast_time": 1
+                }
+            },
+            {
+                "_comment": "EvilEye (list 7 = MonsterAbility)",
+                "enabled": true,
+                "list": 7,
+                "index": 17,
+                "name": "EvilEye",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 0,
+                    "element": 9,
+                    "cast_time": 1
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 0,
+                    "element": 9,
+                    "cast_time": 1
+                }
+            },
+            {
+                "_comment": "EvilHowling (list 7 = MonsterAbility)",
+                "enabled": true,
+                "list": 7,
+                "index": 18,
+                "name": "EvilHowling",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 0,
+                    "element": 9,
+                    "cast_time": 1
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 0,
+                    "element": 9,
+                    "cast_time": 1
+                }
+            },
+            {
+                "_comment": "EvilField (list 7 = MonsterAbility)",
+                "enabled": true,
+                "list": 7,
+                "index": 19,
+                "name": "EvilField",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 0,
+                    "element": 9,
+                    "cast_time": 1
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 0,
+                    "element": 9,
+                    "cast_time": 1
+                }
+            },
+            {
+                "_comment": "Invincible (list 7 = MonsterAbility)",
+                "enabled": true,
+                "list": 7,
+                "index": 20,
+                "name": "Invincible",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 0,
+                    "element": 0,
+                    "cast_time": 1
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 0,
+                    "element": 0,
+                    "cast_time": 1
+                }
+            },
+            {
+                "_comment": "Regeneration (list 7 = MonsterAbility)",
+                "enabled": true,
+                "list": 7,
+                "index": 21,
+                "name": "Regeneration",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 0,
+                    "element": 0,
+                    "cast_time": 1
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 0,
+                    "element": 0,
+                    "cast_time": 1
+                }
+            },
+            {
+                "_comment": "Earthquake (list 7 = MonsterAbility)",
+                "enabled": true,
+                "list": 7,
+                "index": 22,
+                "name": "Earthquake",
+                "fields": {
+                    "damage": 50,
+                    "mp_cost": 0,
+                    "element": 4,
+                    "cast_time": 1
+                },
+                "_base": {
+                    "damage": 50,
+                    "mp_cost": 0,
+                    "element": 4,
+                    "cast_time": 1
+                }
+            },
+            {
+                "_comment": "FlareBreath (list 7 = MonsterAbility)",
+                "enabled": true,
+                "list": 7,
+                "index": 23,
+                "name": "FlareBreath",
+                "fields": {
+                    "damage": 70,
+                    "mp_cost": 0,
+                    "element": 2,
+                    "cast_time": 1
+                },
+                "_base": {
+                    "damage": 70,
+                    "mp_cost": 0,
+                    "element": 2,
+                    "cast_time": 1
+                }
+            },
+            {
+                "_comment": "DeadGate (list 7 = MonsterAbility)",
+                "enabled": true,
+                "list": 7,
+                "index": 24,
+                "name": "DeadGate",
+                "fields": {
+                    "damage": 50,
+                    "mp_cost": 0,
+                    "element": 9,
+                    "cast_time": 1
+                },
+                "_base": {
+                    "damage": 50,
+                    "mp_cost": 0,
+                    "element": 9,
+                    "cast_time": 1
+                }
+            },
+            {
+                "_comment": "Destroyer (list 7 = MonsterAbility)",
+                "enabled": true,
+                "list": 7,
+                "index": 25,
+                "name": "Destroyer",
+                "fields": {
+                    "damage": 50,
+                    "mp_cost": 0,
+                    "element": 6,
+                    "cast_time": 1
+                },
+                "_base": {
+                    "damage": 50,
+                    "mp_cost": 0,
+                    "element": 6,
+                    "cast_time": 1
+                }
+            },
+            {
+                "_comment": "WindSmash (list 7 = MonsterAbility)",
+                "enabled": true,
+                "list": 7,
+                "index": 26,
+                "name": "WindSmash",
+                "fields": {
+                    "damage": 50,
+                    "mp_cost": 0,
+                    "element": 5,
+                    "cast_time": 1
+                },
+                "_base": {
+                    "damage": 50,
+                    "mp_cost": 0,
+                    "element": 5,
+                    "cast_time": 1
+                }
+            },
+            {
+                "_comment": "Tidalwave (list 7 = MonsterAbility)",
+                "enabled": true,
+                "list": 7,
+                "index": 27,
+                "name": "Tidalwave",
+                "fields": {
+                    "damage": 40,
+                    "mp_cost": 0,
+                    "element": 3,
+                    "cast_time": 1
+                },
+                "_base": {
+                    "damage": 40,
+                    "mp_cost": 0,
+                    "element": 3,
+                    "cast_time": 1
+                }
+            },
+            {
+                "_comment": "HellHolwing (list 7 = MonsterAbility)",
+                "enabled": true,
+                "list": 7,
+                "index": 28,
+                "name": "HellHolwing",
+                "fields": {
+                    "damage": 0,
+                    "mp_cost": 0,
+                    "element": 9,
+                    "cast_time": 1
+                },
+                "_base": {
+                    "damage": 0,
+                    "mp_cost": 0,
+                    "element": 9,
+                    "cast_time": 1
+                }
+            },
+            {
+                "_comment": "DarkBlaze (list 7 = MonsterAbility)",
+                "enabled": true,
+                "list": 7,
+                "index": 29,
+                "name": "DarkBlaze",
+                "fields": {
+                    "damage": 90,
+                    "mp_cost": 0,
+                    "element": 7,
+                    "cast_time": 1
+                },
+                "_base": {
+                    "damage": 90,
+                    "mp_cost": 0,
+                    "element": 7,
+                    "cast_time": 1
                 }
             }
         ]
     },
-
     "overlay_bitfield_patches": {
         "enabled": true,
         "_doc": [
             "Each entry = one zone. Affects ALL floors and ALL monster types in that zone.",
-            "Only change 'enabled' and 'bitfield_value'. The 'offsets' are internal MIPS",
+            "Only change enabled and bitfield_value. The offsets are internal MIPS",
             "addresses found by reverse engineering - do NOT modify them.",
             "",
             "This is the INIT value. The level-up simulation may add more spells on top",
@@ -63,17 +2190,16 @@
                 "enabled": true,
                 "bitfield_value": "0x000003FF",
                 "_bitfield_doc": "bits 0-9 = Tier 1+2 (10 offensive spells)",
-
                 "_internal_do_not_modify": {
                     "type": "verbose",
                     "byte0_ori": "0x0098A69C",
-                    "byte0_sb":  "0x0098A6A0",
+                    "byte0_sb": "0x0098A6A0",
                     "byte1_nop": "0x0098A6AC",
-                    "byte1_sb":  "0x0098A6B0",
+                    "byte1_sb": "0x0098A6B0",
                     "byte2_nop": "0x0098A6BC",
-                    "byte2_sb":  "0x0098A6C0",
+                    "byte2_sb": "0x0098A6C0",
                     "byte3_nop": "0x0098A6CC",
-                    "byte3_sb":  "0x0098A6D0"
+                    "byte3_sb": "0x0098A6D0"
                 }
             }
         ]

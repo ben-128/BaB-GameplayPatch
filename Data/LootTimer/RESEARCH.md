@@ -4,9 +4,22 @@
 Modifier la duree avant disparition des coffres laches par les monstres.
 Duree originale : 20 secondes (1000 frames @ 50fps PAL).
 
-## Statut : v5 - COMPREHENSIVE DECREMENT DETECTION (2026-02-09)
+## Statut : v7 - ENTITY TYPE FILTERING (2026-02-10)
 
-**PROBLEME RESOLU** : v4 ne trouvait que 35 patterns sur 68 au total.
+**v6 cassait les sorts** : 35 patterns incluaient des timers de sorts/animations.
+Le joueur restait bloque a l'infini apres une incantation.
+
+**v7 filtre par TYPE D'ENTITE** : seuls les decrements dont le code accede
+aux champs d'opacite +0x28/+0x2A (uniques aux coffres) sont patches.
+Exclut aussi les patterns fade-in (state=2 vers +0x10).
+
+Resultat : **12 patterns** (vs 35 v6). Sorts non affectes.
+
+---
+
+## Historique v5 - COMPREHENSIVE DECREMENT DETECTION (2026-02-09)
+
+v4 ne trouvait que 35 patterns sur 68 au total.
 
 ### Pourquoi v4 echouait
 

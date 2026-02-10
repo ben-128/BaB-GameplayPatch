@@ -65,27 +65,38 @@ and passes it to the damage function via register (data-driven caller).
 
 **Pattern:**
 ```
-ori/addiu $v0, $zero, N     ; damage% (10 or 20)
-sh  $v0, 0x14($s5)          ; store to GPE entity field
+ori/addiu $v0, $zero, N     ; damage% (2, 3, 5, 10, or 20)
+sh  $v0, 0x14($sN)          ; store to GPE entity field
 ```
 
 **Entity structure for GPE traps:**
 - `entity+0x10` (uint16): State code (101 = damage phase)
 - `entity+0x12` (uint16): Timer/counter
-- `entity+0x14` (uint16): **Damage percentage** (10%, 20%)
+- `entity+0x14` (uint16): **Damage percentage** (2%, 3%, 5%, 10%, 20%)
 - `entity+0x16` (uint16): **Damage type** (1=physical, 0=other)
 
-**Cross-overlay scan results (all 28 dungeon overlays):**
+**Cross-overlay scan results (all dungeon overlays, 602 total sites):**
 
 | Count | Value | Description |
 |-------|-------|-------------|
-| 11 | 2% | Light GPE entity damage |
-| 28 | 10% | Standard GPE damage (1 per overlay) |
-| 56 | 20% | Heavy GPE damage (2 per overlay) |
+| 19 | 2% | Light GPE entity damage |
+| 29 | 3% | Light traps |
+| 5 | 5% | Medium traps |
+| 37 | 10% | Standard GPE damage (falling rocks) |
+| 62 | 20% | Heavy GPE damage (heavy traps) |
 
-**Key discriminator:** `$s5` register = GPE entity pointer. All GPE inits use `sh $v0, 0x14($s5)`.
+**Entity pointer register varies by overlay:**
+- `$s5`: 95 sites (most overlays)
+- `$s0`: 441 sites (includes non-damage stores; 14 match damage values)
+- `$s1`: 46 sites (Cavern of Death overlays; 4 match damage values)
+- `$s2`: 17 sites (2 match damage values)
+- `$s6`: 3 sites (all 2% damage)
 
-**Context signature (verified identical across all 28 overlays for val=10%):**
+**BUG FIX (2026-02-10):** Original patcher only searched for `$s5` (0xA6A20014).
+Cavern of Death and several other overlays use `$s0`/`$s1`/`$s2`/`$s6` as entity pointer,
+so their falling rocks were never patched. Fixed by searching all `$s0-$s7` registers.
+
+**Context signature (most common, via $s5):**
 ```
 0x3C01800D       lui $at, 0x800D        ; global state address
 0xA022xxxx       sb $v0, xxxx($at)      ; store to global (varies per overlay)
@@ -94,8 +105,16 @@ sh  $v0, 0x14($s5)          ; store to GPE entity field
 0x34020001       ori $v0, $zero, 1      ; damage_type = 1
 ```
 
+**Cavern variant (via $s1):**
+```
+0x24020001       addiu $v0, $zero, 1    ; state = 1
+0xA6220010       sh $v0, 0x10($s1)      ; entity+0x10 = state
+0x2402000A       addiu $v0, $zero, 10   ; <-- DAMAGE %
+0xA6220014       sh $v0, 0x14($s1)      ; entity+0x14 = damage%
+```
+
 **Backward trace (how 10% reaches the damage function):**
-1. Entity init: `ori $v0, $zero, 10` + `sh $v0, 0x14($s5)` (PATCHED HERE)
+1. Entity init: `ori $v0, $zero, 10` + `sh $v0, 0x14($sN)` (PATCHED HERE)
 2. State handler reads entity+0x14, passes as stack arg to 0x009ED00C
 3. Function 0x009ED00C reads `lhu $s7, 72($sp)` (the damage%)
 4. Passes `$s7` as `$a1` to `jal 0x80024F90`
@@ -106,25 +125,25 @@ which is why zero `jal` instructions target it directly.
 
 ---
 
-## Patcher v4 (CURRENT - step 7d)
+## Patcher v4.1 (CURRENT - step 7d)
 
 **File:** `patch_trap_damage.py`
 **Config:** `trap_damage_config.json` (`overlay_patches.values`)
-**110 total patches** = 15 jal + 95 GPE entity init
+**167 total patches** = 15 jal + 152 GPE entity init
 
 Both passes use the same per-value config:
 ```json
-{"2": 10, "3": 15, "5": 25, "10": 40, "20": 60}
+{"2": 10, "3": 15, "5": 22, "10": 35, "20": 50}
 ```
 
 ### Pass 1: JAL callers (15 sites)
 - Searches for `jal 0x80024F90` with immediate `$a1`
 - Same as patcher v3
 
-### Pass 2: GPE entity init (95 sites)
-- Searches for adjacent `li $v0, N` + `sh $v0, 0x14($s5)` (word 0xA6A20014)
+### Pass 2: GPE entity init (152 sites)
+- Searches for adjacent `li $v0, N` + `sh $v0, 0x14($sN)` for all `$s0-$s7`
 - Covers falling rocks, heavy traps, and light GPE entities
-- 28 overlays: 11x 2%, 28x 10%, 56x 20%
+- 19x 2%, 29x 3%, 5x 5%, 37x 10%, 62x 20%
 
 ---
 

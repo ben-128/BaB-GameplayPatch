@@ -34,8 +34,8 @@ SPELL_COUNTS = [29, 24, 20, 7, 1, 1, 1, 30]
 # Field name -> (offset within 48-byte entry, size in bytes)
 FIELD_MAP = {
     "spell_id":    (0x10, 1),
-    "mp_cost":     (0x13, 1),
-    "power_level": (0x14, 1),
+    "cast_time":   (0x13, 1),
+    "mp_cost":     (0x14, 1),
     "element":     (0x16, 1),
     "damage":      (0x18, 1),
     "target_type": (0x1C, 1),

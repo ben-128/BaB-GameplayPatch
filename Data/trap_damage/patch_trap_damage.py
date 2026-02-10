@@ -10,7 +10,7 @@ Pass 1 - Direct callers: Find `jal 0x80024F90` where $a1 is an immediate.
 Pass 2 - GPE entity init: Find `li $v0, N` + `sh $v0, 0x14($s5)` (adjacent).
   Catches: falling rocks, heavy traps etc. that store damage% to entity+0x14
   and later pass it to the damage function via register (data-driven callers).
-  $s5 = GPE entity pointer. 28 sites for 10%, 56 sites for 20% across all overlays.
+  Only $s5 confirmed as damage% register. Other registers are camera shake.
 
 Config format (overlay_patches.values):
   {"2": 10, "5": 25, "10": 40, "20": 60}
@@ -36,8 +36,9 @@ DAMAGE_FUNC_JAL = (0x03 << 26) | ((DAMAGE_FUNC_RAM >> 2) & 0x3FFFFFF)
 OVERLAY_START = 0x00900000
 OVERLAY_END   = 0x02D00000
 
-# GPE entity init: sh $v0, 0x14($s5)
-SH_V0_014_S5 = 0xA6A20014
+# GPE entity init: sh $v0, 0x14($s5) — only $s5 is confirmed as damage%
+# Other registers ($s0/$s1/$s2/$s6) store camera shake intensity, NOT damage.
+SH_V0_014_S5 = (0x29 << 26) | (21 << 21) | (2 << 16) | 0x0014  # 0xA6A20014
 
 
 def find_immediate_callers(data):
@@ -110,9 +111,9 @@ def find_immediate_callers(data):
 def find_gpe_entity_init(data):
     """Pass 2: GPE entity damage init (li $v0, N + sh $v0, 0x14($s5), adjacent).
 
-    The GPE entity state handler stores damage% to entity+0x14 via $s5.
+    The GPE entity state handler stores damage% to entity+0x14.
     Pattern: ori/addiu $v0, $zero, N immediately followed by sh $v0, 0x14($s5).
-    28 overlays x 1-2 sites per value = consistent cross-dungeon coverage.
+    Only $s5 is confirmed as damage%. Other registers are camera shake / other fields.
     """
     results = []
     end = min(OVERLAY_END, len(data) - 8)
@@ -121,7 +122,7 @@ def find_gpe_entity_init(data):
         w1 = struct.unpack_from('<I', data, i)[0]
         w2 = struct.unpack_from('<I', data, i + 4)[0]
 
-        # w2 must be sh $v0, 0x14($s5) = 0xA6A20014
+        # w2 must be sh $v0, 0x14($s5)
         if w2 != SH_V0_014_S5:
             continue
 
