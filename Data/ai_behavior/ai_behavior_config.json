@@ -8,7 +8,7 @@
     "patches": [
         {
             "id": "test_A_fast_goblin",
-            "enabled": true,
+            "enabled": false,
             "_hypothesis": "offset 0x08 = action/attack speed timer (lower=faster). 420->50 = ~8x faster. Si le Goblin attaque beaucoup plus vite, c'est confirme.",
             "blaze_offset": "0xF7AAD8",
             "field_offset": "0x08",
@@ -28,7 +28,7 @@
         },
         {
             "id": "test_C_aggressive_goblin",
-            "enabled": true,
+            "enabled": false,
             "_hypothesis": "offset 0x0A = roaming/idle timer? 634->0xFFFF (comme Wolf=65535). Si le Goblin arrete de se balader et attaque direct, c'est confirme.",
             "blaze_offset": "0xF7AAD8",
             "field_offset": "0x0A",
@@ -69,7 +69,7 @@
         {
             "id": "test_G_no_timer06",
             "enabled": false,
-            "_hypothesis": "offset 0x06 = cooldown entre attaques? 634->0. Si le Goblin enchaine les attaques sans pause, c'est confirme.",
+            "_hypothesis": "CONFIRMED: offset 0x06 = CAMERA HEIGHT (NOT cooldown). 634=normal, 0=ground level. Camera closer to floor when set to 0.",
             "blaze_offset": "0xF7AAD8",
             "field_offset": "0x06",
             "field_size": 2,

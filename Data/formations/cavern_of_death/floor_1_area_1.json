@@ -1088,19 +1088,6 @@
     "Goblin-Shaman",
     "Lv20.Goblin"
   ],
-  "monster_overrides": [
-    {
-      "elite": true
-    },
-    {
-      "elite": true,
-      "type07_vram": "0x0588"
-    },
-    {
-      "elite": true,
-      "type07_vram": "0x0590"
-    }
-  ],
   "monster_vram_ref": {
     "Lv20.Goblin": "0x0580",
     "Goblin-Shaman": "0x0588",

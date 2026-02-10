@@ -1,12 +1,24 @@
 {
   "_comment": [
-    "Patches trap/environmental damage callers in BLAZE.ALL overlay code.",
-    "Real damage function at EXE 0x80024F90: damage = (maxHP * param%) / 100.",
-    "Overlay callers with hardcoded percentages: 2% (falling rocks), 5% (poison/periodic).",
-    "Multiplier scales the percentage parameter. E.g. 5x: 2%->10%, 5%->25%.",
-    "max_original_param filters out large values (combat) - only patches param <= this."
+    "overlay_patches: remplacement exact des callers hardcodes dans le code overlay.",
+    "  Format: 'original%': patched%. Toute valeur non listee reste inchangee.",
+    "exe_global: modifie la division dans l'EXE pour affecter TOUS les callers (189),",
+    "  y compris les callers data-driven (cailloux). shift: 5=/100(normal), 4=/50(x2), 3=/25(x4).",
+    "  ATTENTION: les deux se cumulent. effective = overlay_value * exe_multiplier."
   ],
-  "enabled": true,
-  "damage_multiplier": 5.0,
-  "max_original_param": 20
+  "overlay_patches": {
+    "enabled": true,
+    "values": {
+      "2": 10,
+      "3": 15,
+      "5": 25,
+      "10": 40,
+      "20": 60
+    }
+  },
+  "exe_global": {
+    "enabled": false,
+    "shift": 5,
+    "_comment": "shift 5 = /100 (normal), shift 4 = /50 (x2 all damage), shift 3 = /25 (x4). DESACTIVE: affecte TOUS les degats y compris combat."
+  }
 }
