@@ -7,6 +7,7 @@ REM ========================================================================
 REM Optional patches (set to 1 to enable)
 REM ========================================================================
 set PATCH_LOOT_TIMER=1
+set TEST_SPELL_FREEZE=0
 
 REM ========================================================================
 REM Initialize logging
@@ -280,6 +281,31 @@ call :log "[OK] Monster spell bitfield processed"
 call :log ""
 
 REM ========================================================================
+REM Step 7f: [TEST] Freeze test for spell system offset verification (OPTIONAL)
+REM ========================================================================
+if "%TEST_SPELL_FREEZE%"=="1" (
+    call :log "[7f/10] [TEST MODE] Applying freeze test to BLAZE.ALL..."
+    call :log ""
+    call :log "[WARNING] This patches BLAZE.ALL with an INFINITE LOOP!"
+    call :log "[WARNING] Game will FREEZE during Cavern combat - for testing only!"
+    call :log ""
+
+    py -3 Data\ai_behavior\patch_spell_freeze_test.py >> "%LOGFILE%" 2>&1
+    if errorlevel 1 (
+        call :log ""
+        call :log "[ERROR] Freeze test patch failed!"
+        goto :error
+    )
+
+    call :log ""
+    call :log "[OK] Freeze test applied - Game will freeze in Cavern combat"
+    call :log ""
+) else (
+    call :log "[7f/10] Freeze test SKIPPED (set TEST_SPELL_FREEZE=1 to enable)"
+    call :log ""
+)
+
+REM ========================================================================
 REM Step 8: Create fresh patched BIN from clean original
 REM ========================================================================
 call :log "[8/10] Creating fresh patched BIN from clean original..."
@@ -336,6 +362,27 @@ REM ========================================================================
 REM Step 9c: (Moved to 7e - monster spell bitfield now patches BLAZE.ALL)
 REM ========================================================================
 call :log "[9c/10] Monster spell bitfield: already patched in BLAZE.ALL at step 7e"
+call :log ""
+
+REM ========================================================================
+REM Step 9d: Patch ALL /100 division functions (10% -> 50%) - ATTEMPT 8
+REM ========================================================================
+REM Previous attempts 1-7 failed (see FAILED_ATTEMPTS.md)
+REM New strategy: Patch all 14 functions that use magic /100 constant 0x51EB851F
+REM One of these must be the real falling rocks damage function
+
+call :log "[9d/10] Patching ALL /100 division functions (10%% -^> 50%%)..."
+call :log ""
+
+py -3 Data\trap_damage\patch_all_div100_functions.py >> "%LOGFILE%" 2>&1
+if errorlevel 1 (
+    call :log ""
+    call :log "[ERROR] /100 division functions patch failed!"
+    goto :error
+)
+
+call :log ""
+call :log "[OK] /100 division functions patched (attempt 8)"
 call :log ""
 
 REM ========================================================================

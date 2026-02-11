@@ -4,7 +4,214 @@
 Modifier la duree avant disparition des coffres laches par les monstres.
 Duree originale : 20 secondes (1000 frames @ 50fps PAL).
 
-## Statut : v10 - VRAI TIMER TROUVE (2026-02-10)
+## Statut : v12 - ECHEC (2026-02-11)
+
+### Tentative v12 : Patcher entity+0x0012 (master timer)
+
+**Decouverte** : Le timer a entity+0x0014 est CONSTAMMENT REINIT depuis entity+0x0012!
+
+```mips
+lhu $v0, 0x0014($s1)     ; load timer
+addiu $v0, $v0, -1       ; decrement
+sh $v0, 0x0014($s1)      ; store timer
+...
+lhu $v1, 0x0012($s1)     ; load MASTER timer
+sh $v1, 0x0014($s1)      ; REINIT timer from master!
+```
+
+**12 emplacements d'init a entity+0x0012** (un par overlay/donjon) :
+```
+0x01BA5648, 0x01BA5780, 0x01BA5E48, 0x01BA5F80,
+0x0257C018, 0x0257C1B4, 0x02B771D8, 0x02B77374,
+0x02B78830, 0x02BC9B60, 0x02BC9CFC, 0x02BCBA84
+```
+
+Pattern : `addiu $v0, $zero, 0x3E8` / `sh $v0, 0x12($base)`
+
+**Patch v12** : Change 0x3E8 (1000) en 0xFFFF (65535) pour les 12 emplacements
+Config JSON : lit `chest_despawn_seconds` depuis loot_timer.json
+
+**Resultat** : **ECHEC - Les coffres disparaissent TOUJOURS en 20s**
+
+### Pourquoi v12 echoue - Nouvelles hypotheses
+
+**Hypothese #1 : Overlay reload (la plus probable)**
+- Les patches sont bien appliques dans output/BLAZE.ALL
+- Mais le jeu charge les overlays depuis une AUTRE source
+- Possibilites :
+  - Cache overlay en RAM jamais rafraichi
+  - Deuxieme copie de BLAZE.ALL dans le BIN (3eme emplacement LBA?)
+  - Overlays comprimes/encodes ailleurs
+  - CD loader qui charge depuis des offsets fixes ignores
+
+**Hypothese #2 : Timer dans une table de donnees**
+- Les 12 emplacements patches sont du code mort
+- Le vrai timer est charge depuis une table :
+  ```mips
+  lui $v0, 0x800X
+  lhu $v1, offset($v0)     ; load 1000 depuis table
+  sh $v1, 0x12($s1)        ; init timer
+  ```
+- Besoin de chercher les tables de constantes dans les overlays
+
+**Hypothese #3 : Timestamp absolu (pas countdown)**
+- Le timer pourrait etre un TIMESTAMP de spawn :
+  ```mips
+  entity+0x12 = global_frame_counter  ; timestamp spawn
+  if (global_frame_counter - entity+0x12 > 1000) despawn()
+  ```
+- Dans ce cas, patching 1000 ne suffit pas, faut trouver la COMPARAISON
+
+**Hypothese #4 : Verification d'integrite**
+- Le jeu pourrait verifier les overlays (CRC/checksum)
+- Recharger depuis une copie "propre" si modifie
+
+**Hypothese #5 : Mauvais overlays patches**
+- Les 12 emplacements trouves sont pour un autre type d'entite
+- Les coffres monde utilisent un systeme different
+- Besoin de verifier avec savestate quel code est VRAIMENT execute
+
+---
+
+## v11 - ECHEC (2026-02-11)
+
+### Tentative v11 : Modifier la valeur INIT du timer (pas le decrement)
+
+**BLAZE 0x01C216CC : `addiu $v0, $zero, 0x3E8`** (charge 1000)
+**BLAZE 0x01C216D0 : `sh $v0, 0x14($s2)`** (init timer a entity+0x14)
+
+**Approche v11** : Au lieu de NOP le decrement (v1-v10), on change la valeur INIT
+de 1000 (0x3E8) a 3000s (150000 = 0x249F0) avec config JSON.
+
+**Resultat** : **ECHEC - Les coffres disparaissent toujours en 20s**
+
+### Pourquoi v11 a echoue
+
+**Hypothese #1 : Code mort (comme Function A dans v8)**
+- L'init a 0x01C216CC n'est peut-etre jamais appele pour les coffres monde
+- Ce pourrait etre du code pour un autre type d'entite utilisant +0x14
+- Besoin de verifier les xrefs (qui appelle cette fonction?)
+
+**Hypothese #2 : Plusieurs chemins d'init**
+- Il pourrait y avoir d'autres endroits qui initent le timer
+- La recherche (load 1000 + store +0x14) n'en trouve qu'UN seul
+- Mais le timer pourrait etre init depuis une table/data section
+
+**Hypothese #3 : Overlay reload**
+- Meme probleme que v10 : l'overlay patche pourrait etre ecrase
+- Le jeu pourrait charger l'overlay depuis BLAZE.ALL non-patche
+- Ou depuis une autre source (cache, autre copie dans le BIN)
+
+**Hypothese #4 : Timer pas a entity+0x14**
+- Les savestates v10 montrent timer a entity+0x10 (PAS +0x14)
+- entity+0x14 pourrait etre autre chose (sous-state, ref count)
+- Besoin de re-verifier les offsets dans le code
+
+**Hypothese #5 : Mecanisme de despawn different**
+- Le timer 20s pourrait etre base sur un compteur global
+- Ou un timestamp absolu (game_time - spawn_time > 1000)
+- Au lieu d'un timer countdown entity+0x14
+
+---
+
+## Synthese des echecs v1-v12 (2026-02-11)
+
+### 12 tentatives, 0 succes
+
+**Approches essayees :**
+1. v1-v9 : NOP timer decrements (divers emplacements) → ECHEC
+2. v10 : NOP chest_update timer decrement → ECHEC
+3. v11 : Patch init entity+0x0014 (1 emplacement) → ECHEC
+4. v12 : Patch init entity+0x0012 (12 emplacements) → ECHEC
+
+**Observations communes :**
+- Tous les patches sont CONFIRMES presents dans le BIN final
+- Le jeu demarre sans crash, les autres patches fonctionnent
+- Les coffres apparaissent normalement
+- **Mais disparaissent TOUJOURS exactement en 20 secondes**
+
+### Theorie dominante : Overlay reload systeme
+
+**Evidence :**
+1. Le timing est EXACTEMENT 20s (jamais plus, jamais moins)
+2. Meme avec 12 emplacements patches, comportement identique
+3. Les autres patches overlays (monsters, spells, traps) fonctionnent
+4. Mais ceux-la sont dans des TABLES/DATA, pas dans du CODE executable
+
+**Hypothese :** Le moteur du jeu pourrait :
+- Charger les overlays dans un buffer temporaire
+- Les executer depuis RAM
+- Puis les RECHARGER depuis le CD periodiquement
+- Ou avoir un cache overlay qui ignore nos patches
+
+### Pistes pour continuer
+
+**Option 1 : Runtime debugging (RECOMMANDE)**
+- PCSX-Redux avec debugger integre
+- Breakpoint sur entity+0x0012 write
+- Voir d'ou vient la valeur 1000 VRAIMENT
+- Verifier si l'overlay patche est charge en RAM
+
+**Option 2 : Chercher tables de constantes**
+- Scanner BLAZE.ALL pour sequences de halfwords contenant 1000
+- Pas dans le code, mais dans les DATA sections
+- Patching tables au lieu de code immediat
+
+**Option 3 : Chercher le timestamp system**
+- Chercher comparaisons `global_counter - entity+0x12 > 1000`
+- Au lieu de countdown, pourrait etre timestamp absolu
+- Patching la constante de comparaison
+
+**Option 4 : Accepter la limitation**
+- Apres 12 tentatives sur 3+ jours
+- Peut-etre que ce systeme est trop enfoui/protege
+- Considerer d'autres ameliorations gameplay
+
+---
+
+## Investigation v11-v12 - Pourquoi les patches ne fonctionnent pas
+
+### Pistes de debogage
+
+**1. Verifier que le patch est bien applique dans le BIN final**
+```bash
+# Extraire BLAZE.ALL depuis le BIN patche
+# Verifier offset 0x01C216CC = 0x24020000 | new_value (pas 0x240203E8)
+```
+
+**2. Chercher TOUS les stores vers entity+0x14 avec des valeurs immediates**
+- Pas seulement 1000, mais aussi 50, 100, 500, etc.
+- Le timer reel pourrait etre 50 (si decrement/frame) au lieu de 1000
+
+**3. Verifier l'offset du timer dans les savestates (CRITIQUE)**
+- v10 doc dit timer a entity+0x10 (PAS +0x14!) dans les savestates
+- Contradiction avec le code qui lit/ecrit +0x14
+- Besoin de re-verifier avec plusieurs savestates
+
+**4. Chercher des comparaisons avec 1000 (au lieu de countdown a 0)**
+```mips
+lhu $v0, entity+0xNN
+addiu $v1, $zero, 1000    ; ou 0x3E8
+slt $v0, $v0, $v1         ; si timer > 1000 ?
+```
+
+**5. Chercher timestamp absolu (spawn_time + 1000 < game_time)**
+- Le despawn pourrait etre base sur le temps global
+- entity+0x14 = spawn_timestamp (word)
+- Comparaison : `global_frame_counter - entity+0x14 > 1000`
+
+**6. Disassembler la fonction qui contient 0x01C216CC**
+- Identifier quelle fonction contient l'init patche
+- Chercher les xrefs (qui appelle cette fonction)
+- Verifier si elle est appelee pour les coffres ou autre chose
+
+**7. Chercher "1000" dans les data sections (pas code)**
+- Tables de config/params dans BLAZE.ALL
+- Pourrait etre charge avec `lw` depuis une adresse fixe
+
+---
+
+## v10 - Timer decrement trouve mais NOP sans effet (2026-02-10)
 
 ### Le VRAI systeme de despawn coffre
 
@@ -519,6 +726,30 @@ A tester in-game pour evaluer les effets secondaires.
   mais le timer continue de decrementer. Possible : overlay rechargee depuis une autre source,
   ou un second chemin de code non identifie
 
+### v11 : Modification de la valeur INIT — ECHEC (2026-02-11)
+- Approche differente : au lieu de NOP le decrement, **modifier la valeur d'initialisation**
+- Recherche globale de la constante 1000 (0x3E8) dans BLAZE.ALL : 77 occurrences
+- Recherche de `addiu $reg, $zero, 0x3E8` suivi de `sh $reg, 0x14($base)` : **1 SEUL match**
+- **BLAZE 0x01C216CC** : `addiu $v0, $zero, 0x3E8` (charge 1000)
+- **BLAZE 0x01C216D0** : `sh $v0, 0x14($s2)` (init timer a entity+0x14)
+- **Patch** : change 0x3E8 (1000) en 0x249F0 (150000) = 3000 secondes (50 minutes)
+- Config JSON : `chest_despawn_seconds: 3000` (lit depuis loot_timer.json)
+- **ECHEC : Coffres disparaissent toujours en 20s**
+- **Conclusion** : Le timer a +0x14 est REINIT depuis +0x0012 dans la meme fonction
+
+### v12 : Patch entity+0x0012 (master timer) — ECHEC (2026-02-11)
+- Investigation du code : le timer a +0x14 est **REINIT depuis +0x12**
+- Recherche de `addiu $v0, $zero, 0x3E8` suivi de `sh $v0, 0x12($base)` : **12 matches**
+- **12 emplacements** (un par overlay/donjon) :
+  - 0x01BA5648, 0x01BA5780, 0x01BA5E48, 0x01BA5F80
+  - 0x0257C018, 0x0257C1B4, 0x02B771D8, 0x02B77374
+  - 0x02B78830, 0x02BC9B60, 0x02BC9CFC, 0x02BCBA84
+- **Patch** : change 0x3E8 (1000) en 0xFFFF (65535) pour les 12 emplacements
+- Config JSON : `chest_despawn_seconds: 3000` → 0xFFFF (65535 = ~22 minutes)
+- Patch confirme present dans output/BLAZE.ALL et BIN final (2 copies LBA)
+- **ECHEC : Coffres disparaissent toujours en 20s**
+- **Conclusion** : Overlay reload, timer depuis table, ou mauvais code patche
+
 ---
 
 ## Verification build pipeline (2026-02-10)
@@ -583,4 +814,7 @@ BIN LBA 185765 copy : NOP confirmed
 
 ## Scripts
 
-- `patch_loot_timer.py` : patcheur v10 (pattern scan chest_update overlay, BLAZE.ALL step 7)
+- `patch_loot_timer.py` : patcheur v12 (patche entity+0x0012 master timer, 12 emplacements)
+- `patch_loot_timer_v11_old.py` : v11 (patche entity+0x0014, 1 emplacement, NE FONCTIONNE PAS)
+- `patch_loot_timer_v10_old.py` : v10 (NOP decrement, NE FONCTIONNE PAS)
+- `investigate_timer_offset.py` : script d'analyse du code (verifie offsets +0x10/+0x12/+0x14)

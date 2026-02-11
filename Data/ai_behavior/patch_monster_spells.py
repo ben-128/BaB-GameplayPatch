@@ -3,6 +3,21 @@
 """
 Patch monster spell bitfield init in output/BLAZE.ALL overlay code.
 
+**STATUS (2026-02-11): PERMANENTLY DISABLED**
+
+All 6 patching attempts failed (v1-v6):
+- Freeze tests confirmed offsets are DEAD CODE (no crash = never executes)
+- Hardcoded values ignored (0x03FFFFFF had zero effect)
+- See Data/ai_behavior/FAILED_ATTEMPTS.md for exhaustive log
+
+Alternative solutions:
+1. Patch EXE dispatch loop/tier table (RECOMMENDED)
+2. Hybrid stats approach (increase MP + MATK for caster monsters)
+See Data/ai_behavior/NEXT_STEPS.md for details.
+
+---
+
+ORIGINAL DESCRIPTION (now defunct):
 The overlay init code writes entity+0x160 (spell availability bitfield) during
 monster spawn. Original code sets byte 0 = 1 (only Fire Bullet) and clears
 bytes 1-3. The level-up simulation then adds more bits based on monster level.
@@ -424,6 +439,11 @@ def patch_combat_init_site(data, site_config, identity_map, monsters_config,
 def main():
     print("  Monster Spell Bitfield Patcher (BLAZE.ALL overlay)")
     print("  " + "-" * 50)
+    print()
+    print("  ⚠️  WARNING: This patcher is PERMANENTLY DISABLED")
+    print("  All 6 attempts failed (v1-v6). Freeze tests confirmed: dead code.")
+    print("  See Data/ai_behavior/FAILED_ATTEMPTS.md for details.")
+    print()
 
     if not CONFIG_FILE.exists():
         print("  [SKIP] Config not found: {}".format(CONFIG_FILE.name))
@@ -434,7 +454,7 @@ def main():
 
     section = config.get("overlay_bitfield_patches", {})
     if not section.get("enabled", False):
-        print("  [SKIP] overlay_bitfield_patches not enabled")
+        print("  [SKIP] overlay_bitfield_patches not enabled (correct - system doesn't work)")
         return
 
     patches = section.get("patches", [])

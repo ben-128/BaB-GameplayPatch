@@ -1,18 +1,21 @@
 #!/usr/bin/env python3
 """
-Patch chest despawn timer REAL INIT value in BLAZE.ALL (v12).
+Patch chest despawn timer INIT value in BLAZE.ALL (v11).
 
-v11 FAILED: Patched entity+0x0014 init, but timer is RE-INIT from entity+0x0012.
+Previous versions (v1-v10) tried to NOP the timer decrement, but failed.
 
-v12: Patch the REAL inits at entity+0x0012 (12 occurrences found).
+v11: Instead of NOPing the decrement, we CHANGE THE INIT VALUE.
+     The timer is initialized at exactly ONE place in BLAZE.ALL:
 
-Pattern discovered:
-  - Timer decrements at entity+0x0014 every 20th frame
-  - Timer is RE-INIT from entity+0x0012 when it hits 0
-  - entity+0x0012 is initialized with 1000 at 12 places in BLAZE.ALL
-  - These are per-overlay inits (one per dungeon area)
+     0x01C216CC: addiu $v0, $zero, 0x3E8   ; load 1000
+     0x01C216D0: sh $v0, 0x14($s2)         ; store to entity+0x14 (timer init)
 
-Pattern: addiu $v0, $zero, 0x3E8 / sh $v0, 0x12($base)
+     By changing 0x3E8 (1000 = 20 seconds at 50fps PAL) to a larger value,
+     chests will stay longer before despawning.
+
+     Config: loot_timer.json - chest_despawn_seconds
+     - 0 = infinite (0xFFFF = 65535 frames, ~22 minutes)
+     - >0 = custom duration in seconds
 
 Runs at build step 7 (patches output/BLAZE.ALL before BIN injection).
 """
@@ -24,17 +27,15 @@ from pathlib import Path
 
 OLD_VALUE = 0x03E8  # 1000 (original 20 seconds)
 
-# Pattern: addiu $v0, $zero, OLD_VALUE followed by sh $v0, 0x12($base)
+# Pattern: addiu $v0, $zero, OLD_VALUE followed by sh $v0, 0x14($s2)
 OLD_ADDIU = 0x240203E8  # addiu $v0, $zero, 0x3E8
-SH_TO_12 = 0xA6020012  # sh $v0, 0x12($s0)
-SH_TO_12_ALT1 = 0xA4C20012  # sh $v0, 0x12($a2) - alternate base register
-SH_TO_12_ALT2 = 0xA6220012  # sh $v0, 0x12($s1) - alternate base register
+SH_TO_14 = 0xA6420014  # sh $v0, 0x14($s2)
 
 
-def find_timer_init_0x12(data: bytes) -> list[int]:
-    """Find entity+0x0012 timer init patterns in BLAZE.ALL.
+def find_timer_init(data: bytes) -> list[int]:
+    """Find the chest timer init pattern in BLAZE.ALL.
 
-    Pattern: addiu $v0, $zero, 0x3E8 followed by sh $v0, 0x12($base)
+    Pattern: addiu $v0, $zero, 0x3E8 followed immediately by sh $v0, 0x14($s2)
     """
     matches = []
 
@@ -42,16 +43,7 @@ def find_timer_init_0x12(data: bytes) -> list[int]:
         word1 = struct.unpack_from('<I', data, i)[0]
         word2 = struct.unpack_from('<I', data, i + 4)[0]
 
-        # Check addiu $v0, $zero, 0x3E8
-        if word1 != OLD_ADDIU:
-            continue
-
-        # Check sh $v0, 0x12($base) - any base register
-        opcode = (word2 >> 26) & 0x3F
-        rt = (word2 >> 16) & 0x1F
-        imm = word2 & 0xFFFF
-
-        if opcode == 0x29 and rt == 2 and imm == 0x0012:  # sh $v0, 0x12(...)
+        if word1 == OLD_ADDIU and word2 == SH_TO_14:
             matches.append(i)
 
     return matches
@@ -74,6 +66,9 @@ def main():
     chest_despawn_seconds = config.get('chest_despawn_seconds', 0)
 
     # Calculate new timer value
+    # Timer decrements every 20th frame at 50fps PAL
+    # So: frames = seconds * 50fps / 20 = seconds * 2.5
+    # But empirically, 1000 frames = 20 seconds, so 1 second = 50 frames
     if chest_despawn_seconds == 0:
         # Infinite: use max halfword value
         new_value = 0xFFFF  # 65535 frames (~22 minutes)
@@ -85,7 +80,7 @@ def main():
             new_value = 0xFFFF
         duration_desc = f"{chest_despawn_seconds} seconds"
 
-    print("Loot Timer v12: Patch REAL timer init at entity+0x0012")
+    print("Loot Timer v11: Patch chest timer INIT value (not decrement)")
     print(f"  Config: {config_path}")
     print(f"  Desired duration: {duration_desc}")
     print(f"  Target: {blaze_path}")
@@ -100,12 +95,12 @@ def main():
     data = bytearray(blaze_path.read_bytes())
     print(f"  BLAZE.ALL size: {len(data):,} bytes")
 
-    matches = find_timer_init_0x12(data)
-    print(f"  Timer INIT patterns found: {len(matches)} (entity+0x0012)")
+    matches = find_timer_init(data)
+    print(f"  Timer INIT patterns found: {len(matches)}")
 
     if not matches:
         print("[ERROR] No chest timer INIT pattern found!")
-        print("Expected pattern: addiu $v0,$zero,0x3E8 / sh $v0,0x12($base)")
+        print("Expected pattern: addiu $v0,$zero,0x3E8 / sh $v0,0x14($s2)")
         sys.exit(1)
 
     new_addiu = 0x24020000 | new_value  # addiu $v0, $zero, new_value
@@ -113,10 +108,10 @@ def main():
     patched = 0
     for offset in matches:
         current = struct.unpack_from('<I', data, offset)[0]
-        ram_main = (offset - 0x009468A8) + 0x80080000 if offset >= 0x009468A8 else 0
+        ram = (offset - 0x009468A8) + 0x80080000 if offset >= 0x009468A8 else 0
 
         if current == new_addiu:
-            print(f"  0x{offset:08X} (RAM ~0x{ram_main:08X}): already patched")
+            print(f"  0x{offset:08X} (RAM ~0x{ram:08X}): already patched")
             continue
 
         if current != OLD_ADDIU:
@@ -125,7 +120,7 @@ def main():
 
         data[offset:offset+4] = struct.pack('<I', new_addiu)
         patched += 1
-        print(f"  PATCH 0x{offset:08X} (RAM ~0x{ram_main:08X}): 0x3E8 -> 0x{new_value:04X}")
+        print(f"  PATCH 0x{offset:08X} (RAM ~0x{ram:08X}): 0x3E8 -> 0x{new_value:04X}")
 
     if patched == 0:
         print()

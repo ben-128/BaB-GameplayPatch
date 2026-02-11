@@ -26,13 +26,14 @@
         "  0x1FFFFFFF = ALL 29 offensive spells"
     ],
     "overlay_bitfield_patches": {
-        "enabled": true,
+        "enabled": false,
+        "_PERMANENT_DISABLE": "All 6 attempts failed (v1-v6). Freeze tests confirmed offsets are DEAD CODE. See Data/ai_behavior/FAILED_ATTEMPTS.md",
         "patches": [
             {
                 "zone": "Cavern of Death",
                 "enabled": false,
                 "mode": "per_monster",
-                "enabled_NOTE": "DISABLED — overlay offsets are WRONG for Cavern (see MONSTER_SPELL_RESEARCH.md)",
+                "enabled_NOTE": "FAILED — 6 attempts, all offsets dead/unused. Freeze test v6 (2026-02-11): NO CRASH = code never executes",
                 "monsters": {
                     "Lv20.Goblin": "0x03FFFFFF",
                     "Goblin-Shaman": "0x03FFFFFF",
