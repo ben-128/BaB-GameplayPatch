@@ -1,0 +1,112 @@
+{
+    "_doc": [
+        "Spell tier threshold configuration for EXE dispatch loop.",
+        "",
+        "The dispatch loop at EXE 0x80024494 reads tier thresholds from 0x8003C020",
+        "to determine how many spells to unlock per tier for each spell list.",
+        "",
+        "Format: 5 bytes per list (cumulative spell counts)",
+        "  Tier 1 = first N spells",
+        "  Tier 2 = first N spells (includes tier 1)",
+        "  Tier 3 = first N spells (includes tier 1+2)",
+        "  etc.",
+        "",
+        "List order: [0]=Offensive, [1]=Support, [2]=Status, [3]=Herbs, [4-7]=Special/Monster"
+    ],
+    "tier_thresholds": {
+        "enabled": true,
+        "lists": {
+            "0_offensive": {
+                "name": "Offensive Spells",
+                "total_spells": 29,
+                "vanilla_thresholds": [5, 10, 15, 20, 26],
+                "modded_thresholds": [10, 15, 20, 26, 29],
+                "_explanation": [
+                    "Vanilla: Very gradual (5→10→15→20→26, missing last 3)",
+                    "Modded: Faster progression, all spells by tier 5",
+                    "Tier 1: 10 spells (adds Lightbolt→EnchantWeapon)",
+                    "Tier 2: 15 spells (adds Blaze→ExtendSpell)",
+                    "Tier 3: 20 spells (adds MagicRay→Petrifaction)",
+                    "Tier 4: 26 spells (adds Explosion→Teleport)",
+                    "Tier 5: 29 spells (ALL offensive spells)"
+                ]
+            },
+            "1_support": {
+                "name": "Support/Priest Spells",
+                "total_spells": 24,
+                "vanilla_thresholds": [5, 11, 16, 19, 22],
+                "modded_thresholds": [5, 11, 16, 19, 24],
+                "_explanation": [
+                    "Vanilla: Stops at 22/24 (missing last 2)",
+                    "Modded: Unlock all 24 by tier 5"
+                ]
+            },
+            "2_status": {
+                "name": "Status/Sorcerer Spells",
+                "total_spells": 20,
+                "vanilla_thresholds": [3, 7, 9, 12, 16],
+                "modded_thresholds": [3, 7, 9, 12, 20],
+                "_explanation": [
+                    "Vanilla: Stops at 16/20 (missing last 4)",
+                    "Modded: Unlock all 20 by tier 5"
+                ]
+            },
+            "3_herbs": {
+                "name": "Herbs (Consumables)",
+                "total_spells": 7,
+                "vanilla_thresholds": [0, 0, 0, 0, 8],
+                "modded_thresholds": [0, 0, 0, 0, 7],
+                "_explanation": [
+                    "Vanilla: Says 8 but only 7 exist",
+                    "Modded: Correct to 7"
+                ]
+            },
+            "4_wave": {
+                "name": "Wave (Dwarf special)",
+                "total_spells": 1,
+                "vanilla_thresholds": [0, 0, 0, 0, 0],
+                "modded_thresholds": [0, 0, 0, 0, 0],
+                "_explanation": ["No change (special unlock)"]
+            },
+            "5_arrow": {
+                "name": "Arrow (Hunter special)",
+                "total_spells": 1,
+                "vanilla_thresholds": [0, 0, 0, 0, 0],
+                "modded_thresholds": [0, 0, 0, 0, 0],
+                "_explanation": ["No change (special unlock)"]
+            },
+            "6_stardust": {
+                "name": "Stardust (Fairy special)",
+                "total_spells": 1,
+                "vanilla_thresholds": [0, 0, 0, 0, 0],
+                "modded_thresholds": [0, 0, 0, 0, 0],
+                "_explanation": ["No change (special unlock)"]
+            },
+            "7_monster": {
+                "name": "Monster Abilities",
+                "total_spells": 30,
+                "vanilla_thresholds": [0, 0, 0, 0, 0],
+                "modded_thresholds": [0, 0, 0, 0, 0],
+                "_explanation": [
+                    "Monster abilities use different system (hardcoded in overlay)",
+                    "This tier table doesn't affect them"
+                ]
+            }
+        }
+    },
+    "_notes": [
+        "EXE offset: 0x8003C020 (RAM address)",
+        "BIN offset: 0x8003C020 - 0x80010000 + 0x800 = 0x2C820",
+        "Total size: 8 lists × 5 bytes = 40 bytes",
+        "",
+        "Impact on monsters:",
+        "  - Caster monsters (Shaman, Dark-Magi) get more spells earlier",
+        "  - Level-based unlock still applies (high level = more spells)",
+        "  - MP pool still matters (low MP = can't cast much)",
+        "",
+        "Impact on players:",
+        "  - Mages/Priests/Sorcerers unlock spells faster",
+        "  - More build variety at lower levels",
+        "  - Endgame: all spells available (vanilla missed some)"
+    ]
+}

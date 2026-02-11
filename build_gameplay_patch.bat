@@ -306,6 +306,23 @@ if "%TEST_SPELL_FREEZE%"=="1" (
 )
 
 REM ========================================================================
+REM Step 7g: Patch spell tier thresholds in SLES_008.45 (EXE)
+REM ========================================================================
+call :log "[7g/10] Patching spell tier thresholds in EXE..."
+call :log ""
+
+py -3 Data\character_classes\patch_tier_thresholds.py >> "%LOGFILE%" 2>&1
+if errorlevel 1 (
+    call :log ""
+    call :log "[ERROR] Tier threshold patch failed!"
+    goto :error
+)
+
+call :log ""
+call :log "[OK] Tier thresholds patched"
+call :log ""
+
+REM ========================================================================
 REM Step 8: Create fresh patched BIN from clean original
 REM ========================================================================
 call :log "[8/10] Creating fresh patched BIN from clean original..."
@@ -365,24 +382,21 @@ call :log "[9c/10] Monster spell bitfield: already patched in BLAZE.ALL at step 
 call :log ""
 
 REM ========================================================================
-REM Step 9d: Patch ALL /100 division functions (10% -> 50%) - ATTEMPT 8
+REM Step 7f: ATTEMPT 9 - Patch falling rock damage via savestate pattern
 REM ========================================================================
-REM Previous attempts 1-7 failed (see FAILED_ATTEMPTS.md)
-REM New strategy: Patch all 14 functions that use magic /100 constant 0x51EB851F
-REM One of these must be the real falling rocks damage function
-
-call :log "[9d/10] Patching ALL /100 division functions (10%% -^> 50%%)..."
+REM Pattern 0x0028000A found in savestate RAM + matched in BLAZE.ALL (10 locations)
+call :log "[7f/10] Patching falling rock damage (attempt 9 - savestate pattern)..."
 call :log ""
 
-py -3 Data\trap_damage\patch_all_div100_functions.py >> "%LOGFILE%" 2>&1
+py -3 Data\trap_damage\patch_falling_rock_attempt9.py >> "%LOGFILE%" 2>&1
 if errorlevel 1 (
     call :log ""
-    call :log "[ERROR] /100 division functions patch failed!"
+    call :log "[ERROR] Falling rock patch (attempt 9) failed!"
     goto :error
 )
 
 call :log ""
-call :log "[OK] /100 division functions patched (attempt 8)"
+call :log "[OK] Falling rock damage patched (10 descriptors)"
 call :log ""
 
 REM ========================================================================

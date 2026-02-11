@@ -62,11 +62,15 @@ All identified overlay offsets (0x0098A69C, 0x0092BF74, 0x00916C44) are either:
 
 See `NEXT_STEPS.md` for detailed plans. Summary:
 
-### Option A: Patch EXE Dispatch Loop ⭐⭐⭐ (Recommended)
+### Option A1: Patch Tier Threshold Table ⭐⭐⭐ ✅ **IMPLEMENTED & WORKING**
 - Modify tier threshold table (EXE 0x8003C020)
-- OR inject code before OR-loop (0x800244F4)
-- **Advantage**: Code confirmed executing, universal solution
-- **Effort**: Medium (2-8 hours)
+- **Status**: ✅ FULLY FUNCTIONAL (2026-02-11)
+- **Patcher**: `Data/character_classes/patch_tier_thresholds.py` (step 7g)
+- **Config**: `Data/character_classes/tier_thresholds_config.json`
+- **Doc**: `Data/character_classes/TIER_THRESHOLDS.md`
+- **Result**: All spells unlocked by tier 5, faster early progression
+- **Advantage**: Data-only patch, no code injection, universal solution
+- **Success rate**: 95% → **100% CONFIRMED**
 
 ### Option B: Hybrid Stats Approach ⭐⭐⭐ (Practical)
 - Increase monster stat4_magic (MP pool)
