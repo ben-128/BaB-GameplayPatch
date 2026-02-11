@@ -20,7 +20,7 @@
                 "name": "Offensive Spells",
                 "total_spells": 29,
                 "vanilla_thresholds": [5, 10, 15, 20, 26],
-                "modded_thresholds": [10, 15, 20, 26, 29],
+                "modded_thresholds": [29, 29, 29, 29, 29],
                 "_explanation": [
                     "Vanilla: Very gradual (5→10→15→20→26, missing last 3)",
                     "Modded: Faster progression, all spells by tier 5",

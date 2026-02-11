@@ -62,15 +62,15 @@ All identified overlay offsets (0x0098A69C, 0x0092BF74, 0x00916C44) are either:
 
 See `NEXT_STEPS.md` for detailed plans. Summary:
 
-### Option A1: Patch Tier Threshold Table ⭐⭐⭐ ✅ **IMPLEMENTED & WORKING**
+### Option A1: Patch Tier Threshold Table ❌ **FAILED** (2026-02-11)
 - Modify tier threshold table (EXE 0x8003C020)
-- **Status**: ✅ FULLY FUNCTIONAL (2026-02-11)
-- **Patcher**: `Data/character_classes/patch_tier_thresholds.py` (step 7g)
-- **Config**: `Data/character_classes/tier_thresholds_config.json`
-- **Doc**: `Data/character_classes/TIER_THRESHOLDS.md`
-- **Result**: All spells unlocked by tier 5, faster early progression
-- **Advantage**: Data-only patch, no code injection, universal solution
-- **Success rate**: 95% → **100% CONFIRMED**
+- **Status**: ❌ NO EFFECT ON MONSTERS (tested in-game)
+- **Patcher**: `Data/character_classes/patch_tier_thresholds.py` (created but ineffective)
+- **Config**: `Data/character_classes/tier_thresholds_config.json` (created but ineffective)
+- **Doc**: `Data/character_classes/TIER_THRESHOLD_FAILURE.md` (failure report)
+- **Test**: Ultra-boost Shaman (29 spells, 999 MP, 300 MATK) → still casts same 5 spells
+- **Conclusion**: Tier table affects players only, or overridden by overlay for monsters
+- **Success rate**: 95% predicted → **0% actual**
 
 ### Option B: Hybrid Stats Approach ⭐⭐⭐ (Practical)
 - Increase monster stat4_magic (MP pool)

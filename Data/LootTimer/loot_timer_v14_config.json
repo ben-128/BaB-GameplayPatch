@@ -1,0 +1,11 @@
+{
+    "chest_despawn_seconds": 40,
+    "_comment": "v14 MODERATE values to test without breaking combat",
+    "_values": {
+        "40": "2000 frames, x2 multiplier (safe test)",
+        "60": "3000 frames, x3 multiplier (moderate test)",
+        "80": "4000 frames, x4 multiplier (high test)",
+        "0": "6000 frames (2 min), x6 multiplier (default)"
+    },
+    "_warning": "These values may affect BOTH chest timer AND enemy damage!"
+}

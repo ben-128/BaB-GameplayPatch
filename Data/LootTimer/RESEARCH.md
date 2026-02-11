@@ -114,23 +114,86 @@ de 1000 (0x3E8) a 3000s (150000 = 0x249F0) avec config JSON.
 
 ---
 
-## Synthese des echecs v1-v12 (2026-02-11)
+## v13 : Patch SLES_008.45 data tables — ECHEC DANGEREUX (2026-02-11)
 
-### 12 tentatives, 0 succes
+### Tentative v13 : Patcher les tables dans l'EXE principal
+
+**Découverte par savestate** : Les 105 occurrences de 1000 en RAM sont réparties :
+- 23 dans l'EXE (SLES_008.45)
+- 5 dans les overlays
+- 77 dans heap/BSS (entités runtime)
+
+**8 occurrences trouvées dans SLES_008.45** qui matchent la RAM :
+```
+0x014594, 0x014858, 0x014860, 0x014BE4, 0x014BEC, 0x0154A0, 0x023D6C, 0x02CAE0
+```
+
+**Patch v13** : Change les 8 occurrences de 1000 → 65535 dans SLES
+
+**Résultat** : ❌ **DÉGÂTS COLLATÉRAUX GRAVES**
+- Les ennemis infligent des dégâts démentiels (65535?)
+- Les 8 tables patchées ne sont PAS toutes pour les coffres
+- Elles contiennent des paramètres de gameplay divers (dégâts, HP, multiplicateurs?)
+
+**Conclusion** : Patcher aveuglément TOUTES les occurrences de 1000 est **dangereux**.
+Il faudrait identifier QUELLE table spécifique gère les coffres (impossible sans debugging runtime).
+
+**Patcher désactivé** : `patch_loot_timer_v13_DANGEROUS.py.bak`
+
+---
+
+## v14-v15 : Tests avec valeurs moderees — ECHEC (2026-02-11)
+
+### v14 : 8 offsets SLES avec x2 multiplier
+- **Patch** : Les 8 offsets SLES (1000 → 2000)
+- **Résultat** : Dégâts ennemis x2, **coffres 20s inchangés** ❌
+
+### v15 : Patch sélectif par groupes
+- **Approche** : Tester groupes d'offsets séparément pour isoler
+- **Groupe A** : 0x014594, 0x014858, 0x014860 (3 offsets proches)
+- **Patch** : 1000 → 2000 (x2 multiplier)
+- **Résultat** : **Coffres 20s inchangés** ❌
+- **Conclusion** : Les 8 offsets SLES ne contiennent PAS le timer des coffres
+
+---
+
+## Synthese finale v1-v15 (2026-02-11)
+
+### 15 tentatives sur 4 jours, 0 succes
 
 **Approches essayees :**
-1. v1-v9 : NOP timer decrements (divers emplacements) → ECHEC
-2. v10 : NOP chest_update timer decrement → ECHEC
-3. v11 : Patch init entity+0x0014 (1 emplacement) → ECHEC
-4. v12 : Patch init entity+0x0012 (12 emplacements) → ECHEC
+1. v1-v9 : NOP timer decrements (divers emplacements BLAZE) → ECHEC
+2. v10 : NOP chest_update timer decrement (overlay) → ECHEC
+3. v11 : Patch init entity+0x0014 (1 emplacement BLAZE) → ECHEC
+4. v12 : Patch init entity+0x0012 (12 emplacements BLAZE) → ECHEC
+5. v13 : Patch 8 tables SLES (EXE, x65 multiplier) → **ECHEC DANGEREUX**
+6. v14 : Patch 8 tables SLES (EXE, x2 multiplier) → ECHEC (dégâts x2, coffres 20s)
+7. v15 : Patch sélectif Groupe A (3 offsets SLES) → ECHEC (coffres 20s inchangés)
 
-**Observations communes :**
-- Tous les patches sont CONFIRMES presents dans le BIN final
-- Le jeu demarre sans crash, les autres patches fonctionnent
+**Observations communes (v1-v15) :**
+- Tous les patches confirmés présents dans le BIN final
+- Le jeu démarre sans crash, les autres patches fonctionnent
 - Les coffres apparaissent normalement
 - **Mais disparaissent TOUJOURS exactement en 20 secondes**
+- Les 8 offsets SLES affectent les dégâts ennemis (confirmé v13-v15)
+- Mais NE contiennent PAS le timer des coffres (confirmé v15)
 
-### Theorie dominante : Overlay reload systeme
+### Conclusion finale : Timer source inconnu
+
+**Ce qui a été éliminé :**
+- ❌ Code immediates dans BLAZE.ALL (v11-v12) : patches chargés mais ineffectifs
+- ❌ Les 8 tables SLES identifiées (v13-v15) : affectent dégâts mais pas coffres
+- ❌ NOP decrements overlay (v1-v10) : code mort ou rechargé
+
+**Le timer des coffres est probablement :**
+1. Dans une table SLES non identifiée (différente des 8 trouvées)
+2. Calculé dynamiquement au runtime (pas de constante patchable)
+3. Dans un mécanisme de timestamp (comparaison vs valeur globale)
+4. Chargé depuis BSS/heap (non présent dans les fichiers)
+
+**Sans runtime debugging impossible à résoudre.**
+
+### Ancienne theorie : Overlay reload systeme
 
 **Evidence :**
 1. Le timing est EXACTEMENT 20s (jamais plus, jamais moins)

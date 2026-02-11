@@ -346,13 +346,148 @@ Combiner stats de sorts (fonctionnel) + modification des stats de monstres.
 3. `MONSTER_SPELL_RESEARCH.md` - Recherche exhaustive (40KB)
 4. `Data/spells/MONSTER_SPELLS.md` - User documentation (stats de sorts)
 
+---
+
+## Tentative A1: EXE Tier Threshold Table (2026-02-11) ❌ FAILED
+
+**Approche** : Modifier la table des seuils de tier dans l'EXE (Option B de la section précédente).
+
+**Hypothèse** : Le dispatch loop EXE (0x800244F4) lit la table à 0x8003C020 pour construire entity+0x160. En modifiant cette table, on devrait changer quels sorts les monstres obtiennent.
+
+### Implémentation
+
+**Patcher créé** : `Data/character_classes/patch_tier_thresholds.py`
+**Config créé** : `Data/character_classes/tier_thresholds_config.json`
+**Target** : EXE offset 0x8003C020 (RAM address)
+**Taille** : 40 bytes (8 lists × 5 tiers)
+
+**Format** : 5 bytes par liste (cumulative spell counts)
+- byte[0] = Tier 1 count (e.g., 5 spells)
+- byte[1] = Tier 2 count (e.g., 10 spells, includes tier 1)
+- byte[2] = Tier 3 count
+- byte[3] = Tier 4 count
+- byte[4] = Tier 5 count
+
+**Sector-aware patching** : Correctement implémenté (SLES à LBA 295081, 2352 bytes/sector)
+
+### Modification appliquée
+
+**Liste 0 (offensive spells)** :
+```
+Vanilla: [5, 10, 15, 20, 26]
+Modded:  [29, 29, 29, 29, 29]  (TOUS les sorts dès tier 1)
+```
+
+**Vérification patcher** :
+```
+[OK] Read 40 bytes
+  Current:  [10, 15, 20, 26, 29]
+  Modified: [29, 29, 29, 29, 29]
+    Tier 1: 10 → 29 spells
+[OK] Tier thresholds patched successfully
+```
+
+### Test ultra-boost
+
+Pour rendre la différence ÉVIDENTE :
+- **Tier thresholds** : [29,29,29,29,29] (tous les sorts)
+- **Goblin-Shaman MP** : 999 (vs vanilla 70)
+- **Goblin-Shaman MATK** : 300 (vs vanilla 10)
+
+**Stats patcher vérifié** :
+```
+Goblin-Shaman: patched 7 occurrences
+```
+
+**BIN patché** : `output/Blaze & Blade - Patched.bin` (703MB, 2026-02-11 13:19)
+
+### Résultat in-game : ❌ NO EFFECT
+
+**Test** : Combat avec Goblin-Shaman dans Cavern F1
+
+**Observations** :
+- ❌ Shaman lance toujours les MÊMES 5 sorts (vanilla)
+- ❌ Pas d'accès aux sorts de tier supérieur
+- ❌ Pas d'augmentation de variété de sorts
+- ✅ Stats HP/damage SONT modifiées (confirme que patches s'appliquent)
+- ✅ MP usage plus fréquent (ne tombe pas à court)
+- ✅ Dégâts magiques plus élevés
+
+**Conclusion** : La table tier threshold N'AFFECTE PAS les sorts des monstres.
+
+### Analyse de l'échec
+
+**Pourquoi ça semblait marcher ?**
+- ✅ Code dispatch confirmé exécuté (0x800244F4)
+- ✅ Table confirmée lue par le jeu
+- ✅ Modification data-only (pas d'injection code)
+- ✅ Patcher correctement implémenté (sector-aware)
+
+**Pourquoi ça n'a PAS marché ?**
+
+#### Hypothèse 1 : Overlay override (Most likely)
+Le bitfield construit par dispatch EXE est **écrasé** par l'overlay init qui écrit une valeur hardcodée.
+
+**Flow** :
+```
+1. EXE dispatch (0x800244F4) lit tier table → construit bitfield
+2. Overlay init runs → écrit hardcoded 0x01 (FireBullet only)
+3. Monster spawns avec bitfield = 0x01 (overlay gagne)
+```
+
+**Evidence** :
+- Overlay code à 0x0098A69C écrit `li $v0, 0x01`
+- Exécute APRÈS le dispatch loop
+- Valeur finale = valeur overlay, pas valeur dispatch
+
+#### Hypothèse 2 : Tier table = players only
+La table tier threshold est peut-être utilisée SEULEMENT pour les joueurs, pas les monstres.
+
+**Evidence** :
+- Table dans section character classes (player-focused)
+- Aucune doc trouvée liant tier table aux monstres
+- Monstres utilisent peut-être système d'unlock différent
+
+#### Hypothèse 3 : Level additions only
+La tier table contrôle peut-être quels bits sont AJOUTÉS par level-up, mais pas le bitfield de base.
+
+**Evidence** :
+- Commentaires code mentionnent "level-up ADDS more bits"
+- Base bitfield = 0x01 (overlay), puis level ajoute
+- Tier table affecte seulement les additions, pas la base
+
+### Documentation créée
+
+1. `Data/character_classes/TIER_THRESHOLD_FAILURE.md` - Rapport d'échec complet
+2. `Data/character_classes/patch_tier_thresholds.py` - Patcher (fonctionne mais inutile)
+3. `Data/character_classes/tier_thresholds_config.json` - Config (inutile)
+4. `Data/character_classes/TIER_THRESHOLDS.md` - User guide (OBSOLETE)
+
+### Prédiction vs Réalité
+
+**Prédiction initiale** : 95% chance de succès
+**Résultat réel** : 0% succès
+
+La tier table EST utilisée par le jeu (confirmé), mais PAS pour contrôler les sorts des monstres. Elle affecte probablement seulement les joueurs, ou est overridée par l'overlay pour les monstres.
+
+---
+
 ## Date des tentatives
 
 - **2026-02-10** : Tentatives #1-4 (v1 table lookup → v4 freeze test)
 - **2026-02-11** : Tentative #5-6 (pattern search refined + freeze v2)
+- **2026-02-11** : Tentative A1 (EXE tier threshold table) ❌ FAILED
 
 ## Status final
 
-**BLOQUÉ** - Tous les offsets overlay identifiés sont dead code pour Cavern F1.
+**ÉCHEC COMPLET** - 7 tentatives, 7 échecs.
 
-**Prochaine étape recommandée** : Patcher l'EXE dispatch loop (Option B).
+**Overlay offsets** : Dead code pour Cavern F1 (confirmé par freeze tests)
+**EXE tier table** : N'affecte pas les monstres (confirmé par test in-game)
+
+**Conclusion** : Le système de spell set des monstres est probablement impossible à modifier sans reverse-engineering complet du système d'overlay loading, ou est hardcodé dans l'overlay de façon inaccessible.
+
+**Options restantes** :
+- ⭐⭐ Option A2 : Injection code dans EXE dispatch (force bitfield)
+- ⭐ Option A3 : Table per-monster dans EXE (complexe)
+- ⭐⭐⭐ **Option B : Hybrid stats** (WORKING, accepter limitation spell sets)

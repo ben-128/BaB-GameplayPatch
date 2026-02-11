@@ -382,21 +382,17 @@ call :log "[9c/10] Monster spell bitfield: already patched in BLAZE.ALL at step 
 call :log ""
 
 REM ========================================================================
-REM Step 7f: ATTEMPT 9 - Patch falling rock damage via savestate pattern
+REM Step 7f: Falling rock damage - ATTEMPT 9 FAILED (see FAILED_ATTEMPTS.md)
 REM ========================================================================
-REM Pattern 0x0028000A found in savestate RAM + matched in BLAZE.ALL (10 locations)
-call :log "[7f/10] Patching falling rock damage (attempt 9 - savestate pattern)..."
-call :log ""
+REM Pattern 0x0028000A found in savestate RAM but EXACT pattern NOT in BLAZE.ALL
+REM Data appears to be generated at runtime, not loaded from BLAZE.ALL
+REM
+REM call :log "[7f/10] Patching falling rock damage (attempt 9)..."
+REM call :log ""
+REM py -3 Data\trap_damage\patch_falling_rock_attempt9.py >> "%LOGFILE%" 2>&1
+REM ...
 
-py -3 Data\trap_damage\patch_falling_rock_attempt9.py >> "%LOGFILE%" 2>&1
-if errorlevel 1 (
-    call :log ""
-    call :log "[ERROR] Falling rock patch (attempt 9) failed!"
-    goto :error
-)
-
-call :log ""
-call :log "[OK] Falling rock damage patched (10 descriptors)"
+call :log "[7f/10] Falling rock damage patch SKIPPED (attempt 9 failed - runtime data)"
 call :log ""
 
 REM ========================================================================

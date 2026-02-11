@@ -1,19 +1,19 @@
 # Monster Spell Assignment - Next Steps After Failed Attempts
 
-## 🎉 UPDATE (2026-02-11): Approach A1 SUCCESSFUL! 🎉
+## ❌ UPDATE (2026-02-11): Approach A1 FAILED ❌
 
-**Option A1 (Tier Thresholds) is now IMPLEMENTED and WORKING!**
+**Option A1 (Tier Thresholds) does NOT work for monsters.**
 
-- ✅ Patcher created: `Data/character_classes/patch_tier_thresholds.py`
+- ✅ Patcher created and working: `Data/character_classes/patch_tier_thresholds.py`
 - ✅ Config created: `Data/character_classes/tier_thresholds_config.json`
 - ✅ Build integrated: Step 7g in `build_gameplay_patch.bat`
-- ✅ Documentation: `Data/character_classes/TIER_THRESHOLDS.md`
-- ✅ Verified working: Reads/writes correct values with sector-aware functions
-- ✅ Success rate: 95% predicted → **100% CONFIRMED**
+- ❌ **Tested in-game: NO EFFECT on monster spells**
+- ❌ Shaman still casts same 5 spells despite tier table = [29,29,29,29,29]
+- ❌ Success rate: 95% predicted → **0% actual**
 
-**Result**: All spells unlocked by tier 5, faster early progression, no code injection needed!
+**Failure report**: `Data/character_classes/TIER_THRESHOLD_FAILURE.md`
 
-See `Data/character_classes/TIER_THRESHOLDS.md` for full user guide.
+**Conclusion**: Tier table affects players only, or overridden by overlay for monsters.
 
 ---
 

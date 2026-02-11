@@ -194,12 +194,74 @@ BIN file offset:      0x295F6858
 - Patched 11 functions successfully
 - 3 functions skipped (no sra pattern found)
 
-**Result:** ⏳ PENDING IN-GAME TEST
-- Patch applied to BIN (step 9d in build)
-- Needs testing: Get hit by falling rock in Cavern of Death
-- Expected: If one of the 11 functions is correct, damage will be 50%
+**Result:** ❌ FAILED
+- Patch applied to BIN successfully (11 functions modified)
+- **In-game test: damage still 10%** (no change observed)
+- Build + test completed 2026-02-11
 
-**Patcher:** `Data/trap_damage/patch_all_div100_functions.py`
+**Possible reasons:**
+1. **Result not used directly:** The /100 result may be intermediate, not the final damage%
+2. **Wrong functions:** None of the 11 patched functions are used by falling rocks
+3. **Different code path:** Falling rocks may use a completely different damage calculation
+4. **Post-processing:** Result may be further transformed after our patch injection point
+
+**Why /100 for 10%?**
+Formula: `damage = (maxHP * param%) / 100`
+- If param% = 10, then damage = (maxHP * 10) / 100 = maxHP / 10 = 10% ✓
+- param% is integer (10), not decimal (0.10)
+
+**Patcher:** `Data/trap_damage/patch_all_div100_functions.py` (DISABLED in build)
+
+---
+
+## ATTEMPT 9: Savestate Pattern Analysis (FAILED - 2026-02-11)
+
+**Hypothesis:** Analyze RAM savestate to find damage% value, then patch corresponding data in BLAZE.ALL
+
+**Method:**
+1. Loaded savestate with falling rock active (`sstates/rocher/SLES_008.45.000`)
+2. Searched RAM for halfword = 10 (0x000A) in BSS region
+3. Found pattern: `0x0028000A` in 2 structures at RAM 0x800A1856 and 0x800A1996
+4. Distance between structures: 320 bytes (0x140) - suggests descriptor table
+5. Searched BLAZE.ALL for same pattern
+6. Found 164 matches, patched 10 descriptors:
+   - 0x00241556 (first match)
+   - 0x0029E0E6-0x0029F022 (cluster of 9 matches)
+
+**Pattern structure:**
+```
++0x00: 0028000A  (hw: 0x0028=40, 0x000A=10 ← damage%)
++0x04: 01000064
++0x08: 00000096
+...
+```
+
+**Result:** ❌ FAILED
+- Build completed, BIN generated
+- **In-game test: damage still 10%** (no change observed)
+- Tested with new savestate (`sstates/rocher/2`) - confirmed still 10%
+
+**Root cause identified (2026-02-11):**
+- **PATCHER BUG**: Verification check had halfwords in WRONG ORDER
+- Check expected: hw1=0x0028, hw2=0x000A
+- Actual pattern: hw1=0x000A (damage%), hw2=0x0028 (other)
+- Result: All 10 targets FAILED verification → **ZERO patches applied**
+- Patcher silently skipped all offsets (printed "[SKIP]" but no error code)
+- Build succeeded because no Python error, but no data was modified
+
+**Additional findings:**
+1. **Wrong pattern:** The 0x0028000A pattern may not be trap damage data
+2. **Runtime generation:** Damage% may be calculated/generated at runtime, not loaded from BLAZE.ALL
+3. **Different data:** RAM pattern differs from BLAZE.ALL pattern (runtime modifications)
+4. **Unrelated data:** The 164 matches may be something else entirely (not trap descriptors)
+5. **Patcher bug:** Even if pattern was correct, implementation had verification logic error
+
+**Pattern analysis:**
+- RAM data: `0028000A 01000064 00000096 00000000`
+- BLAZE data: `0028000A 00001000 00000000 00000000` (different after first word!)
+- The data structures are NOT identical - BLAZE.ALL values differ from RAM
+
+**Patcher:** `Data/trap_damage/patch_falling_rock_attempt9.py` (DISABLED in build)
 
 ---
 
@@ -282,13 +344,19 @@ BIN file offset:      0x295F6858
 
 ## Conclusion (2026-02-11)
 
-After 3 days of exhaustive reverse engineering, **the falling rocks 10% damage is not patchable** with current methods. The value's location remains unknown despite:
+After 4 days of exhaustive reverse engineering, **the falling rocks 10% damage is not patchable** with current methods. The value's location remains unknown despite:
 
 - ✓ Complete BLAZE.ALL descriptor analysis
 - ✓ Full overlay code disassembly
 - ✓ Template function argument tracing
 - ✓ Bytecode system investigation
 - ✓ Entity init data scanning
+- ✓ Savestate RAM analysis (found pattern location)
 - ✗ EXE function patching (applied but ineffective)
+- ✗ Attempt #9 patcher bug (verification logic error, zero patches applied)
+
+**Key finding:** Exact RAM pattern `28000a006400000196000000` exists at runtime but **NOT in BLAZE.ALL**. The partial pattern `28000a00` exists 165 times in BLAZE.ALL, but with different following bytes (e.g., `00001000` vs `01000064`). This confirms damage% is **generated at runtime**, not loaded from static data.
+
+**Note on Attempt #9:** Even if the patcher bug was fixed (swap halfword order in verification), it would still fail because BLAZE.ALL doesn't contain the exact pattern to patch.
 
 **Status:** UNSOLVED - requires runtime debugging or acceptance of limitation.
