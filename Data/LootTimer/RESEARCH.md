@@ -509,12 +509,15 @@ A tester in-game pour evaluer les effets secondaires.
 - **CAUSE** : Handler [0] est l'interpreteur bytecode d'ITEMS (equipment slots 0x800Fxxxx),
   PAS le systeme coffre monde. La table a 0x8005A458 gere les items, pas les entites monde.
 
-### v10 : chest_update overlay — EN TEST
-- Cible : `addiu $v0,$v0,-1` a BLAZE 0x0094E09C (RAM 0x800877F4, Cavern F1)
+### v10 : chest_update overlay — SANS EFFET
+- NOP `addiu $v0,$v0,-1` a BLAZE 0x0094E09C (RAM 0x800877F4, Cavern F1)
 - Fonction chest_update (RAM 0x80087624, entity handler index 41)
 - Timer a entity+0x14 (halfword), decremente chaque 20eme frame
-- Pattern scan pour couvrir tous les donjons (overlay per-dungeon)
-- Signature : `lhu+0x14 / nop / addiu-1 / sh+0x14` + `lui 0x0200` (dead flag)
+- Pattern scan : 2 matches (1 chest + 1 debris), NOP confirme dans BIN final
+- **Coffres disparaissent toujours en 20s**
+- **CAUSE inconnue** : le code est correct (confirme par savestate), le NOP est dans le BIN,
+  mais le timer continue de decrementer. Possible : overlay rechargee depuis une autre source,
+  ou un second chemin de code non identifie
 
 ---
 
@@ -575,12 +578,9 @@ BIN LBA 185765 copy : NOP confirmed
 - BLAZE.ALL : 46,206,976 bytes
 - Region NOP SLES : 0x80056F64-0x800BD800 (420 KB, remplie a runtime)
 - Framerate : 50fps (PAL)
-- Timer original : ~1000 frames = 20s
-- Timer patche : infini (NOP decrement) mais **SANS EFFET sur le despawn reel**
+- Timer original : ~1000 ticks (1 tick / 20 frames = 400s a 50fps? a verifier)
+- Timer patche v10 : NOP addiu a BLAZE 0x0094E09C → SANS EFFET
 
 ## Scripts
 
-- `patch_loot_timer.py` : patcheur v8 (bidirectional opacity scan, BLAZE.ALL step 7)
-- `check_overlay_vs_sles.py` : comparaison RAM overlay vs SLES file
-- `find_overlay_in_blazeall.py` : localisation du code overlay dans BLAZE.ALL
-- `survey_countdown_pattern.py` : inventaire de tous les patterns countdown
+- `patch_loot_timer.py` : patcheur v10 (pattern scan chest_update overlay, BLAZE.ALL step 7)
