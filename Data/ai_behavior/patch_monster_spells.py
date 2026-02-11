@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# -*- coding: cp1252 -*-
+# -*- coding: utf-8 -*-
 """
 Patch monster spell bitfield init in output/BLAZE.ALL overlay code.
 
@@ -440,7 +440,7 @@ def main():
     print("  Monster Spell Bitfield Patcher (BLAZE.ALL overlay)")
     print("  " + "-" * 50)
     print()
-    print("  ⚠️  WARNING: This patcher is PERMANENTLY DISABLED")
+    print("  [WARNING] This patcher is PERMANENTLY DISABLED")
     print("  All 6 attempts failed (v1-v6). Freeze tests confirmed: dead code.")
     print("  See Data/ai_behavior/FAILED_ATTEMPTS.md for details.")
     print()
