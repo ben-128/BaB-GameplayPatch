@@ -4,197 +4,523 @@
 Modifier la duree avant disparition des coffres laches par les monstres.
 Duree originale : 20 secondes (1000 frames @ 50fps PAL).
 
-## Statut : v7 - ENTITY TYPE FILTERING (2026-02-10)
+## Statut : v8 - CAUSE RACINE TROUVEE (2026-02-10)
 
-**v6 cassait les sorts** : 35 patterns incluaient des timers de sorts/animations.
-Le joueur restait bloque a l'infini apres une incantation.
+**v8 patche 31 timer NOPs + 11 kill NOPs dans BLAZE.ALL** (overlay 0x80080000+).
+Les patches sont confirmes presents dans le BIN final aux 2 emplacements LBA.
+**Malgre tout, les coffres disparaissent toujours en 20s exactement.**
 
-**v7 filtre par TYPE D'ENTITE** : seuls les decrements dont le code accede
-aux champs d'opacite +0x28/+0x2A (uniques aux coffres) sont patches.
-Exclut aussi les patterns fade-in (state=2 vers +0x10).
+### CAUSE RACINE (confirmee par savestate)
 
-Resultat : **12 patterns** (vs 35 v6). Sorts non affectes.
+**Function A (RAM 0x800999D0) n'est JAMAIS appelee par le dispatcher pour les coffres.**
 
----
+La table de function pointers du dispatcher a 0x8005A458 ne contient QUE des
+fonctions de la region stubs (0x8006E3AC - 0x8006EDA0). Function A est dans
+l'overlay principal (0x800999D0) et n'apparait nulle part dans cette table.
 
-## Historique v5 - COMPREHENSIVE DECREMENT DETECTION (2026-02-09)
+Les 31 patches v8 ciblent tous Function A et ses copies → **code mort pour les coffres**.
 
-v4 ne trouvait que 35 patterns sur 68 au total.
-
-### Pourquoi v4 echouait
-
-v4 cherchait seulement le pattern exact:
-```
-lhu $v0, 0x14(base)
-nop
-addiu $v0, $v0, -1      <- SEULEMENT cette variante specifique
-sh $v0, 0x14(base)
-```
-
-Mais le code overlay utilise BEAUCOUP de variantes:
-- `addiu $v0, $v1, -1`   (decrement depuis $v1 au lieu de $v0)
-- `addiu $v0, $a2, -1`   (decrement depuis $a2)
-- `addiu $a3, $zero, -1` (load -1 dans $a3)
-- `addiu $s0, $zero, -1` (load -1 dans $s0)
-- etc. (au moins 15 combinaisons differentes de registres)
-
-v4 ne matchait que `addiu $v0, $v0, -1`, donc **33 patterns sur 68 etaient ignores**.
-
-### Solution v5 : detection generique
-
-Au lieu de chercher un pattern exact, v5 trouve TOUS les patterns:
-```
-addiu <any_reg>, <any_reg>, -1
-... (0-1 instructions)
-sh <any_reg>, 0x14(<any_base>)
-```
-
-**68 patterns trouves et patches** (vs 35 dans v4).
-
-Patch applique au step 7 du build (patche output/BLAZE.ALL avant injection BIN).
-
-Script: `patch_loot_timer_v5.py`
-
-### Prochaine etape : timer configurable
-
-Actuellement v5 NOP tous les decrements (timer infini, coffres permanents).
-Pour implementer un timer configurable (ex: 60s au lieu de 20s), il faudra:
-1. Trouver ou le timer entity+0x14 est INITIALISE (probablement lors de la transition state 1->2)
-2. Modifier la valeur initiale (ex: 3000 frames au lieu de 1000 pour 60s)
+Le vrai timer est decremente par un **handler de la region stubs**, dispatche
+via la table a 0x8005A458. Voir section "Analyse savestate" ci-dessous.
 
 ---
 
-## Statut PRECEDENT : v4 - ALL REGISTERS OVERLAY PATCH (INCOMPLET)
+## Architecture complete des overlays
 
-Le vrai code de despawn est dans le **dungeon overlay** charge depuis BLAZE.ALL,
-PAS dans le SLES executable. Les patches SLES (v1/v2) etaient inefficaces.
+### Region NOP massive dans le SLES
 
-NOTE: v4 trouvait 35 patterns mais en manquait 33, donc les coffres continuaient
-de despawn a 20s. Voir v5 ci-dessus pour la vraie solution.
+Le SLES contient une **region NOP de 420 KB** : RAM 0x80056F64 - 0x800BD800.
+Cette region est **vide dans le fichier SLES** (tout a zero) et remplie a
+runtime depuis BLAZE.ALL par le CD loader.
+
+Tous les stubs overlay connus sont dans cette region :
+```
+RAM 0x8006D61C  (stub inconnu)
+RAM 0x8006E044  Entity Destroy/Handler dispatcher
+RAM 0x800739D8  Play Animation
+RAM 0x80073B2C  Set Anim State
+RAM 0x80073F9C  Play Sound/VFX
+RAM 0x80080000  Debut overlay principal (per-area)
+```
+
+### Mapping RAM → BLAZE.ALL (Cavern F1)
+
+```
+Formule STUBS  : BLAZE = (RAM - 0x80056F64) + 0x0091D80C
+Formule MAIN   : BLAZE = (RAM - 0x80080000) + 0x009468A8
+
+Exemples :
+  RAM 0x8006E044 = BLAZE 0x009348EC  (stub dispatcher)
+  RAM 0x80080000 = BLAZE 0x009468A8  (debut overlay principal)
+  RAM 0x80099BD4 = BLAZE 0x0096047C  (Function A timer decrement)
+```
+
+### Deux regions de code overlay distinctes
+
+1. **Region stubs** : BLAZE 0x009348EC - 0x009468A8 (73,660 bytes)
+   - RAM 0x8006E044 - 0x80080000
+   - Contient le **dispatcher** + les **handlers d'entites** (coffres, effets, etc.)
+   - 56 self-decrements, dont **seulement 2** vrais timer halfword a +0x10
+   - Table de 30 function pointers a 0x8005A458 (handler opcodes)
+   - **Le patcheur v8 ne trouve AUCUN match ici** (0/31)
+
+2. **Region principale** : BLAZE 0x009468A8+ (137,824 bytes)
+   - RAM 0x80080000 - 0x800A1A5C
+   - Per-area : meshes, textures, scripts, stats, Function A/B
+   - 7+ copies dans BLAZE.ALL (une par groupe de donjon)
+   - **Les 31 matches du patcheur v8 sont TOUS ici**
 
 ---
 
-## Solution v3 : Overlay countdown NOP
+## Le dispatcher : stub 0x8006E044
 
-### Mecanisme reel : state machine dans l'overlay
+### Architecture (BLAZE 0x009348EC, 488 bytes)
 
-Le cycle de vie des coffres est gere par un automate a 3 etats dans le code
-overlay charge en RAM a 0x80080000+ (zone zero dans SLES) :
-
-```
-State 1 (fade-in) :
-  entity+0x28 += 90/frame    ; apparence augmente
-  entity+0x2A += 90/frame
-  Quand entity+0x28 >= 1001 → cap a 1000, passage a State 2
-
-State 2 (vivant - countdown) :
-  entity+0x14 -= 1/frame     ; TIMER DE DESPAWN ← PATCH ICI
-  Quand entity+0x14 < 0 (signe) → passage a State 3
-
-State 3 (fade-out) :
-  entity+0x28 -= 60/frame    ; disparition rapide
-  entity+0x2A -= 60/frame
-  Quand entity+0x28 < 0 → bit 14 de entity+0x00 = KILL
-```
-
-### Code assembleur (State 2 countdown, RAM 0x80099BCC)
+Le stub 0x8006E044 est un **dispatcher multi-handler** :
 
 ```
-86230010  lh   $v1, 0x10($s1)    ; load state
-24020002  addiu $v0, $zero, 2
-14620009  bne  $v1, $v0, +9      ; skip if state != 2
-00000000  nop
-96220014  lhu  $v0, 0x14($s1)    ; load timer
-00000000  nop
-2442FFFF  addiu $v0, $v0, -1     ; DECREMENT ← NOP THIS
-A6220014  sh   $v0, 0x14($s1)    ; store timer
-00021400  sll  $v0, $v0, 16      ; sign-extend pour bgez
-04410002  bgez $v0, +2           ; si timer >= 0, skip
-24020003  addiu $v0, $zero, 3    ; state = 3
-A6220010  sh   $v0, 0x10($s1)    ; ecrire state 3
+function entity_dispatch(entity, reason_code):
+    entity_id = entity → calcul index
+    handler_base = 0x800F0000 + (entity_id << 13)
+    handler_slots = handler_base + 0x02B0    // 5 slots par entite
+
+    for slot in 0..4:
+        handler_type = byte_at(handler_slots + slot)
+        if handler_type == 0: continue       // slot vide
+        handler_data = computed_offset(handler_type)
+        if handler_data+0x84 matches reason_code:
+            sub_dispatch(handler_data)       // appel indirect via table
 ```
 
-### Le patch
+**Table de function pointers** a 0x8005A458 (en RAM overlay).
+Chaque type d'handler (coffre, monstre, effet, etc.) a un index
+qui pointe vers sa fonction handler specifique.
 
-**Signature** (16 bytes) :
+### Appels depuis le SLES
+
+17 sites d'appel, tous gates par bit 23 de entity+0x00 :
 ```
-96220014 00000000 2442FFFF A6220014
-lhu $v0,0x14($s1) / nop / addiu $v0,$v0,-1 / sh $v0,0x14($s1)
-```
-
-**Action** : NOP l'instruction index 2 (`addiu $v0,$v0,-1` → `00000000`)
-
-**35 occurrences dans BLAZE.ALL** (multiples overlays, 4 registres de base) :
-
-Le meme pattern existe avec differents registres de base :
-- 7 avec **$s1** (overlay handler principal)
-- 9 avec **$s0** (overlay handler secondaire)
-- 16 avec **$s2** (overlay handler variant)
-- 3 avec **$v1** (overlay handler misc)
-
-La v3 initiale ne patchait que les 7 patterns $s1. L'entite coffre est
-traitee par un handler utilisant un AUTRE registre ($s0 ou $s2), donc
-le timer continuait de decrementer.
-
-La v4 patche les 35 patterns avec un matching masque sur le registre :
-```
-w0: (w0 & 0xFC1FFFFF) == 0x94020014  → lhu $v0, 0x14(ANY)
-w1: 0x00000000                        → nop
-w2: 0x2442FFFF                        → addiu $v0, $v0, -1
-w3: (w3 & 0xFC1FFFFF) == 0xA4020014  → sh $v0, 0x14(ANY)
-+ base register of w0 == base register of w3
+lw $v0, entity+0x00
+lui $v1, 0x0080
+and $v0, $v0, $v1      ; test bit 23
+beq $v0, $zero, skip    ; skip si pas set
+jal 0x8006E044          ; appel dispatcher
 ```
 
-### Build
-
-Le patch est applique au **step 7** dans `build_gameplay_patch.bat`.
-Il patche `output/BLAZE.ALL` AVANT injection dans le BIN (step 9).
+Codes raison ($a1) : 0 (post-timers), 2,3,7,8,9,12,13,17,18,19,20 (combat)
 
 ---
 
-## Decouverte cle : l'overlay est stocke brut dans BLAZE.ALL
+## Fonctions handler dans la region stubs
 
-L'overlay charge en RAM a 0x80080000 est une copie **exacte** des bytes
-dans BLAZE.ALL. Mapping pour Cavern F1 :
+### Function #3 : Fade-in animation (BLAZE 0x00940168, RAM 0x800798C0)
+
+Handler d'**animation d'apparition**. Dure 16 frames puis s'auto-detruit.
 
 ```
-RAM 0x80080000 = BLAZE.ALL 0x009468A8
-RAM 0x80099BD4 = BLAZE.ALL 0x0096047C  (notre cible)
-Offset = RAM_addr - 0x80080000 + 0x009468A8
+State 0 : Init
+  - Lit entity+0x12 (opacite initiale)
+  - Set entity+0x28 (opacite), entity+0x2C
+  - 3x jal 0x80039CB0 (RNG pour position)
+  - Set entity+0x04 = 0x1D (type visuel)
+
+State 1..15 : Animation
+  - Interpolation opacite : opacity += (timer - opacity) >> 2
+  - Calcul couleur : sin(state << 7) * 255 >> 12 → R=G=B → entity+0x38
+  - Copie coords monde depuis config (+0x78)
+  - jal 0x80023B58 (rendering)
+
+State 16 : Kill
+  - sw $zero, 0x0000($s0)  → KILL (zero le vtable ptr)
 ```
 
-La region overlay couvre 137,824 bytes (0x80080000 - 0x800A1A5C).
-Le SLES a des **zeros** dans toute cette zone (confirme par comparaison).
+**Ce n'est PAS le coffre** — c'est l'entite d'animation visuelle du spawn.
 
-### Autres patterns entity+0x14 dans BLAZE.ALL
+### Function #4 : Coffre open + visual (BLAZE 0x009402B4, RAM 0x80079A0C)
 
-35 patterns `lhu $v0,0x14($base) / nop / addiu $v0,-1 / sh $v0,0x14($base)` trouves
-avec differents registres ($s0, $s1, $s2, $v1). Tous sont patches car le coffre
-peut etre traite par n'importe quel handler (confirme : $s1 seul ne suffit pas).
+Handler de **cycle de vie visuel du coffre**. Utilise le champ COLOR (+0x38),
+PAS le timer (+0x14) comme mecanisme de despawn.
+
+```
+State 0 : Init
+  - entity+0x0A = 7 (sous-etat visuel)
+  - entity+0x28 = 0 (opacite)
+  - entity+0x38 = 0 (couleur)
+  - entity+0x2E = -20
+
+State 1..31 : Fade-in
+  - Opacite : si +0x28 < 4096, ajoute 0x01000100 (+256 par canal)
+  - Couleur : si +0x38 <= 0x00D0D0CF, ajoute 0x00080808 (+8 par R/G/B)
+
+State 32 : Ouverture
+  - entity+0x12 = 0
+  - entity+0x14 = 0x2000 (8192) — set MAIS JAMAIS DECREMENTE ici
+  - jal 0x80073D48 (son ouverture coffre, ID 0x68)
+
+State 33+ : Fade-out
+  - Couleur -= 0x00080808 par frame (lui 0xFFF7 / ori 0xF7F8 / addu)
+  - Opacite converge vers 0x2000 : opacity += (0x2000 - opacity) >> 2
+
+Kill : quand state != 0 ET entity+0x38 == 0
+  → sw $zero, 0x0000($s0)  (zero vtable ptr)
+```
+
+**Duree : ~63 frames (~1.3s)** — trop court pour etre le timer 20s.
+entity+0x14 est set a 0x2000 mais n'est jamais lu/decremente dans cette fonction.
+
+### Function #7 : Explosion/despawn (BLAZE 0x00945ADC, RAM 0x8007F234)
+
+Effet d'**explosion au despawn**. 14 frames, genere 9 particules (3x3 boucle).
+
+```
+State 0 : Init explosion
+  - entity+0x38 = 0x00F0F0F0 (blanc brillant)
+  - entity+0x28 = 0x20004000 (grande opacite)
+  - entity+0x14 = 0x2000
+  - jal 0x80073F9C (son/VFX)
+
+State 1..13 : Particules
+  - entity+0x28 = 0x1FFC, entity+0x14 = 0
+  - Boucle 3x3 : positions aleatoires, opacites aleatoires
+  - jal 0x80073F9C + 0x80019D54 (sons)
+
+State 14 : Kill
+  - sw $zero, 0x0000($s0)
+```
+
+### Autres fonctions chest-related (stub region)
+
+| # | BLAZE | RAM | Taille | Description |
+|---|-------|-----|--------|-------------|
+| 1 | 0x009356A4 | 0x8006EDFC | 11,532B | Handler geant (dispatcher secondaire?) |
+| 2 | 0x0093CE90 | 0x800765E8 | 360B | Interpolation/fade generique |
+| 5 | 0x00941A98 | 0x8007B1F0 | 284B | Effet fade/spin-out |
+| 6 | 0x00944EB8 | 0x8007E610 | 484B | Setup + transition |
 
 ---
 
-## Historique : pourquoi v1 et v2 ont echoue
+## Function A : State machine coffre — overlay principal
+
+**BLAZE 0x00960278, RAM 0x800999D0** (Cavern F1)
+
+La "vraie" state machine timer avec le countdown 1000→0 :
+
+```
+State 1 : Fade-in
+  - +0x28 += 90/frame, +0x2A += 90/frame
+  - Cap a 1000 (0x03E8)
+  - Quand +0x28 >= 1001 → state = 2
+
+State 2 : Countdown
+  - +0x14 -= 1/frame               ← v8 PATCHE (NOP a BLAZE 0x0096047C)
+  - Quand +0x14 < 0 → state = 3
+
+State 3 : Fade-out
+  - +0x28 -= 60/frame, +0x2A -= 60/frame
+  - Quand +0x28 < 0 :
+    - +0x28 = 0
+    - +0x00 = +0x00 AND 0x7FFFFFFF  ← v8 PATCHE (NOP a BLAZE 0x009604E8)
+    (clear bit 31 = flag "alive")
+```
+
+**Deux mecanismes de kill differents :**
+- Function A (overlay principal) : `AND 0x7FFFFFFF` (clear bit 31)
+- Stubs (region stubs) : `sw $zero` (zero le mot entier, clear TOUS les bits)
+
+---
+
+## Analyse savestate (2026-02-10) — PREUVE DEFINITIVE
+
+### Setup savestates
+
+Emulateur ePSXe, 4 savestates Cavern F1 :
+- **Base** : pas de coffre visible
+- **CoffreSolo** : 1 coffre visible
+- **Coffre1** : coffre visible (1er moment)
+- **Coffre2** : coffre visible (2eme moment)
+
+Format ePSXe : fichier gzip, RAM a offset **0x1BA** dans les donnees decompressees.
+
+### Timer coffre localise — offset +0x10 (PAS +0x14)
+
+Recherche de valeur halfword 957 dans CoffreSolo → 5 copies identiques :
+
+| Adresse RAM | Timer (hw) | State (hw) | Flags a -0x10 |
+|-------------|-----------|------------|---------------|
+| 0x800A93A0 | 957 | 1 | 0x80054698 |
+| 0x800B4B9C | 957 | 1 | 0x80054698 |
+| 0x800B4C38 | 957 | 1 | 0x80054698 |
+| 0x800B507C | 957 | 1 | 0x80054698 |
+| 0x800B5250 | 957 | 1 | 0x80054698 |
+
+Verification multi-savestate :
+| Savestate | 0x800A93A0 | 0x800B4B9C | 0x800B507C | Notes |
+|-----------|-----------|-----------|-----------|-------|
+| Base | 425 (autre) | 0 | 0 | Pas de coffre |
+| CoffreSolo | 957 | 957 | 957 | 1 coffre, 5 copies |
+| Coffre1 | 403 | 839 | 839 | 2 coffres, timers differents |
+| Coffre2 | 403 | 839 | 403 | Timers en countdown |
+
+### Structure record handler (stride 0x9C entre records 2 et 3)
+
+```
+record+0x00 : type descriptor ptr (0x80054698 quand vivant, 0 quand mort)
+              bit 31 = alive flag
+record+0x04 : 0x00000000
+record+0x08 : 0x00000000
+record+0x0C : data ptr (0x8014CDB8)
+record+0x10 : TIMER (halfword low, countdown 1000→0)
+              STATE (halfword high, =1 pendant countdown)
+record+0x14 : sous-champ (PAS le timer contrairement a l'hypothese initiale)
+record+0x18..0x24 : 0xA0000000 (position data)
+record+0x28 : opacity/rendering
+record+0x38 : color/state
+```
+
+### PREUVE : Function A n'est JAMAIS appelee
+
+**Function A (RAM 0x800999D0) est chargee en RAM** (40/40 instructions verifiees,
+match parfait avec BLAZE.ALL 0x00960278). L'instruction `addiu $v0,$v0,-1`
+(0x2442FFFF) est bien presente a RAM 0x80099BD4.
+
+**MAIS : la table de function pointers du dispatcher a 0x8005A458 :**
+```
+  [ 0] 0x8006E3AC  (BLAZE 0x00934C54) ← HANDLER TIMER (probability-gated -1 to +0x10)
+  [ 1] 0x8006E4FC  (BLAZE 0x00934DA4)   Helper: lbu+sll+or→return offset
+  [ 2] 0x8006E518  (BLAZE 0x00934DC0)   Helper: lw check + sw zero kill
+  [ 3] 0x8006E55C  (BLAZE 0x00934E04)   Helper: jal 0x8001A3D4
+  ...
+  [18] 0x8006EBA0  (BLAZE 0x00935448)   Jump table dispatch (22 cases)
+  [19] 0x8006EC3C  (BLAZE 0x009354E4)   Play Animation (lbu size switch)
+  [20] 0x8006ECEC  (BLAZE 0x00935594)   Play Animation (lbu size switch)
+  [21] 0x8006EDA0  (BLAZE 0x00935648)   Play Sound (jal 0x80019ADC)
+  [22] 0x80061AE8  ...
+  ...
+  [29] 0x80061C3C
+```
+
+**Function A (0x800999D0) N'EST PAS dans la table (30 entrees verifiees).**
+Le dispatcher 0x8006E044 ne peut pas l'appeler.
+→ Les 31 patches v8 sont tous dans du **code mort** pour les coffres.
+
+### Desassemblage handlers [18]-[21] — NE SONT PAS des timers (FAUSSE PISTE)
+
+**ERREUR de l'analyse precedente** : les handlers [18]-[21] etaient supposes
+avoir des timer decrements. Le desassemblage complet montre :
+
+- **[18]** : Jump table dispatch (22 entries via `jr $v0`), appel indirect via
+  table a 0x800A17FC. NOP/jal, PAS de timer decrement.
+- **[19]** : Play Animation helper — lit 1/2/4 bytes selon state, appelle
+  jal 0x800739D8 (overlay Play Animation). 44 bytes.
+- **[20]** : Play Animation helper — identique a [19] mais avec `lw $a0, 0x0070($a0)`.
+  44 bytes, appelle jal 0x800739D8.
+- **[21]** : Play Sound helper — assemble params depuis bytecode, appelle
+  jal 0x80019ADC. 32 bytes. Aucun timer.
+
+**Aucun de ces 4 handlers ne contient de decrement timer.** Leur taille est
+de 32-96 bytes chacun (pas assez pour une state machine).
+
+### Handler [0] : LE countdown timer (BLAZE 0x00934C54, RAM 0x8006E3AC)
+
+**C'est la seule fonction de la table qui decremente un halfword timer.**
+
+```
+function handler_0(entity_block, handler_data, bytecode_ptr):
+    $s0 = entity_block
+    $s1 = handler_data          // pointe vers le record
+    $s2 = bytecode_ptr          // pointe vers les params
+
+    rng = jal 0x80039CB0()      // random number
+    chance = rng % 100           // modulo 100
+    threshold = lbu $s2+1        // probabilite depuis bytecode
+
+    if chance >= threshold:
+        return $s2+2             // skip, avance bytecode de 2
+
+    // Decrement timer:
+    timer = lhu $s1+0x10         // load timer (halfword)
+    timer -= 1
+    sh timer, $s1+0x10           // store timer
+    if timer != 0:
+        return $s2+2             // continue
+
+    // Timer atteint 0 → KILL :
+    sb $zero, $s1+0x00           // clear handler type byte
+    // Loop: iterate entity+0x2B0 handler slots (5 slots, 10 candidates)
+    // Mark matching slots as 0xFF
+    return $s2+2
+```
+
+**Cible v9 : NOP `addiu $v0,$v0,-1` a BLAZE 0x00934CC8 (RAM 0x8006E420)**
+
+**Attention** : Handler [0] est generique — utilise par TOUS les types d'entite
+qui ont handler_type=0 (pas seulement les coffres). Le NOP gelerait TOUS les
+timers handler_type=0. Il faudra tester si ca cause des effets secondaires.
+
+### Giant Function #1 : second timer decrement — handler de MORT (pas countdown)
+
+**BLAZE 0x00939D58, RAM 0x800734B0** dans le Giant Function (0x8006EDFC, 11,532B) :
+
+```
+// Avant le decrement :
+lw $v0, 0x0000($s0)
+lui $v1, 0x7FFF
+ori $v1, 0xFFFF
+and $v0, $v0, $v1          // clear bit 31 (marque entite comme MORTE)
+sw $v0, 0x0000($s0)
+
+// Decrement timer mort :
+lhu $v0, 0x0010($s0)
+addiu $v0, $v0, -1
+sh $v0, 0x0010($s0)
+if timer != 0: continue     // animation de mort en cours
+// timer = 0 → nettoyage final
+```
+
+**Ce n'est PAS le countdown coffre** : il clear bit 31 AVANT de decrementer.
+Or dans les savestates, les coffres vivants ont bit 31 SET (0x80054698).
+C'est le handler d'animation de mort APRES que le timer countdown a atteint 0.
+
+### H2 ELIMINEE — les 3 decrements +0x14 stubs sont des compteurs debris
+
+Les 3 patterns a BLAZE 0x0093FCB0/0x0093FD68/0x0093FE54 sont dans une SEULE
+fonction de handler debris/fragments. Ils decrementent **parent+0x14** (via
+$v1 = $s2+0x6C = parent pointer), PAS le timer coffre direct.
+
+### Inventaire COMPLET des self-decrements stubs (56 total)
+
+| Type | Nombre | Description |
+|------|--------|-------------|
+| Timer halfword +0x10 | **2** | Handler[0] (countdown) + Giant func (mort) |
+| Timer halfword +0x14 via parent | 3 | Debris (parent ref count) |
+| Timer halfword +0x16 via parent | 2 | Debris (companion counter) |
+| Byte counters (+0x0A, +0x0C, +0x0E, +0x27, +0x206, +0x207) | 8 | Anim/state bytes |
+| Global counters (0x800A4010, 0x80057964) | 2 | Systeme |
+| Loop counters (bne-based) | 39 | Iteration, pas des timers |
+
+---
+
+## Pourquoi v8 ne fonctionne pas — Synthese
+
+### CAUSE RACINE CONFIRMEE : Function A jamais appelee
+
+1. Les 31 patches v8 sont TOUS dans l'overlay principal (0x009468A8+)
+2. 0 patches dans la region stubs (0x009348EC-0x009468A8)
+3. Function A (overlay principal) contient une state machine timer 1000→0
+4. **MAIS** : la table de function pointers du dispatcher (0x8005A458)
+   ne contient QUE des fonctions stubs (30 entrees, toutes en 0x8006xxxx/0x80061xxx)
+5. Function A **n'est JAMAIS appelee** pour les entites coffre
+6. → Les patches v8 ciblent du code mort
+
+### Hypotheses historiques — toutes resolues
+
+| Hypothese | Statut | Raison |
+|-----------|--------|--------|
+| H1 : Function A pas appelee | **CONFIRMEE** | Table dispatcher ne la contient pas (30 entries verifiees) |
+| H2 : Timer dans les 3 decrements +0x14 stubs | **ELIMINEE** | Ce sont des compteurs debris parent+0x14 (via $s2+0x6C) |
+| H3 : Handlers [20]/[21] contiennent le timer | **ELIMINEE** | Ce sont des helpers Play Animation / Play Sound (44/32 bytes) |
+| H4 : Overlay recharge apres patches | Non pertinente | Cause racine trouvee |
+| H5 : Timer a +0x14 | **CORRIGEE** | Timer est a **+0x10** (confirme par code ET savestate) |
+
+### Cible v9 identifiee
+
+**Handler [0]** (BLAZE 0x00934C54, RAM 0x8006E3AC) :
+- Seul handler dans la table du dispatcher avec un decrement halfword timer
+- Decremente `record+0x10` (probability-gated par bytecode)
+- Quand timer atteint 0 → kill entity (sb $zero, record+0x00)
+- **NOP a BLAZE 0x00934CC8** = geler le timer
+
+**Risque** : Handler [0] est generique, utilise par d'autres types d'entites.
+Le NOP gelerait TOUS les timers handler_type=0, pas seulement les coffres.
+A tester in-game pour evaluer les effets secondaires.
+
+---
+
+## Historique des tentatives
 
 ### v1 : batch timer seul (entity+0x80)
-- Patchait `addiu $v0,$v0,-1` dans la boucle 48 timers du SLES
-- Les 48 timers a entity+0x80 etaient geles
-- Mais le VRAI timer (entity+0x14 dans l'overlay) continuait de tourner
-- Resultat : coffres disparaissaient toujours a 20s
+- Patch : NOP `addiu $v0,$v0,-1` a 0x80027680 (boucle 48 timers)
+- Resultat : 48 timers geles, **coffres disparaissent toujours**
+- Conclusion : les 48 timers ne controlent pas le despawn des coffres
 
 ### v2 : batch timer + entity+0x4C
-- Ajoutait NOP sur le store a entity+0x4C
-- entity+0x4C = HP combat (pas timer coffre !)
-- Cassait le combat (monstres immortels)
-- Coffres disparaissaient toujours
+- Patch : NOP stores vers entity+0x4C
+- Resultat : combat casse (monstres immortels), **coffres disparaissent toujours**
+- Conclusion : entity+0x4C = HP combat, pas timer coffre
 
-### Root cause des echecs
-1. **Mauvaise cible** : le code SLES (0x80026E80) gere les batch timers et le
-   combat, PAS le cycle de vie des coffres
-2. **Code overlay invisible** : la region 0x80080000+ est zero dans le SLES
-   mais remplie a runtime par le dungeon overlay charge depuis BLAZE.ALL
-3. **Region 0x009xxxxx** : precedemment consideree comme "dead data" dans
-   BLAZE.ALL, c'est en fait le code overlay des donjons
+### v3-v7 : overlay timer region 0x80080000+
+- v3 : 7 patterns (registre $s1 seul) → insuffisant
+- v4 : 35 patterns (tous registres) → v5 montre qu'il manquait des variants
+- v5 : 68 patterns (detection generique addiu-1) → trop de faux positifs (35 = spells)
+- v6 : 35 vrais patterns mais cassait les sorts (timer animation spell patche)
+- v7 : filtre par opacite (forward only), 12 patterns → manque Function B
+- Toutes ces versions : **coffres disparaissent toujours en 20s**
+
+### v8 : bidirectional opacity scan + kill NOP — SANS EFFET
+- 31 timer decrements NOPes (scan bidirectionnel pour opacite +0x28/+0x2A)
+- 11 kill instructions NOPes (sw entity+0x00 apres AND 0x7FFFFFFF)
+- Patches confirmes presents dans BIN final (2 copies LBA)
+- **Coffres disparaissent toujours en 20s**
+- **CAUSE** : les 31 patches ciblent Function A (overlay principal, 0x800999D0)
+  qui n'est JAMAIS appelee par le dispatcher (table a 0x8005A458 = stubs uniquement).
+
+### v9 : Handler [0] stub region — SANS EFFET
+- NOP `addiu $v0,$v0,-1` a BLAZE 0x00934CC8 (RAM 0x8006E420)
+- Handler [0] = entry [0] dans la table dispatcher (0x8005A458)
+- Seul handler de la table avec un decrement halfword timer a +0x10
+- **Coffres disparaissent toujours**
+- **CAUSE probable** : Handler [0] n'est pas le handler utilise par les coffres,
+  OU le timer est decremente par un autre mecanisme (Giant Function, EXE, etc.)
+
+---
+
+## Verification build pipeline (2026-02-10)
+
+### Ordre de build confirme correct
+1. BLAZE.ALL clean copie vers output/ (step 1)
+2. Patches prix/items/stats/formations (steps 2-6b)
+3. **Loot timer patch** applique sur output/BLAZE.ALL (step 7)
+4. Patches spells/AI/traps (steps 7b-7e)
+5. BIN clean copie vers output/ (step 8)
+6. BLAZE.ALL patche injecte dans BIN (step 9, 2 emplacements LBA)
+
+### Patches confirmes dans les fichiers finaux
+```
+BLAZE.ALL 0x0096047C (Function A timer) : 0x00000000 = NOP confirmed
+BLAZE.ALL 0x009604E8 (Function A kill)  : 0x00000000 = NOP confirmed
+BLAZE.ALL 0x00960238 (Function B timer) : 0x00000000 = NOP confirmed
+BIN LBA 163167 copy : NOP confirmed
+BIN LBA 185765 copy : NOP confirmed
+```
+
+---
+
+## Entity struct (champs confirmes)
+
+```
++0x00 : flags word
+         bit 23 (0x00800000) = overlay-managed entity
+         bit 30 (0x40000000) = dead/inactive flag
+         bit 31 (0x80000000) = alive (Function A kill = clear bit 31)
++0x04 : type byte (0x1D = coffre visual)
++0x0A : sub-state byte
++0x10 : TIMER halfword (Handler[0]: countdown 1000→0, confirme par savestate)
++0x12 : STATE halfword (=1 pendant countdown actif)
++0x14 : sous-champ (Function #4: set 0x2000, debris: parent ref count)
++0x28 : opacity word (2 halfwords packed)
++0x2A : opacity channel 2
++0x2C : opacity channel 3
++0x2E : rotation/offset param
++0x38 : color word (R/G/B packed, Function #4 kill quand == 0)
++0x40 : data flags word (entity + 0x100 offset)
++0x4C : HP halfword (combat)
++0x4E : HP2 halfword (combat)
++0x78 : config data pointer (vers region overlay)
++0x80..0xDF : 48 halfword timers (boucle SLES)
++0xE0 : counter halfword
++0xE2 : counter2 halfword
++0x2B0+ : handler type slots (5 bytes, utilises par dispatcher 0x8006E044)
+```
 
 ---
 
@@ -203,19 +529,14 @@ peut etre traite par n'importe quel handler (confirme : $s1 seul ne suffit pas).
 - Jeu : Blaze & Blade: Eternal Quest (Europe) PAL
 - SLES_008.45 : 843,776 bytes, load_addr=0x80010000, code_size=0x000CD800
 - BLAZE.ALL : 46,206,976 bytes
+- Region NOP SLES : 0x80056F64-0x800BD800 (420 KB, remplie a runtime)
 - Framerate : 50fps (PAL)
 - Timer original : ~1000 frames = 20s
-- Timer patche : infini (NOP decrement)
-- Entity struct (overlay fields) :
-  - +0x00 : flags (bit 14 = kill)
-  - +0x10 : state (1=spawn, 2=alive, 3=despawn)
-  - +0x14 : countdown timer (halfword, unsigned)
-  - +0x28 : appearance/opacity (halfword)
-  - +0x2A : appearance2 (halfword)
+- Timer patche : infini (NOP decrement) mais **SANS EFFET sur le despawn reel**
 
 ## Scripts
 
-- `patch_loot_timer.py` : patcheur v3 (patche BLAZE.ALL, step 7 du build)
+- `patch_loot_timer.py` : patcheur v8 (bidirectional opacity scan, BLAZE.ALL step 7)
 - `check_overlay_vs_sles.py` : comparaison RAM overlay vs SLES file
 - `find_overlay_in_blazeall.py` : localisation du code overlay dans BLAZE.ALL
 - `survey_countdown_pattern.py` : inventaire de tous les patterns countdown

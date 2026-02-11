@@ -3,12 +3,18 @@
         "Overlay bitfield patches - controls which offensive spells monsters HAVE.",
         "Applied to output/BLAZE.ALL overlay code before BIN injection.",
         "",
-        "Each entry = one zone. Affects ALL floors and ALL monster types in that zone.",
-        "Only change enabled and bitfield_value. The offsets are internal MIPS",
-        "addresses found by reverse engineering - do NOT modify them.",
+        "Two modes:",
+        "  zone_wide:   All monsters get the same bitfield (original approach).",
+        "  per_monster:  Each monster type gets its own bitfield via table lookup.",
         "",
-        "This is the INIT value. The level-up simulation may add more spells on top",
-        "based on monster level. Cannot give different spells to different monster types.",
+        "For per_monster mode:",
+        "  monsters: { name: hex_bitfield } for each monster type in the zone.",
+        "  default_bitfield: used for unknown identity values (safety fallback).",
+        "  identity_offset: byte offset in entity struct for monster type ID.",
+        "  identity_map: { name: integer } maps monster name to identity value.",
+        "  min_identity: lowest identity value (for compact 3-entry table indexing).",
+        "",
+        "This is the DEFINITIVE value. The sentinel trick skips the level-up simulation.",
         "",
         "Bitfield quick reference (see Data/spells/MONSTER_SPELLS.md for full table):",
         "  0x00000001 = FireBullet only (vanilla)",
@@ -24,19 +30,37 @@
         "patches": [
             {
                 "zone": "Cavern of Death",
-                "enabled": true,
-                "bitfield_value": "0x000003FF",
-                "_bitfield_doc": "bits 0-9 = Tier 1+2 (10 offensive spells)",
+                "enabled": false,
+                "mode": "per_monster",
+                "enabled_NOTE": "DISABLED — overlay offsets are WRONG for Cavern (see MONSTER_SPELL_RESEARCH.md)",
+                "monsters": {
+                    "Lv20.Goblin": "0x03FFFFFF",
+                    "Goblin-Shaman": "0x03FFFFFF",
+                    "Giant-Bat": "0x03FFFFFF"
+                },
+                "default_bitfield": "0x03FFFFFF",
+                "_monsters_doc": {
+                    "Lv20.Goblin": "DIAGNOSTIC: all tier 1-5 spells",
+                    "Goblin-Shaman": "DIAGNOSTIC: all tier 1-5 spells",
+                    "Giant-Bat": "DIAGNOSTIC: all tier 1-5 spells"
+                },
                 "_internal_do_not_modify": {
-                    "type": "verbose",
-                    "byte0_ori": "0x0098A69C",
-                    "byte0_sb": "0x0098A6A0",
-                    "byte1_nop": "0x0098A6AC",
-                    "byte1_sb": "0x0098A6B0",
-                    "byte2_nop": "0x0098A6BC",
-                    "byte2_sb": "0x0098A6C0",
-                    "byte3_nop": "0x0098A6CC",
-                    "byte3_sb": "0x0098A6D0"
+                    "type": "per_monster",
+                    "code_start": "0x0098A69C",
+                    "identity_offset": "0x10",
+                    "identity_map": {
+                        "Lv20.Goblin": 2,
+                        "Goblin-Shaman": 3,
+                        "Giant-Bat": 4
+                    },
+                    "min_identity": 2,
+                    "combat_init_sites": [
+                        {
+                            "code_start": "0x0092BF74",
+                            "_note": "Combat init: resets entity+0x160 at battle start. 13 slots (ori + 12 sb for slots 0-2). Entity base = $s5."
+                        }
+                    ],
+                    "_identity_offset_note": "Entity struct offset for stat_b (monster type ID). If monsters behave wrong, try 0x12 instead."
                 }
             }
         ]

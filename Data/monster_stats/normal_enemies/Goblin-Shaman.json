@@ -10,7 +10,7 @@
     "_stat2_comment": "[Défaut: 3] Inconnu (mais corrélé avec le niveau du monstre)",
     "hp": 48,
     "_hp_comment": "[Défaut: 33] Points de vie du monstre",
-    "stat4_magic": 91,
+    "stat4_magic": 291,
     "_stat4_magic_comment": "[Défaut: 70] Puissance magique / Mana - élevé pour les mages et boss",
     "stat5_randomness": 17,
     "_stat5_randomness_comment": "[Défaut: 17] Variance des dégâts - ajoute de l'aléatoire aux dégâts infligés et reçus",
