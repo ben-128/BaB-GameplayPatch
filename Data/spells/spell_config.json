@@ -28,7 +28,7 @@
                 "fields": {
                     "damage": 10,
                     "mp_cost": 2,
-                    "scaling_divisor": 3
+                    "scaling_divisor": 1
                 },
                 "_base": {
                     "damage": 10,
@@ -49,7 +49,7 @@
                     "mp_cost": 4,
                     "element": 5,
                     "cast_time": 4,
-                    "scaling_divisor": 3
+                    "scaling_divisor": 1
                 },
                 "_base": {
                     "damage": 8,
@@ -70,7 +70,7 @@
                     "mp_cost": 3,
                     "element": 3,
                     "cast_time": 4,
-                    "scaling_divisor": 4
+                    "scaling_divisor": 2
                 },
                 "_base": {
                     "damage": 6,
@@ -91,7 +91,7 @@
                     "mp_cost": 6,
                     "element": 4,
                     "cast_time": 4,
-                    "scaling_divisor": 3
+                    "scaling_divisor": 1
                 },
                 "_base": {
                     "damage": 11,
@@ -133,7 +133,7 @@
                     "mp_cost": 8,
                     "element": 6,
                     "cast_time": 8,
-                    "scaling_divisor": 4
+                    "scaling_divisor": 2
                 },
                 "_base": {
                     "damage": 8,
@@ -154,7 +154,7 @@
                     "mp_cost": 10,
                     "element": 7,
                     "cast_time": 8,
-                    "scaling_divisor": 3
+                    "scaling_divisor": 1
                 },
                 "_base": {
                     "damage": 16,
@@ -175,7 +175,7 @@
                     "mp_cost": 8,
                     "element": 0,
                     "cast_time": 4,
-                    "scaling_divisor": 2
+                    "scaling_divisor": 1
                 },
                 "_base": {
                     "damage": 24,
@@ -196,7 +196,7 @@
                     "mp_cost": 12,
                     "element": 0,
                     "cast_time": 8,
-                    "scaling_divisor": 3
+                    "scaling_divisor": 1
                 },
                 "_base": {
                     "damage": 20,
@@ -238,7 +238,7 @@
                     "mp_cost": 16,
                     "element": 2,
                     "cast_time": 20,
-                    "scaling_divisor": 2
+                    "scaling_divisor": 1
                 },
                 "_base": {
                     "damage": 30,
@@ -259,7 +259,7 @@
                     "mp_cost": 16,
                     "element": 5,
                     "cast_time": 20,
-                    "scaling_divisor": 2
+                    "scaling_divisor": 1
                 },
                 "_base": {
                     "damage": 30,
@@ -280,7 +280,7 @@
                     "mp_cost": 16,
                     "element": 3,
                     "cast_time": 32,
-                    "scaling_divisor": 4
+                    "scaling_divisor": 2
                 },
                 "_base": {
                     "damage": 16,
@@ -301,7 +301,7 @@
                     "mp_cost": 20,
                     "element": 4,
                     "cast_time": 40,
-                    "scaling_divisor": 4
+                    "scaling_divisor": 2
                 },
                 "_base": {
                     "damage": 4,
@@ -343,7 +343,7 @@
                     "mp_cost": 24,
                     "element": 6,
                     "cast_time": 60,
-                    "scaling_divisor": 3
+                    "scaling_divisor": 2
                 },
                 "_base": {
                     "damage": 15,
@@ -364,7 +364,7 @@
                     "mp_cost": 40,
                     "element": 6,
                     "cast_time": 60,
-                    "scaling_divisor": 4
+                    "scaling_divisor": 2
                 },
                 "_base": {
                     "damage": 8,
@@ -490,7 +490,7 @@
                     "mp_cost": 30,
                     "element": 3,
                     "cast_time": 60,
-                    "scaling_divisor": 3
+                    "scaling_divisor": 2
                 },
                 "_base": {
                     "damage": 8,
@@ -511,7 +511,7 @@
                     "mp_cost": 45,
                     "element": 4,
                     "cast_time": 60,
-                    "scaling_divisor": 2
+                    "scaling_divisor": 1
                 },
                 "_base": {
                     "damage": 8,
@@ -531,7 +531,7 @@
                     "damage": 3,
                     "mp_cost": 60,
                     "element": 9,
-                    "cast_time": 60,
+                    "cast_time": 45,
                     "scaling_divisor": 1
                 },
                 "_base": {
@@ -574,7 +574,7 @@
                     "mp_cost": 96,
                     "element": 2,
                     "cast_time": 132,
-                    "scaling_divisor": 3
+                    "scaling_divisor": 2
                 },
                 "_base": {
                     "damage": 11,
@@ -616,7 +616,7 @@
                     "mp_cost": 100,
                     "element": 6,
                     "cast_time": 120,
-                    "scaling_divisor": 3
+                    "scaling_divisor": 2
                 },
                 "_base": {
                     "damage": 10,
@@ -636,13 +636,15 @@
                     "damage": 5,
                     "mp_cost": 0,
                     "element": 8,
-                    "cast_time": 20
+                    "cast_time": 20,
+                    "scaling_divisor": 1
                 },
                 "_base": {
                     "damage": 5,
                     "mp_cost": 0,
                     "element": 8,
-                    "cast_time": 20
+                    "cast_time": 20,
+                    "scaling_divisor": 1
                 }
             },
             {
@@ -655,13 +657,15 @@
                     "damage": 26,
                     "mp_cost": 12,
                     "element": 8,
-                    "cast_time": 12
+                    "cast_time": 12,
+                    "scaling_divisor": 3
                 },
                 "_base": {
                     "damage": 26,
                     "mp_cost": 12,
                     "element": 8,
-                    "cast_time": 12
+                    "cast_time": 12,
+                    "scaling_divisor": 3
                 }
             },
             {
@@ -674,13 +678,15 @@
                     "damage": 0,
                     "mp_cost": 8,
                     "element": 8,
-                    "cast_time": 8
+                    "cast_time": 8,
+                    "scaling_divisor": 3
                 },
                 "_base": {
                     "damage": 0,
                     "mp_cost": 8,
                     "element": 8,
-                    "cast_time": 8
+                    "cast_time": 8,
+                    "scaling_divisor": 3
                 }
             },
             {
@@ -693,13 +699,15 @@
                     "damage": 0,
                     "mp_cost": 8,
                     "element": 8,
-                    "cast_time": 8
+                    "cast_time": 8,
+                    "scaling_divisor": 3
                 },
                 "_base": {
                     "damage": 0,
                     "mp_cost": 8,
                     "element": 8,
-                    "cast_time": 8
+                    "cast_time": 8,
+                    "scaling_divisor": 3
                 }
             },
             {
@@ -712,13 +720,15 @@
                     "damage": 0,
                     "mp_cost": 2,
                     "element": 0,
-                    "cast_time": 8
+                    "cast_time": 8,
+                    "scaling_divisor": 1
                 },
                 "_base": {
                     "damage": 0,
                     "mp_cost": 2,
                     "element": 0,
-                    "cast_time": 8
+                    "cast_time": 8,
+                    "scaling_divisor": 1
                 }
             },
             {
@@ -731,13 +741,15 @@
                     "damage": 160,
                     "mp_cost": 42,
                     "element": 8,
-                    "cast_time": 32
+                    "cast_time": 32,
+                    "scaling_divisor": 3
                 },
                 "_base": {
                     "damage": 160,
                     "mp_cost": 42,
                     "element": 8,
-                    "cast_time": 32
+                    "cast_time": 32,
+                    "scaling_divisor": 3
                 }
             },
             {
@@ -750,13 +762,15 @@
                     "damage": 0,
                     "mp_cost": 2,
                     "element": 0,
-                    "cast_time": 16
+                    "cast_time": 16,
+                    "scaling_divisor": 1
                 },
                 "_base": {
                     "damage": 0,
                     "mp_cost": 2,
                     "element": 0,
-                    "cast_time": 16
+                    "cast_time": 16,
+                    "scaling_divisor": 1
                 }
             },
             {
@@ -769,13 +783,15 @@
                     "damage": 0,
                     "mp_cost": 16,
                     "element": 8,
-                    "cast_time": 16
+                    "cast_time": 16,
+                    "scaling_divisor": 3
                 },
                 "_base": {
                     "damage": 0,
                     "mp_cost": 16,
                     "element": 8,
-                    "cast_time": 16
+                    "cast_time": 16,
+                    "scaling_divisor": 3
                 }
             },
             {
@@ -788,13 +804,15 @@
                     "damage": 0,
                     "mp_cost": 16,
                     "element": 8,
-                    "cast_time": 16
+                    "cast_time": 16,
+                    "scaling_divisor": 3
                 },
                 "_base": {
                     "damage": 0,
                     "mp_cost": 16,
                     "element": 8,
-                    "cast_time": 16
+                    "cast_time": 16,
+                    "scaling_divisor": 3
                 }
             },
             {
@@ -807,13 +825,15 @@
                     "damage": 0,
                     "mp_cost": 16,
                     "element": 8,
-                    "cast_time": 16
+                    "cast_time": 16,
+                    "scaling_divisor": 3
                 },
                 "_base": {
                     "damage": 0,
                     "mp_cost": 16,
                     "element": 8,
-                    "cast_time": 16
+                    "cast_time": 16,
+                    "scaling_divisor": 3
                 }
             },
             {
@@ -826,13 +846,15 @@
                     "damage": 0,
                     "mp_cost": 16,
                     "element": 8,
-                    "cast_time": 16
+                    "cast_time": 16,
+                    "scaling_divisor": 3
                 },
                 "_base": {
                     "damage": 0,
                     "mp_cost": 16,
                     "element": 8,
-                    "cast_time": 16
+                    "cast_time": 16,
+                    "scaling_divisor": 3
                 }
             },
             {
@@ -845,13 +867,15 @@
                     "damage": 200,
                     "mp_cost": 40,
                     "element": 8,
-                    "cast_time": 36
+                    "cast_time": 36,
+                    "scaling_divisor": 2
                 },
                 "_base": {
                     "damage": 200,
                     "mp_cost": 40,
                     "element": 8,
-                    "cast_time": 36
+                    "cast_time": 36,
+                    "scaling_divisor": 2
                 }
             },
             {
@@ -864,13 +888,15 @@
                     "damage": 0,
                     "mp_cost": 22,
                     "element": 8,
-                    "cast_time": 10
+                    "cast_time": 10,
+                    "scaling_divisor": 2
                 },
                 "_base": {
                     "damage": 0,
                     "mp_cost": 22,
                     "element": 8,
-                    "cast_time": 20
+                    "cast_time": 20,
+                    "scaling_divisor": 2
                 }
             },
             {
@@ -883,13 +909,15 @@
                     "damage": 0,
                     "mp_cost": 22,
                     "element": 8,
-                    "cast_time": 10
+                    "cast_time": 10,
+                    "scaling_divisor": 2
                 },
                 "_base": {
                     "damage": 0,
                     "mp_cost": 22,
                     "element": 8,
-                    "cast_time": 20
+                    "cast_time": 20,
+                    "scaling_divisor": 2
                 }
             },
             {
@@ -902,13 +930,15 @@
                     "damage": 0,
                     "mp_cost": 26,
                     "element": 8,
-                    "cast_time": 40
+                    "cast_time": 40,
+                    "scaling_divisor": 2
                 },
                 "_base": {
                     "damage": 0,
                     "mp_cost": 26,
                     "element": 8,
-                    "cast_time": 40
+                    "cast_time": 40,
+                    "scaling_divisor": 2
                 }
             },
             {
@@ -921,13 +951,15 @@
                     "damage": 30,
                     "mp_cost": 10,
                     "element": 8,
-                    "cast_time": 60
+                    "cast_time": 60,
+                    "scaling_divisor": 2
                 },
                 "_base": {
                     "damage": 30,
                     "mp_cost": 10,
                     "element": 8,
-                    "cast_time": 60
+                    "cast_time": 60,
+                    "scaling_divisor": 2
                 }
             },
             {
@@ -940,13 +972,15 @@
                     "damage": 70,
                     "mp_cost": 60,
                     "element": 8,
-                    "cast_time": 12
+                    "cast_time": 12,
+                    "scaling_divisor": 1
                 },
                 "_base": {
                     "damage": 70,
                     "mp_cost": 60,
                     "element": 8,
-                    "cast_time": 12
+                    "cast_time": 12,
+                    "scaling_divisor": 1
                 }
             },
             {
@@ -959,13 +993,15 @@
                     "damage": 0,
                     "mp_cost": 40,
                     "element": 8,
-                    "cast_time": 24
+                    "cast_time": 24,
+                    "scaling_divisor": 2
                 },
                 "_base": {
                     "damage": 0,
                     "mp_cost": 40,
                     "element": 8,
-                    "cast_time": 36
+                    "cast_time": 36,
+                    "scaling_divisor": 2
                 }
             },
             {
@@ -978,13 +1014,15 @@
                     "damage": 0,
                     "mp_cost": 40,
                     "element": 8,
-                    "cast_time": 24
+                    "cast_time": 24,
+                    "scaling_divisor": 2
                 },
                 "_base": {
                     "damage": 0,
                     "mp_cost": 40,
                     "element": 8,
-                    "cast_time": 36
+                    "cast_time": 36,
+                    "scaling_divisor": 2
                 }
             },
             {
@@ -997,13 +1035,15 @@
                     "damage": 2,
                     "mp_cost": 86,
                     "element": 8,
-                    "cast_time": 60
+                    "cast_time": 60,
+                    "scaling_divisor": 1
                 },
                 "_base": {
                     "damage": 4,
                     "mp_cost": 86,
                     "element": 8,
-                    "cast_time": 60
+                    "cast_time": 60,
+                    "scaling_divisor": 1
                 }
             },
             {
@@ -1016,13 +1056,15 @@
                     "damage": 0,
                     "mp_cost": 62,
                     "element": 8,
-                    "cast_time": 60
+                    "cast_time": 60,
+                    "scaling_divisor": 1
                 },
                 "_base": {
                     "damage": 0,
                     "mp_cost": 62,
                     "element": 8,
-                    "cast_time": 60
+                    "cast_time": 60,
+                    "scaling_divisor": 1
                 }
             },
             {
@@ -1035,13 +1077,15 @@
                     "damage": 0,
                     "mp_cost": 39,
                     "element": 8,
-                    "cast_time": 60
+                    "cast_time": 60,
+                    "scaling_divisor": 1
                 },
                 "_base": {
                     "damage": 0,
                     "mp_cost": 39,
                     "element": 8,
-                    "cast_time": 60
+                    "cast_time": 60,
+                    "scaling_divisor": 1
                 }
             },
             {
@@ -1054,13 +1098,15 @@
                     "damage": 0,
                     "mp_cost": 100,
                     "element": 8,
-                    "cast_time": 40
+                    "cast_time": 40,
+                    "scaling_divisor": 1
                 },
                 "_base": {
                     "damage": 0,
                     "mp_cost": 100,
                     "element": 8,
-                    "cast_time": 40
+                    "cast_time": 40,
+                    "scaling_divisor": 1
                 }
             },
             {
@@ -1073,13 +1119,15 @@
                     "damage": 5,
                     "mp_cost": 108,
                     "element": 8,
-                    "cast_time": 120
+                    "cast_time": 120,
+                    "scaling_divisor": 3
                 },
                 "_base": {
                     "damage": 5,
                     "mp_cost": 108,
                     "element": 8,
-                    "cast_time": 120
+                    "cast_time": 120,
+                    "scaling_divisor": 3
                 }
             },
             {
@@ -1092,13 +1140,15 @@
                     "damage": 0,
                     "mp_cost": 2,
                     "element": 0,
-                    "cast_time": 8
+                    "cast_time": 8,
+                    "scaling_divisor": 1
                 },
                 "_base": {
                     "damage": 0,
                     "mp_cost": 2,
                     "element": 0,
-                    "cast_time": 8
+                    "cast_time": 8,
+                    "scaling_divisor": 1
                 }
             },
             {
@@ -1111,13 +1161,15 @@
                     "damage": 0,
                     "mp_cost": 2,
                     "element": 0,
-                    "cast_time": 8
+                    "cast_time": 8,
+                    "scaling_divisor": 1
                 },
                 "_base": {
                     "damage": 0,
                     "mp_cost": 2,
                     "element": 0,
-                    "cast_time": 8
+                    "cast_time": 8,
+                    "scaling_divisor": 1
                 }
             },
             {
@@ -1130,13 +1182,15 @@
                     "damage": 0,
                     "mp_cost": 2,
                     "element": 0,
-                    "cast_time": 8
+                    "cast_time": 8,
+                    "scaling_divisor": 1
                 },
                 "_base": {
                     "damage": 0,
                     "mp_cost": 2,
                     "element": 0,
-                    "cast_time": 8
+                    "cast_time": 8,
+                    "scaling_divisor": 1
                 }
             },
             {
@@ -1149,13 +1203,15 @@
                     "damage": 5,
                     "mp_cost": 16,
                     "element": 2,
-                    "cast_time": 24
+                    "cast_time": 24,
+                    "scaling_divisor": 1
                 },
                 "_base": {
                     "damage": 5,
                     "mp_cost": 16,
                     "element": 2,
-                    "cast_time": 24
+                    "cast_time": 24,
+                    "scaling_divisor": 1
                 }
             },
             {
@@ -1168,13 +1224,15 @@
                     "damage": 5,
                     "mp_cost": 16,
                     "element": 4,
-                    "cast_time": 24
+                    "cast_time": 24,
+                    "scaling_divisor": 1
                 },
                 "_base": {
                     "damage": 5,
                     "mp_cost": 16,
                     "element": 4,
-                    "cast_time": 24
+                    "cast_time": 24,
+                    "scaling_divisor": 1
                 }
             },
             {
@@ -1187,13 +1245,15 @@
                     "damage": 5,
                     "mp_cost": 16,
                     "element": 5,
-                    "cast_time": 24
+                    "cast_time": 24,
+                    "scaling_divisor": 1
                 },
                 "_base": {
                     "damage": 5,
                     "mp_cost": 16,
                     "element": 5,
-                    "cast_time": 24
+                    "cast_time": 24,
+                    "scaling_divisor": 1
                 }
             },
             {
@@ -1206,13 +1266,15 @@
                     "damage": 5,
                     "mp_cost": 16,
                     "element": 3,
-                    "cast_time": 24
+                    "cast_time": 24,
+                    "scaling_divisor": 1
                 },
                 "_base": {
                     "damage": 5,
                     "mp_cost": 16,
                     "element": 3,
-                    "cast_time": 24
+                    "cast_time": 24,
+                    "scaling_divisor": 1
                 }
             },
             {
@@ -1225,13 +1287,15 @@
                     "damage": 0,
                     "mp_cost": 8,
                     "element": 0,
-                    "cast_time": 8
+                    "cast_time": 8,
+                    "scaling_divisor": 1
                 },
                 "_base": {
                     "damage": 0,
                     "mp_cost": 8,
                     "element": 0,
-                    "cast_time": 16
+                    "cast_time": 16,
+                    "scaling_divisor": 1
                 }
             },
             {
@@ -1244,13 +1308,15 @@
                     "damage": 0,
                     "mp_cost": 8,
                     "element": 0,
-                    "cast_time": 8
+                    "cast_time": 8,
+                    "scaling_divisor": 1
                 },
                 "_base": {
                     "damage": 0,
                     "mp_cost": 8,
                     "element": 0,
-                    "cast_time": 16
+                    "cast_time": 16,
+                    "scaling_divisor": 1
                 }
             },
             {
@@ -1263,13 +1329,15 @@
                     "damage": 0,
                     "mp_cost": 12,
                     "element": 0,
-                    "cast_time": 16
+                    "cast_time": 16,
+                    "scaling_divisor": 1
                 },
                 "_base": {
                     "damage": 0,
                     "mp_cost": 12,
                     "element": 0,
-                    "cast_time": 24
+                    "cast_time": 24,
+                    "scaling_divisor": 1
                 }
             },
             {
@@ -1282,13 +1350,15 @@
                     "damage": 0,
                     "mp_cost": 20,
                     "element": 0,
-                    "cast_time": 16
+                    "cast_time": 16,
+                    "scaling_divisor": 1
                 },
                 "_base": {
                     "damage": 0,
                     "mp_cost": 30,
                     "element": 0,
-                    "cast_time": 24
+                    "cast_time": 24,
+                    "scaling_divisor": 1
                 }
             },
             {
@@ -1301,13 +1371,15 @@
                     "damage": 0,
                     "mp_cost": 12,
                     "element": 0,
-                    "cast_time": 16
+                    "cast_time": 16,
+                    "scaling_divisor": 1
                 },
                 "_base": {
                     "damage": 0,
                     "mp_cost": 12,
                     "element": 0,
-                    "cast_time": 24
+                    "cast_time": 24,
+                    "scaling_divisor": 1
                 }
             },
             {
@@ -1320,13 +1392,15 @@
                     "damage": 0,
                     "mp_cost": 40,
                     "element": 0,
-                    "cast_time": 20
+                    "cast_time": 20,
+                    "scaling_divisor": 1
                 },
                 "_base": {
                     "damage": 0,
                     "mp_cost": 40,
                     "element": 0,
-                    "cast_time": 40
+                    "cast_time": 40,
+                    "scaling_divisor": 1
                 }
             },
             {
@@ -1339,13 +1413,15 @@
                     "damage": 0,
                     "mp_cost": 40,
                     "element": 0,
-                    "cast_time": 20
+                    "cast_time": 20,
+                    "scaling_divisor": 1
                 },
                 "_base": {
                     "damage": 0,
                     "mp_cost": 40,
                     "element": 0,
-                    "cast_time": 40
+                    "cast_time": 40,
+                    "scaling_divisor": 1
                 }
             },
             {
@@ -1358,13 +1434,15 @@
                     "damage": 0,
                     "mp_cost": 40,
                     "element": 0,
-                    "cast_time": 20
+                    "cast_time": 20,
+                    "scaling_divisor": 1
                 },
                 "_base": {
                     "damage": 0,
                     "mp_cost": 60,
                     "element": 0,
-                    "cast_time": 60
+                    "cast_time": 60,
+                    "scaling_divisor": 1
                 }
             },
             {
@@ -1377,13 +1455,15 @@
                     "damage": 0,
                     "mp_cost": 50,
                     "element": 0,
-                    "cast_time": 20
+                    "cast_time": 20,
+                    "scaling_divisor": 1
                 },
                 "_base": {
                     "damage": 0,
                     "mp_cost": 80,
                     "element": 0,
-                    "cast_time": 20
+                    "cast_time": 20,
+                    "scaling_divisor": 1
                 }
             },
             {
@@ -1396,13 +1476,15 @@
                     "damage": 20,
                     "mp_cost": 10,
                     "element": 3,
-                    "cast_time": 30
+                    "cast_time": 30,
+                    "scaling_divisor": 3
                 },
                 "_base": {
                     "damage": 5,
                     "mp_cost": 50,
                     "element": 3,
-                    "cast_time": 70
+                    "cast_time": 70,
+                    "scaling_divisor": 3
                 }
             },
             {
@@ -1415,13 +1497,15 @@
                     "damage": 20,
                     "mp_cost": 10,
                     "element": 2,
-                    "cast_time": 30
+                    "cast_time": 30,
+                    "scaling_divisor": 3
                 },
                 "_base": {
                     "damage": 5,
                     "mp_cost": 50,
                     "element": 2,
-                    "cast_time": 70
+                    "cast_time": 70,
+                    "scaling_divisor": 3
                 }
             },
             {
@@ -1434,13 +1518,15 @@
                     "damage": 20,
                     "mp_cost": 10,
                     "element": 5,
-                    "cast_time": 30
+                    "cast_time": 30,
+                    "scaling_divisor": 3
                 },
                 "_base": {
                     "damage": 5,
                     "mp_cost": 50,
                     "element": 5,
-                    "cast_time": 70
+                    "cast_time": 70,
+                    "scaling_divisor": 3
                 }
             },
             {
@@ -1453,13 +1539,15 @@
                     "damage": 20,
                     "mp_cost": 10,
                     "element": 4,
-                    "cast_time": 30
+                    "cast_time": 30,
+                    "scaling_divisor": 3
                 },
                 "_base": {
                     "damage": 5,
                     "mp_cost": 50,
                     "element": 4,
-                    "cast_time": 70
+                    "cast_time": 70,
+                    "scaling_divisor": 3
                 }
             },
             {
