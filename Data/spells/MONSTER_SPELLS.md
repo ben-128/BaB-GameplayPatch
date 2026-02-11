@@ -51,16 +51,23 @@ Modify stats (damage, MP cost, element). Works for **both** offensive spells AND
         "enabled": true,
         "overrides": [
             {
-                "_comment": "Make Fire Bullet stronger (affects ALL casters)",
+                "_comment": "Make Fire Bullet stronger and scale better with INT",
                 "enabled": true,
                 "list": 0, "index": 0, "name": "FireBullet",
-                "fields": { "damage": 20, "mp_cost": 2 }
+                "fields": {
+                    "damage": 20,           // flat bonus (vanilla: 10)
+                    "mp_cost": 2,           // keep vanilla
+                    "scaling_divisor": 1    // full MATK (vanilla: 3 = MATK/3)
+                }
             },
             {
-                "_comment": "Make Fire Breath do more damage",
+                "_comment": "Make Fire Breath do more damage (monster ability)",
                 "enabled": true,
                 "list": 7, "index": 5, "name": "FireBreath",
-                "fields": { "damage": 40 }
+                "fields": {
+                    "damage": 40,           // flat bonus (vanilla: 20)
+                    "scaling_divisor": 1    // already full MATK (vanilla)
+                }
             }
         ]
     }
@@ -71,11 +78,12 @@ Modify stats (damage, MP cost, element). Works for **both** offensive spells AND
 
 | Field | Offset | Description |
 |-------|--------|-------------|
-| `damage` | +0x18 | Damage value (u8, 0-255) |
+| `damage` | +0x18 | Flat damage bonus (u8, 0-255) - added to final damage after stat scaling |
 | `mp_cost` | +0x13 | MP cost (u8) |
 | `element` | +0x16 | 0=none, 1=thunder, 2=fire, 3=water, 4=earth, 5=wind, 6=light, 7=dark, 8=holy, 9=evil |
+| `scaling_divisor` | +0x1E | **Stat scaling** (u8) - divides caster MATK. 1=full MATK, 2=half, 3=third, 4=quarter. Lower = more powerful for high-INT casters |
 | `target_type` | +0x1C | 1=single target, other=area/self |
-| `cast_prob` | +0x1D | Cast probability (higher = more likely) |
+| `cast_prob` | +0x1D | Level required to learn (0-99, 0=special unlock) |
 
 **`list` + `index`** identify which spell/ability. `name` is a safety check (patcher warns on mismatch).
 
@@ -296,11 +304,68 @@ Both run BEFORE BIN injection (step 8-9).
 - 55 combat action handlers in EXE at 0x8003C1B0 execute the abilities
 - Assignment mechanism not yet decoded (in overlay, not EXE)
 
+---
+
+## Spell Damage Formula (DECODED 2026-02-11)
+
+**Location**: EXE function `0x80025E90` (~1.4KB, called from overlay via `jalr`)
+
+### Complete Formula
+
+```
+caster_power = caster_MATK / spell[+0x1E]    ← stat scaling divisor
+caster_power += random(0..caster_LUK) / 4    ← luck variance
+
+target_def   = target_MDEF
+target_def  += random(0..target_LUK) / 4
+if (elemental_weakness):                      ← determined by spell[+0x16]
+    target_def = target_def / 2               ← weakness doubles stat damage
+
+raw_damage   = caster_power - target_def
+raw_damage  += spell[+0x18]                   ← flat damage bonus added
+raw_damage  -= target_MDEF / 32               ← final MDEF reduction
+if (raw_damage <= 0): raw_damage = 1          ← minimum damage = 1
+```
+
+### Key Entity Stats
+
+| Offset | Field | Role |
+|--------|-------|------|
+| +0x38 | MATK (Magic Attack) | Divided by `spell[+0x1E]`, main damage source |
+| +0x3A | MDEF (Magic Defense) | Subtracted from damage twice (full + /32) |
+| +0x2C | LUK (Luck) | Random variance 0..LUK/4 for both caster and target |
+
+### How Spell Fields Affect Damage
+
+| Field | Offset | Effect |
+|-------|--------|--------|
+| **`scaling_divisor`** | +0x1E | **Divides caster MATK**. 1=full damage, 2=half, 3=third, 4=quarter. Lower = more powerful for high-INT casters. Monster spells all use 1 (full scaling). |
+| **`damage`** | +0x18 | **Flat bonus** added after stat calculation. Helps low-MATK casters, less impactful for high-MATK. |
+| **`element`** | +0x16 | If target has weakness, halves their MDEF (effectively doubles stat-based damage). |
+
+### Vanilla Scaling Divisor Values (list 0 = Offensive)
+
+| Divisor | Spells | Strategy |
+|---------|--------|----------|
+| **1** (full MATK) | Explosion, Meteor Smash, Thunderbolt, Death Spell, Petrifaction, Extend Spell, Teleport | Strongest stat scaling, best for high-level mages |
+| **2** (MATK/2) | Blaze, Lightningbolt, Dark Breath, Smash, Striking, Enchant Weapon, Earth Javelin | Medium scaling |
+| **3** (MATK/3) | Fire Bullet, Spark Bullet, Stone Bullet, Magic Missile, Dark Wave, Chaos Flare, Fusion, Magic Ray | Weaker scaling, more balanced |
+| **4** (MATK/4) | Water Bullet, Blizzard, Poison Cloud, Lightbolt, Shining, Freeze Beast | Weakest scaling, relies more on flat damage |
+
+**All monster abilities (list 7)** use divisor = **1** (full MATK scaling).
+
+### Modding Tips
+
+1. **High caster MATK** → Lower `scaling_divisor` (1-2) for massive damage
+2. **Low caster MATK** → Higher `damage` (flat bonus) to compensate
+3. **Elemental builds** → Set `element` for 2x stat damage against weak targets
+4. **Balanced** → Keep divisor at 2-3, moderate flat damage
+
 ### Files
 
 | File | Purpose |
 |------|---------|
-| `Data/spells/spell_config.json` | Spell definitions (damage, MP, element, cast_time) |
+| `Data/spells/spell_config.json` | Spell definitions (damage, MP, element, scaling_divisor) |
 | `Data/spells/patch_spell_table.py` | Spell definition patcher (step 7b) |
 | `Data/spells/MONSTER_SPELLS.md` | This documentation |
 | `Data/ai_behavior/overlay_bitfield_config.json` | Overlay bitfield config (which spells monsters have) |
@@ -308,3 +373,4 @@ Both run BEFORE BIN injection (step 8-9).
 | `Data/monster_stats/scripts/add_spell_info.py` | Adds spell_info to monster JSONs |
 | `WIP/spells/MONSTER_SPELL_RESEARCH.md` | Full research notes |
 | `WIP/spells/verify_spell_table.py` | Dumps all spell table entries |
+| `WIP/spells/find_spell_damage_v*.py` | Damage formula research scripts |

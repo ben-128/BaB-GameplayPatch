@@ -40,7 +40,7 @@ FIELD_MAP = {
     "damage":      (0x18, 1),
     "target_type": (0x1C, 1),
     "cast_prob":   (0x1D, 1),
-    "param_1E":    (0x1E, 1),
+    "scaling_divisor": (0x1E, 1),  # Divides caster MATK (1=full, 2=half, 3=third, 4=quarter)
     "ingredient_count": (0x1F, 1),
 }
 
