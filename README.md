@@ -197,29 +197,9 @@ Cette analyse est fournie "as-is" a des fins de recherche et de preservation du 
 
 *Blaze & Blade: Eternal Quest (c) 1998 T&E Soft*
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Last Patch Build
 
-**Date:** 2026-02-11 00:15:20
+**Date:** 2026-02-11 01:33:36
 
 **Patches Applied:**
 - Fate Coin Shop prices adjusted

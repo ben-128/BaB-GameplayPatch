@@ -4,24 +4,61 @@
 Modifier la duree avant disparition des coffres laches par les monstres.
 Duree originale : 20 secondes (1000 frames @ 50fps PAL).
 
-## Statut : v8 - CAUSE RACINE TROUVEE (2026-02-10)
+## Statut : v10 - VRAI TIMER TROUVE (2026-02-10)
 
-**v8 patche 31 timer NOPs + 11 kill NOPs dans BLAZE.ALL** (overlay 0x80080000+).
-Les patches sont confirmes presents dans le BIN final aux 2 emplacements LBA.
-**Malgre tout, les coffres disparaissent toujours en 20s exactement.**
+### Le VRAI systeme de despawn coffre
 
-### CAUSE RACINE (confirmee par savestate)
+**Le timer coffre est dans la fonction chest_update a RAM 0x80087624** (overlay principal,
+handler index 41 dans la table d'entites monde a 0x8005A800).
 
-**Function A (RAM 0x800999D0) n'est JAMAIS appelee par le dispatcher pour les coffres.**
+Ce n'est PAS le dispatcher stubs (0x8006E044) ni Function A. C'est un **handler
+d'entite monde** appele directement par le moteur chaque frame.
 
-La table de function pointers du dispatcher a 0x8005A458 ne contient QUE des
-fonctions de la region stubs (0x8006E3AC - 0x8006EDA0). Function A est dans
-l'overlay principal (0x800999D0) et n'apparait nulle part dans cette table.
+**Timer decrement** : `addiu $v0,$v0,-1` a **RAM 0x800877F4 = BLAZE 0x0094E09C**
 
-Les 31 patches v8 ciblent tous Function A et ses copies → **code mort pour les coffres**.
+```
+chest_update (RAM 0x80087624, overlay principal Cavern F1):
+    ...
+    global_frame_counter = *(0x800A42E0)
+    if global_frame_counter % 20 == 0:      // chaque 20eme frame
+        timer = lhu entity+0x14             // load timer halfword
+        timer -= 1                          // ← v10 NOP ICI
+        sh timer, entity+0x14              // store timer
+        if timer == 0:
+            entity+0x00 |= 0x02000000      // set dead flag
+    ...
+```
 
-Le vrai timer est decremente par un **handler de la region stubs**, dispatche
-via la table a 0x8005A458. Voir section "Analyse savestate" ci-dessous.
+**Pattern a 0x800877EC (BLAZE 0x0094E094) :**
+```
+96020014  lhu $v0, 0x14($s0)      load timer
+00000000  nop
+2442FFFF  addiu $v0,$v0,-1        ← CIBLE v10
+A6020014  sh $v0, 0x14($s0)       store timer
+00021400  sll $v0,$v0,16          check zero (halfword)
+14400005  bne $v0,$zero, +0x14    skip si pas zero
+3C030200  lui $v1, 0x0200         dead flag = 0x02000000
+8E020000  lw $v0, 0x00($s0)       load entity flags
+00000000  nop
+00431025  or $v0,$v0,$v1          set dead flag
+AE020000  sw $v0, 0x00($s0)       KILL entity
+```
+
+**Overlay est per-dungeon** : offset BLAZE 0x0094E09C = Cavern F1 uniquement.
+Le patcheur v10 scanne tout BLAZE.ALL pour le pattern 16 bytes afin de couvrir tous les donjons.
+
+### Pourquoi v1-v9 ne marchaient pas
+
+| Version | Cible | Probleme |
+|---------|-------|----------|
+| v1-v8 | Function A (overlay, 0x800999D0) | Code mort : pas dans la table dispatcher |
+| v9 | Handler [0] stubs (0x8006E3AC) | **Fausse piste** : c'est l'interpreteur bytecode d'ITEMS, pas le systeme coffre |
+
+**Handler [0] a 0x8006E044** est un interpreteur de scripts bytecode pour les **items/equipement**
+(slots a 0x800F0000). Il n'a RIEN a voir avec le timer de despawn des coffres monde.
+
+Le vrai systeme coffre utilise les **entity update handlers** (table a 0x8005A800, index 41),
+qui sont des fonctions de l'overlay principal appelees chaque frame par le moteur.
 
 ---
 
@@ -469,8 +506,15 @@ A tester in-game pour evaluer les effets secondaires.
 - Handler [0] = entry [0] dans la table dispatcher (0x8005A458)
 - Seul handler de la table avec un decrement halfword timer a +0x10
 - **Coffres disparaissent toujours**
-- **CAUSE probable** : Handler [0] n'est pas le handler utilise par les coffres,
-  OU le timer est decremente par un autre mecanisme (Giant Function, EXE, etc.)
+- **CAUSE** : Handler [0] est l'interpreteur bytecode d'ITEMS (equipment slots 0x800Fxxxx),
+  PAS le systeme coffre monde. La table a 0x8005A458 gere les items, pas les entites monde.
+
+### v10 : chest_update overlay — EN TEST
+- Cible : `addiu $v0,$v0,-1` a BLAZE 0x0094E09C (RAM 0x800877F4, Cavern F1)
+- Fonction chest_update (RAM 0x80087624, entity handler index 41)
+- Timer a entity+0x14 (halfword), decremente chaque 20eme frame
+- Pattern scan pour couvrir tous les donjons (overlay per-dungeon)
+- Signature : `lhu+0x14 / nop / addiu-1 / sh+0x14` + `lui 0x0200` (dead flag)
 
 ---
 

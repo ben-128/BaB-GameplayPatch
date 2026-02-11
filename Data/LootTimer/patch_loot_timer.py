@@ -1,25 +1,30 @@
 #!/usr/bin/env python3
 """
-Patch chest despawn timer in BLAZE.ALL stub region (v9).
+Patch chest despawn timer in BLAZE.ALL overlay code (v10).
 
 v1-v8: Patched Function A in the main overlay (0x80080000+).
        All FAILED because Function A is NEVER called by the dispatcher.
-       The dispatcher's function pointer table (0x8005A458) contains ONLY
-       stub region functions (0x8006Exxx). Function A is dead code for chests.
+       Function A is dead code for chests.
 
-v9: Patches Handler [0] in the stub region — the ONLY function in the
-    dispatcher table that decrements a halfword timer.
+v9:    Patched Handler [0] in the stub region (0x8006E3AC).
+       FAILED because Handler [0] is the ITEM bytecode interpreter,
+       NOT the chest world entity system.
 
-    Handler [0] (RAM 0x8006E3AC, BLAZE 0x00934C54):
-      - Probability-gated countdown: RNG % 100 < threshold → decrement
-      - Timer at handler_data+0x10 (halfword, countdown 1000→0)
-      - When timer reaches 0 → kill entity (sb $zero, +0x00)
+v10:   Patches the REAL chest_update function in the main overlay.
+       The chest despawn timer is at entity+0x14, decremented every 20th frame
+       by the entity update handler (index 41 in table at 0x8005A800).
 
-    Target: NOP the `addiu $v0,$v0,-1` at BLAZE 0x00934CC8.
-    This freezes the timer so chests never despawn.
+       Target pattern (16 bytes):
+         96xx0014  lhu $reg, 0x14($base)    ; load timer
+         00000000  nop
+         2442FFFF  addiu $v0,$v0,-1         ; decrement ← NOP THIS
+         A6xx0014  sh $reg, 0x14($base)     ; store timer
 
-    Note: Handler [0] is generic (used by all handler_type=0 entities).
-    Side effects on other entity types need in-game testing.
+       Followed within 12 bytes by:
+         3C0x0200  lui $reg, 0x0200          ; dead flag 0x02000000
+
+       The main overlay is per-dungeon, so we scan the entire BLAZE.ALL
+       for all matching patterns to cover all dungeons.
 
 Runs at build step 7 (patches output/BLAZE.ALL before BIN injection).
 """
@@ -29,11 +34,71 @@ import sys
 from pathlib import Path
 
 NOP = 0x00000000
+ADDIU_M1 = 0x2442FFFF  # addiu $v0,$v0,-1
 
-# Handler [0] timer decrement: addiu $v0,$v0,-1 (0x2442FFFF)
-# RAM 0x8006E420, BLAZE 0x00934CC8
-TIMER_DECREMENT = 0x00934CC8
-TIMER_EXPECTED  = 0x2442FFFF  # addiu $v0,$v0,-1
+
+def find_chest_timer_patterns(data: bytes) -> list[int]:
+    """Scan BLAZE.ALL for the chest timer decrement pattern.
+
+    Pattern: lhu $reg, 0x14($base) / nop / addiu $v0,$v0,-1 / sh $reg, 0x14($base)
+    Followed within 20 bytes by: lui $reg, 0x0200 (dead flag constant).
+    """
+    matches = []
+
+    # Search for addiu $v0,$v0,-1 (0x2442FFFF) throughout the file
+    target_bytes = struct.pack('<I', ADDIU_M1)
+    pos = 0
+    while True:
+        pos = data.find(target_bytes, pos)
+        if pos == -1:
+            break
+        if pos % 4 != 0:
+            pos += 1
+            continue
+
+        # Check preceding instructions: lhu $reg, 0x14($base) at -8, nop at -4
+        if pos < 8 or pos + 8 > len(data):
+            pos += 4
+            continue
+
+        pre2 = struct.unpack_from('<I', data, pos - 8)[0]  # lhu
+        pre1 = struct.unpack_from('<I', data, pos - 4)[0]  # nop
+        post1 = struct.unpack_from('<I', data, pos + 4)[0]  # sh
+
+        # Check nop
+        if pre1 != 0x00000000:
+            pos += 4
+            continue
+
+        # Check lhu $reg, 0x14($base): opcode=100101 (0x96), offset=0x0014
+        if (pre2 >> 26) != 0x25 or (pre2 & 0xFFFF) != 0x0014:
+            pos += 4
+            continue
+
+        # Check sh $reg, 0x14($base): opcode 0x29, offset 0x0014
+        if (post1 >> 26) != 0x29 or (post1 & 0xFFFF) != 0x0014:
+            pos += 4
+            continue
+
+        # Verify dead flag constant (lui $reg, 0x0200) within 20 bytes after sh
+        found_dead_flag = False
+        for j in range(8, 28, 4):
+            if pos + j + 4 > len(data):
+                break
+            instr = struct.unpack_from('<I', data, pos + j)[0]
+            # lui $reg, 0x0200: top bits = 0x3C0x, immediate = 0x0200
+            if (instr >> 16) & 0xFFE0 == 0x3C00 and (instr & 0xFFFF) == 0x0200:
+                found_dead_flag = True
+                break
+
+        if not found_dead_flag:
+            pos += 4
+            continue
+
+        matches.append(pos)
+        pos += 4
+
+    return matches
 
 
 def main():
@@ -41,7 +106,7 @@ def main():
     project_dir = script_dir.parent.parent
     blaze_path = project_dir / 'output' / 'BLAZE.ALL'
 
-    print("Loot Timer v9: Handler [0] stub region patch")
+    print("Loot Timer v10: chest_update overlay patch (pattern scan)")
     print(f"  Target: {blaze_path}")
 
     if not blaze_path.exists():
@@ -51,50 +116,42 @@ def main():
     data = bytearray(blaze_path.read_bytes())
     print(f"  BLAZE.ALL size: {len(data):,} bytes")
 
-    if TIMER_DECREMENT + 4 > len(data):
-        print(f"[ERROR] Offset 0x{TIMER_DECREMENT:08X} out of range")
+    matches = find_chest_timer_patterns(data)
+    print(f"  Pattern matches found: {len(matches)}")
+
+    if not matches:
+        print("[ERROR] No chest timer patterns found!")
         sys.exit(1)
 
-    # Read current instruction
-    current = struct.unpack_from('<I', data, TIMER_DECREMENT)[0]
-    print(f"  0x{TIMER_DECREMENT:08X}: 0x{current:08X}", end="")
+    patched = 0
+    for offset in matches:
+        current = struct.unpack_from('<I', data, offset)[0]
+        ram_main = (offset - 0x009468A8) + 0x80080000
 
-    if current == NOP:
-        print(" (already NOPed)")
+        if current == NOP:
+            print(f"  0x{offset:08X} (RAM ~0x{ram_main:08X}): already NOPed")
+            continue
+
+        if current != ADDIU_M1:
+            print(f"  0x{offset:08X}: UNEXPECTED 0x{current:08X}, skipping")
+            continue
+
+        data[offset:offset+4] = struct.pack('<I', NOP)
+        patched += 1
+        print(f"  PATCH 0x{offset:08X} (RAM ~0x{ram_main:08X}): addiu $v0,$v0,-1 -> nop")
+
+    if patched == 0:
         print()
         print(f"{'='*60}")
-        print(f"  Timer decrement already patched (NOP)")
-        print(f"  Chest despawn timer frozen")
+        print(f"  All {len(matches)} chest timer decrements already patched")
         print(f"{'='*60}")
-        return
-
-    if current != TIMER_EXPECTED:
-        print(f" (UNEXPECTED! expected 0x{TIMER_EXPECTED:08X})")
-        print(f"[ERROR] Instruction at 0x{TIMER_DECREMENT:08X} doesn't match.")
-        print(f"        Expected: addiu $v0,$v0,-1 (0x{TIMER_EXPECTED:08X})")
-        print(f"        Got:      0x{current:08X}")
-        sys.exit(1)
-
-    print(" (addiu $v0,$v0,-1)")
-
-    # Apply NOP
-    data[TIMER_DECREMENT:TIMER_DECREMENT+4] = struct.pack('<I', NOP)
-    print(f"  PATCH 0x{TIMER_DECREMENT:08X}: addiu $v0,$v0,-1 -> nop")
-
-    # Verify
-    verify = struct.unpack_from('<I', data, TIMER_DECREMENT)[0]
-    if verify != NOP:
-        print(f"[ERROR] Verification failed: 0x{verify:08X}")
-        sys.exit(1)
-
-    blaze_path.write_bytes(data)
-
-    print()
-    print(f"{'='*60}")
-    print(f"  Handler [0] timer decrement NOPed at BLAZE 0x{TIMER_DECREMENT:08X}")
-    print(f"  (RAM 0x8006E420 = dispatcher table entry [0])")
-    print(f"  Chest despawn timer frozen")
-    print(f"{'='*60}")
+    else:
+        blaze_path.write_bytes(data)
+        print()
+        print(f"{'='*60}")
+        print(f"  Patched {patched}/{len(matches)} chest timer decrements")
+        print(f"  Chest despawn timer frozen for all dungeons")
+        print(f"{'='*60}")
 
 
 if __name__ == '__main__':
