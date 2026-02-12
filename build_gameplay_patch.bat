@@ -179,7 +179,7 @@ REM ========================================================================
 call :log "[6b/12] Patching formation templates in BLAZE.ALL..."
 call :log ""
 
-py -3 Data\formations\patch_formations.py >> "%LOGFILE%" 2>&1
+py -3 Data\formations\Scripts\patch_formations.py >> "%LOGFILE%" 2>&1
 if errorlevel 1 (
     call :log ""
     call :log "[ERROR] Formation templates patch failed!"

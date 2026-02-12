@@ -55,7 +55,7 @@ def main():
     print()
 
     # Process Cavern F1 A1 as example
-    area_dir = SCRIPT_DIR / "cavern_of_death"
+    area_dir = SCRIPT_DIR.parent / "cavern_of_death"
     vanilla_path = area_dir / "floor_1_area_1_vanilla.json"
     area_path = area_dir / "floor_1_area_1.json"
 

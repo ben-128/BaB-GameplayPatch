@@ -10,11 +10,11 @@ import json
 from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).parent
-BLAZE_PATH = SCRIPT_DIR.parent.parent / "output" / "BLAZE.ALL"
+BLAZE_PATH = SCRIPT_DIR.parent.parent.parent.parent / "output" / "BLAZE.ALL"
 
 # Areas to patch
 AREAS = [
-    SCRIPT_DIR / "cavern_of_death" / "floor_1_area_1.json",
+    SCRIPT_DIR.parent.parent / "cavern_of_death" / "floor_1_area_1.json",
 ]
 
 def patch_assignment_entries():

@@ -22,7 +22,7 @@ import struct
 from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).parent
-PROJECT_ROOT = SCRIPT_DIR.parent.parent
+PROJECT_ROOT = SCRIPT_DIR.parent.parent.parent.parent
 
 # Always read from SOURCE (unpatched) to get original values
 BLAZE_ALL = (PROJECT_ROOT / "Blaze  Blade - Eternal Quest (Europe)"
@@ -31,8 +31,8 @@ if not BLAZE_ALL.exists():
     # Fallback to output if source doesn't exist
     BLAZE_ALL = PROJECT_ROOT / "output" / "BLAZE.ALL"
 
-FORMATIONS_DIR = SCRIPT_DIR
-MONSTER_STATS_DIR = SCRIPT_DIR.parent / "monster_stats"
+FORMATIONS_DIR = SCRIPT_DIR.parent.parent
+MONSTER_STATS_DIR = SCRIPT_DIR.parent.parent.parent / "monster_stats"
 SPAWN_GROUPS_DIR = (PROJECT_ROOT / "WIP" / "level_design" / "spawns"
                     / "data" / "spawn_groups")
 

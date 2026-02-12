@@ -23,9 +23,9 @@ import struct
 from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).parent
-PROJECT_ROOT = SCRIPT_DIR.parent.parent
+PROJECT_ROOT = SCRIPT_DIR.parent.parent.parent
 BLAZE_ALL = PROJECT_ROOT / "output" / "BLAZE.ALL"
-FORMATIONS_DIR = SCRIPT_DIR
+FORMATIONS_DIR = SCRIPT_DIR.parent
 
 RECORD_SIZE = 32
 SUFFIX_SIZE = 4
@@ -654,7 +654,7 @@ STAT_NAME_TO_OFFSET = {
 }
 
 
-MONSTER_STATS_DIR = SCRIPT_DIR.parent / "monster_stats"
+MONSTER_STATS_DIR = SCRIPT_DIR.parent.parent / "monster_stats"
 
 
 def load_monster_stats():

@@ -19,9 +19,9 @@ import re
 from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).parent
-PROJECT_ROOT = SCRIPT_DIR.parent.parent
+PROJECT_ROOT = SCRIPT_DIR.parent.parent.parent
 SPAWN_GROUPS_DIR = PROJECT_ROOT / "WIP" / "level_design" / "spawns" / "data" / "spawn_groups"
-OUTPUT_DIR = SCRIPT_DIR
+OUTPUT_DIR = SCRIPT_DIR.parent
 
 BLAZE_ALL = PROJECT_ROOT / "output" / "BLAZE.ALL"
 if not BLAZE_ALL.exists():

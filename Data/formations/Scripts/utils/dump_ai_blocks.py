@@ -34,7 +34,7 @@ from pathlib import Path
 # ===========================================================================
 
 SCRIPT_DIR = Path(__file__).parent
-PROJECT_ROOT = SCRIPT_DIR.parent.parent
+PROJECT_ROOT = SCRIPT_DIR.parent.parent.parent.parent
 BLAZE_ALL = PROJECT_ROOT / "Blaze  Blade - Eternal Quest (Europe)" / "extract" / "BLAZE.ALL"
 
 # Areas to analyze - diverse monster types for comparison
