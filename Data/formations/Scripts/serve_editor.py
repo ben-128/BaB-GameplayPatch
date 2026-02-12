@@ -49,6 +49,9 @@ class EditorHandler(http.server.SimpleHTTPRequestHandler):
                 # Skip vanilla reference files (read-only, not for editing)
                 if fn.endswith('_vanilla.json'):
                     continue
+                # Skip backup files
+                if fn.endswith('_user_backup.json'):
+                    continue
                 full = os.path.join(dirpath, fn)
                 rel = os.path.relpath(full, BASE_DIR).replace('\\', '/')
                 # Only include files inside subdirectories (level/area.json)

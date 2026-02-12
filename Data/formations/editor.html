@@ -94,9 +94,43 @@ button:disabled { opacity: 0.4; cursor: default; }
 .override-row input, .override-row select { background: #0a0a1a; color: #e0e0e0; border: 1px solid #2a2a4e; padding: 4px 8px; border-radius: 4px; font-size: 0.9em; }
 .override-row input { width: 160px; }
 .override-row select { min-width: 160px; }
+
+.spell-sets-foldout { margin-top: 12px; padding-top: 12px; border-top: 1px solid #0a0a1a; }
+.spell-sets-header { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; cursor: pointer; user-select: none; }
+.spell-sets-header .title { font-size: 0.85em; color: #808090; font-weight: 600; }
+.spell-sets-header .arrow { font-size: 0.7em; color: #53a8b6; transition: transform 0.2s; }
+.spell-sets-header .arrow.open { transform: rotate(90deg); }
+.spell-sets-header .tooltip-btn { background: #0a0a1a; border: 1px solid #2a2a4e; color: #53a8b6; border-radius: 50%; width: 18px; height: 18px; font-size: 0.7em; cursor: help; padding: 0; margin-left: auto; }
+.spell-sets-header .tooltip-btn:hover { background: #1a1a3a; }
+.spell-sets-body { display: none; margin-top: 4px; }
+.spell-sets-body.open { display: block; }
+.spell-set-row { display: flex; align-items: center; gap: 8px; margin: 6px 0; padding: 6px; background: #0a0a1a; border-radius: 4px; }
+.spell-set-row .slot-name { font-size: 0.8em; color: #e0e0e0; min-width: 100px; }
+.spell-set-row input { background: #000; color: #53a8b6; border: 1px solid #2a2a4e; padding: 4px 6px; border-radius: 4px; font-family: monospace; font-size: 0.75em; width: 80px; text-transform: lowercase; }
+.spell-set-row .spell-name { font-size: 0.75em; color: #a0a0b0; margin-left: 8px; }
+
+.spell-tooltip-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); display: none; align-items: center; justify-content: center; z-index: 1000; }
+.spell-tooltip-overlay.show { display: flex; }
+.spell-tooltip-content { background: #16213e; border: 2px solid #53a8b6; border-radius: 8px; padding: 20px; max-width: 600px; color: #e0e0e0; }
+.spell-tooltip-content .title { font-size: 1.1em; font-weight: 700; color: #53a8b6; margin-bottom: 12px; }
+.spell-tooltip-content .value-line { font-family: monospace; font-size: 0.9em; margin: 6px 0; padding: 6px; background: #0a0a1a; border-radius: 4px; }
+.spell-tooltip-content .value-line .code { color: #53a8b6; font-weight: 600; }
+.spell-tooltip-content .close-btn { margin-top: 12px; background: #e94560; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: 600; }
 </style>
 </head>
 <body>
+<div id="spellTooltip" class="spell-tooltip-overlay" onclick="if(event.target === this) this.classList.remove('show')">
+  <div class="spell-tooltip-content">
+    <div class="title">Valeurs de Spell Sets Confirmées</div>
+    <div class="value-line"><span class="code">02000000</span> = Vanilla Shaman (Sleep / Magic Missile / Stone Bullet)</div>
+    <div class="value-line"><span class="code">03000000</span> = Tower Variant (Sleep / Magic Missile / Heal)</div>
+    <div class="value-line"><span class="code">00000a00</span> = Bat/Flying (FireBullet / Magic Missile / Stone Bullet)</div>
+    <div class="value-line"><span class="code">00000000</span> = Base/Goblin (varies by entity)</div>
+    <div class="value-line"><span class="code">00000100</span> = Rare Variant (untested, Arch-Magi)</div>
+    <button class="close-btn" onclick="$('spellTooltip').classList.remove('show')">Fermer</button>
+  </div>
+</div>
+
 
 <h1>Formation Editor</h1>
 
@@ -248,6 +282,18 @@ function compositionFromRecords(records, monsters) {
   }));
 }
 
+
+function updateSpellName(val, spanEl) {
+  const SPELL_SETS = {
+    '02000000': 'Vanilla Shaman (Sleep/MM/Stone)',
+    '03000000': 'Tower Variant (Sleep/MM/Heal)',
+    '00000a00': 'Bat/Flying (FireBullet/MM/Stone)',
+    '00000000': 'Base/Goblin (varies)',
+    '00000100': 'Rare Variant (untested)'
+  };
+  spanEl.textContent = SPELL_SETS[val] || '(custom)';
+}
+
 function renderFormations() {
   const area = $('formationsArea');
   area.innerHTML = '';
@@ -337,7 +383,98 @@ function renderFormations() {
       ctrl.appendChild(plus);
       controls.appendChild(ctrl);
     }
+
     card.appendChild(controls);
+
+    // Spell Sets Foldout (per-formation)
+    const spellSetsDiv = document.createElement('div');
+    spellSetsDiv.className = 'spell-sets-foldout';
+
+    const spellHdr = document.createElement('div');
+    spellHdr.className = 'spell-sets-header';
+
+    const spellTitle = document.createElement('span');
+    spellTitle.className = 'title';
+    spellTitle.textContent = 'Spell Sets';
+
+    const spellArrow = document.createElement('span');
+    spellArrow.className = 'arrow';
+    spellArrow.textContent = '▶';
+
+    const tooltipBtn = document.createElement('button');
+    tooltipBtn.className = 'tooltip-btn';
+    tooltipBtn.textContent = '?';
+    tooltipBtn.title = 'Voir les valeurs confirmées';
+    tooltipBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      $('spellTooltip').classList.add('show');
+    });
+
+    spellHdr.appendChild(spellArrow);
+    spellHdr.appendChild(spellTitle);
+    spellHdr.appendChild(tooltipBtn);
+
+    const spellBody = document.createElement('div');
+    spellBody.className = 'spell-sets-body';
+
+    // Initialize slot_types if not present (use global or default)
+    if (!f.slot_types) {
+      f.slot_types = areaData.slot_types ? [...areaData.slot_types] : monsters.map(() => '00000000');
+    }
+
+    // Render slot_types inputs for each monster slot
+    for (let si = 0; si < monsters.length; si++) {
+      const row = document.createElement('div');
+      row.className = 'spell-set-row';
+
+      const slotName = document.createElement('span');
+      slotName.className = 'slot-name';
+      slotName.style.color = slotColor(si);
+      slotName.textContent = monsters[si];
+
+      const inputEl = document.createElement('input');
+      inputEl.type = 'text';
+      inputEl.value = f.slot_types[si] || '00000000';
+      inputEl.maxLength = 8;
+      inputEl.placeholder = '00000000';
+
+      // Validation
+      inputEl.addEventListener('input', () => {
+        let val = inputEl.value.toLowerCase().replace(/[^0-9a-f]/g, '');
+        if (val.length > 8) val = val.substring(0, 8);
+        inputEl.value = val;
+      });
+
+      inputEl.addEventListener('change', () => {
+        let val = inputEl.value.toLowerCase();
+        while (val.length < 8) val += '0';
+        inputEl.value = val;
+        if (!f.slot_types) f.slot_types = monsters.map(() => '00000000');
+        f.slot_types[si] = val;
+        updateSpellName(val, spellName);
+      });
+
+      const spellName = document.createElement('span');
+      spellName.className = 'spell-name';
+      updateSpellName(inputEl.value, spellName);
+
+      row.appendChild(slotName);
+      row.appendChild(inputEl);
+      row.appendChild(spellName);
+      spellBody.appendChild(row);
+    }
+
+    // Toggle foldout
+    spellHdr.addEventListener('click', (e) => {
+      if (e.target === tooltipBtn) return;
+      spellBody.classList.toggle('open');
+      spellArrow.classList.toggle('open');
+    });
+
+    spellSetsDiv.appendChild(spellHdr);
+    spellSetsDiv.appendChild(spellBody);
+    card.appendChild(spellSetsDiv);
+
 
     // Actions
     const actions = document.createElement('div');
@@ -439,7 +576,8 @@ function undo() {
   zoneSpawns = state.zoneSpawns;
   monsterOverrides = state.monsterOverrides || [];
   renderFormations();
-  renderOverrides();
+  
+renderOverrides();
   renderSpawnSection(spawnPoints, 'spawnSection', 'spawnCards');
   renderSpawnSection(zoneSpawns, 'zoneSection', 'zoneCards');
   showStatus('Undo', true);
@@ -605,6 +743,17 @@ function getSlotR(si) {
   return si + 2; // Default pattern observed
 }
 
+
+const SPELL_SETS = {
+  '02000000': { name: 'Vanilla Shaman', spells: ['Sleep', 'Magic Missile', 'Stone Bullet'], desc: 'Default Shaman spells' },
+  '03000000': { name: 'Tower Variant', spells: ['Sleep', 'Magic Missile', 'Heal'], desc: 'Support variant ✅' },
+  '00000a00': { name: 'Bat/Flying', spells: ['FireBullet', 'Magic Missile', 'Stone Bullet'], desc: 'Aggressive ✅' },
+  '00000000': { name: 'Base/Goblin', spells: ['(varies)', 'Magic Missile', 'Stone Bullet'], desc: 'Base set' },
+  '00000100': { name: 'Rare Variant', spells: ['(untested)', '?', '?'], desc: 'Rare (Arch-Magi)' }
+};
+
+
+
 function renderOverrides() {
   const section = $('overridesSection');
   const body = $('overridesBody');
@@ -653,7 +802,8 @@ function renderOverrides() {
       } else {
         monsterOverrides[si] = null;
       }
-      renderOverrides();
+      
+renderOverrides();
     });
     eliteLbl.appendChild(eliteCb);
     eliteLbl.appendChild(document.createTextNode('ELITE'));
@@ -709,6 +859,7 @@ function renderOverrides() {
 }
 
 // Toggle overrides section
+
 $('overridesToggle').addEventListener('click', () => {
   const body = $('overridesBody');
   const arrow = $('overridesArrow');
@@ -752,6 +903,10 @@ function buildOutputJSON() {
       suffix: f.suffix || '00000000'
     };
     if (f.offset) obj.offset = f.offset;
+    // Save per-formation slot_types if present
+    if (f.slot_types && f.slot_types.length > 0) {
+      obj.slot_types = f.slot_types.slice();
+    }
     return obj;
   });
 
@@ -876,12 +1031,22 @@ function loadArea(data, fileName) {
   });
 
   // Load formations
-  formations = (data.formations || []).map(f => ({
-    slots: (f.slots || []).slice(),
-    suffix: f.suffix || '00000000',
-    offset: f.offset || null,
-    _selected: false
-  }));
+  formations = (data.formations || []).map(f => {
+    const formation = {
+      slots: (f.slots || []).slice(),
+      suffix: f.suffix || '00000000',
+      offset: f.offset || null,
+      _selected: false
+    };
+    // Load per-formation slot_types if present, otherwise use global as fallback
+    if (f.slot_types && f.slot_types.length > 0) {
+      formation.slot_types = f.slot_types.slice();
+    } else if (data.slot_types && data.slot_types.length > 0) {
+      // Copy global slot_types as initial values for this formation
+      formation.slot_types = data.slot_types.slice();
+    }
+    return formation;
+  });
 
   // Load spawn points (deep copy records)
   spawnPoints = (data.spawn_points || []).map(group => ({
@@ -906,7 +1071,8 @@ function loadArea(data, fileName) {
   $('toolbarArea').style.display = 'flex';
 
   renderFormations();
-  renderOverrides();
+  
+renderOverrides();
   renderSpawnSection(spawnPoints, 'spawnSection', 'spawnCards');
   renderSpawnSection(zoneSpawns, 'zoneSection', 'zoneCards');
 }

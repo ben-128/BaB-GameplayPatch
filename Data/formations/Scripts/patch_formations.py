@@ -318,17 +318,29 @@ def build_formation_area(area, vanilla_formations=None):
 
     # slot_types: per-slot type value used in byte[0:4] and suffix.
     # Each entry is a 4-byte hex string (e.g. "00000a00" for flying).
+    # Can be defined globally at area level or per-formation.
     # If not provided, all slots default to "00000000".
-    slot_types_hex = area.get("slot_types", [])
-    slot_types = {}
-    for si, st in enumerate(slot_types_hex):
-        slot_types[si] = bytes.fromhex(st)
+    global_slot_types_hex = area.get("slot_types", [])
+    global_slot_types = {}
+    for si, st in enumerate(global_slot_types_hex):
+        global_slot_types[si] = bytes.fromhex(st)
     default_type = b'\x00\x00\x00\x00'
 
     binary = bytearray()
 
     for fidx, formation in enumerate(formations):
         slots = formation["slots"]
+
+        # Check if this formation has its own slot_types (per-formation override)
+        formation_slot_types_hex = formation.get("slot_types", [])
+        if formation_slot_types_hex:
+            # Use per-formation slot_types
+            slot_types = {}
+            for si, st in enumerate(formation_slot_types_hex):
+                slot_types[si] = bytes.fromhex(st)
+        else:
+            # Fall back to global slot_types
+            slot_types = global_slot_types
 
         if not slots:
             print("    [ERROR] F{:02d}: empty formation (0 slots)".format(fidx))

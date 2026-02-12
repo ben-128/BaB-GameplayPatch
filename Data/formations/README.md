@@ -17,6 +17,7 @@ Le système de formations permet de modifier les rencontres aléatoires (formati
 - `extract_slot_types.py` - Extrait les types de monstres pour toutes les areas
 - `serve_editor.py` - Serveur pour éditeur visuel
 - `editor.html` - Éditeur visuel (lancer avec `edit_formations.bat`)
+- **`change_spell_sets.py`** - **Outil pour changer les sorts des monstres** (lancer avec `change_spell_sets.bat`)
 
 ### Documentation
 - `CUSTOM_FORMATIONS_WORKING.md` - Guide complet formations custom
@@ -126,8 +127,18 @@ edit_formations.bat
 Ouvre un éditeur HTML dans le navigateur pour:
 - Visualiser toutes les formations d'une area
 - Modifier les compositions avec boutons +/-
+- **Changer les spell sets PAR FORMATION** (foldout dans chaque formation) 🆕
 - Ajouter/supprimer des formations
 - Sauvegarder les modifications dans le JSON
+
+**Spell sets disponibles:**
+- **Vanilla Shaman (02000000):** Sleep / Magic Missile / Stone Bullet
+- **Tower Variant (03000000):** Sleep / Magic Missile / **Heal** ✅
+- **Bat/Flying (00000a00):** **FireBullet** / Magic Missile / Stone Bullet ✅
+- **Base (00000000):** Varie selon l'entité
+- **Rare Variant (00000100):** Non testé
+
+Chaque formation a maintenant son propre foldout "Spell Sets" avec un bouton **[?]** pour voir les valeurs confirmées. Cela permet d'avoir des Shamans avec Sleep dans Formation 0 et FireBullet dans Formation 1!
 
 ## Vérification
 
