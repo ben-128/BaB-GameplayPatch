@@ -1,0 +1,67 @@
+# ========================================
+# Debug Session: Chest Despawn Timer
+# ========================================
+# Objectif: Observer le timer countdown et trouver l'init
+
+# === Breakpoints ===
+# Cavern F1 chest timer decrement
+break 0x800877F4
+
+# === Instructions Phase 1: Trouver l'Entity Chest ===
+# 1. Charger Cavern F1
+# 2. Entrer en combat
+# 3. Tuer un monstre qui drop un coffre
+# 4. Le breakpoint va s'activer périodiquement (toutes les 20 frames)
+#
+# 5. Quand ça break:
+#    regs
+#    → Noter $s1 (c'est l'entity pointer du coffre)
+#
+# 6. Dump l'entity structure:
+#    dump $s1 256
+#    → Voir les données du coffre
+#
+# 7. Calculer timer address:
+#    → entity+0x14 = timer (u16)
+#    → entity+0x12 = master_timer (u16)
+#    Exemple: si $s1=0x800B2100 → timer @ 0x800B2114
+
+# === Phase 2: Watchpoint sur Timer ===
+# Après avoir trouvé l'entity address:
+# watch 0x800B2114 rw
+#
+# Recharger savestate et observer:
+# - Qui écrit le timer initial?
+# - Qui le décrémente?
+# - Qui reset depuis master_timer?
+
+# === Phase 3: Trouver l'Init ===
+# Le timer est init à entity+0x0012 (master timer)
+# Pattern trouvé: addiu $v0, $zero, 0x3E8 (1000 frames)
+#                sh $v0, 0x12($base)
+#
+# 12 emplacements d'init (un par overlay):
+# 0x01BA5648, 0x01BA5780, 0x01BA5E48, 0x01BA5F80,
+# 0x0257C018, 0x0257C1B4, 0x02B771D8, 0x02B77374,
+# 0x02B78830, 0x02BC9B60, 0x02BC9CFC, 0x02BCBA84
+#
+# Pour vérifier si un patch fonctionne:
+# 1. Patcher 0x3E8 → 0xFFFF dans BLAZE.ALL
+# 2. Rebuild
+# 3. Poser watchpoint sur entity+0x12
+# 4. Quand le coffre spawn, vérifier la valeur écrite
+#    → Doit être 0xFFFF au lieu de 0x3E8
+
+# === Notes à Remplir ===
+# Entity pointer ($s1): _____________
+# Timer address (entity+0x14): _____________
+# Master timer address (entity+0x12): _____________
+# Timer init value observed: _____________
+# Expected (if patched): 0xFFFF
+# Actual: _____________
+
+# === Hypothèse Overlay Reload ===
+# Si le patch ne fonctionne pas:
+# - Vérifier que BLAZE.ALL est bien injecté dans le BIN
+# - Vérifier les 2 emplacements LBA dans le BIN
+# - Essayer de patcher directement dans le BIN (pas juste BLAZE.ALL)

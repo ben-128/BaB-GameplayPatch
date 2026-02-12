@@ -172,6 +172,45 @@ Base de donnees complete de tous les items extraits de BLAZE.ALL.
 
 ---
 
+## Debugging Tools
+
+Outils complets pour debugger le jeu avec breakpoints et watchpoints.
+
+**Guide complet** : `DEBUGGING_GUIDE.md`
+**Générateur de breakpoints** : `Scripts/breakpoint_helper.py`
+**Workflow exemple** : `Scripts/debug_spells_workflow.md`
+**Référence console** : `Scripts/console_commands_reference.md`
+
+### Émulateurs Recommandés
+
+- **DuckStation** (dev build) : Console debug intégrée, breakpoints/watchpoints
+- **PCSX-Redux** : Debugger GUI avancé, conditional breakpoints
+
+### Quick Start
+
+```bash
+# Générer les breakpoints pour recherche spell system
+python Scripts/breakpoint_helper.py --mode spells
+
+# Watchpoints pour une entité spécifique (après avoir trouvé l'adresse base)
+python Scripts/breakpoint_helper.py \
+  --entity-base 0x800B2100 \
+  --entity-fields bitmask level timer
+```
+
+### Addresses Importantes
+
+- `0x80024F90` - Damage function (EXE)
+- `0x80024494` - Spell/action dispatch (EXE)
+- `0x800244F4` - Level-up sim loop / bitmask accumulation (EXE)
+- `0x80021E68` - Entity descriptor init (EXE)
+- `0x800B1E80` - Entity array base (runtime)
+- `0x800F0000` - Player 0 data block (runtime)
+
+Voir `DEBUGGING_GUIDE.md` pour la liste complète et les workflows de recherche.
+
+---
+
 ## Prerequis
 
 - Python 3.x
@@ -204,9 +243,16 @@ Cette analyse est fournie "as-is" a des fins de recherche et de preservation du 
 
 
 
+
+
+
+
+
+
+
 ## Last Patch Build
 
-**Date:** 2026-02-12 19:56:24
+**Date:** 2026-02-12 22:30:07
 
 **Patches Applied:**
 - Fate Coin Shop prices adjusted

@@ -1,0 +1,46 @@
+# ========================================
+# Debug Session: Trap Damage Research
+# ========================================
+# Objectif: Trouver où le falling rock 10% damage est stocké
+
+# === Breakpoint Principal ===
+break 0x80024F90
+
+# === Instructions ===
+# 1. Charger une zone avec falling rocks (ex: Cavern F1)
+# 2. Sauvegarder juste avant de déclencher un rocher
+# 3. Copier/coller le breakpoint ci-dessus
+# 4. Déclencher le rocher
+# 5. Quand ça break à 0x80024F90:
+#    - Taper 'regs'
+#    - Si $a3 == 10 (0x0A) → C'EST LE BON CALL!
+#    - Noter $ra (return address) pour backtracer
+#
+# 6. Backtracer:
+#    - Taper 'reg $ra' pour voir l'appelant
+#    - Taper 'disasm $ra-20 40' pour voir le code autour
+#    - Chercher le JAL 0x80024F90
+#    - Avant le JAL, chercher où $a3 est chargé:
+#      * li $a3, 10         → hardcoded immediate (facile à patcher)
+#      * lw $a3, offset($reg) → chargé depuis table (plus difficile)
+
+# === Notes à Remplir ===
+# $a3 value (damage%): _____________
+# $ra (return address): _____________
+# Caller JAL location: _____________
+# $a3 source:
+#   [ ] Immediate (li/addiu $a3, 10)
+#   [ ] Register (move $a3, $??)
+#   [ ] Memory (lw $a3, offset($base))
+#
+# Si Memory load:
+#   Table base: _____________
+#   Offset: _____________
+#   Entry format: _____________
+
+# === Autres Pièges à Tester ===
+# - Heavy trap: damage% = ??
+# - Spike trap: damage% = ??
+# - Fire trap: damage% = ??
+#
+# Utiliser le MÊME workflow pour chaque type

@@ -1,0 +1,41 @@
+# ========================================
+# Debug Session: Spell System Research
+# ========================================
+# Copier/coller ces commandes dans DuckStation console (Ctrl+`)
+#
+# Objectif: Comprendre le lien entre suffix et spell_list
+# Test area: Cavern F1 A1 avec Shaman modifié
+
+# === Main Breakpoints ===
+break 0x80024494
+break 0x800244f4
+
+# === Watchpoints (à ajuster après avoir trouvé l'adresse entity base) ===
+# Remplacer 0x800B2100 par l'adresse réelle du Shaman
+# watch 0x800B2260 rw
+
+# === Instructions ===
+# 1. Lancer le jeu patché
+# 2. Copier/coller les commandes ci-dessus
+# 3. Aller à Cavern F1 A1
+# 4. F2 (Quick Save) juste avant le combat
+# 5. Entrer en combat
+# 6. Quand ça break:
+#    - Taper 'regs' pour voir les registres
+#    - Noter $a0 (entity pointer)
+#    - Calculer entity+0x160 (bitmask address)
+#    - Taper 'watch <calculated_addr> rw'
+#    - Taper 'continue'
+# 7. Observer les accès au bitmask
+
+# === Notes à Remplir ===
+# Entity pointer ($a0): _____________
+# Bitmask address (entity+0x160): _____________
+# Bitmask value: _____________
+# Spell cast: _____________
+# Suffix used in JSON: _____________
+
+# === Comparer Plusieurs Runs ===
+# Run 1: suffix=02000000 (vanilla Shaman)
+# Run 2: suffix=00000a00 (Bat modifier)
+# Run 3: suffix=03000000 (Tower variant)
