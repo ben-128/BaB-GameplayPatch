@@ -57,7 +57,7 @@ type "%LOGFILE%"
 REM ========================================================================
 REM Step 1: Copy clean BLAZE.ALL from extract to work
 REM ========================================================================
-call :log "[1/10] Copying clean BLAZE.ALL from extract to work..."
+call :log "[1/12] Copying clean BLAZE.ALL from extract to work..."
 call :log ""
 
 set CLEAN_BLAZE=%~dp0Blaze  Blade - Eternal Quest (Europe)\extract\BLAZE.ALL
@@ -82,7 +82,7 @@ call :log ""
 REM ========================================================================
 REM Step 2: Patch Fate Coin Shop prices
 REM ========================================================================
-call :log "[2/10] Patching Fate Coin Shop prices..."
+call :log "[2/12] Patching Fate Coin Shop prices..."
 call :log ""
 
 py -3 Data\fate_coin_shop\patch_fate_coin_shop.py >> "%LOGFILE%" 2>&1
@@ -99,7 +99,7 @@ call :log ""
 REM ========================================================================
 REM Step 3: Patch Items descriptions
 REM ========================================================================
-call :log "[3/10] Patching Items descriptions in BLAZE.ALL..."
+call :log "[3/12] Patching Items descriptions in BLAZE.ALL..."
 call :log ""
 
 cd Data\items
@@ -125,7 +125,7 @@ call :log ""
 REM ========================================================================
 REM Step 4: Patch auction base prices to 0
 REM ========================================================================
-call :log "[4/10] Patching auction base prices (set to 0)..."
+call :log "[4/12] Patching auction base prices (set to 0)..."
 call :log ""
 
 py -3 Data\auction_prices\patch_auction_base_prices.py >> "%LOGFILE%" 2>&1
@@ -142,7 +142,7 @@ call :log ""
 REM ========================================================================
 REM Step 5: Patch monster stats in BLAZE.ALL
 REM ========================================================================
-call :log "[5/10] Patching monster stats in BLAZE.ALL..."
+call :log "[5/12] Patching monster stats in BLAZE.ALL..."
 call :log ""
 
 py -3 Data\monster_stats\scripts\patch_monster_stats.py >> "%LOGFILE%" 2>&1
@@ -159,7 +159,7 @@ call :log ""
 REM ========================================================================
 REM Step 6: Patch monster spawn groups in BLAZE.ALL
 REM ========================================================================
-call :log "[6/10] Patching monster spawn groups in BLAZE.ALL..."
+call :log "[6/12] Patching monster spawn groups in BLAZE.ALL..."
 call :log ""
 
 py -3 WIP\level_design\spawns\scripts\patch_spawn_groups.py >> "%LOGFILE%" 2>&1
@@ -176,7 +176,7 @@ call :log ""
 REM ========================================================================
 REM Step 6b: Patch formation templates in BLAZE.ALL
 REM ========================================================================
-call :log "[6b/10] Patching formation templates in BLAZE.ALL..."
+call :log "[6b/12] Patching formation templates in BLAZE.ALL..."
 call :log ""
 
 py -3 Data\formations\patch_formations.py >> "%LOGFILE%" 2>&1
@@ -194,7 +194,7 @@ REM ========================================================================
 REM Step 7: Patch chest despawn timer in BLAZE.ALL overlay code (OPTIONAL)
 REM ========================================================================
 if "%PATCH_LOOT_TIMER%"=="1" (
-    call :log "[7/10] Patching chest despawn timer in overlay code..."
+    call :log "[7/12] Patching chest despawn timer in overlay code..."
     call :log ""
 
     py -3 Data\LootTimer\patch_loot_timer.py >> "%LOGFILE%" 2>&1
@@ -213,9 +213,9 @@ if "%PATCH_LOOT_TIMER%"=="1" (
 )
 
 REM ========================================================================
-REM Step 7b: Patch spell table entries in BLAZE.ALL
+REM Step 8: Patch spell table entries in BLAZE.ALL
 REM ========================================================================
-call :log "[7b/10] Patching spell table entries in BLAZE.ALL..."
+call :log "[8/12] Patching spell table entries in BLAZE.ALL..."
 call :log ""
 
 py -3 Data\spells\patch_spell_table.py >> "%LOGFILE%" 2>&1
@@ -230,26 +230,9 @@ call :log "[OK] Spell table entries processed"
 call :log ""
 
 REM ========================================================================
-REM Step 7c: Patch AI behavior blocks in BLAZE.ALL
+REM Step 9: Patch trap/environmental damage in BLAZE.ALL
 REM ========================================================================
-call :log "[7c/10] Patching AI behavior blocks in BLAZE.ALL..."
-call :log ""
-
-py -3 Data\ai_behavior\patch_ai_behavior.py >> "%LOGFILE%" 2>&1
-if errorlevel 1 (
-    call :log ""
-    call :log "[ERROR] AI behavior patch failed!"
-    goto :error
-)
-
-call :log ""
-call :log "[OK] AI behavior blocks processed"
-call :log ""
-
-REM ========================================================================
-REM Step 7d: Patch trap/environmental damage in BLAZE.ALL
-REM ========================================================================
-call :log "[7d/10] Patching trap damage in BLAZE.ALL..."
+call :log "[9/12] Patching trap damage in BLAZE.ALL..."
 call :log ""
 
 py -3 Data\trap_damage\patch_trap_damage.py >> "%LOGFILE%" 2>&1
@@ -264,68 +247,9 @@ call :log "[OK] Trap damage processed"
 call :log ""
 
 REM ========================================================================
-REM Step 7e: Patch monster spell bitfield in BLAZE.ALL overlay code
+REM Step 10: Create fresh patched BIN from clean original
 REM ========================================================================
-call :log "[7e/10] Patching monster spell bitfield in overlay code..."
-call :log ""
-
-py -3 Data\ai_behavior\patch_monster_spells.py >> "%LOGFILE%" 2>&1
-if errorlevel 1 (
-    call :log ""
-    call :log "[ERROR] Monster spell bitfield patch failed!"
-    goto :error
-)
-
-call :log ""
-call :log "[OK] Monster spell bitfield processed"
-call :log ""
-
-REM ========================================================================
-REM Step 7f: [TEST] Freeze test for spell system offset verification (OPTIONAL)
-REM ========================================================================
-if "%TEST_SPELL_FREEZE%"=="1" (
-    call :log "[7f/10] [TEST MODE] Applying freeze test to BLAZE.ALL..."
-    call :log ""
-    call :log "[WARNING] This patches BLAZE.ALL with an INFINITE LOOP!"
-    call :log "[WARNING] Game will FREEZE during Cavern combat - for testing only!"
-    call :log ""
-
-    py -3 Data\ai_behavior\patch_spell_freeze_test.py >> "%LOGFILE%" 2>&1
-    if errorlevel 1 (
-        call :log ""
-        call :log "[ERROR] Freeze test patch failed!"
-        goto :error
-    )
-
-    call :log ""
-    call :log "[OK] Freeze test applied - Game will freeze in Cavern combat"
-    call :log ""
-) else (
-    call :log "[7f/10] Freeze test SKIPPED (set TEST_SPELL_FREEZE=1 to enable)"
-    call :log ""
-)
-
-REM ========================================================================
-REM Step 7g: Patch spell tier thresholds in SLES_008.45 (EXE)
-REM ========================================================================
-call :log "[7g/10] Patching spell tier thresholds in EXE..."
-call :log ""
-
-py -3 Data\character_classes\patch_tier_thresholds.py >> "%LOGFILE%" 2>&1
-if errorlevel 1 (
-    call :log ""
-    call :log "[ERROR] Tier threshold patch failed!"
-    goto :error
-)
-
-call :log ""
-call :log "[OK] Tier thresholds patched"
-call :log ""
-
-REM ========================================================================
-REM Step 8: Create fresh patched BIN from clean original
-REM ========================================================================
-call :log "[8/10] Creating fresh patched BIN from clean original..."
+call :log "[10/12] Creating fresh patched BIN from clean original..."
 call :log ""
 
 set CLEAN_BIN=%~dp0Blaze  Blade - Eternal Quest (Europe)\Blaze ^& Blade - Eternal Quest (Europe).bin
@@ -349,9 +273,9 @@ call :log "[OK] Fresh patched BIN created from clean original"
 call :log ""
 
 REM ========================================================================
-REM Step 9: Inject BLAZE.ALL into BIN (2 locations)
+REM Step 11: Inject BLAZE.ALL into BIN (2 locations)
 REM ========================================================================
-call :log "[9/10] Injecting BLAZE.ALL into BIN (2 locations)..."
+call :log "[11/12] Injecting BLAZE.ALL into BIN (2 locations)..."
 call :log ""
 
 py -3 patch_blaze_all.py >> "%LOGFILE%" 2>&1
@@ -365,40 +289,11 @@ call :log ""
 call :log "[OK] BLAZE.ALL injected into BIN"
 call :log ""
 
-REM ========================================================================
-REM Step 9b: (Loot timer now patches BLAZE.ALL at step 7)
-REM ========================================================================
-if "%PATCH_LOOT_TIMER%"=="1" (
-    call :log "[9b/10] Loot timer: already patched in BLAZE.ALL at step 7"
-) else (
-    call :log "[9b/10] Loot timer: skipped"
-)
-call :log ""
 
 REM ========================================================================
-REM Step 9c: (Moved to 7e - monster spell bitfield now patches BLAZE.ALL)
+REM Step 12: Update documentation
 REM ========================================================================
-call :log "[9c/10] Monster spell bitfield: already patched in BLAZE.ALL at step 7e"
-call :log ""
-
-REM ========================================================================
-REM Step 7f: Falling rock damage - ATTEMPT 9 FAILED (see FAILED_ATTEMPTS.md)
-REM ========================================================================
-REM Pattern 0x0028000A found in savestate RAM but EXACT pattern NOT in BLAZE.ALL
-REM Data appears to be generated at runtime, not loaded from BLAZE.ALL
-REM
-REM call :log "[7f/10] Patching falling rock damage (attempt 9)..."
-REM call :log ""
-REM py -3 Data\trap_damage\patch_falling_rock_attempt9.py >> "%LOGFILE%" 2>&1
-REM ...
-
-call :log "[7f/10] Falling rock damage patch SKIPPED (attempt 9 failed - runtime data)"
-call :log ""
-
-REM ========================================================================
-REM Step 10: Update documentation
-REM ========================================================================
-call :log "[10/10] Updating documentation..."
+call :log "[12/12] Updating documentation..."
 call :log ""
 
 py -3 -c "from pathlib import Path; from datetime import datetime; import sys; items_count = sys.argv[1]; readme = Path('README.md'); content = readme.read_text(encoding='utf-8'); patch_info = f'\n## Last Patch Build\n\n**Date:** {datetime.now().strftime(\"%%Y-%%m-%%d %%H:%%M:%%S\")}\n\n**Patches Applied:**\n- Fate Coin Shop prices adjusted\n- Items descriptions updated ({items_count} items)\n- Auction base prices set to 0\n- Monster stats balanced\n- BLAZE.ALL integrated\n\n**Source:** Blaze & Blade - Eternal Quest (Europe).bin\n**Output:** output/Blaze & Blade - Patched.bin\n\n'; import re; content = re.sub(r'## Last Patch Build.*?(?=##|\Z)', patch_info, content, flags=re.DOTALL) if '## Last Patch Build' in content else content + patch_info; readme.write_text(content, encoding='utf-8'); print('[OK] README.md updated')" %ITEMS_PATCHED% >> "%LOGFILE%" 2>&1
