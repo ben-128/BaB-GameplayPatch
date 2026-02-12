@@ -12,7 +12,8 @@ import os
 import sys
 
 PORT = 8000
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+# BASE_DIR should be formations root (parent of Scripts/), where editor.html lives
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 class EditorHandler(http.server.SimpleHTTPRequestHandler):
