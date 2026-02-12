@@ -54,38 +54,63 @@ def main():
     print("=" * 70)
     print()
 
-    # Process Cavern F1 A1 as example
-    area_dir = SCRIPT_DIR.parent / "cavern_of_death"
-    vanilla_path = area_dir / "floor_1_area_1_vanilla.json"
-    area_path = area_dir / "floor_1_area_1.json"
+    formations_dir = SCRIPT_DIR.parent
 
-    if not vanilla_path.exists():
-        print(f"ERROR: {vanilla_path} not found")
-        return 1
+    # Find all area directories
+    area_dirs = [d for d in formations_dir.iterdir()
+                 if d.is_dir() and not d.name.startswith('.')
+                 and d.name not in ['Scripts', 'docs']]
 
-    slot_types = extract_slot_types_from_vanilla(vanilla_path)
-    if slot_types is None:
-        print("ERROR: Could not extract slot_types")
-        return 1
+    processed = 0
+    skipped = 0
+    errors = 0
 
-    print(f"Extracted slot_types for Cavern F1 A1:")
-    for i, st in enumerate(slot_types):
-        print(f"  slot {i}: {st}")
+    for area_dir in sorted(area_dirs):
+        # Find all _vanilla.json files in this directory
+        vanilla_files = list(area_dir.glob("*_vanilla.json"))
+
+        for vanilla_path in sorted(vanilla_files):
+            # Corresponding area JSON (remove _vanilla suffix)
+            area_name = vanilla_path.stem.replace('_vanilla', '')
+            area_path = area_dir / f"{area_name}.json"
+
+            if not area_path.exists():
+                print(f"SKIP: {area_path.name} (no corresponding area JSON)")
+                skipped += 1
+                continue
+
+            # Extract slot_types
+            slot_types = extract_slot_types_from_vanilla(vanilla_path)
+            if slot_types is None:
+                print(f"SKIP: {area_path.name} (no formations in vanilla)")
+                skipped += 1
+                continue
+
+            # Update area JSON
+            try:
+                with open(area_path, 'r', encoding='utf-8') as f:
+                    area_data = json.load(f)
+
+                area_data['slot_types'] = slot_types
+
+                with open(area_path, 'w', encoding='utf-8') as f:
+                    json.dump(area_data, f, indent=2, ensure_ascii=False)
+
+                print(f"[OK] {area_dir.name}/{area_path.name}: {slot_types}")
+                processed += 1
+
+            except Exception as e:
+                print(f"ERROR: {area_path.name}: {e}")
+                errors += 1
+
     print()
+    print("=" * 70)
+    print(f"Processed: {processed} areas")
+    print(f"Skipped:   {skipped} areas")
+    print(f"Errors:    {errors} areas")
+    print("=" * 70)
 
-    # Update area JSON
-    with open(area_path, 'r', encoding='utf-8') as f:
-        area_data = json.load(f)
-
-    area_data['slot_types'] = slot_types
-
-    with open(area_path, 'w', encoding='utf-8') as f:
-        json.dump(area_data, f, indent=2, ensure_ascii=False)
-
-    print(f"Updated {area_path.name} with correct slot_types")
-    print()
-
-    return 0
+    return 0 if errors == 0 else 1
 
 
 if __name__ == '__main__':
