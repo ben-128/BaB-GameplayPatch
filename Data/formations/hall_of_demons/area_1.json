@@ -59,7 +59,7 @@
         1,
         1
       ],
-      "suffix": "00000000",
+      "suffix": "00000a00",
       "offset": "0x2BEC260"
     },
     {
@@ -77,7 +77,7 @@
         2,
         2
       ],
-      "suffix": "00000000",
+      "suffix": "00000a00",
       "offset": "0x2BEC2A4"
     },
     {
@@ -1118,127 +1118,6 @@
       ],
       "suffix": "00000000",
       "offset": "0x2BECC8C"
-    }
-  ],
-  "slot_types": [
-    "00000000",
-    "00000000",
-    "00000000",
-    "00000000",
-    "00000000"
-  ],
-  "type07_entries": [
-    null,
-    null,
-    null,
-    null,
-    null
-  ],
-  "available_monsters": [
-    "Basirisk",
-    "Blood-Shadow",
-    "Carberos",
-    "Dark-Goblin",
-    "Death-Knight",
-    "Evil-Ball",
-    "Evil-Stalker",
-    "Goblin-Wizard",
-    "Gorgon",
-    "Gray-Arm",
-    "Gremlin",
-    "Hell-Harpy",
-    "Hell-Hound",
-    "Hell-Ogre",
-    "Salamander",
-    "Spirit-Ball",
-    "Succubus",
-    "Zombie-Dragon"
-  ],
-  "monster_vram_ref": {
-    "Evil-Stalker": "0x0D1C",
-    "Blood-Shadow": "0x0D2C",
-    "Spirit-Ball": "0x0D34",
-    "Gray-Arm": "0x30EE"
-  },
-  "assignment_entries": [
-    {
-      "slot": 0,
-      "L": 0,
-      "R": 0,
-      "offset": "0x2BEB17C"
-    },
-    {
-      "slot": 1,
-      "L": 2,
-      "R": 1,
-      "offset": "0x2BEB184"
-    },
-    {
-      "slot": 2,
-      "L": 5,
-      "R": 2,
-      "offset": "0x2BEB18C"
-    },
-    {
-      "slot": 3,
-      "L": 3,
-      "R": 3,
-      "offset": "0x2BEB194"
-    },
-    {
-      "slot": 4,
-      "L": 4,
-      "R": 4,
-      "offset": "0x2BEB19C"
-    }
-  ],
-  "animation_table": [
-    {
-      "bytes": "0001020303040404",
-      "offset": "0x2BEB10C"
-    },
-    {
-      "bytes": "0403050607070707",
-      "offset": "0x2BEB114"
-    },
-    {
-      "bytes": "0308030808030803",
-      "offset": "0x2BEB11C"
-    },
-    {
-      "bytes": "090a0b0b0b0c0d0e",
-      "offset": "0x2BEB124"
-    },
-    {
-      "bytes": "0f10111213131314",
-      "offset": "0x2BEB12C"
-    }
-  ],
-  "records_8byte": [
-    {
-      "anim_offset": "0x000C",
-      "texture_ref": "0x00020000",
-      "offset": "0x2BEB134"
-    },
-    {
-      "anim_offset": "0x0014",
-      "texture_ref": "0x00034000",
-      "offset": "0x2BEB13C"
-    },
-    {
-      "anim_offset": "0x001C",
-      "texture_ref": "0x00048000",
-      "offset": "0x2BEB144"
-    },
-    {
-      "anim_offset": "0x0024",
-      "texture_ref": "0x0005C000",
-      "offset": "0x2BEB14C"
-    },
-    {
-      "anim_offset": "0x002C",
-      "texture_ref": "0x00060000",
-      "offset": "0x2BEB154"
     }
   ]
 }

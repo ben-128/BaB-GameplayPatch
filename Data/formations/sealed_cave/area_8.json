@@ -67,7 +67,7 @@
         2,
         2
       ],
-      "suffix": "00000000",
+      "suffix": "00000a00",
       "offset": "0x1DF26F4"
     },
     {
@@ -111,7 +111,7 @@
         2,
         2
       ],
-      "suffix": "00000000",
+      "suffix": "00000a00",
       "offset": "0x1DF27DC"
     }
   ],
@@ -968,96 +968,6 @@
       ],
       "suffix": "00000000",
       "offset": "0x1DF25A8"
-    }
-  ],
-  "slot_types": [
-    "00000000",
-    "00000000",
-    "00000000"
-  ],
-  "type07_entries": [
-    {
-      "vram_offset": "0x0B68",
-      "idx": 3,
-      "offset": "0x1DF1BEC"
-    },
-    null,
-    null
-  ],
-  "available_monsters": [
-    "Black-Durahan",
-    "Blood-Mummy",
-    "Blood-Shadow",
-    "Blood-Skeleton",
-    "Durahan",
-    "Ghoul",
-    "King-Mummy",
-    "Mummy",
-    "Noble-Mummy",
-    "Red-Slime",
-    "Revenant",
-    "Shadow",
-    "Skeleton",
-    "Undead-Knight",
-    "Undead-Master",
-    "Wight",
-    "Wraith",
-    "Yellow-Slime",
-    "Zombie"
-  ],
-  "monster_vram_ref": {
-    "Undead-Knight": "0x068C",
-    "Revenant": "0x0000"
-  },
-  "assignment_entries": [
-    {
-      "slot": 0,
-      "L": 8,
-      "R": 4,
-      "offset": "0x1DF1974"
-    },
-    {
-      "slot": 1,
-      "L": 11,
-      "R": 5,
-      "offset": "0x1DF197C"
-    },
-    {
-      "slot": 2,
-      "L": 9,
-      "R": 6,
-      "offset": "0x1DF1984"
-    }
-  ],
-  "animation_table": [
-    {
-      "bytes": "0001020304050607",
-      "offset": "0x1DF190C"
-    },
-    {
-      "bytes": "08090a0b0c0d0e0f",
-      "offset": "0x1DF1914"
-    },
-    {
-      "bytes": "1011120808121110",
-      "offset": "0x1DF191C"
-    }
-  ],
-  "records_8byte": [
-    {
-      "anim_offset": "0x181E181D",
-      "texture_ref": "0x1F20201F",
-      "offset": "0x1DF1934"
-    },
-    {
-      "anim_offset": "0x23220421",
-      "texture_ref": "0x24242424",
-      "offset": "0x1DF193C"
-    },
-    {
-      "anim_offset": "0x000C",
-      "texture_ref": "0x00070000",
-      "offset": "0x1DF1944"
     }
   ]
 }

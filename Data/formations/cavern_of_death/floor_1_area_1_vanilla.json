@@ -1,0 +1,121 @@
+{
+  "level_name": "Cavern of Death",
+  "name": "Floor 1 - Area 1",
+  "formation_area_start": "0xF7AFFC",
+  "formation_area_bytes": 896,
+  "original_total_slots": 27,
+  "formation_count": 8,
+  "area_id": "dc01",
+  "formations": [
+    {
+      "records": [
+        "00000000ffffffff00ff0000000000000000000000000000dc01ffffffffffff",
+        "000000000000000000ff0000000000000000000000000000dc01ffffffffffff",
+        "000000000000000000ff0000000000000000000000000000dc01ffffffffffff"
+      ],
+      "suffix": "00000000",
+      "slots": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "records": [
+        "00000000ffffffff00ff0000000000000000000000000000dc01ffffffffffff",
+        "000000000000000000ff0000000000000000000000000000dc01ffffffffffff",
+        "000000000000000001ff0000000000000000000000000000dc01ffffffffffff"
+      ],
+      "suffix": "02000000",
+      "slots": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "records": [
+        "00000000ffffffff01ff0000000000000000000000000000dc01ffffffffffff",
+        "020000000000000001ff0000000000000000000000000000dc01ffffffffffff"
+      ],
+      "suffix": "02000000",
+      "slots": [
+        1,
+        1
+      ]
+    },
+    {
+      "records": [
+        "00000000ffffffff02ff0000000000000000000000000000dc01ffffffffffff",
+        "00000a000000000002ff0000000000000000000000000000dc01ffffffffffff",
+        "00000a000000000002ff0000000000000000000000000000dc01ffffffffffff",
+        "00000a000000000002ff0000000000000000000000000000dc01ffffffffffff"
+      ],
+      "suffix": "00000a00",
+      "slots": [
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "records": [
+        "00000000ffffffff00ff0000000000000000000000000000dc01ffffffffffff",
+        "000000000000000000ff0000000000000000000000000000dc01ffffffffffff",
+        "000000000000000002ff0000000000000000000000000000dc01ffffffffffff",
+        "00000a000000000002ff0000000000000000000000000000dc01ffffffffffff"
+      ],
+      "suffix": "00000a00",
+      "slots": [
+        0,
+        0,
+        2,
+        2
+      ]
+    },
+    {
+      "records": [
+        "00000000ffffffff01ff0000000000000000000000000000dc01ffffffffffff",
+        "020000000000000001ff0000000000000000000000000000dc01ffffffffffff",
+        "020000000000000001ff0000000000000000000000000000dc01ffffffffffff"
+      ],
+      "suffix": "02000000",
+      "slots": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "records": [
+        "00000000ffffffff00ff0000000000000000000000000000dc01ffffffffffff",
+        "000000000000000000ff0000000000000000000000000000dc01ffffffffffff",
+        "000000000000000001ff0000000000000000000000000000dc01ffffffffffff",
+        "020000000000000001ff0000000000000000000000000000dc01ffffffffffff"
+      ],
+      "suffix": "02000000",
+      "slots": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "records": [
+        "00000000ffffffff00ff0000000000000000000000000000dc01ffffffffffff",
+        "000000000000000000ff0000000000000000000000000000dc01ffffffffffff",
+        "000000000000000001ff0000000000000000000000000000dc01ffffffffffff",
+        "020000000000000002ff0000000000000000000000000000dc01ffffffffffff"
+      ],
+      "suffix": "00000a00",
+      "slots": [
+        0,
+        0,
+        1,
+        2
+      ]
+    }
+  ]
+}

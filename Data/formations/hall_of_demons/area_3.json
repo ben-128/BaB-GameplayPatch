@@ -29,7 +29,7 @@
         0,
         0
       ],
-      "suffix": "00000000",
+      "suffix": "00000100",
       "offset": "0x2BF2B70"
     },
     {
@@ -45,7 +45,7 @@
         1,
         1
       ],
-      "suffix": "00000000",
+      "suffix": "00000100",
       "offset": "0x2BF2BB4"
     },
     {
@@ -62,7 +62,7 @@
         2,
         2
       ],
-      "suffix": "00000000",
+      "suffix": "00000b00",
       "offset": "0x2BF2BF8"
     },
     {
@@ -1529,123 +1529,6 @@
       ],
       "suffix": "f4010002",
       "offset": "0x2BF3300"
-    }
-  ],
-  "slot_types": [
-    "00000000",
-    "00000000",
-    "00000000",
-    "00000000",
-    "00000000",
-    "00000000"
-  ],
-  "type07_entries": [
-    {
-      "vram_offset": "0x0D1C",
-      "idx": 16,
-      "offset": "0x2BF1D3C"
-    },
-    {
-      "vram_offset": "0x0D24",
-      "idx": 17,
-      "offset": "0x2BF1D44"
-    },
-    {
-      "vram_offset": "0x0D2C",
-      "idx": 18,
-      "offset": "0x2BF1D4C"
-    },
-    {
-      "vram_offset": "0x0D34",
-      "idx": 19,
-      "offset": "0x2BF1D54"
-    },
-    null,
-    null
-  ],
-  "available_monsters": [
-    "Basirisk",
-    "Blood-Shadow",
-    "Carberos",
-    "Dark-Goblin",
-    "Death-Knight",
-    "Evil-Ball",
-    "Evil-Stalker",
-    "Goblin-Wizard",
-    "Gorgon",
-    "Gray-Arm",
-    "Gremlin",
-    "Hell-Harpy",
-    "Hell-Hound",
-    "Hell-Ogre",
-    "Salamander",
-    "Spirit-Ball",
-    "Succubus",
-    "Zombie-Dragon"
-  ],
-  "monster_vram_ref": {
-    "Evil-Stalker": "0x0D1C",
-    "Death-Knight": "0x0D24",
-    "Blood-Shadow": "0x0D2C",
-    "Spirit-Ball": "0x0D34",
-    "Gray-Arm": "0x30EE"
-  },
-  "animation_table": [
-    {
-      "bytes": "0001020304050607",
-      "offset": "0x2BF190C"
-    },
-    {
-      "bytes": "08090a0b0b0c0c0c",
-      "offset": "0x2BF1914"
-    },
-    {
-      "bytes": "0d0e0f101011120d",
-      "offset": "0x2BF191C"
-    },
-    {
-      "bytes": "0c0b131415151515",
-      "offset": "0x2BF1924"
-    },
-    {
-      "bytes": "1617181818191a1b",
-      "offset": "0x2BF192C"
-    },
-    {
-      "bytes": "1c1d1e1f0d0d0d20",
-      "offset": "0x2BF1934"
-    }
-  ],
-  "records_8byte": [
-    {
-      "anim_offset": "0x1F1E1D1C",
-      "texture_ref": "0x200D0D0D",
-      "offset": "0x2BF1934"
-    },
-    {
-      "anim_offset": "0x000C",
-      "texture_ref": "0x00030000",
-      "offset": "0x2BF193C"
-    },
-    {
-      "anim_offset": "0x0014",
-      "texture_ref": "0x00044000",
-      "offset": "0x2BF1944"
-    },
-    {
-      "anim_offset": "0x001C",
-      "texture_ref": "0x00058000",
-      "offset": "0x2BF194C"
-    },
-    {
-      "anim_offset": "0x0024",
-      "texture_ref": "0x0006C000",
-      "offset": "0x2BF1954"
-    },
-    {
-      "anim_offset": "0x002C",
-      "texture_ref": "0x00070000",
-      "offset": "0x2BF195C"
     }
   ]
 }

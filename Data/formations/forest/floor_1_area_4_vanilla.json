@@ -1,0 +1,63 @@
+{
+  "level_name": "The Forest",
+  "name": "Floor 1 - Area 4",
+  "formation_area_start": "0x1498CB8",
+  "formation_area_bytes": 400,
+  "original_total_slots": 12,
+  "formation_count": 4,
+  "area_id": "6b02",
+  "formations": [
+    {
+      "records": [
+        "00000000ffffffff03ff00000000000000000000000000006b02ffffffffffff",
+        "000000000000000003ff00000000000000000000000000006b02ffffffffffff"
+      ],
+      "suffix": "00000000",
+      "slots": [
+        3,
+        3
+      ]
+    },
+    {
+      "records": [
+        "00000000ffffffff04ff00000000000000000000000000006b02ffffffffffff",
+        "000000000000000004ff00000000000000000000000000006b02ffffffffffff"
+      ],
+      "suffix": "00000000",
+      "slots": [
+        4,
+        4
+      ]
+    },
+    {
+      "records": [
+        "00000000ffffffff03ff00000000000000000000000000006b02ffffffffffff",
+        "000000000000000003ff00000000000000000000000000006b02ffffffffffff",
+        "000000000000000004ff00000000000000000000000000006b02ffffffffffff",
+        "000000000000000004ff00000000000000000000000000006b02ffffffffffff"
+      ],
+      "suffix": "00000000",
+      "slots": [
+        3,
+        3,
+        4,
+        4
+      ]
+    },
+    {
+      "records": [
+        "00000000ffffffff04ff00000000000000000000000000006b02ffffffffffff",
+        "000000000000000004ff00000000000000000000000000006b02ffffffffffff",
+        "000000000000000004ff00000000000000000000000000006b02ffffffffffff",
+        "000000000000000004ff00000000000000000000000000006b02ffffffffffff"
+      ],
+      "suffix": "00000000",
+      "slots": [
+        4,
+        4,
+        4,
+        4
+      ]
+    }
+  ]
+}

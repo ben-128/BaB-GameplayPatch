@@ -1,0 +1,52 @@
+{
+  "level_name": "Castle of Vamp",
+  "name": "Floor 5 - Area 1",
+  "formation_area_start": "0x2422058",
+  "formation_area_bytes": 332,
+  "original_total_slots": 10,
+  "formation_count": 3,
+  "area_id": "8002",
+  "formations": [
+    {
+      "records": [
+        "00000000ffffffff01ff00000000000000000000000000008002ffffffffffff",
+        "000001000000000001ff00000000000000000000000000008002ffffffffffff",
+        "000001000000000002ff00000000000000000000000000008002ffffffffffff"
+      ],
+      "suffix": "00000000",
+      "slots": [
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "records": [
+        "00000000ffffffff00ff00000000000000000000000000008002ffffffffffff",
+        "00000c000000000000ff00000000000000000000000000008002ffffffffffff",
+        "00000c000000000002ff00000000000000000000000000008002ffffffffffff",
+        "000000000000000002ff00000000000000000000000000008002ffffffffffff"
+      ],
+      "suffix": "00000000",
+      "slots": [
+        0,
+        0,
+        2,
+        2
+      ]
+    },
+    {
+      "records": [
+        "00000000ffffffff02ff00000000000000000000000000008002ffffffffffff",
+        "000000000000000002ff00000000000000000000000000008002ffffffffffff",
+        "000000000000000002ff00000000000000000000000000008002ffffffffffff"
+      ],
+      "suffix": "00000000",
+      "slots": [
+        2,
+        2,
+        2
+      ]
+    }
+  ]
+}

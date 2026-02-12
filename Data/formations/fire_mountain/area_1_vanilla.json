@@ -1,0 +1,24 @@
+{
+  "level_name": "Fire Mountain",
+  "name": "Area 1",
+  "formation_area_start": "0x102E804",
+  "formation_area_bytes": 100,
+  "original_total_slots": 3,
+  "formation_count": 1,
+  "area_id": "d101",
+  "formations": [
+    {
+      "records": [
+        "00000000ffffffff01ff0000000000000000000000000000d101ffffffffffff",
+        "000000000000000001ff0000000000000000000000000000d101ffffffffffff",
+        "000000000000000001ff0000000000000000000000000000d101ffffffffffff"
+      ],
+      "suffix": "00000000",
+      "slots": [
+        1,
+        1,
+        1
+      ]
+    }
+  ]
+}

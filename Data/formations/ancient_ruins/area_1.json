@@ -26,7 +26,7 @@
         0,
         0
       ],
-      "suffix": "00000000",
+      "suffix": "00000a00",
       "offset": "0x25150E0"
     }
   ],
@@ -243,61 +243,6 @@
       ],
       "suffix": "00000000",
       "offset": "0x2515364"
-    }
-  ],
-  "slot_types": [
-    "00000000",
-    "00000000",
-    "00000000"
-  ],
-  "type07_entries": [
-    {
-      "vram_offset": "0x379C",
-      "idx": 73,
-      "offset": "0x251523C"
-    },
-    null,
-    null
-  ],
-  "available_monsters": [
-    "Chimera",
-    "Gargoyle",
-    "Metal-Ball",
-    "Metal-Slime",
-    "Wolf"
-  ],
-  "monster_vram_ref": {
-    "Gargoyle": "0x379C"
-  },
-  "animation_table": [
-    {
-      "bytes": "0001020304050606",
-      "offset": "0x251490C"
-    },
-    {
-      "bytes": "0707070809090a0a",
-      "offset": "0x2514914"
-    },
-    {
-      "bytes": "0b0b0b0b07070707",
-      "offset": "0x251491C"
-    }
-  ],
-  "records_8byte": [
-    {
-      "anim_offset": "0x000C",
-      "texture_ref": "0x00060000",
-      "offset": "0x2514934"
-    },
-    {
-      "anim_offset": "0x0014",
-      "texture_ref": "0x00074000",
-      "offset": "0x251493C"
-    },
-    {
-      "anim_offset": "0x001C",
-      "texture_ref": "0x00088000",
-      "offset": "0x2514944"
     }
   ]
 }

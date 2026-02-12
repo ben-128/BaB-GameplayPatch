@@ -1,0 +1,61 @@
+{
+  "level_name": "Cavern of Death",
+  "name": "Floor 4 - Area 1",
+  "formation_area_start": "0xF8B7B4",
+  "formation_area_bytes": 368,
+  "original_total_slots": 11,
+  "formation_count": 4,
+  "area_id": "f601",
+  "formations": [
+    {
+      "records": [
+        "00000000ffffffff00ff0000000000000000000000000000f601ffffffffffff",
+        "000000000000000000ff0000000000000000000000000000f601ffffffffffff",
+        "000000000000000000ff0000000000000000000000000000f601ffffffffffff"
+      ],
+      "suffix": "00000000",
+      "slots": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "records": [
+        "00000000ffffffff01ff0000000000000000000000000000f601ffffffffffff",
+        "00000a000000000001ff0000000000000000000000000000f601ffffffffffff",
+        "00000a000000000001ff0000000000000000000000000000f601ffffffffffff"
+      ],
+      "suffix": "00000a00",
+      "slots": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "records": [
+        "00000000ffffffff02ff0000000000000000000000000000f601ffffffffffff",
+        "00000a000000000002ff0000000000000000000000000000f601ffffffffffff",
+        "00000a000000000002ff0000000000000000000000000000f601ffffffffffff",
+        "00000a000000000002ff0000000000000000000000000000f601ffffffffffff"
+      ],
+      "suffix": "00000a00",
+      "slots": [
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "records": [
+        "00000000ffffffff03ff0000000000000000000000000000f601ffffffffffff"
+      ],
+      "suffix": "00000100",
+      "slots": [
+        3
+      ]
+    }
+  ]
+}

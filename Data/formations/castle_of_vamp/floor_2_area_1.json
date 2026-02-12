@@ -78,7 +78,7 @@
         3,
         3
       ],
-      "suffix": "00000000",
+      "suffix": "00000100",
       "offset": "0x240E578"
     }
   ],
@@ -2330,115 +2330,6 @@
       ],
       "suffix": "00000000",
       "offset": "0x241163C"
-    }
-  ],
-  "slot_types": [
-    "00000000",
-    "00000000",
-    "00000000",
-    "00000000",
-    "00000000"
-  ],
-  "type07_entries": [
-    {
-      "vram_offset": "0x60F5",
-      "idx": 97,
-      "offset": "0x240E164"
-    },
-    null,
-    null,
-    null,
-    null
-  ],
-  "available_monsters": [
-    "Blood-Skeleton",
-    "Gargoyle",
-    "Ghost",
-    "Marble-Gargoyle",
-    "Zombie"
-  ],
-  "monster_vram_ref": {
-    "Zombie": "0x60F5"
-  },
-  "assignment_entries": [
-    {
-      "slot": 0,
-      "L": 2,
-      "R": 2,
-      "offset": "0x240D988"
-    },
-    {
-      "slot": 1,
-      "L": 5,
-      "R": 0,
-      "offset": "0x240D990"
-    },
-    {
-      "slot": 2,
-      "L": 1,
-      "R": 11,
-      "offset": "0x240D998"
-    },
-    {
-      "slot": 3,
-      "L": 0,
-      "R": 13,
-      "offset": "0x240D9A0"
-    },
-    {
-      "slot": 4,
-      "L": 5,
-      "R": 2,
-      "offset": "0x240D9A8"
-    }
-  ],
-  "animation_table": [
-    {
-      "bytes": "0001020304040505",
-      "offset": "0x240D90C"
-    },
-    {
-      "bytes": "0607080909080706",
-      "offset": "0x240D914"
-    },
-    {
-      "bytes": "0a0b0b0b0c0c0c0a",
-      "offset": "0x240D91C"
-    },
-    {
-      "bytes": "0d0d0d0d0e0e0e0e",
-      "offset": "0x240D924"
-    },
-    {
-      "bytes": "0f0f0f0f0e0e0e0e",
-      "offset": "0x240D92C"
-    }
-  ],
-  "records_8byte": [
-    {
-      "anim_offset": "0x12111110",
-      "texture_ref": "0x14141313",
-      "offset": "0x240D934"
-    },
-    {
-      "anim_offset": "0x15151515",
-      "texture_ref": "0x17171616",
-      "offset": "0x240D93C"
-    },
-    {
-      "anim_offset": "0x13131918",
-      "texture_ref": "0x1B1B1A1A",
-      "offset": "0x240D944"
-    },
-    {
-      "anim_offset": "0x000C",
-      "texture_ref": "0x00060000",
-      "offset": "0x240D94C"
-    },
-    {
-      "anim_offset": "0x0014",
-      "texture_ref": "0x00074000",
-      "offset": "0x240D954"
     }
   ]
 }

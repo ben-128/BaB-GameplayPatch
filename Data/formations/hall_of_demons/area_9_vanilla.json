@@ -1,0 +1,59 @@
+{
+  "level_name": "Hall of Demons",
+  "name": "Area 9",
+  "formation_area_start": "0x2C03EE0",
+  "formation_area_bytes": 336,
+  "original_total_slots": 10,
+  "formation_count": 4,
+  "area_id": "7f00",
+  "formations": [
+    {
+      "records": [
+        "00000000ffffffff00ff00000000000000000000000000007f00ffffffffffff",
+        "000001000000000000ff00000000000000000000000000007f00ffffffffffff",
+        "000001000000000000ff00000000000000000000000000007f00ffffffffffff"
+      ],
+      "suffix": "00000100",
+      "slots": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "records": [
+        "00000000ffffffff00ff00000000000000000000000000007f00ffffffffffff",
+        "000001000000000000ff00000000000000000000000000007f00ffffffffffff"
+      ],
+      "suffix": "00000100",
+      "slots": [
+        0,
+        0
+      ]
+    },
+    {
+      "records": [
+        "00000000ffffffff01ff00000000000000000000000000007f00ffffffffffff",
+        "000000000000000001ff00000000000000000000000000007f00ffffffffffff"
+      ],
+      "suffix": "00000000",
+      "slots": [
+        1,
+        1
+      ]
+    },
+    {
+      "records": [
+        "00000000ffffffff00ff00000000000000000000000000007f00ffffffffffff",
+        "000001000000000001ff00000000000000000000000000007f00ffffffffffff",
+        "000001000000000001ff00000000000000000000000000007f00ffffffffffff"
+      ],
+      "suffix": "00000000",
+      "slots": [
+        0,
+        1,
+        1
+      ]
+    }
+  ]
+}

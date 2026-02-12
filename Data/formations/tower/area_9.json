@@ -10,10 +10,10 @@
     "Evil-Crystal"
   ],
   "formation_area_start": "0x1992818",
-  "formation_area_bytes": 172,
-  "original_total_slots": 5,
+  "formation_area_bytes": 204,
+  "original_total_slots": 4,
   "area_id": "dc00",
-  "formation_count": 3,
+  "formation_count": 2,
   "formations": [
     {
       "total": 3,
@@ -34,7 +34,7 @@
         2,
         2
       ],
-      "suffix": "00000000",
+      "suffix": "00000a00",
       "offset": "0x1992818"
     },
     {
@@ -49,23 +49,8 @@
       "slots": [
         1
       ],
-      "suffix": "00000000",
-      "offset": "0x199287C"
-    },
-    {
-      "total": 1,
-      "composition": [
-        {
-          "count": 1,
-          "slot": 1,
-          "monster": "Hard-Born"
-        }
-      ],
-      "slots": [
-        1
-      ],
-      "suffix": "00000000",
-      "offset": "0x19928A0"
+      "suffix": "00000b00",
+      "offset": "0x19928C0"
     }
   ],
   "_placed_spawns": "--- placed spawns (per-record offsets) ---",
@@ -1219,93 +1204,6 @@
       ],
       "suffix": "00000000",
       "offset": "0x1993AAC"
-    }
-  ],
-  "slot_types": [
-    "00000000",
-    "00000000",
-    "00000000",
-    "00000000",
-    "00000000"
-  ],
-  "type07_entries": [
-    null,
-    null,
-    null,
-    null,
-    null
-  ],
-  "available_monsters": [
-    "Arch-Magi",
-    "Black-Knight",
-    "Born-Golem",
-    "Crimson-Lizard",
-    "Dark-Elf",
-    "Dark-Magi",
-    "Dark-Wizard",
-    "Evil-Crystal",
-    "Gargoyle",
-    "Goblin-Fly",
-    "Goblin-Shaman",
-    "Green-Slime",
-    "Guard-Golem",
-    "Hard-Born",
-    "Living-Armor",
-    "Living-Sword",
-    "Lizard-Man",
-    "Lv30.Goblin",
-    "Platinum-Knight",
-    "Shadow-Demon",
-    "Stalker",
-    "Wyvern"
-  ],
-  "animation_table": [
-    {
-      "bytes": "0001010002020202",
-      "offset": "0x199190C"
-    },
-    {
-      "bytes": "0304050506060707",
-      "offset": "0x1991914"
-    },
-    {
-      "bytes": "0808080808080808",
-      "offset": "0x199191C"
-    },
-    {
-      "bytes": "090a0b0c0d0d0e0f",
-      "offset": "0x1991924"
-    },
-    {
-      "bytes": "1011080808121314",
-      "offset": "0x199192C"
-    }
-  ],
-  "records_8byte": [
-    {
-      "anim_offset": "0x17081615",
-      "texture_ref": "0x19181817",
-      "offset": "0x1991934"
-    },
-    {
-      "anim_offset": "0x1A080808",
-      "texture_ref": "0x1D1C1C1B",
-      "offset": "0x199193C"
-    },
-    {
-      "anim_offset": "0x000C",
-      "texture_ref": "0x00020000",
-      "offset": "0x1991944"
-    },
-    {
-      "anim_offset": "0x0014",
-      "texture_ref": "0x00034000",
-      "offset": "0x199194C"
-    },
-    {
-      "anim_offset": "0x001C",
-      "texture_ref": "0x00048000",
-      "offset": "0x1991954"
     }
   ]
 }

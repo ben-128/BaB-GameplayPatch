@@ -1,0 +1,24 @@
+{
+  "level_name": "Undersea / Lake",
+  "name": "Area 2",
+  "formation_area_start": "0x269EAC4",
+  "formation_area_bytes": 100,
+  "original_total_slots": 3,
+  "formation_count": 1,
+  "area_id": "2101",
+  "formations": [
+    {
+      "records": [
+        "00000000ffffffff01ff00000000000000000000000000002101ffffffffffff",
+        "000000000000000001ff00000000000000000000000000002101ffffffffffff",
+        "000000000000000001ff00000000000000000000000000002101ffffffffffff"
+      ],
+      "suffix": "00000000",
+      "slots": [
+        1,
+        1,
+        1
+      ]
+    }
+  ]
+}

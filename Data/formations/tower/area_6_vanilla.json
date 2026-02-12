@@ -1,0 +1,59 @@
+{
+  "level_name": "The Tower (Old Palace)",
+  "name": "Area 6",
+  "formation_area_start": "0x19821E4",
+  "formation_area_bytes": 336,
+  "original_total_slots": 10,
+  "formation_count": 4,
+  "area_id": "8403",
+  "formations": [
+    {
+      "records": [
+        "00000000ffffffff00ff00000000000000000000000000008403ffffffffffff",
+        "000000000000000000ff00000000000000000000000000008403ffffffffffff"
+      ],
+      "suffix": "00000000",
+      "slots": [
+        0,
+        0
+      ]
+    },
+    {
+      "records": [
+        "00000000ffffffff01ff00000000000000000000000000008403ffffffffffff",
+        "00000a000000000001ff00000000000000000000000000008403ffffffffffff"
+      ],
+      "suffix": "00000a00",
+      "slots": [
+        1,
+        1
+      ]
+    },
+    {
+      "records": [
+        "00000000ffffffff01ff00000000000000000000000000008403ffffffffffff",
+        "00000a000000000001ff00000000000000000000000000008403ffffffffffff",
+        "00000a000000000002ff00000000000000000000000000008403ffffffffffff"
+      ],
+      "suffix": "00000000",
+      "slots": [
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "records": [
+        "00000000ffffffff03ff00000000000000000000000000008403ffffffffffff",
+        "000000000000000003ff00000000000000000000000000008403ffffffffffff",
+        "000000000000000000ff00000000000000000000000000008403ffffffffffff"
+      ],
+      "suffix": "00000000",
+      "slots": [
+        3,
+        3,
+        0
+      ]
+    }
+  ]
+}

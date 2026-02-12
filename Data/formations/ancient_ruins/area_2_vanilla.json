@@ -1,0 +1,33 @@
+{
+  "level_name": "Ancient Ruins",
+  "name": "Area 2",
+  "formation_area_start": "0x2517590",
+  "formation_area_bytes": 136,
+  "original_total_slots": 4,
+  "formation_count": 2,
+  "area_id": "3500",
+  "formations": [
+    {
+      "records": [
+        "00000000ffffffff00ff00000000000000000000000000003500ffffffffffff",
+        "000000000000000000ff00000000000000000000000000003500ffffffffffff"
+      ],
+      "suffix": "00000000",
+      "slots": [
+        0,
+        0
+      ]
+    },
+    {
+      "records": [
+        "00000000ffffffff01ff00000000000000000000000000003500ffffffffffff",
+        "000000000000000001ff00000000000000000000000000003500ffffffffffff"
+      ],
+      "suffix": "00000000",
+      "slots": [
+        1,
+        1
+      ]
+    }
+  ]
+}

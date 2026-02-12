@@ -65,46 +65,5 @@
   "zone_spawns_area_bytes": 0,
   "original_total_zone_spawn_slots": 0,
   "zone_spawn_count": 0,
-  "zone_spawns": [],
-  "slot_types": [
-    "00000000",
-    "00000000"
-  ],
-  "type07_entries": [
-    {
-      "vram_offset": "0x02AC",
-      "idx": 3,
-      "offset": "0x102E3DC"
-    },
-    null
-  ],
-  "available_monsters": [
-    "Red-Dragon",
-    "Salamander"
-  ],
-  "monster_vram_ref": {
-    "Red-Dragon": "0x02AC"
-  },
-  "animation_table": [
-    {
-      "bytes": "0000000000000000",
-      "offset": "0x102E10C"
-    },
-    {
-      "bytes": "0101010101010101",
-      "offset": "0x102E114"
-    }
-  ],
-  "records_8byte": [
-    {
-      "anim_offset": "0x2020202",
-      "texture_ref": "0x02020202",
-      "offset": "0x102E134"
-    },
-    {
-      "anim_offset": "0x0000",
-      "texture_ref": "0x00000000",
-      "offset": "0x102E13C"
-    }
-  ]
+  "zone_spawns": []
 }

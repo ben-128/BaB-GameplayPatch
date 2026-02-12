@@ -1,0 +1,59 @@
+{
+  "level_name": "Hall of Demons",
+  "name": "Area 11",
+  "formation_area_start": "0x2C09848",
+  "formation_area_bytes": 336,
+  "original_total_slots": 10,
+  "formation_count": 4,
+  "area_id": "c501",
+  "formations": [
+    {
+      "records": [
+        "00000000ffffffff00ff0000000000000000000000000000c501ffffffffffff",
+        "000001000000000000ff0000000000000000000000000000c501ffffffffffff",
+        "000001000000000000ff0000000000000000000000000000c501ffffffffffff"
+      ],
+      "suffix": "00000100",
+      "slots": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "records": [
+        "00000000ffffffff01ff0000000000000000000000000000c501ffffffffffff",
+        "000001000000000001ff0000000000000000000000000000c501ffffffffffff"
+      ],
+      "suffix": "00000100",
+      "slots": [
+        1,
+        1
+      ]
+    },
+    {
+      "records": [
+        "00000000ffffffff02ff0000000000000000000000000000c501ffffffffffff",
+        "000000000000000002ff0000000000000000000000000000c501ffffffffffff"
+      ],
+      "suffix": "00000000",
+      "slots": [
+        2,
+        2
+      ]
+    },
+    {
+      "records": [
+        "00000000ffffffff00ff0000000000000000000000000000c501ffffffffffff",
+        "000001000000000001ff0000000000000000000000000000c501ffffffffffff",
+        "000001000000000002ff0000000000000000000000000000c501ffffffffffff"
+      ],
+      "suffix": "00000000",
+      "slots": [
+        0,
+        1,
+        2
+      ]
+    }
+  ]
+}

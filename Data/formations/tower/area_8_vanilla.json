@@ -1,0 +1,24 @@
+{
+  "level_name": "The Tower (Old Palace)",
+  "name": "Area 8",
+  "formation_area_start": "0x198B79C",
+  "formation_area_bytes": 100,
+  "original_total_slots": 3,
+  "formation_count": 1,
+  "area_id": "9f02",
+  "formations": [
+    {
+      "records": [
+        "00000000ffffffff00ff00000000000000000000000000009f02ffffffffffff",
+        "00000a000000000000ff00000000000000000000000000009f02ffffffffffff",
+        "00000a000000000000ff00000000000000000000000000009f02ffffffffffff"
+      ],
+      "suffix": "00000a00",
+      "slots": [
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

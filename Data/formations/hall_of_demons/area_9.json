@@ -27,7 +27,7 @@
         0,
         0
       ],
-      "suffix": "00000000",
+      "suffix": "00000100",
       "offset": "0x2C03EE0"
     },
     {
@@ -43,7 +43,7 @@
         0,
         0
       ],
-      "suffix": "00000000",
+      "suffix": "00000100",
       "offset": "0x2C03F44"
     },
     {
@@ -887,75 +887,6 @@
       ],
       "suffix": "00000000",
       "offset": "0x2C04AFC"
-    }
-  ],
-  "slot_types": [
-    "00000000",
-    "00000000",
-    "00000000"
-  ],
-  "type07_entries": [
-    {
-      "vram_offset": "0x30EE",
-      "idx": 49,
-      "offset": "0x2C03830"
-    },
-    null,
-    null
-  ],
-  "available_monsters": [
-    "Basirisk",
-    "Blood-Shadow",
-    "Carberos",
-    "Dark-Goblin",
-    "Death-Knight",
-    "Evil-Ball",
-    "Evil-Stalker",
-    "Goblin-Wizard",
-    "Gorgon",
-    "Gray-Arm",
-    "Gremlin",
-    "Hell-Harpy",
-    "Hell-Hound",
-    "Hell-Ogre",
-    "Salamander",
-    "Spirit-Ball",
-    "Succubus",
-    "Zombie-Dragon"
-  ],
-  "monster_vram_ref": {
-    "Gray-Arm": "0x30EE",
-    "Hell-Ogre": "0x23FC"
-  },
-  "animation_table": [
-    {
-      "bytes": "0001020304040404",
-      "offset": "0x2C0310C"
-    },
-    {
-      "bytes": "0b0c0d0e0f101111",
-      "offset": "0x2C03114"
-    },
-    {
-      "bytes": "1213141516171818",
-      "offset": "0x2C0311C"
-    }
-  ],
-  "records_8byte": [
-    {
-      "anim_offset": "0x0000",
-      "texture_ref": "0x00000000",
-      "offset": "0x2C03134"
-    },
-    {
-      "anim_offset": "0x001C",
-      "texture_ref": "0x00000024",
-      "offset": "0x2C0313C"
-    },
-    {
-      "anim_offset": "0x0000",
-      "texture_ref": "0x00000800",
-      "offset": "0x2C03144"
     }
   ]
 }

@@ -1,0 +1,57 @@
+{
+  "level_name": "The Sealed Cave",
+  "name": "Area 2",
+  "formation_area_start": "0x1DDD84C",
+  "formation_area_bytes": 304,
+  "original_total_slots": 9,
+  "formation_count": 4,
+  "area_id": "6b00",
+  "formations": [
+    {
+      "records": [
+        "00000000ffffffff00ff00000000000000000000000000006b00ffffffffffff",
+        "000000000000000000ff00000000000000000000000000006b00ffffffffffff"
+      ],
+      "suffix": "00000000",
+      "slots": [
+        0,
+        0
+      ]
+    },
+    {
+      "records": [
+        "00000000ffffffff01ff00000000000000000000000000006b00ffffffffffff",
+        "000000000000000001ff00000000000000000000000000006b00ffffffffffff"
+      ],
+      "suffix": "00000000",
+      "slots": [
+        1,
+        1
+      ]
+    },
+    {
+      "records": [
+        "00000000ffffffff00ff00000000000000000000000000006b00ffffffffffff",
+        "000000000000000001ff00000000000000000000000000006b00ffffffffffff",
+        "000000000000000001ff00000000000000000000000000006b00ffffffffffff"
+      ],
+      "suffix": "00000000",
+      "slots": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "records": [
+        "00000000ffffffff02ff00000000000000000000000000006b00ffffffffffff",
+        "000000000000000002ff00000000000000000000000000006b00ffffffffffff"
+      ],
+      "suffix": "00000000",
+      "slots": [
+        2,
+        2
+      ]
+    }
+  ]
+}

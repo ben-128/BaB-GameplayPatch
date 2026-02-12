@@ -11,9 +11,9 @@
   ],
   "formation_area_start": "0x199C000",
   "formation_area_bytes": 300,
-  "original_total_slots": 9,
+  "original_total_slots": 7,
   "area_id": "dc00",
-  "formation_count": 3,
+  "formation_count": 2,
   "formations": [
     {
       "total": 3,
@@ -52,24 +52,8 @@
         0,
         0
       ],
-      "suffix": "00000000",
-      "offset": "0x199C064"
-    },
-    {
-      "total": 2,
-      "composition": [
-        {
-          "count": 2,
-          "slot": 0,
-          "monster": "Arch-Magi"
-        }
-      ],
-      "slots": [
-        0,
-        0
-      ],
-      "suffix": "00000000",
-      "offset": "0x199C0E8"
+      "suffix": "00000100",
+      "offset": "0x199C0A8"
     }
   ],
   "_placed_spawns": "--- placed spawns (per-record offsets) ---",
@@ -1223,93 +1207,6 @@
       ],
       "suffix": "00000000",
       "offset": "0x199D2C0"
-    }
-  ],
-  "slot_types": [
-    "00000000",
-    "00000000",
-    "00000000",
-    "00000000",
-    "00000000"
-  ],
-  "type07_entries": [
-    null,
-    null,
-    null,
-    null,
-    null
-  ],
-  "available_monsters": [
-    "Arch-Magi",
-    "Black-Knight",
-    "Born-Golem",
-    "Crimson-Lizard",
-    "Dark-Elf",
-    "Dark-Magi",
-    "Dark-Wizard",
-    "Evil-Crystal",
-    "Gargoyle",
-    "Goblin-Fly",
-    "Goblin-Shaman",
-    "Green-Slime",
-    "Guard-Golem",
-    "Hard-Born",
-    "Living-Armor",
-    "Living-Sword",
-    "Lizard-Man",
-    "Lv30.Goblin",
-    "Platinum-Knight",
-    "Shadow-Demon",
-    "Stalker",
-    "Wyvern"
-  ],
-  "animation_table": [
-    {
-      "bytes": "0001010002020202",
-      "offset": "0x199B10C"
-    },
-    {
-      "bytes": "0304050506060707",
-      "offset": "0x199B114"
-    },
-    {
-      "bytes": "0808080808080808",
-      "offset": "0x199B11C"
-    },
-    {
-      "bytes": "090a0b0c0d0d0e0f",
-      "offset": "0x199B124"
-    },
-    {
-      "bytes": "1011080808121314",
-      "offset": "0x199B12C"
-    }
-  ],
-  "records_8byte": [
-    {
-      "anim_offset": "0x17081615",
-      "texture_ref": "0x19181817",
-      "offset": "0x199B134"
-    },
-    {
-      "anim_offset": "0x1A080808",
-      "texture_ref": "0x1D1C1C1B",
-      "offset": "0x199B13C"
-    },
-    {
-      "anim_offset": "0x000C",
-      "texture_ref": "0x00020000",
-      "offset": "0x199B144"
-    },
-    {
-      "anim_offset": "0x0014",
-      "texture_ref": "0x00034000",
-      "offset": "0x199B14C"
-    },
-    {
-      "anim_offset": "0x001C",
-      "texture_ref": "0x00048000",
-      "offset": "0x199B154"
     }
   ]
 }

@@ -44,7 +44,7 @@
         1,
         1
       ],
-      "suffix": "00000000",
+      "suffix": "00000a00",
       "offset": "0x1DE61CC"
     },
     {
@@ -78,7 +78,7 @@
         1,
         1
       ],
-      "suffix": "00000000",
+      "suffix": "00000a00",
       "offset": "0x1DE6274"
     }
   ],
@@ -447,104 +447,5 @@
   "zone_spawns_area_bytes": 0,
   "original_total_zone_spawn_slots": 0,
   "zone_spawn_count": 0,
-  "zone_spawns": [],
-  "slot_types": [
-    "00000000",
-    "00000000",
-    "00000000"
-  ],
-  "type07_entries": [
-    {
-      "vram_offset": "0x0580",
-      "idx": 17,
-      "offset": "0x1DE5BA4"
-    },
-    {
-      "vram_offset": "0x0588",
-      "idx": 18,
-      "offset": "0x1DE5BAC"
-    },
-    {
-      "vram_offset": "0x0590",
-      "idx": 19,
-      "offset": "0x1DE5BB4"
-    }
-  ],
-  "available_monsters": [
-    "Black-Durahan",
-    "Blood-Mummy",
-    "Blood-Shadow",
-    "Blood-Skeleton",
-    "Durahan",
-    "Ghoul",
-    "King-Mummy",
-    "Mummy",
-    "Noble-Mummy",
-    "Red-Slime",
-    "Revenant",
-    "Shadow",
-    "Skeleton",
-    "Undead-Knight",
-    "Undead-Master",
-    "Wight",
-    "Wraith",
-    "Yellow-Slime",
-    "Zombie"
-  ],
-  "monster_vram_ref": {
-    "Red-Slime": "0x0580",
-    "Wraith": "0x0588",
-    "Blood-Skeleton": "0x0590"
-  },
-  "assignment_entries": [
-    {
-      "slot": 0,
-      "L": 5,
-      "R": 2,
-      "offset": "0x1DE5964"
-    },
-    {
-      "slot": 1,
-      "L": 4,
-      "R": 3,
-      "offset": "0x1DE596C"
-    },
-    {
-      "slot": 2,
-      "L": 0,
-      "R": 4,
-      "offset": "0x1DE5974"
-    }
-  ],
-  "animation_table": [
-    {
-      "bytes": "0000010102020202",
-      "offset": "0x1DE590C"
-    },
-    {
-      "bytes": "0304040505050505",
-      "offset": "0x1DE5914"
-    },
-    {
-      "bytes": "0606060607070808",
-      "offset": "0x1DE591C"
-    }
-  ],
-  "records_8byte": [
-    {
-      "anim_offset": "0x000C",
-      "texture_ref": "0x00030000",
-      "offset": "0x1DE5934"
-    },
-    {
-      "anim_offset": "0x0014",
-      "texture_ref": "0x00044000",
-      "offset": "0x1DE593C"
-    },
-    {
-      "anim_offset": "0x001C",
-      "texture_ref": "0x00058000",
-      "offset": "0x1DE5944"
-    }
-  ]
+  "zone_spawns": []
 }

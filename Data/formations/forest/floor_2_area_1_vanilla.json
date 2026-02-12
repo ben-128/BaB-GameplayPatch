@@ -1,0 +1,39 @@
+{
+  "level_name": "The Forest",
+  "name": "Floor 2 - Area 1",
+  "formation_area_start": "0x14A2A4C",
+  "formation_area_bytes": 232,
+  "original_total_slots": 7,
+  "formation_count": 2,
+  "area_id": "2e02",
+  "formations": [
+    {
+      "records": [
+        "00000000ffffffff02ff00000000000000000000000000002e02ffffffffffff",
+        "000000000000000002ff00000000000000000000000000002e02ffffffffffff"
+      ],
+      "suffix": "00000000",
+      "slots": [
+        2,
+        2
+      ]
+    },
+    {
+      "records": [
+        "00000000ffffffff01ff00000000000000000000000000002e02ffffffffffff",
+        "000000000000000001ff00000000000000000000000000002e02ffffffffffff",
+        "000000000000000001ff00000000000000000000000000002e02ffffffffffff",
+        "000000000000000001ff00000000000000000000000000002e02ffffffffffff",
+        "000000000000000001ff00000000000000000000000000002e02ffffffffffff"
+      ],
+      "suffix": "00000000",
+      "slots": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  ]
+}

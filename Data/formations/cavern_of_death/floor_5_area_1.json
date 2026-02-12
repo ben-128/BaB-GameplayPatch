@@ -79,7 +79,7 @@
         3,
         3
       ],
-      "suffix": "00000000",
+      "suffix": "00000a00",
       "offset": "0xF8D204"
     },
     {
@@ -109,7 +109,7 @@
         3,
         3
       ],
-      "suffix": "00000000",
+      "suffix": "00000a00",
       "offset": "0xF8D2C8"
     }
   ],
@@ -966,86 +966,6 @@
       ],
       "suffix": "00000000",
       "offset": "0xF8E650"
-    }
-  ],
-  "slot_types": [
-    "00000000",
-    "00000000",
-    "00000000",
-    "00000000"
-  ],
-  "type07_entries": [
-    {
-      "vram_offset": "0x0608",
-      "idx": 17,
-      "offset": "0xF8CCFC"
-    },
-    {
-      "vram_offset": "0x0610",
-      "idx": 18,
-      "offset": "0xF8CD04"
-    },
-    {
-      "vram_offset": "0x0618",
-      "idx": 19,
-      "offset": "0xF8CD0C"
-    },
-    {
-      "vram_offset": "0x0620",
-      "idx": 20,
-      "offset": "0xF8CD14"
-    }
-  ],
-  "available_monsters": [
-    "Blue-Slime",
-    "Cave-Bear",
-    "Cave-Scissors",
-    "Spirit-Ball"
-  ],
-  "monster_vram_ref": {
-    "Cave-Bear": "0x0608",
-    "Blue-Slime": "0x0610",
-    "Cave-Scissors": "0x0618",
-    "Spirit-Ball": "0x0620"
-  },
-  "animation_table": [
-    {
-      "bytes": "0001020203030303",
-      "offset": "0xF8C90C"
-    },
-    {
-      "bytes": "0405060707060504",
-      "offset": "0xF8C914"
-    },
-    {
-      "bytes": "08090a0b0b0a0908",
-      "offset": "0xF8C91C"
-    },
-    {
-      "bytes": "0c0c0c0c0c0c0d0d",
-      "offset": "0xF8C924"
-    }
-  ],
-  "records_8byte": [
-    {
-      "anim_offset": "0x13121110",
-      "texture_ref": "0x14141213",
-      "offset": "0xF8C934"
-    },
-    {
-      "anim_offset": "0x16151615",
-      "texture_ref": "0x15161516",
-      "offset": "0xF8C93C"
-    },
-    {
-      "anim_offset": "0x1A191817",
-      "texture_ref": "0x1C1C1B1B",
-      "offset": "0xF8C944"
-    },
-    {
-      "anim_offset": "0x000C",
-      "texture_ref": "0x00030000",
-      "offset": "0xF8C94C"
     }
   ]
 }

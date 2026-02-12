@@ -43,7 +43,7 @@
         1,
         1
       ],
-      "suffix": "00000000",
+      "suffix": "00000a00",
       "offset": "0x1982228"
     },
     {
@@ -2015,108 +2015,6 @@
       ],
       "suffix": "00000000",
       "offset": "0x19844E8"
-    }
-  ],
-  "slot_types": [
-    "00000000",
-    "00000000",
-    "00000000",
-    "00000000"
-  ],
-  "type07_entries": [
-    null,
-    null,
-    null,
-    null
-  ],
-  "available_monsters": [
-    "Arch-Magi",
-    "Black-Knight",
-    "Born-Golem",
-    "Crimson-Lizard",
-    "Dark-Elf",
-    "Dark-Magi",
-    "Dark-Wizard",
-    "Evil-Crystal",
-    "Gargoyle",
-    "Goblin-Fly",
-    "Goblin-Shaman",
-    "Green-Slime",
-    "Guard-Golem",
-    "Hard-Born",
-    "Living-Armor",
-    "Living-Sword",
-    "Lizard-Man",
-    "Lv30.Goblin",
-    "Platinum-Knight",
-    "Shadow-Demon",
-    "Stalker",
-    "Wyvern"
-  ],
-  "assignment_entries": [
-    {
-      "slot": 0,
-      "L": 10,
-      "R": 1,
-      "offset": "0x1981970"
-    },
-    {
-      "slot": 1,
-      "L": 6,
-      "R": 2,
-      "offset": "0x1981978"
-    },
-    {
-      "slot": 2,
-      "L": 11,
-      "R": 3,
-      "offset": "0x1981980"
-    },
-    {
-      "slot": 3,
-      "L": 7,
-      "R": 4,
-      "offset": "0x1981988"
-    }
-  ],
-  "animation_table": [
-    {
-      "bytes": "0001020303040505",
-      "offset": "0x198190C"
-    },
-    {
-      "bytes": "06070809090a0a0b",
-      "offset": "0x1981914"
-    },
-    {
-      "bytes": "0c0c0c0c0d0d0d0d",
-      "offset": "0x198191C"
-    },
-    {
-      "bytes": "0d0d0d0e0f101011",
-      "offset": "0x1981924"
-    }
-  ],
-  "records_8byte": [
-    {
-      "anim_offset": "0x000C",
-      "texture_ref": "0x00020000",
-      "offset": "0x1981934"
-    },
-    {
-      "anim_offset": "0x0014",
-      "texture_ref": "0x00034000",
-      "offset": "0x198193C"
-    },
-    {
-      "anim_offset": "0x001C",
-      "texture_ref": "0x00048000",
-      "offset": "0x1981944"
-    },
-    {
-      "anim_offset": "0x0024",
-      "texture_ref": "0x0005C000",
-      "offset": "0x198194C"
     }
   ]
 }
