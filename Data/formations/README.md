@@ -10,11 +10,12 @@ Le système de formations permet de modifier les rencontres aléatoires (formati
 - `floor_X_area_Y.json` - Configuration des formations (éditez ce fichier)
 - `floor_X_area_Y_vanilla.json` - Bytes vanilla de référence (NE PAS ÉDITER)
 
-### Scripts
+### Scripts (dans Scripts/)
 - `patch_formations.py` - Applique les modifications à BLAZE.ALL
 - `extract_formations.py` - Extrait les formations du vanilla bin
 - `extract_vanilla_bytes_v2.py` - Extrait les bytes vanilla exacts
-- `extract_slot_types.py` - Extrait les types de monstres pour suffixes corrects
+- `extract_slot_types.py` - Extrait les types de monstres pour toutes les areas
+- `serve_editor.py` - Serveur pour éditeur visuel
 - `editor.html` - Éditeur visuel (lancer avec `edit_formations.bat`)
 
 ### Documentation
@@ -83,11 +84,12 @@ Correspond à l'ordre dans `monsters`:
 Après modification, extraire les slot_types pour suffixes corrects:
 
 ```bash
-cd Data/formations
+cd Data/formations/Scripts
 python extract_slot_types.py
 ```
 
-Ceci met à jour le JSON avec:
+Ce script traite **automatiquement toutes les areas** (41 areas avec formations).
+Il met à jour chaque JSON avec:
 ```json
 "slot_types": [
   "00000000",  // Goblin
@@ -99,12 +101,14 @@ Ceci met à jour le JSON avec:
 ### 4. Build et test
 
 ```bash
-cd Data/formations
+cd Data/formations/Scripts
 python patch_formations.py
 
-cd ../..
+cd ../../..
 build_gameplay_patch.bat
 ```
+
+Ou simplement lancer `build_gameplay_patch.bat` qui appelle automatiquement le patcher.
 
 Le patcher:
 - Détecte automatiquement compositions custom vs vanilla
