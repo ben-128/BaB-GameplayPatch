@@ -14,15 +14,18 @@
   "formation_count": 6,
   "formations": [
     {
-      "total": 3,
+      "total": 6,
       "composition": [
         {
-          "count": 3,
+          "count": 6,
           "slot": 0,
           "monster": "Kobold"
         }
       ],
       "slots": [
+        0,
+        0,
+        0,
         0,
         0,
         0
@@ -31,69 +34,7 @@
       "offset": "0x148CCC4"
     },
     {
-      "total": 3,
-      "composition": [
-        {
-          "count": 1,
-          "slot": 0,
-          "monster": "Kobold"
-        },
-        {
-          "count": 2,
-          "slot": 1,
-          "monster": "Giant-Beetle"
-        }
-      ],
-      "slots": [
-        0,
-        1,
-        1
-      ],
-      "suffix": "00000000",
-      "offset": "0x148CD28"
-    },
-    {
-      "total": 3,
-      "composition": [
-        {
-          "count": 2,
-          "slot": 1,
-          "monster": "Giant-Beetle"
-        },
-        {
-          "count": 1,
-          "slot": 2,
-          "monster": "Giant-Ant"
-        }
-      ],
-      "slots": [
-        1,
-        1,
-        2
-      ],
-      "suffix": "00000000",
-      "offset": "0x148CD8C"
-    },
-    {
-      "total": 4,
-      "composition": [
-        {
-          "count": 4,
-          "slot": 1,
-          "monster": "Giant-Beetle"
-        }
-      ],
-      "slots": [
-        1,
-        1,
-        1,
-        1
-      ],
-      "suffix": "00000000",
-      "offset": "0x148CDF0"
-    },
-    {
-      "total": 3,
+      "total": 6,
       "composition": [
         {
           "count": 2,
@@ -101,7 +42,12 @@
           "monster": "Kobold"
         },
         {
-          "count": 1,
+          "count": 2,
+          "slot": 1,
+          "monster": "Giant-Beetle"
+        },
+        {
+          "count": 2,
           "slot": 2,
           "monster": "Giant-Ant"
         }
@@ -109,31 +55,40 @@
       "slots": [
         0,
         0,
+        1,
+        1,
+        2,
         2
       ],
       "suffix": "00000000",
       "offset": "0x148CE74"
     },
     {
-      "total": 5,
+      "total": 6,
       "composition": [
         {
-          "count": 3,
+          "count": 1,
           "slot": 0,
           "monster": "Kobold"
         },
         {
-          "count": 2,
+          "count": 1,
           "slot": 1,
           "monster": "Giant-Beetle"
+        },
+        {
+          "count": 4,
+          "slot": 2,
+          "monster": "Giant-Ant"
         }
       ],
       "slots": [
         0,
-        0,
-        0,
         1,
-        1
+        2,
+        2,
+        2,
+        2
       ],
       "suffix": "00000000",
       "offset": "0x148CED8"

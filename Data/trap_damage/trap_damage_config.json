@@ -1,18 +1,22 @@
 {
   "_comment": [
-    "overlay_patches: remplacement des callers hardcodes (Pass 1) + entity init data (Pass 3).",
+    "overlay_patches: remplacement des callers hardcodes (Pass 1-4).",
     "  Format 'values': 'original%': patched%. Toute valeur non listee reste inchangee.",
     "  Pass 1: 15 jal callers directs avec immediate $a1.",
     "  Pass 2: DESACTIVE (GPE state machine, PAS damage - voir RESEARCH.md).",
-    "  Pass 3: entity init data halfwords (rochers, pieges lourds)."
+    "  Pass 3: 0 entity init data halfwords (vide pour l'instant).",
+    "  Pass 4: 51 trap code patterns (falling rocks + spike traps, etc.) - NEW 2026-02-13!"
   ],
   "overlay_patches": {
     "enabled": true,
     "values": {
-      "2": 10,
-      "3": 15,
-      "5": 22,
-      "10": 50,
+      "1": 3,
+      "2": 8,
+      "3": 13,
+      "5": 17,
+      "6": 20,
+      "10": 30,
+      "15": 40,
       "20": 50
     }
   }

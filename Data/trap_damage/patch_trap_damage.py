@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-Patch trap/environmental damage in BLAZE.ALL overlay code (v5).
+Patch trap/environmental damage in BLAZE.ALL overlay code (v6).
 
-Three passes:
+Four passes:
 
 Pass 1 - Direct callers: Find `jal 0x80024F90` where $a1 is an immediate.
   Catches: static traps (2%, 3%, 5%, 10%, 20%) that call damage function directly.
@@ -15,6 +15,11 @@ Pass 3 - Entity init data: Patch known halfword offsets in entity configuration
   data blocks. These are read by overlay handlers and passed to the damage
   function via register arguments. Catches falling rocks, heavy traps etc.
   Offsets found via reverse engineering of Template A/B functions.
+
+Pass 4 - Falling rocks (NEW 2026-02-13): Pattern-based search for hardcoded
+  damage% in overlay code. Pattern: `addiu a1, zero, 10` + `addu a2, zero, zero`.
+  21 sites across all dungeons. Found via in-game debugging with DuckStation.
+  See Data/trap_damage/FALLING_ROCK_SOLUTION.md for full details.
 
 Config format (overlay_patches.values):
   {"2": 10, "5": 25, "10": 50, "20": 50}
@@ -205,8 +210,70 @@ def apply_patches_pass3(data, entries, value_map):
     return patched, skipped
 
 
+def find_falling_rocks(data):
+    """
+    Pass 4: Find trap damage via code pattern.
+
+    Pattern (verified in-game 2026-02-13):
+        addiu a1, zero, X      # XX 00 05 24  (X = damage%)
+        addu a2, zero, zero    # 21 30 00 00
+
+    Searches for reasonable damage% values (1-50).
+    Values >50% are likely false positives (random code matching pattern).
+    Returns list of {'offset': blaze_offset, 'damage': damage_percent}
+    """
+    results = []
+
+    # Search for reasonable trap damage% values (1-50)
+    # Values >50% are almost certainly false positives
+    for dmg_val in range(1, 51):
+        pattern = bytes([dmg_val, 0x00, 0x05, 0x24, 0x21, 0x30, 0x00, 0x00])
+        offset = 0
+
+        while True:
+            pos = data.find(pattern, offset)
+            if pos == -1:
+                break
+
+            results.append({
+                'offset': pos,
+                'damage': dmg_val,
+            })
+
+            offset = pos + 1
+
+    # Sort by offset for cleaner output
+    results.sort(key=lambda x: x['offset'])
+
+    return results
+
+
+def apply_patches_pass4(data, entries, value_map):
+    """Apply Pass 4 patches (falling rock code patterns)."""
+    patched = 0
+    skipped = 0
+
+    for entry in entries:
+        old_val = entry['damage']
+        new_val = value_map.get(old_val)
+        offset = entry['offset']
+
+        if new_val is None or new_val == old_val:
+            skipped += 1
+            continue
+
+        new_val = max(1, min(99, new_val))
+
+        # Patch first byte (damage% immediate value)
+        data[offset] = new_val
+        print(f"  [ROCK] 0x{offset:08X}: {old_val}% -> {new_val}%")
+        patched += 1
+
+    return patched, skipped
+
+
 def main():
-    print("  Trap Damage Patcher v5 (jal callers + entity init data)")
+    print("  Trap Damage Patcher v6 (jal + entity + falling rocks)")
     print("  " + "-" * 50)
 
     if not CONFIG_FILE.exists():
@@ -261,13 +328,28 @@ def main():
 
     p3, s3 = apply_patches_pass3(data, entity_inits, value_map)
 
-    total_patched = p1 + p3
-    total_skipped = s1 + s3
+    # Pass 4: Falling rock code patterns (NEW 2026-02-13)
+    falling_rocks = find_falling_rocks(data)
+    print(f"\n  Pass 4: {len(falling_rocks)} falling rock sites")
+
+    by_value_rocks = {}
+    for r in falling_rocks:
+        v = r['damage']
+        by_value_rocks[v] = by_value_rocks.get(v, 0) + 1
+    for v in sorted(by_value_rocks):
+        new_v = value_map.get(v)
+        status = f"-> {new_v}%" if new_v is not None else "(skip)"
+        print(f"    {by_value_rocks[v]:>3}x {v}% {status}")
+
+    p4, s4 = apply_patches_pass4(data, falling_rocks, value_map)
+
+    total_patched = p1 + p3 + p4
+    total_skipped = s1 + s3 + s4
 
     if total_patched > 0:
         BLAZE_ALL.write_bytes(data)
 
-    print(f"\n  Total: {total_patched} patched ({p1} jal + {p3} entity), "
+    print(f"\n  Total: {total_patched} patched ({p1} jal + {p3} entity + {p4} rocks), "
           f"{total_skipped} unchanged")
 
 

@@ -37,7 +37,12 @@
         1
       ],
       "suffix": "00000000",
-      "offset": "0xF7B0C0"
+      "offset": "0xF7B0C0",
+      "slot_types": [
+        "00000000",
+        "02000000",
+        "00000a00"
+      ]
     },
     {
       "total": 8,
@@ -59,7 +64,12 @@
         2
       ],
       "suffix": "00000000",
-      "offset": "0xF7B1C4"
+      "offset": "0xF7B1C4",
+      "slot_types": [
+        "00000000",
+        "03000000",
+        "00000a00"
+      ]
     },
     {
       "total": 7,
@@ -85,7 +95,12 @@
         1
       ],
       "suffix": "00000000",
-      "offset": "0xF7B2C8"
+      "offset": "0xF7B2C8",
+      "slot_types": [
+        "00000000",
+        "02000000",
+        "00000a00"
+      ]
     }
   ],
   "_placed_spawns": "--- placed spawns (per-record offsets) ---",
@@ -1060,15 +1075,10 @@
       "offset": "0xF7C904"
     }
   ],
-  "monster_overrides": [
-    null,
-    null,
-    null
-  ],
   "_monster_overrides_doc": "slot 0=Lv20.Goblin, slot 1=Goblin-Shaman, slot 2=Giant-Bat. Set L to change AI behavior index, tex_variant for reskin (0-5), stats for stat mods.",
   "slot_types": [
     "00000000",
-    "02000000",
+    "03000000",
     "00000a00"
   ],
   "type07_entries": [

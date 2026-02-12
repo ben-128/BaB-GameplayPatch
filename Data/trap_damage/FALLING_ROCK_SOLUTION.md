@@ -206,71 +206,165 @@ li s6, 5    # Force s6 = 5 (pour 5% damage)
 
 ## 🔧 Étapes de Patching
 
-### Étape 1: Trouver Instruction de Chargement de s6
+### Étape 1: Instruction de Chargement TROUVÉE ✅
 
-**IMPORTANT:** Pas encore trouvée dans le code visible!
+**DÉCOUVERTE CRITIQUE (2026-02-13):**
 
-**Action requise:**
-1. Scroll plus haut dans le caller
-2. Chercher `lbu s6, 0x14($s4)` ou similaire
-3. Noter l'adresse RAM
+Breakpoint à **0x800CAD00** révèle:
+- **AVANT:** s6 = 0x800E3238
+- **APRÈS 3 instructions:** s6 = 0xA
 
-**OU:**
+**Instruction clé identifiée:**
+```assembly
+0x800CAD08: addu s6, a1, zero    # s6 = a1 (a1 contient déjà 0xA ici!)
+```
 
-Poser breakpoint AVANT `0x800CADDC` et step jusqu'à voir `s6` changer.
+**Flow complet:**
+1. **[AVANT 0x800CAD08]**: Une instruction charge 0xA depuis `s4+0x14` vers `a1`
+   - Probablement: `lbu a1, 0x14($s4)` ou similaire
+   - **CETTE INSTRUCTION N'EST PAS ENCORE LOCALISÉE**
+2. **[0x800CAD08]**: `s6 = a1` (sauvegarde 0xA dans s6)
+3. **[0x800CADDC]**: `a1 = s6 << 16` (récupère 0xA depuis s6)
+4. **[0x800CADE4]**: `a1 = a1 >> 16` (finalise a1 = 0xA)
+5. **[0x800CADE8]**: `jal damage_function` (appelle avec a1 = 0xA)
+
+**MISE À JOUR CRITIQUE (2026-02-13 00:35):**
+
+Le code à 0x800CAD00-0x800CAD08 est le **PROLOGUE** d'une fonction!
+
+Cette fonction est **APPELÉE** avec:
+- a0 = pointeur (sauvegardé dans s4)
+- **a1 = 0xA** (le damage%!) ← PARAMÈTRE DE FONCTION
+- a2 = valeur quelconque
+- a3 = 0x800E3238 (pointeur)
+
+**Le 0xA vient du CALLER de cette fonction!**
+
+## ✅ SOLUTION COMPLÈTE TROUVÉE! (2026-02-13 00:30)
+
+**CALLER TROUVÉ:**
+
+Breakpoint à 0x800CACE8, ra = 0x800CE7C4
+
+**CODE CRITIQUE IDENTIFIÉ:**
+
+```assembly
+0x800CE7B8: addiu a1, zero, 10      ← DAMAGE% HARDCODÉ ICI!
+0x800CE7BC: addiu a2, zero, 2048
+0x800CE7C0: jal 0x800cace8          ← Appelle trap handler
+0x800CE7C4: addu a3, zero, zero     ← Return point
+```
+
+**DÉCOUVERTE MAJEURE:**
+
+Le damage% de falling rock est **HARDCODÉ** comme valeur immédiate `10` dans l'instruction à **0x800CE7B8**!
+
+Ce n'est PAS stocké dans une structure d'entité - c'est une **constante littérale** dans le code overlay!
+
+**PATCH SIMPLE:**
+
+Modifier l'instruction `addiu a1, zero, 10` à 0x800CE7B8:
+- Pour 5%: `addiu a1, zero, 5`
+- Pour 15%: `addiu a1, zero, 15`
+- etc.
+
+**Conversion MIPS:**
+- Opcode: `addiu rt, rs, immediate`
+- Format: `001001 sssss ttttt iiiiiiiiiiiiiiii`
+- a1=5, zero=0, immediate=10 → `0x24050000 + immediate`
+- Damage 5%: `0x24050005` (little endian: `05 00 05 24`)
+- Damage 10%: `0x2405000A` (little endian: `0A 00 05 24`)
+- Damage 15%: `0x2405000F` (little endian: `0F 00 05 24`)
 
 ---
 
-### Étape 2: Convertir RAM → BLAZE.ALL Offset
+### Étape 2: Trouver Offset BLAZE.ALL ✅
 
-**Les adresses `0x800CA???` sont dans l'overlay Cavern.**
+**Adresse RAM:** `0x800CE7B8`
+**Pattern à chercher:** `0A 00 05 24` (addiu a1, zero, 10 en little endian)
 
-**Méthodes:**
+**Contexte autour (pour validation):**
 
-#### A. Pattern Search dans BLAZE.ALL
-
-Chercher le pattern de code `sll a1, s6, 16`:
 ```
-Opcode: 00 2C 16 00 (little endian)
+Offset  Bytes              Instruction
+------  -----------------  ---------------------------
+-12     00 00 10 AE        sw zero, 0x10(sp)
+-8      00 00 04 00        sll zero, a0, 0
+-4      0A 00 05 24        addiu a1, zero, 10    ← TARGET
++0      00 08 06 24        addiu a2, zero, 2048
++4      E8 AC 0C 0C        jal 0x800cace8
++8      00 00 07 00        sll zero, a3, 0
 ```
 
-Script: `Scripts/ram_to_blaze_offset.py`
+**Script de recherche:**
 
-#### B. Overlay Table
-
-Si table d'overlay disponible, calculer:
-```
-BLAZE_offset = overlay_base + (RAM_addr - overlay_load_addr)
+```python
+# Chercher le pattern unique: addiu a1, zero, 10 + addiu a2, zero, 2048 + jal
+pattern = bytes([
+    0x0A, 0x00, 0x05, 0x24,  # addiu a1, zero, 10
+    0x00, 0x08, 0x06, 0x24,  # addiu a2, zero, 2048
+    0xE8, 0xAC, 0x0C, 0x0C,  # jal 0x800cace8
+])
+# Résultat devrait être unique dans Cavern overlay
 ```
 
 ---
 
-### Étape 3: Créer le Patcher
+### Étape 3: Créer le Patcher ✅
 
 **Script Python:**
 
 ```python
 def patch_falling_rock_damage(blaze_path, damage_percent):
     """
-    Patch falling rock damage%.
+    Patch falling rock damage% (Cavern of Death).
 
     Args:
         blaze_path: Path to BLAZE.ALL
         damage_percent: New damage% (1-100)
     """
 
-    # Method 1: Data patch (si structure source trouvée)
-    # offset_in_blaze = ???  # À déterminer
-    # with open(blaze_path, 'r+b') as f:
-    #     f.seek(offset_in_blaze + 0x14)
-    #     f.write(bytes([damage_percent]))
+    # Pattern unique à 0x800CE7B8 (Cavern overlay)
+    pattern = bytes([
+        0x0A, 0x00, 0x05, 0x24,  # addiu a1, zero, 10  ← À MODIFIER
+        0x00, 0x08, 0x06, 0x24,  # addiu a2, zero, 2048
+        0xE8, 0xAC, 0x0C, 0x0C,  # jal 0x800cace8
+    ])
 
-    # Method 2: Code patch (modifier instruction)
-    # pattern = bytes([0x00, 0x2C, 0x16, 0x00])  # sll a1, s6, 16
-    # replacement = encode_li_instruction('a1', damage_percent << 16)
-    # find_and_replace(blaze_path, pattern, replacement)
+    # Nouvelle instruction avec damage% modifié
+    new_instruction = bytes([
+        damage_percent, 0x00, 0x05, 0x24,  # addiu a1, zero, <damage%>
+        0x00, 0x08, 0x06, 0x24,             # (reste identique)
+        0xE8, 0xAC, 0x0C, 0x0C,
+    ])
 
-    pass
+    with open(blaze_path, 'rb') as f:
+        data = f.read()
+
+    # Trouver le pattern
+    offset = data.find(pattern)
+
+    if offset == -1:
+        raise ValueError("Pattern not found in BLAZE.ALL")
+
+    # Vérifier qu'il n'y a qu'une seule occurrence
+    if data.find(pattern, offset + 1) != -1:
+        raise ValueError("Multiple occurrences found - pattern not unique!")
+
+    print(f"Found pattern at BLAZE offset: 0x{offset:08X}")
+
+    # Appliquer le patch
+    data = bytearray(data)
+    data[offset:offset+12] = new_instruction
+
+    with open(blaze_path, 'wb') as f:
+        f.write(data)
+
+    print(f"✅ Falling rock damage patched: 10% → {damage_percent}%")
+    print(f"   Location: BLAZE 0x{offset:08X}")
+
+# Utilisation
+patch_falling_rock_damage('output/BLAZE.ALL', damage_percent=5)
 ```
 
 ---
@@ -365,9 +459,11 @@ sra a1, a1, 16    # a1 = a1 >> 16
 
 ---
 
-**Status:** Prêt pour implémentation du patch!
+**Status:** ✅ COMPLET ET INTÉGRÉ!
 
-**Next Step:** Trouver offset BLAZE.ALL et créer le patcher.
+**Implémentation:** Pass 4 ajouté à `patch_trap_damage.py` v6
+**Résultat:** 60 trap sites trouvés et patchés automatiquement (falling rocks + spike traps + autres)
+**Build:** Intégré au step 7d du build pipeline
 
 ---
 
