@@ -1,0 +1,1217 @@
+{
+  "level_name": "The Tower (Old Palace)",
+  "name": "Area 11",
+  "group_offset": "0x199B228",
+  "monsters": [
+    "Arch-Magi",
+    "Hard-Born",
+    "Living-Sword",
+    "Living-Armor",
+    "Evil-Crystal"
+  ],
+  "formation_area_start": "0x199C000",
+  "formation_area_bytes": 300,
+  "original_total_slots": 7,
+  "area_id": "dc00",
+  "formation_count": 2,
+  "formations": [
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Hard-Born"
+        },
+        {
+          "count": 2,
+          "slot": 2,
+          "monster": "Living-Sword"
+        }
+      ],
+      "slots": [
+        1,
+        2,
+        2
+      ],
+      "suffix": "00000000",
+      "offset": "0x199C000"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 0,
+          "monster": "Arch-Magi"
+        }
+      ],
+      "slots": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "suffix": "00000100",
+      "offset": "0x199C0A8"
+    }
+  ],
+  "_placed_spawns": "--- placed spawns (per-record offsets) ---",
+  "spawn_points_area_start": "0x199B9E0",
+  "spawn_points_area_bytes": 1568,
+  "original_total_spawn_slots": 37,
+  "spawn_point_count": 7,
+  "spawn_points": [
+    {
+      "total": 7,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Hard-Born"
+        },
+        {
+          "count": 6,
+          "slot": 2,
+          "monster": "Living-Sword"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 2200,
+          "y": 300,
+          "z": 3000,
+          "byte0": 0,
+          "byte10_11": "1000",
+          "area_id": "c600",
+          "offset": "0x199B9E0"
+        },
+        {
+          "slot": 2,
+          "x": 2500,
+          "y": 300,
+          "z": 2850,
+          "byte0": 0,
+          "byte10_11": "1000",
+          "area_id": "ed02",
+          "offset": "0x199BA00"
+        },
+        {
+          "slot": 2,
+          "x": 2500,
+          "y": 300,
+          "z": 3150,
+          "byte0": 0,
+          "byte10_11": "1000",
+          "area_id": "eb02",
+          "offset": "0x199BA20"
+        },
+        {
+          "slot": 2,
+          "x": 2200,
+          "y": 300,
+          "z": 3300,
+          "byte0": 0,
+          "byte10_11": "1000",
+          "area_id": "7500",
+          "offset": "0x199BA40"
+        },
+        {
+          "slot": 2,
+          "x": 2200,
+          "y": 300,
+          "z": 2700,
+          "byte0": 0,
+          "byte10_11": "1000",
+          "area_id": "ef02",
+          "offset": "0x199BA60"
+        },
+        {
+          "slot": 2,
+          "x": 1900,
+          "y": 300,
+          "z": 2850,
+          "byte0": 0,
+          "byte10_11": "1000",
+          "area_id": "f002",
+          "offset": "0x199BA80"
+        },
+        {
+          "slot": 2,
+          "x": 1900,
+          "y": 300,
+          "z": 3150,
+          "byte0": 0,
+          "byte10_11": "1000",
+          "area_id": "f202",
+          "offset": "0x199BAA0"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x199B9E0"
+    },
+    {
+      "total": 6,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Hard-Born"
+        },
+        {
+          "count": 4,
+          "slot": 2,
+          "monster": "Living-Sword"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 4200,
+          "y": 840,
+          "z": -1900,
+          "byte0": 0,
+          "byte10_11": "1200",
+          "area_id": "7000",
+          "offset": "0x199BAE4"
+        },
+        {
+          "slot": 1,
+          "x": 4200,
+          "y": 840,
+          "z": -2500,
+          "byte0": 0,
+          "byte10_11": "1200",
+          "area_id": "db02",
+          "offset": "0x199BB04"
+        },
+        {
+          "slot": 2,
+          "x": 3900,
+          "y": 940,
+          "z": -2050,
+          "byte0": 0,
+          "byte10_11": "1200",
+          "area_id": "e002",
+          "offset": "0x199BB24"
+        },
+        {
+          "slot": 2,
+          "x": 3900,
+          "y": 940,
+          "z": -2350,
+          "byte0": 0,
+          "byte10_11": "1200",
+          "area_id": "e102",
+          "offset": "0x199BB44"
+        },
+        {
+          "slot": 2,
+          "x": 4500,
+          "y": 940,
+          "z": -2050,
+          "byte0": 0,
+          "byte10_11": "1200",
+          "area_id": "de02",
+          "offset": "0x199BB64"
+        },
+        {
+          "slot": 2,
+          "x": 4500,
+          "y": 940,
+          "z": -2350,
+          "byte0": 0,
+          "byte10_11": "1200",
+          "area_id": "dc02",
+          "offset": "0x199BB84"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x199BAE4"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 3,
+          "monster": "Living-Armor"
+        }
+      ],
+      "records": [
+        {
+          "slot": 3,
+          "x": -2400,
+          "y": 1080,
+          "z": -4500,
+          "byte0": 0,
+          "byte10_11": "1400",
+          "area_id": "cd02",
+          "offset": "0x199BBC8"
+        },
+        {
+          "slot": 3,
+          "x": -2400,
+          "y": 1080,
+          "z": -3900,
+          "byte0": 0,
+          "byte10_11": "1400",
+          "area_id": "c902",
+          "offset": "0x199BBE8"
+        },
+        {
+          "slot": 3,
+          "x": -2700,
+          "y": 1080,
+          "z": -4200,
+          "byte0": 0,
+          "byte10_11": "1400",
+          "area_id": "cf02",
+          "offset": "0x199BC08"
+        },
+        {
+          "slot": 3,
+          "x": -2100,
+          "y": 1080,
+          "z": -4200,
+          "byte0": 0,
+          "byte10_11": "1400",
+          "area_id": "6c00",
+          "offset": "0x199BC28"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x199BBC8"
+    },
+    {
+      "total": 6,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 2,
+          "monster": "Living-Sword"
+        },
+        {
+          "count": 2,
+          "slot": 3,
+          "monster": "Living-Armor"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -4100,
+          "y": 540,
+          "z": 1450,
+          "byte0": 0,
+          "byte10_11": "1600",
+          "area_id": "b902",
+          "offset": "0x199BC6C"
+        },
+        {
+          "slot": 2,
+          "x": -4100,
+          "y": 540,
+          "z": 850,
+          "byte0": 0,
+          "byte10_11": "1600",
+          "area_id": "bb02",
+          "offset": "0x199BC8C"
+        },
+        {
+          "slot": 2,
+          "x": -4700,
+          "y": 540,
+          "z": 1450,
+          "byte0": 0,
+          "byte10_11": "1600",
+          "area_id": "c002",
+          "offset": "0x199BCAC"
+        },
+        {
+          "slot": 2,
+          "x": -4700,
+          "y": 540,
+          "z": 850,
+          "byte0": 0,
+          "byte10_11": "1600",
+          "area_id": "be02",
+          "offset": "0x199BCCC"
+        },
+        {
+          "slot": 3,
+          "x": -4400,
+          "y": 540,
+          "z": 1300,
+          "byte0": 0,
+          "byte10_11": "1600",
+          "area_id": "6900",
+          "offset": "0x199BCEC"
+        },
+        {
+          "slot": 3,
+          "x": -4400,
+          "y": 540,
+          "z": 700,
+          "byte0": 0,
+          "byte10_11": "1600",
+          "area_id": "bc02",
+          "offset": "0x199BD0C"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x199BC6C"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 3,
+          "monster": "Living-Armor"
+        }
+      ],
+      "records": [
+        {
+          "slot": 3,
+          "x": -2100,
+          "y": 200,
+          "z": 2850,
+          "byte0": 0,
+          "byte10_11": "1800",
+          "area_id": "b302",
+          "offset": "0x199BD50"
+        },
+        {
+          "slot": 3,
+          "x": -2100,
+          "y": 200,
+          "z": 3150,
+          "byte0": 0,
+          "byte10_11": "1800",
+          "area_id": "b802",
+          "offset": "0x199BD70"
+        },
+        {
+          "slot": 3,
+          "x": -2700,
+          "y": 200,
+          "z": 2850,
+          "byte0": 0,
+          "byte10_11": "1800",
+          "area_id": "6600",
+          "offset": "0x199BD90"
+        },
+        {
+          "slot": 3,
+          "x": -2700,
+          "y": 200,
+          "z": 3150,
+          "byte0": 0,
+          "byte10_11": "1800",
+          "area_id": "b702",
+          "offset": "0x199BDB0"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x199BD50"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Hard-Born"
+        },
+        {
+          "count": 2,
+          "slot": 3,
+          "monster": "Living-Armor"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 4050,
+          "y": 540,
+          "z": 800,
+          "byte0": 0,
+          "byte10_11": "1a00",
+          "area_id": "e202",
+          "offset": "0x199BDF4"
+        },
+        {
+          "slot": 1,
+          "x": 4350,
+          "y": 540,
+          "z": 800,
+          "byte0": 0,
+          "byte10_11": "1a00",
+          "area_id": "e402",
+          "offset": "0x199BE14"
+        },
+        {
+          "slot": 3,
+          "x": 4050,
+          "y": 540,
+          "z": 1100,
+          "byte0": 0,
+          "byte10_11": "1a00",
+          "area_id": "e902",
+          "offset": "0x199BE34"
+        },
+        {
+          "slot": 3,
+          "x": 4350,
+          "y": 540,
+          "z": 1100,
+          "byte0": 0,
+          "byte10_11": "1a00",
+          "area_id": "e602",
+          "offset": "0x199BE54"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x199BDF4"
+    },
+    {
+      "total": 6,
+      "composition": [
+        {
+          "count": 6,
+          "slot": 2,
+          "monster": "Living-Sword"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -4400,
+          "y": 940,
+          "z": -1900,
+          "byte0": 0,
+          "byte10_11": "1e00",
+          "area_id": "c102",
+          "offset": "0x199BF3C"
+        },
+        {
+          "slot": 2,
+          "x": -4700,
+          "y": 940,
+          "z": -2050,
+          "byte0": 0,
+          "byte10_11": "1e00",
+          "area_id": "c202",
+          "offset": "0x199BF5C"
+        },
+        {
+          "slot": 2,
+          "x": -4400,
+          "y": 940,
+          "z": -2350,
+          "byte0": 0,
+          "byte10_11": "1e00",
+          "area_id": "6a00",
+          "offset": "0x199BF7C"
+        },
+        {
+          "slot": 2,
+          "x": -4400,
+          "y": 940,
+          "z": -2500,
+          "byte0": 0,
+          "byte10_11": "1e00",
+          "area_id": "6a00",
+          "offset": "0x199BF9C"
+        },
+        {
+          "slot": 2,
+          "x": -4100,
+          "y": 940,
+          "z": -2050,
+          "byte0": 0,
+          "byte10_11": "1e00",
+          "area_id": "c702",
+          "offset": "0x199BFBC"
+        },
+        {
+          "slot": 2,
+          "x": -4100,
+          "y": 940,
+          "z": -2350,
+          "byte0": 0,
+          "byte10_11": "1e00",
+          "area_id": "c602",
+          "offset": "0x199BFDC"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x199BF3C"
+    }
+  ],
+  "zone_spawns_area_start": "0x199C40C",
+  "zone_spawns_area_bytes": 3800,
+  "original_total_zone_spawn_slots": 53,
+  "zone_spawn_count": 8,
+  "zone_spawns": [
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Hard-Born"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": -100,
+          "y": -195,
+          "z": 5100,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "8d01",
+          "offset": "0x199C40C"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x199C40C"
+    },
+    {
+      "total": 8,
+      "composition": [
+        {
+          "count": 8,
+          "slot": 2,
+          "monster": "Living-Sword"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 100,
+          "y": 80,
+          "z": 3900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "5701",
+          "offset": "0x199C4CC"
+        },
+        {
+          "slot": 2,
+          "x": 100,
+          "y": -120,
+          "z": 5100,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "5b01",
+          "offset": "0x199C4EC"
+        },
+        {
+          "slot": 2,
+          "x": -300,
+          "y": -120,
+          "z": 5100,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "5901",
+          "offset": "0x199C50C"
+        },
+        {
+          "slot": 2,
+          "x": -300,
+          "y": 80,
+          "z": 3900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "5501",
+          "offset": "0x199C52C"
+        },
+        {
+          "slot": 2,
+          "x": -500,
+          "y": 100,
+          "z": 4500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3400",
+          "offset": "0x199C54C"
+        },
+        {
+          "slot": 2,
+          "x": 300,
+          "y": 100,
+          "z": 4500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3500",
+          "offset": "0x199C56C"
+        },
+        {
+          "slot": 2,
+          "x": -500,
+          "y": 0,
+          "z": 4500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3400",
+          "offset": "0x199C58C"
+        },
+        {
+          "slot": 2,
+          "x": 300,
+          "y": 0,
+          "z": 4500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3500",
+          "offset": "0x199C5AC"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x199C4CC"
+    },
+    {
+      "total": 6,
+      "composition": [
+        {
+          "count": 6,
+          "slot": 0,
+          "monster": "Arch-Magi"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": 100,
+          "y": 140,
+          "z": 3900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "5701",
+          "offset": "0x199C64C"
+        },
+        {
+          "slot": 0,
+          "x": 100,
+          "y": -60,
+          "z": 5100,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "5b01",
+          "offset": "0x199C66C"
+        },
+        {
+          "slot": 0,
+          "x": -300,
+          "y": -60,
+          "z": 5100,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "5901",
+          "offset": "0x199C68C"
+        },
+        {
+          "slot": 0,
+          "x": -300,
+          "y": 140,
+          "z": 3900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "5501",
+          "offset": "0x199C6AC"
+        },
+        {
+          "slot": 0,
+          "x": -500,
+          "y": 40,
+          "z": 4500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3400",
+          "offset": "0x199C6CC"
+        },
+        {
+          "slot": 0,
+          "x": 300,
+          "y": 40,
+          "z": 4500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3500",
+          "offset": "0x199C6EC"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x199C64C"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 2,
+          "monster": "Living-Sword"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -300,
+          "y": 1480,
+          "z": -5500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6901",
+          "offset": "0x199C994"
+        },
+        {
+          "slot": 2,
+          "x": 100,
+          "y": 1480,
+          "z": -5500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6b01",
+          "offset": "0x199C9B4"
+        },
+        {
+          "slot": 2,
+          "x": -300,
+          "y": 1500,
+          "z": -5700,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "9d01",
+          "offset": "0x199C9D4"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x199C994"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Arch-Magi"
+        },
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Living-Sword"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -100,
+          "y": 1400,
+          "z": -5780,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6f01",
+          "offset": "0x199CAD4"
+        },
+        {
+          "slot": 0,
+          "x": -300,
+          "y": 1540,
+          "z": -5500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6901",
+          "offset": "0x199CAF4"
+        },
+        {
+          "slot": 0,
+          "x": 100,
+          "y": 1540,
+          "z": -5500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6b01",
+          "offset": "0x199CB14"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x199CAD4"
+    },
+    {
+      "total": 18,
+      "composition": [
+        {
+          "count": 18,
+          "slot": 2,
+          "monster": "Living-Sword"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -300,
+          "y": 1480,
+          "z": -4900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6501",
+          "offset": "0x199CD7C"
+        },
+        {
+          "slot": 2,
+          "x": 100,
+          "y": 1480,
+          "z": -4900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6701",
+          "offset": "0x199CD9C"
+        },
+        {
+          "slot": 2,
+          "x": 100,
+          "y": 80,
+          "z": 3300,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "5f01",
+          "offset": "0x199CDBC"
+        },
+        {
+          "slot": 2,
+          "x": -300,
+          "y": 80,
+          "z": 3300,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "5d01",
+          "offset": "0x199CDDC"
+        },
+        {
+          "slot": 2,
+          "x": -300,
+          "y": 80,
+          "z": 2700,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6101",
+          "offset": "0x199CDFC"
+        },
+        {
+          "slot": 2,
+          "x": 100,
+          "y": 80,
+          "z": 2700,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6301",
+          "offset": "0x199CE1C"
+        },
+        {
+          "slot": 2,
+          "x": -1030,
+          "y": 1550,
+          "z": -4430,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "b401",
+          "offset": "0x199CE3C"
+        },
+        {
+          "slot": 2,
+          "x": 830,
+          "y": 1550,
+          "z": -4430,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a901",
+          "offset": "0x199CE5C"
+        },
+        {
+          "slot": 2,
+          "x": 830,
+          "y": 1550,
+          "z": -4170,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a901",
+          "offset": "0x199CE7C"
+        },
+        {
+          "slot": 2,
+          "x": 100,
+          "y": 1550,
+          "z": -3900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ac01",
+          "offset": "0x199CE9C"
+        },
+        {
+          "slot": 2,
+          "x": -300,
+          "y": 1550,
+          "z": -3900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "b001",
+          "offset": "0x199CEBC"
+        },
+        {
+          "slot": 2,
+          "x": -1030,
+          "y": 1550,
+          "z": -4170,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "b401",
+          "offset": "0x199CEDC"
+        },
+        {
+          "slot": 2,
+          "x": -1030,
+          "y": 1450,
+          "z": -4430,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "b401",
+          "offset": "0x199CEFC"
+        },
+        {
+          "slot": 2,
+          "x": 830,
+          "y": 1450,
+          "z": -4430,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a901",
+          "offset": "0x199CF1C"
+        },
+        {
+          "slot": 2,
+          "x": 830,
+          "y": 1450,
+          "z": -4170,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a901",
+          "offset": "0x199CF3C"
+        },
+        {
+          "slot": 2,
+          "x": 100,
+          "y": 1450,
+          "z": -3900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ac01",
+          "offset": "0x199CF5C"
+        },
+        {
+          "slot": 2,
+          "x": -300,
+          "y": 1450,
+          "z": -3900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "b001",
+          "offset": "0x199CF7C"
+        },
+        {
+          "slot": 2,
+          "x": -1030,
+          "y": 1450,
+          "z": -4170,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "b401",
+          "offset": "0x199CF9C"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x199CD7C"
+    },
+    {
+      "total": 13,
+      "composition": [
+        {
+          "count": 12,
+          "slot": 0,
+          "monster": "Arch-Magi"
+        },
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Hard-Born"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": -100,
+          "y": 0,
+          "z": 2900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "8701",
+          "offset": "0x199CFFC"
+        },
+        {
+          "slot": 0,
+          "x": -300,
+          "y": 1540,
+          "z": -4900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6501",
+          "offset": "0x199D01C"
+        },
+        {
+          "slot": 0,
+          "x": 100,
+          "y": 1540,
+          "z": -4900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6701",
+          "offset": "0x199D03C"
+        },
+        {
+          "slot": 0,
+          "x": 100,
+          "y": 140,
+          "z": 3300,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "5f01",
+          "offset": "0x199D05C"
+        },
+        {
+          "slot": 0,
+          "x": -300,
+          "y": 140,
+          "z": 3300,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "5d01",
+          "offset": "0x199D07C"
+        },
+        {
+          "slot": 0,
+          "x": -300,
+          "y": 140,
+          "z": 2700,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6101",
+          "offset": "0x199D09C"
+        },
+        {
+          "slot": 0,
+          "x": 100,
+          "y": 140,
+          "z": 2700,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6301",
+          "offset": "0x199D0BC"
+        },
+        {
+          "slot": 0,
+          "x": -1030,
+          "y": 1490,
+          "z": -4430,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "b401",
+          "offset": "0x199D0DC"
+        },
+        {
+          "slot": 0,
+          "x": 830,
+          "y": 1490,
+          "z": -4430,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a901",
+          "offset": "0x199D0FC"
+        },
+        {
+          "slot": 0,
+          "x": 830,
+          "y": 1490,
+          "z": -4170,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a901",
+          "offset": "0x199D11C"
+        },
+        {
+          "slot": 0,
+          "x": 100,
+          "y": 1490,
+          "z": -3900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ac01",
+          "offset": "0x199D13C"
+        },
+        {
+          "slot": 0,
+          "x": -300,
+          "y": 1490,
+          "z": -3900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "b001",
+          "offset": "0x199D15C"
+        },
+        {
+          "slot": 0,
+          "x": -1030,
+          "y": 1490,
+          "z": -4170,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "b401",
+          "offset": "0x199D17C"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x199CFFC"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Hard-Born"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": -100,
+          "y": 5,
+          "z": -700,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "1401",
+          "offset": "0x199D2C0"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x199D2C0"
+    }
+  ],
+  "slot_types": [
+    "00000100",
+    "00000000",
+    "00000000"
+  ]
+}

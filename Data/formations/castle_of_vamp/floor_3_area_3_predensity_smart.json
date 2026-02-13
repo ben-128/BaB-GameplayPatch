@@ -1,0 +1,453 @@
+{
+  "level_name": "Castle of Vamp",
+  "name": "Floor 3 - Area 3",
+  "group_offset": "0x2417998",
+  "monsters": [
+    "Werewolf",
+    "Weretiger",
+    "Harpy",
+    "Silver-Wolf"
+  ],
+  "formation_area_start": null,
+  "formation_area_bytes": 0,
+  "original_total_slots": 0,
+  "area_id": "0000",
+  "formation_count": 0,
+  "formations": [],
+  "_placed_spawns": "--- placed spawns (per-record offsets) ---",
+  "spawn_points_area_start": "0x2418024",
+  "spawn_points_area_bytes": 68,
+  "original_total_spawn_slots": 2,
+  "spawn_point_count": 1,
+  "spawn_points": [
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 0,
+          "monster": "Werewolf"
+        },
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Weretiger"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": -4470,
+          "y": 0,
+          "z": 1470,
+          "byte0": 2,
+          "byte10_11": "0900",
+          "area_id": "a600",
+          "offset": "0x2418024"
+        },
+        {
+          "slot": 1,
+          "x": -4130,
+          "y": 0,
+          "z": 1470,
+          "byte0": 1,
+          "byte10_11": "0a00",
+          "area_id": "a600",
+          "offset": "0x2418044"
+        }
+      ],
+      "suffix": "01000000",
+      "offset": "0x2418024"
+    }
+  ],
+  "zone_spawns_area_start": "0x24184F4",
+  "zone_spawns_area_bytes": 1156,
+  "original_total_zone_spawn_slots": 36,
+  "zone_spawn_count": 1,
+  "zone_spawns": [
+    {
+      "total": 36,
+      "composition": [
+        {
+          "count": 16,
+          "slot": 0,
+          "monster": "Werewolf"
+        },
+        {
+          "count": 3,
+          "slot": 1,
+          "monster": "Weretiger"
+        },
+        {
+          "count": 17,
+          "slot": 2,
+          "monster": "Harpy"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": -3800,
+          "y": 5,
+          "z": -900,
+          "byte0": 99,
+          "byte10_11": "0000",
+          "area_id": "2501",
+          "offset": "0x24184F4"
+        },
+        {
+          "slot": 1,
+          "x": -4800,
+          "y": 5,
+          "z": -900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2901",
+          "offset": "0x2418514"
+        },
+        {
+          "slot": 2,
+          "x": -4300,
+          "y": 0,
+          "z": -700,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "0301",
+          "offset": "0x2418534"
+        },
+        {
+          "slot": 2,
+          "x": -4300,
+          "y": 0,
+          "z": 3500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "fb00",
+          "offset": "0x2418554"
+        },
+        {
+          "slot": 2,
+          "x": -4100,
+          "y": 0,
+          "z": 3500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "fc00",
+          "offset": "0x2418574"
+        },
+        {
+          "slot": 2,
+          "x": -4100,
+          "y": 0,
+          "z": -700,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "0401",
+          "offset": "0x2418594"
+        },
+        {
+          "slot": 2,
+          "x": -4100,
+          "y": 0,
+          "z": -900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "0501",
+          "offset": "0x24185B4"
+        },
+        {
+          "slot": 2,
+          "x": -4100,
+          "y": 0,
+          "z": 3300,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "fd00",
+          "offset": "0x24185D4"
+        },
+        {
+          "slot": 2,
+          "x": -4100,
+          "y": 0,
+          "z": 3100,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "fe00",
+          "offset": "0x24185F4"
+        },
+        {
+          "slot": 2,
+          "x": -4100,
+          "y": 0,
+          "z": -1100,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "0601",
+          "offset": "0x2418614"
+        },
+        {
+          "slot": 2,
+          "x": -4500,
+          "y": 0,
+          "z": -1100,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "0801",
+          "offset": "0x2418634"
+        },
+        {
+          "slot": 2,
+          "x": -4300,
+          "y": 0,
+          "z": -1100,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "0701",
+          "offset": "0x2418654"
+        },
+        {
+          "slot": 2,
+          "x": -4300,
+          "y": 0,
+          "z": 3100,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ff00",
+          "offset": "0x2418674"
+        },
+        {
+          "slot": 2,
+          "x": -4500,
+          "y": 0,
+          "z": 3100,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "0001",
+          "offset": "0x2418694"
+        },
+        {
+          "slot": 2,
+          "x": -4500,
+          "y": 0,
+          "z": -900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "0901",
+          "offset": "0x24186B4"
+        },
+        {
+          "slot": 2,
+          "x": -4500,
+          "y": 0,
+          "z": 3300,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "0101",
+          "offset": "0x24186D4"
+        },
+        {
+          "slot": 2,
+          "x": -4500,
+          "y": 0,
+          "z": 3500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "0201",
+          "offset": "0x24186F4"
+        },
+        {
+          "slot": 2,
+          "x": -4500,
+          "y": 0,
+          "z": -700,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "0a01",
+          "offset": "0x2418714"
+        },
+        {
+          "slot": 0,
+          "x": -4300,
+          "y": 180,
+          "z": -700,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "0301",
+          "offset": "0x2418734"
+        },
+        {
+          "slot": 0,
+          "x": -4300,
+          "y": 180,
+          "z": 3500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "fb00",
+          "offset": "0x2418754"
+        },
+        {
+          "slot": 0,
+          "x": -4100,
+          "y": 180,
+          "z": 3500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "fc00",
+          "offset": "0x2418774"
+        },
+        {
+          "slot": 0,
+          "x": -4100,
+          "y": 180,
+          "z": -700,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "0401",
+          "offset": "0x2418794"
+        },
+        {
+          "slot": 0,
+          "x": -4100,
+          "y": 180,
+          "z": -900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "0501",
+          "offset": "0x24187B4"
+        },
+        {
+          "slot": 0,
+          "x": -4100,
+          "y": 180,
+          "z": 3300,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "fd00",
+          "offset": "0x24187D4"
+        },
+        {
+          "slot": 0,
+          "x": -4100,
+          "y": 180,
+          "z": 3100,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "fe00",
+          "offset": "0x24187F4"
+        },
+        {
+          "slot": 0,
+          "x": -4100,
+          "y": 180,
+          "z": -1100,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "0601",
+          "offset": "0x2418814"
+        },
+        {
+          "slot": 0,
+          "x": -4500,
+          "y": 180,
+          "z": -1100,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "0801",
+          "offset": "0x2418834"
+        },
+        {
+          "slot": 0,
+          "x": -4300,
+          "y": 180,
+          "z": -1100,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "0701",
+          "offset": "0x2418854"
+        },
+        {
+          "slot": 0,
+          "x": -4300,
+          "y": 180,
+          "z": 3100,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ff00",
+          "offset": "0x2418874"
+        },
+        {
+          "slot": 0,
+          "x": -4500,
+          "y": 180,
+          "z": 3100,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "0001",
+          "offset": "0x2418894"
+        },
+        {
+          "slot": 0,
+          "x": -4500,
+          "y": 180,
+          "z": -900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "0901",
+          "offset": "0x24188B4"
+        },
+        {
+          "slot": 0,
+          "x": -4500,
+          "y": 180,
+          "z": 3300,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "0101",
+          "offset": "0x24188D4"
+        },
+        {
+          "slot": 0,
+          "x": -4500,
+          "y": 180,
+          "z": 3500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "0201",
+          "offset": "0x24188F4"
+        },
+        {
+          "slot": 0,
+          "x": -4500,
+          "y": 180,
+          "z": -700,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "0a01",
+          "offset": "0x2418914"
+        },
+        {
+          "slot": 2,
+          "x": -4300,
+          "y": 0,
+          "z": 3980,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2001",
+          "offset": "0x2418934"
+        },
+        {
+          "slot": 1,
+          "x": -4300,
+          "y": 5,
+          "z": 3300,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "1401",
+          "offset": "0x2418954"
+        }
+      ],
+      "suffix": "c8000000",
+      "offset": "0x24184F4"
+    }
+  ]
+}

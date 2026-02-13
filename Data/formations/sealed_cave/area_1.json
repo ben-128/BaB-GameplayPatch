@@ -519,9 +519,9 @@
         },
         {
           "slot": 0,
-          "x": 3303,
-          "y": 1,
-          "z": 5799,
+          "x": 3209,
+          "y": 5,
+          "z": 5658,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "8001",
@@ -529,9 +529,9 @@
         },
         {
           "slot": 0,
-          "x": 3245,
-          "y": 4,
-          "z": 5633,
+          "x": 3218,
+          "y": 5,
+          "z": 5686,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "8001",
@@ -542,10 +542,10 @@
       "offset": "0x1DD7608"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 1,
           "monster": "Zombie"
         }
@@ -556,16 +556,6 @@
           "x": -2780,
           "y": 5,
           "z": 1400,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "ac00",
-          "offset": "0x1DD764C"
-        },
-        {
-          "slot": 1,
-          "x": -2868,
-          "y": -9,
-          "z": 1358,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "ac00",
@@ -576,10 +566,10 @@
       "offset": "0x1DD764C"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 1,
           "monster": "Zombie"
         }
@@ -594,26 +584,16 @@
           "byte10_11": "0000",
           "area_id": "ad00",
           "offset": "0x1DD7670"
-        },
-        {
-          "slot": 1,
-          "x": -2706,
-          "y": 13,
-          "z": 2067,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "ad00",
-          "offset": "0x1DD7670"
         }
       ],
       "suffix": "00000000",
       "offset": "0x1DD7670"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 1,
           "monster": "Zombie"
         }
@@ -628,26 +608,16 @@
           "byte10_11": "0000",
           "area_id": "b000",
           "offset": "0x1DD7694"
-        },
-        {
-          "slot": 1,
-          "x": -3512,
-          "y": 5,
-          "z": 1926,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "b000",
-          "offset": "0x1DD7694"
         }
       ],
       "suffix": "00000000",
       "offset": "0x1DD7694"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 1,
           "monster": "Zombie"
         }
@@ -662,26 +632,16 @@
           "byte10_11": "0000",
           "area_id": "b000",
           "offset": "0x1DD76B8"
-        },
-        {
-          "slot": 1,
-          "x": -3576,
-          "y": 21,
-          "z": 1376,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "b000",
-          "offset": "0x1DD76B8"
         }
       ],
       "suffix": "00000000",
       "offset": "0x1DD76B8"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 1,
           "monster": "Zombie"
         }
@@ -696,26 +656,16 @@
           "byte10_11": "0000",
           "area_id": "1e01",
           "offset": "0x1DD76DC"
-        },
-        {
-          "slot": 1,
-          "x": -3153,
-          "y": -14,
-          "z": -1734,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "1e01",
-          "offset": "0x1DD76DC"
         }
       ],
       "suffix": "00000000",
       "offset": "0x1DD76DC"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 1,
           "monster": "Zombie"
         }
@@ -730,26 +680,16 @@
           "byte10_11": "0000",
           "area_id": "1e01",
           "offset": "0x1DD7700"
-        },
-        {
-          "slot": 1,
-          "x": -2798,
-          "y": 24,
-          "z": -1872,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "1e01",
-          "offset": "0x1DD7700"
         }
       ],
       "suffix": "00000000",
       "offset": "0x1DD7700"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 1,
           "monster": "Zombie"
         }
@@ -764,26 +704,16 @@
           "byte10_11": "0000",
           "area_id": "2c00",
           "offset": "0x1DD7724"
-        },
-        {
-          "slot": 1,
-          "x": -2808,
-          "y": 4,
-          "z": -1189,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "2c00",
-          "offset": "0x1DD7724"
         }
       ],
       "suffix": "00000000",
       "offset": "0x1DD7724"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 1,
           "monster": "Zombie"
         }
@@ -798,26 +728,16 @@
           "byte10_11": "0000",
           "area_id": "1f01",
           "offset": "0x1DD7748"
-        },
-        {
-          "slot": 1,
-          "x": -3679,
-          "y": 17,
-          "z": -1254,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "1f01",
-          "offset": "0x1DD7748"
         }
       ],
       "suffix": "00000000",
       "offset": "0x1DD7748"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 1,
           "monster": "Zombie"
         }
@@ -828,16 +748,6 @@
           "x": 2820,
           "y": 5,
           "z": 2000,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "5000",
-          "offset": "0x1DD776C"
-        },
-        {
-          "slot": 1,
-          "x": 2857,
-          "y": 9,
-          "z": 2095,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "5000",
@@ -848,10 +758,10 @@
       "offset": "0x1DD776C"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 1,
           "monster": "Zombie"
         }
@@ -862,16 +772,6 @@
           "x": 3220,
           "y": 5,
           "z": 2000,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "5d01",
-          "offset": "0x1DD7790"
-        },
-        {
-          "slot": 1,
-          "x": 3293,
-          "y": -5,
-          "z": 2038,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "5d01",
@@ -882,10 +782,10 @@
       "offset": "0x1DD7790"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 1,
           "monster": "Zombie"
         }
@@ -900,26 +800,16 @@
           "byte10_11": "0000",
           "area_id": "5e01",
           "offset": "0x1DD77B4"
-        },
-        {
-          "slot": 1,
-          "x": 3720,
-          "y": 5,
-          "z": 2093,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "5e01",
-          "offset": "0x1DD77B4"
         }
       ],
       "suffix": "00000000",
       "offset": "0x1DD77B4"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 1,
           "monster": "Zombie"
         }
@@ -934,26 +824,16 @@
           "byte10_11": "0000",
           "area_id": "5f01",
           "offset": "0x1DD77D8"
-        },
-        {
-          "slot": 1,
-          "x": 3562,
-          "y": 16,
-          "z": 1448,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "5f01",
-          "offset": "0x1DD77D8"
         }
       ],
       "suffix": "00000000",
       "offset": "0x1DD77D8"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 1,
           "monster": "Zombie"
         }
@@ -968,26 +848,16 @@
           "byte10_11": "0000",
           "area_id": "1701",
           "offset": "0x1DD77FC"
-        },
-        {
-          "slot": 1,
-          "x": 2909,
-          "y": -11,
-          "z": -1208,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "1701",
-          "offset": "0x1DD77FC"
         }
       ],
       "suffix": "00000000",
       "offset": "0x1DD77FC"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 1,
           "monster": "Zombie"
         }
@@ -1002,26 +872,16 @@
           "byte10_11": "0000",
           "area_id": "0f01",
           "offset": "0x1DD7820"
-        },
-        {
-          "slot": 1,
-          "x": 2744,
-          "y": -6,
-          "z": -1738,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "0f01",
-          "offset": "0x1DD7820"
         }
       ],
       "suffix": "00000000",
       "offset": "0x1DD7820"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 1,
           "monster": "Zombie"
         }
@@ -1036,26 +896,16 @@
           "byte10_11": "0000",
           "area_id": "0f01",
           "offset": "0x1DD7844"
-        },
-        {
-          "slot": 1,
-          "x": 3139,
-          "y": -12,
-          "z": -1728,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "0f01",
-          "offset": "0x1DD7844"
         }
       ],
       "suffix": "00000000",
       "offset": "0x1DD7844"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 1,
           "monster": "Zombie"
         }
@@ -1070,26 +920,16 @@
           "byte10_11": "0000",
           "area_id": "2e01",
           "offset": "0x1DD7868"
-        },
-        {
-          "slot": 1,
-          "x": -2007,
-          "y": 58,
-          "z": 487,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "2e01",
-          "offset": "0x1DD7868"
         }
       ],
       "suffix": "00000000",
       "offset": "0x1DD7868"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 1,
           "monster": "Zombie"
         }
@@ -1104,26 +944,16 @@
           "byte10_11": "0000",
           "area_id": "3601",
           "offset": "0x1DD788C"
-        },
-        {
-          "slot": 1,
-          "x": -2011,
-          "y": 75,
-          "z": -112,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "3601",
-          "offset": "0x1DD788C"
         }
       ],
       "suffix": "00000000",
       "offset": "0x1DD788C"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 1,
           "monster": "Zombie"
         }
@@ -1138,26 +968,16 @@
           "byte10_11": "0000",
           "area_id": "3001",
           "offset": "0x1DD78B0"
-        },
-        {
-          "slot": 1,
-          "x": -1261,
-          "y": 64,
-          "z": 415,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "3001",
-          "offset": "0x1DD78B0"
         }
       ],
       "suffix": "00000000",
       "offset": "0x1DD78B0"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 1,
           "monster": "Zombie"
         }
@@ -1172,26 +992,16 @@
           "byte10_11": "0000",
           "area_id": "4901",
           "offset": "0x1DD78D4"
-        },
-        {
-          "slot": 1,
-          "x": 1753,
-          "y": 55,
-          "z": -206,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "4901",
-          "offset": "0x1DD78D4"
         }
       ],
       "suffix": "00000000",
       "offset": "0x1DD78D4"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 1,
           "monster": "Zombie"
         }
@@ -1206,26 +1016,16 @@
           "byte10_11": "0000",
           "area_id": "4d01",
           "offset": "0x1DD78F8"
-        },
-        {
-          "slot": 1,
-          "x": 2123,
-          "y": 80,
-          "z": 337,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "4d01",
-          "offset": "0x1DD78F8"
         }
       ],
       "suffix": "00000000",
       "offset": "0x1DD78F8"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 1,
           "monster": "Zombie"
         }
@@ -1240,26 +1040,16 @@
           "byte10_11": "0000",
           "area_id": "3c01",
           "offset": "0x1DD791C"
-        },
-        {
-          "slot": 1,
-          "x": -1232,
-          "y": 59,
-          "z": 1979,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "3c01",
-          "offset": "0x1DD791C"
         }
       ],
       "suffix": "00000000",
       "offset": "0x1DD791C"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 1,
           "monster": "Zombie"
         }
@@ -1274,26 +1064,16 @@
           "byte10_11": "0000",
           "area_id": "3e01",
           "offset": "0x1DD7940"
-        },
-        {
-          "slot": 1,
-          "x": -2107,
-          "y": 57,
-          "z": 2079,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "3e01",
-          "offset": "0x1DD7940"
         }
       ],
       "suffix": "00000000",
       "offset": "0x1DD7940"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 1,
           "monster": "Zombie"
         }
@@ -1308,26 +1088,16 @@
           "byte10_11": "0000",
           "area_id": "3a01",
           "offset": "0x1DD7964"
-        },
-        {
-          "slot": 1,
-          "x": -2004,
-          "y": 80,
-          "z": 1309,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "3a01",
-          "offset": "0x1DD7964"
         }
       ],
       "suffix": "00000000",
       "offset": "0x1DD7964"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 1,
           "monster": "Zombie"
         }
@@ -1342,26 +1112,16 @@
           "byte10_11": "0000",
           "area_id": "3a01",
           "offset": "0x1DD7988"
-        },
-        {
-          "slot": 1,
-          "x": -1632,
-          "y": 61,
-          "z": 1302,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "3a01",
-          "offset": "0x1DD7988"
         }
       ],
       "suffix": "00000000",
       "offset": "0x1DD7988"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 1,
           "monster": "Zombie"
         }
@@ -1376,26 +1136,16 @@
           "byte10_11": "0000",
           "area_id": "2d01",
           "offset": "0x1DD79AC"
-        },
-        {
-          "slot": 1,
-          "x": -1686,
-          "y": 64,
-          "z": -1104,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "2d01",
-          "offset": "0x1DD79AC"
         }
       ],
       "suffix": "00000000",
       "offset": "0x1DD79AC"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 1,
           "monster": "Zombie"
         }
@@ -1410,26 +1160,16 @@
           "byte10_11": "0000",
           "area_id": "0e01",
           "offset": "0x1DD79D0"
-        },
-        {
-          "slot": 1,
-          "x": 2147,
-          "y": 79,
-          "z": 1981,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "0e01",
-          "offset": "0x1DD79D0"
         }
       ],
       "suffix": "00000000",
       "offset": "0x1DD79D0"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 1,
           "monster": "Zombie"
         }
@@ -1444,26 +1184,16 @@
           "byte10_11": "0000",
           "area_id": "0e01",
           "offset": "0x1DD79F4"
-        },
-        {
-          "slot": 1,
-          "x": 1678,
-          "y": 50,
-          "z": 2057,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "0e01",
-          "offset": "0x1DD79F4"
         }
       ],
       "suffix": "00000000",
       "offset": "0x1DD79F4"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 1,
           "monster": "Zombie"
         }
@@ -1478,26 +1208,16 @@
           "byte10_11": "0000",
           "area_id": "0e01",
           "offset": "0x1DD7A18"
-        },
-        {
-          "slot": 1,
-          "x": 1456,
-          "y": 53,
-          "z": 2031,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "0e01",
-          "offset": "0x1DD7A18"
         }
       ],
       "suffix": "00000000",
       "offset": "0x1DD7A18"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 1,
           "monster": "Zombie"
         }
@@ -1512,26 +1232,16 @@
           "byte10_11": "0000",
           "area_id": "4201",
           "offset": "0x1DD7A3C"
-        },
-        {
-          "slot": 1,
-          "x": 1645,
-          "y": 54,
-          "z": 1460,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "4201",
-          "offset": "0x1DD7A3C"
         }
       ],
       "suffix": "00000000",
       "offset": "0x1DD7A3C"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 1,
           "monster": "Zombie"
         }
@@ -1546,26 +1256,16 @@
           "byte10_11": "0000",
           "area_id": "4f01",
           "offset": "0x1DD7A60"
-        },
-        {
-          "slot": 1,
-          "x": 2065,
-          "y": 67,
-          "z": -1738,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "4f01",
-          "offset": "0x1DD7A60"
         }
       ],
       "suffix": "00000000",
       "offset": "0x1DD7A60"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 1,
           "monster": "Zombie"
         }
@@ -1580,26 +1280,16 @@
           "byte10_11": "0000",
           "area_id": "5401",
           "offset": "0x1DD7A84"
-        },
-        {
-          "slot": 1,
-          "x": 1787,
-          "y": 65,
-          "z": -1256,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "5401",
-          "offset": "0x1DD7A84"
         }
       ],
       "suffix": "00000000",
       "offset": "0x1DD7A84"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 1,
           "monster": "Zombie"
         }
@@ -1610,16 +1300,6 @@
           "x": -3580,
           "y": 5,
           "z": -300,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "6a02",
-          "offset": "0x1DD7AA8"
-        },
-        {
-          "slot": 1,
-          "x": -3549,
-          "y": -14,
-          "z": -354,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "6a02",
@@ -1630,10 +1310,10 @@
       "offset": "0x1DD7AA8"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 1,
           "monster": "Zombie"
         }
@@ -1648,26 +1328,16 @@
           "byte10_11": "0000",
           "area_id": "6402",
           "offset": "0x1DD7ACC"
-        },
-        {
-          "slot": 1,
-          "x": -2692,
-          "y": 11,
-          "z": -305,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "6402",
-          "offset": "0x1DD7ACC"
         }
       ],
       "suffix": "00000000",
       "offset": "0x1DD7ACC"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 1,
           "monster": "Zombie"
         }
@@ -1682,26 +1352,16 @@
           "byte10_11": "0000",
           "area_id": "6302",
           "offset": "0x1DD7AF0"
-        },
-        {
-          "slot": 1,
-          "x": -2708,
-          "y": -8,
-          "z": 557,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "6302",
-          "offset": "0x1DD7AF0"
         }
       ],
       "suffix": "00000000",
       "offset": "0x1DD7AF0"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 1,
           "monster": "Zombie"
         }
@@ -1716,26 +1376,16 @@
           "byte10_11": "0000",
           "area_id": "6a02",
           "offset": "0x1DD7B14"
-        },
-        {
-          "slot": 1,
-          "x": -3583,
-          "y": 5,
-          "z": 566,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "6a02",
-          "offset": "0x1DD7B14"
         }
       ],
       "suffix": "00000000",
       "offset": "0x1DD7B14"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 1,
           "monster": "Zombie"
         }
@@ -1746,16 +1396,6 @@
           "x": 2820,
           "y": 5,
           "z": 500,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "6400",
-          "offset": "0x1DD7B38"
-        },
-        {
-          "slot": 1,
-          "x": 2759,
-          "y": 21,
-          "z": 586,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "6400",
@@ -1766,10 +1406,10 @@
       "offset": "0x1DD7B38"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 1,
           "monster": "Zombie"
         }
@@ -1784,26 +1424,16 @@
           "byte10_11": "0000",
           "area_id": "6500",
           "offset": "0x1DD7B5C"
-        },
-        {
-          "slot": 1,
-          "x": 2894,
-          "y": -3,
-          "z": -377,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "6500",
-          "offset": "0x1DD7B5C"
         }
       ],
       "suffix": "00000000",
       "offset": "0x1DD7B5C"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 1,
           "monster": "Zombie"
         }
@@ -1818,26 +1448,16 @@
           "byte10_11": "0000",
           "area_id": "8a02",
           "offset": "0x1DD7B80"
-        },
-        {
-          "slot": 1,
-          "x": 3277,
-          "y": 25,
-          "z": -264,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "8a02",
-          "offset": "0x1DD7B80"
         }
       ],
       "suffix": "00000000",
       "offset": "0x1DD7B80"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 1,
           "monster": "Zombie"
         }
@@ -1852,26 +1472,16 @@
           "byte10_11": "0000",
           "area_id": "8b02",
           "offset": "0x1DD7BA4"
-        },
-        {
-          "slot": 1,
-          "x": 3182,
-          "y": 22,
-          "z": 474,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "8b02",
-          "offset": "0x1DD7BA4"
         }
       ],
       "suffix": "00000000",
       "offset": "0x1DD7BA4"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 0,
           "monster": "Skeleton"
         }
@@ -1882,16 +1492,6 @@
           "x": -3600,
           "y": 60,
           "z": 1930,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "b000",
-          "offset": "0x1DD8898"
-        },
-        {
-          "slot": 0,
-          "x": -3611,
-          "y": 68,
-          "z": 2009,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "b000",

@@ -316,9 +316,9 @@
         },
         {
           "slot": 0,
-          "x": -3588,
-          "y": -1814,
-          "z": 4310,
+          "x": -3284,
+          "y": -1795,
+          "z": 4503,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "c801",
@@ -326,9 +326,9 @@
         },
         {
           "slot": 0,
-          "x": -3554,
-          "y": -1804,
-          "z": 4294,
+          "x": -3395,
+          "y": -1795,
+          "z": 4410,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "c801",
@@ -415,39 +415,19 @@
         },
         {
           "slot": 0,
-          "x": -1783,
-          "y": -609,
-          "z": -1948,
+          "x": -1895,
+          "y": -540,
+          "z": -1349,
           "byte0": 0,
           "byte10_11": "0000",
-          "area_id": "3801",
-          "offset": "0x1DEB750"
+          "area_id": "3b01",
+          "offset": "0x1DEB770"
         },
         {
           "slot": 1,
-          "x": -2064,
-          "y": -379,
-          "z": -58,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "5901",
-          "offset": "0x1DEB7F0"
-        },
-        {
-          "slot": 1,
-          "x": -2125,
-          "y": -604,
-          "z": -719,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "3f01",
-          "offset": "0x1DEB7D0"
-        },
-        {
-          "slot": 1,
-          "x": -2226,
-          "y": -577,
-          "z": -685,
+          "x": -1805,
+          "y": -538,
+          "z": -1643,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "3f01",
@@ -455,19 +435,39 @@
         },
         {
           "slot": 0,
-          "x": -1807,
-          "y": -591,
-          "z": -1913,
+          "x": -1846,
+          "y": -539,
+          "z": -663,
           "byte0": 0,
           "byte10_11": "0000",
-          "area_id": "3801",
-          "offset": "0x1DEB750"
+          "area_id": "3b01",
+          "offset": "0x1DEB770"
         },
         {
           "slot": 1,
-          "x": -2314,
-          "y": -399,
-          "z": -1553,
+          "x": -1859,
+          "y": -540,
+          "z": -1725,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "5901",
+          "offset": "0x1DEB7F0"
+        },
+        {
+          "slot": 1,
+          "x": -1906,
+          "y": -546,
+          "z": -889,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "5901",
+          "offset": "0x1DEB7F0"
+        },
+        {
+          "slot": 1,
+          "x": -2074,
+          "y": -571,
+          "z": -692,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "5301",
@@ -554,49 +554,39 @@
         },
         {
           "slot": 1,
-          "x": -404,
-          "y": -1809,
-          "z": 4427,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "c000",
-          "offset": "0x1DEB854"
-        },
-        {
-          "slot": 0,
-          "x": 904,
-          "y": -1779,
-          "z": 3978,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "e001",
-          "offset": "0x1DEB834"
-        },
-        {
-          "slot": 1,
-          "x": -377,
-          "y": -1782,
-          "z": 4506,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "c000",
-          "offset": "0x1DEB854"
-        },
-        {
-          "slot": 0,
-          "x": 862,
-          "y": -1790,
-          "z": 4032,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "e001",
-          "offset": "0x1DEB834"
-        },
-        {
-          "slot": 1,
-          "x": -957,
+          "x": -477,
           "y": -1795,
-          "z": 4034,
+          "z": 4347,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "c000",
+          "offset": "0x1DEB894"
+        },
+        {
+          "slot": 0,
+          "x": 176,
+          "y": -1794,
+          "z": 4113,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "e001",
+          "offset": "0x1DEB834"
+        },
+        {
+          "slot": 0,
+          "x": -29,
+          "y": -1795,
+          "z": 4425,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "c000",
+          "offset": "0x1DEB814"
+        },
+        {
+          "slot": 1,
+          "x": -279,
+          "y": -1795,
+          "z": 4080,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "d401",
@@ -604,13 +594,23 @@
         },
         {
           "slot": 1,
-          "x": -24,
-          "y": -1789,
-          "z": 4558,
+          "x": -226,
+          "y": -1795,
+          "z": 4312,
           "byte0": 0,
           "byte10_11": "0000",
-          "area_id": "c000",
-          "offset": "0x1DEB894"
+          "area_id": "d401",
+          "offset": "0x1DEB8B4"
+        },
+        {
+          "slot": 1,
+          "x": -659,
+          "y": -1794,
+          "z": 4140,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "df01",
+          "offset": "0x1DEB874"
         }
       ],
       "suffix": "00000000",
@@ -620,12 +620,12 @@
       "total": 12,
       "composition": [
         {
-          "count": 8,
+          "count": 7,
           "slot": 0,
           "monster": "Mummy"
         },
         {
-          "count": 4,
+          "count": 5,
           "slot": 1,
           "monster": "Blood-Mummy"
         }
@@ -692,30 +692,20 @@
           "offset": "0x1DEBAA0"
         },
         {
-          "slot": 0,
-          "x": 790,
-          "y": -606,
-          "z": -1315,
+          "slot": 1,
+          "x": 1278,
+          "y": -483,
+          "z": -770,
           "byte0": 0,
           "byte10_11": "0000",
-          "area_id": "c600",
-          "offset": "0x1DEBA00"
-        },
-        {
-          "slot": 0,
-          "x": 1112,
-          "y": -597,
-          "z": -829,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "2601",
-          "offset": "0x1DEBA40"
+          "area_id": "1a01",
+          "offset": "0x1DEBA80"
         },
         {
           "slot": 1,
-          "x": 1704,
-          "y": -378,
-          "z": -918,
+          "x": 1657,
+          "y": -428,
+          "z": -740,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "1a01",
@@ -723,19 +713,19 @@
         },
         {
           "slot": 0,
-          "x": 957,
-          "y": -608,
-          "z": -739,
+          "x": 1123,
+          "y": -546,
+          "z": -699,
           "byte0": 0,
           "byte10_11": "0000",
-          "area_id": "2601",
-          "offset": "0x1DEBA40"
+          "area_id": "c600",
+          "offset": "0x1DEBA00"
         },
         {
           "slot": 1,
-          "x": 1098,
-          "y": -378,
-          "z": -478,
+          "x": 1738,
+          "y": -483,
+          "z": -271,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "1d01",
@@ -743,23 +733,33 @@
         },
         {
           "slot": 0,
-          "x": 848,
-          "y": -604,
-          "z": -1268,
+          "x": 1418,
+          "y": -453,
+          "z": -739,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "c600",
           "offset": "0x1DEBA00"
+        },
+        {
+          "slot": 0,
+          "x": 1713,
+          "y": -444,
+          "z": -567,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2201",
+          "offset": "0x1DEBA20"
         }
       ],
       "suffix": "00000000",
       "offset": "0x1DEBA00"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 4,
           "monster": "Undead-Knight"
         }
@@ -774,26 +774,16 @@
           "byte10_11": "0000",
           "area_id": "d200",
           "offset": "0x1DEBB68"
-        },
-        {
-          "slot": 4,
-          "x": -845,
-          "y": 14,
-          "z": -3733,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "d200",
-          "offset": "0x1DEBB68"
         }
       ],
       "suffix": "00000200",
       "offset": "0x1DEBB68"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 4,
           "monster": "Undead-Knight"
         }
@@ -808,26 +798,16 @@
           "byte10_11": "0000",
           "area_id": "d200",
           "offset": "0x1DEBB8C"
-        },
-        {
-          "slot": 4,
-          "x": -1403,
-          "y": -14,
-          "z": -3350,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "d200",
-          "offset": "0x1DEBB8C"
         }
       ],
       "suffix": "00000200",
       "offset": "0x1DEBB8C"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 4,
           "monster": "Undead-Knight"
         }
@@ -842,26 +822,16 @@
           "byte10_11": "0000",
           "area_id": "d200",
           "offset": "0x1DEBBB0"
-        },
-        {
-          "slot": 4,
-          "x": -2150,
-          "y": -7,
-          "z": -3802,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "d200",
-          "offset": "0x1DEBBB0"
         }
       ],
       "suffix": "00000200",
       "offset": "0x1DEBBB0"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 4,
           "monster": "Undead-Knight"
         }
@@ -876,26 +846,16 @@
           "byte10_11": "0000",
           "area_id": "5901",
           "offset": "0x1DEBBD4"
-        },
-        {
-          "slot": 4,
-          "x": -2109,
-          "y": -419,
-          "z": 267,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "5901",
-          "offset": "0x1DEBBD4"
         }
       ],
       "suffix": "00000200",
       "offset": "0x1DEBBD4"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 4,
           "monster": "Undead-Knight"
         }
@@ -910,26 +870,16 @@
           "byte10_11": "0000",
           "area_id": "1700",
           "offset": "0x1DEBBF8"
-        },
-        {
-          "slot": 4,
-          "x": -2320,
-          "y": -400,
-          "z": 897,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "1700",
-          "offset": "0x1DEBBF8"
         }
       ],
       "suffix": "00000200",
       "offset": "0x1DEBBF8"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 4,
           "monster": "Undead-Knight"
         }
@@ -944,26 +894,16 @@
           "byte10_11": "0000",
           "area_id": "7701",
           "offset": "0x1DEBC1C"
-        },
-        {
-          "slot": 4,
-          "x": -3821,
-          "y": -400,
-          "z": -623,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "7701",
-          "offset": "0x1DEBC1C"
         }
       ],
       "suffix": "00000200",
       "offset": "0x1DEBC1C"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 4,
           "monster": "Undead-Knight"
         }
@@ -978,26 +918,16 @@
           "byte10_11": "0000",
           "area_id": "7801",
           "offset": "0x1DEBC40"
-        },
-        {
-          "slot": 4,
-          "x": -4109,
-          "y": -417,
-          "z": -714,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "7801",
-          "offset": "0x1DEBC40"
         }
       ],
       "suffix": "00000200",
       "offset": "0x1DEBC40"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 4,
           "monster": "Undead-Knight"
         }
@@ -1012,26 +942,16 @@
           "byte10_11": "0000",
           "area_id": "7801",
           "offset": "0x1DEBC64"
-        },
-        {
-          "slot": 4,
-          "x": -4120,
-          "y": -381,
-          "z": 51,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "7801",
-          "offset": "0x1DEBC64"
         }
       ],
       "suffix": "00000200",
       "offset": "0x1DEBC64"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 4,
           "monster": "Undead-Knight"
         }
@@ -1046,26 +966,16 @@
           "byte10_11": "0000",
           "area_id": "e600",
           "offset": "0x1DEBC88"
-        },
-        {
-          "slot": 4,
-          "x": 627,
-          "y": -16,
-          "z": -2634,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "e600",
-          "offset": "0x1DEBC88"
         }
       ],
       "suffix": "00000200",
       "offset": "0x1DEBC88"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 4,
           "monster": "Undead-Knight"
         }
@@ -1080,26 +990,16 @@
           "byte10_11": "0000",
           "area_id": "e600",
           "offset": "0x1DEBCAC"
-        },
-        {
-          "slot": 4,
-          "x": 1387,
-          "y": -20,
-          "z": -2649,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "e600",
-          "offset": "0x1DEBCAC"
         }
       ],
       "suffix": "00000200",
       "offset": "0x1DEBCAC"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 4,
           "monster": "Undead-Knight"
         }
@@ -1114,26 +1014,16 @@
           "byte10_11": "0000",
           "area_id": "e600",
           "offset": "0x1DEBCD0"
-        },
-        {
-          "slot": 4,
-          "x": 1293,
-          "y": 17,
-          "z": -2918,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "e600",
-          "offset": "0x1DEBCD0"
         }
       ],
       "suffix": "00000200",
       "offset": "0x1DEBCD0"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 4,
           "monster": "Undead-Knight"
         }
@@ -1148,26 +1038,16 @@
           "byte10_11": "0000",
           "area_id": "e600",
           "offset": "0x1DEBCF4"
-        },
-        {
-          "slot": 4,
-          "x": 1891,
-          "y": -4,
-          "z": -3049,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "e600",
-          "offset": "0x1DEBCF4"
         }
       ],
       "suffix": "00000200",
       "offset": "0x1DEBCF4"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 4,
           "monster": "Undead-Knight"
         }
@@ -1182,26 +1062,16 @@
           "byte10_11": "0000",
           "area_id": "0401",
           "offset": "0x1DEBD18"
-        },
-        {
-          "slot": 4,
-          "x": 1500,
-          "y": -198,
-          "z": -3705,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "0401",
-          "offset": "0x1DEBD18"
         }
       ],
       "suffix": "00000200",
       "offset": "0x1DEBD18"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 4,
           "monster": "Undead-Knight"
         }
@@ -1216,26 +1086,16 @@
           "byte10_11": "0000",
           "area_id": "fe00",
           "offset": "0x1DEBD3C"
-        },
-        {
-          "slot": 4,
-          "x": 600,
-          "y": -205,
-          "z": -3523,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "fe00",
-          "offset": "0x1DEBD3C"
         }
       ],
       "suffix": "00000200",
       "offset": "0x1DEBD3C"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 4,
           "monster": "Undead-Knight"
         }
@@ -1250,26 +1110,16 @@
           "byte10_11": "0000",
           "area_id": "fe00",
           "offset": "0x1DEBD60"
-        },
-        {
-          "slot": 4,
-          "x": 684,
-          "y": -202,
-          "z": -4018,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "fe00",
-          "offset": "0x1DEBD60"
         }
       ],
       "suffix": "00000200",
       "offset": "0x1DEBD60"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 4,
           "monster": "Undead-Knight"
         }
@@ -1284,26 +1134,16 @@
           "byte10_11": "0000",
           "area_id": "7901",
           "offset": "0x1DEBD84"
-        },
-        {
-          "slot": 4,
-          "x": 3430,
-          "y": -406,
-          "z": 3391,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "7901",
-          "offset": "0x1DEBD84"
         }
       ],
       "suffix": "00000200",
       "offset": "0x1DEBD84"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 4,
           "monster": "Undead-Knight"
         }
@@ -1318,26 +1158,16 @@
           "byte10_11": "0000",
           "area_id": "8f01",
           "offset": "0x1DEBDA8"
-        },
-        {
-          "slot": 4,
-          "x": 2010,
-          "y": -199,
-          "z": 5672,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "8f01",
-          "offset": "0x1DEBDA8"
         }
       ],
       "suffix": "00000200",
       "offset": "0x1DEBDA8"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 4,
           "monster": "Undead-Knight"
         }
@@ -1348,16 +1178,6 @@
           "x": 1300,
           "y": -200,
           "z": 5380,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "9201",
-          "offset": "0x1DEBDCC"
-        },
-        {
-          "slot": 4,
-          "x": 1332,
-          "y": -190,
-          "z": 5443,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "9201",
@@ -1419,39 +1239,39 @@
         },
         {
           "slot": 0,
-          "x": 133,
-          "y": 131,
-          "z": -4559,
+          "x": -246,
+          "y": 149,
+          "z": -3904,
           "byte0": 0,
           "byte10_11": "0000",
-          "area_id": "2a00",
-          "offset": "0x1DEC228"
+          "area_id": "2900",
+          "offset": "0x1DEC1C8"
         },
         {
           "slot": 0,
-          "x": -388,
-          "y": 162,
-          "z": -2213,
+          "x": -8,
+          "y": 149,
+          "z": -2287,
           "byte0": 0,
           "byte10_11": "0000",
-          "area_id": "2b00",
-          "offset": "0x1DEC1E8"
+          "area_id": "2900",
+          "offset": "0x1DEC1C8"
         },
         {
           "slot": 0,
-          "x": 88,
-          "y": 139,
-          "z": -4483,
+          "x": -245,
+          "y": 149,
+          "z": -2801,
           "byte0": 0,
           "byte10_11": "0000",
-          "area_id": "2a00",
-          "offset": "0x1DEC228"
+          "area_id": "2900",
+          "offset": "0x1DEC1C8"
         },
         {
           "slot": 0,
-          "x": -269,
-          "y": 168,
-          "z": -4471,
+          "x": 13,
+          "y": 149,
+          "z": -4455,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "2900",
@@ -1667,43 +1487,43 @@
         },
         {
           "slot": 2,
-          "x": -378,
-          "y": 12,
-          "z": -4452,
+          "x": -286,
+          "y": 0,
+          "z": -2581,
           "byte0": 0,
           "byte10_11": "0000",
-          "area_id": "2900",
-          "offset": "0x1DEC768"
+          "area_id": "2b00",
+          "offset": "0x1DEC748"
         },
         {
           "slot": 2,
-          "x": 10,
-          "y": 13,
-          "z": -4600,
+          "x": 66,
+          "y": 0,
+          "z": -2772,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2c00",
+          "offset": "0x1DEC728"
+        },
+        {
+          "slot": 2,
+          "x": -254,
+          "y": 0,
+          "z": -2862,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2b00",
+          "offset": "0x1DEC748"
+        },
+        {
+          "slot": 2,
+          "x": 37,
+          "y": 0,
+          "z": -3624,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "2a00",
           "offset": "0x1DEC708"
-        },
-        {
-          "slot": 2,
-          "x": -348,
-          "y": 8,
-          "z": -2280,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "2b00",
-          "offset": "0x1DEC748"
-        },
-        {
-          "slot": 2,
-          "x": -397,
-          "y": -10,
-          "z": -2341,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "2b00",
-          "offset": "0x1DEC748"
         }
       ],
       "suffix": "00000000",
@@ -1875,29 +1695,9 @@
         },
         {
           "slot": 2,
-          "x": 1743,
-          "y": -2,
-          "z": 2865,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "c201",
-          "offset": "0x1DECD4C"
-        },
-        {
-          "slot": 2,
-          "x": 3174,
-          "y": -17,
-          "z": 3287,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "7901",
-          "offset": "0x1DECCCC"
-        },
-        {
-          "slot": 2,
-          "x": 2502,
-          "y": 13,
-          "z": 3185,
+          "x": 1970,
+          "y": 0,
+          "z": 2866,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "7901",
@@ -1905,9 +1705,29 @@
         },
         {
           "slot": 2,
-          "x": 3668,
-          "y": 16,
-          "z": 3223,
+          "x": 1971,
+          "y": 0,
+          "z": 3367,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7901",
+          "offset": "0x1DECCCC"
+        },
+        {
+          "slot": 2,
+          "x": 2282,
+          "y": 0,
+          "z": 2941,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "c201",
+          "offset": "0x1DECD2C"
+        },
+        {
+          "slot": 2,
+          "x": 2671,
+          "y": 0,
+          "z": 3031,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "7901",
@@ -1915,19 +1735,19 @@
         },
         {
           "slot": 2,
-          "x": 1759,
-          "y": 20,
-          "z": 2898,
+          "x": 2784,
+          "y": 0,
+          "z": 3183,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "c201",
-          "offset": "0x1DECD4C"
+          "offset": "0x1DECD2C"
         },
         {
           "slot": 2,
-          "x": 3210,
-          "y": -6,
-          "z": 3260,
+          "x": 2490,
+          "y": 0,
+          "z": 3121,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "7901",
@@ -2461,39 +2281,9 @@
         },
         {
           "slot": 0,
-          "x": 704,
-          "y": -468,
-          "z": -1194,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "2700",
-          "offset": "0x1DEDD34"
-        },
-        {
-          "slot": 0,
-          "x": 671,
-          "y": -439,
-          "z": -1168,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "2700",
-          "offset": "0x1DEDD34"
-        },
-        {
-          "slot": 0,
-          "x": 735,
-          "y": -439,
-          "z": -1065,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "2700",
-          "offset": "0x1DEDD34"
-        },
-        {
-          "slot": 0,
-          "x": 2010,
-          "y": -461,
-          "z": -354,
+          "x": 1047,
+          "y": -450,
+          "z": -362,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "2a01",
@@ -2501,33 +2291,63 @@
         },
         {
           "slot": 0,
-          "x": -1457,
-          "y": -1636,
-          "z": 4703,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "bf00",
-          "offset": "0x1DEDD94"
-        },
-        {
-          "slot": 0,
-          "x": 682,
-          "y": -434,
-          "z": -1530,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "2800",
-          "offset": "0x1DEDD54"
-        },
-        {
-          "slot": 0,
-          "x": -1439,
-          "y": -1654,
-          "z": 4346,
+          "x": -540,
+          "y": -1650,
+          "z": 2461,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "be00",
           "offset": "0x1DEDD74"
+        },
+        {
+          "slot": 0,
+          "x": 367,
+          "y": -450,
+          "z": 1126,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2700",
+          "offset": "0x1DEDD34"
+        },
+        {
+          "slot": 0,
+          "x": 1361,
+          "y": -451,
+          "z": -229,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2700",
+          "offset": "0x1DEDD34"
+        },
+        {
+          "slot": 0,
+          "x": -157,
+          "y": -865,
+          "z": 1793,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2a01",
+          "offset": "0x1DEDD14"
+        },
+        {
+          "slot": 0,
+          "x": -2110,
+          "y": -1650,
+          "z": 3773,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "be00",
+          "offset": "0x1DEDCF4"
+        },
+        {
+          "slot": 0,
+          "x": -1754,
+          "y": -1649,
+          "z": 4170,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "bf00",
+          "offset": "0x1DEDD94"
         }
       ],
       "suffix": "00000000",
@@ -2615,39 +2435,19 @@
         },
         {
           "slot": 2,
-          "x": -1568,
-          "y": -1788,
-          "z": 4666,
+          "x": -1857,
+          "y": -1800,
+          "z": 3380,
           "byte0": 0,
           "byte10_11": "0000",
-          "area_id": "bf00",
-          "offset": "0x1DEE1D4"
+          "area_id": "2800",
+          "offset": "0x1DEE194"
         },
         {
           "slot": 2,
-          "x": -1411,
-          "y": -1809,
-          "z": 4258,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "be00",
-          "offset": "0x1DEE234"
-        },
-        {
-          "slot": 2,
-          "x": 619,
-          "y": -618,
-          "z": -1012,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "2700",
-          "offset": "0x1DEE1B4"
-        },
-        {
-          "slot": 2,
-          "x": -2583,
-          "y": -1787,
-          "z": 4338,
+          "x": -288,
+          "y": -600,
+          "z": 962,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "be00",
@@ -2655,33 +2455,53 @@
         },
         {
           "slot": 2,
-          "x": 709,
-          "y": -594,
-          "z": -1413,
+          "x": 312,
+          "y": -600,
+          "z": 536,
           "byte0": 0,
           "byte10_11": "0000",
-          "area_id": "2800",
-          "offset": "0x1DEE194"
+          "area_id": "be00",
+          "offset": "0x1DEE234"
         },
         {
           "slot": 2,
-          "x": -1560,
-          "y": -1808,
-          "z": 4699,
+          "x": 521,
+          "y": -600,
+          "z": 1102,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2a01",
+          "offset": "0x1DEE174"
+        },
+        {
+          "slot": 2,
+          "x": -1219,
+          "y": -1800,
+          "z": 2834,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "bf00",
-          "offset": "0x1DEE1D4"
+          "offset": "0x1DEE1F4"
         },
         {
           "slot": 2,
-          "x": 715,
-          "y": -608,
-          "z": -1431,
+          "x": -1953,
+          "y": -1800,
+          "z": 4158,
           "byte0": 0,
           "byte10_11": "0000",
-          "area_id": "2800",
-          "offset": "0x1DEE194"
+          "area_id": "2a01",
+          "offset": "0x1DEE174"
+        },
+        {
+          "slot": 2,
+          "x": 1344,
+          "y": -600,
+          "z": -391,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2a01",
+          "offset": "0x1DEE174"
         }
       ],
       "suffix": "00000000",
@@ -2769,29 +2589,19 @@
         },
         {
           "slot": 2,
-          "x": -2517,
-          "y": -1816,
-          "z": 4729,
+          "x": 471,
+          "y": -600,
+          "z": 1621,
           "byte0": 0,
           "byte10_11": "0000",
-          "area_id": "bf00",
-          "offset": "0x1DEE9F4"
+          "area_id": "be00",
+          "offset": "0x1DEEA14"
         },
         {
           "slot": 2,
-          "x": -2401,
-          "y": -1809,
-          "z": 4633,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "bf00",
-          "offset": "0x1DEE9F4"
-        },
-        {
-          "slot": 2,
-          "x": -1521,
-          "y": -1803,
-          "z": 4309,
+          "x": -1350,
+          "y": -1800,
+          "z": 2917,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "be00",
@@ -2799,9 +2609,9 @@
         },
         {
           "slot": 2,
-          "x": 688,
-          "y": -590,
-          "z": -1147,
+          "x": -453,
+          "y": -600,
+          "z": 1322,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "2700",
@@ -2809,9 +2619,9 @@
         },
         {
           "slot": 2,
-          "x": -1417,
-          "y": -1818,
-          "z": 4210,
+          "x": -1523,
+          "y": -1800,
+          "z": 3598,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "be00",
@@ -2819,9 +2629,19 @@
         },
         {
           "slot": 2,
-          "x": 696,
-          "y": -597,
-          "z": -1024,
+          "x": -2144,
+          "y": -1799,
+          "z": 4155,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "bf00",
+          "offset": "0x1DEE9F4"
+        },
+        {
+          "slot": 2,
+          "x": -1932,
+          "y": -1800,
+          "z": 3686,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "2700",
@@ -2829,13 +2649,13 @@
         },
         {
           "slot": 2,
-          "x": -2491,
-          "y": -1785,
-          "z": 4705,
+          "x": 893,
+          "y": -600,
+          "z": -604,
           "byte0": 0,
           "byte10_11": "0000",
-          "area_id": "bf00",
-          "offset": "0x1DEE9F4"
+          "area_id": "2a01",
+          "offset": "0x1DEE974"
         }
       ],
       "suffix": "00000000",

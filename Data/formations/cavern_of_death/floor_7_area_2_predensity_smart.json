@@ -1,0 +1,456 @@
+{
+  "level_name": "Cavern of Death",
+  "name": "Floor 7 - Area 2",
+  "group_offset": "0xF911A0",
+  "monsters": [
+    "Cave-Bear",
+    "Blue-Slime",
+    "Spirit-Ball",
+    "Ogre"
+  ],
+  "formation_area_start": "0xF91910",
+  "formation_area_bytes": 692,
+  "original_total_slots": 21,
+  "area_id": "1f05",
+  "formation_count": 5,
+  "formations": [
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Cave-Bear"
+        },
+        {
+          "count": 2,
+          "slot": 2,
+          "monster": "Spirit-Ball"
+        }
+      ],
+      "slots": [
+        0,
+        0,
+        2,
+        2
+      ],
+      "suffix": "00000a00",
+      "offset": "0xF91910"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 1,
+          "monster": "Blue-Slime"
+        }
+      ],
+      "slots": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "suffix": "00000000",
+      "offset": "0xF91994"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 2,
+          "monster": "Spirit-Ball"
+        }
+      ],
+      "slots": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "suffix": "00000000",
+      "offset": "0xF91A18"
+    },
+    {
+      "total": 6,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Blue-Slime"
+        },
+        {
+          "count": 4,
+          "slot": 2,
+          "monster": "Spirit-Ball"
+        }
+      ],
+      "slots": [
+        1,
+        1,
+        2,
+        2,
+        2,
+        2
+      ],
+      "suffix": "00000a00",
+      "offset": "0xF91A9C"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 3,
+          "monster": "Ogre"
+        }
+      ],
+      "slots": [
+        3,
+        3,
+        3
+      ],
+      "suffix": "00000000",
+      "offset": "0xF91B60"
+    }
+  ],
+  "_placed_spawns": "--- placed spawns (per-record offsets) ---",
+  "spawn_points_area_start": "0xF915FC",
+  "spawn_points_area_bytes": 788,
+  "original_total_spawn_slots": 21,
+  "spawn_point_count": 6,
+  "spawn_points": [
+    {
+      "total": 7,
+      "composition": [
+        {
+          "count": 7,
+          "slot": 1,
+          "monster": "Blue-Slime"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": -737,
+          "y": 5,
+          "z": 4958,
+          "byte0": 0,
+          "byte10_11": "0a00",
+          "area_id": "2d03",
+          "offset": "0xF915FC"
+        },
+        {
+          "slot": 1,
+          "x": -1292,
+          "y": 5,
+          "z": 5267,
+          "byte0": 0,
+          "byte10_11": "0a00",
+          "area_id": "2a03",
+          "offset": "0xF9161C"
+        },
+        {
+          "slot": 1,
+          "x": -1765,
+          "y": 5,
+          "z": 5010,
+          "byte0": 0,
+          "byte10_11": "0a00",
+          "area_id": "2803",
+          "offset": "0xF9163C"
+        },
+        {
+          "slot": 1,
+          "x": -2594,
+          "y": 5,
+          "z": 4923,
+          "byte0": 0,
+          "byte10_11": "0a00",
+          "area_id": "2403",
+          "offset": "0xF9165C"
+        },
+        {
+          "slot": 1,
+          "x": -3338,
+          "y": 5,
+          "z": 4362,
+          "byte0": 0,
+          "byte10_11": "0a00",
+          "area_id": "ec02",
+          "offset": "0xF9167C"
+        },
+        {
+          "slot": 1,
+          "x": -3891,
+          "y": 5,
+          "z": 4649,
+          "byte0": 0,
+          "byte10_11": "0a00",
+          "area_id": "e902",
+          "offset": "0xF9169C"
+        },
+        {
+          "slot": 1,
+          "x": -5946,
+          "y": 5,
+          "z": 4740,
+          "byte0": 0,
+          "byte10_11": "0a00",
+          "area_id": "1b03",
+          "offset": "0xF916BC"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0xF915FC"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Blue-Slime"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 2855,
+          "y": 100,
+          "z": 3474,
+          "byte0": 0,
+          "byte10_11": "0b00",
+          "area_id": "e202",
+          "offset": "0xF916E0"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0xF916E0"
+    },
+    {
+      "total": 5,
+      "composition": [
+        {
+          "count": 5,
+          "slot": 1,
+          "monster": "Blue-Slime"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 1998,
+          "y": -1600,
+          "z": 1601,
+          "byte0": 0,
+          "byte10_11": "0c00",
+          "area_id": "3b04",
+          "offset": "0xF91724"
+        },
+        {
+          "slot": 1,
+          "x": 1439,
+          "y": -1600,
+          "z": 1557,
+          "byte0": 0,
+          "byte10_11": "0c00",
+          "area_id": "1b04",
+          "offset": "0xF91744"
+        },
+        {
+          "slot": 1,
+          "x": 992,
+          "y": -1600,
+          "z": 1550,
+          "byte0": 0,
+          "byte10_11": "0c00",
+          "area_id": "3404",
+          "offset": "0xF91764"
+        },
+        {
+          "slot": 1,
+          "x": 298,
+          "y": -1600,
+          "z": 1259,
+          "byte0": 0,
+          "byte10_11": "0c00",
+          "area_id": "2404",
+          "offset": "0xF91784"
+        },
+        {
+          "slot": 1,
+          "x": 71,
+          "y": -1600,
+          "z": 1165,
+          "byte0": 0,
+          "byte10_11": "0c00",
+          "area_id": "2d04",
+          "offset": "0xF917A4"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0xF91724"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Spirit-Ball"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -3125,
+          "y": -1395,
+          "z": -2215,
+          "byte0": 0,
+          "byte10_11": "0d00",
+          "area_id": "f300",
+          "offset": "0xF917C8"
+        }
+      ],
+      "suffix": "00000a00",
+      "offset": "0xF917C8"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 2,
+          "monster": "Spirit-Ball"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -2616,
+          "y": -1395,
+          "z": -2870,
+          "byte0": 0,
+          "byte10_11": "0d00",
+          "area_id": "6305",
+          "offset": "0xF91808"
+        },
+        {
+          "slot": 2,
+          "x": -2810,
+          "y": -1395,
+          "z": -3262,
+          "byte0": 0,
+          "byte10_11": "0d00",
+          "area_id": "d103",
+          "offset": "0xF91828"
+        }
+      ],
+      "suffix": "00000a00",
+      "offset": "0xF91808"
+    },
+    {
+      "total": 5,
+      "composition": [
+        {
+          "count": 5,
+          "slot": 1,
+          "monster": "Blue-Slime"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": -789,
+          "y": -1800,
+          "z": -3278,
+          "byte0": 0,
+          "byte10_11": "0e00",
+          "area_id": "2f02",
+          "offset": "0xF9186C"
+        },
+        {
+          "slot": 1,
+          "x": -91,
+          "y": -3000,
+          "z": -2819,
+          "byte0": 0,
+          "byte10_11": "0e00",
+          "area_id": "5502",
+          "offset": "0xF9188C"
+        },
+        {
+          "slot": 1,
+          "x": 206,
+          "y": -3000,
+          "z": -3691,
+          "byte0": 0,
+          "byte10_11": "0e00",
+          "area_id": "ec01",
+          "offset": "0xF918AC"
+        },
+        {
+          "slot": 1,
+          "x": 826,
+          "y": -3000,
+          "z": -2698,
+          "byte0": 0,
+          "byte10_11": "0e00",
+          "area_id": "4e02",
+          "offset": "0xF918CC"
+        },
+        {
+          "slot": 1,
+          "x": 181,
+          "y": -2800,
+          "z": -3105,
+          "byte0": 0,
+          "byte10_11": "0e00",
+          "area_id": "3502",
+          "offset": "0xF918EC"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0xF9186C"
+    }
+  ],
+  "zone_spawns_area_start": "0xF92888",
+  "zone_spawns_area_bytes": 36,
+  "original_total_zone_spawn_slots": 1,
+  "zone_spawn_count": 1,
+  "zone_spawns": [
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Blue-Slime"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": -3260,
+          "y": 5,
+          "z": 3336,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3403",
+          "offset": "0xF92888"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0xF92888"
+    }
+  ],
+  "slot_types": [
+    "00000000",
+    "00000000",
+    "00000a00",
+    "00000000"
+  ]
+}

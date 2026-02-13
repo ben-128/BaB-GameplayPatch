@@ -1,0 +1,559 @@
+{
+  "level_name": "The Forest",
+  "name": "Floor 1 - Area 5",
+  "group_offset": "0x149BA24",
+  "monsters": [
+    "Lizard-Man",
+    "Killer-Bear"
+  ],
+  "formation_area_start": null,
+  "formation_area_bytes": 0,
+  "original_total_slots": 0,
+  "area_id": "0000",
+  "formation_count": 0,
+  "formations": [],
+  "_placed_spawns": "--- placed spawns (per-record offsets) ---",
+  "spawn_points_area_start": "0x149C284",
+  "spawn_points_area_bytes": 760,
+  "original_total_spawn_slots": 21,
+  "spawn_point_count": 6,
+  "spawn_points": [
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Killer-Bear"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": -3600,
+          "y": 5,
+          "z": -4100,
+          "byte0": 0,
+          "byte10_11": "0e00",
+          "area_id": "8901",
+          "offset": "0x149C284"
+        },
+        {
+          "slot": 1,
+          "x": -3200,
+          "y": 5,
+          "z": -1900,
+          "byte0": 0,
+          "byte10_11": "0e00",
+          "area_id": "8101",
+          "offset": "0x149C2A4"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x149C284"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Lizard-Man"
+        },
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Killer-Bear"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": -1200,
+          "y": 5,
+          "z": -2000,
+          "byte0": 0,
+          "byte10_11": "0f00",
+          "area_id": "6601",
+          "offset": "0x149C308"
+        },
+        {
+          "slot": 0,
+          "x": -1800,
+          "y": 5,
+          "z": -1600,
+          "byte0": 0,
+          "byte10_11": "0f00",
+          "area_id": "3100",
+          "offset": "0x149C328"
+        },
+        {
+          "slot": 1,
+          "x": -1500,
+          "y": 5,
+          "z": -1200,
+          "byte0": 0,
+          "byte10_11": "0f00",
+          "area_id": "3501",
+          "offset": "0x149C348"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x149C308"
+    },
+    {
+      "total": 5,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Lizard-Man"
+        },
+        {
+          "count": 3,
+          "slot": 1,
+          "monster": "Killer-Bear"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": -100,
+          "y": 5,
+          "z": -3000,
+          "byte0": 0,
+          "byte10_11": "1000",
+          "area_id": "7a01",
+          "offset": "0x149C36C"
+        },
+        {
+          "slot": 0,
+          "x": 0,
+          "y": 5,
+          "z": -3700,
+          "byte0": 0,
+          "byte10_11": "1000",
+          "area_id": "7901",
+          "offset": "0x149C38C"
+        },
+        {
+          "slot": 1,
+          "x": 700,
+          "y": 5,
+          "z": -4500,
+          "byte0": 0,
+          "byte10_11": "1000",
+          "area_id": "7701",
+          "offset": "0x149C3AC"
+        },
+        {
+          "slot": 1,
+          "x": 1500,
+          "y": 5,
+          "z": -4700,
+          "byte0": 0,
+          "byte10_11": "1000",
+          "area_id": "7501",
+          "offset": "0x149C3CC"
+        },
+        {
+          "slot": 1,
+          "x": 2700,
+          "y": 5,
+          "z": -5000,
+          "byte0": 0,
+          "byte10_11": "1000",
+          "area_id": "4000",
+          "offset": "0x149C3EC"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x149C36C"
+    },
+    {
+      "total": 5,
+      "composition": [
+        {
+          "count": 5,
+          "slot": 0,
+          "monster": "Lizard-Man"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": 2900,
+          "y": 5,
+          "z": -3200,
+          "byte0": 0,
+          "byte10_11": "1100",
+          "area_id": "6702",
+          "offset": "0x149C410"
+        },
+        {
+          "slot": 0,
+          "x": 2900,
+          "y": 5,
+          "z": -2300,
+          "byte0": 0,
+          "byte10_11": "1100",
+          "area_id": "7002",
+          "offset": "0x149C430"
+        },
+        {
+          "slot": 0,
+          "x": 3200,
+          "y": 5,
+          "z": -2100,
+          "byte0": 0,
+          "byte10_11": "1100",
+          "area_id": "3102",
+          "offset": "0x149C450"
+        },
+        {
+          "slot": 0,
+          "x": 3300,
+          "y": 5,
+          "z": -700,
+          "byte0": 0,
+          "byte10_11": "1100",
+          "area_id": "3002",
+          "offset": "0x149C470"
+        },
+        {
+          "slot": 0,
+          "x": 2900,
+          "y": 5,
+          "z": -1100,
+          "byte0": 0,
+          "byte10_11": "1100",
+          "area_id": "7102",
+          "offset": "0x149C490"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x149C410"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 0,
+          "monster": "Lizard-Man"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": 2400,
+          "y": 5,
+          "z": 1400,
+          "byte0": 0,
+          "byte10_11": "1200",
+          "area_id": "fb00",
+          "offset": "0x149C4B4"
+        },
+        {
+          "slot": 0,
+          "x": 1500,
+          "y": 5,
+          "z": 1200,
+          "byte0": 0,
+          "byte10_11": "1200",
+          "area_id": "fb00",
+          "offset": "0x149C4D4"
+        },
+        {
+          "slot": 0,
+          "x": 600,
+          "y": 5,
+          "z": 1700,
+          "byte0": 0,
+          "byte10_11": "1200",
+          "area_id": "1400",
+          "offset": "0x149C4F4"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x149C4B4"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 0,
+          "monster": "Lizard-Man"
+        },
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Killer-Bear"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": -3700,
+          "y": 5,
+          "z": 1900,
+          "byte0": 0,
+          "byte10_11": "1300",
+          "area_id": "0301",
+          "offset": "0x149C518"
+        },
+        {
+          "slot": 1,
+          "x": -2800,
+          "y": 5,
+          "z": 3100,
+          "byte0": 0,
+          "byte10_11": "1300",
+          "area_id": "0401",
+          "offset": "0x149C538"
+        },
+        {
+          "slot": 1,
+          "x": -1700,
+          "y": 5,
+          "z": 4200,
+          "byte0": 0,
+          "byte10_11": "1300",
+          "area_id": "1101",
+          "offset": "0x149C558"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x149C518"
+    }
+  ],
+  "zone_spawns_area_start": "0x149CAF0",
+  "zone_spawns_area_bytes": 7628,
+  "original_total_zone_spawn_slots": 11,
+  "zone_spawn_count": 8,
+  "zone_spawns": [
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Killer-Bear"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": -2000,
+          "y": 750,
+          "z": -600,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ce00",
+          "offset": "0x149CAF0"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x149CAF0"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Killer-Bear"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": -2400,
+          "y": 750,
+          "z": -300,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ce00",
+          "offset": "0x149CB30"
+        },
+        {
+          "slot": 1,
+          "x": -2500,
+          "y": 750,
+          "z": -600,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ce00",
+          "offset": "0x149CB50"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x149CB30"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 1,
+          "monster": "Killer-Bear"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 200,
+          "y": 150,
+          "z": -4300,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "e500",
+          "offset": "0x149D150"
+        },
+        {
+          "slot": 1,
+          "x": 2400,
+          "y": 150,
+          "z": -5100,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "e400",
+          "offset": "0x149D170"
+        },
+        {
+          "slot": 1,
+          "x": -1700,
+          "y": 150,
+          "z": -1300,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "e600",
+          "offset": "0x149D190"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x149D150"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Killer-Bear"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 2400,
+          "y": 150,
+          "z": -5100,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "e400",
+          "offset": "0x149D594"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x149D594"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 0,
+          "monster": "Lizard-Man"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": -1700,
+          "y": 400,
+          "z": 1300,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "1b02",
+          "offset": "0x149DB58"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x149DB58"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Killer-Bear"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": -2400,
+          "y": 750,
+          "z": -300,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ce00",
+          "offset": "0x149DBF8"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x149DBF8"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Killer-Bear"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": -2000,
+          "y": 750,
+          "z": -600,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ce00",
+          "offset": "0x149DE78"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x149DE78"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Killer-Bear"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": -2800,
+          "y": 750,
+          "z": -100,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "cd00",
+          "offset": "0x149E898"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x149E898"
+    }
+  ]
+}

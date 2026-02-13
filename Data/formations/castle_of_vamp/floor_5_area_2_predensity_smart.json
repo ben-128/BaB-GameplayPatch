@@ -1,0 +1,1462 @@
+{
+  "level_name": "Castle of Vamp",
+  "name": "Floor 5 - Area 2",
+  "group_offset": "0x2426970",
+  "monsters": [
+    "Chimera",
+    "Lesser-Vampire",
+    "Chimera",
+    "Lesser-Vampire"
+  ],
+  "formation_area_start": null,
+  "formation_area_bytes": 0,
+  "original_total_slots": 0,
+  "area_id": "0000",
+  "formation_count": 0,
+  "formations": [],
+  "_placed_spawns": "--- placed spawns (per-record offsets) ---",
+  "spawn_points_area_start": "0x2427060",
+  "spawn_points_area_bytes": 508,
+  "original_total_spawn_slots": 15,
+  "spawn_point_count": 6,
+  "spawn_points": [
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Chimera"
+        },
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Lesser-Vampire"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": 2500,
+          "y": 680,
+          "z": -5300,
+          "byte0": 8,
+          "byte10_11": "0800",
+          "area_id": "4702",
+          "offset": "0x2427060"
+        },
+        {
+          "slot": 0,
+          "x": 2900,
+          "y": 680,
+          "z": -5300,
+          "byte0": 0,
+          "byte10_11": "0800",
+          "area_id": "4602",
+          "offset": "0x2427080"
+        },
+        {
+          "slot": 1,
+          "x": 2900,
+          "y": 680,
+          "z": -3700,
+          "byte0": 0,
+          "byte10_11": "0800",
+          "area_id": "5602",
+          "offset": "0x24270A0"
+        },
+        {
+          "slot": 1,
+          "x": 2500,
+          "y": 680,
+          "z": -3700,
+          "byte0": 0,
+          "byte10_11": "0800",
+          "area_id": "5602",
+          "offset": "0x24270C0"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2427060"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Chimera"
+        },
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Lesser-Vampire"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": -500,
+          "y": 80,
+          "z": -700,
+          "byte0": 255,
+          "byte10_11": "0a00",
+          "area_id": "ee02",
+          "offset": "0x24270E8"
+        },
+        {
+          "slot": 0,
+          "x": -100,
+          "y": 80,
+          "z": -700,
+          "byte0": 0,
+          "byte10_11": "0a00",
+          "area_id": "ef02",
+          "offset": "0x2427108"
+        },
+        {
+          "slot": 1,
+          "x": -400,
+          "y": 80,
+          "z": -100,
+          "byte0": 0,
+          "byte10_11": "0a00",
+          "area_id": "f802",
+          "offset": "0x2427128"
+        },
+        {
+          "slot": 1,
+          "x": -200,
+          "y": 80,
+          "z": -100,
+          "byte0": 0,
+          "byte10_11": "0a00",
+          "area_id": "f702",
+          "offset": "0x2427148"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x24270E8"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Chimera"
+        },
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Lesser-Vampire"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": 2350,
+          "y": 680,
+          "z": -300,
+          "byte0": 0,
+          "byte10_11": "0b00",
+          "area_id": "e202",
+          "offset": "0x242716C"
+        },
+        {
+          "slot": 0,
+          "x": 3050,
+          "y": 680,
+          "z": -300,
+          "byte0": 0,
+          "byte10_11": "0b00",
+          "area_id": "e502",
+          "offset": "0x242718C"
+        },
+        {
+          "slot": 1,
+          "x": 2700,
+          "y": 680,
+          "z": 200,
+          "byte0": 0,
+          "byte10_11": "0b00",
+          "area_id": "e602",
+          "offset": "0x24271AC"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x242716C"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 3,
+          "monster": "Lesser-Vampire"
+        }
+      ],
+      "records": [
+        {
+          "slot": 3,
+          "x": -3645,
+          "y": 760,
+          "z": 500,
+          "byte0": 0,
+          "byte10_11": "3d00",
+          "area_id": "ce01",
+          "offset": "0x24271D0"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x24271D0"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Chimera"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -4160,
+          "y": 760,
+          "z": -75,
+          "byte0": 0,
+          "byte10_11": "3e00",
+          "area_id": "cf01",
+          "offset": "0x24271F4"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x24271F4"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Chimera"
+        },
+        {
+          "count": 1,
+          "slot": 3,
+          "monster": "Lesser-Vampire"
+        }
+      ],
+      "records": [
+        {
+          "slot": 3,
+          "x": -4160,
+          "y": 760,
+          "z": 400,
+          "byte0": 0,
+          "byte10_11": "3f00",
+          "area_id": "cf01",
+          "offset": "0x2427218"
+        },
+        {
+          "slot": 2,
+          "x": -3645,
+          "y": 760,
+          "z": 400,
+          "byte0": 0,
+          "byte10_11": "3f00",
+          "area_id": "ce01",
+          "offset": "0x2427238"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2427218"
+    }
+  ],
+  "zone_spawns_area_start": "0x24274DC",
+  "zone_spawns_area_bytes": 8604,
+  "original_total_zone_spawn_slots": 91,
+  "zone_spawn_count": 17,
+  "zone_spawns": [
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Chimera"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -300,
+          "y": 10,
+          "z": -5300,
+          "byte0": 4,
+          "byte10_11": "0000",
+          "area_id": "d402",
+          "offset": "0x24274DC"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x24274DC"
+    },
+    {
+      "total": 12,
+      "composition": [
+        {
+          "count": 6,
+          "slot": 0,
+          "monster": "Chimera"
+        },
+        {
+          "count": 6,
+          "slot": 2,
+          "monster": "Chimera"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 160,
+          "y": 0,
+          "z": -5200,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "dd00",
+          "offset": "0x242751C"
+        },
+        {
+          "slot": 2,
+          "x": 160,
+          "y": 0,
+          "z": -4600,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "d102",
+          "offset": "0x242753C"
+        },
+        {
+          "slot": 2,
+          "x": 1580,
+          "y": 80,
+          "z": -960,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a002",
+          "offset": "0x242755C"
+        },
+        {
+          "slot": 2,
+          "x": 1820,
+          "y": 80,
+          "z": -960,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a002",
+          "offset": "0x242757C"
+        },
+        {
+          "slot": 2,
+          "x": -760,
+          "y": 0,
+          "z": -5200,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "de00",
+          "offset": "0x242759C"
+        },
+        {
+          "slot": 2,
+          "x": -760,
+          "y": 0,
+          "z": -4600,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "d102",
+          "offset": "0x24275BC"
+        },
+        {
+          "slot": 0,
+          "x": 140,
+          "y": 180,
+          "z": -5200,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "dd00",
+          "offset": "0x24275DC"
+        },
+        {
+          "slot": 0,
+          "x": 140,
+          "y": 180,
+          "z": -4600,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "d102",
+          "offset": "0x24275FC"
+        },
+        {
+          "slot": 0,
+          "x": 1580,
+          "y": 260,
+          "z": -940,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a002",
+          "offset": "0x242761C"
+        },
+        {
+          "slot": 0,
+          "x": 1820,
+          "y": 260,
+          "z": -940,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a002",
+          "offset": "0x242763C"
+        },
+        {
+          "slot": 0,
+          "x": -740,
+          "y": 180,
+          "z": -5200,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "de00",
+          "offset": "0x242765C"
+        },
+        {
+          "slot": 0,
+          "x": -740,
+          "y": 180,
+          "z": -4600,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "d102",
+          "offset": "0x242767C"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x242751C"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Chimera"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 1900,
+          "y": 80,
+          "z": -210,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a702",
+          "offset": "0x24277FC"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x24277FC"
+    },
+    {
+      "total": 12,
+      "composition": [
+        {
+          "count": 6,
+          "slot": 0,
+          "monster": "Chimera"
+        },
+        {
+          "count": 6,
+          "slot": 2,
+          "monster": "Chimera"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -180,
+          "y": 80,
+          "z": -3040,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "9002",
+          "offset": "0x2427A40"
+        },
+        {
+          "slot": 2,
+          "x": -420,
+          "y": 80,
+          "z": -3040,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "9002",
+          "offset": "0x2427A60"
+        },
+        {
+          "slot": 2,
+          "x": 1160,
+          "y": 80,
+          "z": -4180,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "9402",
+          "offset": "0x2427A80"
+        },
+        {
+          "slot": 2,
+          "x": 1160,
+          "y": 80,
+          "z": -4420,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "9402",
+          "offset": "0x2427AA0"
+        },
+        {
+          "slot": 2,
+          "x": -1760,
+          "y": 80,
+          "z": -4180,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "8702",
+          "offset": "0x2427AC0"
+        },
+        {
+          "slot": 2,
+          "x": -1760,
+          "y": 80,
+          "z": -4420,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "8702",
+          "offset": "0x2427AE0"
+        },
+        {
+          "slot": 0,
+          "x": -180,
+          "y": 260,
+          "z": -3060,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "9002",
+          "offset": "0x2427B00"
+        },
+        {
+          "slot": 0,
+          "x": -420,
+          "y": 260,
+          "z": -3060,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "9002",
+          "offset": "0x2427B20"
+        },
+        {
+          "slot": 0,
+          "x": 1140,
+          "y": 260,
+          "z": -4180,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "9402",
+          "offset": "0x2427B40"
+        },
+        {
+          "slot": 0,
+          "x": 1140,
+          "y": 260,
+          "z": -4420,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "9402",
+          "offset": "0x2427B60"
+        },
+        {
+          "slot": 0,
+          "x": -1740,
+          "y": 260,
+          "z": -4180,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "8702",
+          "offset": "0x2427B80"
+        },
+        {
+          "slot": 0,
+          "x": -1740,
+          "y": 260,
+          "z": -4420,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "8702",
+          "offset": "0x2427BA0"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2427A40"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Chimera"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 3700,
+          "y": 80,
+          "z": -210,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "4b01",
+          "offset": "0x2427D60"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2427D60"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Chimera"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 1150,
+          "y": 80,
+          "z": -3050,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "bb00",
+          "offset": "0x2427DC0"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2427DC0"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Chimera"
+        },
+        {
+          "count": 2,
+          "slot": 2,
+          "monster": "Chimera"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -1620,
+          "y": 560,
+          "z": -1640,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "1303",
+          "offset": "0x2427EE4"
+        },
+        {
+          "slot": 2,
+          "x": -3780,
+          "y": 560,
+          "z": -1640,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "1603",
+          "offset": "0x2427F04"
+        },
+        {
+          "slot": 0,
+          "x": -1620,
+          "y": 740,
+          "z": -1660,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "1303",
+          "offset": "0x2427F24"
+        },
+        {
+          "slot": 0,
+          "x": -3780,
+          "y": 740,
+          "z": -1660,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "1603",
+          "offset": "0x2427F44"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2427EE4"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Chimera"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 2700,
+          "y": 680,
+          "z": -5900,
+          "byte0": 28,
+          "byte10_11": "0000",
+          "area_id": "3d03",
+          "offset": "0x2428208"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2428208"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Chimera"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 2500,
+          "y": 680,
+          "z": -5700,
+          "byte0": 215,
+          "byte10_11": "0000",
+          "area_id": "4702",
+          "offset": "0x2428248"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2428248"
+    },
+    {
+      "total": 24,
+      "composition": [
+        {
+          "count": 12,
+          "slot": 0,
+          "monster": "Chimera"
+        },
+        {
+          "count": 12,
+          "slot": 2,
+          "monster": "Chimera"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -4240,
+          "y": 280,
+          "z": -4180,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2002",
+          "offset": "0x24282A8"
+        },
+        {
+          "slot": 2,
+          "x": -4240,
+          "y": 280,
+          "z": -4420,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2202",
+          "offset": "0x24282C8"
+        },
+        {
+          "slot": 2,
+          "x": -3440,
+          "y": 280,
+          "z": -3780,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2702",
+          "offset": "0x24282E8"
+        },
+        {
+          "slot": 2,
+          "x": -3440,
+          "y": 280,
+          "z": -4020,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2802",
+          "offset": "0x2428308"
+        },
+        {
+          "slot": 2,
+          "x": -3440,
+          "y": 280,
+          "z": -4580,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2a02",
+          "offset": "0x2428328"
+        },
+        {
+          "slot": 2,
+          "x": -3440,
+          "y": 280,
+          "z": -4820,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2d02",
+          "offset": "0x2428348"
+        },
+        {
+          "slot": 2,
+          "x": -3960,
+          "y": 280,
+          "z": -4420,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2a02",
+          "offset": "0x2428368"
+        },
+        {
+          "slot": 2,
+          "x": -3960,
+          "y": 280,
+          "z": -4180,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2802",
+          "offset": "0x2428388"
+        },
+        {
+          "slot": 2,
+          "x": -3160,
+          "y": 280,
+          "z": -4820,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3f02",
+          "offset": "0x24283A8"
+        },
+        {
+          "slot": 2,
+          "x": -3160,
+          "y": 280,
+          "z": -4580,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3002",
+          "offset": "0x24283C8"
+        },
+        {
+          "slot": 2,
+          "x": -3160,
+          "y": 280,
+          "z": -4020,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3202",
+          "offset": "0x24283E8"
+        },
+        {
+          "slot": 2,
+          "x": -3160,
+          "y": 280,
+          "z": -3780,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "4302",
+          "offset": "0x2428408"
+        },
+        {
+          "slot": 0,
+          "x": -4260,
+          "y": 420,
+          "z": -4180,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2002",
+          "offset": "0x2428428"
+        },
+        {
+          "slot": 0,
+          "x": -4260,
+          "y": 420,
+          "z": -4420,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2202",
+          "offset": "0x2428448"
+        },
+        {
+          "slot": 0,
+          "x": -3460,
+          "y": 420,
+          "z": -3780,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2702",
+          "offset": "0x2428468"
+        },
+        {
+          "slot": 0,
+          "x": -3460,
+          "y": 420,
+          "z": -4020,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2802",
+          "offset": "0x2428488"
+        },
+        {
+          "slot": 0,
+          "x": -3460,
+          "y": 420,
+          "z": -4580,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2a02",
+          "offset": "0x24284A8"
+        },
+        {
+          "slot": 0,
+          "x": -3460,
+          "y": 420,
+          "z": -4820,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2d02",
+          "offset": "0x24284C8"
+        },
+        {
+          "slot": 0,
+          "x": -3940,
+          "y": 420,
+          "z": -4420,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2a02",
+          "offset": "0x24284E8"
+        },
+        {
+          "slot": 0,
+          "x": -3940,
+          "y": 420,
+          "z": -4180,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2802",
+          "offset": "0x2428508"
+        },
+        {
+          "slot": 0,
+          "x": -3140,
+          "y": 420,
+          "z": -4820,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3f02",
+          "offset": "0x2428528"
+        },
+        {
+          "slot": 0,
+          "x": -3140,
+          "y": 420,
+          "z": -4580,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3002",
+          "offset": "0x2428548"
+        },
+        {
+          "slot": 0,
+          "x": -3140,
+          "y": 420,
+          "z": -4020,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3202",
+          "offset": "0x2428568"
+        },
+        {
+          "slot": 0,
+          "x": -3140,
+          "y": 420,
+          "z": -3780,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "4302",
+          "offset": "0x2428588"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x24282A8"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 2,
+          "monster": "Chimera"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 2700,
+          "y": 680,
+          "z": -5900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3d03",
+          "offset": "0x24286E8"
+        },
+        {
+          "slot": 2,
+          "x": -5110,
+          "y": 280,
+          "z": -4300,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "1f02",
+          "offset": "0x2428708"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x24286E8"
+    },
+    {
+      "total": 8,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 0,
+          "monster": "Chimera"
+        },
+        {
+          "count": 4,
+          "slot": 2,
+          "monster": "Chimera"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -2420,
+          "y": 760,
+          "z": 960,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "8901",
+          "offset": "0x2428AEC"
+        },
+        {
+          "slot": 2,
+          "x": -2180,
+          "y": 760,
+          "z": 960,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "8b01",
+          "offset": "0x2428B0C"
+        },
+        {
+          "slot": 2,
+          "x": -2420,
+          "y": 560,
+          "z": -40,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "b901",
+          "offset": "0x2428B2C"
+        },
+        {
+          "slot": 2,
+          "x": -2180,
+          "y": 560,
+          "z": -40,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "b901",
+          "offset": "0x2428B4C"
+        },
+        {
+          "slot": 0,
+          "x": -2420,
+          "y": 880,
+          "z": 940,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "8901",
+          "offset": "0x2428B6C"
+        },
+        {
+          "slot": 0,
+          "x": -2180,
+          "y": 880,
+          "z": 940,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "8b01",
+          "offset": "0x2428B8C"
+        },
+        {
+          "slot": 0,
+          "x": -2420,
+          "y": 680,
+          "z": -60,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "b901",
+          "offset": "0x2428BAC"
+        },
+        {
+          "slot": 0,
+          "x": -2180,
+          "y": 680,
+          "z": -60,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "b901",
+          "offset": "0x2428BCC"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2428AEC"
+    },
+    {
+      "total": 7,
+      "composition": [
+        {
+          "count": 7,
+          "slot": 2,
+          "monster": "Chimera"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 3860,
+          "y": 680,
+          "z": -940,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2303",
+          "offset": "0x2428DCC"
+        },
+        {
+          "slot": 2,
+          "x": 3780,
+          "y": 680,
+          "z": -660,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "1100",
+          "offset": "0x2428DEC"
+        },
+        {
+          "slot": 2,
+          "x": 3900,
+          "y": 680,
+          "z": -660,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "1200",
+          "offset": "0x2428E0C"
+        },
+        {
+          "slot": 2,
+          "x": 4020,
+          "y": 680,
+          "z": -660,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3a01",
+          "offset": "0x2428E2C"
+        },
+        {
+          "slot": 2,
+          "x": 4140,
+          "y": 680,
+          "z": -660,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3a01",
+          "offset": "0x2428E4C"
+        },
+        {
+          "slot": 2,
+          "x": 4340,
+          "y": 680,
+          "z": -460,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3201",
+          "offset": "0x2428E6C"
+        },
+        {
+          "slot": 2,
+          "x": 4340,
+          "y": 680,
+          "z": -580,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "4601",
+          "offset": "0x2428E8C"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2428DCC"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Chimera"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -3900,
+          "y": 760,
+          "z": 500,
+          "byte0": 26,
+          "byte10_11": "0000",
+          "area_id": "cd01",
+          "offset": "0x2428F30"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2428F30"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Chimera"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -3500,
+          "y": 565,
+          "z": -900,
+          "byte0": 99,
+          "byte10_11": "0000",
+          "area_id": "5600",
+          "offset": "0x2428F70"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2428F70"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 2,
+          "monster": "Chimera"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -50,
+          "y": 80,
+          "z": 250,
+          "byte0": 214,
+          "byte10_11": "0000",
+          "area_id": "f702",
+          "offset": "0x2429234"
+        },
+        {
+          "slot": 2,
+          "x": 3000,
+          "y": 680,
+          "z": 300,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "e402",
+          "offset": "0x2429254"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2429234"
+    },
+    {
+      "total": 12,
+      "composition": [
+        {
+          "count": 6,
+          "slot": 0,
+          "monster": "Chimera"
+        },
+        {
+          "count": 6,
+          "slot": 2,
+          "monster": "Chimera"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 160,
+          "y": 80,
+          "z": -1600,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "fe00",
+          "offset": "0x24294F4"
+        },
+        {
+          "slot": 2,
+          "x": 160,
+          "y": 80,
+          "z": -1000,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "fc00",
+          "offset": "0x2429514"
+        },
+        {
+          "slot": 2,
+          "x": 160,
+          "y": 80,
+          "z": -2200,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "0001",
+          "offset": "0x2429534"
+        },
+        {
+          "slot": 2,
+          "x": -760,
+          "y": 80,
+          "z": -1600,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ff00",
+          "offset": "0x2429554"
+        },
+        {
+          "slot": 2,
+          "x": -760,
+          "y": 80,
+          "z": -1000,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "fd00",
+          "offset": "0x2429574"
+        },
+        {
+          "slot": 2,
+          "x": -760,
+          "y": 80,
+          "z": -2200,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "0101",
+          "offset": "0x2429594"
+        },
+        {
+          "slot": 0,
+          "x": 140,
+          "y": 220,
+          "z": -1600,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "fe00",
+          "offset": "0x24295B4"
+        },
+        {
+          "slot": 0,
+          "x": 140,
+          "y": 220,
+          "z": -1000,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "fc00",
+          "offset": "0x24295D4"
+        },
+        {
+          "slot": 0,
+          "x": 140,
+          "y": 220,
+          "z": -2200,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "0001",
+          "offset": "0x24295F4"
+        },
+        {
+          "slot": 0,
+          "x": -760,
+          "y": 220,
+          "z": -1580,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "f002",
+          "offset": "0x2429614"
+        },
+        {
+          "slot": 0,
+          "x": -760,
+          "y": 220,
+          "z": -980,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ee02",
+          "offset": "0x2429634"
+        },
+        {
+          "slot": 0,
+          "x": -760,
+          "y": 220,
+          "z": -2180,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "f202",
+          "offset": "0x2429654"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x24294F4"
+    }
+  ]
+}

@@ -409,10 +409,10 @@
   "zone_spawn_count": 5,
   "zone_spawns": [
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 2,
           "monster": "Hell-Hound"
         }
@@ -427,26 +427,16 @@
           "byte10_11": "0000",
           "area_id": "7300",
           "offset": "0x2BFCEAC"
-        },
-        {
-          "slot": 2,
-          "x": -68,
-          "y": 190,
-          "z": -951,
-          "byte0": 32,
-          "byte10_11": "0000",
-          "area_id": "7300",
-          "offset": "0x2BFCEAC"
         }
       ],
       "suffix": "00000000",
       "offset": "0x2BFCEAC"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 2,
           "monster": "Hell-Hound"
         }
@@ -461,26 +451,16 @@
           "byte10_11": "0000",
           "area_id": "4c00",
           "offset": "0x2BFCFD0"
-        },
-        {
-          "slot": 2,
-          "x": -330,
-          "y": 1550,
-          "z": 1110,
-          "byte0": 99,
-          "byte10_11": "0000",
-          "area_id": "4c00",
-          "offset": "0x2BFCFD0"
         }
       ],
       "suffix": "00000000",
       "offset": "0x2BFCFD0"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 2,
           "monster": "Hell-Hound"
         }
@@ -495,26 +475,16 @@
           "byte10_11": "0000",
           "area_id": "e600",
           "offset": "0x2BFD634"
-        },
-        {
-          "slot": 2,
-          "x": 1953,
-          "y": 1614,
-          "z": -2140,
-          "byte0": 252,
-          "byte10_11": "0000",
-          "area_id": "e600",
-          "offset": "0x2BFD634"
         }
       ],
       "suffix": "00000000",
       "offset": "0x2BFD634"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 1,
           "monster": "Basirisk"
         }
@@ -525,16 +495,6 @@
           "x": -1100,
           "y": 1605,
           "z": -100,
-          "byte0": 99,
-          "byte10_11": "0000",
-          "area_id": "bc00",
-          "offset": "0x2BFD778"
-        },
-        {
-          "slot": 1,
-          "x": -1098,
-          "y": 1625,
-          "z": -62,
           "byte0": 99,
           "byte10_11": "0000",
           "area_id": "bc00",
@@ -596,19 +556,19 @@
         },
         {
           "slot": 2,
-          "x": -2325,
-          "y": 1590,
-          "z": 992,
+          "x": -2055,
+          "y": 1600,
+          "z": 616,
           "byte0": 244,
           "byte10_11": "0000",
-          "area_id": "4400",
-          "offset": "0x2BFDC04"
+          "area_id": "0700",
+          "offset": "0x2BFDBC4"
         },
         {
           "slot": 2,
-          "x": -1953,
-          "y": 1614,
-          "z": 875,
+          "x": -2083,
+          "y": 1600,
+          "z": 576,
           "byte0": 99,
           "byte10_11": "0000",
           "area_id": "0600",
@@ -616,23 +576,23 @@
         },
         {
           "slot": 2,
-          "x": -1843,
-          "y": 1606,
-          "z": 450,
+          "x": -2170,
+          "y": 1600,
+          "z": 704,
           "byte0": 244,
           "byte10_11": "0000",
-          "area_id": "0700",
-          "offset": "0x2BFDBC4"
+          "area_id": "4400",
+          "offset": "0x2BFDC04"
         },
         {
           "slot": 2,
-          "x": -1811,
-          "y": 1597,
-          "z": 449,
-          "byte0": 244,
+          "x": -2169,
+          "y": 1600,
+          "z": 634,
+          "byte0": 99,
           "byte10_11": "0000",
-          "area_id": "0700",
-          "offset": "0x2BFDBC4"
+          "area_id": "0600",
+          "offset": "0x2BFDBA4"
         }
       ],
       "suffix": "f4010002",

@@ -240,10 +240,10 @@
   "zone_spawn_count": 3,
   "zone_spawns": [
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 2,
           "monster": "Blood-Skeleton"
         }
@@ -258,26 +258,16 @@
           "byte10_11": "0000",
           "area_id": "5001",
           "offset": "0x2415158"
-        },
-        {
-          "slot": 2,
-          "x": 1811,
-          "y": 404,
-          "z": 1336,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "5001",
-          "offset": "0x2415158"
         }
       ],
       "suffix": "00000000",
       "offset": "0x2415158"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 1,
           "monster": "Harpy"
         }
@@ -288,16 +278,6 @@
           "x": 700,
           "y": 805,
           "z": 2100,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "5201",
-          "offset": "0x24151D8"
-        },
-        {
-          "slot": 1,
-          "x": 742,
-          "y": 815,
-          "z": 2150,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "5201",
@@ -339,19 +319,19 @@
         },
         {
           "slot": 2,
-          "x": 1624,
-          "y": 409,
-          "z": 1369,
+          "x": 1560,
+          "y": 400,
+          "z": 1302,
           "byte0": 0,
           "byte10_11": "0000",
-          "area_id": "1901",
-          "offset": "0x2415238"
+          "area_id": "6501",
+          "offset": "0x2415258"
         },
         {
           "slot": 2,
-          "x": 1471,
-          "y": 401,
-          "z": 499,
+          "x": 1560,
+          "y": 400,
+          "z": 1375,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "6501",

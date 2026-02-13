@@ -1,0 +1,456 @@
+{
+  "level_name": "Hall of Demons",
+  "name": "Area 4",
+  "group_offset": "0x2BF49A4",
+  "monsters": [
+    "Death-Knight",
+    "Blood-Shadow",
+    "Evil-Stalker",
+    "Gremlin",
+    "Gray-Arm"
+  ],
+  "formation_area_start": "0x2BF5234",
+  "formation_area_bytes": 436,
+  "original_total_slots": 13,
+  "area_id": "4200",
+  "formation_count": 5,
+  "formations": [
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 0,
+          "monster": "Death-Knight"
+        }
+      ],
+      "slots": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "suffix": "00000000",
+      "offset": "0x2BF5234",
+      "slot_types": []
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 1,
+          "monster": "Blood-Shadow"
+        }
+      ],
+      "slots": [
+        1,
+        1,
+        1
+      ],
+      "suffix": "00000b00",
+      "offset": "0x2BF52BC"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 2,
+          "monster": "Evil-Stalker"
+        }
+      ],
+      "slots": [
+        2,
+        2,
+        2
+      ],
+      "suffix": "00000100",
+      "offset": "0x2BF5320"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 3,
+          "monster": "Gremlin"
+        }
+      ],
+      "slots": [
+        3,
+        3,
+        3
+      ],
+      "suffix": "00000000",
+      "offset": "0x2BF5384"
+    }
+  ],
+  "_placed_spawns": "--- placed spawns (per-record offsets) ---",
+  "spawn_points_area_start": "0x2BF50FC",
+  "spawn_points_area_bytes": 312,
+  "original_total_spawn_slots": 9,
+  "spawn_point_count": 3,
+  "spawn_points": [
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 3,
+          "monster": "Gremlin"
+        }
+      ],
+      "records": [
+        {
+          "slot": 3,
+          "x": 493,
+          "y": 0,
+          "z": -3585,
+          "byte0": 0,
+          "byte10_11": "2600",
+          "area_id": "1d01",
+          "offset": "0x2BF50FC"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2BF50FC"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 3,
+          "monster": "Gremlin"
+        },
+        {
+          "count": 2,
+          "slot": 4,
+          "monster": "Gray-Arm"
+        }
+      ],
+      "records": [
+        {
+          "slot": 3,
+          "x": 1800,
+          "y": 100,
+          "z": 700,
+          "byte0": 255,
+          "byte10_11": "2800",
+          "area_id": "9200",
+          "offset": "0x2BF512C"
+        },
+        {
+          "slot": 3,
+          "x": 1800,
+          "y": 100,
+          "z": 700,
+          "byte0": 0,
+          "byte10_11": "2800",
+          "area_id": "9200",
+          "offset": "0x2BF514C"
+        },
+        {
+          "slot": 4,
+          "x": 2600,
+          "y": 100,
+          "z": 1100,
+          "byte0": 0,
+          "byte10_11": "2800",
+          "area_id": "9000",
+          "offset": "0x2BF516C"
+        },
+        {
+          "slot": 4,
+          "x": 2600,
+          "y": 100,
+          "z": 1100,
+          "byte0": 0,
+          "byte10_11": "2800",
+          "area_id": "9000",
+          "offset": "0x2BF518C"
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x2BF512C"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 3,
+          "monster": "Gremlin"
+        },
+        {
+          "count": 2,
+          "slot": 4,
+          "monster": "Gray-Arm"
+        }
+      ],
+      "records": [
+        {
+          "slot": 3,
+          "x": -1700,
+          "y": 100,
+          "z": 1100,
+          "byte0": 0,
+          "byte10_11": "2900",
+          "area_id": "8900",
+          "offset": "0x2BF51B0"
+        },
+        {
+          "slot": 3,
+          "x": -1700,
+          "y": 100,
+          "z": 700,
+          "byte0": 0,
+          "byte10_11": "2900",
+          "area_id": "8c00",
+          "offset": "0x2BF51D0"
+        },
+        {
+          "slot": 4,
+          "x": -2500,
+          "y": 100,
+          "z": 700,
+          "byte0": 0,
+          "byte10_11": "2800",
+          "area_id": "8b00",
+          "offset": "0x2BF51F0"
+        },
+        {
+          "slot": 4,
+          "x": -2500,
+          "y": 100,
+          "z": 1100,
+          "byte0": 0,
+          "byte10_11": "2800",
+          "area_id": "8800",
+          "offset": "0x2BF5210"
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x2BF51B0"
+    }
+  ],
+  "zone_spawns_area_start": "0x2BF55DC",
+  "zone_spawns_area_bytes": 3100,
+  "original_total_zone_spawn_slots": 15,
+  "zone_spawn_count": 4,
+  "zone_spawns": [
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Evil-Stalker"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 100,
+          "y": -595,
+          "z": 4300,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "4001",
+          "offset": "0x2BF55DC"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2BF55DC"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 2,
+          "monster": "Evil-Stalker"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 89,
+          "y": 0,
+          "z": 2026,
+          "byte0": 200,
+          "byte10_11": "0000",
+          "area_id": "be00",
+          "offset": "0x2BF5A44"
+        },
+        {
+          "slot": 2,
+          "x": 1205,
+          "y": 0,
+          "z": 892,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "bd00",
+          "offset": "0x2BF5A64"
+        },
+        {
+          "slot": 2,
+          "x": 89,
+          "y": 0,
+          "z": -203,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "bf00",
+          "offset": "0x2BF5A84"
+        },
+        {
+          "slot": 2,
+          "x": -1019,
+          "y": 0,
+          "z": 906,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "bc00",
+          "offset": "0x2BF5AA4"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2BF5A44"
+    },
+    {
+      "total": 8,
+      "composition": [
+        {
+          "count": 8,
+          "slot": 2,
+          "monster": "Evil-Stalker"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -2300,
+          "y": 100,
+          "z": 1200,
+          "byte0": 5,
+          "byte10_11": "0000",
+          "area_id": "8800",
+          "offset": "0x2BF5C28"
+        },
+        {
+          "slot": 2,
+          "x": -1500,
+          "y": 100,
+          "z": 1200,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "8900",
+          "offset": "0x2BF5C48"
+        },
+        {
+          "slot": 2,
+          "x": 1700,
+          "y": 100,
+          "z": 1200,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "8f00",
+          "offset": "0x2BF5C68"
+        },
+        {
+          "slot": 2,
+          "x": 2500,
+          "y": 100,
+          "z": 1200,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "9000",
+          "offset": "0x2BF5C88"
+        },
+        {
+          "slot": 2,
+          "x": 2900,
+          "y": 100,
+          "z": 600,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "9300",
+          "offset": "0x2BF5CA8"
+        },
+        {
+          "slot": 2,
+          "x": 2100,
+          "y": 100,
+          "z": 600,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "9200",
+          "offset": "0x2BF5CC8"
+        },
+        {
+          "slot": 2,
+          "x": -1900,
+          "y": 100,
+          "z": 600,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "8c00",
+          "offset": "0x2BF5CE8"
+        },
+        {
+          "slot": 2,
+          "x": -2700,
+          "y": 100,
+          "z": 600,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "8b00",
+          "offset": "0x2BF5D08"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2BF5C28"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 2,
+          "monster": "Evil-Stalker"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -4100,
+          "y": -1200,
+          "z": -900,
+          "byte0": 2,
+          "byte10_11": "0000",
+          "area_id": "4c01",
+          "offset": "0x2BF61B4"
+        },
+        {
+          "slot": 2,
+          "x": 4300,
+          "y": -1200,
+          "z": -900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "4501",
+          "offset": "0x2BF61D4"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2BF61B4"
+    }
+  ],
+  "slot_types": [
+    "00000100",
+    "00000b00",
+    "00000100",
+    "00000000"
+  ]
+}

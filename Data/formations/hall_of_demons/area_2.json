@@ -179,10 +179,10 @@
   "zone_spawn_count": 6,
   "zone_spawns": [
     {
-      "total": 3,
+      "total": 6,
       "composition": [
         {
-          "count": 3,
+          "count": 6,
           "slot": 2,
           "monster": "Dark-Goblin"
         }
@@ -217,6 +217,36 @@
           "byte10_11": "0000",
           "area_id": "1d00",
           "offset": "0x2BEFC24"
+        },
+        {
+          "slot": 2,
+          "x": 248,
+          "y": -66,
+          "z": 554,
+          "byte0": 3,
+          "byte10_11": "0000",
+          "area_id": "2500",
+          "offset": "0x2BEFBE4"
+        },
+        {
+          "slot": 2,
+          "x": -283,
+          "y": -68,
+          "z": 231,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "1d00",
+          "offset": "0x2BEFC24"
+        },
+        {
+          "slot": 2,
+          "x": 167,
+          "y": -80,
+          "z": -250,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2f00",
+          "offset": "0x2BEFC04"
         }
       ],
       "suffix": "00000000",
@@ -247,10 +277,10 @@
       "offset": "0x2BEFCA4"
     },
     {
-      "total": 2,
+      "total": 4,
       "composition": [
         {
-          "count": 2,
+          "count": 4,
           "slot": 2,
           "monster": "Dark-Goblin"
         }
@@ -275,16 +305,36 @@
           "byte10_11": "0000",
           "area_id": "3900",
           "offset": "0x2BEFD04"
+        },
+        {
+          "slot": 2,
+          "x": 2454,
+          "y": 0,
+          "z": -1351,
+          "byte0": 196,
+          "byte10_11": "0000",
+          "area_id": "3900",
+          "offset": "0x2BEFD04"
+        },
+        {
+          "slot": 2,
+          "x": 2270,
+          "y": 0,
+          "z": -1179,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ba00",
+          "offset": "0x2BEFCE4"
         }
       ],
       "suffix": "ceff3c00",
       "offset": "0x2BEFCE4"
     },
     {
-      "total": 2,
+      "total": 4,
       "composition": [
         {
-          "count": 2,
+          "count": 4,
           "slot": 2,
           "monster": "Dark-Goblin"
         }
@@ -309,16 +359,36 @@
           "byte10_11": "0000",
           "area_id": "2e01",
           "offset": "0x2BEFD64"
+        },
+        {
+          "slot": 2,
+          "x": 1552,
+          "y": -165,
+          "z": -1714,
+          "byte0": 150,
+          "byte10_11": "0000",
+          "area_id": "ba00",
+          "offset": "0x2BEFD44"
+        },
+        {
+          "slot": 2,
+          "x": -748,
+          "y": -565,
+          "z": -3935,
+          "byte0": 150,
+          "byte10_11": "0000",
+          "area_id": "ba00",
+          "offset": "0x2BEFD44"
         }
       ],
       "suffix": "baff3c00",
       "offset": "0x2BEFD44"
     },
     {
-      "total": 4,
+      "total": 8,
       "composition": [
         {
-          "count": 4,
+          "count": 8,
           "slot": 2,
           "monster": "Dark-Goblin"
         }
@@ -363,6 +433,46 @@
           "byte10_11": "0000",
           "area_id": "1301",
           "offset": "0x2BEFE04"
+        },
+        {
+          "slot": 2,
+          "x": 2755,
+          "y": -181,
+          "z": -2494,
+          "byte0": 206,
+          "byte10_11": "0000",
+          "area_id": "1301",
+          "offset": "0x2BEFE04"
+        },
+        {
+          "slot": 2,
+          "x": -717,
+          "y": -669,
+          "z": -4687,
+          "byte0": 10,
+          "byte10_11": "0000",
+          "area_id": "2a01",
+          "offset": "0x2BEFDA4"
+        },
+        {
+          "slot": 2,
+          "x": 2606,
+          "y": -211,
+          "z": -3851,
+          "byte0": 236,
+          "byte10_11": "0000",
+          "area_id": "3a00",
+          "offset": "0x2BEFDE4"
+        },
+        {
+          "slot": 2,
+          "x": 1449,
+          "y": -462,
+          "z": -4144,
+          "byte0": 150,
+          "byte10_11": "0000",
+          "area_id": "3301",
+          "offset": "0x2BEFDC4"
         }
       ],
       "suffix": "56ff7800",
