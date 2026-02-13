@@ -1,0 +1,119 @@
+{
+  "description": "Liste de toutes les clés et amulettes du jeu",
+  "total_keys": 19,
+  "keys": [
+    {
+      "name": "Black Key",
+      "name_fr": "Clé Noire",
+      "location": "Abandoned Mine - 3rd Underlevel"
+    },
+    {
+      "name": "Dragon Key",
+      "name_fr": "Clé du Dragon",
+      "opens": "Treasure Chest"
+    },
+    {
+      "name": "Cellar Key",
+      "name_fr": "Clé de Cave",
+      "opens": "Cellar Door"
+    },
+    {
+      "name": "Clearing Key",
+      "name_fr": "Clé de Clairière",
+      "opens": "Clearing Door"
+    },
+    {
+      "name": "Splendid Key",
+      "name_fr": "Clé Splendide"
+    },
+    {
+      "name": "Test Founder's Key",
+      "name_fr": "Clé du Fondateur de Test"
+    },
+    {
+      "name": "Blue Key",
+      "name_fr": "Clé Bleue"
+    },
+    {
+      "name": "Black Quarz Key",
+      "name_fr": "Clé de Quartz Noir"
+    },
+    {
+      "name": "Golden Key",
+      "name_fr": "Clé Dorée"
+    },
+    {
+      "name": "Moon Key",
+      "name_fr": "Clé de Lune"
+    },
+    {
+      "name": "Cell Key",
+      "name_fr": "Clé de Cellule",
+      "opens": "Cell Door"
+    },
+    {
+      "name": "Black Dragon Key",
+      "name_fr": "Clé du Dragon Noir",
+      "opens": "Black Dragon Door"
+    },
+    {
+      "name": "Blue Dragon Key",
+      "name_fr": "Clé du Dragon Bleu",
+      "opens": "Blue Dragon Door"
+    },
+    {
+      "name": "Red Dragon Key",
+      "name_fr": "Clé du Dragon Rouge",
+      "opens": "Red Dragon Door"
+    },
+    {
+      "name": "Antique Key",
+      "name_fr": "Clé Antique"
+    },
+    {
+      "name": "Magic Key",
+      "name_fr": "Clé Magique",
+      "note": "Different from Magical Key (amulet)"
+    },
+    {
+      "name": "Magical Key",
+      "name_fr": "Magical Key",
+      "opens": "Magic Locked Doors",
+      "type": "Amulet"
+    },
+    {
+      "name": "Demon Amulet",
+      "name_fr": "Amulette Démoniaque",
+      "opens": "Demon Engraved Doors"
+    },
+    {
+      "name": "Ghost Amulet",
+      "name_fr": "Amulette Fantôme",
+      "opens": "Ghost Engraved Doors"
+    }
+  ],
+  "categories": {
+    "amulets": [
+      "Magical Key",
+      "Demon Amulet",
+      "Ghost Amulet"
+    ],
+    "dragon_keys": [
+      "Black Dragon Key",
+      "Blue Dragon Key",
+      "Red Dragon Key"
+    ],
+    "special_keys": [
+      "Cellar Key",
+      "Cell Key",
+      "Clearing Key"
+    ],
+    "standard_keys": [
+      "Black Key",
+      "Blue Key",
+      "Golden Key",
+      "Moon Key",
+      "Antique Key"
+    ]
+  }
+}

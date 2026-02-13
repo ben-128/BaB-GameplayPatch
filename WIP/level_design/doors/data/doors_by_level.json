@@ -1,0 +1,401 @@
+{
+  "zones": {
+    "cavern_of_death": {
+      "name": "Caverne de la Mort",
+      "areas": [
+        "floor_1",
+        "floor_2",
+        "floor_3"
+      ]
+    },
+    "forest_of_despair": {
+      "name": "Forêt du Désespoir",
+      "areas": [
+        "area_1",
+        "area_2",
+        "area_3"
+      ]
+    },
+    "castle_of_vamp": {
+      "name": "Château du Vampire",
+      "areas": [
+        "floor_1_area_1",
+        "floor_1_area_2",
+        "floor_2_area_1",
+        "floor_3_area_1",
+        "floor_3_area_2",
+        "floor_3_area_3",
+        "floor_4_area_1",
+        "floor_5_area_1",
+        "floor_5_area_2",
+        "floor_5_area_3",
+        "floor_5_area_4"
+      ]
+    },
+    "mountain_valley": {
+      "name": "Vallée de la Montagne",
+      "areas": [
+        "area_1",
+        "area_2"
+      ]
+    },
+    "ancient_ruins": {
+      "name": "Ruines Anciennes",
+      "areas": [
+        "area_1",
+        "area_2",
+        "area_3"
+      ]
+    },
+    "abandoned_mine": {
+      "name": "Mine Abandonnée",
+      "areas": [
+        "1st_underlevel",
+        "2nd_underlevel",
+        "3rd_underlevel"
+      ]
+    },
+    "tower": {
+      "name": "Tour",
+      "areas": [
+        "floor_1",
+        "floor_2",
+        "floor_3",
+        "floor_4"
+      ]
+    }
+  },
+  "door_types": {
+    "magic_locked": {
+      "name": "Portes verrouillées par magie",
+      "count": 61,
+      "required_item": "Magical Key",
+      "description": "Opens doors locked by magic"
+    },
+    "demon_engraved": {
+      "name": "Portes avec gravure démoniaque",
+      "count": 3,
+      "required_item": "Demon Amulet",
+      "description": "Opens doors with demon engravings"
+    },
+    "ghost_engraved": {
+      "name": "Portes avec gravure fantôme",
+      "count": 2,
+      "required_item": "Ghost Amulet",
+      "description": "Opens doors with ghost engravings"
+    },
+    "key_locked": {
+      "name": "Portes nécessitant des clés",
+      "count": 131,
+      "required_item": "Specific keys (voir liste ci-dessous)",
+      "description": "Various doors requiring specific keys"
+    },
+    "generic": {
+      "name": "Portes génériques",
+      "count": 138,
+      "required_item": "None (unlocked)",
+      "description": "Standard unlocked doors"
+    }
+  },
+  "keys": [
+    {
+      "name": "\u00034\u0000\u000f\u001f\u001d\f \u0014\u0004black key\u0014\u0007.",
+      "opens": "Porte",
+      "description": "\u0000\u000f\b\u0001\u0000\u0000\u0000\u001f*\b\u0000\f - The Abandoned Mine -\r   - 3rd Underlevel -\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fThe \u0014\u0006black key \u0014\u0007opened the lock",
+      "context": "\u001c\u00034\u0000\u000f\u001f\u001d\fYou hold the \u0014\u0004black key\u0014\u0007.\n\u001e\u0000\u000f\b\u0001\u0000\u0000\u0000\u001f*\b\u0000\f - The Abandoned Mine -\r   - 3rd Underlevel -\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fThe \u0014\u0006black key \u0014\u0007opened the lock!\u000f\n\u0015\u0000\b\u0001\u0000\u0000\b\u0000\u001fD"
+    },
+    {
+      "name": "led!\u000f\u001f \fYou got \u0014\u0004the dragon key\u0014\u0007!",
+      "opens": "Coffre au trésor",
+      "description": "$\u0000\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f \fThe\u0014\u0004 dragon key \u0014\u0007opens the treasure chest!\u000f",
+      "context": "led!\u000f\u001f \fYou got \u0014\u0004the dragon key\u0014\u0007!\n$\u0000\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f \fThe\u0014\u0004 dragon key \u0014\u0007opens the treasure chest!\u000f\n!\u0000\u0000\u0000\b\u0000\u001f \fThe treasure chest won't open.\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\u001fk\b\u0000\f - "
+    },
+    {
+      "name": "\u0014\u0004cellar key\u0014\u0007.",
+      "opens": "Porte de la cave",
+      "description": "I\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fYou've found the \u0014\u0004key to the clearing\u0014\u0007!",
+      "context": "\u001f*\fYou've found the \u0014\u0004cellar key\u0014\u0007.\nI\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fYou've found the \u0014\u0004key to the clearing\u0014\u0007!\nI\u0000\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f\u001d\fThe doorbell rings...\u000f\u001f7\f\u001d:\r\u001c\u0003 \u0000\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fSom"
+    },
+    {
+      "name": "the door with the\r\u0014\u0006 splendid key\u0014\u0007!\u000f",
+      "opens": "Porte",
+      "description": null,
+      "context": "the door with the\r\u0014\u0006 splendid key\u0014\u0007!\u000f\n&\u0000\u0000\u0000\u0000\u0000\u0000\u001f\u001d\b\u0000\fWhere do you stab?\u000f\u001f^\fthe first hole\rthe second hole\rthe third hole\rthe fourth hole\rthe fifth hole\rt"
+    },
+    {
+      "name": "ve found the \u0014\u0004test founder's key\u0014\u0007!",
+      "opens": "Coffre au trésor",
+      "description": "I\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001fD\fYou were able to open the treasure chest with the test founder's key!\u000f",
+      "context": "ve found the \u0014\u0004test founder's key\u0014\u0007!\nI\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001fD\fYou were able to open the treasure chest with the test founder's key!\u000f\n?\u0000\u0000\u0000\u0000\u0000\u0000\b\u0000\u001fD\fThe portrait of "
+    },
+    {
+      "name": "B\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\f \u0014\u0004blue key\u0014\u0007!",
+      "opens": "Porte",
+      "description": null,
+      "context": " B1\u0000\u0000\u0000\b\u0000\u001f\u001d\fYou get the \u0014\u0004red key\u0014\u0007!\nB\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fYou get the \u0014\u0004blue key\u0014\u0007!\nB\u0000\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f*\fThere is a red crystal on the door...\u000f\u001f7\f\u001d:\r\u001c\u0003\u0014\u0000\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fYou"
+    },
+    {
+      "name": "\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\f \u0014\u0004blue key\u0014\u0007!",
+      "opens": "Porte",
+      "description": "B\u0000\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f*\fThere is a red crystal on the door...\u000f\u001f7\f\u001d:\r\u001c\u0003\u0014\u0000\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fYou open the door with the \u0014\u0006",
+      "context": "\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fYou get the \u0014\u0004blue key\u0014\u0007!\nB\u0000\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f*\fThere is a red crystal on the door...\u000f\u001f7\f\u001d:\r\u001c\u0003\u0014\u0000\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fYou open the door with the \u0014\u0006red key\u0014\u0007...\u000f\b"
+    },
+    {
+      "name": "discovered the \u0014\u0004black quarz key\u0014\u0007!",
+      "opens": "Porte",
+      "description": "N\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fYou have the key!\u000f\b\u0001\u0000\u0000\b\u0000\u001f\u001d\fThe door is locked...\u000f\u001c\u0002@\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fThe seal dissipates!\u000f\b\u0001\u0000",
+      "context": " discovered the \u0014\u0004black quarz key\u0014\u0007!\nN\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fYou have the key!\u000f\b\u0001\u0000\u0000\b\u0000\u001f\u001d\fThe door is locked...\u000f\u001c\u0002@\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fThe seal dissipates!\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f7\fI can "
+    },
+    {
+      "name": "\u0000\u0000\b\u0000\u001f\f \u0014\u0004golden key\u0014\u0007!",
+      "opens": "Porte",
+      "description": "'\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe door is closed tight...\u000f\u001fD\f\u001d:\r\u001c\u0003\u001c\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe\u0014\u0006 golden key\u0014\u0007 opens the door!\u000f\b",
+      "context": "\u0000\u0000\b\u0000\u001f*\fYou have the \u0014\u0004golden key\u0014\u0007!\n'\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe door is closed tight...\u000f\u001fD\f\u001d:\r\u001c\u0003\u001c\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe\u0014\u0006 golden key\u0014\u0007 opens the door!\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fSom"
+    },
+    {
+      "name": "\u0000\u000f\b\u0001\u0000\u0000\b\u0000\u001f\u001d\f \u0014\u0004moon key\u0014\u0007!",
+      "opens": null,
+      "description": null,
+      "context": "\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fYou have the \u0014\u0004star key\u0014\u0007!\n\u0000\u000f\b\u0001\u0000\u0000\b\u0000\u001f\u001d\fYou have the \u0014\u0004moon key\u0014\u0007!\n\u0000\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fThe seal is broken!\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001fD\fYou sense a sorcerous energy about"
+    },
+    {
+      "name": "\b\u0001\u0000\u0000\b\u0000\u001f\u001d\f \u0014\u0004moon key\u0014\u0007!",
+      "opens": "Porte",
+      "description": null,
+      "context": "\b\u0001\u0000\u0000\b\u0000\u001f\u001d\fYou have the \u0014\u0004moon key\u0014\u0007!\n\u0000\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fThe seal is broken!\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001fD\fYou sense a sorcerous energy about the door\r...it seems to be sealed.\u000f\u001c\u0002"
+    },
+    {
+      "name": "\u0003O\u0000\u000f\u001f\u001d\f \u0014\u0004cell key\u0014\u0007!",
+      "opens": "Porte de cellule",
+      "description": "~\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fThere's nothing here.\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fYou open the door with the \u0014\u0006cell key\u0014\u0007!\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f*\f\"Cel",
+      "context": "\r\u001c\u0003O\u0000\u000f\u001f\u001d\fYou have the \u0014\u0004cell key\u0014\u0007!\n~\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f\u001d\fThere's nothing here.\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fYou open the door with the \u0014\u0006cell key\u0014\u0007!\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f*\f\"Cell\" is written "
+    },
+    {
+      "name": "\u0014\u0004black dragon key\u0014\u0007!",
+      "opens": "Porte du Dragon Noir",
+      "description": null,
+      "context": "*\fYou have the \u0014\u0004black dragon key\u0014\u0007!\n[\u0000\u000f\b\u0001\u0000\u0000\b\u0000\u001f*\fThere's nothing more down there.\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f7\fThe sigil of the white dragon is engraved in the door...\u000f\u001f"
+    },
+    {
+      "name": "d\u0000\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f\f \u0014\u0004blue dragon key\u0014\u0007!",
+      "opens": "Porte du Dragon Noir",
+      "description": "door with the \u0014\u0006black dragon key\u0014\u0007.\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f7\fOnly a martyr shall gain the prize...",
+      "context": " door with the \u0014\u0006black dragon key\u0014\u0007.\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f7\fOnly a martyr shall gain the prize...\nc\u0000\u000f\nd\u0000\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fYou have the \u0014\u0004blue dragon key\u0014\u0007!\n[\u0000\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f7\fT"
+    },
+    {
+      "name": "\u0014\u0004blue dragon key\u0014\u0007!",
+      "opens": "Porte du Dragon Bleu",
+      "description": "[\u0000\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f7\fThe sigil of the blue dragon is engraved in the door...\u000f\u001fD\f\u001d:\r\u001c\u0003N\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fYou open ",
+      "context": "*\fYou have the \u0014\u0004blue dragon key\u0014\u0007!\n[\u0000\u000f\b\u0001\u0000\u0000\u0000\b\u0000\u001f7\fThe sigil of the blue dragon is engraved in the door...\u000f\u001fD\f\u001d:\r\u001c\u0003N\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fYou open the door with "
+    },
+    {
+      "name": "d\u0000\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f\f \u0014\u0004red dragon key\u0014\u0007!",
+      "opens": "Porte du Dragon Bleu",
+      "description": "e door with the \u0014\u0006blue dragon key\u0014\u0007!\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fTake care that you don't fall in!",
+      "context": "e door with the \u0014\u0006blue dragon key\u0014\u0007!\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fTake care that you don't fall in!\nc\u0000\u000f\nd\u0000\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fYou have the \u0014\u0004red dragon key\u0014\u0007!\n[\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f7\fThe "
+    },
+    {
+      "name": "\u0014\u0004red dragon key\u0014\u0007!",
+      "opens": "Porte du Dragon Rouge",
+      "description": "[\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f7\fThe sigil of the red dragon is engraved in the door...\u000f\u001fD\f\u001d:\r\u001c\u0003N\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fYou open",
+      "context": "\u001f*\fYou have the \u0014\u0004red dragon key\u0014\u0007!\n[\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f7\fThe sigil of the red dragon is engraved in the door...\u000f\u001fD\f\u001d:\r\u001c\u0003N\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f*\fYou open the door with"
+    },
+    {
+      "name": "\u0000\u0000\b\u0000\u001f\f \u0014\u0004antique key\u0014\u0007!",
+      "opens": "Porte",
+      "description": null,
+      "context": "\u0000\u0000\b\u0000\u001f*\fYou get the \u0014\u0004antique key\u0014\u0007!\nH\u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b\u0000\u001f*\fThe door has a special lock on it...\u000f\u001fD\f\u001d:\r\u001c\u0003\r\u0000\u000f\f\u001d:\r\u001c\u0003\u001d\u0000\u000f\b\u0001\u0000\u0000\b\u0000\u001f \fThe door has a special lock on it."
+    },
+    {
+      "name": "\u0001\u0000\u0000\u0000\b\u0000\u001f\u001d\f \u0014\u0004magic key\u0014\u0007!",
+      "opens": null,
+      "description": null,
+      "context": "\u0001\u0000\u0000\u0000\b\u0000\u001f\u001d\fYou get the \u0014\u0004magic key\u0014\u0007!\n@\u0000\u000f\b\u0001\u0000\u0000\u001f7\fWhen you step on the switch you can hear a rumbling noise in the distance...\u000f\b\u0001\u0000\u0000\u0000\u0000\u0000\b\u0000\u001f7\f\u001d:\r\u001c\u0003 \u0000\u000f\b\u0001\u0000\u0000\u0000\u0000\b"
+    }
+  ],
+  "portals": {
+    "total": 50,
+    "destinations": {
+      "1st Underlevel": [
+        "0xf942c2",
+        "0xf942fa",
+        "0xf94332",
+        "0xf94370",
+        "0xf943a1",
+        "0xf94414",
+        "0xf94460",
+        "0xf944ac",
+        "0xf944f8",
+        "0xf94544",
+        "0xf94551",
+        "0xf945b0",
+        "0xf945ec",
+        "0xf945f9",
+        "0xf9462d",
+        "0xf94661",
+        "0xf94ac2",
+        "0xf94afa",
+        "0xf94b32",
+        "0xf94b70",
+        "0xf94ba1",
+        "0xf94c14",
+        "0xf94c60",
+        "0xf94cac",
+        "0xf94cf8",
+        "0xf94d44",
+        "0xf94d51",
+        "0xf94db0",
+        "0xf94dec",
+        "0xf94df9",
+        "0xf94e2d",
+        "0xf94e61"
+      ]
+    },
+    "gate_crystals": 4
+  },
+  "door_structures": {
+    "total": 50,
+    "sample_positions": [
+      {
+        "offset": "0x100000",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "type": 0,
+        "key_id": 0,
+        "destination_id": 0,
+        "flags": "0x0",
+        "type_description": "Unlocked",
+        "raw_hex": "00000000000000000000000000000000"
+      },
+      {
+        "offset": "0x100004",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "type": 0,
+        "key_id": 0,
+        "destination_id": 0,
+        "flags": "0xff",
+        "type_description": "Unlocked",
+        "raw_hex": "000000000000000000000000ff000000"
+      },
+      {
+        "offset": "0x10000c",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 255
+        },
+        "type": 0,
+        "key_id": 0,
+        "destination_id": 0,
+        "flags": "0x0",
+        "type_description": "Unlocked",
+        "raw_hex": "00000000ff0000000000000000000000"
+      },
+      {
+        "offset": "0x1000f8",
+        "position": {
+          "x": 255,
+          "y": 0,
+          "z": 0
+        },
+        "type": 0,
+        "key_id": 0,
+        "destination_id": 0,
+        "flags": "0x0",
+        "type_description": "Unlocked",
+        "raw_hex": "ff000000000000000000000000000000"
+      },
+      {
+        "offset": "0x1000fc",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "type": 0,
+        "key_id": 0,
+        "destination_id": 0,
+        "flags": "0x0",
+        "type_description": "Unlocked",
+        "raw_hex": "00000000000000000000000000000000"
+      },
+      {
+        "offset": "0x100100",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "type": 0,
+        "key_id": 0,
+        "destination_id": 0,
+        "flags": "0x0",
+        "type_description": "Unlocked",
+        "raw_hex": "00000000000000000000000000000000"
+      },
+      {
+        "offset": "0x100104",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "type": 0,
+        "key_id": 0,
+        "destination_id": 0,
+        "flags": "0xff",
+        "type_description": "Unlocked",
+        "raw_hex": "000000000000000000000000ff000000"
+      },
+      {
+        "offset": "0x10010c",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 255
+        },
+        "type": 0,
+        "key_id": 0,
+        "destination_id": 0,
+        "flags": "0x0",
+        "type_description": "Unlocked",
+        "raw_hex": "00000000ff0000000000000000000000"
+      },
+      {
+        "offset": "0x1001f8",
+        "position": {
+          "x": 255,
+          "y": 0,
+          "z": 0
+        },
+        "type": 0,
+        "key_id": 0,
+        "destination_id": 0,
+        "flags": "0x0",
+        "type_description": "Unlocked",
+        "raw_hex": "ff000000000000000000000000000000"
+      },
+      {
+        "offset": "0x1001fc",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "type": 0,
+        "key_id": 0,
+        "destination_id": 0,
+        "flags": "0x0",
+        "type_description": "Unlocked",
+        "raw_hex": "00000000000000000000000000000000"
+      }
+    ]
+  }
+}

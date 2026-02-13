@@ -1,0 +1,107 @@
+{
+  "description": "Index de toutes les zones et areas du jeu",
+  "total_zones": 10,
+  "zones": {
+    "cavern_of_death": {
+      "name_en": "Cavern of Death",
+      "name_fr": "Caverne de la Mort",
+      "areas": [
+        "floor_1_area_1",
+        "floor_1_area_2",
+        "floor_2_area_1",
+        "floor_3_area_1",
+        "floor_4_area_1",
+        "floor_5_area_1",
+        "floor_7_area_2",
+        "floor_7_area_3"
+      ]
+    },
+    "forest": {
+      "name_en": "Forest of Despair",
+      "name_fr": "Forêt du Désespoir",
+      "areas": [
+        "floor_1_area_1",
+        "floor_1_area_4",
+        "floor_2_area_1",
+        "floor_2_area_2"
+      ]
+    },
+    "castle_of_vamp": {
+      "name_en": "Castle of Vamp",
+      "name_fr": "Château du Vampire",
+      "areas": [
+        "floor_2_area_1",
+        "floor_3_area_1",
+        "floor_3_area_2",
+        "floor_5_area_1",
+        "floor_5_area_4"
+      ]
+    },
+    "valley": {
+      "name_en": "Mountain Valley",
+      "name_fr": "Vallée de la Montagne",
+      "areas": [
+        "floor_1_area_1"
+      ]
+    },
+    "ancient_ruins": {
+      "name_en": "Ancient Ruins",
+      "name_fr": "Ruines Anciennes",
+      "areas": [
+        "area_1",
+        "area_2"
+      ]
+    },
+    "fire_mountain": {
+      "name_en": "Fire Mountain",
+      "name_fr": "Montagne de Feu",
+      "areas": [
+        "area_1"
+      ]
+    },
+    "tower": {
+      "name_en": "Tower",
+      "name_fr": "Tour",
+      "areas": [
+        "area_2",
+        "area_3",
+        "area_6",
+        "area_8",
+        "area_9",
+        "area_11"
+      ]
+    },
+    "undersea": {
+      "name_en": "Undersea Temple",
+      "name_fr": "Temple Sous-Marin",
+      "areas": [
+        "area_1",
+        "area_2"
+      ]
+    },
+    "hall_of_demons": {
+      "name_en": "Hall of Demons",
+      "name_fr": "Hall des Démons",
+      "areas": [
+        "area_1",
+        "area_3",
+        "area_4",
+        "area_7",
+        "area_8",
+        "area_9",
+        "area_11"
+      ]
+    },
+    "sealed_cave": {
+      "name_en": "Sealed Cave",
+      "name_fr": "Caverne Scellée",
+      "areas": [
+        "area_2",
+        "area_4",
+        "area_6",
+        "area_7",
+        "area_8"
+      ]
+    }
+  }
+}

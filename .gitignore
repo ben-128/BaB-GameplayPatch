@@ -23,3 +23,4 @@ logs/
 output/
 __pycache__/
 nul
+yolov8n.pt

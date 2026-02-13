@@ -1,0 +1,24 @@
+{
+  "zone": {
+    "id": "ancient_ruins",
+    "name_en": "Ancient Ruins",
+    "name_fr": "Ruines Anciennes"
+  },
+  "area": {
+    "id": "area_1"
+  },
+  "doors": [],
+  "notes": "À remplir via exploration in-game de Ancient Ruins",
+  "known_door_statistics_game_wide": {
+    "magic_locked": 61,
+    "demon_engraved": 3,
+    "ghost_engraved": 2,
+    "key_locked": 131,
+    "generic_unlocked": 138,
+    "note": "Ces chiffres sont pour TOUT le jeu (analyse textuelle BLAZE.ALL)"
+  },
+  "summary": {
+    "total_doors": 0,
+    "by_type": {}
+  }
+}

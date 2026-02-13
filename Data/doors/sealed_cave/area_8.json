@@ -1,0 +1,24 @@
+{
+  "zone": {
+    "id": "sealed_cave",
+    "name_en": "Sealed Cave",
+    "name_fr": "Caverne Scellée"
+  },
+  "area": {
+    "id": "area_8"
+  },
+  "doors": [],
+  "notes": "À remplir via exploration in-game de Sealed Cave",
+  "known_door_statistics_game_wide": {
+    "magic_locked": 61,
+    "demon_engraved": 3,
+    "ghost_engraved": 2,
+    "key_locked": 131,
+    "generic_unlocked": 138,
+    "note": "Ces chiffres sont pour TOUT le jeu (analyse textuelle BLAZE.ALL)"
+  },
+  "summary": {
+    "total_doors": 0,
+    "by_type": {}
+  }
+}

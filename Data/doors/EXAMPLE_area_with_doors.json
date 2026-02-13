@@ -1,0 +1,81 @@
+{
+  "zone": {
+    "id": "cavern_of_death",
+    "name_en": "Cavern of Death",
+    "name_fr": "Caverne de la Mort"
+  },
+  "area": {
+    "id": "floor_1_area_1"
+  },
+  "doors": [
+    {
+      "id": "door_001",
+      "type": "unlocked",
+      "type_name": "Porte ouverte",
+      "position": {
+        "x": 150,
+        "y": 0,
+        "z": 200,
+        "notes": "Entrée de la zone"
+      },
+      "required_item": null,
+      "destination": "floor_1_area_2",
+      "notes": "Porte d'entrée principale, toujours ouverte"
+    },
+    {
+      "id": "door_002",
+      "type": "magic_locked",
+      "type_name": "Porte magique",
+      "position": {
+        "x": 300,
+        "y": 0,
+        "z": 150
+      },
+      "required_item": "Magical Key",
+      "destination": "treasure_room",
+      "notes": "Mène à une salle au trésor, nécessite Magical Key"
+    },
+    {
+      "id": "door_003",
+      "type": "key_locked",
+      "type_name": "Porte verrouillée",
+      "position": {
+        "x": 120,
+        "y": 0,
+        "z": 80
+      },
+      "required_item": "Blue Key",
+      "specific_key": "Blue Key",
+      "destination": "secret_passage",
+      "notes": "Passage secret, clé bleue trouvée dans la même zone"
+    },
+    {
+      "id": "door_004",
+      "type": "boss_door",
+      "type_name": "Porte de boss",
+      "position": {
+        "x": 500,
+        "y": 0,
+        "z": 400
+      },
+      "required_item": "Boss Defeated",
+      "boss_name": "Goblin King",
+      "destination": "floor_2_area_1",
+      "notes": "S'ouvre après avoir vaincu le Goblin King"
+    }
+  ],
+  "notes": "EXEMPLE - À remplir avec les vraies données après exploration in-game",
+  "summary": {
+    "total_doors": 4,
+    "by_type": {
+      "unlocked": 1,
+      "magic_locked": 1,
+      "key_locked": 1,
+      "boss_door": 1
+    },
+    "keys_required": [
+      "Magical Key",
+      "Blue Key"
+    ]
+  }
+}

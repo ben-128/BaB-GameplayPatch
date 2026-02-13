@@ -1,0 +1,54 @@
+{
+  "description": "Reference des types de portes dans Blaze & Blade",
+  "door_types": {
+    "unlocked": {
+      "name_fr": "Porte ouverte",
+      "name_en": "Unlocked",
+      "required": null,
+      "description_fr": "Porte standard, toujours ouverte",
+      "description_en": "Standard door, always open"
+    },
+    "magic_locked": {
+      "name_fr": "Porte magique",
+      "name_en": "Magic Locked",
+      "required": "Magical Key",
+      "description_fr": "Nécessite la Magical Key pour ouvrir",
+      "description_en": "Requires Magical Key to open"
+    },
+    "demon_engraved": {
+      "name_fr": "Porte démoniaque",
+      "name_en": "Demon Engraved",
+      "required": "Demon Amulet",
+      "description_fr": "Porte avec gravure démoniaque, nécessite Demon Amulet",
+      "description_en": "Door with demon engravings, requires Demon Amulet"
+    },
+    "ghost_engraved": {
+      "name_fr": "Porte fantôme",
+      "name_en": "Ghost Engraved",
+      "required": "Ghost Amulet",
+      "description_fr": "Porte avec gravure de fantôme, nécessite Ghost Amulet",
+      "description_en": "Door with ghost engravings, requires Ghost Amulet"
+    },
+    "key_locked": {
+      "name_fr": "Porte verrouillée",
+      "name_en": "Key Locked",
+      "required": "Specific Key",
+      "description_fr": "Nécessite une clé spécifique (voir liste des clés)",
+      "description_en": "Requires specific key (see key list)"
+    },
+    "event_locked": {
+      "name_fr": "Porte événement",
+      "name_en": "Event Locked",
+      "required": "Event Trigger",
+      "description_fr": "S'ouvre après un événement spécifique",
+      "description_en": "Opens after specific event"
+    },
+    "boss_door": {
+      "name_fr": "Porte de boss",
+      "name_en": "Boss Door",
+      "required": "Boss Defeated",
+      "description_fr": "S'ouvre après avoir vaincu le boss",
+      "description_en": "Opens after defeating boss"
+    }
+  }
+}

@@ -1,0 +1,254 @@
+================================================================================
+  BLAZE & BLADE - LISTE DES PORTES PAR NIVEAU/ZONE
+================================================================================
+
+Créé le: 2026-02-13
+Status: Structure créée - Données à peupler via exploration in-game
+
+================================================================================
+  ORGANISATION DES FICHIERS
+================================================================================
+
+Data/doors/
+  ├── FICHIERS DE RÉFÉRENCE:
+  │   ├── zone_index.json           → Index de toutes les zones
+  │   ├── door_types_reference.json → Types de portes et objets requis
+  │   ├── keys_reference.json       → Liste complète des 19 clés
+  │   ├── README.md                 → Documentation complète
+  │   ├── SUMMARY.md                → Résumé visuel détaillé
+  │   └── EXAMPLE_area_with_doors.json → Exemple de fichier rempli
+  │
+  └── FICHIERS PAR ZONE (41 areas au total):
+      ├── cavern_of_death/ (8 areas)
+      ├── forest/ (4 areas)
+      ├── castle_of_vamp/ (5 areas)
+      ├── valley/ (1 area)
+      ├── ancient_ruins/ (2 areas)
+      ├── fire_mountain/ (1 area)
+      ├── tower/ (6 areas)
+      ├── undersea/ (2 areas)
+      ├── hall_of_demons/ (7 areas)
+      └── sealed_cave/ (5 areas)
+
+================================================================================
+  ZONES DU JEU (10 zones, 41 areas)
+================================================================================
+
+1. CAVERN OF DEATH (Caverne de la Mort) - 8 areas
+   ├── floor_1_area_1.json
+   ├── floor_1_area_2.json
+   ├── floor_2_area_1.json
+   ├── floor_3_area_1.json
+   ├── floor_4_area_1.json
+   ├── floor_5_area_1.json
+   ├── floor_7_area_2.json
+   └── floor_7_area_3.json
+
+2. FOREST OF DESPAIR (Forêt du Désespoir) - 4 areas
+   ├── floor_1_area_1.json
+   ├── floor_1_area_4.json
+   ├── floor_2_area_1.json
+   └── floor_2_area_2.json
+
+3. CASTLE OF VAMP (Château du Vampire) - 5 areas
+   ├── floor_2_area_1.json
+   ├── floor_3_area_1.json
+   ├── floor_3_area_2.json
+   ├── floor_5_area_1.json
+   └── floor_5_area_4.json
+
+4. MOUNTAIN VALLEY (Vallée de la Montagne) - 1 area
+   └── floor_1_area_1.json
+
+5. ANCIENT RUINS (Ruines Anciennes) - 2 areas
+   ├── area_1.json
+   └── area_2.json
+
+6. FIRE MOUNTAIN (Montagne de Feu) - 1 area
+   └── area_1.json
+
+7. TOWER (Tour) - 6 areas
+   ├── area_2.json
+   ├── area_3.json
+   ├── area_6.json
+   ├── area_8.json
+   ├── area_9.json
+   └── area_11.json
+
+8. UNDERSEA TEMPLE (Temple Sous-Marin) - 2 areas
+   ├── area_1.json
+   └── area_2.json
+
+9. HALL OF DEMONS (Hall des Démons) - 7 areas
+   ├── area_1.json
+   ├── area_3.json
+   ├── area_4.json
+   ├── area_7.json
+   ├── area_8.json
+   ├── area_9.json
+   └── area_11.json
+
+10. SEALED CAVE (Caverne Scellée) - 5 areas
+    ├── area_2.json
+    ├── area_4.json
+    ├── area_6.json
+    ├── area_7.json
+    └── area_8.json
+
+================================================================================
+  TYPES DE PORTES (7 types)
+================================================================================
+
+1. UNLOCKED (Porte ouverte)
+   → Aucun objet requis
+   → Porte standard, toujours ouverte
+
+2. MAGIC_LOCKED (Porte magique)
+   → Requis: Magical Key
+   → Ouvre les portes verrouillées par magie
+
+3. DEMON_ENGRAVED (Porte démoniaque)
+   → Requis: Demon Amulet
+   → Porte avec gravure démoniaque
+
+4. GHOST_ENGRAVED (Porte fantôme)
+   → Requis: Ghost Amulet
+   → Porte avec gravure de fantôme
+
+5. KEY_LOCKED (Porte verrouillée)
+   → Requis: Clé spécifique (voir liste ci-dessous)
+   → Différentes clés pour différentes portes
+
+6. EVENT_LOCKED (Porte événement)
+   → Requis: Event Trigger
+   → S'ouvre après un événement spécifique dans le jeu
+
+7. BOSS_DOOR (Porte de boss)
+   → Requis: Boss Defeated
+   → S'ouvre après avoir vaincu le boss de la zone
+
+================================================================================
+  CLÉS ET AMULETTES (19 au total)
+================================================================================
+
+AMULETTES MAGIQUES (Ouvrent plusieurs portes):
+----------------------------------------
+  • Magical Key        → Ouvre TOUTES les portes magiques
+  • Demon Amulet       → Ouvre les portes avec gravure démoniaque
+  • Ghost Amulet       → Ouvre les portes avec gravure fantôme
+
+CLÉS DES DRAGONS:
+----------------------------------------
+  • Black Dragon Key   → Porte du Dragon Noir
+  • Blue Dragon Key    → Porte du Dragon Bleu
+  • Red Dragon Key     → Porte du Dragon Rouge
+  • Dragon Key         → Coffres au trésor spéciaux
+
+CLÉS SPÉCIALES:
+----------------------------------------
+  • Cellar Key         → Porte de la cave
+  • Cell Key           → Porte de cellule
+  • Clearing Key       → Porte de la clairière
+  • Black Key          → (Trouvée: Abandoned Mine - 3rd Underlevel)
+
+CLÉS STANDARDS:
+----------------------------------------
+  • Blue Key           → Clé bleue
+  • Golden Key         → Clé dorée
+  • Moon Key           → Clé de lune
+  • Antique Key        → Clé antique
+  • Splendid Key       → Clé splendide
+  • Black Quarz Key    → Clé de quartz noir
+  • Magic Key          → Clé magique (≠ Magical Key)
+  • Test Founder's Key → Clé du fondateur de test
+
+================================================================================
+  STATISTIQUES D'ANALYSE (BLAZE.ALL)
+================================================================================
+
+Références textuelles trouvées:
+  • Portes magiques:        61 références
+  • Portes démoniaques:     3 références
+  • Portes fantômes:        2 références
+  • Portes à clé:           131 références
+  • Portes génériques:      138 références
+
+Portails:
+  • Total portails:         50
+  • Gate Crystals:          4
+  • Vers 1st Underlevel:    32 portails
+
+================================================================================
+  UTILISATION
+================================================================================
+
+CONSULTER LES DONNÉES:
+  1. Ouvrir Data/doors/SUMMARY.md pour le résumé complet
+  2. Lire Data/doors/README.md pour la documentation
+  3. Consulter Data/doors/[zone_name]/[area].json pour une area spécifique
+
+EXEMPLE DE FICHIER AREA:
+  Voir: Data/doors/EXAMPLE_area_with_doors.json
+
+SCRIPT DE VISUALISATION:
+  Exécuter: view_door_database.bat (menu interactif)
+
+================================================================================
+  PROCHAINES ÉTAPES
+================================================================================
+
+1. EXPLORATION IN-GAME
+   → Lancer le jeu
+   → Explorer chaque area zone par zone
+   → Noter les portes rencontrées et leur type
+
+2. POPULATION DES DONNÉES
+   → Ouvrir le fichier JSON de l'area explorée
+   → Ajouter les portes dans la section "doors": []
+   → Renseigner: type, position, objet requis, destination, notes
+
+3. CRÉATION DU PATCHER
+   → Créer un script patch_doors.py
+   → Lire les fichiers JSON
+   → Modifier BLAZE.ALL pour changer les portes
+   → Tester les modifications en jeu
+
+4. TESTS ET VALIDATION
+   → Reconstruire le jeu avec build.bat
+   → Vérifier que les portes fonctionnent comme prévu
+   → Ajuster si nécessaire
+
+================================================================================
+  FORMAT JSON (STRUCTURE D'UNE PORTE)
+================================================================================
+
+{
+  "id": "door_001",               // Identifiant unique
+  "type": "magic_locked",         // Type (voir liste ci-dessus)
+  "type_name": "Porte magique",   // Nom français
+  "position": {
+    "x": 150,                     // Coordonnée X
+    "y": 0,                       // Coordonnée Y
+    "z": 200                      // Coordonnée Z
+  },
+  "required_item": "Magical Key", // Objet requis pour ouvrir
+  "destination": "floor_2",       // Destination (area suivante)
+  "notes": "Porte principale"     // Notes supplémentaires
+}
+
+================================================================================
+  CONTACTS ET SOURCES
+================================================================================
+
+Projet: Blaze & Blade - Eternal Quest (Europe) Gameplay Patch
+Créé: 2026-02-13
+Outils: Python 3, BLAZE.ALL analysis
+
+Documentation:
+  • Data/doors/README.md (documentation complète)
+  • Data/doors/SUMMARY.md (résumé visuel)
+  • WIP/level_design/doors/ (recherche originale)
+
+================================================================================
+FIN DU DOCUMENT
+================================================================================

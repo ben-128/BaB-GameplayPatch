@@ -1,0 +1,99 @@
+Data/doors/
+│
+├── [FICHIERS DE RÉFÉRENCE]
+│   ├── zone_index.json               (Index des 10 zones et 41 areas)
+│   ├── door_types_reference.json     (7 types de portes définis)
+│   ├── keys_reference.json           (19 clés et amulettes cataloguées)
+│   └── EXAMPLE_area_with_doors.json  (Exemple de fichier area rempli)
+│
+├── [DOCUMENTATION]
+│   ├── README.md                     (Doc complète du système)
+│   ├── SUMMARY.md                    (Résumé visuel avec tableaux)
+│   ├── LISTE_PORTES_PAR_ZONE.txt     (Liste complète en français)
+│   └── STRUCTURE.txt                 (Ce fichier)
+│
+├── [OUTILS]
+│   ├── view_door_database.bat        (Menu interactif de visualisation)
+│   ├── create_door_database.py       (Script de création)
+│   └── extract_doors_by_area.py      (Script d'extraction)
+│
+└── [DONNÉES PAR ZONE] (41 fichiers JSON)
+    │
+    ├── cavern_of_death/              (8 areas)
+    │   ├── floor_1_area_1.json
+    │   ├── floor_1_area_2.json
+    │   ├── floor_2_area_1.json
+    │   ├── floor_3_area_1.json
+    │   ├── floor_4_area_1.json
+    │   ├── floor_5_area_1.json
+    │   ├── floor_7_area_2.json
+    │   └── floor_7_area_3.json
+    │
+    ├── forest/                       (4 areas)
+    │   ├── floor_1_area_1.json
+    │   ├── floor_1_area_4.json
+    │   ├── floor_2_area_1.json
+    │   └── floor_2_area_2.json
+    │
+    ├── castle_of_vamp/               (5 areas)
+    │   ├── floor_2_area_1.json
+    │   ├── floor_3_area_1.json
+    │   ├── floor_3_area_2.json
+    │   ├── floor_5_area_1.json
+    │   └── floor_5_area_4.json
+    │
+    ├── valley/                       (1 area)
+    │   └── floor_1_area_1.json
+    │
+    ├── ancient_ruins/                (2 areas)
+    │   ├── area_1.json
+    │   └── area_2.json
+    │
+    ├── fire_mountain/                (1 area)
+    │   └── area_1.json
+    │
+    ├── tower/                        (6 areas)
+    │   ├── area_2.json
+    │   ├── area_3.json
+    │   ├── area_6.json
+    │   ├── area_8.json
+    │   ├── area_9.json
+    │   └── area_11.json
+    │
+    ├── undersea/                     (2 areas)
+    │   ├── area_1.json
+    │   └── area_2.json
+    │
+    ├── hall_of_demons/               (7 areas)
+    │   ├── area_1.json
+    │   ├── area_3.json
+    │   ├── area_4.json
+    │   ├── area_7.json
+    │   ├── area_8.json
+    │   ├── area_9.json
+    │   └── area_11.json
+    │
+    └── sealed_cave/                  (5 areas)
+        ├── area_2.json
+        ├── area_4.json
+        ├── area_6.json
+        ├── area_7.json
+        └── area_8.json
+
+
+STATISTIQUES:
+═══════════════════════════════════════════
+  Total fichiers:      49
+  Zones:               10
+  Areas:               41
+  Types de portes:     7
+  Clés/Amulettes:      19
+═══════════════════════════════════════════
+
+PRINCIPAUX FICHIERS À CONSULTER:
+═══════════════════════════════════════════
+  1. LISTE_PORTES_PAR_ZONE.txt  ← COMMENCER ICI
+  2. SUMMARY.md
+  3. keys_reference.json
+  4. EXAMPLE_area_with_doors.json
+═══════════════════════════════════════════

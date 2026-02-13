@@ -1,0 +1,35 @@
+PATCH TEST - GROUPE 2
+======================================================================
+
+Triggers désactivés: 21-40
+Total: 20 triggers
+
+INSTRUCTIONS:
+1. Remplacer LEVELS.DAT dans le BIN par ce fichier
+2. Lancer le jeu
+3. Explorer les niveaux
+4. Noter quelles PORTES ont disparu ou sont inaccessibles
+5. Comparer avec les autres groupes
+
+TRIGGERS DÉSACTIVÉS:
+----------------------------------------------------------------------
+# 21 @ 0x00089EEC | Pos: ( 1285, 1285,    0) | Type:  0 Dest:  0
+# 22 @ 0x00089FEC | Pos: ( 1285, 1285,    0) | Type:  0 Dest:  0
+# 23 @ 0x0008C004 | Pos: (    9,    0,  524) | Type:  0 Dest:  0
+# 24 @ 0x0008C3F4 | Pos: (    0,    0,  255) | Type:  0 Dest:  0
+# 25 @ 0x0008C3F8 | Pos: (  255,    0,    0) | Type:  0 Dest:  0
+# 26 @ 0x0008C40C | Pos: (    0,    0,  255) | Type:  0 Dest:  0
+# 27 @ 0x0008C410 | Pos: (  255,    0,    0) | Type:  0 Dest:  0
+# 28 @ 0x0008C4F4 | Pos: (    0,    0,  255) | Type:  0 Dest:  0
+# 29 @ 0x0008C4F8 | Pos: (  255,    0,    0) | Type:  0 Dest:  0
+# 30 @ 0x0008C50C | Pos: (    0,    0,  255) | Type:  0 Dest:  0
+# 31 @ 0x0008C510 | Pos: (  255,    0,    0) | Type:  0 Dest:  0
+# 32 @ 0x0008C5F4 | Pos: (    0,    0,  255) | Type:  0 Dest:  0
+# 33 @ 0x0008C5F8 | Pos: (  255,    0,    0) | Type:  0 Dest:  0
+# 34 @ 0x0008C60C | Pos: (    0,    0,  255) | Type:  0 Dest:  0
+# 35 @ 0x0008C610 | Pos: (  255,    0,    0) | Type:  0 Dest:  0
+# 36 @ 0x0008C6F4 | Pos: (    0,    0,  255) | Type:  0 Dest:  0
+# 37 @ 0x0008C6F8 | Pos: (  255,    0,    0) | Type:  0 Dest:  0
+# 38 @ 0x0008C70C | Pos: (    0,    0,  255) | Type:  0 Dest:  0
+# 39 @ 0x0008C710 | Pos: (  255,    0,    0) | Type:  0 Dest:  0
+# 40 @ 0x0008C7F4 | Pos: (    0,    0,  255) | Type:  0 Dest:  0
