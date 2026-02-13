@@ -176,18 +176,28 @@
   "zone_spawns_area_start": "0x2BEFBE4",
   "zone_spawns_area_bytes": 804,
   "original_total_zone_spawn_slots": 13,
-  "zone_spawn_count": 2,
+  "zone_spawn_count": 6,
   "zone_spawns": [
     {
-      "total": 4,
+      "total": 3,
       "composition": [
         {
-          "count": 4,
+          "count": 3,
           "slot": 2,
-          "monster": "Slot2"
+          "monster": "Dark-Goblin"
         }
       ],
       "records": [
+        {
+          "slot": 2,
+          "x": -4300,
+          "y": -400,
+          "z": -1500,
+          "byte0": 3,
+          "byte10_11": "0000",
+          "area_id": "2500",
+          "offset": "0x2BEFBE4"
+        },
         {
           "slot": 2,
           "x": 3300,
@@ -198,6 +208,54 @@
           "area_id": "2f00",
           "offset": "0x2BEFC04"
         },
+        {
+          "slot": 2,
+          "x": -1100,
+          "y": 0,
+          "z": 1100,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "1d00",
+          "offset": "0x2BEFC24"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2BEFBE4"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Dark-Goblin"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 1900,
+          "y": -400,
+          "z": -4120,
+          "byte0": 3,
+          "byte10_11": "0000",
+          "area_id": "1401",
+          "offset": "0x2BEFCA4"
+        }
+      ],
+      "suffix": "1e007800",
+      "offset": "0x2BEFCA4"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 2,
+          "monster": "Dark-Goblin"
+        }
+      ],
+      "records": [
         {
           "slot": 2,
           "x": 2503,
@@ -217,7 +275,21 @@
           "byte10_11": "0000",
           "area_id": "3900",
           "offset": "0x2BEFD04"
-        },
+        }
+      ],
+      "suffix": "ceff3c00",
+      "offset": "0x2BEFCE4"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 2,
+          "monster": "Dark-Goblin"
+        }
+      ],
+      "records": [
         {
           "slot": 2,
           "x": 2503,
@@ -227,10 +299,20 @@
           "byte10_11": "0000",
           "area_id": "ba00",
           "offset": "0x2BEFD44"
+        },
+        {
+          "slot": 2,
+          "x": -2100,
+          "y": -800,
+          "z": -5240,
+          "byte0": 196,
+          "byte10_11": "0000",
+          "area_id": "2e01",
+          "offset": "0x2BEFD64"
         }
       ],
-      "suffix": "00000000",
-      "offset": "0x2BEFC04"
+      "suffix": "baff3c00",
+      "offset": "0x2BEFD44"
     },
     {
       "total": 4,
@@ -285,6 +367,30 @@
       ],
       "suffix": "56ff7800",
       "offset": "0x2BEFDA4"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Dark-Goblin"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -4700,
+          "y": -1195,
+          "z": 5900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "5101",
+          "offset": "0x2BEFEE4"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2BEFEE4"
     }
   ]
 }

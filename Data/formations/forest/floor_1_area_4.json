@@ -33,6 +33,24 @@
       "offset": "0x1498CB8"
     },
     {
+      "total": 4,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 4,
+          "monster": "Giant-Club"
+        }
+      ],
+      "slots": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "suffix": "00000000",
+      "offset": "0x1498DC4"
+    },
+    {
       "total": 2,
       "composition": [
         {
@@ -46,7 +64,8 @@
         4
       ],
       "suffix": "00000000",
-      "offset": "0x1498CFC"
+      "offset": "0x1498CFC",
+      "slot_types": []
     },
     {
       "total": 4,
@@ -70,24 +89,6 @@
       ],
       "suffix": "00000000",
       "offset": "0x1498D40"
-    },
-    {
-      "total": 4,
-      "composition": [
-        {
-          "count": 4,
-          "slot": 4,
-          "monster": "Giant-Club"
-        }
-      ],
-      "slots": [
-        4,
-        4,
-        4,
-        4
-      ],
-      "suffix": "00000000",
-      "offset": "0x1498DC4"
     }
   ],
   "_placed_spawns": "--- placed spawns (per-record offsets) ---",

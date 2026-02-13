@@ -377,7 +377,7 @@
   "zone_spawns_area_start": "0x1DF59A0",
   "zone_spawns_area_bytes": 10876,
   "original_total_zone_spawn_slots": 56,
-  "zone_spawn_count": 12,
+  "zone_spawn_count": 28,
   "zone_spawns": [
     {
       "total": 9,
@@ -553,7 +553,7 @@
         {
           "count": 2,
           "slot": 0,
-          "monster": "Slot0"
+          "monster": "Undead-Knight"
         }
       ],
       "records": [
@@ -656,7 +656,7 @@
         {
           "count": 2,
           "slot": 2,
-          "monster": "Slot2"
+          "monster": "Mummy"
         }
       ],
       "records": [
@@ -685,12 +685,12 @@
       "offset": "0x1DF5EC0"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 5,
-          "monster": "Slot5"
+          "monster": "Noble-Mummy"
         }
       ],
       "records": [
@@ -703,7 +703,21 @@
           "byte10_11": "0000",
           "area_id": "9600",
           "offset": "0x1DF5FA8"
-        },
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x1DF5FA8"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 5,
+          "monster": "Noble-Mummy"
+        }
+      ],
+      "records": [
         {
           "slot": 5,
           "x": -380,
@@ -716,15 +730,15 @@
         }
       ],
       "suffix": "00000100",
-      "offset": "0x1DF5FA8"
+      "offset": "0x1DF5FCC"
     },
     {
-      "total": 5,
+      "total": 1,
       "composition": [
         {
-          "count": 5,
+          "count": 1,
           "slot": 5,
-          "monster": "Slot5"
+          "monster": "Noble-Mummy"
         }
       ],
       "records": [
@@ -737,7 +751,21 @@
           "byte10_11": "0000",
           "area_id": "0400",
           "offset": "0x1DF5FF0"
-        },
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x1DF5FF0"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 5,
+          "monster": "Noble-Mummy"
+        }
+      ],
+      "records": [
         {
           "slot": 5,
           "x": 900,
@@ -747,7 +775,21 @@
           "byte10_11": "0000",
           "area_id": "0400",
           "offset": "0x1DF6014"
-        },
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x1DF6014"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 5,
+          "monster": "Noble-Mummy"
+        }
+      ],
+      "records": [
         {
           "slot": 5,
           "x": 2100,
@@ -757,7 +799,21 @@
           "byte10_11": "0000",
           "area_id": "0300",
           "offset": "0x1DF6038"
-        },
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x1DF6038"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 5,
+          "monster": "Noble-Mummy"
+        }
+      ],
+      "records": [
         {
           "slot": 5,
           "x": 1100,
@@ -767,7 +823,21 @@
           "byte10_11": "0000",
           "area_id": "a800",
           "offset": "0x1DF605C"
-        },
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x1DF605C"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 5,
+          "monster": "Noble-Mummy"
+        }
+      ],
+      "records": [
         {
           "slot": 5,
           "x": 1500,
@@ -780,15 +850,15 @@
         }
       ],
       "suffix": "00000100",
-      "offset": "0x1DF5FF0"
+      "offset": "0x1DF6080"
     },
     {
-      "total": 10,
+      "total": 1,
       "composition": [
         {
-          "count": 10,
+          "count": 1,
           "slot": 5,
-          "monster": "Slot5"
+          "monster": "Noble-Mummy"
         }
       ],
       "records": [
@@ -801,7 +871,21 @@
           "byte10_11": "0000",
           "area_id": "3900",
           "offset": "0x1DF60A4"
-        },
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x1DF60A4"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 5,
+          "monster": "Noble-Mummy"
+        }
+      ],
+      "records": [
         {
           "slot": 5,
           "x": -300,
@@ -811,7 +895,21 @@
           "byte10_11": "0000",
           "area_id": "3a00",
           "offset": "0x1DF60C8"
-        },
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x1DF60C8"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 5,
+          "monster": "Noble-Mummy"
+        }
+      ],
+      "records": [
         {
           "slot": 5,
           "x": -700,
@@ -821,7 +919,21 @@
           "byte10_11": "0000",
           "area_id": "3a00",
           "offset": "0x1DF60EC"
-        },
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x1DF60EC"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 5,
+          "monster": "Noble-Mummy"
+        }
+      ],
+      "records": [
         {
           "slot": 5,
           "x": -1100,
@@ -831,7 +943,21 @@
           "byte10_11": "0000",
           "area_id": "a901",
           "offset": "0x1DF6110"
-        },
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x1DF6110"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 5,
+          "monster": "Noble-Mummy"
+        }
+      ],
+      "records": [
         {
           "slot": 5,
           "x": -1500,
@@ -841,7 +967,21 @@
           "byte10_11": "0000",
           "area_id": "a901",
           "offset": "0x1DF6134"
-        },
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x1DF6134"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 5,
+          "monster": "Noble-Mummy"
+        }
+      ],
+      "records": [
         {
           "slot": 5,
           "x": -2300,
@@ -851,7 +991,21 @@
           "byte10_11": "0000",
           "area_id": "a801",
           "offset": "0x1DF6158"
-        },
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x1DF6158"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 5,
+          "monster": "Noble-Mummy"
+        }
+      ],
+      "records": [
         {
           "slot": 5,
           "x": -2700,
@@ -861,7 +1015,45 @@
           "byte10_11": "0000",
           "area_id": "a801",
           "offset": "0x1DF617C"
-        },
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x1DF617C"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 5,
+          "monster": "Noble-Mummy"
+        }
+      ],
+      "records": [
+        {
+          "slot": 5,
+          "x": -2220,
+          "y": 200,
+          "z": -500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a201",
+          "offset": "0x1DF61A0"
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x1DF61A0"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 5,
+          "monster": "Noble-Mummy"
+        }
+      ],
+      "records": [
         {
           "slot": 5,
           "x": -3180,
@@ -871,7 +1063,21 @@
           "byte10_11": "0000",
           "area_id": "3600",
           "offset": "0x1DF61C4"
-        },
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x1DF61C4"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 5,
+          "monster": "Noble-Mummy"
+        }
+      ],
+      "records": [
         {
           "slot": 5,
           "x": -3180,
@@ -881,7 +1087,21 @@
           "byte10_11": "0000",
           "area_id": "3500",
           "offset": "0x1DF61E8"
-        },
+        }
+      ],
+      "suffix": "00000100",
+      "offset": "0x1DF61E8"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 5,
+          "monster": "Noble-Mummy"
+        }
+      ],
+      "records": [
         {
           "slot": 5,
           "x": -3180,
@@ -894,15 +1114,44 @@
         }
       ],
       "suffix": "00000100",
-      "offset": "0x1DF60A4"
+      "offset": "0x1DF620C"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
+        {
+          "count": 1,
+          "slot": 6,
+          "monster": "King-Mummy"
+        }
+      ],
+      "records": [
+        {
+          "slot": 6,
+          "x": 2580,
+          "y": -400,
+          "z": 1900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "5301",
+          "offset": "0x1DF6230"
+        }
+      ],
+      "suffix": "00000300",
+      "offset": "0x1DF6230"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Shadow"
+        },
         {
           "count": 2,
           "slot": 2,
-          "monster": "Slot2"
+          "monster": "Mummy"
         }
       ],
       "records": [
@@ -925,6 +1174,16 @@
           "byte10_11": "0000",
           "area_id": "c601",
           "offset": "0x1DF6EAC"
+        },
+        {
+          "slot": 1,
+          "x": -700,
+          "y": -395,
+          "z": 4100,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "0101",
+          "offset": "0x1DF6ECC"
         }
       ],
       "suffix": "00000000",

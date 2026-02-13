@@ -15,23 +15,6 @@
   "formation_count": 4,
   "formations": [
     {
-      "total": 3,
-      "composition": [
-        {
-          "count": 3,
-          "slot": 1,
-          "monster": "Spirit-Ball"
-        }
-      ],
-      "slots": [
-        1,
-        1,
-        1
-      ],
-      "suffix": "00000000",
-      "offset": "0xF9376C"
-    },
-    {
       "total": 8,
       "composition": [
         {
@@ -52,6 +35,24 @@
       ],
       "suffix": "00000000",
       "offset": "0xF937D0"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 1,
+          "monster": "Spirit-Ball"
+        }
+      ],
+      "slots": [
+        1,
+        1,
+        1
+      ],
+      "suffix": "00000000",
+      "offset": "0xF9376C",
+      "slot_types": []
     },
     {
       "total": 3,

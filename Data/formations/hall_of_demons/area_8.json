@@ -78,7 +78,8 @@
         0
       ],
       "suffix": "00000a00",
-      "offset": "0x2C01028"
+      "offset": "0x2C01028",
+      "slot_types": []
     }
   ],
   "_placed_spawns": "--- placed spawns (per-record offsets) ---",

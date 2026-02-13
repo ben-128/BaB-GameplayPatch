@@ -13,19 +13,22 @@
   "formation_count": 4,
   "formations": [
     {
-      "total": 1,
+      "total": 3,
       "composition": [
         {
-          "count": 1,
+          "count": 3,
           "slot": 0,
           "monster": "Crimson-Lizard"
         }
       ],
       "slots": [
+        0,
+        0,
         0
       ],
       "suffix": "00000000",
-      "offset": "0x19737A4"
+      "offset": "0x19737A4",
+      "slot_types": []
     },
     {
       "total": 1,
@@ -41,22 +44,6 @@
       ],
       "suffix": "00000000",
       "offset": "0x19737C8"
-    },
-    {
-      "total": 2,
-      "composition": [
-        {
-          "count": 2,
-          "slot": 0,
-          "monster": "Crimson-Lizard"
-        }
-      ],
-      "slots": [
-        0,
-        0
-      ],
-      "suffix": "00000000",
-      "offset": "0x19737EC"
     },
     {
       "total": 3,

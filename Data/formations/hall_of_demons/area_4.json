@@ -16,36 +16,23 @@
   "formation_count": 5,
   "formations": [
     {
-      "total": 1,
+      "total": 4,
       "composition": [
         {
-          "count": 1,
+          "count": 4,
           "slot": 0,
           "monster": "Death-Knight"
         }
       ],
       "slots": [
+        0,
+        0,
+        0,
         0
       ],
       "suffix": "00000000",
-      "offset": "0x2BF5234"
-    },
-    {
-      "total": 3,
-      "composition": [
-        {
-          "count": 3,
-          "slot": 0,
-          "monster": "Death-Knight"
-        }
-      ],
-      "slots": [
-        0,
-        0,
-        0
-      ],
-      "suffix": "00000100",
-      "offset": "0x2BF5258"
+      "offset": "0x2BF5234",
+      "slot_types": []
     },
     {
       "total": 3,

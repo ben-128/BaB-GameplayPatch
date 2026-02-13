@@ -31,15 +31,15 @@
       "offset": "0x1DF262C"
     },
     {
-      "total": 3,
+      "total": 6,
       "composition": [
         {
-          "count": 2,
+          "count": 3,
           "slot": 1,
           "monster": "Revenant"
         },
         {
-          "count": 1,
+          "count": 3,
           "slot": 2,
           "monster": "Shadow"
         }
@@ -47,10 +47,14 @@
       "slots": [
         1,
         1,
+        2,
+        1,
+        2,
         2
       ],
       "suffix": "00000000",
-      "offset": "0x1DF2690"
+      "offset": "0x1DF2690",
+      "slot_types": []
     },
     {
       "total": 4,
@@ -91,28 +95,6 @@
       ],
       "suffix": "00000000",
       "offset": "0x1DF2778"
-    },
-    {
-      "total": 3,
-      "composition": [
-        {
-          "count": 1,
-          "slot": 1,
-          "monster": "Revenant"
-        },
-        {
-          "count": 2,
-          "slot": 2,
-          "monster": "Shadow"
-        }
-      ],
-      "slots": [
-        1,
-        2,
-        2
-      ],
-      "suffix": "00000a00",
-      "offset": "0x1DF27DC"
     }
   ],
   "_placed_spawns": "--- placed spawns (per-record offsets) ---",

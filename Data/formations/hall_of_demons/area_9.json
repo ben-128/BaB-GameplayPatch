@@ -14,10 +14,10 @@
   "formation_count": 4,
   "formations": [
     {
-      "total": 3,
+      "total": 5,
       "composition": [
         {
-          "count": 3,
+          "count": 5,
           "slot": 0,
           "monster": "Gray-Arm"
         }
@@ -25,26 +25,13 @@
       "slots": [
         0,
         0,
-        0
-      ],
-      "suffix": "00000100",
-      "offset": "0x2C03EE0"
-    },
-    {
-      "total": 2,
-      "composition": [
-        {
-          "count": 2,
-          "slot": 0,
-          "monster": "Gray-Arm"
-        }
-      ],
-      "slots": [
+        0,
         0,
         0
       ],
       "suffix": "00000100",
-      "offset": "0x2C03F44"
+      "offset": "0x2C03EE0",
+      "slot_types": []
     },
     {
       "total": 2,

@@ -13,10 +13,10 @@
   "formation_count": 4,
   "formations": [
     {
-      "total": 3,
+      "total": 6,
       "composition": [
         {
-          "count": 3,
+          "count": 6,
           "slot": 0,
           "monster": "Gremlin"
         }
@@ -24,57 +24,31 @@
       "slots": [
         0,
         0,
-        0
-      ],
-      "suffix": "00000a00",
-      "offset": "0x2BFF768"
-    },
-    {
-      "total": 1,
-      "composition": [
-        {
-          "count": 1,
-          "slot": 1,
-          "monster": "Succubus"
-        }
-      ],
-      "slots": [
-        1
-      ],
-      "suffix": "00000000",
-      "offset": "0x2BFF7CC"
-    },
-    {
-      "total": 3,
-      "composition": [
-        {
-          "count": 3,
-          "slot": 0,
-          "monster": "Gremlin"
-        }
-      ],
-      "slots": [
+        0,
         0,
         0,
         0
       ],
       "suffix": "00000a00",
-      "offset": "0x2BFFF68"
+      "offset": "0x2BFF768",
+      "slot_types": []
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 1,
           "monster": "Succubus"
         }
       ],
       "slots": [
+        1,
         1
       ],
       "suffix": "00000000",
-      "offset": "0x2BFFFCC"
+      "offset": "0x2BFF7CC",
+      "slot_types": []
     }
   ],
   "_placed_spawns": "--- placed spawns (per-record offsets) ---",
