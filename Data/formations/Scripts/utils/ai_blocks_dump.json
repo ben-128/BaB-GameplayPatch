@@ -1,0 +1,430 @@
+[
+  {
+    "area": "Cavern F1 Area1",
+    "script_start": 16231068,
+    "assignments": [
+      {
+        "slot": 0,
+        "L": 0,
+        "R": 2,
+        "raw": "0000000000020040",
+        "offset": 16230756
+      },
+      {
+        "slot": 1,
+        "L": 1,
+        "R": 3,
+        "raw": "0101000001030040",
+        "offset": 16230764
+      },
+      {
+        "slot": 2,
+        "L": 3,
+        "R": 4,
+        "raw": "0203000002040040",
+        "offset": 16230772
+      }
+    ],
+    "behaviors": [
+      {
+        "L": 0,
+        "monster": "Lv20.Goblin",
+        "abs_offset": 16231128,
+        "rel_offset": 60,
+        "params": {
+          "param_00": 0,
+          "param_02": 0,
+          "param_04": 468,
+          "param_06": 634,
+          "param_08": 420,
+          "param_0A": 634,
+          "param_0C": 0,
+          "param_0E": 2048,
+          "param_10": 900,
+          "param_12": 0,
+          "param_14": 0,
+          "param_16": 2048,
+          "param_18": 900,
+          "param_1A": 0,
+          "param_1C": 0,
+          "param_1E": 0
+        },
+        "behavior": {
+          "unk_00": 0,
+          "flags_02": 0,
+          "timer_04": 468,
+          "timer_06": 634,
+          "timer_08": 420,
+          "timer_0A": 634,
+          "dist_0C": 0,
+          "dist_0E": 2048,
+          "val_10": 900,
+          "val_12": 0,
+          "val_14": 0,
+          "val_16": 2048,
+          "val_18": 900,
+          "val_1A": 0,
+          "val_1C": 0,
+          "val_1E": 0
+        },
+        "resources": []
+      },
+      {
+        "L": 1,
+        "monster": "Goblin-Shaman",
+        "is_null": true
+      },
+      {
+        "L": 3,
+        "monster": "Giant-Bat",
+        "abs_offset": 16231312,
+        "rel_offset": 244,
+        "params": {
+          "param_00": 0,
+          "param_02": 21,
+          "param_04": 2067,
+          "param_06": 64376,
+          "param_08": 102,
+          "param_0A": 0,
+          "param_0C": 3072,
+          "param_0E": 0,
+          "param_10": 881,
+          "param_12": 65535,
+          "param_14": 65535,
+          "param_16": 65535,
+          "param_18": 3,
+          "param_1A": 0,
+          "param_1C": 0,
+          "param_1E": 0
+        },
+        "behavior": {
+          "unk_00": 0,
+          "flags_02": 21,
+          "timer_04": 2067,
+          "timer_06": 64376,
+          "timer_08": 102,
+          "timer_0A": 0,
+          "dist_0C": 3072,
+          "dist_0E": 0,
+          "val_10": 881,
+          "val_12": 65535,
+          "val_14": 65535,
+          "val_16": 65535,
+          "val_18": 3,
+          "val_1A": 0,
+          "val_1C": 0,
+          "val_1E": 0
+        },
+        "resources": []
+      }
+    ]
+  },
+  {
+    "area": "Cavern F7 Area1",
+    "script_start": 16313120,
+    "assignments": [
+      {
+        "slot": 0,
+        "L": 11,
+        "R": 3,
+        "raw": "000b000000030040",
+        "offset": 16312704
+      },
+      {
+        "slot": 1,
+        "L": 7,
+        "R": 4,
+        "raw": "0107000001040040",
+        "offset": 16312712
+      },
+      {
+        "slot": 2,
+        "L": 8,
+        "R": 5,
+        "raw": "0208000002050040",
+        "offset": 16312720
+      },
+      {
+        "slot": 3,
+        "L": 14,
+        "R": 6,
+        "raw": "030e000003060040",
+        "offset": 16312728
+      }
+    ],
+    "behaviors": [
+      {
+        "L": 11,
+        "monster": "Cave-Bear",
+        "is_null": true
+      },
+      {
+        "L": 7,
+        "monster": "Blue-Slime",
+        "abs_offset": 16314068,
+        "rel_offset": 948,
+        "params": {
+          "param_00": 60724,
+          "param_02": 0,
+          "param_04": 0,
+          "param_06": 0,
+          "param_08": 343,
+          "param_0A": 656,
+          "param_0C": 65535,
+          "param_0E": 65535,
+          "param_10": 0,
+          "param_12": 10,
+          "param_14": 0,
+          "param_16": 0,
+          "param_18": 2818,
+          "param_1A": 8,
+          "param_1C": 324,
+          "param_1E": 200
+        },
+        "behavior": {
+          "unk_00": 60724,
+          "flags_02": 0,
+          "timer_04": 0,
+          "timer_06": 0,
+          "timer_08": 343,
+          "timer_0A": 656,
+          "dist_0C": 65535,
+          "dist_0E": 65535,
+          "val_10": 0,
+          "val_12": 10,
+          "val_14": 0,
+          "val_16": 0,
+          "val_18": 2818,
+          "val_1A": 8,
+          "val_1C": 324,
+          "val_1E": 200
+        },
+        "resources": []
+      },
+      {
+        "L": 8,
+        "monster": "Spirit-Ball",
+        "abs_offset": 16314200,
+        "rel_offset": 1080,
+        "params": {
+          "param_00": 853,
+          "param_02": 0,
+          "param_04": 0,
+          "param_06": 0,
+          "param_08": 343,
+          "param_0A": 738,
+          "param_0C": 65535,
+          "param_0E": 65535,
+          "param_10": 0,
+          "param_12": 1,
+          "param_14": 0,
+          "param_16": 0,
+          "param_18": 2817,
+          "param_1A": 24,
+          "param_1C": 61262,
+          "param_1E": 800
+        },
+        "behavior": {
+          "unk_00": 853,
+          "flags_02": 0,
+          "timer_04": 0,
+          "timer_06": 0,
+          "timer_08": 343,
+          "timer_0A": 738,
+          "dist_0C": 65535,
+          "dist_0E": 65535,
+          "val_10": 0,
+          "val_12": 1,
+          "val_14": 0,
+          "val_16": 0,
+          "val_18": 2817,
+          "val_1A": 24,
+          "val_1C": 61262,
+          "val_1E": 800
+        },
+        "resources": []
+      },
+      {
+        "L": 14,
+        "monster": "Ogre",
+        "is_null": true
+      }
+    ]
+  },
+  {
+    "area": "Castle F1 Area1",
+    "script_start": 37745364,
+    "assignments": [
+      {
+        "slot": 0,
+        "L": 2,
+        "R": 9,
+        "raw": "0002000000090040",
+        "offset": 37745052
+      },
+      {
+        "slot": 1,
+        "L": 3,
+        "R": 10,
+        "raw": "01030000010a0040",
+        "offset": 37745060
+      },
+      {
+        "slot": 2,
+        "L": 4,
+        "R": 11,
+        "raw": "02040000020b0040",
+        "offset": 37745068
+      }
+    ],
+    "behaviors": [
+      {
+        "L": 2,
+        "monster": "Zombie",
+        "abs_offset": 37745444,
+        "rel_offset": 80,
+        "params": {
+          "param_00": 1880,
+          "param_02": 0,
+          "param_04": 1948,
+          "param_06": 0,
+          "param_08": 2016,
+          "param_0A": 0,
+          "param_0C": 2084,
+          "param_0E": 0,
+          "param_10": 2152,
+          "param_12": 0,
+          "param_14": 2284,
+          "param_16": 0,
+          "param_18": 2352,
+          "param_1A": 0,
+          "param_1C": 2452,
+          "param_1E": 0
+        },
+        "behavior": {
+          "unk_00": 1880,
+          "flags_02": 0,
+          "timer_04": 1948,
+          "timer_06": 0,
+          "timer_08": 2016,
+          "timer_0A": 0,
+          "dist_0C": 2084,
+          "dist_0E": 0,
+          "val_10": 2152,
+          "val_12": 0,
+          "val_14": 2284,
+          "val_16": 0,
+          "val_18": 2352,
+          "val_1A": 0,
+          "val_1C": 2452,
+          "val_1E": 0
+        },
+        "resources": [
+          {
+            "offset_in_block": 40,
+            "resource_offset": 2720,
+            "type": 4,
+            "idx": 11,
+            "slot": 0,
+            "flag": 0
+          }
+        ]
+      },
+      {
+        "L": 3,
+        "monster": "Harpy",
+        "abs_offset": 37745512,
+        "rel_offset": 148,
+        "params": {
+          "param_00": 0,
+          "param_02": 0,
+          "param_04": 0,
+          "param_06": 0,
+          "param_08": 450,
+          "param_0A": 580,
+          "param_0C": 0,
+          "param_0E": 2048,
+          "param_10": 900,
+          "param_12": 0,
+          "param_14": 0,
+          "param_16": 0,
+          "param_18": 900,
+          "param_1A": 0,
+          "param_1C": 0,
+          "param_1E": 151
+        },
+        "behavior": {
+          "unk_00": 0,
+          "flags_02": 0,
+          "timer_04": 0,
+          "timer_06": 0,
+          "timer_08": 450,
+          "timer_0A": 580,
+          "dist_0C": 0,
+          "dist_0E": 2048,
+          "val_10": 900,
+          "val_12": 0,
+          "val_14": 0,
+          "val_16": 0,
+          "val_18": 900,
+          "val_1A": 0,
+          "val_1C": 0,
+          "val_1E": 151
+        },
+        "resources": [
+          {
+            "offset_in_block": 88,
+            "resource_offset": 0,
+            "type": 4,
+            "idx": 0,
+            "slot": 150,
+            "flag": 0
+          }
+        ]
+      },
+      {
+        "L": 4,
+        "monster": "Wolf",
+        "abs_offset": 37745580,
+        "rel_offset": 216,
+        "params": {
+          "param_00": 5000,
+          "param_02": 0,
+          "param_04": 0,
+          "param_06": 0,
+          "param_08": 506,
+          "param_0A": 65535,
+          "param_0C": 65535,
+          "param_0E": 65535,
+          "param_10": 1,
+          "param_12": 0,
+          "param_14": 0,
+          "param_16": 0,
+          "param_18": 4,
+          "param_1A": 150,
+          "param_1C": 60836,
+          "param_1E": 0
+        },
+        "behavior": {
+          "unk_00": 5000,
+          "flags_02": 0,
+          "timer_04": 0,
+          "timer_06": 0,
+          "timer_08": 506,
+          "timer_0A": 65535,
+          "dist_0C": 65535,
+          "dist_0E": 65535,
+          "val_10": 1,
+          "val_12": 0,
+          "val_14": 0,
+          "val_16": 0,
+          "val_18": 4,
+          "val_1A": 150,
+          "val_1C": 60836,
+          "val_1E": 0
+        },
+        "resources": []
+      }
+    ]
+  }
+]

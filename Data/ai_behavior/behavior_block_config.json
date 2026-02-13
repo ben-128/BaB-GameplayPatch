@@ -1,0 +1,169 @@
+{
+  "_comment": "Behavior Block Configuration - Controls monster aggression, attack speed, movement",
+  "_schema_version": "1.0",
+  "_last_updated": "2026-02-13",
+
+  "behavior_patches": {
+    "enabled": true,
+    "_note": "Each patch modifies behavior parameters for a specific monster type via its L value",
+
+    "patches": [
+      {
+        "_comment": "Example: Speed up Zombie (make less sluggish)",
+        "enabled": false,
+        "zone": "Castle F1 Area1",
+        "script_offset": 37745364,
+        "L": 2,
+        "monster_name": "Zombie",
+        "modifications": {
+          "timer_04": 800,
+          "_timer_04_comment": "Attack cooldown (vanilla: 1948, lower = faster attacks)",
+          "timer_08": 800,
+          "_timer_08_comment": "AI decision interval (vanilla: 2016, lower = more responsive)"
+        }
+      },
+
+      {
+        "_comment": "Example: Make Goblin more aggressive",
+        "enabled": false,
+        "zone": "Cavern F1 Area1",
+        "script_offset": 16231068,
+        "L": 0,
+        "monster_name": "Lv20.Goblin",
+        "modifications": {
+          "timer_04": 300,
+          "_timer_04_comment": "Attack cooldown (vanilla: 468, lower = faster)",
+          "dist_0C": 3000,
+          "_dist_0C_comment": "Aggro range (vanilla: 0, higher = aggro from farther)",
+          "dist_0E": 2500,
+          "_dist_0E_comment": "Attack range (vanilla: 2048, higher = attack from farther)"
+        }
+      },
+
+      {
+        "_comment": "Example: Make Wolf less aggressive (passive patrol)",
+        "enabled": false,
+        "zone": "Castle F1 Area1",
+        "script_offset": 37745364,
+        "L": 4,
+        "monster_name": "Wolf",
+        "modifications": {
+          "dist_0C": 1000,
+          "_dist_0C_comment": "Aggro range (vanilla: 65535 unlimited, lower = shorter aggro)",
+          "timer_04": 1200,
+          "_timer_04_comment": "Attack cooldown (vanilla: 0, higher = slower)",
+          "timer_08": 800,
+          "_timer_08_comment": "AI decision interval (vanilla: 506, higher = less responsive)"
+        }
+      }
+    ]
+  },
+
+  "_field_reference": {
+    "flags_02": {
+      "function": "Movement type flags",
+      "values": {
+        "0": "Ground/standard movement",
+        "21": "Flying movement (Giant-Bat)"
+      },
+      "confidence": "CONFIRMED"
+    },
+    "timer_04": {
+      "function": "Attack cooldown timer",
+      "unit": "Unknown (frames? frames/10?)",
+      "pattern": "Lower = faster attacks. Zombie=1948 (slow), Wolf=0 (instant), Goblin=468 (normal)",
+      "confidence": "HIGH"
+    },
+    "timer_06": {
+      "function": "Special behavior timer",
+      "pattern": "Giant-Bat=64376 (flight altitude?), Goblin=634, most=0",
+      "confidence": "MEDIUM"
+    },
+    "timer_08": {
+      "function": "AI decision interval",
+      "unit": "Unknown (frames? frames/10?)",
+      "pattern": "Lower = more frequent AI updates. Bat=102 (smooth flight), Zombie=2016 (sluggish), Goblin=420 (normal)",
+      "confidence": "HIGH"
+    },
+    "timer_0A": {
+      "function": "Unknown timer",
+      "pattern": "Highly variable. Wolf=65535, Goblin/Shaman=634, Harpy=580",
+      "confidence": "LOW"
+    },
+    "dist_0C": {
+      "function": "Aggro detection range",
+      "unit": "Game units (1 unit = ? pixels)",
+      "values": {
+        "0": "Use default aggro range",
+        "2084": "Zombie fixed aggro",
+        "3072": "Giant-Bat flying aggro",
+        "65535": "Unlimited/no limit (Wolf, Slime)"
+      },
+      "confidence": "MEDIUM"
+    },
+    "dist_0E": {
+      "function": "Attack/action range",
+      "unit": "Game units",
+      "values": {
+        "0": "Use default range",
+        "2048": "Standard melee range (Goblin, Harpy)",
+        "65535": "Unlimited range"
+      },
+      "confidence": "HIGH"
+    },
+    "val_10": {
+      "function": "Unknown",
+      "pattern": "Goblin/Harpy=900, Zombie=2152, Wolf=1, Bat=881",
+      "confidence": "LOW"
+    },
+    "val_12_to_1E": {
+      "function": "Unknown parameters",
+      "note": "Highly variable, need more testing"
+    }
+  },
+
+  "_modification_guidelines": {
+    "attack_speed": {
+      "description": "To make faster attacks",
+      "fields": ["timer_04"],
+      "recommendation": "Decrease by 50-70% for noticeable effect",
+      "example": "Zombie: 1948 → 600 (3x faster)"
+    },
+    "responsiveness": {
+      "description": "To make AI more responsive",
+      "fields": ["timer_08"],
+      "recommendation": "Decrease by 30-50%",
+      "example": "Zombie: 2016 → 1000 (2x more responsive)"
+    },
+    "aggression": {
+      "description": "To increase aggression range",
+      "fields": ["dist_0C", "dist_0E"],
+      "recommendation": "Set dist_0C to 2000-5000 for long-range aggro",
+      "example": "Goblin: 0 → 3000 (aggros from far away)"
+    },
+    "passivity": {
+      "description": "To make monster less aggressive",
+      "fields": ["dist_0C", "timer_04", "timer_08"],
+      "recommendation": "Lower dist_0C to 500-1500, increase timers by 2-3x",
+      "example": "Wolf: dist_0C 65535 → 800, timer_04 0 → 1200"
+    }
+  },
+
+  "_warnings": {
+    "timer_units": "Timer scaling factor is UNKNOWN. Start with small changes (±20%) and test in-game.",
+    "distance_units": "Distance units are UNKNOWN. 2048 = standard melee, 3072 = extended. Test to confirm.",
+    "null_behaviors": "Monsters with NULL behavior blocks (Goblin-Shaman L=1, Cave-Bear L=11, Ogre L=14) cannot be modified via this system. They use hardcoded/shared default behavior.",
+    "flying_flag": "Do NOT set flags_02=21 on non-flying monsters without extensive testing. May cause animation/collision issues.",
+    "extreme_values": "Setting timers to 0 or distances to 65535 may cause unexpected behavior or crashes. Test conservatively."
+  },
+
+  "_zone_script_offsets": {
+    "_note": "Script area start offsets for each zone (add to behavior block rel_offset)",
+    "Cavern F1 Area1": 16231068,
+    "Cavern F7 Area1": 16313120,
+    "Castle F1 Area1": 37745364
+  },
+
+  "_tested_modifications": [],
+  "_notes": "Config created 2026-02-13 based on initial behavior block analysis. All hypotheses UNTESTED in-game."
+}
