@@ -27,7 +27,7 @@ if not exist "Data\doors\trigger_tests\LEVELS_TEST_GROUP%GROUP%.DAT" (
     echo ERREUR: Groupe %GROUP% invalide ou fichier manquant
     echo.
     echo Executez d'abord:
-    echo   cd Data\doors
+    echo   cd Data\doors\scripts
     echo   py -3 test_triggers_system.py patch %GROUP%
     echo.
     exit /b 1

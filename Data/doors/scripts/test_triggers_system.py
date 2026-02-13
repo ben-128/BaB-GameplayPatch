@@ -23,8 +23,8 @@ import json
 import sys
 import shutil
 
-LEVELS_DAT = Path("../../Blaze  Blade - Eternal Quest (Europe)/extract/LEVELS.DAT")
-OUTPUT_DIR = Path("trigger_tests")
+LEVELS_DAT = Path("../../../Blaze  Blade - Eternal Quest (Europe)/extract/LEVELS.DAT")
+OUTPUT_DIR = Path("../trigger_tests")
 TRIGGERS_DB = OUTPUT_DIR / "triggers_database.json"
 
 def extract_all_triggers(data):

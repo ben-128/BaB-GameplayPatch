@@ -9,8 +9,8 @@ from pathlib import Path
 import struct
 import json
 
-LEVELS_DAT = Path("../../Blaze  Blade - Eternal Quest (Europe)/extract/LEVELS.DAT")
-TRIGGERS_DB = Path("trigger_tests/triggers_database.json")
+LEVELS_DAT = Path("../../../Blaze  Blade - Eternal Quest (Europe)/extract/LEVELS.DAT")
+TRIGGERS_DB = Path("../trigger_tests/triggers_database.json")
 
 def analyze_trigger_bytes(data, offset, trigger_id):
     """Analyse détaillée des bytes d'un trigger"""
