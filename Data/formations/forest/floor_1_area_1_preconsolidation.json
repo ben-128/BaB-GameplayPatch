@@ -537,7 +537,7 @@
   "zone_spawns_area_start": "0x148D6B0",
   "zone_spawns_area_bytes": 5488,
   "original_total_zone_spawn_slots": 31,
-  "zone_spawn_count": 8,
+  "zone_spawn_count": 10,
   "zone_spawns": [
     {
       "total": 5,
@@ -609,7 +609,7 @@
         {
           "count": 2,
           "slot": 1,
-          "monster": "Slot1"
+          "monster": "Giant-Beetle"
         }
       ],
       "records": [
@@ -625,13 +625,13 @@
         },
         {
           "slot": 1,
-          "x": -300,
-          "y": 0,
+          "x": 1900,
+          "y": 100,
           "z": 500,
           "byte0": 0,
           "byte10_11": "0000",
-          "area_id": "8e02",
-          "offset": "0x148DC74"
+          "area_id": "0e02",
+          "offset": "0x148D7D0"
         }
       ],
       "suffix": "00000000",
@@ -746,6 +746,30 @@
       "offset": "0x148DBD4"
     },
     {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Giant-Beetle"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": -300,
+          "y": 0,
+          "z": 500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "8e02",
+          "offset": "0x148DC74"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x148DC74"
+    },
+    {
       "total": 4,
       "composition": [
         {
@@ -798,6 +822,30 @@
       ],
       "suffix": "00000000",
       "offset": "0x148DD34"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Giant-Ant"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -300,
+          "y": 205,
+          "z": 4300,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "4303",
+          "offset": "0x148DDD8"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x148DDD8"
     },
     {
       "total": 4,
@@ -913,7 +961,7 @@
         {
           "count": 2,
           "slot": 1,
-          "monster": "Slot1"
+          "monster": "Giant-Beetle"
         }
       ],
       "records": [

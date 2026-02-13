@@ -316,7 +316,7 @@
   "zone_spawns_area_start": "0x14B3B40",
   "zone_spawns_area_bytes": 19064,
   "original_total_zone_spawn_slots": 10,
-  "zone_spawn_count": 3,
+  "zone_spawn_count": 6,
   "zone_spawns": [
     {
       "total": 2,
@@ -324,7 +324,7 @@
         {
           "count": 2,
           "slot": 1,
-          "monster": "Slot1"
+          "monster": "Wyrm"
         }
       ],
       "records": [
@@ -351,6 +351,54 @@
       ],
       "suffix": "00000000",
       "offset": "0x14B3B40"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Giant"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -3900,
+          "y": 85,
+          "z": -4100,
+          "byte0": 7,
+          "byte10_11": "0000",
+          "area_id": "6101",
+          "offset": "0x14B3FE0"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x14B3FE0"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Giant"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 1900,
+          "y": 725,
+          "z": 3100,
+          "byte0": 10,
+          "byte10_11": "0000",
+          "area_id": "f200",
+          "offset": "0x14B4224"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x14B4224"
     },
     {
       "total": 4,
@@ -407,12 +455,12 @@
       "offset": "0x14B4728"
     },
     {
-      "total": 2,
+      "total": 1,
       "composition": [
         {
-          "count": 2,
+          "count": 1,
           "slot": 2,
-          "monster": "Slot2"
+          "monster": "Giant"
         }
       ],
       "records": [
@@ -425,7 +473,21 @@
           "byte10_11": "0000",
           "area_id": "7700",
           "offset": "0x14B7D94"
-        },
+        }
+      ],
+      "suffix": "0a000000",
+      "offset": "0x14B7D94"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Giant"
+        }
+      ],
+      "records": [
         {
           "slot": 2,
           "x": 0,
@@ -437,8 +499,8 @@
           "offset": "0x14B8594"
         }
       ],
-      "suffix": "00000000",
-      "offset": "0x14B7D94"
+      "suffix": "0a000000",
+      "offset": "0x14B8594"
     }
   ]
 }
