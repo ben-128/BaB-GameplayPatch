@@ -531,10 +531,10 @@
       "offset": "0x19748F8"
     },
     {
-      "total": 2,
+      "total": 4,
       "composition": [
         {
-          "count": 2,
+          "count": 4,
           "slot": 0,
           "monster": "Crimson-Lizard"
         }
@@ -559,6 +559,26 @@
           "byte10_11": "0000",
           "area_id": "fd02",
           "offset": "0x1974B5C"
+        },
+        {
+          "slot": 0,
+          "x": 2320,
+          "y": 343,
+          "z": -3020,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "fd02",
+          "offset": "0x1974B5C"
+        },
+        {
+          "slot": 0,
+          "x": 2604,
+          "y": 334,
+          "z": -2703,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ff02",
+          "offset": "0x1974B3C"
         }
       ],
       "suffix": "00000000",

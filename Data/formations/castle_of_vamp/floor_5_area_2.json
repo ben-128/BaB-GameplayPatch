@@ -281,10 +281,10 @@
   "zone_spawn_count": 17,
   "zone_spawns": [
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 2,
           "monster": "Chimera"
         }
@@ -295,6 +295,16 @@
           "x": -300,
           "y": 10,
           "z": -5300,
+          "byte0": 4,
+          "byte10_11": "0000",
+          "area_id": "d402",
+          "offset": "0x24274DC"
+        },
+        {
+          "slot": 2,
+          "x": -342,
+          "y": -9,
+          "z": -5348,
           "byte0": 4,
           "byte10_11": "0000",
           "area_id": "d402",
@@ -444,10 +454,10 @@
       "offset": "0x242751C"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 2,
           "monster": "Chimera"
         }
@@ -458,6 +468,16 @@
           "x": 1900,
           "y": 80,
           "z": -210,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a702",
+          "offset": "0x24277FC"
+        },
+        {
+          "slot": 2,
+          "x": 1995,
+          "y": 95,
+          "z": -126,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "a702",
@@ -607,10 +627,10 @@
       "offset": "0x2427A40"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 2,
           "monster": "Chimera"
         }
@@ -625,16 +645,26 @@
           "byte10_11": "0000",
           "area_id": "4b01",
           "offset": "0x2427D60"
+        },
+        {
+          "slot": 2,
+          "x": 3793,
+          "y": 77,
+          "z": -114,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "4b01",
+          "offset": "0x2427D60"
         }
       ],
       "suffix": "00000000",
       "offset": "0x2427D60"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 2,
           "monster": "Chimera"
         }
@@ -649,21 +679,31 @@
           "byte10_11": "0000",
           "area_id": "bb00",
           "offset": "0x2427DC0"
+        },
+        {
+          "slot": 2,
+          "x": 1068,
+          "y": 87,
+          "z": -3005,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "bb00",
+          "offset": "0x2427DC0"
         }
       ],
       "suffix": "00000000",
       "offset": "0x2427DC0"
     },
     {
-      "total": 4,
+      "total": 8,
       "composition": [
         {
-          "count": 2,
+          "count": 3,
           "slot": 0,
           "monster": "Chimera"
         },
         {
-          "count": 2,
+          "count": 5,
           "slot": 2,
           "monster": "Chimera"
         }
@@ -708,16 +748,56 @@
           "byte10_11": "0000",
           "area_id": "1603",
           "offset": "0x2427F44"
+        },
+        {
+          "slot": 0,
+          "x": -3747,
+          "y": 735,
+          "z": -1756,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "1603",
+          "offset": "0x2427F44"
+        },
+        {
+          "slot": 2,
+          "x": -3870,
+          "y": 572,
+          "z": -1549,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "1603",
+          "offset": "0x2427F04"
+        },
+        {
+          "slot": 2,
+          "x": -1542,
+          "y": 555,
+          "z": -1542,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "1303",
+          "offset": "0x2427EE4"
+        },
+        {
+          "slot": 2,
+          "x": -1709,
+          "y": 567,
+          "z": -1659,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "1303",
+          "offset": "0x2427EE4"
         }
       ],
       "suffix": "00000000",
       "offset": "0x2427EE4"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 2,
           "monster": "Chimera"
         }
@@ -732,16 +812,26 @@
           "byte10_11": "0000",
           "area_id": "3d03",
           "offset": "0x2428208"
+        },
+        {
+          "slot": 2,
+          "x": 2626,
+          "y": 681,
+          "z": -5918,
+          "byte0": 28,
+          "byte10_11": "0000",
+          "area_id": "3d03",
+          "offset": "0x2428208"
         }
       ],
       "suffix": "00000000",
       "offset": "0x2428208"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 2,
           "monster": "Chimera"
         }
@@ -752,6 +842,16 @@
           "x": 2500,
           "y": 680,
           "z": -5700,
+          "byte0": 215,
+          "byte10_11": "0000",
+          "area_id": "4702",
+          "offset": "0x2428248"
+        },
+        {
+          "slot": 2,
+          "x": 2569,
+          "y": 688,
+          "z": -5784,
           "byte0": 215,
           "byte10_11": "0000",
           "area_id": "4702",
@@ -1021,10 +1121,10 @@
       "offset": "0x24282A8"
     },
     {
-      "total": 2,
+      "total": 4,
       "composition": [
         {
-          "count": 2,
+          "count": 4,
           "slot": 2,
           "monster": "Chimera"
         }
@@ -1045,6 +1145,26 @@
           "x": -5110,
           "y": 280,
           "z": -4300,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "1f02",
+          "offset": "0x2428708"
+        },
+        {
+          "slot": 2,
+          "x": -5101,
+          "y": 269,
+          "z": -4296,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "1f02",
+          "offset": "0x2428708"
+        },
+        {
+          "slot": 2,
+          "x": -5028,
+          "y": 275,
+          "z": -4344,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "1f02",
@@ -1154,10 +1274,10 @@
       "offset": "0x2428AEC"
     },
     {
-      "total": 7,
+      "total": 14,
       "composition": [
         {
-          "count": 7,
+          "count": 14,
           "slot": 2,
           "monster": "Chimera"
         }
@@ -1232,16 +1352,86 @@
           "byte10_11": "0000",
           "area_id": "4601",
           "offset": "0x2428E8C"
+        },
+        {
+          "slot": 2,
+          "x": 4048,
+          "y": 676,
+          "z": -750,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3a01",
+          "offset": "0x2428E2C"
+        },
+        {
+          "slot": 2,
+          "x": 3903,
+          "y": 676,
+          "z": -699,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "1200",
+          "offset": "0x2428E0C"
+        },
+        {
+          "slot": 2,
+          "x": 4008,
+          "y": 700,
+          "z": -718,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3a01",
+          "offset": "0x2428E2C"
+        },
+        {
+          "slot": 2,
+          "x": 4354,
+          "y": 662,
+          "z": -419,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3201",
+          "offset": "0x2428E6C"
+        },
+        {
+          "slot": 2,
+          "x": 4323,
+          "y": 668,
+          "z": -511,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "4601",
+          "offset": "0x2428E8C"
+        },
+        {
+          "slot": 2,
+          "x": 3964,
+          "y": 679,
+          "z": -670,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "1200",
+          "offset": "0x2428E0C"
+        },
+        {
+          "slot": 2,
+          "x": 4350,
+          "y": 662,
+          "z": -532,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "4601",
+          "offset": "0x2428E8C"
         }
       ],
       "suffix": "00000000",
       "offset": "0x2428DCC"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 2,
           "monster": "Chimera"
         }
@@ -1256,16 +1446,26 @@
           "byte10_11": "0000",
           "area_id": "cd01",
           "offset": "0x2428F30"
+        },
+        {
+          "slot": 2,
+          "x": -3853,
+          "y": 754,
+          "z": 414,
+          "byte0": 26,
+          "byte10_11": "0000",
+          "area_id": "cd01",
+          "offset": "0x2428F30"
         }
       ],
       "suffix": "00000000",
       "offset": "0x2428F30"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 2,
           "monster": "Chimera"
         }
@@ -1280,16 +1480,26 @@
           "byte10_11": "0000",
           "area_id": "5600",
           "offset": "0x2428F70"
+        },
+        {
+          "slot": 2,
+          "x": -3575,
+          "y": 550,
+          "z": -941,
+          "byte0": 99,
+          "byte10_11": "0000",
+          "area_id": "5600",
+          "offset": "0x2428F70"
         }
       ],
       "suffix": "00000000",
       "offset": "0x2428F70"
     },
     {
-      "total": 2,
+      "total": 4,
       "composition": [
         {
-          "count": 2,
+          "count": 4,
           "slot": 2,
           "monster": "Chimera"
         }
@@ -1314,6 +1524,26 @@
           "byte10_11": "0000",
           "area_id": "e402",
           "offset": "0x2429254"
+        },
+        {
+          "slot": 2,
+          "x": -149,
+          "y": 98,
+          "z": 199,
+          "byte0": 214,
+          "byte10_11": "0000",
+          "area_id": "f702",
+          "offset": "0x2429234"
+        },
+        {
+          "slot": 2,
+          "x": -126,
+          "y": 73,
+          "z": 221,
+          "byte0": 214,
+          "byte10_11": "0000",
+          "area_id": "f702",
+          "offset": "0x2429234"
         }
       ],
       "suffix": "00000000",

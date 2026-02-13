@@ -640,15 +640,15 @@
   "zone_spawn_count": 12,
   "zone_spawns": [
     {
-      "total": 4,
+      "total": 8,
       "composition": [
         {
-          "count": 2,
+          "count": 5,
           "slot": 0,
           "monster": "Marble-Gargoyle"
         },
         {
-          "count": 2,
+          "count": 3,
           "slot": 1,
           "monster": "Red-Knight"
         }
@@ -693,21 +693,61 @@
           "byte10_11": "0000",
           "area_id": "a001",
           "offset": "0x2421F2C"
+        },
+        {
+          "slot": 0,
+          "x": 3290,
+          "y": 9,
+          "z": 369,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a001",
+          "offset": "0x2421F2C"
+        },
+        {
+          "slot": 0,
+          "x": 3282,
+          "y": 20,
+          "z": 262,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a001",
+          "offset": "0x2421F2C"
+        },
+        {
+          "slot": 1,
+          "x": 3841,
+          "y": 0,
+          "z": -649,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "9b01",
+          "offset": "0x2421EEC"
+        },
+        {
+          "slot": 0,
+          "x": 3146,
+          "y": -5,
+          "z": 347,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a001",
+          "offset": "0x2421F2C"
         }
       ],
       "suffix": "00000c00",
       "offset": "0x2421ECC"
     },
     {
-      "total": 4,
+      "total": 8,
       "composition": [
         {
-          "count": 2,
+          "count": 4,
           "slot": 0,
           "monster": "Marble-Gargoyle"
         },
         {
-          "count": 2,
+          "count": 4,
           "slot": 1,
           "monster": "Red-Knight"
         }
@@ -752,21 +792,61 @@
           "byte10_11": "0000",
           "area_id": "ac01",
           "offset": "0x2421FB0"
+        },
+        {
+          "slot": 0,
+          "x": 3764,
+          "y": 1,
+          "z": 1067,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ac01",
+          "offset": "0x2421FB0"
+        },
+        {
+          "slot": 1,
+          "x": 3710,
+          "y": 17,
+          "z": -563,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "9b01",
+          "offset": "0x2421F70"
+        },
+        {
+          "slot": 0,
+          "x": 3624,
+          "y": -10,
+          "z": 1160,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ad01",
+          "offset": "0x2421F90"
+        },
+        {
+          "slot": 1,
+          "x": 3554,
+          "y": 4,
+          "z": -612,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "9b01",
+          "offset": "0x2421F50"
         }
       ],
       "suffix": "00000c00",
       "offset": "0x2421F50"
     },
     {
-      "total": 4,
+      "total": 8,
       "composition": [
         {
-          "count": 2,
+          "count": 4,
           "slot": 0,
           "monster": "Marble-Gargoyle"
         },
         {
-          "count": 2,
+          "count": 4,
           "slot": 1,
           "monster": "Red-Knight"
         }
@@ -811,16 +891,56 @@
           "byte10_11": "0000",
           "area_id": "aa01",
           "offset": "0x2422034"
+        },
+        {
+          "slot": 0,
+          "x": 4255,
+          "y": -20,
+          "z": 278,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a901",
+          "offset": "0x2422014"
+        },
+        {
+          "slot": 1,
+          "x": 3697,
+          "y": -5,
+          "z": -603,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "9b01",
+          "offset": "0x2421FD4"
+        },
+        {
+          "slot": 0,
+          "x": 4369,
+          "y": -14,
+          "z": 367,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "aa01",
+          "offset": "0x2422034"
+        },
+        {
+          "slot": 1,
+          "x": 3674,
+          "y": 1,
+          "z": -659,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "9b01",
+          "offset": "0x2421FF4"
         }
       ],
       "suffix": "00000c00",
       "offset": "0x2421FD4"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 2,
           "monster": "Lesser-Vampire"
         }
@@ -831,6 +951,16 @@
           "x": -300,
           "y": -800,
           "z": -4900,
+          "byte0": 99,
+          "byte10_11": "0000",
+          "area_id": "1b02",
+          "offset": "0x242238C"
+        },
+        {
+          "slot": 2,
+          "x": -278,
+          "y": -788,
+          "z": -4967,
           "byte0": 99,
           "byte10_11": "0000",
           "area_id": "1b02",
@@ -1138,10 +1268,10 @@
       "offset": "0x2423294"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 2,
           "monster": "Lesser-Vampire"
         }
@@ -1156,16 +1286,26 @@
           "byte10_11": "0000",
           "area_id": "ca00",
           "offset": "0x2423614"
+        },
+        {
+          "slot": 2,
+          "x": 3798,
+          "y": -587,
+          "z": -2287,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ca00",
+          "offset": "0x2423614"
         }
       ],
       "suffix": "00000000",
       "offset": "0x2423614"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 2,
           "monster": "Lesser-Vampire"
         }
@@ -1180,16 +1320,26 @@
           "byte10_11": "0000",
           "area_id": "be00",
           "offset": "0x2423654"
+        },
+        {
+          "slot": 2,
+          "x": 2167,
+          "y": 4,
+          "z": 575,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "be00",
+          "offset": "0x2423654"
         }
       ],
       "suffix": "00000000",
       "offset": "0x2423654"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 2,
           "monster": "Lesser-Vampire"
         }
@@ -1204,16 +1354,26 @@
           "byte10_11": "0000",
           "area_id": "af00",
           "offset": "0x242407C"
+        },
+        {
+          "slot": 2,
+          "x": -1497,
+          "y": -1018,
+          "z": -1835,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "af00",
+          "offset": "0x242407C"
         }
       ],
       "suffix": "00000000",
       "offset": "0x242407C"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 2,
           "monster": "Lesser-Vampire"
         }
@@ -1228,21 +1388,31 @@
           "byte10_11": "0000",
           "area_id": "af00",
           "offset": "0x2424140"
+        },
+        {
+          "slot": 2,
+          "x": -1441,
+          "y": -1017,
+          "z": -1886,
+          "byte0": 99,
+          "byte10_11": "0000",
+          "area_id": "af00",
+          "offset": "0x2424140"
         }
       ],
       "suffix": "00000000",
       "offset": "0x2424140"
     },
     {
-      "total": 4,
+      "total": 8,
       "composition": [
         {
-          "count": 2,
+          "count": 5,
           "slot": 0,
           "monster": "Marble-Gargoyle"
         },
         {
-          "count": 2,
+          "count": 3,
           "slot": 2,
           "monster": "Lesser-Vampire"
         }
@@ -1287,6 +1457,46 @@
           "byte10_11": "0000",
           "area_id": "8e01",
           "offset": "0x2424344"
+        },
+        {
+          "slot": 2,
+          "x": -2871,
+          "y": -584,
+          "z": -428,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "8c01",
+          "offset": "0x24242E4"
+        },
+        {
+          "slot": 0,
+          "x": -2801,
+          "y": -400,
+          "z": -428,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "8c01",
+          "offset": "0x2424324"
+        },
+        {
+          "slot": 0,
+          "x": -2576,
+          "y": -410,
+          "z": -507,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "8e01",
+          "offset": "0x2424344"
+        },
+        {
+          "slot": 0,
+          "x": -2751,
+          "y": -416,
+          "z": -392,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "8c01",
+          "offset": "0x2424324"
         }
       ],
       "suffix": "00000000",

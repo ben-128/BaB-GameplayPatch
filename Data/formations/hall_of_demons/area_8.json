@@ -159,10 +159,10 @@
   "zone_spawn_count": 3,
   "zone_spawns": [
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 2,
           "monster": "Hell-Ogre"
         }
@@ -177,16 +177,26 @@
           "byte10_11": "0000",
           "area_id": "0f00",
           "offset": "0x2C0124C"
+        },
+        {
+          "slot": 2,
+          "x": 1595,
+          "y": -418,
+          "z": 2896,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "0f00",
+          "offset": "0x2C0124C"
         }
       ],
       "suffix": "00000000",
       "offset": "0x2C0124C"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 1,
           "monster": "Hell-Hound"
         }
@@ -201,16 +211,26 @@
           "byte10_11": "0000",
           "area_id": "0902",
           "offset": "0x2C0128C"
+        },
+        {
+          "slot": 1,
+          "x": -2169,
+          "y": 418,
+          "z": 4974,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "0902",
+          "offset": "0x2C0128C"
         }
       ],
       "suffix": "00000000",
       "offset": "0x2C0128C"
     },
     {
-      "total": 4,
+      "total": 8,
       "composition": [
         {
-          "count": 4,
+          "count": 8,
           "slot": 2,
           "monster": "Hell-Ogre"
         }
@@ -255,6 +275,46 @@
           "byte10_11": "0000",
           "area_id": "cb00",
           "offset": "0x2C0146C"
+        },
+        {
+          "slot": 2,
+          "x": 2151,
+          "y": -197,
+          "z": -5505,
+          "byte0": 244,
+          "byte10_11": "0000",
+          "area_id": "cc00",
+          "offset": "0x2C0140C"
+        },
+        {
+          "slot": 2,
+          "x": 2925,
+          "y": -18,
+          "z": -1331,
+          "byte0": 1,
+          "byte10_11": "0000",
+          "area_id": "cb00",
+          "offset": "0x2C0144C"
+        },
+        {
+          "slot": 2,
+          "x": 2060,
+          "y": -219,
+          "z": -5547,
+          "byte0": 244,
+          "byte10_11": "0000",
+          "area_id": "cc00",
+          "offset": "0x2C0140C"
+        },
+        {
+          "slot": 2,
+          "x": 2891,
+          "y": 15,
+          "z": -1298,
+          "byte0": 1,
+          "byte10_11": "0000",
+          "area_id": "cb00",
+          "offset": "0x2C0144C"
         }
       ],
       "suffix": "01000000",

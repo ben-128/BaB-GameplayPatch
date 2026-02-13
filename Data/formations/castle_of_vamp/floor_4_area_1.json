@@ -1275,10 +1275,10 @@
       "offset": "0x241C55C"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 1,
           "monster": "Marble-Gargoyle"
         }
@@ -1289,6 +1289,16 @@
           "x": 4500,
           "y": 205,
           "z": -5300,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7803",
+          "offset": "0x241CA3C"
+        },
+        {
+          "slot": 1,
+          "x": 4546,
+          "y": 206,
+          "z": -5213,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "7803",
@@ -1547,10 +1557,10 @@
       "offset": "0x241CE20"
     },
     {
-      "total": 5,
+      "total": 10,
       "composition": [
         {
-          "count": 4,
+          "count": 9,
           "slot": 0,
           "monster": "Lesser-Vampire"
         },
@@ -1610,6 +1620,56 @@
           "byte10_11": "0000",
           "area_id": "9c01",
           "offset": "0x241D040"
+        },
+        {
+          "slot": 0,
+          "x": -4128,
+          "y": 569,
+          "z": -2256,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "9601",
+          "offset": "0x241D020"
+        },
+        {
+          "slot": 0,
+          "x": -3970,
+          "y": 174,
+          "z": -3704,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "5e03",
+          "offset": "0x241D000"
+        },
+        {
+          "slot": 0,
+          "x": -4077,
+          "y": 576,
+          "z": -2196,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "9c01",
+          "offset": "0x241D040"
+        },
+        {
+          "slot": 0,
+          "x": -4074,
+          "y": 585,
+          "z": -2354,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "9c01",
+          "offset": "0x241D040"
+        },
+        {
+          "slot": 0,
+          "x": -4048,
+          "y": 176,
+          "z": -3750,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "5e03",
+          "offset": "0x241D000"
         }
       ],
       "suffix": "00000000",
@@ -1750,10 +1810,10 @@
       "offset": "0x241D080"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 0,
           "monster": "Lesser-Vampire"
         }
@@ -1768,16 +1828,26 @@
           "byte10_11": "0000",
           "area_id": "3401",
           "offset": "0x241D220"
+        },
+        {
+          "slot": 0,
+          "x": -1005,
+          "y": 178,
+          "z": -4254,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3401",
+          "offset": "0x241D220"
         }
       ],
       "suffix": "00000000",
       "offset": "0x241D220"
     },
     {
-      "total": 2,
+      "total": 4,
       "composition": [
         {
-          "count": 2,
+          "count": 4,
           "slot": 2,
           "monster": "Shadow"
         }
@@ -1802,16 +1872,36 @@
           "byte10_11": "0000",
           "area_id": "a101",
           "offset": "0x241D5C0"
+        },
+        {
+          "slot": 2,
+          "x": -178,
+          "y": 9,
+          "z": -3834,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "b001",
+          "offset": "0x241D5A0"
+        },
+        {
+          "slot": 2,
+          "x": -4448,
+          "y": 1,
+          "z": -4054,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a101",
+          "offset": "0x241D5C0"
         }
       ],
       "suffix": "00000000",
       "offset": "0x241D5A0"
     },
     {
-      "total": 2,
+      "total": 4,
       "composition": [
         {
-          "count": 2,
+          "count": 4,
           "slot": 2,
           "monster": "Shadow"
         }
@@ -1836,16 +1926,36 @@
           "byte10_11": "0000",
           "area_id": "5603",
           "offset": "0x241D680"
+        },
+        {
+          "slot": 2,
+          "x": -2983,
+          "y": 890,
+          "z": 2174,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "5603",
+          "offset": "0x241D680"
+        },
+        {
+          "slot": 2,
+          "x": -3759,
+          "y": 482,
+          "z": 1656,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2600",
+          "offset": "0x241D660"
         }
       ],
       "suffix": "00000000",
       "offset": "0x241D660"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 2,
           "monster": "Shadow"
         }
@@ -1860,16 +1970,26 @@
           "byte10_11": "0000",
           "area_id": "6302",
           "offset": "0x241D844"
+        },
+        {
+          "slot": 2,
+          "x": 2811,
+          "y": 486,
+          "z": -3539,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6302",
+          "offset": "0x241D844"
         }
       ],
       "suffix": "00000000",
       "offset": "0x241D844"
     },
     {
-      "total": 2,
+      "total": 4,
       "composition": [
         {
-          "count": 2,
+          "count": 4,
           "slot": 2,
           "monster": "Shadow"
         }
@@ -1894,16 +2014,36 @@
           "byte10_11": "0000",
           "area_id": "7a02",
           "offset": "0x241D968"
+        },
+        {
+          "slot": 2,
+          "x": 2136,
+          "y": 1200,
+          "z": -644,
+          "byte0": 99,
+          "byte10_11": "0000",
+          "area_id": "7a02",
+          "offset": "0x241D948"
+        },
+        {
+          "slot": 2,
+          "x": 2085,
+          "y": 1185,
+          "z": -674,
+          "byte0": 99,
+          "byte10_11": "0000",
+          "area_id": "7a02",
+          "offset": "0x241D948"
         }
       ],
       "suffix": "00000000",
       "offset": "0x241D948"
     },
     {
-      "total": 2,
+      "total": 4,
       "composition": [
         {
-          "count": 2,
+          "count": 4,
           "slot": 2,
           "monster": "Shadow"
         }
@@ -1928,16 +2068,36 @@
           "byte10_11": "0000",
           "area_id": "5400",
           "offset": "0x241DCC8"
+        },
+        {
+          "slot": 2,
+          "x": 1590,
+          "y": 1303,
+          "z": -551,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "5400",
+          "offset": "0x241DCC8"
+        },
+        {
+          "slot": 2,
+          "x": 798,
+          "y": 1189,
+          "z": 1910,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6603",
+          "offset": "0x241DCA8"
         }
       ],
       "suffix": "00000000",
       "offset": "0x241DCA8"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 2,
           "monster": "Shadow"
         }
@@ -1952,16 +2112,26 @@
           "byte10_11": "0000",
           "area_id": "4103",
           "offset": "0x241DD8C"
+        },
+        {
+          "slot": 2,
+          "x": 1701,
+          "y": 1186,
+          "z": 1229,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "4103",
+          "offset": "0x241DD8C"
         }
       ],
       "suffix": "00000000",
       "offset": "0x241DD8C"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 2,
           "monster": "Shadow"
         }
@@ -1976,16 +2146,26 @@
           "byte10_11": "0000",
           "area_id": "5200",
           "offset": "0x241E04C"
+        },
+        {
+          "slot": 2,
+          "x": 492,
+          "y": -504,
+          "z": -1740,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "5200",
+          "offset": "0x241E04C"
         }
       ],
       "suffix": "00000000",
       "offset": "0x241E04C"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 2,
           "monster": "Shadow"
         }
@@ -2000,16 +2180,26 @@
           "byte10_11": "0000",
           "area_id": "0f03",
           "offset": "0x241E1CC"
+        },
+        {
+          "slot": 2,
+          "x": 13,
+          "y": 1209,
+          "z": 1949,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "0f03",
+          "offset": "0x241E1CC"
         }
       ],
       "suffix": "00000000",
       "offset": "0x241E1CC"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 2,
           "monster": "Shadow"
         }
@@ -2020,6 +2210,16 @@
           "x": -2900,
           "y": 1200,
           "z": 900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "f802",
+          "offset": "0x241E410"
+        },
+        {
+          "slot": 2,
+          "x": -2926,
+          "y": 1193,
+          "z": 895,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "f802",
@@ -2124,10 +2324,10 @@
       "offset": "0x241E510"
     },
     {
-      "total": 2,
+      "total": 4,
       "composition": [
         {
-          "count": 2,
+          "count": 4,
           "slot": 2,
           "monster": "Shadow"
         }
@@ -2152,16 +2352,36 @@
           "byte10_11": "0000",
           "area_id": "6202",
           "offset": "0x241E694"
+        },
+        {
+          "slot": 2,
+          "x": 2437,
+          "y": 399,
+          "z": -3266,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6202",
+          "offset": "0x241E694"
+        },
+        {
+          "slot": 2,
+          "x": -3122,
+          "y": 591,
+          "z": -2986,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "be02",
+          "offset": "0x241E674"
         }
       ],
       "suffix": "00000000",
       "offset": "0x241E674"
     },
     {
-      "total": 3,
+      "total": 6,
       "composition": [
         {
-          "count": 3,
+          "count": 6,
           "slot": 1,
           "monster": "Marble-Gargoyle"
         }
@@ -2196,16 +2416,46 @@
           "byte10_11": "0000",
           "area_id": "6d03",
           "offset": "0x241E894"
+        },
+        {
+          "slot": 1,
+          "x": 2313,
+          "y": 382,
+          "z": -4179,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6b03",
+          "offset": "0x241E854"
+        },
+        {
+          "slot": 1,
+          "x": 2716,
+          "y": 419,
+          "z": -4084,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6d03",
+          "offset": "0x241E894"
+        },
+        {
+          "slot": 1,
+          "x": 2528,
+          "y": 390,
+          "z": -4010,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6c03",
+          "offset": "0x241E874"
         }
       ],
       "suffix": "00000000",
       "offset": "0x241E854"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 2,
           "monster": "Shadow"
         }
@@ -2220,16 +2470,26 @@
           "byte10_11": "0000",
           "area_id": "6302",
           "offset": "0x241E8F4"
+        },
+        {
+          "slot": 2,
+          "x": 2816,
+          "y": 499,
+          "z": -3599,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6302",
+          "offset": "0x241E8F4"
         }
       ],
       "suffix": "00000000",
       "offset": "0x241E8F4"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 1,
           "monster": "Marble-Gargoyle"
         }
@@ -2240,6 +2500,16 @@
           "x": 3700,
           "y": 405,
           "z": -5300,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ca01",
+          "offset": "0x241EA44"
+        },
+        {
+          "slot": 1,
+          "x": 3761,
+          "y": 388,
+          "z": -5331,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "ca01",

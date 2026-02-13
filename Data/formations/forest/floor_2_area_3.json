@@ -549,10 +549,10 @@
   "zone_spawn_count": 3,
   "zone_spawns": [
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 1,
           "monster": "Black-Lizard"
         }
@@ -567,16 +567,26 @@
           "byte10_11": "0000",
           "area_id": "1001",
           "offset": "0x14B0C18"
+        },
+        {
+          "slot": 1,
+          "x": -4347,
+          "y": 7,
+          "z": -1114,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "1001",
+          "offset": "0x14B0C18"
         }
       ],
       "suffix": "00000000",
       "offset": "0x14B0C18"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 1,
           "monster": "Black-Lizard"
         }
@@ -587,6 +597,16 @@
           "x": 3700,
           "y": 5,
           "z": -3100,
+          "byte0": 3,
+          "byte10_11": "0000",
+          "area_id": "2801",
+          "offset": "0x14B208C"
+        },
+        {
+          "slot": 1,
+          "x": 3730,
+          "y": -6,
+          "z": -3096,
           "byte0": 3,
           "byte10_11": "0000",
           "area_id": "2801",

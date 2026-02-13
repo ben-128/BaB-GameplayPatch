@@ -589,10 +589,10 @@
   "zone_spawn_count": 2,
   "zone_spawns": [
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 1,
           "monster": "Zombie"
         }
@@ -603,6 +603,16 @@
           "x": -3080,
           "y": 105,
           "z": -1400,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "c101",
+          "offset": "0x1DE315C"
+        },
+        {
+          "slot": 1,
+          "x": -3128,
+          "y": 95,
+          "z": -1488,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "c101",

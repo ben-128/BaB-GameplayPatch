@@ -1,0 +1,1165 @@
+{
+  "level_name": "Cavern of Death",
+  "name": "Floor 1 - Area 2",
+  "group_offset": "0xF7E1A8",
+  "monsters": [
+    "Lv20.Goblin",
+    "Goblin-Shaman",
+    "Giant-Bat",
+    "Goblin-Leader"
+  ],
+  "formation_area_start": "0xF7E9F0",
+  "formation_area_bytes": 864,
+  "original_total_slots": 26,
+  "area_id": "0d02",
+  "formation_count": 8,
+  "formations": [
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 0,
+          "monster": "Lv20.Goblin"
+        }
+      ],
+      "slots": [
+        0,
+        0,
+        0
+      ],
+      "suffix": "00000000",
+      "offset": "0xF7E9F0"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 1,
+          "monster": "Goblin-Shaman"
+        }
+      ],
+      "slots": [
+        1,
+        1,
+        1
+      ],
+      "suffix": "02000000",
+      "offset": "0xF7EA54"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 2,
+          "monster": "Giant-Bat"
+        }
+      ],
+      "slots": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "suffix": "00000000",
+      "offset": "0xF7EAB8"
+    },
+    {
+      "total": 6,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 0,
+          "monster": "Lv20.Goblin"
+        },
+        {
+          "count": 3,
+          "slot": 1,
+          "monster": "Goblin-Shaman"
+        }
+      ],
+      "slots": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "suffix": "02000000",
+      "offset": "0xF7EB3C",
+      "slot_types": []
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Goblin-Shaman"
+        },
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Giant-Bat"
+        }
+      ],
+      "slots": [
+        1,
+        1,
+        2
+      ],
+      "suffix": "00000000",
+      "offset": "0xF7EC04"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 0,
+          "monster": "Lv20.Goblin"
+        },
+        {
+          "count": 2,
+          "slot": 2,
+          "monster": "Giant-Bat"
+        }
+      ],
+      "slots": [
+        0,
+        2,
+        2
+      ],
+      "suffix": "00000000",
+      "offset": "0xF7EC68"
+    },
+    {
+      "total": 4,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Lv20.Goblin"
+        },
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Goblin-Shaman"
+        },
+        {
+          "count": 1,
+          "slot": 3,
+          "monster": "Goblin-Leader"
+        }
+      ],
+      "slots": [
+        3,
+        0,
+        0,
+        1
+      ],
+      "suffix": "02000000",
+      "offset": "0xF7ECCC"
+    }
+  ],
+  "_placed_spawns": "--- placed spawns (per-record offsets) ---",
+  "spawn_points_area_start": "0xF7E804",
+  "spawn_points_area_bytes": 492,
+  "original_total_spawn_slots": 15,
+  "spawn_point_count": 3,
+  "spawn_points": [
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Goblin-Shaman"
+        },
+        {
+          "count": 1,
+          "slot": 3,
+          "monster": "Goblin-Leader"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": -1875,
+          "y": 605,
+          "z": 5057,
+          "byte0": 9,
+          "byte10_11": "0600",
+          "area_id": "ea00",
+          "offset": "0xF7E804"
+        },
+        {
+          "slot": 1,
+          "x": -1628,
+          "y": 605,
+          "z": 5038,
+          "byte0": 2,
+          "byte10_11": "0600",
+          "area_id": "e800",
+          "offset": "0xF7E824"
+        },
+        {
+          "slot": 3,
+          "x": -1496,
+          "y": 605,
+          "z": 5349,
+          "byte0": 2,
+          "byte10_11": "0600",
+          "area_id": "e000",
+          "offset": "0xF7E844"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0xF7E804"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Lv20.Goblin"
+        },
+        {
+          "count": 1,
+          "slot": 3,
+          "monster": "Goblin-Leader"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": 2823,
+          "y": 5,
+          "z": -5669,
+          "byte0": 0,
+          "byte10_11": "0700",
+          "area_id": "2d01",
+          "offset": "0xF7E868"
+        },
+        {
+          "slot": 0,
+          "x": 3164,
+          "y": 5,
+          "z": -5548,
+          "byte0": 0,
+          "byte10_11": "0700",
+          "area_id": "1802",
+          "offset": "0xF7E888"
+        },
+        {
+          "slot": 3,
+          "x": 2923,
+          "y": 5,
+          "z": -5449,
+          "byte0": 0,
+          "byte10_11": "0700",
+          "area_id": "2c01",
+          "offset": "0xF7E8A8"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0xF7E868"
+    },
+    {
+      "total": 9,
+      "composition": [
+        {
+          "count": 6,
+          "slot": 2,
+          "monster": "Giant-Bat"
+        },
+        {
+          "count": 3,
+          "slot": 3,
+          "monster": "Goblin-Leader"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -1960,
+          "y": 5,
+          "z": -155,
+          "byte0": 0,
+          "byte10_11": "0800",
+          "area_id": "f301",
+          "offset": "0xF7E8CC"
+        },
+        {
+          "slot": 2,
+          "x": -1172,
+          "y": 5,
+          "z": 539,
+          "byte0": 0,
+          "byte10_11": "0800",
+          "area_id": "f901",
+          "offset": "0xF7E8EC"
+        },
+        {
+          "slot": 2,
+          "x": -307,
+          "y": 5,
+          "z": 4,
+          "byte0": 0,
+          "byte10_11": "0800",
+          "area_id": "0202",
+          "offset": "0xF7E90C"
+        },
+        {
+          "slot": 2,
+          "x": 588,
+          "y": 5,
+          "z": -1532,
+          "byte0": 0,
+          "byte10_11": "0800",
+          "area_id": "1602",
+          "offset": "0xF7E92C"
+        },
+        {
+          "slot": 2,
+          "x": -1513,
+          "y": 205,
+          "z": 1946,
+          "byte0": 0,
+          "byte10_11": "0800",
+          "area_id": "ba01",
+          "offset": "0xF7E94C"
+        },
+        {
+          "slot": 2,
+          "x": 316,
+          "y": -595,
+          "z": 2326,
+          "byte0": 0,
+          "byte10_11": "0800",
+          "area_id": "c201",
+          "offset": "0xF7E96C"
+        },
+        {
+          "slot": 3,
+          "x": 1079,
+          "y": 5,
+          "z": -746,
+          "byte0": 0,
+          "byte10_11": "0800",
+          "area_id": "1302",
+          "offset": "0xF7E98C"
+        },
+        {
+          "slot": 3,
+          "x": 75,
+          "y": -595,
+          "z": 2300,
+          "byte0": 0,
+          "byte10_11": "0800",
+          "area_id": "c301",
+          "offset": "0xF7E9AC"
+        },
+        {
+          "slot": 3,
+          "x": -1649,
+          "y": 205,
+          "z": 2166,
+          "byte0": 0,
+          "byte10_11": "0800",
+          "area_id": "1a01",
+          "offset": "0xF7E9CC"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0xF7E8CC"
+    }
+  ],
+  "zone_spawns_area_start": "0xF7EF2C",
+  "zone_spawns_area_bytes": 3016,
+  "original_total_zone_spawn_slots": 71,
+  "zone_spawn_count": 3,
+  "zone_spawns": [
+    {
+      "total": 23,
+      "composition": [
+        {
+          "count": 11,
+          "slot": 0,
+          "monster": "Lv20.Goblin"
+        },
+        {
+          "count": 12,
+          "slot": 2,
+          "monster": "Giant-Bat"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 3709,
+          "y": -100,
+          "z": -3053,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3401",
+          "offset": "0xF7EF2C"
+        },
+        {
+          "slot": 2,
+          "x": 2624,
+          "y": 100,
+          "z": -5576,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "b200",
+          "offset": "0xF7EF4C"
+        },
+        {
+          "slot": 2,
+          "x": 3092,
+          "y": 100,
+          "z": -5152,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2c01",
+          "offset": "0xF7EF6C"
+        },
+        {
+          "slot": 2,
+          "x": 2568,
+          "y": 100,
+          "z": -4628,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "db02",
+          "offset": "0xF7EF8C"
+        },
+        {
+          "slot": 2,
+          "x": 4208,
+          "y": 100,
+          "z": -4656,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "b400",
+          "offset": "0xF7EFAC"
+        },
+        {
+          "slot": 2,
+          "x": 4232,
+          "y": 100,
+          "z": -3204,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2000",
+          "offset": "0xF7EFCC"
+        },
+        {
+          "slot": 2,
+          "x": -1380,
+          "y": 100,
+          "z": -2600,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "8500",
+          "offset": "0xF7EFEC"
+        },
+        {
+          "slot": 2,
+          "x": 8,
+          "y": 100,
+          "z": -2184,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "d102",
+          "offset": "0xF7F00C"
+        },
+        {
+          "slot": 2,
+          "x": 1420,
+          "y": 100,
+          "z": -2024,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "c202",
+          "offset": "0xF7F02C"
+        },
+        {
+          "slot": 2,
+          "x": 2260,
+          "y": 100,
+          "z": -864,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "b100",
+          "offset": "0xF7F04C"
+        },
+        {
+          "slot": 2,
+          "x": 592,
+          "y": 100,
+          "z": -2532,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "af00",
+          "offset": "0xF7F06C"
+        },
+        {
+          "slot": 2,
+          "x": -1024,
+          "y": 100,
+          "z": -3820,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ac00",
+          "offset": "0xF7F08C"
+        },
+        {
+          "slot": 0,
+          "x": 2240,
+          "y": 132,
+          "z": -894,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "b100",
+          "offset": "0xF7F0AC"
+        },
+        {
+          "slot": 0,
+          "x": -1348,
+          "y": 132,
+          "z": -2620,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "bc02",
+          "offset": "0xF7F0CC"
+        },
+        {
+          "slot": 0,
+          "x": -1052,
+          "y": 132,
+          "z": -3802,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "b802",
+          "offset": "0xF7F0EC"
+        },
+        {
+          "slot": 0,
+          "x": -12,
+          "y": 132,
+          "z": -2216,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ae00",
+          "offset": "0xF7F10C"
+        },
+        {
+          "slot": 0,
+          "x": 614,
+          "y": 132,
+          "z": -2502,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "af00",
+          "offset": "0xF7F12C"
+        },
+        {
+          "slot": 0,
+          "x": 1400,
+          "y": 132,
+          "z": -2054,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "b000",
+          "offset": "0xF7F14C"
+        },
+        {
+          "slot": 0,
+          "x": 2538,
+          "y": 132,
+          "z": -4610,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "db02",
+          "offset": "0xF7F16C"
+        },
+        {
+          "slot": 0,
+          "x": 3062,
+          "y": 132,
+          "z": -5136,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "b300",
+          "offset": "0xF7F18C"
+        },
+        {
+          "slot": 0,
+          "x": 2654,
+          "y": 132,
+          "z": -5596,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2b01",
+          "offset": "0xF7F1AC"
+        },
+        {
+          "slot": 0,
+          "x": 4180,
+          "y": 132,
+          "z": -4638,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "b400",
+          "offset": "0xF7F1CC"
+        },
+        {
+          "slot": 0,
+          "x": 4202,
+          "y": 132,
+          "z": -3184,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "1c01",
+          "offset": "0xF7F1EC"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0xF7EF2C"
+    },
+    {
+      "total": 36,
+      "composition": [
+        {
+          "count": 8,
+          "slot": 0,
+          "monster": "Lv20.Goblin"
+        },
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Goblin-Shaman"
+        },
+        {
+          "count": 27,
+          "slot": 2,
+          "monster": "Giant-Bat"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 3791,
+          "y": 0,
+          "z": 1581,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "b600",
+          "offset": "0xF7F2AC"
+        },
+        {
+          "slot": 2,
+          "x": -1507,
+          "y": 832,
+          "z": 5509,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "1800",
+          "offset": "0xF7F2CC"
+        },
+        {
+          "slot": 2,
+          "x": -1894,
+          "y": 832,
+          "z": 5509,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "e700",
+          "offset": "0xF7F2EC"
+        },
+        {
+          "slot": 2,
+          "x": -1624,
+          "y": 350,
+          "z": 2440,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a700",
+          "offset": "0xF7F30C"
+        },
+        {
+          "slot": 2,
+          "x": 246,
+          "y": -453,
+          "z": 2630,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a800",
+          "offset": "0xF7F32C"
+        },
+        {
+          "slot": 2,
+          "x": 63,
+          "y": -453,
+          "z": 2657,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a800",
+          "offset": "0xF7F34C"
+        },
+        {
+          "slot": 2,
+          "x": -1785,
+          "y": 350,
+          "z": 2440,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a700",
+          "offset": "0xF7F36C"
+        },
+        {
+          "slot": 2,
+          "x": -1976,
+          "y": 832,
+          "z": 4963,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "eb00",
+          "offset": "0xF7F38C"
+        },
+        {
+          "slot": 2,
+          "x": -1424,
+          "y": 832,
+          "z": 4963,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "e000",
+          "offset": "0xF7F3AC"
+        },
+        {
+          "slot": 2,
+          "x": -1976,
+          "y": 832,
+          "z": 4963,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "eb00",
+          "offset": "0xF7F3CC"
+        },
+        {
+          "slot": 2,
+          "x": -1425,
+          "y": 832,
+          "z": 4964,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "e000",
+          "offset": "0xF7F3EC"
+        },
+        {
+          "slot": 2,
+          "x": -1625,
+          "y": 350,
+          "z": 2439,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a700",
+          "offset": "0xF7F40C"
+        },
+        {
+          "slot": 2,
+          "x": 245,
+          "y": -453,
+          "z": 2630,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a800",
+          "offset": "0xF7F42C"
+        },
+        {
+          "slot": 2,
+          "x": 64,
+          "y": -453,
+          "z": 2658,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a800",
+          "offset": "0xF7F44C"
+        },
+        {
+          "slot": 2,
+          "x": -1785,
+          "y": 350,
+          "z": 2440,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a700",
+          "offset": "0xF7F46C"
+        },
+        {
+          "slot": 2,
+          "x": -1895,
+          "y": 832,
+          "z": 5509,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "e700",
+          "offset": "0xF7F48C"
+        },
+        {
+          "slot": 2,
+          "x": -1507,
+          "y": 832,
+          "z": 5509,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "1800",
+          "offset": "0xF7F4AC"
+        },
+        {
+          "slot": 0,
+          "x": -1976,
+          "y": 832,
+          "z": 4963,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "eb00",
+          "offset": "0xF7F4CC"
+        },
+        {
+          "slot": 0,
+          "x": -1425,
+          "y": 832,
+          "z": 4964,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "e000",
+          "offset": "0xF7F4EC"
+        },
+        {
+          "slot": 0,
+          "x": -1625,
+          "y": 350,
+          "z": 2439,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a700",
+          "offset": "0xF7F50C"
+        },
+        {
+          "slot": 0,
+          "x": 245,
+          "y": -453,
+          "z": 2630,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a800",
+          "offset": "0xF7F52C"
+        },
+        {
+          "slot": 0,
+          "x": 64,
+          "y": -453,
+          "z": 2658,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a800",
+          "offset": "0xF7F54C"
+        },
+        {
+          "slot": 0,
+          "x": -1785,
+          "y": 350,
+          "z": 2440,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a700",
+          "offset": "0xF7F56C"
+        },
+        {
+          "slot": 0,
+          "x": -1895,
+          "y": 832,
+          "z": 5509,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "e700",
+          "offset": "0xF7F58C"
+        },
+        {
+          "slot": 0,
+          "x": -1507,
+          "y": 832,
+          "z": 5509,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "1800",
+          "offset": "0xF7F5AC"
+        },
+        {
+          "slot": 2,
+          "x": 2240,
+          "y": 132,
+          "z": -894,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "b100",
+          "offset": "0xF7F5CC"
+        },
+        {
+          "slot": 2,
+          "x": -1348,
+          "y": 132,
+          "z": -2620,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "bc02",
+          "offset": "0xF7F5EC"
+        },
+        {
+          "slot": 2,
+          "x": -1052,
+          "y": 132,
+          "z": -3802,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "b802",
+          "offset": "0xF7F60C"
+        },
+        {
+          "slot": 2,
+          "x": -12,
+          "y": 132,
+          "z": -2216,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ae00",
+          "offset": "0xF7F62C"
+        },
+        {
+          "slot": 2,
+          "x": 614,
+          "y": 132,
+          "z": -2502,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "af00",
+          "offset": "0xF7F64C"
+        },
+        {
+          "slot": 2,
+          "x": 1400,
+          "y": 132,
+          "z": -2054,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "b000",
+          "offset": "0xF7F66C"
+        },
+        {
+          "slot": 2,
+          "x": 2538,
+          "y": 132,
+          "z": -4610,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "db02",
+          "offset": "0xF7F68C"
+        },
+        {
+          "slot": 2,
+          "x": 3062,
+          "y": 132,
+          "z": -5136,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "b300",
+          "offset": "0xF7F6AC"
+        },
+        {
+          "slot": 2,
+          "x": 2654,
+          "y": 132,
+          "z": -5596,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2b01",
+          "offset": "0xF7F6CC"
+        },
+        {
+          "slot": 2,
+          "x": 4180,
+          "y": 132,
+          "z": -4638,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "b400",
+          "offset": "0xF7F6EC"
+        },
+        {
+          "slot": 2,
+          "x": 4202,
+          "y": 132,
+          "z": -3184,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "1c01",
+          "offset": "0xF7F70C"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0xF7F2AC"
+    },
+    {
+      "total": 12,
+      "composition": [
+        {
+          "count": 4,
+          "slot": 0,
+          "monster": "Lv20.Goblin"
+        },
+        {
+          "count": 8,
+          "slot": 2,
+          "monster": "Giant-Bat"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -1771,
+          "y": 347,
+          "z": 2349,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a400",
+          "offset": "0xF7F970"
+        },
+        {
+          "slot": 2,
+          "x": -1598,
+          "y": 347,
+          "z": 2348,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a400",
+          "offset": "0xF7F990"
+        },
+        {
+          "slot": 2,
+          "x": 63,
+          "y": -450,
+          "z": 2560,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a500",
+          "offset": "0xF7F9B0"
+        },
+        {
+          "slot": 2,
+          "x": 199,
+          "y": -450,
+          "z": 2541,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a500",
+          "offset": "0xF7F9D0"
+        },
+        {
+          "slot": 2,
+          "x": -1598,
+          "y": 347,
+          "z": 2348,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a400",
+          "offset": "0xF7F9F0"
+        },
+        {
+          "slot": 2,
+          "x": 199,
+          "y": -450,
+          "z": 2540,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a500",
+          "offset": "0xF7FA10"
+        },
+        {
+          "slot": 2,
+          "x": 62,
+          "y": -450,
+          "z": 2561,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a500",
+          "offset": "0xF7FA30"
+        },
+        {
+          "slot": 2,
+          "x": -1772,
+          "y": 347,
+          "z": 2349,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a400",
+          "offset": "0xF7FA50"
+        },
+        {
+          "slot": 0,
+          "x": -1598,
+          "y": 347,
+          "z": 2348,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a400",
+          "offset": "0xF7FA70"
+        },
+        {
+          "slot": 0,
+          "x": 199,
+          "y": -450,
+          "z": 2540,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a500",
+          "offset": "0xF7FA90"
+        },
+        {
+          "slot": 0,
+          "x": 62,
+          "y": -450,
+          "z": 2561,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a500",
+          "offset": "0xF7FAB0"
+        },
+        {
+          "slot": 0,
+          "x": -1772,
+          "y": 347,
+          "z": 2349,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "a400",
+          "offset": "0xF7FAD0"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0xF7F970"
+    }
+  ],
+  "slot_types": [
+    "00000000",
+    "02000000",
+    "00000000"
+  ]
+}

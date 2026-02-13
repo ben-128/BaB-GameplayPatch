@@ -557,10 +557,10 @@
   "zone_spawn_count": 8,
   "zone_spawns": [
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 1,
           "monster": "Hard-Born"
         }
@@ -571,6 +571,16 @@
           "x": -100,
           "y": -195,
           "z": 5100,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "8d01",
+          "offset": "0x199C40C"
+        },
+        {
+          "slot": 1,
+          "x": -71,
+          "y": -199,
+          "z": 5083,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "8d01",
@@ -675,10 +685,10 @@
       "offset": "0x199C4CC"
     },
     {
-      "total": 6,
+      "total": 12,
       "composition": [
         {
-          "count": 6,
+          "count": 12,
           "slot": 0,
           "monster": "Arch-Magi"
         }
@@ -743,16 +753,76 @@
           "byte10_11": "0000",
           "area_id": "3500",
           "offset": "0x199C6EC"
+        },
+        {
+          "slot": 0,
+          "x": 29,
+          "y": 159,
+          "z": 3903,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "5701",
+          "offset": "0x199C64C"
+        },
+        {
+          "slot": 0,
+          "x": -529,
+          "y": 23,
+          "z": 4455,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3400",
+          "offset": "0x199C6CC"
+        },
+        {
+          "slot": 0,
+          "x": -218,
+          "y": -76,
+          "z": 5082,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "5901",
+          "offset": "0x199C68C"
+        },
+        {
+          "slot": 0,
+          "x": -247,
+          "y": 150,
+          "z": 3833,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "5501",
+          "offset": "0x199C6AC"
+        },
+        {
+          "slot": 0,
+          "x": -576,
+          "y": 59,
+          "z": 4464,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3400",
+          "offset": "0x199C6CC"
+        },
+        {
+          "slot": 0,
+          "x": 176,
+          "y": 120,
+          "z": 3965,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "5701",
+          "offset": "0x199C64C"
         }
       ],
       "suffix": "00000000",
       "offset": "0x199C64C"
     },
     {
-      "total": 3,
+      "total": 6,
       "composition": [
         {
-          "count": 3,
+          "count": 6,
           "slot": 2,
           "monster": "Living-Sword"
         }
@@ -787,21 +857,51 @@
           "byte10_11": "0000",
           "area_id": "9d01",
           "offset": "0x199C9D4"
+        },
+        {
+          "slot": 2,
+          "x": 75,
+          "y": 1494,
+          "z": -5400,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6b01",
+          "offset": "0x199C9B4"
+        },
+        {
+          "slot": 2,
+          "x": -278,
+          "y": 1461,
+          "z": -5417,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6901",
+          "offset": "0x199C994"
+        },
+        {
+          "slot": 2,
+          "x": -349,
+          "y": 1488,
+          "z": -5623,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "9d01",
+          "offset": "0x199C9D4"
         }
       ],
       "suffix": "00000000",
       "offset": "0x199C994"
     },
     {
-      "total": 3,
+      "total": 6,
       "composition": [
         {
-          "count": 2,
+          "count": 4,
           "slot": 0,
           "monster": "Arch-Magi"
         },
         {
-          "count": 1,
+          "count": 2,
           "slot": 2,
           "monster": "Living-Sword"
         }
@@ -836,6 +936,36 @@
           "byte10_11": "0000",
           "area_id": "6b01",
           "offset": "0x199CB14"
+        },
+        {
+          "slot": 0,
+          "x": -386,
+          "y": 1521,
+          "z": -5547,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6901",
+          "offset": "0x199CAF4"
+        },
+        {
+          "slot": 0,
+          "x": 105,
+          "y": 1533,
+          "z": -5425,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6b01",
+          "offset": "0x199CB14"
+        },
+        {
+          "slot": 2,
+          "x": -4,
+          "y": 1390,
+          "z": -5864,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6f01",
+          "offset": "0x199CAD4"
         }
       ],
       "suffix": "00000000",
@@ -1185,10 +1315,10 @@
       "offset": "0x199CFFC"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 1,
           "monster": "Hard-Born"
         }
@@ -1199,6 +1329,16 @@
           "x": -100,
           "y": 5,
           "z": -700,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "1401",
+          "offset": "0x199D2C0"
+        },
+        {
+          "slot": 1,
+          "x": -86,
+          "y": -1,
+          "z": -760,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "1401",

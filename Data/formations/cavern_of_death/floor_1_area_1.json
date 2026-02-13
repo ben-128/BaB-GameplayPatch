@@ -254,10 +254,10 @@
   "zone_spawn_count": 9,
   "zone_spawns": [
     {
-      "total": 4,
+      "total": 8,
       "composition": [
         {
-          "count": 4,
+          "count": 8,
           "slot": 2,
           "monster": "Giant-Bat"
         }
@@ -302,6 +302,46 @@
           "byte10_11": "0000",
           "area_id": "6401",
           "offset": "0xF7B580"
+        },
+        {
+          "slot": 2,
+          "x": 241,
+          "y": -888,
+          "z": 238,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6301",
+          "offset": "0xF7B540"
+        },
+        {
+          "slot": 2,
+          "x": 278,
+          "y": -881,
+          "z": 197,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6301",
+          "offset": "0xF7B540"
+        },
+        {
+          "slot": 2,
+          "x": -2404,
+          "y": -864,
+          "z": 1242,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6401",
+          "offset": "0xF7B560"
+        },
+        {
+          "slot": 2,
+          "x": -2545,
+          "y": -882,
+          "z": 1160,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6401",
+          "offset": "0xF7B560"
         }
       ],
       "suffix": "00000000",
@@ -596,10 +636,10 @@
       "offset": "0xF7B900"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 1,
           "monster": "Goblin-Shaman"
         }
@@ -614,21 +654,31 @@
           "byte10_11": "0000",
           "area_id": "4202",
           "offset": "0xF7BBA0"
+        },
+        {
+          "slot": 1,
+          "x": -3069,
+          "y": -16,
+          "z": -5102,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "4202",
+          "offset": "0xF7BBA0"
         }
       ],
       "suffix": "00000000",
       "offset": "0xF7BBA0"
     },
     {
-      "total": 6,
+      "total": 12,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 1,
           "monster": "Goblin-Shaman"
         },
         {
-          "count": 5,
+          "count": 10,
           "slot": 2,
           "monster": "Giant-Bat"
         }
@@ -693,16 +743,76 @@
           "byte10_11": "0000",
           "area_id": "1001",
           "offset": "0xF7BE44"
+        },
+        {
+          "slot": 1,
+          "x": 593,
+          "y": -629,
+          "z": -2402,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3602",
+          "offset": "0xF7BDA4"
+        },
+        {
+          "slot": 2,
+          "x": -586,
+          "y": -394,
+          "z": 1110,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "1001",
+          "offset": "0xF7BE44"
+        },
+        {
+          "slot": 2,
+          "x": 127,
+          "y": -1005,
+          "z": 346,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6001",
+          "offset": "0xF7BDC4"
+        },
+        {
+          "slot": 2,
+          "x": 58,
+          "y": -1034,
+          "z": 136,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2200",
+          "offset": "0xF7BDE4"
+        },
+        {
+          "slot": 2,
+          "x": 44,
+          "y": -1025,
+          "z": 300,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6001",
+          "offset": "0xF7BDC4"
+        },
+        {
+          "slot": 2,
+          "x": 55,
+          "y": -1012,
+          "z": 338,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "6001",
+          "offset": "0xF7BDC4"
         }
       ],
       "suffix": "00000000",
       "offset": "0xF7BDA4"
     },
     {
-      "total": 2,
+      "total": 4,
       "composition": [
         {
-          "count": 2,
+          "count": 4,
           "slot": 2,
           "monster": "Giant-Bat"
         }
@@ -727,6 +837,26 @@
           "byte10_11": "0000",
           "area_id": "ab01",
           "offset": "0xF7BFC4"
+        },
+        {
+          "slot": 2,
+          "x": -1761,
+          "y": -814,
+          "z": 1014,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "0b01",
+          "offset": "0xF7BFA4"
+        },
+        {
+          "slot": 2,
+          "x": -1583,
+          "y": -790,
+          "z": 908,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "0b01",
+          "offset": "0xF7BFA4"
         }
       ],
       "suffix": "00000000",

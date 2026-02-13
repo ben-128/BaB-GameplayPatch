@@ -70,10 +70,10 @@
   "zone_spawn_count": 6,
   "zone_spawns": [
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 2,
           "monster": "Shadow-Demon"
         }
@@ -84,6 +84,16 @@
           "x": 1700,
           "y": 5,
           "z": -4300,
+          "byte0": 99,
+          "byte10_11": "0000",
+          "area_id": "2401",
+          "offset": "0x1995E8C"
+        },
+        {
+          "slot": 2,
+          "x": 1637,
+          "y": 20,
+          "z": -4241,
           "byte0": 99,
           "byte10_11": "0000",
           "area_id": "2401",
@@ -603,10 +613,10 @@
       "offset": "0x1995ECC"
     },
     {
-      "total": 2,
+      "total": 4,
       "composition": [
         {
-          "count": 2,
+          "count": 4,
           "slot": 1,
           "monster": "Dark-Wizard"
         }
@@ -627,6 +637,26 @@
           "x": 100,
           "y": 265,
           "z": -4300,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "fa00",
+          "offset": "0x1996530"
+        },
+        {
+          "slot": 1,
+          "x": 158,
+          "y": 253,
+          "z": -4229,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "fa00",
+          "offset": "0x1996530"
+        },
+        {
+          "slot": 1,
+          "x": 182,
+          "y": 251,
+          "z": -4295,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "fa00",
@@ -1020,10 +1050,10 @@
       "offset": "0x1996930"
     },
     {
-      "total": 5,
+      "total": 10,
       "composition": [
         {
-          "count": 5,
+          "count": 10,
           "slot": 2,
           "monster": "Shadow-Demon"
         }
@@ -1078,6 +1108,56 @@
           "byte10_11": "0000",
           "area_id": "4301",
           "offset": "0x1996ED4"
+        },
+        {
+          "slot": 2,
+          "x": -57,
+          "y": 213,
+          "z": 2835,
+          "byte0": 1,
+          "byte10_11": "0000",
+          "area_id": "e200",
+          "offset": "0x1996E74"
+        },
+        {
+          "slot": 2,
+          "x": 564,
+          "y": 195,
+          "z": 2912,
+          "byte0": 4,
+          "byte10_11": "0000",
+          "area_id": "4301",
+          "offset": "0x1996ED4"
+        },
+        {
+          "slot": 2,
+          "x": 479,
+          "y": 182,
+          "z": 2905,
+          "byte0": 4,
+          "byte10_11": "0000",
+          "area_id": "4301",
+          "offset": "0x1996ED4"
+        },
+        {
+          "slot": 2,
+          "x": 598,
+          "y": 200,
+          "z": 2920,
+          "byte0": 4,
+          "byte10_11": "0000",
+          "area_id": "4301",
+          "offset": "0x1996ED4"
+        },
+        {
+          "slot": 2,
+          "x": 162,
+          "y": 210,
+          "z": 2847,
+          "byte0": 2,
+          "byte10_11": "0000",
+          "area_id": "e200",
+          "offset": "0x1996E94"
         }
       ],
       "suffix": "05006e00",

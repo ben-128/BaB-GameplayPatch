@@ -540,10 +540,10 @@
   "zone_spawn_count": 10,
   "zone_spawns": [
     {
-      "total": 5,
+      "total": 10,
       "composition": [
         {
-          "count": 5,
+          "count": 10,
           "slot": 1,
           "monster": "Giant-Beetle"
         }
@@ -598,16 +598,66 @@
           "byte10_11": "0000",
           "area_id": "0f02",
           "offset": "0x148D730"
+        },
+        {
+          "slot": 1,
+          "x": -2166,
+          "y": 160,
+          "z": -1226,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "0b02",
+          "offset": "0x148D6B0"
+        },
+        {
+          "slot": 1,
+          "x": -2245,
+          "y": 131,
+          "z": -2931,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "0a02",
+          "offset": "0x148D6D0"
+        },
+        {
+          "slot": 1,
+          "x": -2293,
+          "y": 163,
+          "z": -378,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "0c02",
+          "offset": "0x148D710"
+        },
+        {
+          "slot": 1,
+          "x": 3818,
+          "y": 131,
+          "z": -462,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "0f02",
+          "offset": "0x148D730"
+        },
+        {
+          "slot": 1,
+          "x": -2112,
+          "y": 162,
+          "z": -1252,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "0b02",
+          "offset": "0x148D6B0"
         }
       ],
       "suffix": "00000000",
       "offset": "0x148D6B0"
     },
     {
-      "total": 2,
+      "total": 4,
       "composition": [
         {
-          "count": 2,
+          "count": 4,
           "slot": 1,
           "monster": "Giant-Beetle"
         }
@@ -632,16 +682,36 @@
           "byte10_11": "0000",
           "area_id": "0e02",
           "offset": "0x148D7D0"
+        },
+        {
+          "slot": 1,
+          "x": -217,
+          "y": 142,
+          "z": 2272,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "1102",
+          "offset": "0x148D7B0"
+        },
+        {
+          "slot": 1,
+          "x": -226,
+          "y": 147,
+          "z": 2354,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "1102",
+          "offset": "0x148D7B0"
         }
       ],
       "suffix": "00000000",
       "offset": "0x148D7B0"
     },
     {
-      "total": 4,
+      "total": 8,
       "composition": [
         {
-          "count": 4,
+          "count": 8,
           "slot": 2,
           "monster": "Giant-Ant"
         }
@@ -686,16 +756,56 @@
           "byte10_11": "0000",
           "area_id": "ce02",
           "offset": "0x148D8F0"
+        },
+        {
+          "slot": 2,
+          "x": 512,
+          "y": -14,
+          "z": 310,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "8a02",
+          "offset": "0x148D8B0"
+        },
+        {
+          "slot": 2,
+          "x": 1678,
+          "y": 0,
+          "z": 208,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "9302",
+          "offset": "0x148D890"
+        },
+        {
+          "slot": 2,
+          "x": 1543,
+          "y": 7,
+          "z": 232,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "9302",
+          "offset": "0x148D890"
+        },
+        {
+          "slot": 2,
+          "x": 521,
+          "y": -19,
+          "z": 315,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "8a02",
+          "offset": "0x148D8B0"
         }
       ],
       "suffix": "00000000",
       "offset": "0x148D890"
     },
     {
-      "total": 4,
+      "total": 8,
       "composition": [
         {
-          "count": 4,
+          "count": 8,
           "slot": 1,
           "monster": "Giant-Beetle"
         }
@@ -740,16 +850,56 @@
           "byte10_11": "0000",
           "area_id": "0e02",
           "offset": "0x148DC34"
+        },
+        {
+          "slot": 1,
+          "x": 3807,
+          "y": 153,
+          "z": -478,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "0f02",
+          "offset": "0x148DBD4"
+        },
+        {
+          "slot": 1,
+          "x": 2413,
+          "y": 162,
+          "z": 3233,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "1302",
+          "offset": "0x148DC14"
+        },
+        {
+          "slot": 1,
+          "x": 3693,
+          "y": 160,
+          "z": -1771,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "1002",
+          "offset": "0x148DBF4"
+        },
+        {
+          "slot": 1,
+          "x": 2438,
+          "y": 130,
+          "z": 3314,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "1302",
+          "offset": "0x148DC14"
         }
       ],
       "suffix": "00000000",
       "offset": "0x148DBD4"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 1,
           "monster": "Giant-Beetle"
         }
@@ -764,16 +914,26 @@
           "byte10_11": "0000",
           "area_id": "8e02",
           "offset": "0x148DC74"
+        },
+        {
+          "slot": 1,
+          "x": -260,
+          "y": -16,
+          "z": 443,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "8e02",
+          "offset": "0x148DC74"
         }
       ],
       "suffix": "00000000",
       "offset": "0x148DC74"
     },
     {
-      "total": 4,
+      "total": 8,
       "composition": [
         {
-          "count": 4,
+          "count": 8,
           "slot": 2,
           "monster": "Giant-Ant"
         }
@@ -818,16 +978,56 @@
           "byte10_11": "0000",
           "area_id": "ce02",
           "offset": "0x148DD94"
+        },
+        {
+          "slot": 2,
+          "x": 1553,
+          "y": 0,
+          "z": 372,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "9302",
+          "offset": "0x148DD34"
+        },
+        {
+          "slot": 2,
+          "x": 1629,
+          "y": -3,
+          "z": 2114,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "e502",
+          "offset": "0x148DD74"
+        },
+        {
+          "slot": 2,
+          "x": 1607,
+          "y": 7,
+          "z": 356,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "9302",
+          "offset": "0x148DD34"
+        },
+        {
+          "slot": 2,
+          "x": 684,
+          "y": 9,
+          "z": 2095,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ce02",
+          "offset": "0x148DD94"
         }
       ],
       "suffix": "00000000",
       "offset": "0x148DD34"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 2,
           "monster": "Giant-Ant"
         }
@@ -842,16 +1042,26 @@
           "byte10_11": "0000",
           "area_id": "4303",
           "offset": "0x148DDD8"
+        },
+        {
+          "slot": 2,
+          "x": -213,
+          "y": 209,
+          "z": 4203,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "4303",
+          "offset": "0x148DDD8"
         }
       ],
       "suffix": "00000000",
       "offset": "0x148DDD8"
     },
     {
-      "total": 4,
+      "total": 8,
       "composition": [
         {
-          "count": 4,
+          "count": 8,
           "slot": 1,
           "monster": "Giant-Beetle"
         }
@@ -896,16 +1106,56 @@
           "byte10_11": "0000",
           "area_id": "0f02",
           "offset": "0x148E5F8"
+        },
+        {
+          "slot": 1,
+          "x": 2532,
+          "y": 158,
+          "z": 3381,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "1302",
+          "offset": "0x148E5B8"
+        },
+        {
+          "slot": 1,
+          "x": -820,
+          "y": 146,
+          "z": 3556,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "1202",
+          "offset": "0x148E598"
+        },
+        {
+          "slot": 1,
+          "x": 2438,
+          "y": 137,
+          "z": 3274,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "1302",
+          "offset": "0x148E5B8"
+        },
+        {
+          "slot": 1,
+          "x": -975,
+          "y": 163,
+          "z": 3585,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "1202",
+          "offset": "0x148E598"
         }
       ],
       "suffix": "00000000",
       "offset": "0x148E598"
     },
     {
-      "total": 4,
+      "total": 8,
       "composition": [
         {
-          "count": 4,
+          "count": 8,
           "slot": 2,
           "monster": "Giant-Ant"
         }
@@ -950,16 +1200,56 @@
           "byte10_11": "0000",
           "area_id": "8a02",
           "offset": "0x148E778"
+        },
+        {
+          "slot": 2,
+          "x": 1564,
+          "y": -14,
+          "z": 2045,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "e502",
+          "offset": "0x148E718"
+        },
+        {
+          "slot": 2,
+          "x": 524,
+          "y": 8,
+          "z": 385,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "8a02",
+          "offset": "0x148E778"
+        },
+        {
+          "slot": 2,
+          "x": 1554,
+          "y": -19,
+          "z": 2198,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "e502",
+          "offset": "0x148E718"
+        },
+        {
+          "slot": 2,
+          "x": 648,
+          "y": -3,
+          "z": 2166,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ce02",
+          "offset": "0x148E738"
         }
       ],
       "suffix": "00000000",
       "offset": "0x148E718"
     },
     {
-      "total": 2,
+      "total": 4,
       "composition": [
         {
-          "count": 2,
+          "count": 4,
           "slot": 1,
           "monster": "Giant-Beetle"
         }
@@ -984,6 +1274,26 @@
           "byte10_11": "0000",
           "area_id": "0f02",
           "offset": "0x148EBFC"
+        },
+        {
+          "slot": 1,
+          "x": 3628,
+          "y": 140,
+          "z": -1697,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "1002",
+          "offset": "0x148EBDC"
+        },
+        {
+          "slot": 1,
+          "x": 3705,
+          "y": 139,
+          "z": -1794,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "1002",
+          "offset": "0x148EBDC"
         }
       ],
       "suffix": "00000000",

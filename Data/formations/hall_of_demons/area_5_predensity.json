@@ -1,0 +1,110 @@
+{
+  "level_name": "Hall of Demons",
+  "name": "Area 5",
+  "group_offset": "0x2BF71C0",
+  "monsters": [
+    "Zombie-Dragon",
+    "Evil-Ball"
+  ],
+  "formation_area_start": null,
+  "formation_area_bytes": 0,
+  "original_total_slots": 0,
+  "area_id": "0000",
+  "formation_count": 0,
+  "formations": [],
+  "_placed_spawns": "--- placed spawns (per-record offsets) ---",
+  "spawn_points_area_start": "0x2BF7AF0",
+  "spawn_points_area_bytes": 36,
+  "original_total_spawn_slots": 1,
+  "spawn_point_count": 1,
+  "spawn_points": [
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 0,
+          "monster": "Zombie-Dragon"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": -500,
+          "y": 0,
+          "z": 200,
+          "byte0": 0,
+          "byte10_11": "0400",
+          "area_id": "1300",
+          "offset": "0x2BF7AF0"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2BF7AF0"
+    }
+  ],
+  "zone_spawns_area_start": "0x2BF7B10",
+  "zone_spawns_area_bytes": 332,
+  "original_total_zone_spawn_slots": 3,
+  "zone_spawn_count": 2,
+  "zone_spawns": [
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Evil-Ball"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": -700,
+          "y": 100,
+          "z": 100,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "1200",
+          "offset": "0x2BF7B10"
+        },
+        {
+          "slot": 1,
+          "x": -300,
+          "y": 100,
+          "z": 100,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "1000",
+          "offset": "0x2BF7B30"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2BF7B10"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Evil-Ball"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": -500,
+          "y": 5,
+          "z": -4100,
+          "byte0": 196,
+          "byte10_11": "0000",
+          "area_id": "5100",
+          "offset": "0x2BF7C38"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2BF7C38"
+    }
+  ]
+}

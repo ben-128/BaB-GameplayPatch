@@ -1276,10 +1276,10 @@
   "zone_spawn_count": 28,
   "zone_spawns": [
     {
-      "total": 4,
+      "total": 8,
       "composition": [
         {
-          "count": 4,
+          "count": 8,
           "slot": 1,
           "monster": "Hell-Ogre"
         }
@@ -1324,16 +1324,56 @@
           "byte10_11": "0000",
           "area_id": "4d02",
           "offset": "0x2C09EB0"
+        },
+        {
+          "slot": 1,
+          "x": 2387,
+          "y": 7,
+          "z": 5121,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "4d02",
+          "offset": "0x2C09EB0"
+        },
+        {
+          "slot": 1,
+          "x": -693,
+          "y": 205,
+          "z": 5770,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ea04",
+          "offset": "0x2C09E70"
+        },
+        {
+          "slot": 1,
+          "x": -649,
+          "y": 211,
+          "z": 5712,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ea04",
+          "offset": "0x2C09E70"
+        },
+        {
+          "slot": 1,
+          "x": -656,
+          "y": 203,
+          "z": 5638,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ea04",
+          "offset": "0x2C09E70"
         }
       ],
       "suffix": "00000000",
       "offset": "0x2C09E50"
     },
     {
-      "total": 2,
+      "total": 4,
       "composition": [
         {
-          "count": 2,
+          "count": 4,
           "slot": 2,
           "monster": "Succubus"
         }
@@ -1358,16 +1398,36 @@
           "byte10_11": "0000",
           "area_id": "e904",
           "offset": "0x2C09F30"
+        },
+        {
+          "slot": 2,
+          "x": -433,
+          "y": 196,
+          "z": 5666,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "e904",
+          "offset": "0x2C09F30"
+        },
+        {
+          "slot": 2,
+          "x": -439,
+          "y": 208,
+          "z": 5633,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "e904",
+          "offset": "0x2C09F30"
         }
       ],
       "suffix": "00000000",
       "offset": "0x2C09F10"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 1,
           "monster": "Hell-Ogre"
         }
@@ -1382,16 +1442,26 @@
           "byte10_11": "0000",
           "area_id": "7900",
           "offset": "0x2C0AC88"
+        },
+        {
+          "slot": 1,
+          "x": 4098,
+          "y": 185,
+          "z": 553,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7900",
+          "offset": "0x2C0AC88"
         }
       ],
       "suffix": "00000000",
       "offset": "0x2C0AC88"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 1,
           "monster": "Hell-Ogre"
         }
@@ -1406,16 +1476,26 @@
           "byte10_11": "0000",
           "area_id": "1800",
           "offset": "0x2C0AD5C"
+        },
+        {
+          "slot": 1,
+          "x": -83,
+          "y": 5,
+          "z": -13,
+          "byte0": 72,
+          "byte10_11": "0000",
+          "area_id": "1800",
+          "offset": "0x2C0AD5C"
         }
       ],
       "suffix": "15000000",
       "offset": "0x2C0AD5C"
     },
     {
-      "total": 5,
+      "total": 10,
       "composition": [
         {
-          "count": 5,
+          "count": 10,
           "slot": 2,
           "monster": "Succubus"
         }
@@ -1470,16 +1550,66 @@
           "byte10_11": "0000",
           "area_id": "7900",
           "offset": "0x2C0AE00"
+        },
+        {
+          "slot": 2,
+          "x": 4561,
+          "y": 5,
+          "z": -906,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2900",
+          "offset": "0x2C0ADC0"
+        },
+        {
+          "slot": 2,
+          "x": 3557,
+          "y": 19,
+          "z": -470,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3100",
+          "offset": "0x2C0ADA0"
+        },
+        {
+          "slot": 2,
+          "x": 4536,
+          "y": 2,
+          "z": -964,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2900",
+          "offset": "0x2C0ADC0"
+        },
+        {
+          "slot": 2,
+          "x": 3633,
+          "y": 23,
+          "z": -929,
+          "byte0": 4,
+          "byte10_11": "0000",
+          "area_id": "2e00",
+          "offset": "0x2C0AD80"
+        },
+        {
+          "slot": 2,
+          "x": 4189,
+          "y": 199,
+          "z": 763,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7900",
+          "offset": "0x2C0AE00"
         }
       ],
       "suffix": "00000000",
       "offset": "0x2C0AD80"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 1,
           "monster": "Hell-Ogre"
         }
@@ -1494,16 +1624,26 @@
           "byte10_11": "0000",
           "area_id": "7900",
           "offset": "0x2C0B488"
+        },
+        {
+          "slot": 1,
+          "x": 4050,
+          "y": 184,
+          "z": 450,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7900",
+          "offset": "0x2C0B488"
         }
       ],
       "suffix": "00000000",
       "offset": "0x2C0B488"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 1,
           "monster": "Hell-Ogre"
         }
@@ -1518,16 +1658,26 @@
           "byte10_11": "0000",
           "area_id": "1800",
           "offset": "0x2C0B55C"
+        },
+        {
+          "slot": 1,
+          "x": 26,
+          "y": -9,
+          "z": -72,
+          "byte0": 72,
+          "byte10_11": "0000",
+          "area_id": "1800",
+          "offset": "0x2C0B55C"
         }
       ],
       "suffix": "15000000",
       "offset": "0x2C0B55C"
     },
     {
-      "total": 5,
+      "total": 10,
       "composition": [
         {
-          "count": 5,
+          "count": 10,
           "slot": 2,
           "monster": "Succubus"
         }
@@ -1582,16 +1732,66 @@
           "byte10_11": "0000",
           "area_id": "7900",
           "offset": "0x2C0B600"
+        },
+        {
+          "slot": 2,
+          "x": 4643,
+          "y": -3,
+          "z": -802,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2900",
+          "offset": "0x2C0B5C0"
+        },
+        {
+          "slot": 2,
+          "x": 3557,
+          "y": 5,
+          "z": -979,
+          "byte0": 4,
+          "byte10_11": "0000",
+          "area_id": "2e00",
+          "offset": "0x2C0B580"
+        },
+        {
+          "slot": 2,
+          "x": 4075,
+          "y": 203,
+          "z": 897,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7900",
+          "offset": "0x2C0B600"
+        },
+        {
+          "slot": 2,
+          "x": 4639,
+          "y": 23,
+          "z": -466,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2c00",
+          "offset": "0x2C0B5E0"
+        },
+        {
+          "slot": 2,
+          "x": 4560,
+          "y": 9,
+          "z": -839,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2900",
+          "offset": "0x2C0B5C0"
         }
       ],
       "suffix": "00000000",
       "offset": "0x2C0B580"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 1,
           "monster": "Hell-Ogre"
         }
@@ -1606,16 +1806,26 @@
           "byte10_11": "0000",
           "area_id": "ba00",
           "offset": "0x2C0BC98"
+        },
+        {
+          "slot": 1,
+          "x": 4132,
+          "y": 199,
+          "z": 471,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ba00",
+          "offset": "0x2C0BC98"
         }
       ],
       "suffix": "00000000",
       "offset": "0x2C0BC98"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 1,
           "monster": "Hell-Ogre"
         }
@@ -1630,16 +1840,26 @@
           "byte10_11": "0000",
           "area_id": "2a00",
           "offset": "0x2C0BD7C"
+        },
+        {
+          "slot": 1,
+          "x": 1074,
+          "y": -345,
+          "z": -40,
+          "byte0": 124,
+          "byte10_11": "0000",
+          "area_id": "2a00",
+          "offset": "0x2C0BD7C"
         }
       ],
       "suffix": "15000000",
       "offset": "0x2C0BD7C"
     },
     {
-      "total": 5,
+      "total": 10,
       "composition": [
         {
-          "count": 5,
+          "count": 10,
           "slot": 2,
           "monster": "Succubus"
         }
@@ -1694,16 +1914,66 @@
           "byte10_11": "0000",
           "area_id": "ba00",
           "offset": "0x2C0BE20"
+        },
+        {
+          "slot": 2,
+          "x": 3613,
+          "y": 3,
+          "z": -594,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3b00",
+          "offset": "0x2C0BDC0"
+        },
+        {
+          "slot": 2,
+          "x": 4004,
+          "y": 203,
+          "z": 848,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ba00",
+          "offset": "0x2C0BE20"
+        },
+        {
+          "slot": 2,
+          "x": 4616,
+          "y": 5,
+          "z": -890,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3300",
+          "offset": "0x2C0BDE0"
+        },
+        {
+          "slot": 2,
+          "x": 3689,
+          "y": 1,
+          "z": -477,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3b00",
+          "offset": "0x2C0BDC0"
+        },
+        {
+          "slot": 2,
+          "x": 3601,
+          "y": 23,
+          "z": -439,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3b00",
+          "offset": "0x2C0BDC0"
         }
       ],
       "suffix": "00000000",
       "offset": "0x2C0BDA0"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 1,
           "monster": "Hell-Ogre"
         }
@@ -1718,16 +1988,26 @@
           "byte10_11": "0000",
           "area_id": "ba00",
           "offset": "0x2C0C498"
+        },
+        {
+          "slot": 1,
+          "x": 4027,
+          "y": 202,
+          "z": 596,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ba00",
+          "offset": "0x2C0C498"
         }
       ],
       "suffix": "00000000",
       "offset": "0x2C0C498"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 1,
           "monster": "Hell-Ogre"
         }
@@ -1742,16 +2022,26 @@
           "byte10_11": "0000",
           "area_id": "2a00",
           "offset": "0x2C0C57C"
+        },
+        {
+          "slot": 1,
+          "x": 938,
+          "y": -342,
+          "z": 94,
+          "byte0": 124,
+          "byte10_11": "0000",
+          "area_id": "2a00",
+          "offset": "0x2C0C57C"
         }
       ],
       "suffix": "15000000",
       "offset": "0x2C0C57C"
     },
     {
-      "total": 5,
+      "total": 10,
       "composition": [
         {
-          "count": 5,
+          "count": 10,
           "slot": 2,
           "monster": "Succubus"
         }
@@ -1806,16 +2096,66 @@
           "byte10_11": "0000",
           "area_id": "ba00",
           "offset": "0x2C0C620"
+        },
+        {
+          "slot": 2,
+          "x": 4696,
+          "y": -7,
+          "z": -913,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3300",
+          "offset": "0x2C0C5E0"
+        },
+        {
+          "slot": 2,
+          "x": 4132,
+          "y": 224,
+          "z": 881,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ba00",
+          "offset": "0x2C0C620"
+        },
+        {
+          "slot": 2,
+          "x": 4080,
+          "y": 208,
+          "z": 860,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ba00",
+          "offset": "0x2C0C620"
+        },
+        {
+          "slot": 2,
+          "x": 4156,
+          "y": 220,
+          "z": 772,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ba00",
+          "offset": "0x2C0C620"
+        },
+        {
+          "slot": 2,
+          "x": 4526,
+          "y": 14,
+          "z": -528,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3600",
+          "offset": "0x2C0C600"
         }
       ],
       "suffix": "00000000",
       "offset": "0x2C0C5A0"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 1,
           "monster": "Hell-Ogre"
         }
@@ -1830,16 +2170,26 @@
           "byte10_11": "0000",
           "area_id": "7900",
           "offset": "0x2C0CC98"
+        },
+        {
+          "slot": 1,
+          "x": 4002,
+          "y": 201,
+          "z": 597,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7900",
+          "offset": "0x2C0CC98"
         }
       ],
       "suffix": "00000000",
       "offset": "0x2C0CC98"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 1,
           "monster": "Hell-Ogre"
         }
@@ -1854,16 +2204,26 @@
           "byte10_11": "0000",
           "area_id": "1800",
           "offset": "0x2C0CD74"
+        },
+        {
+          "slot": 1,
+          "x": -93,
+          "y": 18,
+          "z": -52,
+          "byte0": 124,
+          "byte10_11": "0000",
+          "area_id": "1800",
+          "offset": "0x2C0CD74"
         }
       ],
       "suffix": "15000000",
       "offset": "0x2C0CD74"
     },
     {
-      "total": 5,
+      "total": 10,
       "composition": [
         {
-          "count": 5,
+          "count": 10,
           "slot": 2,
           "monster": "Succubus"
         }
@@ -1918,16 +2278,66 @@
           "byte10_11": "0000",
           "area_id": "7900",
           "offset": "0x2C0CE18"
+        },
+        {
+          "slot": 2,
+          "x": 4069,
+          "y": 212,
+          "z": 868,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7900",
+          "offset": "0x2C0CE18"
+        },
+        {
+          "slot": 2,
+          "x": 4076,
+          "y": 216,
+          "z": 742,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7900",
+          "offset": "0x2C0CE18"
+        },
+        {
+          "slot": 2,
+          "x": 3601,
+          "y": -5,
+          "z": -584,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3100",
+          "offset": "0x2C0CDB8"
+        },
+        {
+          "slot": 2,
+          "x": 3612,
+          "y": 3,
+          "z": -969,
+          "byte0": 4,
+          "byte10_11": "0000",
+          "area_id": "2e00",
+          "offset": "0x2C0CD98"
+        },
+        {
+          "slot": 2,
+          "x": 4581,
+          "y": 8,
+          "z": -522,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2c00",
+          "offset": "0x2C0CDF8"
         }
       ],
       "suffix": "00000000",
       "offset": "0x2C0CD98"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 1,
           "monster": "Hell-Ogre"
         }
@@ -1942,16 +2352,26 @@
           "byte10_11": "0000",
           "area_id": "7900",
           "offset": "0x2C0D498"
+        },
+        {
+          "slot": 1,
+          "x": 4132,
+          "y": 209,
+          "z": 441,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7900",
+          "offset": "0x2C0D498"
         }
       ],
       "suffix": "00000000",
       "offset": "0x2C0D498"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 1,
           "monster": "Hell-Ogre"
         }
@@ -1966,16 +2386,26 @@
           "byte10_11": "0000",
           "area_id": "1800",
           "offset": "0x2C0D574"
+        },
+        {
+          "slot": 1,
+          "x": 99,
+          "y": -9,
+          "z": 79,
+          "byte0": 124,
+          "byte10_11": "0000",
+          "area_id": "1800",
+          "offset": "0x2C0D574"
         }
       ],
       "suffix": "15000000",
       "offset": "0x2C0D574"
     },
     {
-      "total": 5,
+      "total": 10,
       "composition": [
         {
-          "count": 5,
+          "count": 10,
           "slot": 2,
           "monster": "Succubus"
         }
@@ -2030,16 +2460,66 @@
           "byte10_11": "0000",
           "area_id": "7900",
           "offset": "0x2C0D618"
+        },
+        {
+          "slot": 2,
+          "x": 4052,
+          "y": 198,
+          "z": 836,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7900",
+          "offset": "0x2C0D618"
+        },
+        {
+          "slot": 2,
+          "x": 3671,
+          "y": 12,
+          "z": -837,
+          "byte0": 4,
+          "byte10_11": "0000",
+          "area_id": "2e00",
+          "offset": "0x2C0D598"
+        },
+        {
+          "slot": 2,
+          "x": 4169,
+          "y": 192,
+          "z": 772,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7900",
+          "offset": "0x2C0D618"
+        },
+        {
+          "slot": 2,
+          "x": 4620,
+          "y": -9,
+          "z": -579,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2c00",
+          "offset": "0x2C0D5F8"
+        },
+        {
+          "slot": 2,
+          "x": 3505,
+          "y": -3,
+          "z": -974,
+          "byte0": 4,
+          "byte10_11": "0000",
+          "area_id": "2e00",
+          "offset": "0x2C0D598"
         }
       ],
       "suffix": "00000000",
       "offset": "0x2C0D598"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 1,
           "monster": "Hell-Ogre"
         }
@@ -2054,16 +2534,26 @@
           "byte10_11": "0000",
           "area_id": "ba00",
           "offset": "0x2C0DC98"
+        },
+        {
+          "slot": 1,
+          "x": 4128,
+          "y": 186,
+          "z": 464,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ba00",
+          "offset": "0x2C0DC98"
         }
       ],
       "suffix": "00000000",
       "offset": "0x2C0DC98"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 1,
           "monster": "Hell-Ogre"
         }
@@ -2078,16 +2568,26 @@
           "byte10_11": "0000",
           "area_id": "2a00",
           "offset": "0x2C0DD7C"
+        },
+        {
+          "slot": 1,
+          "x": 1062,
+          "y": -346,
+          "z": 0,
+          "byte0": 124,
+          "byte10_11": "0000",
+          "area_id": "2a00",
+          "offset": "0x2C0DD7C"
         }
       ],
       "suffix": "15000000",
       "offset": "0x2C0DD7C"
     },
     {
-      "total": 5,
+      "total": 10,
       "composition": [
         {
-          "count": 5,
+          "count": 10,
           "slot": 2,
           "monster": "Succubus"
         }
@@ -2142,16 +2642,66 @@
           "byte10_11": "0000",
           "area_id": "ba00",
           "offset": "0x2C0DE20"
+        },
+        {
+          "slot": 2,
+          "x": 3538,
+          "y": 30,
+          "z": -545,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3b00",
+          "offset": "0x2C0DDC0"
+        },
+        {
+          "slot": 2,
+          "x": 3591,
+          "y": 19,
+          "z": -521,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3b00",
+          "offset": "0x2C0DDC0"
+        },
+        {
+          "slot": 2,
+          "x": 4507,
+          "y": 18,
+          "z": -943,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3300",
+          "offset": "0x2C0DDE0"
+        },
+        {
+          "slot": 2,
+          "x": 4517,
+          "y": 13,
+          "z": -877,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3300",
+          "offset": "0x2C0DDE0"
+        },
+        {
+          "slot": 2,
+          "x": 3615,
+          "y": -7,
+          "z": -819,
+          "byte0": 4,
+          "byte10_11": "0000",
+          "area_id": "3800",
+          "offset": "0x2C0DDA0"
         }
       ],
       "suffix": "00000000",
       "offset": "0x2C0DDA0"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 1,
           "monster": "Hell-Ogre"
         }
@@ -2166,16 +2716,26 @@
           "byte10_11": "0000",
           "area_id": "ba00",
           "offset": "0x2C0E498"
+        },
+        {
+          "slot": 1,
+          "x": 4159,
+          "y": 191,
+          "z": 520,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ba00",
+          "offset": "0x2C0E498"
         }
       ],
       "suffix": "00000000",
       "offset": "0x2C0E498"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 1,
           "monster": "Hell-Ogre"
         }
@@ -2190,16 +2750,26 @@
           "byte10_11": "0000",
           "area_id": "2a00",
           "offset": "0x2C0E57C"
+        },
+        {
+          "slot": 1,
+          "x": 934,
+          "y": -328,
+          "z": -14,
+          "byte0": 124,
+          "byte10_11": "0000",
+          "area_id": "2a00",
+          "offset": "0x2C0E57C"
         }
       ],
       "suffix": "15000000",
       "offset": "0x2C0E57C"
     },
     {
-      "total": 5,
+      "total": 10,
       "composition": [
         {
-          "count": 5,
+          "count": 10,
           "slot": 2,
           "monster": "Succubus"
         }
@@ -2254,16 +2824,66 @@
           "byte10_11": "0000",
           "area_id": "ba00",
           "offset": "0x2C0E620"
+        },
+        {
+          "slot": 2,
+          "x": 4532,
+          "y": 3,
+          "z": -542,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3600",
+          "offset": "0x2C0E600"
+        },
+        {
+          "slot": 2,
+          "x": 4503,
+          "y": 1,
+          "z": -441,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3600",
+          "offset": "0x2C0E600"
+        },
+        {
+          "slot": 2,
+          "x": 3633,
+          "y": 19,
+          "z": -816,
+          "byte0": 4,
+          "byte10_11": "0000",
+          "area_id": "3800",
+          "offset": "0x2C0E5A0"
+        },
+        {
+          "slot": 2,
+          "x": 3576,
+          "y": 0,
+          "z": -911,
+          "byte0": 4,
+          "byte10_11": "0000",
+          "area_id": "3800",
+          "offset": "0x2C0E5A0"
+        },
+        {
+          "slot": 2,
+          "x": 4556,
+          "y": 25,
+          "z": -978,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3300",
+          "offset": "0x2C0E5E0"
         }
       ],
       "suffix": "00000000",
       "offset": "0x2C0E5A0"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 1,
           "monster": "Hell-Ogre"
         }
@@ -2278,16 +2898,26 @@
           "byte10_11": "0000",
           "area_id": "7900",
           "offset": "0x2C0EDD8"
+        },
+        {
+          "slot": 1,
+          "x": 4101,
+          "y": 206,
+          "z": 599,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7900",
+          "offset": "0x2C0EDD8"
         }
       ],
       "suffix": "00000000",
       "offset": "0x2C0EDD8"
     },
     {
-      "total": 5,
+      "total": 10,
       "composition": [
         {
-          "count": 5,
+          "count": 10,
           "slot": 2,
           "monster": "Succubus"
         }
@@ -2342,6 +2972,56 @@
           "byte10_11": "0000",
           "area_id": "7900",
           "offset": "0x2C0EF34"
+        },
+        {
+          "slot": 2,
+          "x": 4538,
+          "y": 18,
+          "z": -541,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2c00",
+          "offset": "0x2C0EF14"
+        },
+        {
+          "slot": 2,
+          "x": 4674,
+          "y": 25,
+          "z": -578,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2c00",
+          "offset": "0x2C0EF14"
+        },
+        {
+          "slot": 2,
+          "x": 4113,
+          "y": 206,
+          "z": 815,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7900",
+          "offset": "0x2C0EF34"
+        },
+        {
+          "slot": 2,
+          "x": 4570,
+          "y": -2,
+          "z": -448,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2c00",
+          "offset": "0x2C0EF14"
+        },
+        {
+          "slot": 2,
+          "x": 4560,
+          "y": 18,
+          "z": -489,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2c00",
+          "offset": "0x2C0EF14"
         }
       ],
       "suffix": "00000000",

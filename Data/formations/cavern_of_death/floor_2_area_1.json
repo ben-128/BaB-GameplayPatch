@@ -475,7 +475,7 @@
       "offset": "0xF82698"
     },
     {
-      "total": 3,
+      "total": 6,
       "composition": [
         {
           "count": 1,
@@ -483,7 +483,7 @@
           "monster": "Goblin-Shaman"
         },
         {
-          "count": 2,
+          "count": 5,
           "slot": 2,
           "monster": "Big-Viper"
         }
@@ -518,16 +518,46 @@
           "byte10_11": "0000",
           "area_id": "2702",
           "offset": "0xF828F8"
+        },
+        {
+          "slot": 2,
+          "x": 2089,
+          "y": -466,
+          "z": -3509,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2702",
+          "offset": "0xF828F8"
+        },
+        {
+          "slot": 2,
+          "x": 2107,
+          "y": -474,
+          "z": -3489,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2702",
+          "offset": "0xF828B8"
+        },
+        {
+          "slot": 2,
+          "x": 1979,
+          "y": -476,
+          "z": -3546,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2702",
+          "offset": "0xF828F8"
         }
       ],
       "suffix": "00000000",
       "offset": "0xF828B8"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 2,
           "monster": "Big-Viper"
         }
@@ -538,6 +568,16 @@
           "x": 917,
           "y": -891,
           "z": -2526,
+          "byte0": 4,
+          "byte10_11": "0000",
+          "area_id": "1d01",
+          "offset": "0xF82AFC"
+        },
+        {
+          "slot": 2,
+          "x": 831,
+          "y": -910,
+          "z": -2553,
           "byte0": 4,
           "byte10_11": "0000",
           "area_id": "1d01",
@@ -807,10 +847,10 @@
       "offset": "0xF82D7C"
     },
     {
-      "total": 2,
+      "total": 4,
       "composition": [
         {
-          "count": 2,
+          "count": 4,
           "slot": 2,
           "monster": "Big-Viper"
         }
@@ -831,6 +871,26 @@
           "x": 712,
           "y": -1100,
           "z": -2732,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "2f01",
+          "offset": "0xF8315C"
+        },
+        {
+          "slot": 2,
+          "x": -297,
+          "y": -1104,
+          "z": -3580,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "3601",
+          "offset": "0xF8313C"
+        },
+        {
+          "slot": 2,
+          "x": 729,
+          "y": -1098,
+          "z": -2801,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "2f01",

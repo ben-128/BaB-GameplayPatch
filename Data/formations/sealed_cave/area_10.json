@@ -51,15 +51,15 @@
   "zone_spawn_count": 3,
   "zone_spawns": [
     {
-      "total": 6,
+      "total": 12,
       "composition": [
         {
-          "count": 2,
+          "count": 3,
           "slot": 0,
           "monster": "Black-Durahan"
         },
         {
-          "count": 2,
+          "count": 7,
           "slot": 2,
           "monster": "Revenant"
         },
@@ -129,6 +129,66 @@
           "byte10_11": "0000",
           "area_id": "5100",
           "offset": "0x1DFA190"
+        },
+        {
+          "slot": 2,
+          "x": 116,
+          "y": 87,
+          "z": 2513,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "5000",
+          "offset": "0x1DFA150"
+        },
+        {
+          "slot": 2,
+          "x": -219,
+          "y": 101,
+          "z": 2538,
+          "byte0": 75,
+          "byte10_11": "0000",
+          "area_id": "5000",
+          "offset": "0x1DFA130"
+        },
+        {
+          "slot": 2,
+          "x": -379,
+          "y": 101,
+          "z": 2556,
+          "byte0": 75,
+          "byte10_11": "0000",
+          "area_id": "5000",
+          "offset": "0x1DFA130"
+        },
+        {
+          "slot": 0,
+          "x": -201,
+          "y": 162,
+          "z": 2972,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "9c00",
+          "offset": "0x1DFA0F0"
+        },
+        {
+          "slot": 2,
+          "x": -211,
+          "y": 85,
+          "z": 2562,
+          "byte0": 75,
+          "byte10_11": "0000",
+          "area_id": "5000",
+          "offset": "0x1DFA130"
+        },
+        {
+          "slot": 2,
+          "x": -297,
+          "y": 117,
+          "z": 2627,
+          "byte0": 75,
+          "byte10_11": "0000",
+          "area_id": "5000",
+          "offset": "0x1DFA130"
         }
       ],
       "suffix": "00000000",
@@ -509,10 +569,10 @@
       "offset": "0x1DFA5E8"
     },
     {
-      "total": 4,
+      "total": 8,
       "composition": [
         {
-          "count": 4,
+          "count": 8,
           "slot": 0,
           "monster": "Black-Durahan"
         }
@@ -557,6 +617,46 @@
           "byte10_11": "0000",
           "area_id": "7300",
           "offset": "0x1DFB014"
+        },
+        {
+          "slot": 0,
+          "x": 2609,
+          "y": 235,
+          "z": -216,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7500",
+          "offset": "0x1DFAFB4"
+        },
+        {
+          "slot": 0,
+          "x": 2616,
+          "y": 201,
+          "z": -392,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7500",
+          "offset": "0x1DFAFB4"
+        },
+        {
+          "slot": 0,
+          "x": 2207,
+          "y": 219,
+          "z": -226,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7300",
+          "offset": "0x1DFB014"
+        },
+        {
+          "slot": 0,
+          "x": 2726,
+          "y": 198,
+          "z": 127,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7500",
+          "offset": "0x1DFAFD4"
         }
       ],
       "suffix": "00000000",

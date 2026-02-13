@@ -1,0 +1,240 @@
+{
+  "level_name": "Ancient Ruins",
+  "name": "Area 2",
+  "group_offset": "0x2517158",
+  "monsters": [
+    "Chimera",
+    "Metal-Slime"
+  ],
+  "formation_area_start": "0x2517590",
+  "formation_area_bytes": 136,
+  "original_total_slots": 4,
+  "area_id": "3500",
+  "formation_count": 2,
+  "formations": [
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Chimera"
+        }
+      ],
+      "slots": [
+        0,
+        0
+      ],
+      "suffix": "00000000",
+      "offset": "0x2517590"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Metal-Slime"
+        }
+      ],
+      "slots": [
+        1,
+        1
+      ],
+      "suffix": "00000000",
+      "offset": "0x25175D4"
+    }
+  ],
+  "_placed_spawns": "--- placed spawns (per-record offsets) ---",
+  "spawn_points_area_start": "0x251902C",
+  "spawn_points_area_bytes": 272,
+  "original_total_spawn_slots": 7,
+  "spawn_point_count": 4,
+  "spawn_points": [
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 0,
+          "monster": "Chimera"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": -400,
+          "y": 500,
+          "z": 3600,
+          "byte0": 244,
+          "byte10_11": "0700",
+          "area_id": "1400",
+          "offset": "0x251902C"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x251902C"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 0,
+          "monster": "Chimera"
+        },
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Metal-Slime"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": -400,
+          "y": 500,
+          "z": 3600,
+          "byte0": 0,
+          "byte10_11": "0700",
+          "area_id": "1400",
+          "offset": "0x2519050"
+        },
+        {
+          "slot": 1,
+          "x": -400,
+          "y": 500,
+          "z": 4400,
+          "byte0": 0,
+          "byte10_11": "0700",
+          "area_id": "1700",
+          "offset": "0x2519070"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2519050"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 0,
+          "monster": "Chimera"
+        },
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Metal-Slime"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": -400,
+          "y": 500,
+          "z": 3600,
+          "byte0": 0,
+          "byte10_11": "0700",
+          "area_id": "1400",
+          "offset": "0x2519094"
+        },
+        {
+          "slot": 1,
+          "x": -400,
+          "y": 500,
+          "z": 4400,
+          "byte0": 0,
+          "byte10_11": "0700",
+          "area_id": "1700",
+          "offset": "0x25190B4"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2519094"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 0,
+          "monster": "Chimera"
+        },
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Metal-Slime"
+        }
+      ],
+      "records": [
+        {
+          "slot": 0,
+          "x": -400,
+          "y": 500,
+          "z": 3600,
+          "byte0": 0,
+          "byte10_11": "0700",
+          "area_id": "1400",
+          "offset": "0x25190F8"
+        },
+        {
+          "slot": 1,
+          "x": -400,
+          "y": 500,
+          "z": 4400,
+          "byte0": 0,
+          "byte10_11": "0700",
+          "area_id": "1700",
+          "offset": "0x2519118"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x25190F8"
+    }
+  ],
+  "zone_spawns_area_start": "0x2517764",
+  "zone_spawns_area_bytes": 68,
+  "original_total_zone_spawn_slots": 2,
+  "zone_spawn_count": 1,
+  "zone_spawns": [
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Metal-Slime"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 0,
+          "y": 105,
+          "z": -3000,
+          "byte0": 112,
+          "byte10_11": "0000",
+          "area_id": "1401",
+          "offset": "0x2517764"
+        },
+        {
+          "slot": 1,
+          "x": 0,
+          "y": 105,
+          "z": -3000,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "1401",
+          "offset": "0x2517784"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2517764"
+    }
+  ],
+  "slot_types": [
+    "00000000",
+    "00000000"
+  ]
+}

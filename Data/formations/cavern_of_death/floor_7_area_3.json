@@ -137,10 +137,10 @@
   "zone_spawn_count": 2,
   "zone_spawns": [
     {
-      "total": 2,
+      "total": 4,
       "composition": [
         {
-          "count": 2,
+          "count": 4,
           "slot": 0,
           "monster": "Green-Giant"
         }
@@ -165,6 +165,26 @@
           "byte10_11": "0000",
           "area_id": "ac00",
           "offset": "0xF93748"
+        },
+        {
+          "slot": 0,
+          "x": 700,
+          "y": -13,
+          "z": -383,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "b000",
+          "offset": "0xF93728"
+        },
+        {
+          "slot": 0,
+          "x": 774,
+          "y": 0,
+          "z": -281,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "b000",
+          "offset": "0xF93728"
         }
       ],
       "suffix": "00000000",

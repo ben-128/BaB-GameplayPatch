@@ -319,10 +319,10 @@
   "zone_spawn_count": 6,
   "zone_spawns": [
     {
-      "total": 2,
+      "total": 4,
       "composition": [
         {
-          "count": 2,
+          "count": 4,
           "slot": 1,
           "monster": "Wyrm"
         }
@@ -347,16 +347,36 @@
           "byte10_11": "0000",
           "area_id": "4601",
           "offset": "0x14B3B60"
+        },
+        {
+          "slot": 1,
+          "x": 2196,
+          "y": 335,
+          "z": 4793,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "4901",
+          "offset": "0x14B3B40"
+        },
+        {
+          "slot": 1,
+          "x": 252,
+          "y": 324,
+          "z": 4614,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "4601",
+          "offset": "0x14B3B60"
         }
       ],
       "suffix": "00000000",
       "offset": "0x14B3B40"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 2,
           "monster": "Giant"
         }
@@ -371,16 +391,26 @@
           "byte10_11": "0000",
           "area_id": "6101",
           "offset": "0x14B3FE0"
+        },
+        {
+          "slot": 2,
+          "x": -3940,
+          "y": 82,
+          "z": -4154,
+          "byte0": 7,
+          "byte10_11": "0000",
+          "area_id": "6101",
+          "offset": "0x14B3FE0"
         }
       ],
       "suffix": "00000000",
       "offset": "0x14B3FE0"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 2,
           "monster": "Giant"
         }
@@ -395,16 +425,26 @@
           "byte10_11": "0000",
           "area_id": "f200",
           "offset": "0x14B4224"
+        },
+        {
+          "slot": 2,
+          "x": 1819,
+          "y": 705,
+          "z": 3063,
+          "byte0": 10,
+          "byte10_11": "0000",
+          "area_id": "f200",
+          "offset": "0x14B4224"
         }
       ],
       "suffix": "00000000",
       "offset": "0x14B4224"
     },
     {
-      "total": 4,
+      "total": 8,
       "composition": [
         {
-          "count": 4,
+          "count": 8,
           "slot": 0,
           "monster": "Desert-Lizard"
         }
@@ -449,16 +489,56 @@
           "byte10_11": "0000",
           "area_id": "e002",
           "offset": "0x14B4788"
+        },
+        {
+          "slot": 0,
+          "x": 2262,
+          "y": 447,
+          "z": 7177,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "e002",
+          "offset": "0x14B4788"
+        },
+        {
+          "slot": 0,
+          "x": 1364,
+          "y": 285,
+          "z": 6605,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ca02",
+          "offset": "0x14B4728"
+        },
+        {
+          "slot": 0,
+          "x": 1430,
+          "y": 434,
+          "z": 7136,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "dd02",
+          "offset": "0x14B4768"
+        },
+        {
+          "slot": 0,
+          "x": 2207,
+          "y": 440,
+          "z": 7183,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "e002",
+          "offset": "0x14B4788"
         }
       ],
       "suffix": "00000000",
       "offset": "0x14B4728"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 2,
           "monster": "Giant"
         }
@@ -473,16 +553,26 @@
           "byte10_11": "0000",
           "area_id": "7700",
           "offset": "0x14B7D94"
+        },
+        {
+          "slot": 2,
+          "x": 45,
+          "y": 278,
+          "z": 1004,
+          "byte0": 104,
+          "byte10_11": "0000",
+          "area_id": "7700",
+          "offset": "0x14B7D94"
         }
       ],
       "suffix": "0a000000",
       "offset": "0x14B7D94"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 2,
           "monster": "Giant"
         }
@@ -493,6 +583,16 @@
           "x": 0,
           "y": 285,
           "z": 1000,
+          "byte0": 104,
+          "byte10_11": "0000",
+          "area_id": "7700",
+          "offset": "0x14B8594"
+        },
+        {
+          "slot": 2,
+          "x": -71,
+          "y": 272,
+          "z": 982,
           "byte0": 104,
           "byte10_11": "0000",
           "area_id": "7700",

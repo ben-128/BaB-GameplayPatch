@@ -264,10 +264,10 @@
   "zone_spawn_count": 14,
   "zone_spawns": [
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 2,
           "monster": "Wyvern"
         }
@@ -282,16 +282,26 @@
           "byte10_11": "0000",
           "area_id": "8502",
           "offset": "0x198B62C"
+        },
+        {
+          "slot": 2,
+          "x": -3771,
+          "y": -389,
+          "z": 52,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "8502",
+          "offset": "0x198B62C"
         }
       ],
       "suffix": "00000a00",
       "offset": "0x198B62C"
     },
     {
-      "total": 3,
+      "total": 6,
       "composition": [
         {
-          "count": 3,
+          "count": 6,
           "slot": 1,
           "monster": "Dark-Elf"
         }
@@ -326,6 +336,36 @@
           "byte10_11": "0000",
           "area_id": "ec02",
           "offset": "0x198BA7C"
+        },
+        {
+          "slot": 1,
+          "x": -6400,
+          "y": -210,
+          "z": 185,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "8a03",
+          "offset": "0x198BA5C"
+        },
+        {
+          "slot": 1,
+          "x": 4163,
+          "y": 4404,
+          "z": 2836,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ec02",
+          "offset": "0x198BA7C"
+        },
+        {
+          "slot": 1,
+          "x": -6214,
+          "y": -198,
+          "z": 99,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "8a03",
+          "offset": "0x198BA5C"
         }
       ],
       "suffix": "00000000",
@@ -620,10 +660,10 @@
       "offset": "0x198BFBC"
     },
     {
-      "total": 2,
+      "total": 4,
       "composition": [
         {
-          "count": 2,
+          "count": 4,
           "slot": 2,
           "monster": "Wyvern"
         }
@@ -648,6 +688,26 @@
           "byte10_11": "0000",
           "area_id": "ac02",
           "offset": "0x198C484"
+        },
+        {
+          "slot": 2,
+          "x": 6425,
+          "y": 2,
+          "z": 58,
+          "byte0": 99,
+          "byte10_11": "0000",
+          "area_id": "ac02",
+          "offset": "0x198C464"
+        },
+        {
+          "slot": 2,
+          "x": 6495,
+          "y": 16,
+          "z": 170,
+          "byte0": 99,
+          "byte10_11": "0000",
+          "area_id": "ac02",
+          "offset": "0x198C464"
         }
       ],
       "suffix": "00000000",
@@ -1037,10 +1097,10 @@
       "offset": "0x198C904"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 2,
           "monster": "Wyvern"
         }
@@ -1055,16 +1115,26 @@
           "byte10_11": "0000",
           "area_id": "f701",
           "offset": "0x198CB8C"
+        },
+        {
+          "slot": 2,
+          "x": 4185,
+          "y": 85,
+          "z": 184,
+          "byte0": 17,
+          "byte10_11": "0000",
+          "area_id": "f701",
+          "offset": "0x198CB8C"
         }
       ],
       "suffix": "00000000",
       "offset": "0x198CB8C"
     },
     {
-      "total": 2,
+      "total": 4,
       "composition": [
         {
-          "count": 2,
+          "count": 4,
           "slot": 2,
           "monster": "Wyvern"
         }
@@ -1089,16 +1159,36 @@
           "byte10_11": "0000",
           "area_id": "f701",
           "offset": "0x198CBEC"
+        },
+        {
+          "slot": 2,
+          "x": 4112,
+          "y": 20,
+          "z": 169,
+          "byte0": 255,
+          "byte10_11": "0000",
+          "area_id": "f701",
+          "offset": "0x198CBCC"
+        },
+        {
+          "slot": 2,
+          "x": 3754,
+          "y": 2088,
+          "z": 235,
+          "byte0": 254,
+          "byte10_11": "0000",
+          "area_id": "f701",
+          "offset": "0x198CBEC"
         }
       ],
       "suffix": "00000000",
       "offset": "0x198CBCC"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 2,
           "monster": "Wyvern"
         }
@@ -1109,6 +1199,16 @@
           "x": 4900,
           "y": 1100,
           "z": 100,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ea01",
+          "offset": "0x198CC4C"
+        },
+        {
+          "slot": 2,
+          "x": 4894,
+          "y": 1118,
+          "z": 116,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "ea01",
@@ -1258,10 +1358,10 @@
       "offset": "0x198CE4C"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 1,
           "monster": "Dark-Elf"
         }
@@ -1272,6 +1372,16 @@
           "x": 5400,
           "y": 4410,
           "z": -1800,
+          "byte0": 99,
+          "byte10_11": "0000",
+          "area_id": "6903",
+          "offset": "0x198D0B0"
+        },
+        {
+          "slot": 1,
+          "x": 5458,
+          "y": 4430,
+          "z": -1713,
           "byte0": 99,
           "byte10_11": "0000",
           "area_id": "6903",

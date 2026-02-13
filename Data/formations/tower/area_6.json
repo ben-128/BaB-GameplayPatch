@@ -407,10 +407,10 @@
   "zone_spawn_count": 15,
   "zone_spawns": [
     {
-      "total": 3,
+      "total": 6,
       "composition": [
         {
-          "count": 3,
+          "count": 6,
           "slot": 1,
           "monster": "Born-Golem"
         }
@@ -445,6 +445,36 @@
           "byte10_11": "0000",
           "area_id": "8203",
           "offset": "0x19824F8"
+        },
+        {
+          "slot": 1,
+          "x": 275,
+          "y": -1367,
+          "z": 46,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "8203",
+          "offset": "0x19824F8"
+        },
+        {
+          "slot": 1,
+          "x": 133,
+          "y": -1359,
+          "z": 151,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "8203",
+          "offset": "0x19824F8"
+        },
+        {
+          "slot": 1,
+          "x": -194,
+          "y": 401,
+          "z": 5891,
+          "byte0": 99,
+          "byte10_11": "0000",
+          "area_id": "4b03",
+          "offset": "0x19824B8"
         }
       ],
       "suffix": "00000000",
@@ -813,10 +843,10 @@
       "offset": "0x1982C98"
     },
     {
-      "total": 4,
+      "total": 8,
       "composition": [
         {
-          "count": 4,
+          "count": 8,
           "slot": 0,
           "monster": "Gargoyle"
         }
@@ -861,6 +891,46 @@
           "byte10_11": "0000",
           "area_id": "e200",
           "offset": "0x1983018"
+        },
+        {
+          "slot": 0,
+          "x": -285,
+          "y": 523,
+          "z": -4031,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "e400",
+          "offset": "0x1982FF8"
+        },
+        {
+          "slot": 0,
+          "x": -379,
+          "y": 503,
+          "z": -4154,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "e400",
+          "offset": "0x1982FF8"
+        },
+        {
+          "slot": 0,
+          "x": 200,
+          "y": 513,
+          "z": -4024,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "e200",
+          "offset": "0x1983018"
+        },
+        {
+          "slot": 0,
+          "x": -385,
+          "y": 507,
+          "z": 5782,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "0801",
+          "offset": "0x1982FD8"
         }
       ],
       "suffix": "00000000",
@@ -1543,10 +1613,10 @@
       "offset": "0x1983B40"
     },
     {
-      "total": 2,
+      "total": 4,
       "composition": [
         {
-          "count": 2,
+          "count": 4,
           "slot": 2,
           "monster": "Stalker"
         }
@@ -1571,6 +1641,26 @@
           "byte10_11": "0000",
           "area_id": "d102",
           "offset": "0x1983D84"
+        },
+        {
+          "slot": 2,
+          "x": 55,
+          "y": 400,
+          "z": 1484,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "d102",
+          "offset": "0x1983D84"
+        },
+        {
+          "slot": 2,
+          "x": -225,
+          "y": 402,
+          "z": 1483,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "d202",
+          "offset": "0x1983D64"
         }
       ],
       "suffix": "00000000",
@@ -1691,10 +1781,10 @@
       "offset": "0x1983E24"
     },
     {
-      "total": 6,
+      "total": 12,
       "composition": [
         {
-          "count": 6,
+          "count": 12,
           "slot": 0,
           "monster": "Gargoyle"
         }
@@ -1759,16 +1849,76 @@
           "byte10_11": "0000",
           "area_id": "b902",
           "offset": "0x1984064"
+        },
+        {
+          "slot": 0,
+          "x": 1510,
+          "y": 104,
+          "z": 1309,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "0201",
+          "offset": "0x1983FC4"
+        },
+        {
+          "slot": 0,
+          "x": 1901,
+          "y": 124,
+          "z": 1319,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "0001",
+          "offset": "0x1983FE4"
+        },
+        {
+          "slot": 0,
+          "x": -783,
+          "y": 369,
+          "z": 1832,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "b902",
+          "offset": "0x1984064"
+        },
+        {
+          "slot": 0,
+          "x": 468,
+          "y": 346,
+          "z": 1924,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "b802",
+          "offset": "0x1984044"
+        },
+        {
+          "slot": 0,
+          "x": -778,
+          "y": 340,
+          "z": 1896,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "b902",
+          "offset": "0x1984064"
+        },
+        {
+          "slot": 0,
+          "x": 464,
+          "y": 365,
+          "z": 1937,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "b802",
+          "offset": "0x1984044"
         }
       ],
       "suffix": "00000000",
       "offset": "0x1983FC4"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 1,
           "monster": "Born-Golem"
         }
@@ -1779,6 +1929,16 @@
           "x": 2900,
           "y": 5,
           "z": 100,
+          "byte0": 99,
+          "byte10_11": "0000",
+          "area_id": "6603",
+          "offset": "0x19840A8"
+        },
+        {
+          "slot": 1,
+          "x": 2876,
+          "y": 9,
+          "z": 6,
           "byte0": 99,
           "byte10_11": "0000",
           "area_id": "6603",

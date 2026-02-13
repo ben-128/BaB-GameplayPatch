@@ -376,10 +376,10 @@
   "zone_spawn_count": 4,
   "zone_spawns": [
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 1,
           "monster": "Vampire"
         }
@@ -390,6 +390,16 @@
           "x": -200,
           "y": 965,
           "z": 600,
+          "byte0": 80,
+          "byte10_11": "0000",
+          "area_id": "7c00",
+          "offset": "0x242BBE4"
+        },
+        {
+          "slot": 1,
+          "x": -179,
+          "y": 963,
+          "z": 555,
           "byte0": 80,
           "byte10_11": "0000",
           "area_id": "7c00",
@@ -579,10 +589,10 @@
       "offset": "0x242BD04"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 1,
           "monster": "Vampire"
         }
@@ -593,6 +603,16 @@
           "x": -200,
           "y": 1210,
           "z": 6800,
+          "byte0": 7,
+          "byte10_11": "0000",
+          "area_id": "ae00",
+          "offset": "0x242BF68"
+        },
+        {
+          "slot": 1,
+          "x": -228,
+          "y": 1218,
+          "z": 6803,
           "byte0": 7,
           "byte10_11": "0000",
           "area_id": "ae00",

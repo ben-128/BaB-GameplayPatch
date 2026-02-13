@@ -241,10 +241,10 @@
   "zone_spawn_count": 4,
   "zone_spawns": [
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 2,
           "monster": "Evil-Stalker"
         }
@@ -259,16 +259,26 @@
           "byte10_11": "0000",
           "area_id": "4001",
           "offset": "0x2BF55DC"
+        },
+        {
+          "slot": 2,
+          "x": 144,
+          "y": -582,
+          "z": 4365,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "4001",
+          "offset": "0x2BF55DC"
         }
       ],
       "suffix": "00000000",
       "offset": "0x2BF55DC"
     },
     {
-      "total": 4,
+      "total": 8,
       "composition": [
         {
-          "count": 4,
+          "count": 8,
           "slot": 2,
           "monster": "Evil-Stalker"
         }
@@ -313,6 +323,46 @@
           "byte10_11": "0000",
           "area_id": "bc00",
           "offset": "0x2BF5AA4"
+        },
+        {
+          "slot": 2,
+          "x": 179,
+          "y": 2,
+          "z": 2021,
+          "byte0": 200,
+          "byte10_11": "0000",
+          "area_id": "be00",
+          "offset": "0x2BF5A44"
+        },
+        {
+          "slot": 2,
+          "x": 1304,
+          "y": 3,
+          "z": 827,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "bd00",
+          "offset": "0x2BF5A64"
+        },
+        {
+          "slot": 2,
+          "x": 30,
+          "y": 1,
+          "z": 1982,
+          "byte0": 200,
+          "byte10_11": "0000",
+          "area_id": "be00",
+          "offset": "0x2BF5A44"
+        },
+        {
+          "slot": 2,
+          "x": 124,
+          "y": 4,
+          "z": 1970,
+          "byte0": 200,
+          "byte10_11": "0000",
+          "area_id": "be00",
+          "offset": "0x2BF5A44"
         }
       ],
       "suffix": "00000000",
@@ -413,10 +463,10 @@
       "offset": "0x2BF5C28"
     },
     {
-      "total": 2,
+      "total": 4,
       "composition": [
         {
-          "count": 2,
+          "count": 4,
           "slot": 2,
           "monster": "Evil-Stalker"
         }
@@ -437,6 +487,26 @@
           "x": 4300,
           "y": -1200,
           "z": -900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "4501",
+          "offset": "0x2BF61D4"
+        },
+        {
+          "slot": 2,
+          "x": -4183,
+          "y": -1188,
+          "z": -920,
+          "byte0": 2,
+          "byte10_11": "0000",
+          "area_id": "4c01",
+          "offset": "0x2BF61B4"
+        },
+        {
+          "slot": 2,
+          "x": 4391,
+          "y": -1192,
+          "z": -974,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "4501",

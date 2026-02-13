@@ -49,10 +49,10 @@
   "zone_spawn_count": 2,
   "zone_spawns": [
     {
-      "total": 2,
+      "total": 4,
       "composition": [
         {
-          "count": 2,
+          "count": 4,
           "slot": 1,
           "monster": "Evil-Ball"
         }
@@ -77,16 +77,36 @@
           "byte10_11": "0000",
           "area_id": "1000",
           "offset": "0x2BF7B30"
+        },
+        {
+          "slot": 1,
+          "x": -370,
+          "y": 117,
+          "z": 76,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "1000",
+          "offset": "0x2BF7B30"
+        },
+        {
+          "slot": 1,
+          "x": -710,
+          "y": 98,
+          "z": 84,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "1200",
+          "offset": "0x2BF7B10"
         }
       ],
       "suffix": "00000000",
       "offset": "0x2BF7B10"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 1,
           "monster": "Evil-Ball"
         }
@@ -97,6 +117,16 @@
           "x": -500,
           "y": 5,
           "z": -4100,
+          "byte0": 196,
+          "byte10_11": "0000",
+          "area_id": "5100",
+          "offset": "0x2BF7C38"
+        },
+        {
+          "slot": 1,
+          "x": -553,
+          "y": -10,
+          "z": -4184,
           "byte0": 196,
           "byte10_11": "0000",
           "area_id": "5100",

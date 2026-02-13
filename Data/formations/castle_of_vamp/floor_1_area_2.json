@@ -1770,10 +1770,10 @@
   "zone_spawn_count": 12,
   "zone_spawns": [
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 1,
           "monster": "Ghost"
         }
@@ -1784,6 +1784,16 @@
           "x": -300,
           "y": 2005,
           "z": -3500,
+          "byte0": 168,
+          "byte10_11": "0000",
+          "area_id": "5602",
+          "offset": "0x2408D30"
+        },
+        {
+          "slot": 1,
+          "x": -217,
+          "y": 2022,
+          "z": -3533,
           "byte0": 168,
           "byte10_11": "0000",
           "area_id": "5602",
@@ -2032,10 +2042,10 @@
       "offset": "0x24090F4"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 2,
           "monster": "Blood-Skeleton"
         }
@@ -2046,6 +2056,16 @@
           "x": -1590,
           "y": 1400,
           "z": 3900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "1002",
+          "offset": "0x2409374"
+        },
+        {
+          "slot": 2,
+          "x": -1502,
+          "y": 1391,
+          "z": 3833,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "1002",
@@ -2394,10 +2414,10 @@
       "offset": "0x240977C"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 2,
           "monster": "Blood-Skeleton"
         }
@@ -2408,6 +2428,16 @@
           "x": -3150,
           "y": 1400,
           "z": 4200,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "b900",
+          "offset": "0x2409A3C"
+        },
+        {
+          "slot": 2,
+          "x": -3098,
+          "y": 1413,
+          "z": 4197,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "b900",
@@ -2757,10 +2787,10 @@
       "offset": "0x2409E64"
     },
     {
-      "total": 2,
+      "total": 4,
       "composition": [
         {
-          "count": 2,
+          "count": 4,
           "slot": 0,
           "monster": "Zombie"
         }
@@ -2785,6 +2815,26 @@
           "byte10_11": "0000",
           "area_id": "7702",
           "offset": "0x240A5A8"
+        },
+        {
+          "slot": 0,
+          "x": 3506,
+          "y": 2110,
+          "z": 2251,
+          "byte0": 15,
+          "byte10_11": "0000",
+          "area_id": "7702",
+          "offset": "0x240A5A8"
+        },
+        {
+          "slot": 0,
+          "x": 3182,
+          "y": 2087,
+          "z": 2230,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "7702",
+          "offset": "0x240A588"
         }
       ],
       "suffix": "10000000",
@@ -2930,10 +2980,10 @@
       "offset": "0x240A68C"
     },
     {
-      "total": 1,
+      "total": 2,
       "composition": [
         {
-          "count": 1,
+          "count": 2,
           "slot": 1,
           "monster": "Ghost"
         }
@@ -2948,16 +2998,26 @@
           "byte10_11": "0000",
           "area_id": "bf02",
           "offset": "0x240A88C"
+        },
+        {
+          "slot": 1,
+          "x": -364,
+          "y": 1721,
+          "z": 2286,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "bf02",
+          "offset": "0x240A88C"
         }
       ],
       "suffix": "00000000",
       "offset": "0x240A88C"
     },
     {
-      "total": 2,
+      "total": 4,
       "composition": [
         {
-          "count": 2,
+          "count": 4,
           "slot": 2,
           "monster": "Blood-Skeleton"
         }
@@ -2982,6 +3042,26 @@
           "byte10_11": "0000",
           "area_id": "e601",
           "offset": "0x240AAD0"
+        },
+        {
+          "slot": 2,
+          "x": 2503,
+          "y": 1981,
+          "z": 2613,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "e601",
+          "offset": "0x240AAD0"
+        },
+        {
+          "slot": 2,
+          "x": 2491,
+          "y": 1996,
+          "z": 1459,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "e201",
+          "offset": "0x240AAB0"
         }
       ],
       "suffix": "00000000",
