@@ -209,7 +209,14 @@ def update_json():
     backup = JSON_PATH.with_suffix('.json.backup')
     shutil.copy2(JSON_PATH, backup)
 
-    # Update
+    # Update monsters list (create if doesn't exist)
+    if 'monsters' not in data:
+        data['monsters'] = []
+
+    # Ensure we have at least 3 monsters (vanilla)
+    if len(data['monsters']) < 3:
+        data['monsters'] = ['Lv20.Goblin', 'Goblin-Shaman', 'Giant-Bat']
+
     data['monsters'].extend(['NewSlot1', 'NewSlot2'])
     data['formation_area_start'] = hex(NEW['formation_start'])
 

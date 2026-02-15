@@ -1,26 +1,11 @@
 {
   "level_name": "Cavern of Death",
   "name": "Floor 1 - Area 1",
-  "monsters": [
-    "Lv20.Goblin",
-    "Goblin-Shaman",
-    "Giant-Bat",
-    "NewSlot1",
-    "NewSlot2"
-  ],
-  "formation_area_start": "0xF7B03C",
+  "formation_area_start": "0xF7AFFC",
   "formation_area_bytes": 896,
   "original_total_slots": 27,
   "formation_count": 8,
   "area_id": "dc01",
-  "slot_expansion": {
-    "expanded": true,
-    "original_slots": 3,
-    "current_slots": 5,
-    "method": "zone_reorganization",
-    "shift_amount": 240,
-    "date": "2026-02-15"
-  },
   "formations": [
     {
       "records": [
