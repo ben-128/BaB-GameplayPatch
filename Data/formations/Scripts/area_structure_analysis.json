@@ -1,0 +1,68 @@
+{
+  "area_name": "Cavern of Death - Floor 1 Area 1",
+  "num_monsters": 3,
+  "offsets": {
+    "animation_header": "0xf7a900",
+    "animation_table": "0xf7a908",
+    "animation_records": "0xf7a920",
+    "assignments": "0xf7a964",
+    "stats": "0xf7a97c",
+    "script_area": "0xf7aa9c"
+  },
+  "space_analysis": {
+    "animation_section": 16230656,
+    "assignments_section": 16230756,
+    "stats_section": 16230780,
+    "script_section": 16231068,
+    "total_monster_data_size": 412,
+    "bytes_per_monster": 134
+  },
+  "monsters": [
+    {
+      "slot": 0,
+      "name": "Lv20.Goblin",
+      "level": 2,
+      "hp": 56,
+      "animation_table": "0000000000010203",
+      "animation_pointer": "0x10100f0f",
+      "texture_ref": "0x14131211",
+      "L_value": 0,
+      "R_value": 2,
+      "L_entry_raw": "00000000",
+      "R_entry_raw": "00020040"
+    },
+    {
+      "slot": 1,
+      "name": "Goblin-Shaman",
+      "level": 3,
+      "hp": 48,
+      "animation_table": "0404050506060707",
+      "animation_pointer": "0x170e1615",
+      "texture_ref": "0x6060606",
+      "L_value": 1,
+      "R_value": 3,
+      "L_entry_raw": "01010000",
+      "R_entry_raw": "01030040"
+    },
+    {
+      "slot": 2,
+      "name": "Giant-Bat",
+      "level": 4,
+      "hp": 52,
+      "animation_table": "08090a0b0c0c0d0e",
+      "animation_pointer": "0x18181806",
+      "texture_ref": "0xc",
+      "L_value": 3,
+      "R_value": 4,
+      "L_entry_raw": "02030000",
+      "R_entry_raw": "02040040"
+    }
+  ],
+  "expansion_potential": {
+    "available_bytes": 0,
+    "bytes_per_slot": 120,
+    "max_new_slots": 0,
+    "current_slots": 3,
+    "max_total_slots": 3
+  }
+}
