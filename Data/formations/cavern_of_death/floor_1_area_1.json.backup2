@@ -8,7 +8,7 @@
     "NewSlot1",
     "NewSlot2"
   ],
-  "formation_area_start": "0xf7b0f0",
+  "formation_area_start": "0xf7b0ec",
   "formation_area_bytes": 896,
   "original_total_slots": 27,
   "formation_count": 8,
@@ -18,7 +18,7 @@
     "original_slots": 3,
     "current_slots": 5,
     "method": "zone_reorganization",
-    "shift_amount": 244,
+    "shift_amount": 240,
     "date": "2026-02-15"
   },
   "formations": [
