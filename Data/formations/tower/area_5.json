@@ -532,10 +532,10 @@
   "zone_spawn_count": 10,
   "zone_spawns": [
     {
-      "total": 4,
+      "total": 2,
       "composition": [
         {
-          "count": 4,
+          "count": 2,
           "slot": 2,
           "monster": "Green-Slime"
         }
@@ -554,26 +554,6 @@
         {
           "slot": 2,
           "x": -3700,
-          "y": 1200,
-          "z": 1800,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "4104",
-          "offset": "0x197D2A8"
-        },
-        {
-          "slot": 2,
-          "x": 3298,
-          "y": 1200,
-          "z": 1800,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "4104",
-          "offset": "0x197D2A8"
-        },
-        {
-          "slot": 2,
-          "x": 3250,
           "y": 1200,
           "z": 1800,
           "byte0": 0,
@@ -610,10 +590,10 @@
       "offset": "0x197D428"
     },
     {
-      "total": 4,
+      "total": 2,
       "composition": [
         {
-          "count": 4,
+          "count": 2,
           "slot": 2,
           "monster": "Green-Slime"
         }
@@ -632,26 +612,6 @@
         {
           "slot": 2,
           "x": -3700,
-          "y": 1200,
-          "z": 1800,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "4104",
-          "offset": "0x197D508"
-        },
-        {
-          "slot": 2,
-          "x": 440,
-          "y": 1200,
-          "z": 1800,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "4104",
-          "offset": "0x197D508"
-        },
-        {
-          "slot": 2,
-          "x": 2015,
           "y": 1200,
           "z": 1800,
           "byte0": 0,
@@ -1228,10 +1188,10 @@
       "offset": "0x197D9E8"
     },
     {
-      "total": 4,
+      "total": 2,
       "composition": [
         {
-          "count": 4,
+          "count": 2,
           "slot": 1,
           "monster": "Goblin-Shaman"
         }
@@ -1256,36 +1216,16 @@
           "byte10_11": "0000",
           "area_id": "9902",
           "offset": "0x197E14C"
-        },
-        {
-          "slot": 1,
-          "x": 100,
-          "y": 1225,
-          "z": 3859,
-          "byte0": 99,
-          "byte10_11": "0000",
-          "area_id": "a202",
-          "offset": "0x197E12C"
-        },
-        {
-          "slot": 1,
-          "x": 100,
-          "y": 1225,
-          "z": 4271,
-          "byte0": 99,
-          "byte10_11": "0000",
-          "area_id": "a202",
-          "offset": "0x197E12C"
         }
       ],
       "suffix": "00000000",
       "offset": "0x197E12C"
     },
     {
-      "total": 8,
+      "total": 4,
       "composition": [
         {
-          "count": 8,
+          "count": 4,
           "slot": 2,
           "monster": "Green-Slime"
         }
@@ -1326,46 +1266,6 @@
           "x": 300,
           "y": 1000,
           "z": -2700,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "9000",
-          "offset": "0x197E20C"
-        },
-        {
-          "slot": 2,
-          "x": -34,
-          "y": 977,
-          "z": -2965,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "7903",
-          "offset": "0x197E1AC"
-        },
-        {
-          "slot": 2,
-          "x": 52,
-          "y": 969,
-          "z": -3094,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "9000",
-          "offset": "0x197E20C"
-        },
-        {
-          "slot": 2,
-          "x": 199,
-          "y": 837,
-          "z": -3821,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "9000",
-          "offset": "0x197E20C"
-        },
-        {
-          "slot": 2,
-          "x": 146,
-          "y": 986,
-          "z": -2787,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "9000",
@@ -1828,10 +1728,10 @@
       "offset": "0x197EE54"
     },
     {
-      "total": 8,
+      "total": 4,
       "composition": [
         {
-          "count": 8,
+          "count": 4,
           "slot": 2,
           "monster": "Green-Slime"
         }
@@ -1876,46 +1776,6 @@
           "byte10_11": "0000",
           "area_id": "f600",
           "offset": "0x197F4D4"
-        },
-        {
-          "slot": 2,
-          "x": -2449,
-          "y": 180,
-          "z": -5264,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "ea00",
-          "offset": "0x197F4B4"
-        },
-        {
-          "slot": 2,
-          "x": -1888,
-          "y": 180,
-          "z": -5423,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "f200",
-          "offset": "0x197F474"
-        },
-        {
-          "slot": 2,
-          "x": 1929,
-          "y": 179,
-          "z": -5533,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "ea00",
-          "offset": "0x197F4B4"
-        },
-        {
-          "slot": 2,
-          "x": 1747,
-          "y": 179,
-          "z": -5112,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "ed00",
-          "offset": "0x197F494"
         }
       ],
       "suffix": "00000000",

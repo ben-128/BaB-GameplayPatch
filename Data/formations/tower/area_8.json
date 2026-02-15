@@ -288,10 +288,10 @@
       "offset": "0x198B62C"
     },
     {
-      "total": 6,
+      "total": 3,
       "composition": [
         {
-          "count": 6,
+          "count": 3,
           "slot": 1,
           "monster": "Dark-Elf"
         }
@@ -326,36 +326,6 @@
           "byte10_11": "0000",
           "area_id": "ec02",
           "offset": "0x198BA7C"
-        },
-        {
-          "slot": 1,
-          "x": -3033,
-          "y": 794,
-          "z": 1033,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "8a03",
-          "offset": "0x198BA5C"
-        },
-        {
-          "slot": 1,
-          "x": -2802,
-          "y": 864,
-          "z": 1073,
-          "byte0": 99,
-          "byte10_11": "0000",
-          "area_id": "1303",
-          "offset": "0x198BA3C"
-        },
-        {
-          "slot": 1,
-          "x": -5364,
-          "y": 144,
-          "z": 393,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "8a03",
-          "offset": "0x198BA5C"
         }
       ],
       "suffix": "00000000",
@@ -650,35 +620,15 @@
       "offset": "0x198BFBC"
     },
     {
-      "total": 4,
+      "total": 2,
       "composition": [
         {
-          "count": 4,
+          "count": 2,
           "slot": 2,
           "monster": "Wyvern"
         }
       ],
       "records": [
-        {
-          "slot": 2,
-          "x": 6500,
-          "y": 5,
-          "z": 100,
-          "byte0": 99,
-          "byte10_11": "0000",
-          "area_id": "ac02",
-          "offset": "0x198C464"
-        },
-        {
-          "slot": 2,
-          "x": 6500,
-          "y": 5,
-          "z": 100,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "ac02",
-          "offset": "0x198C484"
-        },
         {
           "slot": 2,
           "x": 6500,
@@ -1111,10 +1061,10 @@
       "offset": "0x198CB8C"
     },
     {
-      "total": 4,
+      "total": 2,
       "composition": [
         {
-          "count": 4,
+          "count": 2,
           "slot": 2,
           "monster": "Wyvern"
         }
@@ -1135,26 +1085,6 @@
           "x": 3834,
           "y": 2100,
           "z": 200,
-          "byte0": 254,
-          "byte10_11": "0000",
-          "area_id": "f701",
-          "offset": "0x198CBEC"
-        },
-        {
-          "slot": 2,
-          "x": 4049,
-          "y": 399,
-          "z": 118,
-          "byte0": 254,
-          "byte10_11": "0000",
-          "area_id": "f701",
-          "offset": "0x198CBEC"
-        },
-        {
-          "slot": 2,
-          "x": 3975,
-          "y": 980,
-          "z": 146,
           "byte0": 254,
           "byte10_11": "0000",
           "area_id": "f701",

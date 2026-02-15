@@ -351,10 +351,10 @@
       "offset": "0x14A6588"
     },
     {
-      "total": 6,
+      "total": 3,
       "composition": [
         {
-          "count": 6,
+          "count": 3,
           "slot": 1,
           "monster": "Killer-Bee"
         }
@@ -389,36 +389,6 @@
           "byte10_11": "0000",
           "area_id": "8400",
           "offset": "0x14A6D4C"
-        },
-        {
-          "slot": 1,
-          "x": 3202,
-          "y": 149,
-          "z": 2354,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "8400",
-          "offset": "0x14A6D4C"
-        },
-        {
-          "slot": 1,
-          "x": 3092,
-          "y": 150,
-          "z": 2133,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "8500",
-          "offset": "0x14A6D2C"
-        },
-        {
-          "slot": 1,
-          "x": 3216,
-          "y": 150,
-          "z": 2382,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "8700",
-          "offset": "0x14A6D0C"
         }
       ],
       "suffix": "00000000",

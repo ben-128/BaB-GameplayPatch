@@ -505,10 +505,10 @@
       "offset": "0x2BFD778"
     },
     {
-      "total": 8,
+      "total": 4,
       "composition": [
         {
-          "count": 8,
+          "count": 4,
           "slot": 2,
           "monster": "Hell-Hound"
         }
@@ -553,46 +553,6 @@
           "byte10_11": "0000",
           "area_id": "4400",
           "offset": "0x2BFDC04"
-        },
-        {
-          "slot": 2,
-          "x": -2055,
-          "y": 1600,
-          "z": 616,
-          "byte0": 244,
-          "byte10_11": "0000",
-          "area_id": "0700",
-          "offset": "0x2BFDBC4"
-        },
-        {
-          "slot": 2,
-          "x": -2083,
-          "y": 1600,
-          "z": 576,
-          "byte0": 99,
-          "byte10_11": "0000",
-          "area_id": "0600",
-          "offset": "0x2BFDBA4"
-        },
-        {
-          "slot": 2,
-          "x": -2170,
-          "y": 1600,
-          "z": 704,
-          "byte0": 244,
-          "byte10_11": "0000",
-          "area_id": "4400",
-          "offset": "0x2BFDC04"
-        },
-        {
-          "slot": 2,
-          "x": -2169,
-          "y": 1600,
-          "z": 634,
-          "byte0": 99,
-          "byte10_11": "0000",
-          "area_id": "0600",
-          "offset": "0x2BFDBA4"
         }
       ],
       "suffix": "f4010002",

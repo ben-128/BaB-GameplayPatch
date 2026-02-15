@@ -13,22 +13,19 @@
   "formation_count": 4,
   "formations": [
     {
-      "total": 3,
+      "total": 1,
       "composition": [
         {
-          "count": 3,
+          "count": 1,
           "slot": 0,
           "monster": "Crimson-Lizard"
         }
       ],
       "slots": [
-        0,
-        0,
         0
       ],
       "suffix": "00000000",
-      "offset": "0x19737A4",
-      "slot_types": []
+      "offset": "0x19737A4"
     },
     {
       "total": 1,
@@ -44,6 +41,22 @@
       ],
       "suffix": "00000000",
       "offset": "0x19737C8"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Crimson-Lizard"
+        }
+      ],
+      "slots": [
+        0,
+        0
+      ],
+      "suffix": "00000000",
+      "offset": "0x19737EC"
     },
     {
       "total": 3,
@@ -531,10 +544,10 @@
       "offset": "0x19748F8"
     },
     {
-      "total": 4,
+      "total": 2,
       "composition": [
         {
-          "count": 4,
+          "count": 2,
           "slot": 0,
           "monster": "Crimson-Lizard"
         }
@@ -559,26 +572,6 @@
           "byte10_11": "0000",
           "area_id": "fd02",
           "offset": "0x1974B5C"
-        },
-        {
-          "slot": 0,
-          "x": 2412,
-          "y": 340,
-          "z": -2847,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "ff02",
-          "offset": "0x1974B3C"
-        },
-        {
-          "slot": 0,
-          "x": 2546,
-          "y": 340,
-          "z": -2713,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "ff02",
-          "offset": "0x1974B3C"
         }
       ],
       "suffix": "00000000",

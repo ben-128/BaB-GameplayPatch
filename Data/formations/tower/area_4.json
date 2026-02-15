@@ -516,10 +516,10 @@
   "zone_spawn_count": 21,
   "zone_spawns": [
     {
-      "total": 6,
+      "total": 3,
       "composition": [
         {
-          "count": 6,
+          "count": 3,
           "slot": 0,
           "monster": "Dark-Magi"
         }
@@ -554,36 +554,6 @@
           "byte10_11": "0000",
           "area_id": "a300",
           "offset": "0x1976834"
-        },
-        {
-          "slot": 0,
-          "x": 270,
-          "y": 200,
-          "z": 5145,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "a300",
-          "offset": "0x1976834"
-        },
-        {
-          "slot": 0,
-          "x": 13,
-          "y": 199,
-          "z": 5404,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "8503",
-          "offset": "0x19767F4"
-        },
-        {
-          "slot": 0,
-          "x": 109,
-          "y": 199,
-          "z": 5293,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "8503",
-          "offset": "0x19767F4"
         }
       ],
       "suffix": "00000a00",
@@ -614,10 +584,10 @@
       "offset": "0x1976F7C"
     },
     {
-      "total": 14,
+      "total": 7,
       "composition": [
         {
-          "count": 14,
+          "count": 7,
           "slot": 2,
           "monster": "Goblin-Fly"
         }
@@ -692,86 +662,16 @@
           "byte10_11": "0000",
           "area_id": "7201",
           "offset": "0x197715C"
-        },
-        {
-          "slot": 2,
-          "x": 799,
-          "y": -276,
-          "z": -145,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "7101",
-          "offset": "0x197709C"
-        },
-        {
-          "slot": 2,
-          "x": 27,
-          "y": -77,
-          "z": 839,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "7201",
-          "offset": "0x197713C"
-        },
-        {
-          "slot": 2,
-          "x": -6,
-          "y": -319,
-          "z": 410,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "7201",
-          "offset": "0x197713C"
-        },
-        {
-          "slot": 2,
-          "x": 210,
-          "y": -117,
-          "z": 704,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "7201",
-          "offset": "0x19770FC"
-        },
-        {
-          "slot": 2,
-          "x": 236,
-          "y": -399,
-          "z": -144,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "7101",
-          "offset": "0x19770BC"
-        },
-        {
-          "slot": 2,
-          "x": 911,
-          "y": -146,
-          "z": 443,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "7201",
-          "offset": "0x197713C"
-        },
-        {
-          "slot": 2,
-          "x": 651,
-          "y": -194,
-          "z": 493,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "7201",
-          "offset": "0x19770FC"
         }
       ],
       "suffix": "00000000",
       "offset": "0x197709C"
     },
     {
-      "total": 6,
+      "total": 3,
       "composition": [
         {
-          "count": 6,
+          "count": 3,
           "slot": 2,
           "monster": "Goblin-Fly"
         }
@@ -802,36 +702,6 @@
           "x": -1100,
           "y": 0,
           "z": 100,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "7b01",
-          "offset": "0x197725C"
-        },
-        {
-          "slot": 2,
-          "x": -1000,
-          "y": 0,
-          "z": -232,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "7b01",
-          "offset": "0x197723C"
-        },
-        {
-          "slot": 2,
-          "x": -189,
-          "y": 0,
-          "z": -170,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "7b01",
-          "offset": "0x197725C"
-        },
-        {
-          "slot": 2,
-          "x": -809,
-          "y": 0,
-          "z": -239,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "7b01",
@@ -890,10 +760,10 @@
       "offset": "0x19773FC"
     },
     {
-      "total": 10,
+      "total": 5,
       "composition": [
         {
-          "count": 10,
+          "count": 5,
           "slot": 2,
           "monster": "Goblin-Fly"
         }
@@ -948,66 +818,16 @@
           "byte10_11": "0000",
           "area_id": "d400",
           "offset": "0x197757C"
-        },
-        {
-          "slot": 2,
-          "x": 37,
-          "y": 280,
-          "z": 5461,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "d600",
-          "offset": "0x197753C"
-        },
-        {
-          "slot": 2,
-          "x": 453,
-          "y": 280,
-          "z": 4854,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "d800",
-          "offset": "0x197755C"
-        },
-        {
-          "slot": 2,
-          "x": 308,
-          "y": 280,
-          "z": 4876,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "dc00",
-          "offset": "0x19774FC"
-        },
-        {
-          "slot": 2,
-          "x": 76,
-          "y": 280,
-          "z": 4947,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "da00",
-          "offset": "0x197751C"
-        },
-        {
-          "slot": 2,
-          "x": 38,
-          "y": 280,
-          "z": 5000,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "d600",
-          "offset": "0x197753C"
         }
       ],
       "suffix": "00000000",
       "offset": "0x19774FC"
     },
     {
-      "total": 10,
+      "total": 5,
       "composition": [
         {
-          "count": 10,
+          "count": 5,
           "slot": 2,
           "monster": "Goblin-Fly"
         }
@@ -1062,66 +882,16 @@
           "byte10_11": "0000",
           "area_id": "e200",
           "offset": "0x19776FC"
-        },
-        {
-          "slot": 2,
-          "x": 3453,
-          "y": 280,
-          "z": -2192,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "e200",
-          "offset": "0x19776FC"
-        },
-        {
-          "slot": 2,
-          "x": 3316,
-          "y": 139,
-          "z": 1145,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "e200",
-          "offset": "0x19776FC"
-        },
-        {
-          "slot": 2,
-          "x": 3377,
-          "y": 280,
-          "z": -2167,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "1a01",
-          "offset": "0x197769C"
-        },
-        {
-          "slot": 2,
-          "x": 3474,
-          "y": 120,
-          "z": 1895,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "1801",
-          "offset": "0x197767C"
-        },
-        {
-          "slot": 2,
-          "x": 3642,
-          "y": 85,
-          "z": 3625,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "1a01",
-          "offset": "0x197769C"
         }
       ],
       "suffix": "00000000",
       "offset": "0x197767C"
     },
     {
-      "total": 4,
+      "total": 2,
       "composition": [
         {
-          "count": 4,
+          "count": 2,
           "slot": 2,
           "monster": "Goblin-Fly"
         }
@@ -1146,36 +916,16 @@
           "byte10_11": "0000",
           "area_id": "0e01",
           "offset": "0x197775C"
-        },
-        {
-          "slot": 2,
-          "x": -37,
-          "y": 880,
-          "z": -5700,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "0e01",
-          "offset": "0x197775C"
-        },
-        {
-          "slot": 2,
-          "x": 217,
-          "y": 880,
-          "z": -5700,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "0e01",
-          "offset": "0x197775C"
         }
       ],
       "suffix": "00000000",
       "offset": "0x197773C"
     },
     {
-      "total": 10,
+      "total": 5,
       "composition": [
         {
-          "count": 10,
+          "count": 5,
           "slot": 0,
           "monster": "Dark-Magi"
         }
@@ -1230,66 +980,16 @@
           "byte10_11": "0000",
           "area_id": "d400",
           "offset": "0x197793C"
-        },
-        {
-          "slot": 0,
-          "x": 326,
-          "y": 320,
-          "z": 5306,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "da00",
-          "offset": "0x19778DC"
-        },
-        {
-          "slot": 0,
-          "x": -13,
-          "y": 320,
-          "z": 5390,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "dc00",
-          "offset": "0x19778BC"
-        },
-        {
-          "slot": 0,
-          "x": 299,
-          "y": 319,
-          "z": 5120,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "d400",
-          "offset": "0x197793C"
-        },
-        {
-          "slot": 0,
-          "x": 364,
-          "y": 320,
-          "z": 5291,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "dc00",
-          "offset": "0x19778BC"
-        },
-        {
-          "slot": 0,
-          "x": -135,
-          "y": 320,
-          "z": 5126,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "dc00",
-          "offset": "0x19778BC"
         }
       ],
       "suffix": "00000000",
       "offset": "0x19778BC"
     },
     {
-      "total": 10,
+      "total": 5,
       "composition": [
         {
-          "count": 10,
+          "count": 5,
           "slot": 0,
           "monster": "Dark-Magi"
         }
@@ -1344,66 +1044,16 @@
           "byte10_11": "0000",
           "area_id": "e200",
           "offset": "0x1977ABC"
-        },
-        {
-          "slot": 0,
-          "x": 3376,
-          "y": 136,
-          "z": 2989,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "1c01",
-          "offset": "0x1977A7C"
-        },
-        {
-          "slot": 0,
-          "x": 3433,
-          "y": 320,
-          "z": -461,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "1801",
-          "offset": "0x1977A3C"
-        },
-        {
-          "slot": 0,
-          "x": 3325,
-          "y": 151,
-          "z": 2281,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "e200",
-          "offset": "0x1977ABC"
-        },
-        {
-          "slot": 0,
-          "x": 3332,
-          "y": 133,
-          "z": 3179,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "1801",
-          "offset": "0x1977A3C"
-        },
-        {
-          "slot": 0,
-          "x": 3515,
-          "y": 170,
-          "z": 1502,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "e200",
-          "offset": "0x1977ABC"
         }
       ],
       "suffix": "00000000",
       "offset": "0x1977A3C"
     },
     {
-      "total": 4,
+      "total": 2,
       "composition": [
         {
-          "count": 4,
+          "count": 2,
           "slot": 0,
           "monster": "Dark-Magi"
         }
@@ -1428,36 +1078,16 @@
           "byte10_11": "0000",
           "area_id": "0e01",
           "offset": "0x1977B1C"
-        },
-        {
-          "slot": 0,
-          "x": -64,
-          "y": 920,
-          "z": -5700,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "0e01",
-          "offset": "0x1977B1C"
-        },
-        {
-          "slot": 0,
-          "x": 269,
-          "y": 920,
-          "z": -5700,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "0c01",
-          "offset": "0x1977AFC"
         }
       ],
       "suffix": "00000000",
       "offset": "0x1977AFC"
     },
     {
-      "total": 4,
+      "total": 2,
       "composition": [
         {
-          "count": 4,
+          "count": 2,
           "slot": 2,
           "monster": "Goblin-Fly"
         }
@@ -1478,26 +1108,6 @@
           "x": 100,
           "y": 205,
           "z": 2300,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "5003",
-          "offset": "0x1977BC0"
-        },
-        {
-          "slot": 2,
-          "x": 100,
-          "y": 205,
-          "z": 2924,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "5003",
-          "offset": "0x1977BC0"
-        },
-        {
-          "slot": 2,
-          "x": 100,
-          "y": 204,
-          "z": 3317,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "5003",

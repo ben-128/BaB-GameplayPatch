@@ -640,15 +640,15 @@
   "zone_spawn_count": 12,
   "zone_spawns": [
     {
-      "total": 8,
+      "total": 4,
       "composition": [
         {
-          "count": 5,
+          "count": 2,
           "slot": 0,
           "monster": "Marble-Gargoyle"
         },
         {
-          "count": 3,
+          "count": 2,
           "slot": 1,
           "monster": "Red-Knight"
         }
@@ -693,61 +693,21 @@
           "byte10_11": "0000",
           "area_id": "a001",
           "offset": "0x2421F2C"
-        },
-        {
-          "slot": 0,
-          "x": 3637,
-          "y": 0,
-          "z": -561,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "a001",
-          "offset": "0x2421F2C"
-        },
-        {
-          "slot": 1,
-          "x": 3519,
-          "y": 0,
-          "z": -350,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "9b01",
-          "offset": "0x2421EEC"
-        },
-        {
-          "slot": 0,
-          "x": 3504,
-          "y": 0,
-          "z": -223,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "a001",
-          "offset": "0x2421F0C"
-        },
-        {
-          "slot": 0,
-          "x": 3623,
-          "y": 0,
-          "z": -463,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "a001",
-          "offset": "0x2421F0C"
         }
       ],
       "suffix": "00000c00",
       "offset": "0x2421ECC"
     },
     {
-      "total": 8,
+      "total": 4,
       "composition": [
         {
-          "count": 5,
+          "count": 2,
           "slot": 0,
           "monster": "Marble-Gargoyle"
         },
         {
-          "count": 3,
+          "count": 2,
           "slot": 1,
           "monster": "Red-Knight"
         }
@@ -792,61 +752,21 @@
           "byte10_11": "0000",
           "area_id": "ac01",
           "offset": "0x2421FB0"
-        },
-        {
-          "slot": 0,
-          "x": 3694,
-          "y": 0,
-          "z": 830,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "ad01",
-          "offset": "0x2421F90"
-        },
-        {
-          "slot": 0,
-          "x": 3741,
-          "y": 0,
-          "z": 933,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "ad01",
-          "offset": "0x2421F90"
-        },
-        {
-          "slot": 1,
-          "x": 3686,
-          "y": 0,
-          "z": -2,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "9b01",
-          "offset": "0x2421F50"
-        },
-        {
-          "slot": 0,
-          "x": 3735,
-          "y": 0,
-          "z": 566,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "ac01",
-          "offset": "0x2421FB0"
         }
       ],
       "suffix": "00000c00",
       "offset": "0x2421F50"
     },
     {
-      "total": 8,
+      "total": 4,
       "composition": [
         {
-          "count": 4,
+          "count": 2,
           "slot": 0,
           "monster": "Marble-Gargoyle"
         },
         {
-          "count": 4,
+          "count": 2,
           "slot": 1,
           "monster": "Red-Knight"
         }
@@ -891,46 +811,6 @@
           "byte10_11": "0000",
           "area_id": "aa01",
           "offset": "0x2422034"
-        },
-        {
-          "slot": 0,
-          "x": 3964,
-          "y": 0,
-          "z": -233,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "aa01",
-          "offset": "0x2422034"
-        },
-        {
-          "slot": 1,
-          "x": 3739,
-          "y": 0,
-          "z": -578,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "9b01",
-          "offset": "0x2421FD4"
-        },
-        {
-          "slot": 0,
-          "x": 4197,
-          "y": 0,
-          "z": 172,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "a901",
-          "offset": "0x2422014"
-        },
-        {
-          "slot": 1,
-          "x": 4155,
-          "y": 0,
-          "z": 214,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "9b01",
-          "offset": "0x2421FD4"
         }
       ],
       "suffix": "00000c00",
@@ -1354,15 +1234,15 @@
       "offset": "0x2424140"
     },
     {
-      "total": 8,
+      "total": 4,
       "composition": [
         {
-          "count": 4,
+          "count": 2,
           "slot": 0,
           "monster": "Marble-Gargoyle"
         },
         {
-          "count": 4,
+          "count": 2,
           "slot": 2,
           "monster": "Lesser-Vampire"
         }
@@ -1407,46 +1287,6 @@
           "byte10_11": "0000",
           "area_id": "8e01",
           "offset": "0x2424344"
-        },
-        {
-          "slot": 2,
-          "x": -2766,
-          "y": -496,
-          "z": -458,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "8e01",
-          "offset": "0x2424304"
-        },
-        {
-          "slot": 0,
-          "x": -2719,
-          "y": -534,
-          "z": -440,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "8e01",
-          "offset": "0x2424344"
-        },
-        {
-          "slot": 2,
-          "x": -2650,
-          "y": -492,
-          "z": -459,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "8c01",
-          "offset": "0x24242E4"
-        },
-        {
-          "slot": 0,
-          "x": -2654,
-          "y": -492,
-          "z": -457,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "8c01",
-          "offset": "0x2424324"
         }
       ],
       "suffix": "00000000",

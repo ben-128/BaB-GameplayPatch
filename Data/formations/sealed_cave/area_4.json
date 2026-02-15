@@ -32,24 +32,20 @@
       "offset": "0x1DE6148"
     },
     {
-      "total": 5,
+      "total": 2,
       "composition": [
         {
-          "count": 5,
+          "count": 2,
           "slot": 1,
           "monster": "Wraith"
         }
       ],
       "slots": [
         1,
-        1,
-        1,
-        1,
         1
       ],
       "suffix": "00000a00",
-      "offset": "0x1DE61CC",
-      "slot_types": []
+      "offset": "0x1DE61CC"
     },
     {
       "total": 3,
@@ -67,6 +63,23 @@
       ],
       "suffix": "00000000",
       "offset": "0x1DE6210"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 1,
+          "monster": "Wraith"
+        }
+      ],
+      "slots": [
+        1,
+        1,
+        1
+      ],
+      "suffix": "00000a00",
+      "offset": "0x1DE6274"
     }
   ],
   "_placed_spawns": "--- placed spawns (per-record offsets) ---",

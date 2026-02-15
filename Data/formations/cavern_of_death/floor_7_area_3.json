@@ -15,6 +15,23 @@
   "formation_count": 4,
   "formations": [
     {
+      "total": 3,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 1,
+          "monster": "Spirit-Ball"
+        }
+      ],
+      "slots": [
+        1,
+        1,
+        1
+      ],
+      "suffix": "00000000",
+      "offset": "0xF9376C"
+    },
+    {
       "total": 8,
       "composition": [
         {
@@ -35,24 +52,6 @@
       ],
       "suffix": "00000000",
       "offset": "0xF937D0"
-    },
-    {
-      "total": 3,
-      "composition": [
-        {
-          "count": 3,
-          "slot": 1,
-          "monster": "Spirit-Ball"
-        }
-      ],
-      "slots": [
-        1,
-        1,
-        1
-      ],
-      "suffix": "00000000",
-      "offset": "0xF9376C",
-      "slot_types": []
     },
     {
       "total": 3,
@@ -137,10 +136,10 @@
   "zone_spawn_count": 2,
   "zone_spawns": [
     {
-      "total": 4,
+      "total": 2,
       "composition": [
         {
-          "count": 4,
+          "count": 2,
           "slot": 0,
           "monster": "Green-Giant"
         }
@@ -165,26 +164,6 @@
           "byte10_11": "0000",
           "area_id": "ac00",
           "offset": "0xF93748"
-        },
-        {
-          "slot": 0,
-          "x": 800,
-          "y": 0,
-          "z": -925,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "b000",
-          "offset": "0xF93728"
-        },
-        {
-          "slot": 0,
-          "x": 800,
-          "y": 0,
-          "z": -876,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "b000",
-          "offset": "0xF93728"
         }
       ],
       "suffix": "00000000",

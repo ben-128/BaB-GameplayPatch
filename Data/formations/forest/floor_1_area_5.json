@@ -358,10 +358,10 @@
       "offset": "0x149CAF0"
     },
     {
-      "total": 4,
+      "total": 2,
       "composition": [
         {
-          "count": 4,
+          "count": 2,
           "slot": 1,
           "monster": "Killer-Bear"
         }
@@ -386,36 +386,16 @@
           "byte10_11": "0000",
           "area_id": "ce00",
           "offset": "0x149CB50"
-        },
-        {
-          "slot": 1,
-          "x": -2415,
-          "y": 750,
-          "z": -346,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "ce00",
-          "offset": "0x149CB30"
-        },
-        {
-          "slot": 1,
-          "x": -2466,
-          "y": 750,
-          "z": -499,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "ce00",
-          "offset": "0x149CB50"
         }
       ],
       "suffix": "00000000",
       "offset": "0x149CB30"
     },
     {
-      "total": 6,
+      "total": 3,
       "composition": [
         {
-          "count": 6,
+          "count": 3,
           "slot": 1,
           "monster": "Killer-Bear"
         }
@@ -450,36 +430,6 @@
           "byte10_11": "0000",
           "area_id": "e600",
           "offset": "0x149D190"
-        },
-        {
-          "slot": 1,
-          "x": 784,
-          "y": 150,
-          "z": -3677,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "e500",
-          "offset": "0x149D150"
-        },
-        {
-          "slot": 1,
-          "x": -153,
-          "y": 149,
-          "z": -3588,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "e600",
-          "offset": "0x149D190"
-        },
-        {
-          "slot": 1,
-          "x": -287,
-          "y": 150,
-          "z": -3451,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "e400",
-          "offset": "0x149D170"
         }
       ],
       "suffix": "00000000",

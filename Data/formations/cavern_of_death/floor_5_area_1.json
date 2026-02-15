@@ -125,10 +125,10 @@
   "zone_spawn_count": 17,
   "zone_spawns": [
     {
-      "total": 8,
+      "total": 4,
       "composition": [
         {
-          "count": 6,
+          "count": 2,
           "slot": 0,
           "monster": "Cave-Bear"
         },
@@ -178,56 +178,16 @@
           "byte10_11": "0000",
           "area_id": "8505",
           "offset": "0xF8D548"
-        },
-        {
-          "slot": 0,
-          "x": 796,
-          "y": 204,
-          "z": -811,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "8505",
-          "offset": "0xF8D4E8"
-        },
-        {
-          "slot": 0,
-          "x": 797,
-          "y": 203,
-          "z": -872,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "8505",
-          "offset": "0xF8D4E8"
-        },
-        {
-          "slot": 0,
-          "x": 799,
-          "y": 206,
-          "z": -924,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "9705",
-          "offset": "0xF8D508"
-        },
-        {
-          "slot": 0,
-          "x": 800,
-          "y": 205,
-          "z": -1051,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "8505",
-          "offset": "0xF8D4E8"
         }
       ],
       "suffix": "00000000",
       "offset": "0xF8D4E8"
     },
     {
-      "total": 12,
+      "total": 6,
       "composition": [
         {
-          "count": 12,
+          "count": 6,
           "slot": 0,
           "monster": "Cave-Bear"
         }
@@ -292,76 +252,16 @@
           "byte10_11": "0000",
           "area_id": "9801",
           "offset": "0xF8D7CC"
-        },
-        {
-          "slot": 0,
-          "x": 608,
-          "y": 225,
-          "z": -1271,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "4b01",
-          "offset": "0xF8D72C"
-        },
-        {
-          "slot": 0,
-          "x": -424,
-          "y": 207,
-          "z": -2264,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "9705",
-          "offset": "0xF8D76C"
-        },
-        {
-          "slot": 0,
-          "x": -849,
-          "y": 201,
-          "z": -3829,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "9801",
-          "offset": "0xF8D7CC"
-        },
-        {
-          "slot": 0,
-          "x": -759,
-          "y": 207,
-          "z": -2071,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "af01",
-          "offset": "0xF8D78C"
-        },
-        {
-          "slot": 0,
-          "x": -497,
-          "y": 207,
-          "z": -1956,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "9801",
-          "offset": "0xF8D7CC"
-        },
-        {
-          "slot": 0,
-          "x": -1125,
-          "y": 206,
-          "z": -2441,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "4b01",
-          "offset": "0xF8D72C"
         }
       ],
       "suffix": "00000000",
       "offset": "0xF8D72C"
     },
     {
-      "total": 10,
+      "total": 5,
       "composition": [
         {
-          "count": 10,
+          "count": 5,
           "slot": 2,
           "monster": "Cave-Scissors"
         }
@@ -416,66 +316,16 @@
           "byte10_11": "0000",
           "area_id": "f601",
           "offset": "0xF8D92C"
-        },
-        {
-          "slot": 2,
-          "x": 634,
-          "y": 0,
-          "z": -4122,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "1404",
-          "offset": "0xF8D8EC"
-        },
-        {
-          "slot": 2,
-          "x": 879,
-          "y": 0,
-          "z": -3522,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "1404",
-          "offset": "0xF8D8EC"
-        },
-        {
-          "slot": 2,
-          "x": -25,
-          "y": 0,
-          "z": -4070,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "1504",
-          "offset": "0xF8D90C"
-        },
-        {
-          "slot": 2,
-          "x": -124,
-          "y": 0,
-          "z": -4177,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "1504",
-          "offset": "0xF8D90C"
-        },
-        {
-          "slot": 2,
-          "x": -122,
-          "y": 0,
-          "z": -3770,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "e604",
-          "offset": "0xF8D8AC"
         }
       ],
       "suffix": "00000000",
       "offset": "0xF8D8AC"
     },
     {
-      "total": 6,
+      "total": 3,
       "composition": [
         {
-          "count": 6,
+          "count": 3,
           "slot": 2,
           "monster": "Cave-Scissors"
         }
@@ -510,46 +360,16 @@
           "byte10_11": "0000",
           "area_id": "9801",
           "offset": "0xF8DA0C"
-        },
-        {
-          "slot": 2,
-          "x": -1362,
-          "y": 237,
-          "z": -3634,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "9801",
-          "offset": "0xF8DA0C"
-        },
-        {
-          "slot": 2,
-          "x": -1095,
-          "y": 208,
-          "z": -4416,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "9801",
-          "offset": "0xF8DA0C"
-        },
-        {
-          "slot": 2,
-          "x": -1428,
-          "y": 251,
-          "z": -3289,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "af01",
-          "offset": "0xF8D9CC"
         }
       ],
       "suffix": "00000000",
       "offset": "0xF8D9CC"
     },
     {
-      "total": 6,
+      "total": 3,
       "composition": [
         {
-          "count": 6,
+          "count": 3,
           "slot": 2,
           "monster": "Cave-Scissors"
         }
@@ -584,46 +404,16 @@
           "byte10_11": "0000",
           "area_id": "8505",
           "offset": "0xF8DAAC"
-        },
-        {
-          "slot": 2,
-          "x": -248,
-          "y": 256,
-          "z": -422,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "8505",
-          "offset": "0xF8DAAC"
-        },
-        {
-          "slot": 2,
-          "x": 768,
-          "y": 202,
-          "z": -768,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "9705",
-          "offset": "0xF8DA8C"
-        },
-        {
-          "slot": 2,
-          "x": 288,
-          "y": 225,
-          "z": -704,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "8505",
-          "offset": "0xF8DAAC"
         }
       ],
       "suffix": "00000000",
       "offset": "0xF8DA6C"
     },
     {
-      "total": 4,
+      "total": 2,
       "composition": [
         {
-          "count": 4,
+          "count": 2,
           "slot": 2,
           "monster": "Cave-Scissors"
         }
@@ -648,36 +438,16 @@
           "byte10_11": "0000",
           "area_id": "1904",
           "offset": "0xF8DB90"
-        },
-        {
-          "slot": 2,
-          "x": 3464,
-          "y": 300,
-          "z": 881,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "1904",
-          "offset": "0xF8DB90"
-        },
-        {
-          "slot": 2,
-          "x": 3383,
-          "y": 300,
-          "z": 1764,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "1904",
-          "offset": "0xF8DB90"
         }
       ],
       "suffix": "00000000",
       "offset": "0xF8DB70"
     },
     {
-      "total": 8,
+      "total": 4,
       "composition": [
         {
-          "count": 8,
+          "count": 4,
           "slot": 2,
           "monster": "Cave-Scissors"
         }
@@ -722,46 +492,6 @@
           "byte10_11": "0000",
           "area_id": "1d04",
           "offset": "0xF8DC50"
-        },
-        {
-          "slot": 2,
-          "x": 2103,
-          "y": 300,
-          "z": 818,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "1b04",
-          "offset": "0xF8DC30"
-        },
-        {
-          "slot": 2,
-          "x": 2140,
-          "y": 300,
-          "z": 2777,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "1d04",
-          "offset": "0xF8DC50"
-        },
-        {
-          "slot": 2,
-          "x": 2886,
-          "y": 300,
-          "z": 1402,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "1c04",
-          "offset": "0xF8DBF0"
-        },
-        {
-          "slot": 2,
-          "x": 2477,
-          "y": 300,
-          "z": 2080,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "1a04",
-          "offset": "0xF8DC10"
         }
       ],
       "suffix": "00000000",
@@ -792,15 +522,15 @@
       "offset": "0xF8DD30"
     },
     {
-      "total": 12,
+      "total": 6,
       "composition": [
         {
-          "count": 8,
+          "count": 4,
           "slot": 0,
           "monster": "Cave-Bear"
         },
         {
-          "count": 4,
+          "count": 2,
           "slot": 2,
           "monster": "Cave-Scissors"
         }
@@ -865,76 +595,16 @@
           "byte10_11": "0000",
           "area_id": "be05",
           "offset": "0xF8DE10"
-        },
-        {
-          "slot": 0,
-          "x": 56,
-          "y": 436,
-          "z": -393,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "bd05",
-          "offset": "0xF8DD90"
-        },
-        {
-          "slot": 2,
-          "x": -766,
-          "y": 206,
-          "z": -3224,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "be05",
-          "offset": "0xF8DE10"
-        },
-        {
-          "slot": 0,
-          "x": -508,
-          "y": 206,
-          "z": -2407,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "bd05",
-          "offset": "0xF8DD90"
-        },
-        {
-          "slot": 0,
-          "x": 387,
-          "y": 475,
-          "z": 867,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "bd05",
-          "offset": "0xF8DD90"
-        },
-        {
-          "slot": 0,
-          "x": 737,
-          "y": 507,
-          "z": 2214,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "0c05",
-          "offset": "0xF8DD70"
-        },
-        {
-          "slot": 2,
-          "x": 544,
-          "y": 487,
-          "z": 1326,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "be05",
-          "offset": "0xF8DE10"
         }
       ],
       "suffix": "00000000",
       "offset": "0xF8DD70"
     },
     {
-      "total": 6,
+      "total": 3,
       "composition": [
         {
-          "count": 6,
+          "count": 3,
           "slot": 2,
           "monster": "Cave-Scissors"
         }
@@ -969,46 +639,16 @@
           "byte10_11": "0000",
           "area_id": "4e01",
           "offset": "0xF8DE90"
-        },
-        {
-          "slot": 2,
-          "x": -107,
-          "y": 556,
-          "z": 1825,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "7201",
-          "offset": "0xF8DE70"
-        },
-        {
-          "slot": 2,
-          "x": -490,
-          "y": 588,
-          "z": 1537,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "7201",
-          "offset": "0xF8DE70"
-        },
-        {
-          "slot": 2,
-          "x": -478,
-          "y": 591,
-          "z": 1453,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "7201",
-          "offset": "0xF8DE70"
         }
       ],
       "suffix": "00000000",
       "offset": "0xF8DE50"
     },
     {
-      "total": 6,
+      "total": 3,
       "composition": [
         {
-          "count": 6,
+          "count": 3,
           "slot": 2,
           "monster": "Cave-Scissors"
         }
@@ -1043,46 +683,16 @@
           "byte10_11": "0000",
           "area_id": "9801",
           "offset": "0xF8E20C"
-        },
-        {
-          "slot": 2,
-          "x": -1204,
-          "y": 214,
-          "z": -4280,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "af01",
-          "offset": "0xF8E1CC"
-        },
-        {
-          "slot": 2,
-          "x": -1441,
-          "y": 260,
-          "z": -3044,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "af01",
-          "offset": "0xF8E1CC"
-        },
-        {
-          "slot": 2,
-          "x": -1364,
-          "y": 236,
-          "z": -3662,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "9801",
-          "offset": "0xF8E20C"
         }
       ],
       "suffix": "00000000",
       "offset": "0xF8E1CC"
     },
     {
-      "total": 6,
+      "total": 3,
       "composition": [
         {
-          "count": 6,
+          "count": 3,
           "slot": 2,
           "monster": "Cave-Scissors"
         }
@@ -1117,46 +727,16 @@
           "byte10_11": "0000",
           "area_id": "8505",
           "offset": "0xF8E2AC"
-        },
-        {
-          "slot": 2,
-          "x": -281,
-          "y": 258,
-          "z": -437,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "8505",
-          "offset": "0xF8E2AC"
-        },
-        {
-          "slot": 2,
-          "x": -1904,
-          "y": 397,
-          "z": 143,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "8505",
-          "offset": "0xF8E2AC"
-        },
-        {
-          "slot": 2,
-          "x": -885,
-          "y": 300,
-          "z": -193,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "8505",
-          "offset": "0xF8E2AC"
         }
       ],
       "suffix": "00000000",
       "offset": "0xF8E26C"
     },
     {
-      "total": 4,
+      "total": 2,
       "composition": [
         {
-          "count": 4,
+          "count": 2,
           "slot": 2,
           "monster": "Cave-Scissors"
         }
@@ -1181,36 +761,16 @@
           "byte10_11": "0000",
           "area_id": "1904",
           "offset": "0xF8E390"
-        },
-        {
-          "slot": 2,
-          "x": 3511,
-          "y": 300,
-          "z": 372,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "1e04",
-          "offset": "0xF8E370"
-        },
-        {
-          "slot": 2,
-          "x": 3337,
-          "y": 300,
-          "z": 2269,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "1904",
-          "offset": "0xF8E390"
         }
       ],
       "suffix": "00000000",
       "offset": "0xF8E370"
     },
     {
-      "total": 8,
+      "total": 4,
       "composition": [
         {
-          "count": 8,
+          "count": 4,
           "slot": 2,
           "monster": "Cave-Scissors"
         }
@@ -1255,46 +815,6 @@
           "byte10_11": "0000",
           "area_id": "1d04",
           "offset": "0xF8E450"
-        },
-        {
-          "slot": 2,
-          "x": 2950,
-          "y": 300,
-          "z": 858,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "1c04",
-          "offset": "0xF8E3F0"
-        },
-        {
-          "slot": 2,
-          "x": 2512,
-          "y": 300,
-          "z": 1620,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "1d04",
-          "offset": "0xF8E450"
-        },
-        {
-          "slot": 2,
-          "x": 2187,
-          "y": 300,
-          "z": 2626,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "1c04",
-          "offset": "0xF8E3F0"
-        },
-        {
-          "slot": 2,
-          "x": 3075,
-          "y": 299,
-          "z": 1167,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "1b04",
-          "offset": "0xF8E430"
         }
       ],
       "suffix": "00000000",
@@ -1325,10 +845,10 @@
       "offset": "0xF8E530"
     },
     {
-      "total": 12,
+      "total": 6,
       "composition": [
         {
-          "count": 10,
+          "count": 4,
           "slot": 0,
           "monster": "Cave-Bear"
         },
@@ -1398,76 +918,16 @@
           "byte10_11": "0000",
           "area_id": "be05",
           "offset": "0xF8E610"
-        },
-        {
-          "slot": 0,
-          "x": -233,
-          "y": 206,
-          "z": -1509,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "bd05",
-          "offset": "0xF8E590"
-        },
-        {
-          "slot": 0,
-          "x": -547,
-          "y": 206,
-          "z": -2406,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "bd05",
-          "offset": "0xF8E590"
-        },
-        {
-          "slot": 0,
-          "x": -400,
-          "y": 206,
-          "z": -1988,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "7201",
-          "offset": "0xF8E5D0"
-        },
-        {
-          "slot": 0,
-          "x": 424,
-          "y": 477,
-          "z": 946,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "0c05",
-          "offset": "0xF8E570"
-        },
-        {
-          "slot": 0,
-          "x": 50,
-          "y": 438,
-          "z": -353,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "be05",
-          "offset": "0xF8E5B0"
-        },
-        {
-          "slot": 0,
-          "x": -1123,
-          "y": 205,
-          "z": -4627,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "7201",
-          "offset": "0xF8E5D0"
         }
       ],
       "suffix": "00000000",
       "offset": "0xF8E570"
     },
     {
-      "total": 6,
+      "total": 3,
       "composition": [
         {
-          "count": 6,
+          "count": 3,
           "slot": 2,
           "monster": "Cave-Scissors"
         }
@@ -1502,36 +962,6 @@
           "byte10_11": "0000",
           "area_id": "4e01",
           "offset": "0xF8E690"
-        },
-        {
-          "slot": 2,
-          "x": 210,
-          "y": 539,
-          "z": 1850,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "7201",
-          "offset": "0xF8E670"
-        },
-        {
-          "slot": 2,
-          "x": -360,
-          "y": 584,
-          "z": 1458,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "0c05",
-          "offset": "0xF8E650"
-        },
-        {
-          "slot": 2,
-          "x": 561,
-          "y": 515,
-          "z": 2103,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "0c05",
-          "offset": "0xF8E650"
         }
       ],
       "suffix": "00000000",

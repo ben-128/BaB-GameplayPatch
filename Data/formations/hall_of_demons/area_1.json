@@ -16,22 +16,35 @@
   "formation_count": 6,
   "formations": [
     {
-      "total": 3,
+      "total": 1,
       "composition": [
         {
-          "count": 3,
+          "count": 1,
+          "slot": 0,
+          "monster": "Evil-Stalker"
+        }
+      ],
+      "slots": [
+        0
+      ],
+      "suffix": "00000000",
+      "offset": "0x2BEC1F8"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
           "slot": 0,
           "monster": "Evil-Stalker"
         }
       ],
       "slots": [
         0,
-        0,
         0
       ],
       "suffix": "00000000",
-      "offset": "0x2BEC1F8",
-      "slot_types": []
+      "offset": "0x2BEC21C"
     },
     {
       "total": 2,
@@ -747,10 +760,10 @@
   "zone_spawn_count": 10,
   "zone_spawns": [
     {
-      "total": 8,
+      "total": 4,
       "composition": [
         {
-          "count": 8,
+          "count": 4,
           "slot": 1,
           "monster": "Blood-Shadow"
         }
@@ -795,56 +808,16 @@
           "byte10_11": "0000",
           "area_id": "9602",
           "offset": "0x2BEBB08"
-        },
-        {
-          "slot": 1,
-          "x": 3512,
-          "y": 5,
-          "z": -5118,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "9802",
-          "offset": "0x2BEBAA8"
-        },
-        {
-          "slot": 1,
-          "x": 2870,
-          "y": 5,
-          "z": -5219,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "9602",
-          "offset": "0x2BEBB08"
-        },
-        {
-          "slot": 1,
-          "x": 2823,
-          "y": 5,
-          "z": -5208,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "9802",
-          "offset": "0x2BEBAC8"
-        },
-        {
-          "slot": 1,
-          "x": 2794,
-          "y": 4,
-          "z": -5200,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "9602",
-          "offset": "0x2BEBB08"
         }
       ],
       "suffix": "00000b00",
       "offset": "0x2BEBAA8"
     },
     {
-      "total": 6,
+      "total": 3,
       "composition": [
         {
-          "count": 6,
+          "count": 3,
           "slot": 2,
           "monster": "Spirit-Ball"
         }
@@ -879,46 +852,16 @@
           "byte10_11": "0000",
           "area_id": "c002",
           "offset": "0x2BEC534"
-        },
-        {
-          "slot": 2,
-          "x": 1710,
-          "y": 0,
-          "z": -4914,
-          "byte0": 32,
-          "byte10_11": "0000",
-          "area_id": "c002",
-          "offset": "0x2BEC534"
-        },
-        {
-          "slot": 2,
-          "x": 1190,
-          "y": 0,
-          "z": -4967,
-          "byte0": 160,
-          "byte10_11": "0000",
-          "area_id": "bf02",
-          "offset": "0x2BEC4F4"
-        },
-        {
-          "slot": 2,
-          "x": 2335,
-          "y": 0,
-          "z": -5082,
-          "byte0": 244,
-          "byte10_11": "0000",
-          "area_id": "be02",
-          "offset": "0x2BEC514"
         }
       ],
       "suffix": "f4010002",
       "offset": "0x2BEC4F4"
     },
     {
-      "total": 6,
+      "total": 3,
       "composition": [
         {
-          "count": 6,
+          "count": 3,
           "slot": 2,
           "monster": "Spirit-Ball"
         }
@@ -953,36 +896,6 @@
           "byte10_11": "0000",
           "area_id": "b002",
           "offset": "0x2BEC5D4"
-        },
-        {
-          "slot": 2,
-          "x": 1763,
-          "y": -580,
-          "z": 1808,
-          "byte0": 1,
-          "byte10_11": "0000",
-          "area_id": "c102",
-          "offset": "0x2BEC594"
-        },
-        {
-          "slot": 2,
-          "x": 521,
-          "y": -311,
-          "z": -1766,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "c202",
-          "offset": "0x2BEC5B4"
-        },
-        {
-          "slot": 2,
-          "x": 1092,
-          "y": -479,
-          "z": 201,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "c202",
-          "offset": "0x2BEC5B4"
         }
       ],
       "suffix": "00000000",
@@ -1037,10 +950,10 @@
       "offset": "0x2BEC880"
     },
     {
-      "total": 8,
+      "total": 4,
       "composition": [
         {
-          "count": 8,
+          "count": 4,
           "slot": 2,
           "monster": "Spirit-Ball"
         }
@@ -1085,56 +998,16 @@
           "byte10_11": "0000",
           "area_id": "c802",
           "offset": "0x2BECA04"
-        },
-        {
-          "slot": 2,
-          "x": 77,
-          "y": 0,
-          "z": -132,
-          "byte0": 244,
-          "byte10_11": "0000",
-          "area_id": "c702",
-          "offset": "0x2BEC9E4"
-        },
-        {
-          "slot": 2,
-          "x": -47,
-          "y": 0,
-          "z": -651,
-          "byte0": 244,
-          "byte10_11": "0000",
-          "area_id": "c802",
-          "offset": "0x2BECA04"
-        },
-        {
-          "slot": 2,
-          "x": -228,
-          "y": 0,
-          "z": -350,
-          "byte0": 244,
-          "byte10_11": "0000",
-          "area_id": "c602",
-          "offset": "0x2BEC9C4"
-        },
-        {
-          "slot": 2,
-          "x": 66,
-          "y": 0,
-          "z": -1040,
-          "byte0": 20,
-          "byte10_11": "0000",
-          "area_id": "c902",
-          "offset": "0x2BEC9A4"
         }
       ],
       "suffix": "f4010002",
       "offset": "0x2BEC9A4"
     },
     {
-      "total": 4,
+      "total": 2,
       "composition": [
         {
-          "count": 4,
+          "count": 2,
           "slot": 2,
           "monster": "Spirit-Ball"
         }
@@ -1155,26 +1028,6 @@
           "x": -860,
           "y": 0,
           "z": 740,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "ca02",
-          "offset": "0x2BECA64"
-        },
-        {
-          "slot": 2,
-          "x": 153,
-          "y": -311,
-          "z": -2766,
-          "byte0": 1,
-          "byte10_11": "0000",
-          "area_id": "cb02",
-          "offset": "0x2BECA44"
-        },
-        {
-          "slot": 2,
-          "x": 207,
-          "y": -328,
-          "z": -2954,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "ca02",
@@ -1209,10 +1062,10 @@
       "offset": "0x2BECB48"
     },
     {
-      "total": 4,
+      "total": 2,
       "composition": [
         {
-          "count": 4,
+          "count": 2,
           "slot": 2,
           "monster": "Spirit-Ball"
         }
@@ -1237,26 +1090,6 @@
           "byte10_11": "0000",
           "area_id": "d002",
           "offset": "0x2BECBC8"
-        },
-        {
-          "slot": 2,
-          "x": -1394,
-          "y": -999,
-          "z": 1547,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "d002",
-          "offset": "0x2BECBC8"
-        },
-        {
-          "slot": 2,
-          "x": -1441,
-          "y": -1000,
-          "z": 1570,
-          "byte0": 15,
-          "byte10_11": "0000",
-          "area_id": "d302",
-          "offset": "0x2BECBA8"
         }
       ],
       "suffix": "00000000",

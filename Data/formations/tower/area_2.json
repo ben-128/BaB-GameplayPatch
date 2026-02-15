@@ -540,10 +540,10 @@
       "offset": "0x196F27C"
     },
     {
-      "total": 12,
+      "total": 6,
       "composition": [
         {
-          "count": 12,
+          "count": 6,
           "slot": 0,
           "monster": "Lv30.Goblin"
         }
@@ -608,66 +608,6 @@
           "byte10_11": "0000",
           "area_id": "c100",
           "offset": "0x196F3BC"
-        },
-        {
-          "slot": 0,
-          "x": 924,
-          "y": 365,
-          "z": -3249,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "c100",
-          "offset": "0x196F3BC"
-        },
-        {
-          "slot": 0,
-          "x": 73,
-          "y": 468,
-          "z": -3564,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "b700",
-          "offset": "0x196F37C"
-        },
-        {
-          "slot": 0,
-          "x": -620,
-          "y": 443,
-          "z": -3586,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "b300",
-          "offset": "0x196F33C"
-        },
-        {
-          "slot": 0,
-          "x": 1033,
-          "y": 356,
-          "z": -3265,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "b900",
-          "offset": "0x196F35C"
-        },
-        {
-          "slot": 0,
-          "x": 1063,
-          "y": 337,
-          "z": -3564,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "bf00",
-          "offset": "0x196F39C"
-        },
-        {
-          "slot": 0,
-          "x": 337,
-          "y": 451,
-          "z": -3564,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "b900",
-          "offset": "0x196F35C"
         }
       ],
       "suffix": "00000000",
@@ -852,10 +792,10 @@
       "offset": "0x196FA60"
     },
     {
-      "total": 8,
+      "total": 4,
       "composition": [
         {
-          "count": 8,
+          "count": 4,
           "slot": 1,
           "monster": "Goblin-Shaman"
         }
@@ -900,46 +840,6 @@
           "byte10_11": "0000",
           "area_id": "8901",
           "offset": "0x196FCA4"
-        },
-        {
-          "slot": 1,
-          "x": -213,
-          "y": 426,
-          "z": 3875,
-          "byte0": 238,
-          "byte10_11": "0000",
-          "area_id": "d901",
-          "offset": "0x196FC64"
-        },
-        {
-          "slot": 1,
-          "x": -3723,
-          "y": 175,
-          "z": 556,
-          "byte0": 224,
-          "byte10_11": "0000",
-          "area_id": "8901",
-          "offset": "0x196FCA4"
-        },
-        {
-          "slot": 1,
-          "x": -42,
-          "y": 285,
-          "z": -4278,
-          "byte0": 99,
-          "byte10_11": "0000",
-          "area_id": "9c01",
-          "offset": "0x196FC44"
-        },
-        {
-          "slot": 1,
-          "x": 2024,
-          "y": 339,
-          "z": 2111,
-          "byte0": 99,
-          "byte10_11": "0000",
-          "area_id": "9c01",
-          "offset": "0x196FC44"
         }
       ],
       "suffix": "e1000000",

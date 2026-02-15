@@ -78,8 +78,7 @@
         0
       ],
       "suffix": "00000a00",
-      "offset": "0x2C01028",
-      "slot_types": []
+      "offset": "0x2C01028"
     }
   ],
   "_placed_spawns": "--- placed spawns (per-record offsets) ---",
@@ -207,10 +206,10 @@
       "offset": "0x2C0128C"
     },
     {
-      "total": 8,
+      "total": 4,
       "composition": [
         {
-          "count": 8,
+          "count": 4,
           "slot": 2,
           "monster": "Hell-Ogre"
         }
@@ -251,46 +250,6 @@
           "x": 3300,
           "y": 0,
           "z": 1700,
-          "byte0": 1,
-          "byte10_11": "0000",
-          "area_id": "cb00",
-          "offset": "0x2C0146C"
-        },
-        {
-          "slot": 2,
-          "x": 3338,
-          "y": -144,
-          "z": -3572,
-          "byte0": 1,
-          "byte10_11": "0000",
-          "area_id": "0e00",
-          "offset": "0x2C0142C"
-        },
-        {
-          "slot": 2,
-          "x": 2854,
-          "y": -75,
-          "z": -2236,
-          "byte0": 244,
-          "byte10_11": "0000",
-          "area_id": "cc00",
-          "offset": "0x2C0140C"
-        },
-        {
-          "slot": 2,
-          "x": 3541,
-          "y": -24,
-          "z": -1061,
-          "byte0": 1,
-          "byte10_11": "0000",
-          "area_id": "cb00",
-          "offset": "0x2C0146C"
-        },
-        {
-          "slot": 2,
-          "x": 3512,
-          "y": -93,
-          "z": -2406,
           "byte0": 1,
           "byte10_11": "0000",
           "area_id": "cb00",

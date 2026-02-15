@@ -319,10 +319,10 @@
   "zone_spawn_count": 6,
   "zone_spawns": [
     {
-      "total": 4,
+      "total": 2,
       "composition": [
         {
-          "count": 4,
+          "count": 2,
           "slot": 1,
           "monster": "Wyrm"
         }
@@ -347,26 +347,6 @@
           "byte10_11": "0000",
           "area_id": "4601",
           "offset": "0x14B3B60"
-        },
-        {
-          "slot": 1,
-          "x": 1315,
-          "y": 325,
-          "z": 4662,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "4601",
-          "offset": "0x14B3B60"
-        },
-        {
-          "slot": 1,
-          "x": 568,
-          "y": 325,
-          "z": 4620,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "4901",
-          "offset": "0x14B3B40"
         }
       ],
       "suffix": "00000000",
@@ -421,10 +401,10 @@
       "offset": "0x14B4224"
     },
     {
-      "total": 8,
+      "total": 4,
       "composition": [
         {
-          "count": 8,
+          "count": 4,
           "slot": 0,
           "monster": "Desert-Lizard"
         }
@@ -465,46 +445,6 @@
           "x": 2300,
           "y": 440,
           "z": 7100,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "e002",
-          "offset": "0x14B4788"
-        },
-        {
-          "slot": 0,
-          "x": 2321,
-          "y": 354,
-          "z": 6813,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "ca02",
-          "offset": "0x14B4728"
-        },
-        {
-          "slot": 0,
-          "x": 2188,
-          "y": 362,
-          "z": 6722,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "ca02",
-          "offset": "0x14B4728"
-        },
-        {
-          "slot": 0,
-          "x": 1488,
-          "y": 345,
-          "z": 6759,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "cc02",
-          "offset": "0x14B4748"
-        },
-        {
-          "slot": 0,
-          "x": 2194,
-          "y": 371,
-          "z": 6807,
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "e002",

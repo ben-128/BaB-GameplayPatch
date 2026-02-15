@@ -67,15 +67,15 @@
       "offset": "0xF7EAB8"
     },
     {
-      "total": 6,
+      "total": 3,
       "composition": [
         {
-          "count": 3,
+          "count": 1,
           "slot": 0,
           "monster": "Lv20.Goblin"
         },
         {
-          "count": 3,
+          "count": 2,
           "slot": 1,
           "monster": "Goblin-Shaman"
         }
@@ -83,14 +83,32 @@
       "slots": [
         0,
         1,
-        1,
+        1
+      ],
+      "suffix": "02000000",
+      "offset": "0xF7EB3C"
+    },
+    {
+      "total": 3,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Lv20.Goblin"
+        },
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Goblin-Shaman"
+        }
+      ],
+      "slots": [
         0,
         0,
         1
       ],
       "suffix": "02000000",
-      "offset": "0xF7EB3C",
-      "slot_types": []
+      "offset": "0xF7EBA0"
     },
     {
       "total": 3,

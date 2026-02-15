@@ -675,10 +675,10 @@
       "offset": "0x199C4CC"
     },
     {
-      "total": 12,
+      "total": 6,
       "composition": [
         {
-          "count": 12,
+          "count": 6,
           "slot": 0,
           "monster": "Arch-Magi"
         }
@@ -743,76 +743,16 @@
           "byte10_11": "0000",
           "area_id": "3500",
           "offset": "0x199C6EC"
-        },
-        {
-          "slot": 0,
-          "x": -20,
-          "y": 9,
-          "z": 4642,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "5501",
-          "offset": "0x199C6AC"
-        },
-        {
-          "slot": 0,
-          "x": 160,
-          "y": -26,
-          "z": 4828,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "3500",
-          "offset": "0x199C6EC"
-        },
-        {
-          "slot": 0,
-          "x": -61,
-          "y": -36,
-          "z": 4859,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "5b01",
-          "offset": "0x199C66C"
-        },
-        {
-          "slot": 0,
-          "x": -231,
-          "y": -45,
-          "z": 4993,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "5501",
-          "offset": "0x199C6AC"
-        },
-        {
-          "slot": 0,
-          "x": 165,
-          "y": -12,
-          "z": 4722,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "3400",
-          "offset": "0x199C6CC"
-        },
-        {
-          "slot": 0,
-          "x": -182,
-          "y": -38,
-          "z": 4902,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "3500",
-          "offset": "0x199C6EC"
         }
       ],
       "suffix": "00000000",
       "offset": "0x199C64C"
     },
     {
-      "total": 6,
+      "total": 3,
       "composition": [
         {
-          "count": 6,
+          "count": 3,
           "slot": 2,
           "monster": "Living-Sword"
         }
@@ -847,51 +787,21 @@
           "byte10_11": "0000",
           "area_id": "9d01",
           "offset": "0x199C9D4"
-        },
-        {
-          "slot": 2,
-          "x": -68,
-          "y": 1485,
-          "z": -5552,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "6901",
-          "offset": "0x199C994"
-        },
-        {
-          "slot": 2,
-          "x": -143,
-          "y": 1486,
-          "z": -5583,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "6b01",
-          "offset": "0x199C9B4"
-        },
-        {
-          "slot": 2,
-          "x": -174,
-          "y": 1487,
-          "z": -5592,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "6901",
-          "offset": "0x199C994"
         }
       ],
       "suffix": "00000000",
       "offset": "0x199C994"
     },
     {
-      "total": 6,
+      "total": 3,
       "composition": [
         {
-          "count": 4,
+          "count": 2,
           "slot": 0,
           "monster": "Arch-Magi"
         },
         {
-          "count": 2,
+          "count": 1,
           "slot": 2,
           "monster": "Living-Sword"
         }
@@ -926,36 +836,6 @@
           "byte10_11": "0000",
           "area_id": "6b01",
           "offset": "0x199CB14"
-        },
-        {
-          "slot": 0,
-          "x": -152,
-          "y": 1464,
-          "z": -5679,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "6b01",
-          "offset": "0x199CB14"
-        },
-        {
-          "slot": 0,
-          "x": -174,
-          "y": 1484,
-          "z": -5626,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "6901",
-          "offset": "0x199CAF4"
-        },
-        {
-          "slot": 2,
-          "x": 20,
-          "y": 1501,
-          "z": -5585,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "6f01",
-          "offset": "0x199CAD4"
         }
       ],
       "suffix": "00000000",

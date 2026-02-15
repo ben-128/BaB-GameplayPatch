@@ -1487,10 +1487,10 @@
       "offset": "0x2BF30DC"
     },
     {
-      "total": 6,
+      "total": 3,
       "composition": [
         {
-          "count": 6,
+          "count": 3,
           "slot": 2,
           "monster": "Blood-Shadow"
         }
@@ -1525,36 +1525,6 @@
           "byte10_11": "0000",
           "area_id": "8900",
           "offset": "0x2BF3340"
-        },
-        {
-          "slot": 2,
-          "x": 2762,
-          "y": -400,
-          "z": -3234,
-          "byte0": 244,
-          "byte10_11": "0000",
-          "area_id": "8900",
-          "offset": "0x2BF3340"
-        },
-        {
-          "slot": 2,
-          "x": 2654,
-          "y": -400,
-          "z": -3030,
-          "byte0": 244,
-          "byte10_11": "0000",
-          "area_id": "8900",
-          "offset": "0x2BF3340"
-        },
-        {
-          "slot": 2,
-          "x": 2803,
-          "y": -400,
-          "z": -3018,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "8b00",
-          "offset": "0x2BF3300"
         }
       ],
       "suffix": "f4010002",

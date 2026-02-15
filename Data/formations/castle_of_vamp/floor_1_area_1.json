@@ -1343,7 +1343,7 @@
   "zone_spawns_area_start": "0x2400FD8",
   "zone_spawns_area_bytes": 7476,
   "original_total_zone_spawn_slots": 37,
-  "zone_spawn_count": 5,
+  "zone_spawn_count": 11,
   "zone_spawns": [
     {
       "total": 9,
@@ -1450,12 +1450,12 @@
       "offset": "0x2400FD8"
     },
     {
-      "total": 6,
+      "total": 1,
       "composition": [
         {
-          "count": 6,
+          "count": 1,
           "slot": 2,
-          "monster": "Slot2"
+          "monster": "Wolf"
         }
       ],
       "records": [
@@ -1468,68 +1468,18 @@
           "byte10_11": "0000",
           "area_id": "7902",
           "offset": "0x240161C"
-        },
-        {
-          "slot": 2,
-          "x": -2950,
-          "y": 320,
-          "z": 3250,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "5c00",
-          "offset": "0x2401ADC"
-        },
-        {
-          "slot": 2,
-          "x": -2150,
-          "y": 320,
-          "z": 4350,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "fd01",
-          "offset": "0x24022A0"
-        },
-        {
-          "slot": 2,
-          "x": -2499,
-          "y": 295,
-          "z": 4485,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "7902",
-          "offset": "0x240161C"
-        },
-        {
-          "slot": 2,
-          "x": -3373,
-          "y": 246,
-          "z": 4556,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "5c00",
-          "offset": "0x2401ADC"
-        },
-        {
-          "slot": 2,
-          "x": -2583,
-          "y": 298,
-          "z": 3772,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "fd01",
-          "offset": "0x24022A0"
         }
       ],
       "suffix": "00000000",
       "offset": "0x240161C"
     },
     {
-      "total": 8,
+      "total": 2,
       "composition": [
         {
-          "count": 8,
+          "count": 2,
           "slot": 2,
-          "monster": "Slot2"
+          "monster": "Wolf"
         }
       ],
       "records": [
@@ -1545,6 +1495,30 @@
         },
         {
           "slot": 2,
+          "x": -2950,
+          "y": 320,
+          "z": 3250,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "5c00",
+          "offset": "0x2401ADC"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2401ABC"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Wolf"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
           "x": 1498,
           "y": 100,
           "z": -2700,
@@ -1552,76 +1526,16 @@
           "byte10_11": "0000",
           "area_id": "9001",
           "offset": "0x2401B00"
-        },
-        {
-          "slot": 2,
-          "x": 1500,
-          "y": 100,
-          "z": -3100,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "9001",
-          "offset": "0x2402060"
-        },
-        {
-          "slot": 2,
-          "x": 1500,
-          "y": 100,
-          "z": -2500,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "9001",
-          "offset": "0x2402080"
-        },
-        {
-          "slot": 2,
-          "x": 1661,
-          "y": 100,
-          "z": -2771,
-          "byte0": 24,
-          "byte10_11": "0000",
-          "area_id": "9001",
-          "offset": "0x2401B00"
-        },
-        {
-          "slot": 2,
-          "x": 2107,
-          "y": 100,
-          "z": -2679,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "8602",
-          "offset": "0x2401ABC"
-        },
-        {
-          "slot": 2,
-          "x": 1526,
-          "y": 100,
-          "z": -2712,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "8602",
-          "offset": "0x2401ABC"
-        },
-        {
-          "slot": 2,
-          "x": 2267,
-          "y": 177,
-          "z": -2494,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "8602",
-          "offset": "0x2401ABC"
         }
       ],
       "suffix": "00000000",
-      "offset": "0x2401ABC"
+      "offset": "0x2401B00"
     },
     {
-      "total": 12,
+      "total": 6,
       "composition": [
         {
-          "count": 12,
+          "count": 6,
           "slot": 2,
           "monster": "Wolf"
         }
@@ -1686,70 +1600,92 @@
           "byte10_11": "0000",
           "area_id": "fc01",
           "offset": "0x2401C60"
-        },
-        {
-          "slot": 2,
-          "x": -1542,
-          "y": 199,
-          "z": 4109,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "fc01",
-          "offset": "0x2401C60"
-        },
-        {
-          "slot": 2,
-          "x": -1652,
-          "y": 200,
-          "z": 3884,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "fc01",
-          "offset": "0x2401C60"
-        },
-        {
-          "slot": 2,
-          "x": -1138,
-          "y": 199,
-          "z": 4690,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "4800",
-          "offset": "0x2401C40"
-        },
-        {
-          "slot": 2,
-          "x": -781,
-          "y": 200,
-          "z": 5284,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "4800",
-          "offset": "0x2401C40"
-        },
-        {
-          "slot": 2,
-          "x": -1018,
-          "y": 200,
-          "z": 4804,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "fc01",
-          "offset": "0x2401BC0"
-        },
-        {
-          "slot": 2,
-          "x": -808,
-          "y": 200,
-          "z": 4990,
-          "byte0": 0,
-          "byte10_11": "0000",
-          "area_id": "fc01",
-          "offset": "0x2401C60"
         }
       ],
       "suffix": "00000000",
       "offset": "0x2401BC0"
+    },
+    {
+      "total": 2,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 2,
+          "monster": "Wolf"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": 1500,
+          "y": 100,
+          "z": -3100,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "9001",
+          "offset": "0x2402060"
+        },
+        {
+          "slot": 2,
+          "x": 1500,
+          "y": 100,
+          "z": -2500,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "9001",
+          "offset": "0x2402080"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2402060"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Wolf"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -1600,
+          "y": 200,
+          "z": -100,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "ed03",
+          "offset": "0x2402200"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2402200"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 2,
+          "monster": "Wolf"
+        }
+      ],
+      "records": [
+        {
+          "slot": 2,
+          "x": -2150,
+          "y": 320,
+          "z": 4350,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "fd01",
+          "offset": "0x24022A0"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x24022A0"
     },
     {
       "total": 12,
@@ -1884,6 +1820,54 @@
       ],
       "suffix": "00000000",
       "offset": "0x24025C4"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Harpy"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": 2300,
+          "y": 205,
+          "z": 4300,
+          "byte0": 4,
+          "byte10_11": "0000",
+          "area_id": "c302",
+          "offset": "0x2402A48"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2402A48"
+    },
+    {
+      "total": 1,
+      "composition": [
+        {
+          "count": 1,
+          "slot": 1,
+          "monster": "Harpy"
+        }
+      ],
+      "records": [
+        {
+          "slot": 1,
+          "x": -4700,
+          "y": 5,
+          "z": -4900,
+          "byte0": 0,
+          "byte10_11": "0000",
+          "area_id": "f203",
+          "offset": "0x2402CE8"
+        }
+      ],
+      "suffix": "00000000",
+      "offset": "0x2402CE8"
     }
   ]
 }
