@@ -1,103 +1,57 @@
 {
   "level_name": "Valley of White Wind",
   "name": "Floor 1 - Area 1",
-  "group_offset": "0x25D0974",
-  "monsters": [
-    "Snow-Bear",
-    "Winter-Wolf",
-    "Hippogriff"
-  ],
   "formation_area_start": "0x25D0D68",
   "formation_area_bytes": 304,
   "original_total_slots": 9,
-  "area_id": "9201",
   "formation_count": 4,
+  "area_id": "9201",
   "formations": [
     {
-      "total": 2,
-      "composition": [
-        {
-          "count": 2,
-          "slot": 0,
-          "monster": "Snow-Bear"
-        }
+      "records": [
+        "02000300ffffffff00ff00000000000000000000000000009201ffffffffffff",
+        "000000000000000000ff00000000000000000000000000009201ffffffffffff"
       ],
+      "suffix": "00000000",
       "slots": [
         0,
         0
-      ],
-      "suffix": "00000000",
-      "offset": "0x25D0D68"
+      ]
     },
     {
-      "total": 2,
-      "composition": [
-        {
-          "count": 2,
-          "slot": 1,
-          "monster": "Winter-Wolf"
-        }
+      "records": [
+        "00000000ffffffff01ff00000000000000000000000000009201ffffffffffff",
+        "000000000000000001ff00000000000000000000000000009201ffffffffffff"
       ],
+      "suffix": "00000000",
       "slots": [
         1,
         1
-      ],
-      "suffix": "00000000",
-      "offset": "0x25D0DAC"
+      ]
     },
     {
-      "total": 3,
-      "composition": [
-        {
-          "count": 1,
-          "slot": 0,
-          "monster": "Snow-Bear"
-        },
-        {
-          "count": 2,
-          "slot": 1,
-          "monster": "Winter-Wolf"
-        }
+      "records": [
+        "00000000ffffffff00ff00000000000000000000000000009201ffffffffffff",
+        "000000000000000001ff00000000000000000000000000009201ffffffffffff",
+        "000000000000000001ff00000000000000000000000000009201ffffffffffff"
       ],
+      "suffix": "00000000",
       "slots": [
         0,
         1,
         1
-      ],
-      "suffix": "00000000",
-      "offset": "0x25D0DF0"
+      ]
     },
     {
-      "total": 2,
-      "composition": [
-        {
-          "count": 2,
-          "slot": 2,
-          "monster": "Hippogriff"
-        }
+      "records": [
+        "00000000ffffffff02ff00000000000000000000000000009201ffffffffffff",
+        "000000000000000002ff00000000000000000000000000009201ffffffffffff"
       ],
+      "suffix": "00000000",
       "slots": [
         2,
         2
-      ],
-      "suffix": "00000000",
-      "offset": "0x25D0E54"
+      ]
     }
-  ],
-  "_placed_spawns": "--- placed spawns (per-record offsets) ---",
-  "spawn_points_area_start": null,
-  "spawn_points_area_bytes": 0,
-  "original_total_spawn_slots": 0,
-  "spawn_point_count": 0,
-  "spawn_points": [],
-  "zone_spawns_area_start": null,
-  "zone_spawns_area_bytes": 0,
-  "original_total_zone_spawn_slots": 0,
-  "zone_spawn_count": 0,
-  "zone_spawns": [],
-  "slot_types": [
-    "00000000",
-    "00000000",
-    "00000000"
   ]
 }
