@@ -5,11 +5,12 @@
   "groups": [
     {
       "name": "Floor 1 - Area 1",
-      "offset": "0xF7A97C",
+      "offset": "0xF7A9A8",
       "monsters": [
-       "Lv20.Goblin",
+        "Lv20.Goblin",
         "Goblin-Shaman",
-        "Giant-Bat"
+        "Giant-Bat",
+        "E-Shaman"
       ]
     },
     {

@@ -80,6 +80,23 @@ call :log "[OK] Clean BLAZE.ALL copied to work folder"
 call :log ""
 
 REM ========================================================================
+REM Step 1b: Expand Cavern F1 Area 1 for Elite Shaman (4th monster slot)
+REM ========================================================================
+call :log "[1b/12] Expanding Cavern F1 Area 1 (+132 bytes for E-Shaman slot)..."
+call :log ""
+
+py -3 Data\formations\Scripts\add_elite_slot_cavern_f1a1.py >> "%LOGFILE%" 2>&1
+if errorlevel 1 (
+    call :log ""
+    call :log "[ERROR] Elite Shaman slot expansion failed!"
+    goto :error
+)
+
+call :log ""
+call :log "[OK] Cavern F1 Area 1 expanded with E-Shaman slot"
+call :log ""
+
+REM ========================================================================
 REM Step 2: Patch Fate Coin Shop prices
 REM ========================================================================
 call :log "[2/12] Patching Fate Coin Shop prices..."

@@ -175,6 +175,11 @@ def update_offset_table(data, area, user_byte_sizes, filler_sources=None):
 
     Returns (updated: bool, message: str).
     """
+    # Skip if area explicitly opts out (e.g. slot-expanded areas where the
+    # offset table was shifted uniformly and must not be recalculated).
+    if area.get("skip_offset_table_update"):
+        return False, "skipped (area flag)"
+
     group_offset_hex = area.get("group_offset")
     formation_start_hex = area.get("formation_area_start")
     formation_bytes = area.get("formation_area_bytes", 0)
@@ -527,6 +532,11 @@ def patch_placed_records(data, area, section_key="spawn_points"):
 
 def patch_area(data, area):
     """Rewrite the formation area for one area. Returns (changed, error)."""
+    # Skip if area explicitly opts out (e.g. slot-expanded areas where the
+    # formation data was already placed correctly by the expansion script).
+    if area.get("skip_formation_rewrite"):
+        return False, False
+
     formations = area.get("formations", [])
     area_start_hex = area.get("formation_area_start")
     area_bytes = area.get("formation_area_bytes", 0)
