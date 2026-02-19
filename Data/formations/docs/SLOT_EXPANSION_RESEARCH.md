@@ -155,17 +155,145 @@ NEW_ZONE_SPAWNS_START   = 0xF7B5AC  # vanilla 0xF7B520 + 140
 NEW_ZONE_SPAWNS_BYTES   = 5276      # vanilla 5416 - 140
 ```
 
-## Files Modified
+## In-Game Test Results (2026-02-19)
 
-- `add_elite_slot_cavern_f1a1.py` — Complete rewrite using in-place approach
-- `floor_1_area_1.json` — Updated offsets for 4-monster layout
-- `output/BLAZE.ALL` — In-place area rewrite + 6 overlay data table patches
+**Status: CRASH when entering Cavern F1 Area 1. Other levels work fine.**
+
+| Build variant | Cavern F1 A1 | Other levels |
+|---------------|-------------|-------------|
+| No expansion (baseline) | OK | OK |
+| Expansion, no overlay patches | CRASH | OK |
+| Expansion + 6 overlay patches | CRASH | OK |
+
+### Build Pipeline Bugs Found & Fixed
+
+1. **Formation patcher corruption** — The formation patcher (`patch_formations.py`) was
+   rewriting formation data even though the expansion script already placed it correctly.
+   Fixed by adding `skip_formation_rewrite: true` and `skip_offset_table_update: true`
+   flags in `floor_1_area_1.json`.
+
+2. **Spawn groups overwrite** — `patch_spawn_groups.py` writes 96-byte stat blocks
+   starting at `group_offset`. The spawn groups JSON still had the vanilla offset
+   `0xF7A97C`, which in the expanded layout falls INSIDE the 168-byte middle section.
+   This corrupted the pointer table and assignments. Fixed by updating the offset to
+   `0xF7A9A8` in `cavern_of_death.json`.
+
+3. **Assignment R values** — JSON had R=0 for vanilla slots, but binary has R=2,3,4.
+   Fixed in both JSON and expansion script.
+
+After fixing all pipeline bugs, binary verification shows **0 bytes different** between
+expansion output and expected layout. All other areas unaffected.
+
+### Root Cause Analysis — Why the Crash Persists
+
+The crash is NOT caused by:
+- ~~Overlay formation refs~~ (patched all 6, crash unchanged)
+- ~~Build pipeline bugs~~ (all fixed, binary is structurally correct)
+- ~~Other areas affected~~ (only Area 1 crashes)
+
+The crash IS caused by the **middle section structure change** (124→168 bytes).
+
+**Key discovery: Area 2 (natural N=4) has ZERO formation refs in the overlay data table.**
+Area 1 (N=3) has 4 formation + 2 zone_spawn refs. This means the engine uses **different
+code paths** for Area 1 vs Area 2. The overlay likely has area-specific parsing logic that
+expects a fixed N=3 structure for Area 1.
+
+Possible mechanisms:
+1. Monster count N=3 hardcoded somewhere in overlay → reads wrong section boundaries
+2. Middle section size (124) hardcoded → engine calculates wrong stats/script offset
+3. Anim table entry count fixed → pointer table read at wrong offset
+4. Per-area configuration in overlay data table encodes N indirectly
+
+## Next Steps — Approaches to Solve the Crash
+
+### Approach A: Find N=3 hardcoding in the Cavern overlay (HIGH EFFORT, HIGH REWARD)
+
+The engine must know how many monster slots each area has. For Area 2 (N=4), it works
+natively. For Area 1 (N=3), the number may be:
+- Encoded in the overlay data table entries (the 4+2 refs unique to Area 1)
+- Hardcoded in overlay MIPS code (e.g., `li $t0, 3` before a loop)
+- Derived from other area metadata
+
+**Steps:**
+1. Disassemble the Cavern overlay code region (~0x1892000) with a MIPS disassembler
+2. Search for instructions loading the value 3 (`addiu $reg, $zero, 3` = `03 00 XX 24`)
+   near the 4 formation ref addresses
+3. Compare with how Area 2 is handled — if Area 2 has no overlay refs, its N=4 must
+   come from the data structures themselves (pointer table non-zero count)
+4. If found: patch the N value from 3 to 4
+
+### Approach B: Swap Area 1 and Area 2 data (MEDIUM EFFORT, GUARANTEED)
+
+Since Area 2 already supports N=4 natively and has zero overlay hardcoding:
+1. Put our expanded 4-monster data into Area 2's slot (which the engine handles as N=4)
+2. Put vanilla Area 2 data into Area 1's slot (or duplicate Area 2's vanilla as Area 1)
+3. Swap the overlay refs to match
+4. This avoids fighting the N=3 hardcoding entirely
+
+**Risk:** Area 1 and Area 2 have different zone_spawn layouts (spawn positions on the map).
+Swapping data might place monsters in wrong positions. Need to verify what zone_spawns
+actually encode.
+
+### Approach C: Clone Area 2's binary structure for Area 1 (MEDIUM EFFORT, CLEAN)
+
+Instead of expanding Area 1's middle section from 124→168, clone the EXACT binary
+structure of Area 2 (which is naturally N=4) and adapt it for Area 1:
+1. Extract Area 2's middle section (168 bytes) as template
+2. Replace Area 2's animation/assignment values with Area 1's + the new E-Shaman slot
+3. Keep stats, script, formations, zone_spawns from Area 1 (shifted +140)
+4. The overlay refs might not need patching if the engine reads N from the data structure
+
+**Why this might work:** If Area 2 has zero overlay refs, its N=4 comes from reading the
+pointer table (which has 7 entries: `[0, ptr, ptr, ptr, ptr, ptr, 0]` with 4 non-zero).
+The engine might do: "count non-zero entries in pointer table = N". If Area 1's expanded
+middle section uses the same pointer table format, the engine would read N=4 from it.
+
+**The crash then is NOT about N being hardcoded, but about the overlay data table refs
+pointing to wrong offsets.** But we already patched those... so this may not help.
+
+### Approach D: Use DuckStation debugger to trace the crash (HIGH EFFORT, DEFINITIVE)
+
+Load the patched build in DuckStation with CPU debugger:
+1. Set a read breakpoint on the middle section start address (RAM equivalent of 0xF7A900)
+2. Enter Cavern F1 Area 1 and observe which instruction causes the crash
+3. The crash PC (program counter) will reveal exactly which code path fails
+4. Trace backwards to find the assumption being violated
+
+**This is the most reliable approach** but requires familiarity with the DuckStation
+debugger and MIPS assembly. See the trap damage research for a successful example of
+this workflow.
+
+### Approach E: Minimal expansion — use 3 slots + stat-only change (LOW EFFORT, FALLBACK)
+
+If structural expansion proves too difficult, avoid expanding the middle section entirely:
+1. Keep N=3 slots (Goblin, Shaman, Bat) — no middle section change
+2. Modify Shaman's stats (96-byte block) to create an "Elite Shaman" variant
+3. Use slot_types (suffix) to give it Tower Shaman spells (03000000 = Sleep + Heal)
+4. Replace Bat (slot 2) with E-Shaman by copying Shaman's anim data to slot 2
+
+**Limitations:** Only 3 visually distinct monster types per area (same as vanilla).
+The E-Shaman would replace the Bat entirely rather than being a 4th type.
+
+### Recommended Priority
+
+1. **Approach D** (debugger trace) — understand exactly what crashes before trying fixes
+2. **Approach A** (find N hardcoding) — if debugger reveals an N=3 constant, patch it
+3. **Approach C** (clone Area 2 structure) — if the issue is subtler than a simple constant
+4. **Approach E** (3-slot fallback) — if structural expansion is truly blocked by engine
+
+## Files
+
+- `Data/formations/Scripts/add_elite_slot_cavern_f1a1.py` — v2 expansion script (in-place + overlay patches)
+- `Data/formations/cavern_of_death/floor_1_area_1.json` — 4-monster config with skip flags
+- `WIP/level_design/spawns/data/spawn_groups/cavern_of_death.json` — expanded group_offset
+- `Data/formations/Scripts/patch_formations.py` — skip_formation_rewrite check
 
 ## Testing Checklist
 
-1. Build completes without errors
-2. Entering Cavern F1 Area 1 loads correctly (no infinite loading)
-3. Vanilla formations work (Goblin, Shaman with Sleep, Bat)
-4. E-Shaman appears in custom formations using slot 3
-5. E-Shaman uses correct model (Shaman) with enhanced stats
-6. E-Shaman uses Tower Shaman spell set (slot_type 03000000 = Sleep + Heal)
+1. Build completes without errors ✅
+2. Other levels load correctly ✅
+3. Entering Cavern F1 Area 1 loads correctly — **CRASH** ✗
+4. Vanilla formations work (Goblin, Shaman with Sleep, Bat) — blocked by #3
+5. E-Shaman appears in custom formations using slot 3 — blocked by #3
+6. E-Shaman uses correct model (Shaman) with enhanced stats — blocked by #3
+7. E-Shaman uses Tower Shaman spell set (slot_type 03000000 = Sleep + Heal) — blocked by #3
