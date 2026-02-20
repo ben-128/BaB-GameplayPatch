@@ -100,9 +100,10 @@ def build_new_middle_section(area_data):
     middle[0x54:0x5C] = area_data[0x3C:0x44]
     # Slot 2 (Bat): from vanilla at area offset 0x44
     middle[0x5C:0x64] = area_data[0x44:0x4C]
-    # Slot 3 (E-Shaman): anim_offset=0x24, texture_ref=0x00044000 (Shaman's)
+    # Slot 3 (E-Shaman): anim_offset=0x24, texture_ref=0x0006C000
+    # texref pattern: i*0x14000 + 0x30000 where i=3 → 0x3C000+0x30000 = 0x6C000
     struct.pack_into('<I', middle, 0x64, 0x00000024)   # anim_offset
-    struct.pack_into('<I', middle, 0x68, 0x00044000)   # texture_ref
+    struct.pack_into('<I', middle, 0x68, 0x0006C000)   # texture_ref (was 0x00044000)
 
     # -- Pointer table (7x4 = 28 bytes) --
     # Points to the 4 pointed entries (at +0x2C, +0x34, +0x3C, +0x44)
@@ -152,6 +153,102 @@ def build_elite_stats(area_data):
     return bytes(new_stats)
 
 
+def _patch_script_offsets(new_area):
+    """
+    Fix stale area-relative offset fields in script command entries after N=3->N=4 expansion.
+
+    Background: The script area contains 8-byte command entries with format
+    [uint32 area-relative-offset][type][idx][slot][flag].  After the +0x8C shift,
+    the pointed-to data moved but the stored offset values did not.  The engine
+    then reads from zone_spawn data instead of texture/VRAM descriptors, causing a crash.
+
+    Also adds the missing 4th type07 entry (E-Shaman slot 3) and updates the type0E
+    terminator idx from 19 to 20.  Finally copies Shaman's VRAM descriptor to the new
+    E-Shaman data slot so the model uses correct texture parameters.
+
+    All area_offset values below are indices into new_area (= AREA_START-relative).
+    """
+    # 33 entries whose first uint32 needs +TOTAL_EXPANSION (area-relative pointer correction).
+    # Each tuple: (area_offset_in_new_area, expected_stale_value).
+    #
+    # "Batch 1" (offset_value in [0x019C, 0x05B4)): script entries pointing into the
+    #   script area itself — root table sub-blocks, VRAM descriptors, etc.
+    # "Batch 2" (offset_value in [0x05B4, 0x1F48)): script entries pointing into the
+    #   spawn_points, formation, and zone_spawn sections that also shifted by +0x8C.
+    OFFSET_FIX_ENTRIES = [
+        # -- Batch 1: script -> script area --
+        (0x0240, 0x0260),   # type 0xA4 (camera/zone sub-block A)
+        (0x0248, 0x0328),   # type 0xAC (camera/zone sub-block B)
+        (0x0250, 0x0410),   # type 0x94 (camera/zone sub-block C)
+        (0x02A8, 0x0518),   # type 0x01
+        (0x02B0, 0x0520),   # type 0x02
+        # -- Batch 2a: script -> beyond-script areas (offsets 0x0800, 0x0C00) --
+        (0x0308, 0x0800),   # script+0x00E0 -> data at 0x0800
+        (0x0328, 0x0C00),   # script+0x0100 -> data at 0x0C00
+        # -- Batch 1 continued --
+        (0x0340, 0x0540),   # type 0x00 (null type)
+        (0x0348, 0x0558),   # type 0x60
+        (0x0358, 0x0568),   # type 0x04
+        (0x0360, 0x0570),   # type 0x05 (light/shadow)
+        (0x0368, 0x0578),   # type 0x06 (light/shadow)
+        (0x0370, 0x0580),   # type 0x07 slot 0 (Goblin VRAM)
+        (0x0378, 0x0588),   # type 0x07 slot 1 (Shaman VRAM)
+        (0x0380, 0x0590),   # type 0x07 slot 2 (Bat VRAM)
+        # 0x0388 = type0E terminator -> replaced below with type07[3]
+        (0x0398, 0x05A0),   # null-type data entry
+        (0x03A0, 0x05A8),   # 0x40-flag entry
+        (0x03B0, 0x05B0),   # 0x40-flag entry
+        # -- Batch 2b: script -> spawn_points area (offsets 0x05B8 .. 0x05DC) --
+        (0x03B8, 0x05B8),   # script+0x0190 -> spawn_points+0x04
+        (0x03C0, 0x05C0),   # script+0x0198 -> spawn_points+0x0C
+        (0x03C8, 0x05C8),   # script+0x01A0 -> spawn_points+0x14
+        (0x03F0, 0x05D0),   # script+0x01C8 -> spawn_points+0x1C
+        (0x0408, 0x05DC),   # script+0x01E0 -> spawn_points+0x28
+        # -- Batch 2c: script -> zone_spawn area (offsets 0x1DC0 .. 0x210C) --
+        (0x0440, 0x1DC0),   # script+0x0218 -> zone_spawn data
+        (0x0448, 0x1EC8),   # script+0x0220
+        (0x0450, 0x1F18),   # script+0x0228
+        (0x0458, 0x1F44),   # script+0x0230
+        (0x0460, 0x1F8C),   # script+0x0238
+        (0x0468, 0x2008),   # script+0x0240
+        (0x0470, 0x2094),   # script+0x0248
+        (0x0478, 0x210C),   # script+0x0250 (pointed-to data near zone_spawn tail)
+        # -- Batch 2d: late script entries pointing into formation/zone_spawn --
+        (0x0618, 0x1184),   # script+0x03F0 -> formation/zone area data
+        (0x0630, 0x1500),   # script+0x0408
+    ]
+    for area_off, expected in OFFSET_FIX_ENTRIES:
+        cur = struct.unpack_from('<I', new_area, area_off)[0]
+        if cur != expected:
+            raise ValueError(
+                "Script offset fix: area+0x{:04X}: expected 0x{:04X}, got 0x{:04X}".format(
+                    area_off, expected, cur))
+        struct.pack_into('<I', new_area, area_off, expected + TOTAL_EXPANSION)
+
+    # -- Add type07[3] for E-Shaman at area+0x0388 (was vanilla type0E terminator) --
+    # offset = 0x0598 + TOTAL_EXPANSION = 0x0624 (E-Shaman VRAM data block)
+    struct.pack_into('<I', new_area, 0x0388, 0x0598 + TOTAL_EXPANSION)
+    new_area[0x038C] = 0x07   # type 0x07
+    new_area[0x038D] = 0x13   # idx = 19
+    new_area[0x038E] = 0x03   # slot = 3
+    new_area[0x038F] = 0x00
+
+    # -- Write new type0E terminator at area+0x0390 (was null) --
+    # offset = 0x05A0 + TOTAL_EXPANSION = 0x062C
+    # idx 0x14 = 20 = (last type07 idx 19) + 1
+    struct.pack_into('<I', new_area, 0x0390, 0x05A0 + TOTAL_EXPANSION)
+    new_area[0x0394] = 0x0E   # type 0x0E (terminator)
+    new_area[0x0395] = 0x14   # idx = 20
+    new_area[0x0396] = 0x00
+    new_area[0x0397] = 0x00
+
+    # -- Copy Shaman VRAM descriptor to E-Shaman's data block at area+0x0624 --
+    # Shaman data block: area+0x0614 (= 0x0588 + TOTAL_EXPANSION)
+    # E-Shaman data block: area+0x0624 (= 0x0598 + TOTAL_EXPANSION)
+    # E-Shaman uses the same 3D model as Shaman, so VRAM params must match.
+    new_area[0x0624:0x062C] = bytes(new_area[0x0614:0x061C])
+
+
 def rewrite_area_inplace(blaze_data):
     """Rewrite area data in-place: expand middle+stats, shift rest, truncate zone_spawns."""
     # Read vanilla area data
@@ -177,6 +274,9 @@ def rewrite_area_inplace(blaze_data):
 
     assert len(new_area) == AREA_SIZE, \
         "Area size mismatch: {} != {}".format(len(new_area), AREA_SIZE)
+
+    # Fix stale offset fields in script command entries + add 4th type07 entry
+    _patch_script_offsets(new_area)
 
     # Write back in-place (no file size change)
     blaze_data[AREA_START:AREA_END] = new_area
@@ -253,11 +353,12 @@ def update_json():
     ]
 
     # -- Records 8byte (unpointed entries, absolute offsets) --
+    # Slot 3 (E-Shaman) texref = 0x0006C000 (pattern: i*0x14000+0x30000, i=3)
     area["records_8byte"] = [
         {"anim_offset": "0x000C", "texture_ref": "0x00030000", "offset": hex(AREA_START + 0x4C)},
         {"anim_offset": "0x0014", "texture_ref": "0x00044000", "offset": hex(AREA_START + 0x54)},
         {"anim_offset": "0x001C", "texture_ref": "0x00058000", "offset": hex(AREA_START + 0x5C)},
-        {"anim_offset": "0x0024", "texture_ref": "0x00044000", "offset": hex(AREA_START + 0x64)},
+        {"anim_offset": "0x0024", "texture_ref": "0x0006C000", "offset": hex(AREA_START + 0x64)},
     ]
 
     # -- Assignment entries (absolute offsets within middle section) --
@@ -270,10 +371,33 @@ def update_json():
     ]
 
     # -- Type07 entries (in script area, apply FULL_SHIFT from vanilla) --
-    vanilla_type07 = [0xF7ABE4, 0xF7ABEC, 0xF7ABF4]
-    for i, entry in enumerate(area.get("type07_entries", [])):
-        if i < len(vanilla_type07):
-            entry["offset"] = hex(vanilla_type07[i] + TOTAL_EXPANSION)
+    # Also update vram_offset (the stored offset value within each entry).
+    # Vanilla vram_offsets 0x0580/0x0588/0x0590 pointed into the script area;
+    # after +0x8C expansion those data blocks shifted, so vram_offsets need +0x8C too.
+    vanilla_type07_abs = [0xF7ABE4, 0xF7ABEC, 0xF7ABF4]
+    vanilla_vram_offsets = [0x0580, 0x0588, 0x0590]
+    entries = area.get("type07_entries", [])
+    for i in range(min(len(entries), len(vanilla_type07_abs))):
+        entries[i]["offset"] = hex(vanilla_type07_abs[i] + TOTAL_EXPANSION)
+        entries[i]["vram_offset"] = hex(vanilla_vram_offsets[i] + TOTAL_EXPANSION)
+    # Add 4th type07 entry for E-Shaman (slot 3)
+    new_entry = {
+        "vram_offset": hex(0x0598 + TOTAL_EXPANSION),  # 0x0624
+        "idx": 19,
+        "offset": hex(0xF7ABF4 + TOTAL_EXPANSION + 8),  # 0xF7AC88
+    }
+    if len(entries) < 4:
+        entries.append(new_entry)
+    else:
+        entries[3] = new_entry
+    area["type07_entries"] = entries
+    # Update monster_vram_ref for display in editor
+    area["monster_vram_ref"] = {
+        "Lv20.Goblin":   hex(0x0580 + TOTAL_EXPANSION),
+        "Goblin-Shaman": hex(0x0588 + TOTAL_EXPANSION),
+        "Giant-Bat":     hex(0x0590 + TOTAL_EXPANSION),
+        "E-Shaman":      hex(0x0598 + TOTAL_EXPANSION),
+    }
 
     # -- Spawn points (record offsets shifted by FULL_SHIFT) --
     for sp in area.get("spawn_points", []):
