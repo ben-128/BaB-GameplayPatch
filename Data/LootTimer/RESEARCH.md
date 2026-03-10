@@ -2,9 +2,167 @@
 
 ## Objectif
 Modifier la duree avant disparition des coffres laches par les monstres.
-Duree originale : 20 secondes (1000 frames @ 50fps PAL).
+Duree originale : 20 secondes (~1000 frames @ 50fps PAL).
 
-## Statut : v12 - ECHEC (2026-02-11)
+## Statut : v18 - PAS ENCORE TESTE (2026-03-10)
+
+### v18 : Quadruple-layer patch (FINAL)
+
+**Patcher actuel** : `Data/LootTimer/patch_loot_timer.py` (v18)
+
+**Pourquoi v17 a echoue** : Analyse savestate (check_ram_v18.py, check_ram_v19.py) a
+confirme que TOUS les patches v17 sont bien en RAM. Mais les coffres mouraient quand
+meme. Cause : le dead flag (0x02000000) est SET EXTERIEUREMENT par le moteur EXE quand
+le monstre parent meurt. Ce flag est verifie au DEBUT de chest_update (AVANT check_kill),
+et la fonction detruit l'entite immediatement si ce flag est set.
+
+**Decouverte cle (v19)** :
+- A RAM 0x8008763C : `lw $s1, 0x74($s0)` (charge parent ptr dans $s1)
+- A RAM 0x80087640 : `lw $v0, 0x0000($s0)` (charge entity flags dans $v0)
+- A RAM 0x80087C74 : `lw $v0, 0x0000($s1)` (charge PARENT flags) ← CHEMIN DIRECT
+- Quand parent mort, bit 25 (0x02000000) set sur parent -> chest_update kill entity
+
+**Approche v18 : 4 couches de protection**
+
+1. **Layer 1** : Patch check_kill -> return 0 (inchange)
+   - `0x0093B908: jr $ra + addu $v0,$zero,$zero`
+
+2. **Layer 2** : NOP les 17 callers JAL (inchange)
+   - 8 STUB callers + 9 MAIN callers (Cavern F1)
+
+3. **Layer 3** : NOP le kill par timer (inchange)
+
+4. **Layer 4 (NOUVEAU)** : Desactiver le check du dead flag en entree de handler
+   - Pattern A : `lw $v0,0($s0)` + `lw $s1,0x74($s0)` + `lui $v1,0x200` + `and` + `bne` -> NOP bne
+   - Pattern B : `lw $a0,0($s1)` + `lui $a2,0x200` + `and $v0,$a0,$a2` + `beq` -> unconditional
+   - Pattern C : `lw $a0,0($s0)` + `lui $a2,0x200` + `and $v0,$a0,$a2` + `beq` -> unconditional
+   - Scan toute la region overlay BLAZE.ALL (0x00900000+)
+
+**Investigation supplementaire** : `check_ram_v20.py` cherche si l'EXE lui-meme appelle
+check_kill ou possede un mecanisme cascade mort-parent -> enfants. Resultat non analyse.
+
+---
+
+### v17 : Triple-layer patch — ECHEC (2026-03-10)
+
+**check_ram_v18.py confirme** : tous les patches v17 presents en RAM, mais chests meurent.
+Cause racine : chemin de kill externe (dead flag set par EXE avant que check_kill s'execute).
+
+---
+
+### v16 : Decouverte du VRAI mecanisme de despawn (ECHEC)
+
+**DECOUVERTE MAJEURE** : Le coffre ne meurt PAS d'un countdown timer.
+Il meurt parce que la fonction `0x80075060` verifie l'etat de l'entite du
+**MONSTRE PARENT** (le monstre qui a drop le coffre).
+
+C'est pour ca que les 15 tentatives precedentes (v1-v15) ont toutes echoue :
+elles ciblaient le mauvais mecanisme.
+
+#### Le vrai mecanisme (fonction 0x80075060, BLAZE 0x0093B908)
+
+```c
+int check_kill(entity *chest) {
+    entity *parent = chest->parent;   // entity+0x74
+    descriptor *desc = get_type_desc(parent);
+
+    // CHECK 1: Parent entity status
+    if ((parent->flags & 0xD0000000) != 0x80000000)
+        return 1;  // Parent en cleanup -> KILL CHEST
+
+    // CHECK 2: Type descriptor flags
+    if (desc->field_0x40 & 0x400003E8)
+        return 1;  // Kill specifique au type
+
+    return 0;  // Garder en vie
+}
+```
+
+**Comment ca marche** :
+- Le monstre meurt -> joue son animation de mort -> reste en memoire ~20s
+- Pendant ces ~20s, `parent->flags & 0xD0000000 == 0x80000000` -> coffre OK
+- Quand le monstre est nettoye (bits 30/28 set ou bit 31 clear) -> coffre tue
+- La valeur `0x3E8` dans la fonction est un **BITMASK** (pas un timer !)
+
+**Le timer entity+0x14** : N'est PAS le mecanisme de despawn !
+- Init depuis table `0x800B1E80 + type*288 + 0xB2` (ou alt table `0x800F0100 + type*8192 + 0xB2`)
+- TOUTES les valeurs sont 0 pour les types monstres -> wrap a 0xFFFF -> ~7h
+- Decremente 1x toutes les 20 frames (confirme par constante magique `0xCCCCCCCD`)
+- Ne se declenche JAMAIS en pratique (coffre tue par parent bien avant)
+
+#### Pourquoi v1-v15 ont echoue
+
+| Version | Ce qu'elle ciblait | Pourquoi echec |
+|---------|-------------------|----------------|
+| v1-v9 | NOP decrement entity+0x14 | Timer = mecanisme secondaire, parent kill = vrai cause |
+| v10 | NOP decrement chest_update | Meme raison : parent kill se declenche avant le timer |
+| v11 | Init entity+0x14 a 0x3E8 | entity+0x14 init depuis table = 0, pas depuis immediate |
+| v12 | Init entity+0x12 (12 offsets) | entity+0x12 = autre champ (0x1000/0x0C00), pas timer |
+| v13-v15 | Tables SLES 0x3E8 | Ces tables = degats combat, PAS timer coffre |
+
+#### La structure chest_update (BLAZE 0x0094DECC, RAM 0x80087624)
+
+```
+entity+0x00 = flags (bit 25 = combat dead, bit 31 = allocated)
+entity+0x10 = compteur de frames (incremente +1 chaque appel, PAS un countdown)
+entity+0x12 = champ config (0x1000 ou 0x0C00, PAS un timer)
+entity+0x14 = countdown timer secondaire (init 0 -> wrap 0xFFFF -> ~7h)
+entity+0x74 = pointeur vers entite PARENT (le monstre tue)
+```
+
+**Flux d'execution** :
+1. state 0 : Init (charge modele, enregistre handler type 41)
+2. state 1-15 : Animation d'apparition
+3. state >= 16 : Boucle active, chaque frame :
+   a. Si `global_frame_counter % 20 == 0` : decrement entity+0x14
+   b. Si entity+0x14 == 0 : set dead flag (mecanisme secondaire, jamais atteint)
+   c. `jal 0x80075060` : check parent -> return 1 = kill (VRAI mecanisme)
+
+#### Patch v16
+
+**Approche** : Remplacer le debut de `0x80075060` par `jr $ra` + `return 0`
+
+```
+BLAZE 0x0093B908: 0x8C840074 -> 0x03E00008 (jr $ra)
+BLAZE 0x0093B90C: 0x00000000 -> 0x00001021 (addu $v0, $zero, $zero)
+```
+
+**Avantages** :
+- Fonction dans la zone STUB (partagee entre zones) -> UN patch = TOUS les donjons
+- 17 callers dans BLAZE.ALL (8 STUB + 9 MAIN pour Cavern F1)
+- 0 callers dans SLES (pas de patch EXE necessaire)
+
+**Effet** :
+- Coffres ne sont plus tues par le nettoyage du parent
+- Seul mecanisme restant = entity+0x14 timer (wrap 0xFFFF = ~7h)
+- Effectivement infini pour le gameplay
+
+**Risques potentiels** :
+- Les 16 autres callers (pas que coffres) ne tuent plus non plus via parent
+- Debris, particles, gold drops pourraient aussi persister plus longtemps
+- Overflow du pool d'entites si trop d'entites s'accumulent (improbable)
+
+**Patcher** : `Data/LootTimer/patch_loot_timer.py` (step 7, ENABLED)
+**Statut** : Build OK, BIN verifie (2 copies patchees), **PAS ENCORE TESTE en jeu**
+
+#### Pour plus tard (si le test v16 reussit)
+
+1. **Timer controle** : Patcher l'init de entity+0x14 dans chest_update pour
+   charger une valeur fixe au lieu de la table (ex: `addiu $v0, $zero, 150` = 60s)
+   Necessite un patch par zone (MAIN region, zone-specifique)
+
+2. **Approche selective** : Au lieu de NOP toute la fonction, modifier
+   uniquement le caller dans chest_update pour skip le jal + force skip :
+   ```
+   lhu $v0, 0x0010($s0)      ; load frame counter
+   sltiu $v0, $v0, 6000      ; < 120s ?
+   bne $v0, $zero, skip      ; si en dessous, garder
+   lui $v1, 0x0200            ; delay slot (pour kill path)
+   ```
+
+---
+
+## Historique : v12 - ECHEC (2026-02-11)
 
 ### Tentative v12 : Patcher entity+0x0012 (master timer)
 
@@ -877,7 +1035,10 @@ BIN LBA 185765 copy : NOP confirmed
 
 ## Scripts
 
-- `patch_loot_timer.py` : patcheur v12 (patche entity+0x0012 master timer, 12 emplacements)
-- `patch_loot_timer_v11_old.py` : v11 (patche entity+0x0014, 1 emplacement, NE FONCTIONNE PAS)
+- `patch_loot_timer.py` : **ACTUEL v18** (4 layers: check_kill + callers + timer + entry dead flag)
+- `check_ram_v18.py` : verifie si patches v17 sont en RAM (confirme OUI, mais coffres meurent)
+- `check_ram_v19.py` : trouve chemin direct 0x80087C74 parent flag check bypass check_kill
+- `check_ram_v20.py` : cherche kill externe dans EXE (fonction 0x80028D4C, cascade mort parent)
+- `patch_loot_timer_v11_old.py` : v11 (patche entity+0x0014, NE FONCTIONNE PAS)
 - `patch_loot_timer_v10_old.py` : v10 (NOP decrement, NE FONCTIONNE PAS)
 - `investigate_timer_offset.py` : script d'analyse du code (verifie offsets +0x10/+0x12/+0x14)
