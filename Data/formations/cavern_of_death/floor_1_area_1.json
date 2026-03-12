@@ -1,25 +1,22 @@
 {
   "level_name": "Cavern of Death",
   "name": "Floor 1 - Area 1",
-  "group_offset": "0xf7a9a8",
+  "group_offset": "0xf7a97c",
   "monsters": [
     "Lv20.Goblin",
     "Goblin-Shaman",
-    "Giant-Bat",
-    "E-Shaman"
+    "Giant-Bat"
   ],
   "slot_types": [
     "00000000",
     "02000000",
-    "00000a00",
-    "03000000"
+    "00000a00"
   ],
-  "formation_area_start": "0xf7b088",
+  "formation_area_start": "0xf7affc",
   "formation_area_bytes": 896,
   "original_total_slots": 27,
   "formation_count": 8,
   "skip_offset_table_update": true,
-  "skip_formation_rewrite": true,
   "area_id": "dc01",
   "formations": [
     {
@@ -90,7 +87,7 @@
       "suffix": "00000a00"
     }
   ],
-  "spawn_points_area_start": "0xf7af40",
+  "spawn_points_area_start": "0xf7aeb4",
   "spawn_points_area_bytes": 328,
   "original_total_spawn_slots": 10,
   "spawn_point_count": 2,
@@ -118,7 +115,7 @@
           "byte0": 8,
           "byte10_11": "0900",
           "area_id": "3b02",
-          "offset": "0xf7af40"
+          "offset": "0xf7aeb4"
         },
         {
           "slot": 0,
@@ -128,7 +125,7 @@
           "byte0": 0,
           "byte10_11": "0900",
           "area_id": "4102",
-          "offset": "0xf7af60"
+          "offset": "0xf7aed4"
         },
         {
           "slot": 0,
@@ -138,7 +135,7 @@
           "byte0": 0,
           "byte10_11": "0900",
           "area_id": "3202",
-          "offset": "0xf7af80"
+          "offset": "0xf7aef4"
         },
         {
           "slot": 1,
@@ -148,7 +145,7 @@
           "byte0": 0,
           "byte10_11": "0400",
           "area_id": "2f02",
-          "offset": "0xf7afa0"
+          "offset": "0xf7af14"
         },
         {
           "slot": 1,
@@ -158,11 +155,11 @@
           "byte0": 2,
           "byte10_11": "0400",
           "area_id": "3602",
-          "offset": "0xf7afc0"
+          "offset": "0xf7af34"
         }
       ],
       "suffix": "02000000",
-      "offset": "0xf7af40"
+      "offset": "0xf7aeb4"
     },
     {
       "total": 5,
@@ -187,7 +184,7 @@
           "byte0": 0,
           "byte10_11": "0a00",
           "area_id": "6402",
-          "offset": "0xf7afe4"
+          "offset": "0xf7af58"
         },
         {
           "slot": 0,
@@ -197,7 +194,7 @@
           "byte0": 0,
           "byte10_11": "0a00",
           "area_id": "6802",
-          "offset": "0xf7b004"
+          "offset": "0xf7af78"
         },
         {
           "slot": 0,
@@ -207,7 +204,7 @@
           "byte0": 0,
           "byte10_11": "0a00",
           "area_id": "6802",
-          "offset": "0xf7b024"
+          "offset": "0xf7af98"
         },
         {
           "slot": 0,
@@ -217,7 +214,7 @@
           "byte0": 0,
           "byte10_11": "0a00",
           "area_id": "6602",
-          "offset": "0xf7b044"
+          "offset": "0xf7afb8"
         },
         {
           "slot": 1,
@@ -227,15 +224,15 @@
           "byte0": 0,
           "byte10_11": "0500",
           "area_id": "6502",
-          "offset": "0xf7b064"
+          "offset": "0xf7afd8"
         }
       ],
       "suffix": "02000000",
-      "offset": "0xf7afe4"
+      "offset": "0xf7af58"
     }
   ],
-  "zone_spawns_area_start": "0xf7b5ac",
-  "zone_spawns_area_bytes": 5276,
+  "zone_spawns_area_start": "0xf7b520",
+  "zone_spawns_area_bytes": 5416,
   "original_total_zone_spawn_slots": 69,
   "zone_spawn_count": 9,
   "zone_spawns": [
@@ -257,7 +254,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "6301",
-          "offset": "0xf7b5ac"
+          "offset": "0xf7b520"
         },
         {
           "slot": 2,
@@ -267,7 +264,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "6301",
-          "offset": "0xf7b5cc"
+          "offset": "0xf7b540"
         },
         {
           "slot": 2,
@@ -277,7 +274,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "6401",
-          "offset": "0xf7b5ec"
+          "offset": "0xf7b560"
         },
         {
           "slot": 2,
@@ -287,11 +284,11 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "6401",
-          "offset": "0xf7b60c"
+          "offset": "0xf7b580"
         }
       ],
       "suffix": "00000000",
-      "offset": "0xf7b5ac"
+      "offset": "0xf7b520"
     },
     {
       "total": 11,
@@ -311,7 +308,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "9303",
-          "offset": "0xf7b6cc"
+          "offset": "0xf7b640"
         },
         {
           "slot": 2,
@@ -321,7 +318,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "8103",
-          "offset": "0xf7b6ec"
+          "offset": "0xf7b660"
         },
         {
           "slot": 2,
@@ -331,7 +328,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "8503",
-          "offset": "0xf7b70c"
+          "offset": "0xf7b680"
         },
         {
           "slot": 2,
@@ -341,7 +338,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "8603",
-          "offset": "0xf7b72c"
+          "offset": "0xf7b6a0"
         },
         {
           "slot": 2,
@@ -351,7 +348,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "8303",
-          "offset": "0xf7b74c"
+          "offset": "0xf7b6c0"
         },
         {
           "slot": 2,
@@ -361,7 +358,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "8403",
-          "offset": "0xf7b76c"
+          "offset": "0xf7b6e0"
         },
         {
           "slot": 2,
@@ -371,7 +368,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "9203",
-          "offset": "0xf7b78c"
+          "offset": "0xf7b700"
         },
         {
           "slot": 2,
@@ -381,7 +378,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "9103",
-          "offset": "0xf7b7ac"
+          "offset": "0xf7b720"
         },
         {
           "slot": 2,
@@ -391,7 +388,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "8003",
-          "offset": "0xf7b7cc"
+          "offset": "0xf7b740"
         },
         {
           "slot": 2,
@@ -401,7 +398,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "8203",
-          "offset": "0xf7b7ec"
+          "offset": "0xf7b760"
         },
         {
           "slot": 2,
@@ -411,11 +408,11 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "9403",
-          "offset": "0xf7b80c"
+          "offset": "0xf7b780"
         }
       ],
       "suffix": "00000000",
-      "offset": "0xf7b6cc"
+      "offset": "0xf7b640"
     },
     {
       "total": 15,
@@ -435,7 +432,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "6301",
-          "offset": "0xf7b98c"
+          "offset": "0xf7b900"
         },
         {
           "slot": 0,
@@ -445,7 +442,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "6301",
-          "offset": "0xf7b9ac"
+          "offset": "0xf7b920"
         },
         {
           "slot": 0,
@@ -455,7 +452,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "6401",
-          "offset": "0xf7b9cc"
+          "offset": "0xf7b940"
         },
         {
           "slot": 0,
@@ -465,7 +462,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "6401",
-          "offset": "0xf7b9ec"
+          "offset": "0xf7b960"
         },
         {
           "slot": 0,
@@ -475,7 +472,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "9203",
-          "offset": "0xf7ba0c"
+          "offset": "0xf7b980"
         },
         {
           "slot": 0,
@@ -485,7 +482,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "9103",
-          "offset": "0xf7ba2c"
+          "offset": "0xf7b9a0"
         },
         {
           "slot": 0,
@@ -495,7 +492,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "8603",
-          "offset": "0xf7ba4c"
+          "offset": "0xf7b9c0"
         },
         {
           "slot": 0,
@@ -505,7 +502,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "8003",
-          "offset": "0xf7ba6c"
+          "offset": "0xf7b9e0"
         },
         {
           "slot": 0,
@@ -515,7 +512,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "8503",
-          "offset": "0xf7ba8c"
+          "offset": "0xf7ba00"
         },
         {
           "slot": 0,
@@ -525,7 +522,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "8403",
-          "offset": "0xf7baac"
+          "offset": "0xf7ba20"
         },
         {
           "slot": 0,
@@ -535,7 +532,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "8303",
-          "offset": "0xf7bacc"
+          "offset": "0xf7ba40"
         },
         {
           "slot": 0,
@@ -545,7 +542,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "9403",
-          "offset": "0xf7baec"
+          "offset": "0xf7ba60"
         },
         {
           "slot": 0,
@@ -555,7 +552,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "9303",
-          "offset": "0xf7bb0c"
+          "offset": "0xf7ba80"
         },
         {
           "slot": 0,
@@ -565,7 +562,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "8203",
-          "offset": "0xf7bb2c"
+          "offset": "0xf7baa0"
         },
         {
           "slot": 0,
@@ -575,11 +572,11 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "8103",
-          "offset": "0xf7bb4c"
+          "offset": "0xf7bac0"
         }
       ],
       "suffix": "00000000",
-      "offset": "0xf7b98c"
+      "offset": "0xf7b900"
     },
     {
       "total": 1,
@@ -599,11 +596,11 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "4202",
-          "offset": "0xf7bc2c"
+          "offset": "0xf7bba0"
         }
       ],
       "suffix": "00000000",
-      "offset": "0xf7bc2c"
+      "offset": "0xf7bba0"
     },
     {
       "total": 6,
@@ -628,7 +625,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "3602",
-          "offset": "0xf7be30"
+          "offset": "0xf7bda4"
         },
         {
           "slot": 2,
@@ -638,7 +635,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "6001",
-          "offset": "0xf7be50"
+          "offset": "0xf7bdc4"
         },
         {
           "slot": 2,
@@ -648,7 +645,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "2200",
-          "offset": "0xf7be70"
+          "offset": "0xf7bde4"
         },
         {
           "slot": 2,
@@ -658,7 +655,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "6101",
-          "offset": "0xf7be90"
+          "offset": "0xf7be04"
         },
         {
           "slot": 2,
@@ -668,7 +665,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "6101",
-          "offset": "0xf7beb0"
+          "offset": "0xf7be24"
         },
         {
           "slot": 2,
@@ -678,11 +675,11 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "1001",
-          "offset": "0xf7bed0"
+          "offset": "0xf7be44"
         }
       ],
       "suffix": "00000000",
-      "offset": "0xf7be30"
+      "offset": "0xf7bda4"
     },
     {
       "total": 2,
@@ -702,7 +699,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "0b01",
-          "offset": "0xf7c030"
+          "offset": "0xf7bfa4"
         },
         {
           "slot": 2,
@@ -712,11 +709,11 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "ab01",
-          "offset": "0xf7c050"
+          "offset": "0xf7bfc4"
         }
       ],
       "suffix": "00000000",
-      "offset": "0xf7c030"
+      "offset": "0xf7bfa4"
     },
     {
       "total": 10,
@@ -736,7 +733,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "6101",
-          "offset": "0xf7c0f0"
+          "offset": "0xf7c064"
         },
         {
           "slot": 2,
@@ -746,7 +743,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "6101",
-          "offset": "0xf7c110"
+          "offset": "0xf7c084"
         },
         {
           "slot": 2,
@@ -756,7 +753,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "6001",
-          "offset": "0xf7c130"
+          "offset": "0xf7c0a4"
         },
         {
           "slot": 2,
@@ -766,7 +763,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "6001",
-          "offset": "0xf7c150"
+          "offset": "0xf7c0c4"
         },
         {
           "slot": 2,
@@ -776,7 +773,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "0b01",
-          "offset": "0xf7c170"
+          "offset": "0xf7c0e4"
         },
         {
           "slot": 2,
@@ -786,7 +783,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "ab01",
-          "offset": "0xf7c190"
+          "offset": "0xf7c104"
         },
         {
           "slot": 2,
@@ -796,7 +793,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "1101",
-          "offset": "0xf7c1b0"
+          "offset": "0xf7c124"
         },
         {
           "slot": 2,
@@ -806,7 +803,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "b201",
-          "offset": "0xf7c1d0"
+          "offset": "0xf7c144"
         },
         {
           "slot": 2,
@@ -816,7 +813,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "6302",
-          "offset": "0xf7c1f0"
+          "offset": "0xf7c164"
         },
         {
           "slot": 2,
@@ -826,11 +823,11 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "6302",
-          "offset": "0xf7c210"
+          "offset": "0xf7c184"
         }
       ],
       "suffix": "00000000",
-      "offset": "0xf7c0f0"
+      "offset": "0xf7c064"
     },
     {
       "total": 10,
@@ -850,7 +847,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "8f03",
-          "offset": "0xf7c7d0"
+          "offset": "0xf7c744"
         },
         {
           "slot": 0,
@@ -860,7 +857,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "9003",
-          "offset": "0xf7c7f0"
+          "offset": "0xf7c764"
         },
         {
           "slot": 0,
@@ -870,7 +867,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "8a03",
-          "offset": "0xf7c810"
+          "offset": "0xf7c784"
         },
         {
           "slot": 0,
@@ -880,7 +877,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "8903",
-          "offset": "0xf7c830"
+          "offset": "0xf7c7a4"
         },
         {
           "slot": 0,
@@ -890,7 +887,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "8803",
-          "offset": "0xf7c850"
+          "offset": "0xf7c7c4"
         },
         {
           "slot": 0,
@@ -900,7 +897,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "8703",
-          "offset": "0xf7c870"
+          "offset": "0xf7c7e4"
         },
         {
           "slot": 0,
@@ -910,7 +907,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "8c03",
-          "offset": "0xf7c890"
+          "offset": "0xf7c804"
         },
         {
           "slot": 0,
@@ -920,7 +917,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "8b03",
-          "offset": "0xf7c8b0"
+          "offset": "0xf7c824"
         },
         {
           "slot": 0,
@@ -930,7 +927,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "8e03",
-          "offset": "0xf7c8d0"
+          "offset": "0xf7c844"
         },
         {
           "slot": 0,
@@ -940,11 +937,11 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "8d03",
-          "offset": "0xf7c8f0"
+          "offset": "0xf7c864"
         }
       ],
       "suffix": "00000000",
-      "offset": "0xf7c7d0"
+      "offset": "0xf7c744"
     },
     {
       "total": 10,
@@ -964,7 +961,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "6101",
-          "offset": "0xf7c990"
+          "offset": "0xf7c904"
         },
         {
           "slot": 0,
@@ -974,7 +971,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "6101",
-          "offset": "0xf7c9b0"
+          "offset": "0xf7c924"
         },
         {
           "slot": 0,
@@ -984,7 +981,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "6001",
-          "offset": "0xf7c9d0"
+          "offset": "0xf7c944"
         },
         {
           "slot": 0,
@@ -994,7 +991,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "6001",
-          "offset": "0xf7c9f0"
+          "offset": "0xf7c964"
         },
         {
           "slot": 0,
@@ -1004,7 +1001,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "0b01",
-          "offset": "0xf7ca10"
+          "offset": "0xf7c984"
         },
         {
           "slot": 0,
@@ -1014,7 +1011,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "ab01",
-          "offset": "0xf7ca30"
+          "offset": "0xf7c9a4"
         },
         {
           "slot": 0,
@@ -1024,7 +1021,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "1101",
-          "offset": "0xf7ca50"
+          "offset": "0xf7c9c4"
         },
         {
           "slot": 0,
@@ -1034,7 +1031,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "b201",
-          "offset": "0xf7ca70"
+          "offset": "0xf7c9e4"
         },
         {
           "slot": 0,
@@ -1044,7 +1041,7 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "6302",
-          "offset": "0xf7ca90"
+          "offset": "0xf7ca04"
         },
         {
           "slot": 0,
@@ -1054,28 +1051,28 @@
           "byte0": 0,
           "byte10_11": "0000",
           "area_id": "6302",
-          "offset": "0xf7cab0"
+          "offset": "0xf7ca24"
         }
       ],
       "suffix": "00000000",
-      "offset": "0xf7c990"
+      "offset": "0xf7c904"
     }
   ],
   "type07_entries": [
     {
-      "vram_offset": "0x0580",
+      "vram_offset": "0x580",
       "idx": 16,
-      "offset": "0xf7ac70"
+      "offset": "0xf7abe4"
     },
     {
-      "vram_offset": "0x0588",
+      "vram_offset": "0x588",
       "idx": 17,
-      "offset": "0xf7ac78"
+      "offset": "0xf7abec"
     },
     {
-      "vram_offset": "0x0590",
+      "vram_offset": "0x590",
       "idx": 18,
-      "offset": "0xf7ac80"
+      "offset": "0xf7abf4"
     }
   ],
   "available_monsters": [
@@ -1085,34 +1082,28 @@
     "Lv20.Goblin"
   ],
   "monster_vram_ref": {
-    "Lv20.Goblin": "0x0580",
-    "Goblin-Shaman": "0x0588",
-    "Giant-Bat": "0x0590"
+    "Lv20.Goblin": "0x580",
+    "Goblin-Shaman": "0x588",
+    "Giant-Bat": "0x590"
   },
   "assignment_entries": [
     {
       "slot": 0,
       "L": 0,
       "R": 2,
-      "offset": "0xf7a988"
+      "offset": "0xf7a964"
     },
     {
       "slot": 1,
       "L": 1,
       "R": 3,
-      "offset": "0xf7a990"
+      "offset": "0xf7a96c"
     },
     {
       "slot": 2,
       "L": 3,
       "R": 4,
-      "offset": "0xf7a998"
-    },
-    {
-      "slot": 3,
-      "L": 1,
-      "R": 5,
-      "offset": "0xf7a9a0"
+      "offset": "0xf7a974"
     }
   ],
   "animation_table": [
@@ -1127,32 +1118,18 @@
     {
       "bytes": "0c0c0d0e0f0f1010",
       "offset": "0xf7a91c"
-    },
-    {
-      "bytes": "0606070708090a0b",
-      "offset": "0xf7a924"
     }
   ],
   "records_8byte": [
     {
       "anim_offset": "0x000C",
       "texture_ref": "0x00030000",
-      "offset": "0xf7a94c"
+      "offset": "0xf7a93c"
     },
     {
       "anim_offset": "0x0014",
       "texture_ref": "0x00044000",
-      "offset": "0xf7a954"
-    },
-    {
-      "anim_offset": "0x001C",
-      "texture_ref": "0x00058000",
-      "offset": "0xf7a95c"
-    },
-    {
-      "anim_offset": "0x0024",
-      "texture_ref": "0x00044000",
-      "offset": "0xf7a964"
+      "offset": "0xf7a944"
     }
   ]
 }

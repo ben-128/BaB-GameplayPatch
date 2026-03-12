@@ -19,12 +19,14 @@ Usage: py -3 Data/formations/Scripts/add_elite_slot_cavern_f1a1.py
 
 import struct
 import json
+import sys
 from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).parent
 PROJECT_ROOT = SCRIPT_DIR.parent.parent.parent
 BLAZE_ALL = PROJECT_ROOT / "output" / "BLAZE.ALL"
 AREA_JSON = SCRIPT_DIR.parent / "cavern_of_death" / "floor_1_area_1.json"
+SPAWN_GROUPS_JSON = PROJECT_ROOT / "WIP" / "level_design" / "spawns" / "data" / "spawn_groups" / "cavern_of_death.json"
 
 # === Vanilla Cavern F1 Area 1 layout ========================================
 AREA_START        = 0xF7A900  # Middle section start (= area base)
@@ -177,9 +179,10 @@ def _patch_script_offsets(new_area):
     #   spawn_points, formation, and zone_spawn sections that also shifted by +0x8C.
     OFFSET_FIX_ENTRIES = [
         # -- Batch 1: script -> script area --
-        (0x0240, 0x0260),   # type 0xA4 (camera/zone sub-block A)
-        (0x0248, 0x0328),   # type 0xAC (camera/zone sub-block B)
-        (0x0250, 0x0410),   # type 0x94 (camera/zone sub-block C)
+        # NOTE: entries at 0x0240/0x0248 (values 0x0380/0x027C) are root table
+        # configuration values that repeat in groups of 3 (indices 4,5,6 / 7,8,9 / 10,11,12).
+        # They are NOT area-relative pointers — do NOT shift them.
+        # Same for 0x0250 (value 0x0198) — see special case removed below.
         (0x02A8, 0x0518),   # type 0x01
         (0x02B0, 0x0520),   # type 0x02
         # -- Batch 2a: script -> beyond-script areas (offsets 0x0800, 0x0C00) --
@@ -224,6 +227,11 @@ def _patch_script_offsets(new_area):
                 "Script offset fix: area+0x{:04X}: expected 0x{:04X}, got 0x{:04X}".format(
                     area_off, expected, cur))
         struct.pack_into('<I', new_area, area_off, expected + TOTAL_EXPANSION)
+
+    # NOTE: the value 0x0198 at area+0x0250 (root table index 10) was previously
+    # treated as a stats-area pointer needing +MIDDLE_EXPANSION shift. Analysis via
+    # diagnose_script_pointers.py shows this is a fixed root table configuration value
+    # (same value repeats at root[4], root[7], root[10]) — must NOT be shifted.
 
     # -- Add type07[3] for E-Shaman at area+0x0388 (was vanilla type0E terminator) --
     # offset = 0x0598 + TOTAL_EXPANSION = 0x0624 (E-Shaman VRAM data block)
@@ -415,7 +423,152 @@ def update_json():
             if "offset" in rec:
                 rec["offset"] = shift_hex(rec["offset"], FULL_SHIFT)
 
-    # -- Save --
+    # -- Save floor_1_area_1.json --
+    with open(AREA_JSON, 'w', encoding='utf-8') as f:
+        json.dump(area, f, indent=2)
+
+    # -- Also update cavern_of_death.json (used by patch_spawn_groups.py) --
+    if SPAWN_GROUPS_JSON.exists():
+        with open(SPAWN_GROUPS_JSON, 'r', encoding='utf-8') as f:
+            sg = json.load(f)
+        for grp in sg.get("groups", []):
+            if grp.get("name") == "Floor 1 - Area 1":
+                grp["offset"] = hex(NEW_GROUP_OFFSET)
+                grp["monsters"] = ["Lv20.Goblin", "Goblin-Shaman", "Giant-Bat", "E-Shaman"]
+                break
+        with open(SPAWN_GROUPS_JSON, 'w', encoding='utf-8') as f:
+            json.dump(sg, f, indent=2)
+
+    return True
+
+
+def revert_json_to_n3():
+    """Revert area JSONs to vanilla N=3 layout (no expansion).
+
+    Keeps formation compositions unchanged (all use slots 0,1,2 — no slot 3).
+    Reverts all offsets to vanilla values so other patchers work correctly.
+    Always reverts BOTH floor_1_area_1.json AND cavern_of_death.json.
+    """
+    def shift_hex(hex_str, delta):
+        return hex(int(hex_str, 16) + delta)
+
+    # ---- Always revert cavern_of_death.json (patch_spawn_groups.py reads this) ----
+    # With vanilla BLAZE.ALL (N=3, middle=124 bytes), stats are at 0xF7A97C.
+    # offset=0xF7A9A8 + 4 monsters would write 384 bytes into the script area → crash.
+    sg_changed = False
+    if SPAWN_GROUPS_JSON.exists():
+        with open(SPAWN_GROUPS_JSON, 'r', encoding='utf-8') as f:
+            sg = json.load(f)
+        for grp in sg.get("groups", []):
+            if grp.get("name") == "Floor 1 - Area 1":
+                if (grp.get("offset", "").lower() != hex(VANILLA_GROUP_OFFSET).lower()
+                        or len(grp.get("monsters", [])) != 3):
+                    grp["offset"] = hex(VANILLA_GROUP_OFFSET)
+                    grp["monsters"] = ["Lv20.Goblin", "Goblin-Shaman", "Giant-Bat"]
+                    sg_changed = True
+                break
+        if sg_changed:
+            with open(SPAWN_GROUPS_JSON, 'w', encoding='utf-8') as f:
+                json.dump(sg, f, indent=2)
+            print("  [OK] cavern_of_death.json reverted to N=3")
+        else:
+            print("  [SKIP] cavern_of_death.json already N=3")
+
+    # ---- Revert floor_1_area_1.json if needed ----
+    with open(AREA_JSON, 'r', encoding='utf-8') as f:
+        area = json.load(f)
+
+    if (len(area.get("monsters", [])) == 3 and
+            area.get("group_offset", "").lower() == hex(VANILLA_GROUP_OFFSET).lower()):
+        print("  [SKIP] floor_1_area_1.json already N=3")
+        return sg_changed  # cavern_of_death.json may still have been updated above
+
+    # -- Monsters and slot_types (N=3) --
+    area["monsters"] = ["Lv20.Goblin", "Goblin-Shaman", "Giant-Bat"]
+    area["slot_types"] = ["00000000", "02000000", "00000a00"]
+
+    # -- Group offset --
+    area["group_offset"] = hex(VANILLA_GROUP_OFFSET)
+
+    # -- Post-stats area offsets --
+    area["formation_area_start"]    = hex(VANILLA_FORMATION_START)
+    area["spawn_points_area_start"] = hex(VANILLA_SPAWN_POINTS_START)
+    area["zone_spawns_area_start"]  = hex(VANILLA_ZONE_SPAWNS_START)
+    area["zone_spawns_area_bytes"]  = VANILLA_ZONE_SPAWNS_BYTES
+
+    # -- Remove expansion-only flags --
+    area.pop("skip_formation_rewrite", None)
+    # Keep skip_offset_table_update: True in vanilla mode.
+    # update_offset_table() uses Method 2 (fm_idx = 2 + spawn_point_count = 4)
+    # which lands in the ROOT TABLE (indices 5-11 hold config values 0x027C etc.).
+    # Writing formation offsets there corrupts the root table → crash.
+    # The vanilla offset table already points correctly to formation_area_start
+    # (0xF7AFFC), so no update is needed when formation_start hasn't moved.
+    area["skip_offset_table_update"] = True
+
+    # -- Animation table (N=3: 3 entries at vanilla absolute offsets) --
+    current_anim = area.get("animation_table", [])
+    if len(current_anim) >= 3:
+        area["animation_table"] = [
+            {"bytes": current_anim[0]["bytes"], "offset": hex(AREA_START + 0x0C)},
+            {"bytes": current_anim[1]["bytes"], "offset": hex(AREA_START + 0x14)},
+            {"bytes": current_anim[2]["bytes"], "offset": hex(AREA_START + 0x1C)},
+        ]
+
+    # -- Records 8byte (N=3: 2 unpointed entries at +0x3C, +0x44) --
+    current_rec = area.get("records_8byte", [])
+    if len(current_rec) >= 2:
+        area["records_8byte"] = [
+            {"anim_offset": current_rec[0].get("anim_offset", "0x000c"),
+             "texture_ref": current_rec[0].get("texture_ref", "0x00030000"),
+             "offset": hex(AREA_START + 0x3C)},
+            {"anim_offset": current_rec[1].get("anim_offset", "0x0014"),
+             "texture_ref": current_rec[1].get("texture_ref", "0x00044000"),
+             "offset": hex(AREA_START + 0x44)},
+        ]
+
+    # -- Assignment entries (N=3: 3 entries at +0x64) --
+    area["assignment_entries"] = [
+        {"slot": 0, "L": 0, "R": 2, "offset": hex(AREA_START + 0x64)},
+        {"slot": 1, "L": 1, "R": 3, "offset": hex(AREA_START + 0x6C)},
+        {"slot": 2, "L": 3, "R": 4, "offset": hex(AREA_START + 0x74)},
+    ]
+
+    # -- Type07 entries (revert to vanilla absolute offsets, 3 entries) --
+    vanilla_type07_abs   = [0xF7ABE4, 0xF7ABEC, 0xF7ABF4]
+    vanilla_vram_offsets = [0x0580,   0x0588,   0x0590]
+    current_type07 = area.get("type07_entries", [])
+    area["type07_entries"] = [
+        {
+            "vram_offset": hex(vanilla_vram_offsets[i]),
+            "idx": current_type07[i]["idx"] if i < len(current_type07) else 19,
+            "offset": hex(vanilla_type07_abs[i]),
+        }
+        for i in range(3)
+    ]
+    area["monster_vram_ref"] = {
+        "Lv20.Goblin":   hex(0x0580),
+        "Goblin-Shaman": hex(0x0588),
+        "Giant-Bat":     hex(0x0590),
+    }
+
+    # -- Spawn points records (shift back by -TOTAL_EXPANSION) --
+    for sp in area.get("spawn_points", []):
+        if "offset" in sp:
+            sp["offset"] = shift_hex(sp["offset"], -TOTAL_EXPANSION)
+        for rec in sp.get("records", []):
+            if "offset" in rec:
+                rec["offset"] = shift_hex(rec["offset"], -TOTAL_EXPANSION)
+
+    # -- Zone spawns records (shift back by -TOTAL_EXPANSION) --
+    for zs in area.get("zone_spawns", []):
+        if "offset" in zs:
+            zs["offset"] = shift_hex(zs["offset"], -TOTAL_EXPANSION)
+        for rec in zs.get("records", []):
+            if "offset" in rec:
+                rec["offset"] = shift_hex(rec["offset"], -TOTAL_EXPANSION)
+
+    # -- Save floor_1_area_1.json --
     with open(AREA_JSON, 'w', encoding='utf-8') as f:
         json.dump(area, f, indent=2)
 
@@ -427,6 +580,14 @@ def main():
     print("  Add Elite Shaman Slot - Cavern F1 Area 1 (v2 in-place)")
     print("=" * 60)
     print()
+
+    # -- Handle --no-expand: revert JSONs to N=3, skip binary changes --
+    if '--no-expand' in sys.argv:
+        print("[--no-expand] Skipping binary expansion, reverting JSONs to N=3...")
+        revert_json_to_n3()
+        print("[OK] Done")
+        print()
+        return 0
 
     if not BLAZE_ALL.exists():
         print("[ERROR] BLAZE.ALL not found: {}".format(BLAZE_ALL))

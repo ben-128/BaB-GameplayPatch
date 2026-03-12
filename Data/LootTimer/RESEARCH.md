@@ -4,9 +4,91 @@
 Modifier la duree avant disparition des coffres laches par les monstres.
 Duree originale : 20 secondes (~1000 frames @ 50fps PAL).
 
-## Statut : v18 - PAS ENCORE TESTE (2026-03-10)
+## Statut : v20 - ECHEC (2026-03-12)
 
-### v18 : Quadruple-layer patch (FINAL)
+### v20 : Layer 5 broad scan — PATTERN E IDENTIFIE ET CORRIGE
+
+**Pourquoi v19 a echoue** : Pattern D patchait le handler de mouvement, mais il restait
+un troisième handler (fade-out) avec un dead flag check utilisant des registres différents
+(`$a1`/`$a2`) non capturés par les patterns nommés A-D.
+
+**Analyse broad scan** : Scan générique de la region 0x0094DECC-0x0094F800 cherchant
+`lui $ANY, 0x0200` + `and $v0` + `beq/bne $v0,$zero` quelle que soit la combinaison de registres.
+
+**Pattern E découvert** : Handler fade-out (BLAZE 0x0094E124) :
+```
+BLAZE 0x0094E134: lw $a1, 0x0($s0)     ; charge flags entite (registre $a1 !)
+BLAZE 0x0094E138: lui $a2, 0x0200       ; masque dead flag
+BLAZE 0x0094E13C: and $v0, $a1, $a2    ; 00C61024 — différent de tous les patterns précédents
+BLAZE 0x0094E140: beq $v0, $zero, +N   ; si PAS mort -> skip mort; si mort -> fade-out
+; SI MORT: decremente entity+0x38 (couleur) chaque frame
+; Quand couleur atteint 0 -> kill secondaire via check opacite (BLAZE 0x0094EE78)
+```
+
+**Chaine de mort complète** (maintenant bloquée en totalité) :
+1. EXE set dead flag (bit 25) sur l'entite coffre quand monstre parent libéré
+2. Fade-out handler (0x0094E124) check dead flag → decremente `entity+0x38` (couleur)
+3. Opacity handler (0x0094EE78) check `entity+0x2A < 128` → `sw $zero` (kill)
+
+En patchant step 2 (0x0094E140 → branche inconditionnelle), step 3 ne se déclenche jamais.
+
+**Layer 5** : Broad scan générique du chest region :
+- Algorithme : pour chaque `lui $ANY, 0x0200` → cherche `and $v0,...` → cherche `beq/bne $v0,$zero`
+- 1 nouveau patch : BLAZE 0x0094E140 `beq -> unconditional`
+- Résiliant aux futures variations de registres
+
+**Patcher v20** : `Data/LootTimer/patch_loot_timer.py`
+- 5 layers : L1(check_kill) + L2(JAL callers) + L3(timer) + L4(patterns A-D) + L5(broad scan)
+- Patches actifs vérifiés :
+  - BLAZE 0x00940494 [B] : beq -> uncond
+  - BLAZE 0x0094E140 [E/L5] : beq -> uncond (fade-out handler — nouveau v20)
+  - BLAZE 0x0094E274 [C] : beq -> uncond
+  - BLAZE 0x0094E528 [D] : beq -> uncond (movement handler)
+  - BLAZE 0x0094EF7C [C] : beq -> uncond
+  - BLAZE 0x0094F1F4 [C] : beq -> uncond
+  - BLAZE 0x0094F46C [C] : beq -> uncond
+
+**Résultat en jeu : ECHEC — coffre disparait toujours**
+
+Hypothèses :
+1. Il existe d'autres handlers pour l'entite coffre hors de la plage 0x0094DECC-0x0094F800
+2. Le dead flag est géré différemment selon la zone/dungeon (overlay variable par zone)
+3. Le kill vient d'un code dans le STUB overlay (partagé), hors de la plage chest-specific
+4. La source du kill est dans l'EXE (SLES_008.45) directement, pas dans BLAZE.ALL
+
+---
+
+### v19 : Pattern D ajouté — ROOT CAUSE IDENTIFIEE
+
+**Pourquoi v18 a echoue** : Layer 4 ne capturait pas le check dead flag dans le handler de mouvement.
+
+**Decouverte** : Il y a TWO handlers independants pour l'entite coffre :
+1. `chest_update` (RAM 0x80087624 / BLAZE 0x0094DECC) — handler principal
+2. Handler mouvement (RAM 0x80087C14 / BLAZE 0x0094E4BC) — appelé indépendamment par le moteur
+
+Le handler mouvement a son propre check dead flag :
+```
+BLAZE 0x0094E51C: lw $v1, 0x0($s1)     ; charge flags entite
+BLAZE 0x0094E520: lui $a0, 0x0200       ; masque dead flag
+BLAZE 0x0094E524: and $v0, $v1, $a0    ; test bit 25
+BLAZE 0x0094E528: beq $v0, $zero, +15  ; si PAS mort -> skip
+; SI MORT: decremente entity+0x28, puis:
+BLAZE 0x0094E560: j 0x80088578
+BLAZE 0x0094E564: sw $zero, 0x0($s1)   ; KILL (delay slot)
+```
+Ce pattern utilise `$v1` et `$a0` (registres différents de A/B/C) → **jamais capturé par v18**.
+
+**Pattern D** (ajouté dans v19) :
+- Signature : `8E230000 + 3C040200 + 00641024` (12 bytes)
+- Fix : beq `1040XXXX` → `1000XXXX` (inconditional, skip kill path)
+- 1 match trouvé : BLAZE 0x0094E528
+
+**Patcher v19** : `Data/LootTimer/patch_loot_timer.py`
+- Layer 4 capture maintenant : A(1) + B(2) + C(4) + D(1) = 8 patterns
+
+---
+
+### v18 : Quadruple-layer patch — ECHEC (2026-03-12)
 
 **Patcher actuel** : `Data/LootTimer/patch_loot_timer.py` (v18)
 
