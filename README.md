@@ -79,21 +79,19 @@ Le script execute dans l'ordre :
 |------|--------|-------------|
 | 1 | (copy) | Copie BLAZE.ALL clean depuis extract vers output |
 | 2 | `patch_fate_coin_shop.py` | Patch les prix Fate Coin Shop |
-| 3 | `patch_items_in_bin.py` | Patch les descriptions d'items (376 items) |
+| 3 | `patch_items_in_bin.py` | Patch les descriptions d'items |
 | 4 | `patch_auction_base_prices.py` | Met les prix d'encheres de base a 0 |
 | 5 | `patch_monster_stats.py` | Patch les stats des monstres |
 | 6 | `patch_spawn_groups.py` | Patch les spawns de monstres |
 | 6b | `patch_formations.py` | Patch les formation templates |
 | 7 | `patch_loot_timer.py` | Gele le timer des coffres (optionnel) |
-| 7b | `patch_spell_table.py` | Modifie les stats des sorts (degats, MP, element) |
-| 7c | `patch_ai_behavior.py` | Patch comportement AI (experimental) |
-| 7d | `patch_trap_damage.py` | Modifie les degats des pieges (110 sites) |
-| 7e | `patch_monster_spells.py` | Modifie quels sorts offensifs les monstres ont (ai_behavior/) |
-| 8 | (copy) | Copie le BIN clean vers output |
-| 9 | `patch_blaze_all.py` | Injecte BLAZE.ALL dans le BIN (2 emplacements) |
-| 10 | (inline) | Met a jour la documentation |
+| 8 | `patch_spell_table.py` | Modifie les stats des sorts (degats, MP, element) |
+| 9 | `patch_trap_damage.py` | Modifie les degats des pieges |
+| 10 | (copy) | Copie le BIN clean vers output |
+| 11 | `patch_blaze_all.py` | Injecte BLAZE.ALL dans le BIN (LBA 185765) |
+| 12 | (inline) | Met a jour la documentation |
 
-Steps 1-7e patchent `output/BLAZE.ALL`. Steps 8-9 creent le BIN final.
+Steps 1-9 patchent `output/BLAZE.ALL`. Steps 10-11 creent le BIN final.
 
 ---
 
@@ -214,14 +212,33 @@ Voir `DEBUGGING_GUIDE.md` pour la liste complète et les workflows de recherche.
 ## Prerequis
 
 - Python 3.x
-- `Blaze  Blade - Eternal Quest (Europe)/extract/BLAZE.ALL` (46 MB)
+- `Blaze  Blade - Eternal Quest (Europe)/extract/BLAZE.ALL` (46 MB, extrait depuis le BIN original via `extract_blaze_from_bin.py`)
 - `Blaze  Blade - Eternal Quest (Europe)/Blaze & Blade - Eternal Quest (Europe).bin` (703 MB)
 - Emulateur PS1 pour tester
 
 ---
 
+## Fonctionnalites abandonnees
+
+### Ajout de monster slots (4e slot par area)
+
+**Objectif** : Ajouter un 4e type de monstre (E-Shaman) a Cavern of Death F1 Area 1.
+
+**Approche tentee** : Expansion in-place de la section middle (124→168 bytes) + ajout d'un bloc stat 96-byte + decalage de tout ce qui suit de +140 bytes, + correction de 33 offsets stales dans la script area.
+
+**Resultat** : L'expansion binaire etait techniquement correcte (build sans erreur, 0 bytes corrompus, verification des offsets OK). Non testee en jeu car le loading infini de Cavern F1 — qui bloquait tout test — s'est revele etre un bug totalement independant dans le pipeline d'injection.
+
+**Vrai cause du loading infini** : `patch_blaze_all.py` injectait BLAZE.ALL a deux LBAs (`[163167, 185765]`), dont le premier est en realite **LEVELS.DAT** (un fichier different). Chaque build ecrasait LEVELS.DAT avec du contenu BLAZE.ALL, corrompant les donnees de Cavern F1 qui s'y trouvent. Corrige en mars 2026 (LBA unique `[185765]`, 22562 secteurs).
+
+**Pourquoi abandonne** : Complexite importante pour un gain marginal. La pipeline d'injection etant maintenant correcte, l'ajout de slot pourrait etre re-tente a l'avenir si necessaire — les scripts de recherche et l'analyse technique restent dans git history.
+
+---
+
 ## Historique
 
+- **2026-03-14** : Fix injection critique (LEVELS.DAT vs BLAZE.ALL), abandon slot expansion, scripts diagnostics ISO 9660
+- **2026-02-13** : Fix Cavern F1 crash (33 script offsets stales), fix trap damage v6
+- **2026-02-12** : Patcher formations completement reecrit, systeme two-layer sorts confirme in-game
 - **2026-02-10** : Systeme de sorts monstres (patchers, config, docs, spell_info 121 JSONs), degats pieges v4, loot timer v6, recherche AI
 - **2026-02-08** : Formation count decrease, loot chest timer patch, combat AI research
 - **2026-02-06** : Formation size resize, slot_types extraction, spawn point patching
@@ -264,9 +281,16 @@ Cette analyse est fournie "as-is" a des fins de recherche et de preservation du 
 
 
 
+
+
+
+
+
+
+
 ## Last Patch Build
 
-**Date:** 2026-03-12 16:20:55
+**Date:** 2026-03-14 17:43:07
 
 **Patches Applied:**
 - Fate Coin Shop prices adjusted
