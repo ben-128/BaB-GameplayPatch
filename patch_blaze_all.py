@@ -13,14 +13,15 @@ BIN_IN      = SCRIPT_DIR / "output" / "Blaze & Blade - Patched.bin"
 BIN_OUT     = SCRIPT_DIR / "output" / "Blaze & Blade - Patched.bin"  # Overwrite in place
 BLAZE_ALL   = SCRIPT_DIR / "output" / "BLAZE.ALL"
 
-# Two copies of BLAZE.ALL in the BIN
-LBA_LOCATIONS = [163167, 185765]  # LBAs where BLAZE.ALL starts
+# BLAZE.ALL location (single copy - verified via ISO 9660 filesystem)
+# LBA 163167 = LEVELS.DAT (different file, must NOT be overwritten)
+LBA_LOCATIONS = [185765]
 SECTOR_RAW  = 2352        # RAW sector size
 USER_OFF    = 24          # MODE2/Form1 user data offset
 USER_SIZE   = 2048        # User data per sector
 
-# Number of sectors for BLAZE.ALL (46206976 / 2048 = 22566)
-ORIG_SECTORS = 22566
+# Number of sectors for BLAZE.ALL (46206976 / 2048 = 22562 - from filesystem)
+ORIG_SECTORS = 22562
 
 def main():
     print("=" * 50)

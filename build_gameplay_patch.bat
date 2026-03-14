@@ -9,6 +9,8 @@ REM ========================================================================
 set PATCH_LOOT_TIMER=1
 set TEST_SPELL_FREEZE=0
 set EXPAND_ELITE_SLOT=0
+set PATCH_SPELL_TABLE=1
+set PATCH_TRAP_DAMAGE=1
 
 REM ========================================================================
 REM Initialize logging
@@ -249,36 +251,46 @@ if "%PATCH_LOOT_TIMER%"=="1" (
 REM ========================================================================
 REM Step 8: Patch spell table entries in BLAZE.ALL
 REM ========================================================================
-call :log "[8/12] Patching spell table entries in BLAZE.ALL..."
-call :log ""
-
-py -3 Data\spells\patch_spell_table.py >> "%LOGFILE%" 2>&1
-if errorlevel 1 (
+if "%PATCH_SPELL_TABLE%"=="1" (
+    call :log "[8/12] Patching spell table entries in BLAZE.ALL..."
     call :log ""
-    call :log "[ERROR] Spell table patch failed!"
-    goto :error
-)
 
-call :log ""
-call :log "[OK] Spell table entries processed"
-call :log ""
+    py -3 Data\spells\patch_spell_table.py >> "%LOGFILE%" 2>&1
+    if errorlevel 1 (
+        call :log ""
+        call :log "[ERROR] Spell table patch failed!"
+        goto :error
+    )
+
+    call :log ""
+    call :log "[OK] Spell table entries processed"
+    call :log ""
+) else (
+    call :log "[8/12] Spell table patch SKIPPED (set PATCH_SPELL_TABLE=1 to enable)"
+    call :log ""
+)
 
 REM ========================================================================
 REM Step 9: Patch trap/environmental damage in BLAZE.ALL
 REM ========================================================================
-call :log "[9/12] Patching trap damage in BLAZE.ALL..."
-call :log ""
-
-py -3 Data\trap_damage\patch_trap_damage.py >> "%LOGFILE%" 2>&1
-if errorlevel 1 (
+if "%PATCH_TRAP_DAMAGE%"=="1" (
+    call :log "[9/12] Patching trap damage in BLAZE.ALL..."
     call :log ""
-    call :log "[ERROR] Trap damage patch failed!"
-    goto :error
-)
 
-call :log ""
-call :log "[OK] Trap damage processed"
-call :log ""
+    py -3 Data\trap_damage\patch_trap_damage.py >> "%LOGFILE%" 2>&1
+    if errorlevel 1 (
+        call :log ""
+        call :log "[ERROR] Trap damage patch failed!"
+        goto :error
+    )
+
+    call :log ""
+    call :log "[OK] Trap damage processed"
+    call :log ""
+) else (
+    call :log "[9/12] Trap damage patch SKIPPED (set PATCH_TRAP_DAMAGE=1 to enable)"
+    call :log ""
+)
 
 REM ========================================================================
 REM Step 10: Create fresh patched BIN from clean original
