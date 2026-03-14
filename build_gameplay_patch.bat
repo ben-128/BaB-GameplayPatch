@@ -8,7 +8,6 @@ REM Optional patches (set to 1 to enable)
 REM ========================================================================
 set PATCH_LOOT_TIMER=1
 set TEST_SPELL_FREEZE=0
-set EXPAND_ELITE_SLOT=0
 set PATCH_SPELL_TABLE=1
 set PATCH_TRAP_DAMAGE=1
 
@@ -82,38 +81,6 @@ call :log ""
 call :log "[OK] Clean BLAZE.ALL copied to work folder"
 call :log ""
 
-REM ========================================================================
-REM Step 1b: Expand Cavern F1 Area 1 for Elite Shaman (4th monster slot)
-REM ========================================================================
-if "%EXPAND_ELITE_SLOT%"=="1" (
-    call :log "[1b/12] Expanding Cavern F1 Area 1 (+140 bytes for E-Shaman slot)..."
-    call :log ""
-
-    py -3 Data\formations\Scripts\add_elite_slot_cavern_f1a1.py >> "%LOGFILE%" 2>&1
-    if errorlevel 1 (
-        call :log ""
-        call :log "[ERROR] Elite Shaman slot expansion failed!"
-        goto :error
-    )
-
-    call :log ""
-    call :log "[OK] Cavern F1 Area 1 expanded with E-Shaman slot"
-    call :log ""
-) else (
-    call :log "[1b/12] Elite Shaman slot expansion SKIPPED - reverting JSON to N=3..."
-    call :log ""
-
-    py -3 Data\formations\Scripts\add_elite_slot_cavern_f1a1.py --no-expand >> "%LOGFILE%" 2>&1
-    if errorlevel 1 (
-        call :log ""
-        call :log "[ERROR] JSON revert to N=3 failed!"
-        goto :error
-    )
-
-    call :log ""
-    call :log "[OK] JSON reverted to N=3 (set EXPAND_ELITE_SLOT=1 to enable expansion)"
-    call :log ""
-)
 
 REM ========================================================================
 REM Step 2: Patch Fate Coin Shop prices
