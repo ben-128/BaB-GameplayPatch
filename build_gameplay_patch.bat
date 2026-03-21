@@ -6,7 +6,7 @@ REM chcp 65001 >NUL
 REM ========================================================================
 REM Optional patches (set to 1 to enable)
 REM ========================================================================
-set PATCH_LOOT_TIMER=1
+set PATCH_LOOT_TIMER=0
 set TEST_SPELL_FREEZE=0
 set PATCH_SPELL_TABLE=1
 set PATCH_TRAP_DAMAGE=1

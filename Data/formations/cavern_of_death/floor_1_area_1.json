@@ -20,71 +20,114 @@
   "area_id": "dc01",
   "formations": [
     {
-      "slots": [
-        0,
-        0,
-        0
+      "total": 5,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 0,
+          "monster": "Lv20.Goblin"
+        },
+        {
+          "count": 2,
+          "slot": 1,
+          "monster": "Goblin-Shaman"
+        }
       ],
-      "suffix": "00000000"
-    },
-    {
       "slots": [
         0,
         0,
-        1
-      ],
-      "suffix": "02000000"
-    },
-    {
-      "slots": [
+        0,
         1,
         1
       ],
-      "suffix": "02000000"
+      "suffix": "00000000",
+      "slot_types": [
+        "00000000",
+        "02000000",
+        "00000a00"
+      ]
     },
     {
+      "total": 5,
+      "composition": [
+        {
+          "count": 5,
+          "slot": 2,
+          "monster": "Giant-Bat"
+        }
+      ],
       "slots": [
+        2,
         2,
         2,
         2,
         2
       ],
-      "suffix": "00000a00"
+      "suffix": "00000a00",
+      "slot_types": [
+        "00000000",
+        "02000000",
+        "00000a00"
+      ]
     },
     {
+      "total": 6,
+      "composition": [
+        {
+          "count": 3,
+          "slot": 0,
+          "monster": "Lv20.Goblin"
+        },
+        {
+          "count": 3,
+          "slot": 2,
+          "monster": "Giant-Bat"
+        }
+      ],
       "slots": [
+        0,
         0,
         0,
         2,
+        2,
         2
       ],
-      "suffix": "00000a00"
+      "suffix": "00000a00",
+      "slot_types": [
+        "00000000",
+        "02000000",
+        "00000a00"
+      ]
     },
     {
+      "total": 7,
+      "composition": [
+        {
+          "count": 2,
+          "slot": 0,
+          "monster": "Lv20.Goblin"
+        },
+        {
+          "count": 5,
+          "slot": 1,
+          "monster": "Goblin-Shaman"
+        }
+      ],
       "slots": [
+        0,
+        0,
+        1,
+        1,
         1,
         1,
         1
       ],
-      "suffix": "02000000"
-    },
-    {
-      "slots": [
-        0,
-        0,
-        1,
-        1
-      ],
-      "suffix": "02000000"
-    },
-    {
-      "slots": [
-        0,
-        0,
-        1,
-        2
-      ],
-      "suffix": "00000a00"
+      "suffix": "02000000",
+      "slot_types": [
+        "00000000",
+        "02000000",
+        "00000a00"
+      ]
     }
   ],
   "spawn_points_area_start": "0xf7aeb4",

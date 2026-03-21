@@ -1,4 +1,0 @@
-{
-    "chest_despawn_seconds": 40,
-    "_comment": "v14: Moderate value to test. 40s = 2000 frames = x2 multiplier if affects combat. Original: 20s. Max safe: 60s (x3)."
-}
