@@ -5,6 +5,14 @@
 
 ## Documentation technique
 
+### EXPAND_FORMATION_BUDGET.md (A TESTER)
+**Expansion du budget formations via relocation des donnees ZS**
+- Principe : deplacer gap+ZS dans l'espace libre pour agrandir formation_area_bytes
+- Configuration (per-area ou global)
+- Integration pipeline build (Step 6a)
+- Resultats : 23 areas, +130K bytes, +4079 slots potentiels
+- Plan de test in-game
+
 ### CUSTOM_FORMATIONS_WORKING.md
 **Guide complet des formations custom**
 - Comment créer des formations custom

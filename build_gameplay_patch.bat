@@ -177,6 +177,23 @@ call :log "[OK] Monster spawn groups patched in BLAZE.ALL"
 call :log ""
 
 REM ========================================================================
+REM Step 6a: Expand formation budgets (shift gap+ZS data into free ZS space)
+REM ========================================================================
+call :log "[6a/12] Expanding formation budgets..."
+call :log ""
+
+py -3 Data\formations\Scripts\expand_formation_budget.py --apply >> "%LOGFILE%" 2>&1
+if errorlevel 1 (
+    call :log ""
+    call :log "[ERROR] Formation budget expansion failed!"
+    goto :error
+)
+
+call :log ""
+call :log "[OK] Formation budgets expanded"
+call :log ""
+
+REM ========================================================================
 REM Step 6b: Patch formation templates in BLAZE.ALL
 REM ========================================================================
 call :log "[6b/12] Patching formation templates in BLAZE.ALL..."
