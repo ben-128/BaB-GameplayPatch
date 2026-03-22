@@ -47,8 +47,9 @@ SUFFIX_SIZE = 4
 # e.g. "cavern_of_death/floor_1_area_1": 360
 AREA_EXPANSIONS = {}
 
-# Default expansion: use all available free space (minus safety margin)
-DEFAULT_EXPANSION = None  # None = max available
+# Default expansion: DISABLED - shift approach crashes due to bytecode refs
+# See memory/formation_expansion_test.md for test results
+DEFAULT_EXPANSION = 0  # 0 = skip all
 SAFETY_MARGIN = 256       # keep at least this many free bytes in ZS region
 
 # Areas with FM/ZS overlap - skip in phase 1
@@ -326,8 +327,83 @@ def compute_area_layout(area, area_end_map, data=None):
     }
 
 
+def scan_subtable_region(data, script_start, root_entries, shift_point, area_end,
+                         subtable_region_end, verbose=False):
+    """Scan the full sub-table region for offsets missed by the structured scanner.
+
+    The structured scanner stops at two consecutive zeros or values >= 0x10000,
+    but the sub-table array can have config/flag values (>= 0x10000) interspersed
+    between valid offsets. This function scans the entire sub-table region,
+    including ALL uint32 values < 0x10000.
+
+    IMPORTANT: Only scans the sub-table region (between first sub-table root
+    entry and the first bytecode root entry after all sub-tables). Does NOT
+    scan bytecode/config blocks which contain non-offset values < 0x10000.
+
+    Returns dict: file_offset -> value for values >= shift_point.
+    """
+    # Classify root entries as sub-table or bytecode.
+    # A sub-table must have at least 1 non-zero entry < 0x10000.
+    subtable_vals = []
+    bytecode_vals = []
+
+    for idx, val in root_entries:
+        if val == 0:
+            continue
+        sub_abs = script_start + val
+        if sub_abs + 4 > len(data):
+            continue
+        # Check if this root entry points to a real sub-table:
+        # must have at least 1 non-zero small value in first few entries
+        has_nonzero = False
+        for i in range(min(4, 256)):
+            ev = struct.unpack_from('<I', data, sub_abs + i * 4)[0]
+            if ev >= 0x10000:
+                break
+            if ev > 0:
+                has_nonzero = True
+                break
+        if has_nonzero:
+            subtable_vals.append(val)
+        else:
+            bytecode_vals.append(val)
+
+    if not subtable_vals:
+        return {}
+
+    region_start_rel = min(subtable_vals)
+    # Region end is passed in (computed from structured scan results)
+    region_end_rel = subtable_region_end
+
+    if verbose:
+        print("    Sub-table region: [{}, {}) ({} bytes)".format(
+            region_start_rel, region_end_rel,
+            region_end_rel - region_start_rel))
+
+    # Scan the region for all uint32 < 0x10000 that are >= shift_point,
+    # point to 4-byte aligned targets (filters out bytecode operands),
+    # and stay within the area boundary
+    max_offset = area_end - script_start
+    offsets = {}
+    for rel_off in range(region_start_rel, region_end_rel, 4):
+        pos = script_start + rel_off
+        if pos + 4 > len(data):
+            break
+        val = struct.unpack_from('<I', data, pos)[0]
+        if 0 < val < 0x10000 and val >= shift_point and val < max_offset:
+            target = script_start + val
+            if target % 4 == 0:
+                offsets[pos] = val
+
+    if verbose:
+        print("    Sub-table region scan: {} offsets >= shift_point".format(
+            len(offsets)))
+
+    return offsets
+
+
 def find_offsets_to_patch(data, layout, verbose=False):
-    """Find all structured table offsets that need patching.
+    """Find all offsets that need patching (structured + sub-table region scan).
 
     Returns dict of file_offset -> current_value for offsets >= shift_point.
     """
@@ -347,15 +423,84 @@ def find_offsets_to_patch(data, layout, verbose=False):
     structured = scan_structured_offsets(
         data, script_start, script_size, verbose=verbose)
 
-    # Collect all offsets >= shift_point
+    # Collect structured offsets >= shift_point
     offsets_to_patch = {}
     for file_off, val in structured.items():
         if val >= shift_point:
             offsets_to_patch[file_off] = val
 
+    structured_count = len(offsets_to_patch)
+
+    # Scan the full sub-table region for offsets missed by structured scanner
+    # (sub-tables can have config values >= 0x10000 interspersed, which cause
+    # the structured scanner to stop early, missing valid offsets after the gap)
+    area_end = layout["area_end"]
+
+    # Compute the actual sub-table region end from the structured scan.
+    root_end = script_start + len(read_root_table(data, script_start, script_size)) * 4
+    subtable_positions = [pos for pos in structured.keys() if pos >= root_end]
+    subtable_region_end_rel = (max(subtable_positions) - script_start + 4) if subtable_positions else 0
+
+    root_entries = read_root_table(data, script_start, script_size)
+    region = scan_subtable_region(
+        data, script_start, root_entries, shift_point, area_end,
+        subtable_region_end_rel, verbose=verbose)
+
+    # Additionally, scan bytecode/config blocks for CONFIRMED offsets:
+    # Only include values that are aligned AND point to valid record
+    # boundaries (start with FFFFFFFF or 00000000).
+    bytecode_extra = 0
+    for idx, val in root_entries:
+        if val == 0:
+            continue
+        sub_abs = script_start + val
+        if sub_abs + 4 > len(data):
+            continue
+        first_word = struct.unpack_from('<I', data, sub_abs)[0]
+        # Skip sub-tables (already scanned above)
+        has_nonzero = False
+        for ci in range(min(4, 256)):
+            ev = struct.unpack_from('<I', data, sub_abs + ci * 4)[0]
+            if ev >= 0x10000:
+                break
+            if ev > 0:
+                has_nonzero = True
+                break
+        if has_nonzero:
+            continue  # sub-table, already handled
+
+        # This is a bytecode/config block. Determine its size.
+        sorted_root_vals = sorted(v for _, v in root_entries if v > val)
+        block_end_rel = sorted_root_vals[0] if sorted_root_vals else shift_point
+        block_end_abs = script_start + block_end_rel
+
+        # Scan block for aligned offsets pointing to valid record boundaries
+        for pos in range(sub_abs, block_end_abs - 3, 4):
+            bval = struct.unpack_from('<I', data, pos)[0]
+            if bval >= shift_point and bval < (area_end - script_start):
+                target = script_start + bval
+                if target % 4 == 0 and target + 4 <= len(data):
+                    # Check target starts with a valid record marker
+                    target_word = struct.unpack_from('<I', data, target)[0]
+                    if target_word == 0xFFFFFFFF or target_word == 0x00000000:
+                        if pos not in offsets_to_patch:
+                            offsets_to_patch[pos] = bval
+                            bytecode_extra += 1
+
+    if verbose and bytecode_extra > 0:
+        print("    Bytecode block scan: {} confirmed offsets".format(
+            bytecode_extra))
+
+    extra = 0
+    for file_off, val in region.items():
+        if file_off not in offsets_to_patch:
+            offsets_to_patch[file_off] = val
+            extra += 1
+
     if verbose:
-        print("    shift_point = {} (0x{:X}), {} offsets >= shift_point".format(
-            shift_point, shift_point, len(offsets_to_patch)))
+        print("    shift_point = {} (0x{:X}), {} structured + {} extra = {} total offsets".format(
+            shift_point, shift_point, structured_count, extra,
+            len(offsets_to_patch)))
 
     return offsets_to_patch
 

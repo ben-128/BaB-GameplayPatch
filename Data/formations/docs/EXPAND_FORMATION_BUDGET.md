@@ -1,146 +1,89 @@
-# Expansion du budget formations (A TESTER)
+# Expansion du budget formations — TOUTES APPROCHES ECHOUEES
 
-**Statut : Implementation terminee, en attente de test in-game**
+**Statut : ABANDONNE — aucune methode viable trouvee (2026-03-22)**
 
-## Principe
+Le budget formations ne peut PAS etre etendu. Toutes les approches testees
+ont echoue. Ce document explique pourquoi.
 
-Chaque area a un budget fixe `formation_area_bytes` qui limite le nombre de
-monstres dans les encounters. Les zone spawns ont souvent des milliers de
-bytes libres en fin de region.
+## Contexte
 
-Le script `expand_formation_budget.py` deplace le gap + les donnees ZS vers
-la droite dans cet espace libre, ce qui agrandit `formation_area_bytes` sans
-changer la taille du fichier.
+Chaque area a un budget fixe `formation_area_bytes` (ex: 896 bytes pour
+Cavern F1 A1 = max 27 slots). L'objectif etait d'augmenter ce budget pour
+permettre plus de monstres par encounter.
 
-```
-Avant:  [SCRIPT][SP][FM         ][gap][ZS_used ... ZS_free    ]
-Apres:  [SCRIPT'][SP][FM ... +N  ][gap decale][ZS_used ...] (N bytes free en moins)
-```
+## Approche 1 : Shift gap+ZS dans espace "libre" — ECHOUE
 
-Les offsets dans les tables du script area (relatifs a script_start) qui
-pointent au-dela de FM_end sont incrementes de N.
+### Principe
+Deplacer le gap + zone spawns vers la droite dans l'espace libre ZS pour
+agrandir la zone formations.
 
-## Utilisation
+### Cause d'echec : L'ESPACE LIBRE N'EXISTE PAS
+L'extracteur de zone spawns ne capture que ~21% des vrais ZS records.
+Les ~20,000 bytes "libres" apres `zs_used_end` contiennent des donnees
+de spawn vivantes (87% non-zero).
 
-### Dry-run (voir les changements sans rien modifier)
+Le shift ecrasait ces donnees → crash immediat.
 
-```
-py -3 Data/formations/Scripts/expand_formation_budget.py
-```
+| Area | JSON zs_bytes | Donnees reelles | Donnees cachees |
+|------|--------------|-----------------|-----------------|
+| Cavern F1 A1 | 5,416 B | 25,414 B | 79% invisible |
+| Cavern F1 A2 | 3,016 B | 23,016 B | 87% invisible |
+| Forest F1 A1 | 5,488 B | 25,488 B | 78% invisible |
 
-Ajouter `--verbose` pour voir le detail des tables d'offsets scannees.
+### Tests effectues (tous crash)
+- 90 offsets (structurels) → CRASH
+- 112 offsets (+ gap sub-tables) → CRASH
+- 114 offsets (+ bytecode confirmes) → CRASH
+- 116 offsets (+ post-980) → CRASH
+- 118 offsets (brute-force complet) → CRASH
 
-### Appliquer les changements
+Aucune combinaison d'offsets ne corrige le crash car le probleme
+est la destruction des donnees ZS cachees, pas les offsets.
 
-```
-py -3 Data/formations/Scripts/expand_formation_budget.py --apply
-```
+## Approche 2 : Scatter-write dans espace ZS — ECHOUE
 
-Cela modifie :
-- `output/BLAZE.ALL` (shift binaire + patch offsets)
-- Les JSON de chaque area expandee (formation_area_bytes, zone_spawns offsets, etc.)
+### Principe
+Ecrire les formations supplementaires dans l'espace ZS sans rien deplacer,
+et modifier les pointeurs de la offset table.
 
-### Pipeline build
+### Cause d'echec : LE MOTEUR SCANNE SEQUENTIELLEMENT
+- Les offsets individuels des 8 formations NE SONT PAS stockes dans
+  le binaire (aucun uint32 correspondant trouve)
+- Seul `fm_start` (offset 1376) existe a script+292
+- Le moteur trouve les formations par scan sequentiel des marqueurs
+  FFFFFFFF dans la zone FM contigue
+- Les formations DOIVENT etre dans la zone FM, pas ailleurs
 
-Le script est integre dans `build_gameplay_patch.bat` en tant que **Step 6a**,
-juste avant `patch_formations.py` (Step 6b). L'ordre est important :
+### Decouverte supplementaire
+Les entrees Root[4]-Root[11] de la root table sont des pointeurs vers
+des sous-tables du systeme d'encounters, PAS des offsets de formations.
+`skip_offset_table_update: true` existait pour empecher leur corruption.
 
-1. Step 6a : expand_formation_budget.py (agrandit le budget dans le binaire ET les JSON)
-2. Step 6b : patch_formations.py (lit les JSON mis a jour, remplit le budget elargi)
+## Approche 3 : Recuperer le gap FM→ZS (420 bytes) — ECHOUE
 
-### Configuration
+### Principe
+Le gap entre formations et zone spawns (420 bytes) pourrait etre
+recupere pour agrandir la zone formations.
 
-Dans le script, trois variables de configuration :
+### Tests effectues
+- Gap entier zero (420B) → CRASH au loading de la zone
+- Moitie du gap zero (228B, +192 a +420) → loading tres long puis CRASH
 
-| Variable | Default | Description |
-|----------|---------|-------------|
-| `AREA_EXPANSIONS` | `{}` | Dict area_key -> bytes. Ex: `"cavern_of_death/floor_1_area_1": 360` |
-| `DEFAULT_EXPANSION` | `None` | `None` = max dispo, un entier = N bytes fixe, `0` = skip sauf AREA_EXPANSIONS |
-| `SAFETY_MARGIN` | `256` | Garde au moins N bytes libres dans la region ZS |
+Le gap contient des donnees structurees utilisees par le moteur :
+- +0 a +192 : config/offset pairs (critique pour le loading)
+- +192 a +420 : records spawn supplementaires (bytes 0x02/0xFF markers)
 
-Exemple : tester sur une seule area :
-```python
-AREA_EXPANSIONS = {"cavern_of_death/floor_1_area_1": 360}
-DEFAULT_EXPANSION = 0  # skip les autres
-```
+## Conclusion
 
-## Resultats dry-run (2026-03-22)
+Le budget `formation_area_bytes` est une **limite dure du moteur**.
+Aucun espace contigu n'est recuperable dans la structure de l'area.
 
-23 areas expandables sur 37 (10 overlap skippees, 4 sans frontiere).
+Pour depasser cette limite, il faudrait reverse-engineer le code
+overlay MIPS pour modifier l'allocation memoire du moteur lui-meme.
 
-| Donjon | Area | Gain budget | Gain slots | Offsets patches |
-|--------|------|-------------|------------|-----------------|
-| Ancient Ruins | Area 1 | +7,376 B | +230 | 112 |
-| Castle of Vamp | Floor 2 A1 | +11,828 B | +369 | 270 |
-| Castle of Vamp | Floor 3 A1 | +3,604 B | +112 | 80 |
-| Castle of Vamp | Floor 3 A2 | +416 B | +13 | 38 |
-| Castle of Vamp | Floor 5 A4 | +6,392 B | +199 | 187 |
-| Cavern of Death | Floor 1 A1 | +5,728 B | +179 | 90 |
-| Cavern of Death | Floor 1 A2 | +7,596 B | +237 | 140 |
-| Cavern of Death | Floor 2 A1 | +9,524 B | +297 | 177 |
-| Cavern of Death | Floor 3 A1 | +524 B | +16 | 4 |
-| Cavern of Death | Floor 4 A1 | +192 B | +6 | 10 |
-| Cavern of Death | Floor 5 A1 | +492 B | +15 | 29 |
-| Cavern of Death | Floor 7 A2 | +2,052 B | +64 | 43 |
-| Forest | Floor 1 A1 | +7,312 B | +228 | 194 |
-| Forest | Floor 1 A4 | +10,248 B | +320 | 128 |
-| Forest | Floor 2 A2 | +8,236 B | +257 | 170 |
-| Hall of Demons | Area 3 | +5,440 B | +170 | 141 |
-| Hall of Demons | Area 4 | +3,784 B | +118 | 76 |
-| Hall of Demons | Area 8 | +7,112 B | +222 | 103 |
-| Hall of Demons | Area 9 | +9,508 B | +297 | 202 |
-| Tower | Area 2 | +7,524 B | +235 | 138 |
-| Tower | Area 3 | +5,404 B | +168 | 7 |
-| Tower | Area 6 | +4,776 B | +149 | 100 |
-| Tower | Area 9 | +5,564 B | +174 | 93 |
+## Script expand_formation_budget.py
 
-**Total : +130,632 bytes, +4,079 slots potentiels**
-
-## Areas skippees
-
-### Overlap FM/ZS (10 areas)
-Ces areas ont `formation_area_bytes` qui deborde dans la region zone_spawns.
-Necessitent une analyse specifique.
-
-- sealed_cave/area_8, area_6, area_7, area_2
-- hall_of_demons/area_1, area_7
-- castle_of_vamp/floor_5_area_1
-- cavern_of_death/floor_7_area_3
-- tower/area_8
-- forest/floor_2_area_1
-
-### Dernieres areas par donjon (4 areas)
-Pas de frontiere connue (pas de next area pour calculer l'espace libre).
-
-- ancient_ruins/area_2
-- hall_of_demons/area_11
-- tower/area_11
-- undersea/area_2
-
-## Comment ca marche (technique)
-
-### Detection de script_start
-Le script scanne depuis `group_offset` par pas de 96 bytes (taille d'une stat
-entry) pour trouver le debut de la root table (petits uint32 < 0x10000).
-Cela gere les areas avec des stat entries "cachees" non listees dans le JSON.
-
-### Scan des offsets
-1. **Root table** : premiers ~12 uint32 LE, termines par deux zeros consecutifs
-2. **Sous-tables** : chaque root entry non-nulle pointe vers un bloc. Si le
-   premier uint32 du bloc est < 0x10000, c'est une sous-table d'offsets.
-   Sinon c'est un bloc bytecode/config (ignore).
-3. Seuls les offsets >= `shift_point` (FM_end - script_start) sont patches.
-
-### Validation post-expansion
-Apres le shift, le script re-scanne les tables. Aucun offset ne doit pointer
-dans la zone liberee [old_shift_point, new_shift_point).
-
-## Plan de test
-
-1. **Test minimal** : configurer `AREA_EXPANSIONS = {"cavern_of_death/floor_1_area_1": 360}`
-   et `DEFAULT_EXPANSION = 0`. Builder, lancer le jeu, entrer dans Cavern F1 A1.
-2. **Verifier** : combats normaux, zone spawns fonctionnels, pas de crash.
-3. **Test elargi** : remettre `DEFAULT_EXPANSION = None`, builder, tester
-   plusieurs donjons (Cavern, Forest, Tower).
-4. **Si OK** : la feature est validee, les formations editees peuvent
-   utiliser le budget elargi.
+Le script reste dans le repo a titre de reference mais est **desactive** :
+- `AREA_EXPANSIONS = {}` (aucune area configuree)
+- `DEFAULT_EXPANSION = 0` (skip toutes les areas)
+- Le Step 6a du build pipeline ne fait rien
