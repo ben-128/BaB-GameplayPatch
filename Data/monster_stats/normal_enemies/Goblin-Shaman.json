@@ -44,7 +44,7 @@
     "_stat20_comment": "[Défaut: 12] Effet inconnu",
     "stat21": 14,
     "_stat21_comment": "[Défaut: 14] Inconnu",
-    "stat22_magic_atk": 300,
+    "stat22_magic_atk": 20,
     "_stat22_magic_atk_comment": "[Défaut: 10] [BOOST TEST: 300] Attaque magique? (Dark-Wizard=400, Metal-Slime=320)",
     "stat23": 17,
     "_stat23_comment": "[Défaut: 17] Inconnu",

@@ -1096,6 +1096,11 @@ def main():
         has_zone_spawns = bool(zone_spawns)
         has_overrides = bool(overrides)
 
+        if area.get("disabled"):
+            print("  [SKIP] {} - {} (disabled)".format(
+                area.get("level_name", "?"), area.get("name", "?")))
+            continue
+
         if (not has_formations and not has_spawn_points
                 and not has_zone_spawns and not has_overrides):
             continue

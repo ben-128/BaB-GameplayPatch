@@ -10,6 +10,8 @@ set PATCH_LOOT_TIMER=0
 set TEST_SPELL_FREEZE=0
 set PATCH_SPELL_TABLE=1
 set PATCH_TRAP_DAMAGE=1
+set PATCH_FORMATIONS=0
+set PATCH_SPAWN_GROUPS=0
 
 REM ========================================================================
 REM Initialize logging
@@ -160,55 +162,62 @@ call :log "[OK] Monster stats patched in BLAZE.ALL"
 call :log ""
 
 REM ========================================================================
-REM Step 6: Patch monster spawn groups in BLAZE.ALL
+REM Step 6: Patch monster spawn groups in BLAZE.ALL (OPTIONAL)
 REM ========================================================================
-call :log "[6/12] Patching monster spawn groups in BLAZE.ALL..."
-call :log ""
-
-py -3 WIP\level_design\spawns\scripts\patch_spawn_groups.py >> "%LOGFILE%" 2>&1
-if errorlevel 1 (
+if "%PATCH_SPAWN_GROUPS%"=="1" (
+    call :log "[6/12] Patching monster spawn groups in BLAZE.ALL..."
     call :log ""
-    call :log "[ERROR] Monster spawn groups patch failed!"
-    goto :error
+
+    py -3 WIP\level_design\spawns\scripts\patch_spawn_groups.py >> "%LOGFILE%" 2>&1
+    if errorlevel 1 (
+        call :log ""
+        call :log "[ERROR] Monster spawn groups patch failed!"
+        goto :error
+    )
+
+    call :log ""
+    call :log "[OK] Monster spawn groups patched in BLAZE.ALL"
+    call :log ""
+) else (
+    call :log "[6/12] Monster spawn groups patch SKIPPED (set PATCH_SPAWN_GROUPS=1 to enable)"
+    call :log ""
 )
 
-call :log ""
-call :log "[OK] Monster spawn groups patched in BLAZE.ALL"
-call :log ""
-
 REM ========================================================================
-REM Step 6a: Expand formation budgets (shift gap+ZS data into free ZS space)
+REM Step 6a+6b: Formation budget expansion + template patching (OPTIONAL)
 REM ========================================================================
-call :log "[6a/12] Expanding formation budgets..."
-call :log ""
-
-py -3 Data\formations\Scripts\expand_formation_budget.py --apply >> "%LOGFILE%" 2>&1
-if errorlevel 1 (
+if "%PATCH_FORMATIONS%"=="1" (
+    call :log "[6a/12] Expanding formation budgets..."
     call :log ""
-    call :log "[ERROR] Formation budget expansion failed!"
-    goto :error
-)
 
-call :log ""
-call :log "[OK] Formation budgets expanded"
-call :log ""
+    py -3 Data\formations\Scripts\expand_formation_budget.py --apply >> "%LOGFILE%" 2>&1
+    if errorlevel 1 (
+        call :log ""
+        call :log "[ERROR] Formation budget expansion failed!"
+        goto :error
+    )
 
-REM ========================================================================
-REM Step 6b: Patch formation templates in BLAZE.ALL
-REM ========================================================================
-call :log "[6b/12] Patching formation templates in BLAZE.ALL..."
-call :log ""
-
-py -3 Data\formations\Scripts\patch_formations.py >> "%LOGFILE%" 2>&1
-if errorlevel 1 (
     call :log ""
-    call :log "[ERROR] Formation templates patch failed!"
-    goto :error
-)
+    call :log "[OK] Formation budgets expanded"
+    call :log ""
 
-call :log ""
-call :log "[OK] Formation templates patched in BLAZE.ALL"
-call :log ""
+    call :log "[6b/12] Patching formation templates in BLAZE.ALL..."
+    call :log ""
+
+    py -3 Data\formations\Scripts\patch_formations.py >> "%LOGFILE%" 2>&1
+    if errorlevel 1 (
+        call :log ""
+        call :log "[ERROR] Formation templates patch failed!"
+        goto :error
+    )
+
+    call :log ""
+    call :log "[OK] Formation templates patched in BLAZE.ALL"
+    call :log ""
+) else (
+    call :log "[6a+6b/12] Formation patching SKIPPED (set PATCH_FORMATIONS=1 to enable)"
+    call :log ""
+)
 
 REM ========================================================================
 REM Step 7: Patch chest despawn timer in BLAZE.ALL overlay code (OPTIONAL)
