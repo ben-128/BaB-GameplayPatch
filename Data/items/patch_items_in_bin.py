@@ -171,36 +171,18 @@ def patch_blaze_all(items):
         if not new_desc or not item_name:
             continue
 
-        # Patcher TOUTES les occurrences valides de cet item
-        all_offsets = item.get('all_offsets', [])
-        if not all_offsets:
-            # Fallback sur offset_decimal si all_offsets n'existe pas
-            offset = item.get('offset_decimal', 0)
-            if offset > 0:
-                all_offsets = [f"0x{offset:08X}"]
-
-        # Item data lives in 0x006C0000-0x006E0000 range
-        # Offsets outside this range are false positives (overlay code, scripts, etc.)
-        ITEM_RANGE_START = 0x006C0000
-        ITEM_RANGE_END   = 0x006E0000
+        # Use only the verified primary offset (offset_decimal)
+        # all_offsets contains false positives for short names (e.g. "Robe"
+        # matches in overlay code, scripts, monster data across BLAZE.ALL)
+        offset = item.get('offset_decimal', 0)
 
         item_patched = False
-        for offset_hex in all_offsets:
-            try:
-                offset = int(offset_hex, 16)
-                if offset <= 0:
-                    continue
-                if not (ITEM_RANGE_START <= offset <= ITEM_RANGE_END):
-                    continue  # Skip false positives outside item data range
-                # Detect what type of data is at this offset
-                offset_type = detect_offset_type(blaze_data, offset, item_name)
-                if offset_type is None:
-                    continue
+        if offset > 0:
+            offset_type = detect_offset_type(blaze_data, offset, item_name)
+            if offset_type is not None:
                 if patch_item_description(blaze_data, offset, item_name, new_desc, offset_type):
                     patched_occurrences += 1
                     item_patched = True
-            except (ValueError, TypeError):
-                continue
 
         if item_patched:
             patched_items += 1

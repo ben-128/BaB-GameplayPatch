@@ -87,36 +87,31 @@ def main():
 
         seen_names.add(name)
 
-        # Find ALL occurrences of this item
-        occurrences = find_all_item_occurrences(data, name)
-
-        if not occurrences:
+        # Use only the verified primary offset (offset_decimal)
+        # Searching by name produces false positives for short names
+        offset = item.get('offset_decimal', 0)
+        if offset <= 0:
             continue
 
-        total_occurrences += len(occurrences)
+        total_occurrences += 1
         items_processed += 1
 
-        # Patch each occurrence
-        patched_this_item = 0
-        for offset in occurrences:
-            price_offset = offset + BASE_PRICE_OFFSET
-            if price_offset + 2 > len(data):
-                continue
+        price_offset = offset + BASE_PRICE_OFFSET
+        if price_offset + 2 > len(data):
+            continue
 
-            current_price = struct.unpack('<H', data[price_offset:price_offset+2])[0]
+        current_price = struct.unpack('<H', data[price_offset:price_offset+2])[0]
 
-            # Skip if already 0
-            if current_price == 0:
-                continue
+        # Skip if already 0
+        if current_price == 0:
+            continue
 
-            # Set to 0
-            struct.pack_into('<H', data, price_offset, 0)
-            patched_this_item += 1
-            total_patched += 1
+        # Set to 0
+        struct.pack_into('<H', data, price_offset, 0)
+        total_patched += 1
 
-        # Show progress for items with multiple copies
-        if items_processed <= 5 or len(occurrences) > 1:
-            print(f"  {name}: {len(occurrences)} copies, {patched_this_item} patched")
+        if items_processed <= 5:
+            print(f"  {name}: price {current_price} -> 0")
 
     print(f"  ...")
     print()
