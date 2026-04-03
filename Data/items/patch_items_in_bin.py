@@ -34,13 +34,19 @@ def detect_offset_type(data, offset, item_name):
         return "direct_text"
 
     # Check if item name is at offset+0x00 (format 1 or 2)
+    # AND validate 128-byte entry structure: b3F=0x00, b40=0x0C (separator)
+    if offset + 0x41 >= len(data):
+        return None
     name_data = data[offset:offset + 32]
     null_pos = name_data.find(b'\x00')
     if null_pos > 0:
         try:
             found_name = name_data[:null_pos].decode('ascii', errors='ignore')
             if found_name == item_name:
-                return "item_entry"
+                # Structural validation: real item entries have 0x00 at +0x3F
+                # and separator byte 0x0C at +0x40
+                if data[offset + 0x3F] == 0x00 and data[offset + 0x40] == 0x0C:
+                    return "item_entry"
         except:
             pass
 
@@ -171,18 +177,29 @@ def patch_blaze_all(items):
         if not new_desc or not item_name:
             continue
 
-        # Use only the verified primary offset (offset_decimal)
-        # all_offsets contains false positives for short names (e.g. "Robe"
-        # matches in overlay code, scripts, monster data across BLAZE.ALL)
-        offset = item.get('offset_decimal', 0)
+        # Patch ALL structurally valid occurrences of this item
+        # detect_offset_type() validates: item_entry requires b3F=0x00 + b40=0x0C,
+        # direct_text requires "Name/" prefix - both reject false positives
+        all_offsets = item.get('all_offsets', [])
+        if not all_offsets:
+            offset = item.get('offset_decimal', 0)
+            if offset > 0:
+                all_offsets = [f"0x{offset:08X}"]
 
         item_patched = False
-        if offset > 0:
-            offset_type = detect_offset_type(blaze_data, offset, item_name)
-            if offset_type is not None:
+        for offset_hex in all_offsets:
+            try:
+                offset = int(offset_hex, 16)
+                if offset <= 0:
+                    continue
+                offset_type = detect_offset_type(blaze_data, offset, item_name)
+                if offset_type is None:
+                    continue
                 if patch_item_description(blaze_data, offset, item_name, new_desc, offset_type):
                     patched_occurrences += 1
                     item_patched = True
+            except (ValueError, TypeError):
+                continue
 
         if item_patched:
             patched_items += 1

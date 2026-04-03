@@ -16,34 +16,25 @@ from pathlib import Path
 WORK_BLAZE = Path(__file__).parent.parent.parent / "output" / "BLAZE.ALL"
 ITEMS_JSON = Path(__file__).parent.parent / "items" / "all_items_clean.json"
 
-# Base price offset within item structure
+# Base price offset within item structure (only valid for item_entry format)
 BASE_PRICE_OFFSET = 0x88
 
-def find_all_item_occurrences(data: bytes, item_name: str) -> list:
-    """Find all occurrences of an item structure by searching for name pattern."""
-    # Item structures have name padded with nulls to 16 bytes
-    name_bytes = item_name.encode('ascii')
-    padding = 16 - len(name_bytes)
-    if padding > 0:
-        search_pattern = name_bytes + b'\x00' * padding
-    else:
-        search_pattern = name_bytes[:16]
 
-    # Item data lives in 0x006C0000-0x006E0000 range
-    # Offsets outside this are false positives (overlay code, scripts, etc.)
-    ITEM_RANGE_START = 0x006C0000
-    ITEM_RANGE_END   = 0x006E0000
-
-    occurrences = []
-    idx = ITEM_RANGE_START
-    while idx < min(ITEM_RANGE_END, len(data)):
-        idx = data.find(search_pattern, idx)
-        if idx == -1 or idx >= ITEM_RANGE_END:
-            break
-        occurrences.append(idx)
-        idx += 1
-
-    return occurrences
+def is_valid_item_entry(data: bytes, offset: int, item_name: str) -> bool:
+    """Validate that offset points to a real 128-byte item entry.
+    Checks: exact name match + structural markers (b3F=0x00, b40=0x0C)."""
+    if offset < 0 or offset + 0x89 >= len(data):
+        return False
+    # Check name
+    name_data = data[offset:offset + 32]
+    null_pos = name_data.find(b'\x00')
+    if null_pos <= 0:
+        return False
+    found_name = name_data[:null_pos].decode('ascii', errors='ignore')
+    if found_name != item_name:
+        return False
+    # Structural check: real item entries have 0x00 at +0x3F and 0x0C at +0x40
+    return data[offset + 0x3F] == 0x00 and data[offset + 0x40] == 0x0C
 
 def main():
     print("=" * 60)
@@ -87,31 +78,40 @@ def main():
 
         seen_names.add(name)
 
-        # Use only the verified primary offset (offset_decimal)
-        # Searching by name produces false positives for short names
-        offset = item.get('offset_decimal', 0)
-        if offset <= 0:
-            continue
+        # Patch ALL structurally valid item_entry occurrences
+        # (base price at +0x88 only exists in 128-byte item_entry format)
+        all_offsets = item.get('all_offsets', [])
+        if not all_offsets:
+            offset = item.get('offset_decimal', 0)
+            if offset > 0:
+                all_offsets = [f"0x{offset:08X}"]
 
-        total_occurrences += 1
         items_processed += 1
+        patched_this = 0
 
-        price_offset = offset + BASE_PRICE_OFFSET
-        if price_offset + 2 > len(data):
-            continue
+        for offset_hex in all_offsets:
+            try:
+                offset = int(offset_hex, 16)
+            except (ValueError, TypeError):
+                continue
+            if offset <= 0:
+                continue
+            if not is_valid_item_entry(data, offset, name):
+                continue
 
-        current_price = struct.unpack('<H', data[price_offset:price_offset+2])[0]
+            total_occurrences += 1
+            price_offset = offset + BASE_PRICE_OFFSET
+            current_price = struct.unpack('<H', data[price_offset:price_offset+2])[0]
 
-        # Skip if already 0
-        if current_price == 0:
-            continue
+            if current_price == 0:
+                continue
 
-        # Set to 0
-        struct.pack_into('<H', data, price_offset, 0)
-        total_patched += 1
+            struct.pack_into('<H', data, price_offset, 0)
+            total_patched += 1
+            patched_this += 1
 
-        if items_processed <= 5:
-            print(f"  {name}: price {current_price} -> 0")
+        if items_processed <= 5 and patched_this > 0:
+            print(f"  {name}: {patched_this} copies patched")
 
     print(f"  ...")
     print()
