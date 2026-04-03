@@ -367,6 +367,23 @@ if errorlevel 1 (
 call :log ""
 
 REM ========================================================================
+REM Step 13: Generate PPF3 patch file
+REM ========================================================================
+call :log "[13/13] Generating PPF3 patch file..."
+call :log ""
+
+py -3 make_ppf3.py >> "%LOGFILE%" 2>&1
+if errorlevel 1 (
+    call :log ""
+    call :log "[WARNING] PPF3 patch generation failed (non-critical)"
+) else (
+    call :log ""
+    call :log "[OK] PPF3 patch generated: output/BaB_Plus_Patch.ppf"
+)
+
+call :log ""
+
+REM ========================================================================
 REM Success!
 REM ========================================================================
 call :log "========================================================================"
@@ -378,6 +395,7 @@ call :log ""
 call :log "Fichiers crees:"
 call :log "  - output/BLAZE.ALL (patched)"
 call :log "  - output/Blaze ^& Blade - Patched.bin (ready for game)"
+call :log "  - output/BaB_Plus_Patch.ppf (distributable patch)"
 call :log ""
 call :log "Source:"
 call :log "  - Blaze ^& Blade - Eternal Quest (Europe).bin (clean original)"
