@@ -62,26 +62,48 @@ STATS_ORDER = [
 ]
 
 
-def patch_stats(data: bytearray, name_offset: int, stats: dict, name: str) -> bool:
-    """Patch monster stats in data at given name offset"""
+def parse_default(comment: str):
+    """Extract default value from comment like '[Défaut: 42] ...'"""
+    import re
+    m = re.search(r'\[D[ée]faut:\s*(-?\d+)\]', comment)
+    if m:
+        return int(m.group(1))
+    return None
+
+
+def patch_stats(data: bytearray, name_offset: int, stats: dict, name: str) -> int:
+    """Patch only modified stats (value != default) at given name offset.
+    Returns number of stats actually patched."""
     stats_base = name_offset + 0x10
+    patched_count = 0
 
     for i, stat_name in enumerate(STATS_ORDER):
-        if stat_name in stats:
-            value = stats[stat_name]
-            write_offset = stats_base + (i * 2)
+        if stat_name not in stats:
+            continue
 
-            if write_offset + 2 > len(data):
-                return False
+        value = stats[stat_name]
 
-            # Handle both negative and large positive values
-            if value < 0:
-                packed = struct.pack('<h', value)  # signed int16
-            else:
-                packed = struct.pack('<H', min(value, 65535))  # unsigned uint16, capped
-            data[write_offset:write_offset+2] = packed
+        # Check if value differs from default
+        comment_key = f"_{stat_name}_comment"
+        if comment_key in stats:
+            default_val = parse_default(stats[comment_key])
+            if default_val is not None and value == default_val:
+                continue  # Skip - value unchanged from vanilla
 
-    return True
+        write_offset = stats_base + (i * 2)
+
+        if write_offset + 2 > len(data):
+            return patched_count
+
+        # Handle both negative and large positive values
+        if value < 0:
+            packed = struct.pack('<h', value)  # signed int16
+        else:
+            packed = struct.pack('<H', min(value, 65535))  # unsigned uint16, capped
+        data[write_offset:write_offset+2] = packed
+        patched_count += 1
+
+    return patched_count
 
 
 def find_all_occurrences(data: bytes, name: str) -> list:
@@ -149,12 +171,16 @@ def main():
                 print(f"  WARNING: {name} - not found")
                 continue
 
-            # Patch at ALL locations
+            # Patch at ALL locations (only modified stats)
+            monster_stats_changed = 0
             for offset in offsets:
-                patch_stats(blaze_data, offset, stats, name)
+                monster_stats_changed += patch_stats(blaze_data, offset, stats, name)
 
-            total_patched += len(offsets)
-            print(f"  {name}: patched {len(offsets)} occurrence{'s' if len(offsets) > 1 else ''}")
+            if monster_stats_changed > 0:
+                total_patched += len(offsets)
+                print(f"  {name}: {monster_stats_changed} stats changed across {len(offsets)} occurrence{'s' if len(offsets) > 1 else ''}")
+            else:
+                print(f"  {name}: no modified stats (all values = default)")
 
         except Exception as e:
             print(f"  ERROR: {json_file.name}: {e}")

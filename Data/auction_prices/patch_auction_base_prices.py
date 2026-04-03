@@ -29,24 +29,18 @@ def find_all_item_occurrences(data: bytes, item_name: str) -> list:
     else:
         search_pattern = name_bytes[:16]
 
-    # Bad regions that are NOT item data (spells, UI strings, herb name lists)
-    BAD_RANGES = [
-        (0x00908000, 0x00910000),  # Spells area
-        (0x0090A000, 0x0090C000),  # UI strings, herb names list
-    ]
+    # Item data lives in 0x006C0000-0x006E0000 range
+    # Offsets outside this are false positives (overlay code, scripts, etc.)
+    ITEM_RANGE_START = 0x006C0000
+    ITEM_RANGE_END   = 0x006E0000
 
     occurrences = []
-    idx = 0
-    while True:
+    idx = ITEM_RANGE_START
+    while idx < min(ITEM_RANGE_END, len(data)):
         idx = data.find(search_pattern, idx)
-        if idx == -1:
+        if idx == -1 or idx >= ITEM_RANGE_END:
             break
-
-        # Check if this offset is in a bad region
-        in_bad_region = any(start <= idx < end for start, end in BAD_RANGES)
-
-        if not in_bad_region:
-            occurrences.append(idx)
+        occurrences.append(idx)
         idx += 1
 
     return occurrences

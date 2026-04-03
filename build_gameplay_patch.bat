@@ -12,6 +12,10 @@ set PATCH_SPELL_TABLE=1
 set PATCH_TRAP_DAMAGE=1
 set PATCH_FORMATIONS=0
 set PATCH_SPAWN_GROUPS=0
+set PATCH_MONSTER_STATS=1
+set PATCH_FATE_COIN_SHOP=1
+set PATCH_ITEMS=1
+set PATCH_AUCTION_PRICES=1
 
 REM ========================================================================
 REM Initialize logging
@@ -85,81 +89,98 @@ call :log ""
 
 
 REM ========================================================================
-REM Step 2: Patch Fate Coin Shop prices
+REM Step 2: Patch Fate Coin Shop prices (OPTIONAL)
 REM ========================================================================
-call :log "[2/12] Patching Fate Coin Shop prices..."
-call :log ""
-
-py -3 Data\fate_coin_shop\patch_fate_coin_shop.py >> "%LOGFILE%" 2>&1
-if errorlevel 1 (
+if "%PATCH_FATE_COIN_SHOP%"=="1" (
+    call :log "[2/12] Patching Fate Coin Shop prices..."
     call :log ""
-    call :log "[ERROR] Fate Coin Shop patch failed!"
-    goto :error
+
+    py -3 Data\fate_coin_shop\patch_fate_coin_shop.py >> "%LOGFILE%" 2>&1
+    if errorlevel 1 (
+        call :log ""
+        call :log "[ERROR] Fate Coin Shop patch failed!"
+        goto :error
+    )
+
+    call :log ""
+    call :log "[OK] Fate Coin Shop prices patched"
+    call :log ""
+) else (
+    call :log "[2/12] Fate Coin Shop patch SKIPPED (set PATCH_FATE_COIN_SHOP=1 to enable)"
+    call :log ""
 )
 
-call :log ""
-call :log "[OK] Fate Coin Shop prices patched"
-call :log ""
-
 REM ========================================================================
-REM Step 3: Patch Items descriptions
+REM Step 3: Patch Items descriptions (OPTIONAL)
 REM ========================================================================
-call :log "[3/12] Patching Items descriptions in BLAZE.ALL..."
-call :log ""
-
-cd Data\items
-py -3 patch_items_in_bin.py > "%TEMP%\items_patch_output.txt" 2>&1
-set ITEMS_ERRORLEVEL=%errorlevel%
-type "%TEMP%\items_patch_output.txt" >> "%LOGFILE%"
-cd ..\..
-
-if %ITEMS_ERRORLEVEL% neq 0 (
-    call :log ""
-    call :log "[ERROR] Items patch failed!"
-    goto :error
-)
-
-REM Extract patched count from output
 set ITEMS_PATCHED=0
-for /f "tokens=2 delims==" %%a in ('findstr "PATCHED_COUNT=" "%TEMP%\items_patch_output.txt"') do set ITEMS_PATCHED=%%a
-
-call :log ""
-call :log "[OK] Items descriptions patched (%ITEMS_PATCHED% items)"
-call :log ""
-
-REM ========================================================================
-REM Step 4: Patch auction base prices to 0
-REM ========================================================================
-call :log "[4/12] Patching auction base prices (set to 0)..."
-call :log ""
-
-py -3 Data\auction_prices\patch_auction_base_prices.py >> "%LOGFILE%" 2>&1
-if errorlevel 1 (
+if "%PATCH_ITEMS%"=="1" (
+    call :log "[3/12] Patching Items descriptions in BLAZE.ALL..."
     call :log ""
-    call :log "[ERROR] Auction base prices patch failed!"
-    goto :error
+
+    cd Data\items
+    py -3 patch_items_in_bin.py > "%TEMP%\items_patch_output.txt" 2>&1
+    cd ..\..
+
+    if errorlevel 1 (
+        call :log ""
+        call :log "[ERROR] Items patch failed!"
+        goto :error
+    )
+
+    for /f "tokens=2 delims==" %%a in ('findstr "PATCHED_COUNT=" "%TEMP%\items_patch_output.txt"') do set ITEMS_PATCHED=%%a
+
+    call :log ""
+    call :log "[OK] Items descriptions patched"
+    call :log ""
+) else (
+    call :log "[3/12] Items descriptions patch SKIPPED (set PATCH_ITEMS=1 to enable)"
+    call :log ""
 )
 
-call :log ""
-call :log "[OK] Auction base prices set to 0"
-call :log ""
-
 REM ========================================================================
-REM Step 5: Patch monster stats in BLAZE.ALL
+REM Step 4: Patch auction base prices to 0 (OPTIONAL)
 REM ========================================================================
-call :log "[5/12] Patching monster stats in BLAZE.ALL..."
-call :log ""
-
-py -3 Data\monster_stats\scripts\patch_monster_stats.py >> "%LOGFILE%" 2>&1
-if errorlevel 1 (
+if "%PATCH_AUCTION_PRICES%"=="1" (
+    call :log "[4/12] Patching auction base prices (set to 0)..."
     call :log ""
-    call :log "[ERROR] Monster stats patch failed!"
-    goto :error
+
+    py -3 Data\auction_prices\patch_auction_base_prices.py >> "%LOGFILE%" 2>&1
+    if errorlevel 1 (
+        call :log ""
+        call :log "[ERROR] Auction base prices patch failed!"
+        goto :error
+    )
+
+    call :log ""
+    call :log "[OK] Auction base prices set to 0"
+    call :log ""
+) else (
+    call :log "[4/12] Auction base prices patch SKIPPED (set PATCH_AUCTION_PRICES=1 to enable)"
+    call :log ""
 )
 
-call :log ""
-call :log "[OK] Monster stats patched in BLAZE.ALL"
-call :log ""
+REM ========================================================================
+REM Step 5: Patch monster stats in BLAZE.ALL (OPTIONAL)
+REM ========================================================================
+if "%PATCH_MONSTER_STATS%"=="1" (
+    call :log "[5/12] Patching monster stats in BLAZE.ALL..."
+    call :log ""
+
+    py -3 Data\monster_stats\scripts\patch_monster_stats.py >> "%LOGFILE%" 2>&1
+    if errorlevel 1 (
+        call :log ""
+        call :log "[ERROR] Monster stats patch failed!"
+        goto :error
+    )
+
+    call :log ""
+    call :log "[OK] Monster stats patched in BLAZE.ALL"
+    call :log ""
+) else (
+    call :log "[5/12] Monster stats patch SKIPPED (set PATCH_MONSTER_STATS=1 to enable)"
+    call :log ""
+)
 
 REM ========================================================================
 REM Step 6: Patch monster spawn groups in BLAZE.ALL (OPTIONAL)
