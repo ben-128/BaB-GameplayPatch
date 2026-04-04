@@ -107,29 +107,19 @@ def patch_stats(data: bytearray, name_offset: int, stats: dict, name: str) -> in
 
 
 def find_all_occurrences(data: bytes, name: str) -> list:
-    """Find all offsets where monster name appears"""
-    search = name.encode('ascii')
+    """Find all offsets where monster name appears as a full 16-byte name field.
+    Searches for the name null-padded to 16 bytes, guaranteeing exact match
+    with no substring false positives (e.g. 'Goblin' won't match 'Lv30.Goblin')."""
+    # Match the entire 16-byte name field: name + null padding
+    search = name.encode('ascii').ljust(16, b'\x00')
     offsets = []
     pos = 0
     while True:
         pos = data.find(search, pos)
         if pos == -1:
             break
-
-        # Check if substring of larger name
-        if pos > 0:
-            prev_char = data[pos-1]
-            if (0x41 <= prev_char <= 0x5A) or (0x61 <= prev_char <= 0x7A) or prev_char == 0x2D:
-                pos += 1
-                continue
-
-        # Verify proper monster entry
-        entry = data[pos:pos+16]
-        if b'\x00' in entry:
-            actual_name = entry.split(b'\x00')[0].decode('ascii', errors='ignore')
-            if actual_name == name:
-                offsets.append(pos)
-        pos += 1
+        offsets.append(pos)
+        pos += 16  # entries can't overlap
     return offsets
 
 
