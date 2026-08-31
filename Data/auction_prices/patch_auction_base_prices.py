@@ -34,7 +34,14 @@ def is_valid_item_entry(data: bytes, offset: int, item_name: str) -> bool:
     if found_name != item_name:
         return False
     # Structural check: real item entries have 0x00 at +0x3F and 0x0C at +0x40
-    return data[offset + 0x3F] == 0x00 and data[offset + 0x40] == 0x0C
+    if data[offset + 0x3F] != 0x00 or data[offset + 0x40] != 0x0C:
+        return False
+    # Some copies are CLIPPED at a CD sector boundary (0x800): the entry's tail
+    # (including +0x88 base price) is replaced by foreign data (TIM textures,
+    # pointer tables). Writing there corrupts area data and crashes the game.
+    # Every intact entry has marker halfword 0x0090 at +0x80 (verified 1512/1512
+    # entries in vanilla BLAZE.ALL); clipped copies never do.
+    return data[offset + 0x80:offset + 0x82] == b'\x90\x00'
 
 def main():
     print("=" * 60)

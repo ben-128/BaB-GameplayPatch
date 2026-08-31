@@ -77,6 +77,38 @@ def detect_description_format(data, offset, item_name):
     return "desc_only"  # Default to description only
 
 
+def writable_slot(data, desc_offset, hard_max=63):
+    """Compute how many bytes are safe to write at desc_offset.
+
+    A well-formed description slot is: printable ASCII text, a 0x00 terminator,
+    then zero padding up to the end of the entry. Some copies of item entries in
+    BLAZE.ALL are CLIPPED at a CD sector boundary (0x800) - the text is cut and
+    foreign data (TIM texture headers, pointer tables) starts immediately after.
+    Writing the full 63 bytes there destroys that data and crashes the game when
+    the area is loaded.
+
+    Returns (slot_bytes, clipped):
+      slot_bytes = number of bytes writable from desc_offset (terminator included)
+      clipped    = True if the vanilla text is cut off by foreign data
+    """
+    limit = min(len(data), desc_offset + hard_max)
+    i = desc_offset
+    while i < limit:
+        c = data[i]
+        if c == 0x00:
+            break
+        # 0x0D is used as a line break inside vanilla descriptions
+        if c != 0x0D and not (0x20 <= c <= 0x7E):
+            # foreign binary data - vanilla text was clipped here
+            return i - desc_offset, True
+        i += 1
+    # extend through the zero padding that follows the terminator
+    j = i
+    while j < limit and data[j] == 0x00:
+        j += 1
+    return j - desc_offset, False
+
+
 def patch_item_description(data, offset, item_name, new_description, offset_type, max_length=63):
     """Patch la description d'un item dans les données binaires
 
@@ -101,13 +133,28 @@ def patch_item_description(data, offset, item_name, new_description, offset_type
 
         if format_type == "name_prefix":
             full_desc = f"{item_name}/{new_description}"
+        elif '/' in new_description:
+            # The game splits the description string on the FIRST '/' as a
+            # name/description separator. A bare description containing '/'
+            # (e.g. "8% petrify / 16 MP") would display "8% petrify" as the
+            # item NAME. Prepend the real name so the split lands correctly.
+            full_desc = f"{item_name}/{new_description}"
         else:
             full_desc = new_description
 
+    # Never write past the end of this description slot. Clipped copies of item
+    # entries sit right against foreign data (TIM headers, pointer tables) and
+    # overwriting it crashes the game on area load.
+    slot, clipped = writable_slot(data, desc_offset, max_length)
+    if clipped:
+        return False
+
     desc_bytes = full_desc.encode('ascii', errors='ignore')
 
-    if len(desc_bytes) > max_length:
-        desc_bytes = desc_bytes[:max_length]
+    # slot includes the byte used by the null terminator
+    usable = max(0, min(max_length, slot) - 1)
+    if len(desc_bytes) > usable:
+        desc_bytes = desc_bytes[:usable]
 
     end_offset = desc_offset + len(desc_bytes)
     if end_offset >= len(data):
@@ -120,11 +167,10 @@ def patch_item_description(data, offset, item_name, new_description, offset_type
     if end_offset < len(data):
         data[end_offset] = 0
 
-    # Zero-fill remaining space (up to 63 chars from desc_offset)
-    max_end = desc_offset + max_length
-    if max_end <= len(data):
-        for i in range(end_offset + 1, max_end):
-            data[i] = 0
+    # Zero-fill the rest of the slot only (never beyond it)
+    max_end = min(desc_offset + slot, desc_offset + max_length, len(data))
+    for i in range(end_offset + 1, max_end):
+        data[i] = 0
 
     return True
 

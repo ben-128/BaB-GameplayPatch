@@ -637,9 +637,9 @@
         "0x0172B860"
       ],
       "id": 13,
-      "new_description": "Shoots Magic Missile / 10 MP",
+      "new_description": "Shoots Magic Missile, 10 MP",
       "max_chars": 63,
-      "current_chars": 28
+      "current_chars": 27
     },
     {
       "name": "Thunderbolt",
@@ -1626,7 +1626,7 @@
         "0x0243745C"
       ],
       "id": 40,
-      "new_description": "Elem Attack (F/W/Wi/E) +50%",
+      "new_description": "Elem Attack (F,W,Wi,E) +50%",
       "max_chars": 63,
       "current_chars": 27
     },
@@ -1767,9 +1767,9 @@
         "0x01D933C8"
       ],
       "id": 44,
-      "new_description": "Gloves that increase the wearer's strength. STR+8",
+      "new_description": "Gloves that boost the wearer's strength. STR+8",
       "max_chars": 63,
-      "current_chars": 49
+      "current_chars": 46
     },
     {
       "name": "Wish Hammer",
@@ -1806,9 +1806,9 @@
         "0x028A4878"
       ],
       "id": 45,
-      "new_description": "At +40 when HP 1/4",
+      "new_description": "At +40 when HP under 25%",
       "max_chars": 63,
-      "current_chars": 18
+      "current_chars": 24
     },
     {
       "name": "Dark Shield",
@@ -2178,9 +2178,9 @@
         "0x029067E4"
       ],
       "id": 54,
-      "new_description": "At + (Enemy level / 3)",
+      "new_description": "At + (Enemy level div 3)",
       "max_chars": 63,
-      "current_chars": 22
+      "current_chars": 24
     },
     {
       "name": "Luck Talisman",
@@ -4694,7 +4694,7 @@
         "0x029085E4"
       ],
       "id": 125,
-      "new_description": "10% MP recovery from water/wind dmg",
+      "new_description": "10% MP recovery from water,wind dmg",
       "max_chars": 63,
       "current_chars": 35
     },
@@ -5191,7 +5191,7 @@
         "0x029F3CE8"
       ],
       "id": 140,
-      "new_description": "Fire/Wind/Light/Holy dmg decreases",
+      "new_description": "Fire,Wind,Light,Holy dmg decreases",
       "max_chars": 63,
       "current_chars": 34
     },
@@ -5231,9 +5231,9 @@
         "0x02663CB4"
       ],
       "id": 141,
-      "new_description": "Fire/Water/Wind/Earth dmg decreases",
+      "new_description": "Fire,Water,Wind,Earth dmg decreases",
       "max_chars": 63,
-      "current_chars": 22
+      "current_chars": 35
     },
     {
       "name": "Durandal",
@@ -5458,9 +5458,9 @@
         "0x00F20DEC"
       ],
       "id": 147,
-      "new_description": "20% petrify / 8 MP",
+      "new_description": "20% petrify, 8 MP",
       "max_chars": 63,
-      "current_chars": 18
+      "current_chars": 17
     },
     {
       "name": "Dropneal",
@@ -5758,7 +5758,7 @@
         "0x029734DC"
       ],
       "id": 155,
-      "new_description": "10% MP recovery from fire/earth dmg",
+      "new_description": "10% MP recovery from fire,earth dmg",
       "max_chars": 63,
       "current_chars": 35
     },
@@ -5942,9 +5942,9 @@
         "0x00F99174"
       ],
       "id": 160,
-      "new_description": "8% petrify / 16 MP",
+      "new_description": "8% petrify, 16 MP",
       "max_chars": 63,
-      "current_chars": 18
+      "current_chars": 17
     },
     {
       "name": "Gladius",
@@ -7492,9 +7492,9 @@
         "0x0243605C"
       ],
       "id": 203,
-      "new_description": "A ring that protects from magic. 50% block magic",
+      "new_description": "Ring that protects from magic. 50% block magic",
       "max_chars": 63,
-      "current_chars": 15
+      "current_chars": 46
     },
     {
       "name": "Elven Boots",
@@ -7791,9 +7791,9 @@
         "0x02801468"
       ],
       "id": 211,
-      "new_description": "Df +60/10MP. S+10 I-5 W-24 C+22 P+20 L-10",
+      "new_description": "Df +60, 10MP. S+10 I-5 W-24 C+22 P+20 L-10",
       "max_chars": 63,
-      "current_chars": 50
+      "current_chars": 42
     },
     {
       "name": "Answerer",
@@ -7830,9 +7830,9 @@
         "0x017A099C"
       ],
       "id": 212,
-      "new_description": "Black sword by dark god. At+50/15MP",
+      "new_description": "Black sword by dark god. At+50, 15MP",
       "max_chars": 63,
-      "current_chars": 15
+      "current_chars": 36
     },
     {
       "name": "White Ash",
@@ -8308,9 +8308,9 @@
         "0x01D91848"
       ],
       "id": 225,
-      "new_description": "At + 60 / 6 HP, curses if HP below 7",
+      "new_description": "At +60, 6 HP, curses if HP below 7",
       "max_chars": 63,
-      "current_chars": 36
+      "current_chars": 34
     },
     {
       "name": "Damascus Blade",
@@ -8797,9 +8797,9 @@
         "0x018D0AC4"
       ],
       "id": 239,
-      "new_description": "Cursed arrow by Larie. 15% petrify/12MP",
+      "new_description": "Cursed arrow by Larie. 15% petrify, 12MP",
       "max_chars": 63,
-      "current_chars": 19
+      "current_chars": 40
     },
     {
       "name": "Wand of Apollo",
@@ -9093,9 +9093,9 @@
         "0x0199EFCC"
       ],
       "id": 247,
-      "new_description": "Mat +30 / 3 MP. POW+64 MAT+30 MDEF+18",
+      "new_description": "Mat +30, 3 MP. POW+64 MAT+30 MDEF+18",
       "max_chars": 63,
-      "current_chars": 32
+      "current_chars": 36
     },
     {
       "name": "Fine Scarf",
@@ -9740,9 +9740,9 @@
         "0x02A8F154"
       ],
       "id": 266,
-      "new_description": "Wearer is protected by the powers of fire. STR+14",
+      "new_description": "Wearer protected by the powers of fire. STR+14",
       "max_chars": 63,
-      "current_chars": 47
+      "current_chars": 46
     },
     {
       "name": "Wind Necklace",
@@ -9776,9 +9776,9 @@
         "0x029F0FE8"
       ],
       "id": 267,
-      "new_description": "Wearer is protected by the powers of wind. AGL+14",
+      "new_description": "Wearer protected by the powers of wind. AGL+14",
       "max_chars": 63,
-      "current_chars": 47
+      "current_chars": 46
     },
     {
       "name": "Energy Crystal",
@@ -10048,9 +10048,9 @@
         "0x028020E8"
       ],
       "id": 274,
-      "new_description": "10% MP recovery from dark/evil dmg. POW+8",
+      "new_description": "10% MP recovery from dark,evil dmg. POW+8",
       "max_chars": 63,
-      "current_chars": 39
+      "current_chars": 41
     },
     {
       "name": "Holy Shield",
@@ -10485,7 +10485,7 @@
         "0x029F4768"
       ],
       "id": 286,
-      "new_description": "Water/Earth/Dark/Evil dmg decreases",
+      "new_description": "Water,Earth,Dark,Evil dmg decreases",
       "max_chars": 63,
       "current_chars": 35
     },
@@ -10883,9 +10883,9 @@
         "0x029F4468"
       ],
       "id": 297,
-      "new_description": "At +30 / 8 MP",
+      "new_description": "At +30, 8 MP",
       "max_chars": 63,
-      "current_chars": 13
+      "current_chars": 12
     },
     {
       "name": "Infernal Robe",
@@ -11206,9 +11206,9 @@
         "0x02850FE4"
       ],
       "id": 306,
-      "new_description": "10% Fire Bullet / 1 MP. WIL+8",
+      "new_description": "10% Fire Bullet, 1 MP. WIL+8",
       "max_chars": 63,
-      "current_chars": 27
+      "current_chars": 28
     },
     {
       "name": "Berserker",
@@ -11352,9 +11352,9 @@
         "0x02B40220"
       ],
       "id": 310,
-      "new_description": "At +20 / 6 HP, can paralyze if HP < half",
+      "new_description": "At +20, 6 HP, paralyze if HP < half",
       "max_chars": 63,
-      "current_chars": 40
+      "current_chars": 35
     },
     {
       "name": "Hammer of Thor",
@@ -11391,9 +11391,9 @@
         "0x02B404A0"
       ],
       "id": 311,
-      "new_description": "At +20 / 8 MP, Giant & magic At +40",
+      "new_description": "At +20, 8 MP, Giant & magic At +40",
       "max_chars": 63,
-      "current_chars": 35
+      "current_chars": 34
     },
     {
       "name": "Pavas Armor",
@@ -11504,9 +11504,9 @@
         "0x02BD32A4"
       ],
       "id": 314,
-      "new_description": "At +30 / 6 HP, 8% instant death",
+      "new_description": "At +30, 6 HP, 8% instant death",
       "max_chars": 63,
-      "current_chars": 31
+      "current_chars": 30
     },
     {
       "name": "Phantom Robe",
@@ -11877,7 +11877,7 @@
       "id": 324,
       "max_chars": 63,
       "current_chars": 35,
-      "new_description": "Fire/Water/Wind/Earth dmg decreases",
+      "new_description": "Fire,Water,Wind,Earth dmg decreases",
       "storage_format": "direct_text"
     },
     {
@@ -12687,8 +12687,8 @@
       ],
       "id": 347,
       "max_chars": 63,
-      "current_chars": 37,
-      "new_description": "Fi/Wa/Wi/Ea/Ev resist. All stats +24/32 MD+97",
+      "current_chars": 44,
+      "new_description": "Fi,Wa,Wi,Ea,Ev resist. All stats+24-32 MD+97",
       "storage_format": "direct_text"
     },
     {
@@ -13871,7 +13871,7 @@
         "0x02397581"
       ],
       "id": 381,
-      "new_description": "Auto resurrect 1/3 HP&MP (50% break)",
+      "new_description": "Auto resurrect 33% HP&MP (50% break)",
       "max_chars": 63,
       "current_chars": 36,
       "storage_format": "direct_text"
@@ -14408,9 +14408,9 @@
         "0x02722CE8"
       ],
       "id": 396,
-      "new_description": "A herb which neutralizes poison. (Treatment of poison)",
+      "new_description": "A herb which neutralizes poison. (Treats poison)",
       "max_chars": 63,
-      "current_chars": 54
+      "current_chars": 48
     },
     {
       "name": "Material Dark",
