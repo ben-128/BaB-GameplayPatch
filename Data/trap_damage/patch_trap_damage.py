@@ -224,6 +224,28 @@ def find_falling_rocks(data):
     """
     results = []
 
+    def first_call_is_overlay_jal(pos):
+        """Structural filter (added 1.1c): the first control transfer after the
+        pattern must be a `jal` into overlay code (>= 0x80080000).
+
+        All 58 verified damage sites call an overlay-local damage wrapper via
+        jal. Two false positives in the Ancient Ruins overlay dispatch on
+        object type instead: 0x24B2420 (tail `j`, a3=-1) and 0x24B2448
+        (`jal 0x80026A90` in the main exe, 5 args). Patching those corrupts
+        non-damage arguments (suspected portal/object code -> crash)."""
+        for k in range(2, 17):
+            off = pos + k * 4
+            if off + 4 > len(data):
+                return False
+            w = struct.unpack_from('<I', data, off)[0]
+            op = (w >> 26) & 0x3F
+            if op == 0x03:  # jal
+                target = ((w & 0x3FFFFFF) << 2) | 0x80000000
+                return target >= 0x80080000
+            if op == 0x02 or w == 0x03E00008:  # tail j / jr ra
+                return False
+        return False
+
     # Search for reasonable trap damage% values (1-50)
     # Values >50% are almost certainly false positives
     for dmg_val in range(1, 51):
@@ -235,10 +257,13 @@ def find_falling_rocks(data):
             if pos == -1:
                 break
 
-            results.append({
-                'offset': pos,
-                'damage': dmg_val,
-            })
+            if first_call_is_overlay_jal(pos):
+                results.append({
+                    'offset': pos,
+                    'damage': dmg_val,
+                })
+            else:
+                print(f"  [SKIP] 0x{pos:08X}: {dmg_val}% - call shape mismatch (not a damage site)")
 
             offset = pos + 1
 
