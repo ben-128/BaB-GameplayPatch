@@ -30,8 +30,8 @@ SCRIPT_DIR = Path(__file__).parent
 # Default paths (build pipeline)
 DEFAULT_ORIGINAL = SCRIPT_DIR / "Blaze  Blade - Eternal Quest (Europe)" / "Blaze & Blade - Eternal Quest (Europe).bin"
 DEFAULT_PATCHED  = SCRIPT_DIR / "output" / "Blaze & Blade - Patched.bin"
-DEFAULT_OUTPUT   = SCRIPT_DIR / "output" / "BaB_Plus_Patch_1.1c.ppf"
-DEFAULT_DESC     = "BaB+ v1.1c Gameplay Patch (EU) by ben-128"
+DEFAULT_OUTPUT   = SCRIPT_DIR / "output" / "BaB_Plus_Patch_1.1d.ppf"
+DEFAULT_DESC     = "BaB+ v1.1d Gameplay Patch (EU) by ben-128"
 
 MAX_BLOCK_LEN = 255  # PPF3 block length is uint8
 
